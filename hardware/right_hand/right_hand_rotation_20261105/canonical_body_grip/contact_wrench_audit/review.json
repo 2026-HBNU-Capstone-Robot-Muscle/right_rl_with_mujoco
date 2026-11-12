@@ -1,0 +1,487 @@
+{
+  "status": "static_wrench_feasibility_not_a_motion_proof",
+  "source_state": "right_hand_rotation_20261105/canonical_body_grip/full_placement_v3_thumb12/front-10/g1_f0.3/end_state.npz",
+  "source_state_sha256": "3fa46b1a688fa34d933ce6bd895b9389787b8722d2c09458c08f91f66f2e438f",
+  "source_model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+  "actual_contact_points": [
+    {
+      "geom": "if_bs_collision_1",
+      "point_world_m": [
+        0.14139472344860632,
+        -0.055799945142581756,
+        -0.03671171780914331
+      ],
+      "outward_normal": [
+        -0.35046750172079116,
+        0.06893389432321395,
+        -0.9340346077373275
+      ],
+      "friction": 0.3,
+      "actual_normal_N": 1.09510731261894,
+      "actual_contact_force_on_cube_N": [
+        0.41112859540989427,
+        -0.01696202367400998,
+        1.0169332428197613
+      ]
+    },
+    {
+      "geom": "mf_tip",
+      "point_world_m": [
+        0.1181408546313229,
+        -0.023858102673960553,
+        -0.011343675768003415
+      ],
+      "outward_normal": [
+        -0.12966378363989808,
+        0.9841127771152834,
+        0.12128208907596534
+      ],
+      "friction": 0.3,
+      "actual_normal_N": 0.6574108587156502,
+      "actual_contact_force_on_cube_N": [
+        0.1277747073539348,
+        -0.6421326999699981,
+        -0.07348250785049038
+      ]
+    },
+    {
+      "geom": "mf_tip",
+      "point_world_m": [
+        0.12533862879211488,
+        -0.022318587116689714,
+        -0.016153256937847194
+      ],
+      "outward_normal": [
+        -0.12966378363600228,
+        0.9841127771157291,
+        0.12128208907651458
+      ],
+      "friction": 0.3,
+      "actual_normal_N": 0.8718123098837736,
+      "actual_contact_force_on_cube_N": [
+        0.17526987866766358,
+        -0.854126393208497,
+        -0.07032742835312901
+      ]
+    },
+    {
+      "geom": "th_tip",
+      "point_world_m": [
+        0.13132417690945403,
+        -0.0771789318314918,
+        -0.018066501050674914
+      ],
+      "outward_normal": [
+        0.12966378363671785,
+        -0.9841127771157056,
+        -0.12128208907594017
+      ],
+      "friction": 0.3,
+      "actual_normal_N": 0.6650307481936015,
+      "actual_contact_force_on_cube_N": [
+        -0.19170128226115948,
+        0.6502299962174946,
+        0.002262389015282872
+      ]
+    },
+    {
+      "geom": "th_tip",
+      "point_world_m": [
+        0.13366057273031345,
+        -0.07586000412830018,
+        -0.02634976568305954
+      ],
+      "outward_normal": [
+        0.12966378363671785,
+        -0.9841127771157056,
+        -0.12128208907594017
+      ],
+      "friction": 0.3,
+      "actual_normal_N": 0.8909191619197322,
+      "actual_contact_force_on_cube_N": [
+        -0.1910892274572212,
+        0.8749861164203182,
+        0.04169447233185399
+      ]
+    }
+  ],
+  "actual_measured_wrench_on_cube": [
+    0.331382671713112,
+    0.011994995785307605,
+    0.9170801679632787,
+    -0.00032139348257058387,
+    6.326523273491279e-05,
+    0.00010442321996447304
+  ],
+  "gravity_compensation_force_N": [
+    0.33314736203759854,
+    0.0,
+    0.9226992116434204
+  ],
+  "actuator_balance_reconstruction_error_ticks": 2.0,
+  "maximum_source_joint_speed_rad_s": 0.0013364568232763915,
+  "static_balance_is_approximate_if_source_still_moving": true,
+  "cases": [
+    {
+      "task": "gravity_hold",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        0.0,
+        2.220446049250313e-16,
+        0.0
+      ],
+      "moment_error_Nm": [
+        0.0,
+        4.336808689942018e-19,
+        3.469446951953614e-18
+      ],
+      "minimum_friction_cone_slack_N": 0.05571871472314452,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.1060317604257273,
+        "mf_tip": 1.5340654106253115,
+        "th_tip": 1.550575847564992
+      },
+      "inferred_goal_ticks": [
+        2884,
+        2444,
+        2190,
+        2010,
+        2005,
+        2039,
+        1843,
+        2048,
+        3172,
+        2554,
+        3164,
+        2835,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "lift_accel_0.2m_s2",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "moment_error_Nm": [
+        -3.469446951953614e-18,
+        4.336808689942018e-19,
+        3.469446951953614e-18
+      ],
+      "minimum_friction_cone_slack_N": 0.05110372229261739,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.121127705689555,
+        "mf_tip": 1.533712916123169,
+        "th_tip": 1.5507960741364806
+      },
+      "inferred_goal_ticks": [
+        2884,
+        2444,
+        2190,
+        2010,
+        2005,
+        2039,
+        1843,
+        2048,
+        3172,
+        2554,
+        3164,
+        2835,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "yaw_plus_0.003Nm",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        0.0,
+        1.1102230246251565e-16,
+        -1.1102230246251565e-16
+      ],
+      "moment_error_Nm": [
+        -1.5178830414797062e-18,
+        4.336808689942018e-19,
+        4.336808689942018e-18
+      ],
+      "minimum_friction_cone_slack_N": 0.0745017102551253,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.0957460565837547,
+        "mf_tip": 1.5436813708307164,
+        "th_tip": 1.5481938834458961
+      },
+      "inferred_goal_ticks": [
+        2884,
+        2444,
+        2190,
+        2010,
+        2005,
+        2039,
+        1843,
+        2048,
+        3171,
+        2553,
+        3163,
+        2835,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "yaw_minus_0.003Nm",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        0.0,
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "moment_error_Nm": [
+        -3.686287386450715e-18,
+        8.673617379884035e-19,
+        6.071532165918825e-18
+      ],
+      "minimum_friction_cone_slack_N": 0.03439731210113392,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.1163174642676998,
+        "mf_tip": 1.5244494504199069,
+        "th_tip": 1.552957811684088
+      },
+      "inferred_goal_ticks": [
+        2884,
+        2444,
+        2190,
+        2010,
+        2005,
+        2039,
+        1843,
+        2048,
+        3172,
+        2554,
+        3164,
+        2834,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "yaw_plus_0.01Nm",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        -5.551115123125783e-17,
+        2.220446049250313e-16,
+        -1.1102230246251565e-16
+      ],
+      "moment_error_Nm": [
+        4.336808689942018e-19,
+        1.734723475976807e-18,
+        -5.204170427930421e-18
+      ],
+      "minimum_friction_cone_slack_N": 0.09964369394359977,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.0717460809524852,
+        "mf_tip": 1.5661186113099945,
+        "th_tip": 1.5426359671680059
+      },
+      "inferred_goal_ticks": [
+        2883,
+        2445,
+        2190,
+        2010,
+        2005,
+        2039,
+        1843,
+        2048,
+        3170,
+        2553,
+        3163,
+        2835,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "yaw_minus_0.01Nm",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        -5.551115123125783e-17,
+        -1.1102230246251565e-16,
+        0.0
+      ],
+      "moment_error_Nm": [
+        4.7704895589362195e-18,
+        -8.673617379884035e-19,
+        8.673617379884035e-18
+      ],
+      "minimum_friction_cone_slack_N": -7.216449660063518e-16,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.1471281504480453,
+        "mf_tip": 1.5063432335792162,
+        "th_tip": 1.5664264247405901
+      },
+      "inferred_goal_ticks": [
+        2885,
+        2443,
+        2190,
+        2009,
+        2005,
+        2039,
+        1843,
+        2048,
+        3174,
+        2554,
+        3165,
+        2834,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "upright_correction_plus",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        -1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "moment_error_Nm": [
+        -3.469446951953614e-18,
+        8.673617379884035e-19,
+        -3.469446951953614e-18
+      ],
+      "minimum_friction_cone_slack_N": 0.10880207443945895,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.0128885333392432,
+        "mf_tip": 1.5332082066796189,
+        "th_tip": 1.552591221913226
+      },
+      "inferred_goal_ticks": [
+        2884,
+        2444,
+        2191,
+        2010,
+        2005,
+        2039,
+        1843,
+        2048,
+        3172,
+        2554,
+        3164,
+        2834,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    },
+    {
+      "task": "upright_correction_minus",
+      "static_force_allocation_feasible": true,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "force_error_N": [
+        0.0,
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "moment_error_Nm": [
+        0.0,
+        -8.673617379884035e-19,
+        -3.469446951953614e-18
+      ],
+      "minimum_friction_cone_slack_N": -1.6159296123419153e-13,
+      "maximum_native_or_force_bound_violation": 0,
+      "normal_N_by_geom": {
+        "if_bs_collision_1": 1.2005973390809184,
+        "mf_tip": 1.53642859865145,
+        "th_tip": 1.550717566838205
+      },
+      "inferred_goal_ticks": [
+        2884,
+        2444,
+        2189,
+        2009,
+        2005,
+        2039,
+        1843,
+        2048,
+        3172,
+        2553,
+        3164,
+        2835,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "trajectory_validated": false
+    }
+  ],
+  "normal_force_cap_per_contact_geom_hypothesis_N": 3.5,
+  "model_actuator_force_limit_enabled": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "real450mA_is_not_a_calibrated_joint_torque_bound_here": true,
+  "native_goal_tracking_and_actuator_force_bounds_unchanged": true,
+  "no_cube_pose_changed_or_integrated": true,
+  "no_executable_command_or_transport_adapter": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false
+}

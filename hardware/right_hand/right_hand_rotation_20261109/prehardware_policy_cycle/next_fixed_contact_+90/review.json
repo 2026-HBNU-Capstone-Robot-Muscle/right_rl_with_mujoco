@@ -1,0 +1,151 @@
+{
+  "status": "offline_next_turn_fixed_contact_probe",
+  "target_increment_deg": 90.0,
+  "first_cycle_source": "archived nominal full-path end state; physical robot not used",
+  "model_provenance": {
+    "model_kind": "archived",
+    "model_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/model.mjb",
+    "model_sha256": "c16efc2d36f0e411fe21a38414aaa6bfa005997a1cd276bac5ac75403a67e0bc",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "geometry": [
+    {
+      "target_increment_deg": 1.0,
+      "contact_point_error_mm": 0.3083531853366537,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "reasons": []
+    },
+    {
+      "target_increment_deg": 2.0,
+      "contact_point_error_mm": 0.7360853697166494,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "reasons": []
+    },
+    {
+      "target_increment_deg": 3.0,
+      "contact_point_error_mm": 1.1705643826298626,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "reasons": [
+        "fixed_contact_IK_error"
+      ]
+    }
+  ],
+  "geometry_stop": [
+    "fixed_contact_IK_error"
+  ],
+  "model_cube_never_reset_or_welded_during_dynamic_suffix": true,
+  "dynamic_goals_completed": 140,
+  "dynamic_stop": [],
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.002487975031569539,
+    "tracking_rad": 0.041121935056611325,
+    "range_rad": 0.0
+  },
+  "actual_yaw_increment_deg": 0.6290047356665797,
+  "next_target_error_deg": 89.38155630354696,
+  "endpoint": {
+    "yaw_deg": 86.68077668996652,
+    "target90_error_deg": 3.3298896376079172,
+    "up_tilt_deg": 0.3215459720145876,
+    "center": [
+      0.16119597023287527,
+      -0.052496634665959815,
+      -0.013832327717528571
+    ],
+    "upper_sweep_gap_mm": 0.6949070466598144,
+    "closest_upper_geoms": [
+      [
+        "if_tip",
+        0.6949070466598144
+      ],
+      [
+        "mf_tip",
+        0.7355964526886396
+      ],
+      [
+        "cadtip_mf_th_mf_ds_1",
+        0.7355964526886396
+      ],
+      [
+        "cadtip_mf_rf_mf_ds_1",
+        0.7355964526886396
+      ],
+      [
+        "rf_tip",
+        2.299879385749316
+      ]
+    ],
+    "contacts": [
+      {
+        "geom": "if_bs_collision_1",
+        "normal_force_N_model_only": 0.9194030594662428,
+        "position_world": [
+          0.14688572534414795,
+          -0.05579999687781197,
+          -0.03793681009405197
+        ],
+        "height_above_cube_center_mm": -27.49932801766565
+      },
+      {
+        "geom": "if_px_collision",
+        "normal_force_N_model_only": 0.05619119367534519,
+        "position_world": [
+          0.1758844606196649,
+          -0.04100348976229241,
+          -0.04823161862378214
+        ],
+        "height_above_cube_center_mm": -27.49995860758069
+      },
+      {
+        "geom": "if_tip",
+        "normal_force_N_model_only": 0.2475020123171488,
+        "position_world": [
+          0.1751142758547991,
+          -0.023686050275465713,
+          -0.016683922896523547
+        ],
+        "height_above_cube_center_mm": 1.8663820561251023
+      },
+      {
+        "geom": "th_tip",
+        "normal_force_N_model_only": 0.24693835565386335,
+        "position_world": [
+          0.12549540756757163,
+          -0.05274922248396169,
+          -0.01688453432318827
+        ],
+        "height_above_cube_center_mm": -14.890877906164402
+      }
+    ],
+    "guard": {
+      "self_mm": 0.0,
+      "support_mm": 0.0,
+      "cube_mm": 0.001343964668698943,
+      "tracking_rad": 0.029579516431267293,
+      "range_rad": 0.0,
+      "reasons": [],
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "hand_gap_s": 0.0,
+      "external_cube_support": false
+    },
+    "physical_hold_load_not_verified": true
+  },
+  "hold_center_drift_mm": 0.343032494829782,
+  "fixed_contact_failure_is_not_a_proof_against_regrasp": true,
+  "task_success_certified": false,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "elapsed_seconds": 2.0207096689999995
+}

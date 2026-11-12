@@ -1,0 +1,90 @@
+{
+  "algorithm": "Brax SAC",
+  "steps": 10000,
+  "residual_rad": 0.01,
+  "observation_size": 110,
+  "action_size": 16,
+  "current_model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+  "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+  "numerical_CCD_iterations": 50,
+  "control_seconds": 0.075,
+  "max_goal_ticks": 2,
+  "integer_encoder_observations": true,
+  "restored_actor": "right_hand_rotation_20261109/prehardware_policy_cycle/sac_current_contract_v4_20k/checkpoints/000000010256",
+  "restore_scope": "actor and normalization; new critics/optimizers",
+  "reset_source": "actual early CCD50 parent rollout",
+  "reset_indices": [
+    600,
+    900,
+    1200,
+    1600,
+    2000,
+    2600,
+    3000,
+    3400
+  ],
+  "horizon": 1200,
+  "reset_probabilities": [
+    0.18,
+    0.18,
+    0.18,
+    0.14,
+    0.1,
+    0.1,
+    0.06,
+    0.06
+  ],
+  "early_intervention_before_large_late_pose_error": true,
+  "valid_step_reward_lower_bound": 0.08,
+  "fault_reward": -20.0,
+  "tests": [
+    {
+      "first": 2600,
+      "end": 3800,
+      "one_step_reward": 0.5790420174598694
+    },
+    {
+      "first": 1200,
+      "end": 2400,
+      "one_step_reward": 1.2002626657485962
+    },
+    {
+      "first": 1600,
+      "end": 2800,
+      "one_step_reward": 1.0575644969940186
+    },
+    {
+      "first": 900,
+      "end": 2100,
+      "one_step_reward": 1.6768770217895508
+    },
+    {
+      "first": 3400,
+      "end": 4600,
+      "one_step_reward": 0.6019026041030884
+    },
+    {
+      "first": 600,
+      "end": 1800,
+      "one_step_reward": 1.692563533782959
+    },
+    {
+      "first": 2000,
+      "end": 3200,
+      "one_step_reward": 0.996008038520813
+    },
+    {
+      "first": 3000,
+      "end": 4200,
+      "one_step_reward": 0.5069233775138855
+    }
+  ],
+  "learning_windows_not_continuous_cycle_success": true,
+  "planned_deployment_gate": [
+    600,
+    4800
+  ],
+  "native_geometry_limits_force_caps_and_guards_preserved": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

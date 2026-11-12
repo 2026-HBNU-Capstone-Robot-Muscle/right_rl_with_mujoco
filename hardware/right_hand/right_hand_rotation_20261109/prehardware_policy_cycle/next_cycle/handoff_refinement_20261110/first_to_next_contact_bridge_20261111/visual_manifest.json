@@ -1,0 +1,97 @@
+{
+  "status": "saved_whole_hand_cycle_model_views",
+  "images": [
+    {
+      "file": "first90.png",
+      "label": "첫 회전 · 윗단 공간과 유지 통과",
+      "source": "next_cycle/handoff_refinement_20261110/initial_to_reconfigured_first90/end_state.npz",
+      "source_sha256": "0db307bdb99a241af069d60db1376cd7ace380691d6208c5227edeb56be25a9b",
+      "target_orientation_deg": 90,
+      "orientation_error_deg": 2.516230491445622,
+      "station_error_mm": 0.0
+    },
+    {
+      "file": "next_partial.png",
+      "label": "다음 회전 중간 · 최종 목표 미달",
+      "source": "next_cycle/handoff_refinement_20261110/actual_A_next_MF_yaw_pressure/force0.5/end_state.npz",
+      "source_sha256": "2b194789abcec4d689be296c403d1cea7f9b83ab9180b78d12926358ee2e86da",
+      "target_orientation_deg": 180,
+      "orientation_error_deg": 30.581769831183568,
+      "station_error_mm": 7.183934368438762
+    },
+    {
+      "file": "thumb_arrived.png",
+      "label": "엄지 재배치 후 · 손 전체 지지 유지",
+      "source": "next_cycle/handoff_refinement_20261110/actual_A_next_counter_thumb_arrival/axis0_sign+1_force0.6/end_state.npz",
+      "source_sha256": "fc15ed1983e7c6793d3d93cfc32288fa87b9eadc73c0b29e23a6ab687ba001af",
+      "target_orientation_deg": 180,
+      "orientation_error_deg": 30.18546985980666,
+      "station_error_mm": 7.421664738814388
+    },
+    {
+      "file": "single_push_failed.png",
+      "label": "중지만 계속 밀었던 실패 · 모델 지지 이탈",
+      "source": "next_cycle/handoff_refinement_20261110/actual_A_next_MF_yaw_pressure_continued/force0.5/end_state.npz",
+      "source_sha256": "36b7acbf6c770aaf722ef5dfb6131ab3c595167712bbf8c4d010198bfb38def3",
+      "target_orientation_deg": 180,
+      "orientation_error_deg": 86.98606712877042,
+      "station_error_mm": 61.77210835011801
+    },
+    {
+      "file": "centered_teacher.png",
+      "label": "엄지 재배치 뒤 위치·회전 함께 보정",
+      "source": "next_cycle/handoff_refinement_20261110/actual_A_next_two_contact_centered_teacher/end_state.npz",
+      "source_sha256": "77bc665837b12d12187603409b2198d89b1eab0bcd030a6cf6c3079cabef7ee7",
+      "target_orientation_deg": 180,
+      "orientation_error_deg": 3.852043247071673,
+      "station_error_mm": 7.522841378337919
+    },
+    {
+      "file": "second_hold.png",
+      "label": "두 번째 회전 뒤 자세·공간 유지 비교",
+      "source": "next_cycle/handoff_refinement_20261110/actual_A_second_turn_clear_hold/unchanged/end_state.npz",
+      "source_sha256": "a1834dad96a3d75bb4c488d19e3a6e937b8648bc26eaec946e1cda2d13b25b41",
+      "target_orientation_deg": 180,
+      "orientation_error_deg": 3.778498335277405,
+      "station_error_mm": 7.401897446276443
+    }
+  ],
+  "combined": "cycle_state_comparison.png",
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "display": {
+    "physical_cube_side_mm": [
+      55.0,
+      55.0,
+      55.0
+    ],
+    "source70mm_cube_visual_hidden": true,
+    "mocap_goal_display_hidden": true,
+    "hidden_geoms": [
+      84,
+      86,
+      87
+    ],
+    "physics_properties_unchanged": true
+  },
+  "source_code_sha256": "79f316057d67e181b19940d913c0ee38331e062b8e79f9bc6e786209600af306",
+  "same_world_camera_and_first_station_reference": true,
+  "rendered_geometry_recomputed_from_saved_postintegration_qpos": true,
+  "render_metrics_may_differ_from_last_native_preintegration_contact_pose": true,
+  "scientific_model_renders_not_photos": true,
+  "failed_state_not_a_successful_hold": true,
+  "devices_opened": 0
+}

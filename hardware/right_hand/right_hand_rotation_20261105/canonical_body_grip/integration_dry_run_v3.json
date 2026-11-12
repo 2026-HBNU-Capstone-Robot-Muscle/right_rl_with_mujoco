@@ -1,0 +1,148 @@
+{
+  "status": "simulated_v3_integration_exchange_only",
+  "candidate_sha256": "b723d2f5698a440888f548fbcaa6fbb161f3d9ddf8d1fe6c8a3ee6199e5905be",
+  "events": [
+    {
+      "event": "intent",
+      "phase": "waiting_right_rotation_and_hold",
+      "token": "1:1:rotate_then_hold",
+      "recipient": "right",
+      "operation": "rotate_then_hold",
+      "payload": {
+        "path_id": "placement_forward_model61_bodygrip_v3",
+        "path_sha256": "b723d2f5698a440888f548fbcaa6fbb161f3d9ddf8d1fe6c8a3ee6199e5905be",
+        "common_cube_frame": "common_cube_frame_not_yet_physically_registered",
+        "automatic_open": false
+      },
+      "simulated": true
+    },
+    {
+      "event": "accepted_ack",
+      "phase": "waiting_right_rotation_and_hold",
+      "token": "1:1:rotate_then_hold",
+      "kind": "rotation_complete_hold_ready"
+    },
+    {
+      "event": "intent",
+      "phase": "waiting_left_approach",
+      "token": "1:2:approach_common_frame",
+      "recipient": "left",
+      "operation": "approach_common_frame",
+      "payload": {
+        "common_cube_frame": "common_cube_frame_not_yet_physically_registered"
+      },
+      "simulated": true
+    },
+    {
+      "event": "accepted_ack",
+      "phase": "waiting_left_approach",
+      "token": "1:2:approach_common_frame",
+      "kind": "at_turn_start"
+    },
+    {
+      "event": "intent",
+      "phase": "waiting_left_layer_turn",
+      "token": "1:3:turn_upper_layer",
+      "recipient": "left",
+      "operation": "turn_upper_layer",
+      "payload": {
+        "degrees": 90,
+        "common_cube_frame": "common_cube_frame_not_yet_physically_registered"
+      },
+      "simulated": true
+    },
+    {
+      "event": "accepted_ack",
+      "phase": "waiting_left_layer_turn",
+      "token": "1:3:turn_upper_layer",
+      "kind": "layer_turn_complete"
+    },
+    {
+      "event": "intent",
+      "phase": "waiting_left_clear",
+      "token": "1:4:retreat_clear_of_cube",
+      "recipient": "left",
+      "operation": "retreat_clear_of_cube",
+      "payload": {
+        "right_must_keep_holding": true
+      },
+      "simulated": true
+    },
+    {
+      "event": "accepted_ack",
+      "phase": "waiting_left_clear",
+      "token": "1:4:retreat_clear_of_cube",
+      "kind": "clear_of_cube"
+    },
+    {
+      "event": "rejected_start",
+      "reason": "primitive entry or common frame mismatch",
+      "current_grip": "common_body_grip_v3_thumb12",
+      "required_entry": "placed_open"
+    }
+  ],
+  "intents": [
+    {
+      "token": "1:1:rotate_then_hold",
+      "recipient": "right",
+      "operation": "rotate_then_hold",
+      "payload": {
+        "path_id": "placement_forward_model61_bodygrip_v3",
+        "path_sha256": "b723d2f5698a440888f548fbcaa6fbb161f3d9ddf8d1fe6c8a3ee6199e5905be",
+        "common_cube_frame": "common_cube_frame_not_yet_physically_registered",
+        "automatic_open": false
+      },
+      "simulated": true
+    },
+    {
+      "token": "1:2:approach_common_frame",
+      "recipient": "left",
+      "operation": "approach_common_frame",
+      "payload": {
+        "common_cube_frame": "common_cube_frame_not_yet_physically_registered"
+      },
+      "simulated": true
+    },
+    {
+      "token": "1:3:turn_upper_layer",
+      "recipient": "left",
+      "operation": "turn_upper_layer",
+      "payload": {
+        "degrees": 90,
+        "common_cube_frame": "common_cube_frame_not_yet_physically_registered"
+      },
+      "simulated": true
+    },
+    {
+      "token": "1:4:retreat_clear_of_cube",
+      "recipient": "left",
+      "operation": "retreat_clear_of_cube",
+      "payload": {
+        "right_must_keep_holding": true
+      },
+      "simulated": true
+    }
+  ],
+  "final_phase": "cycle_complete_right_still_holding",
+  "right_still_holding_in_synthetic_demo": true,
+  "reusing_placement_entry_path_for_next_cycle_blocked": true,
+  "required_next_entry_grip": "common_body_grip_v3_thumb12",
+  "next_loaded_primitive_not_validated": true,
+  "physical_target90_not_verified": true,
+  "upper_layer_turn_is_only_a_synthetic_acknowledgement": true,
+  "all_acknowledgements_and_health_are_synthetic": true,
+  "example_time_budgets_not_production_approval": true,
+  "hardware_commands_sent": 0,
+  "transport_adapters": 0,
+  "live_readiness": false,
+  "missing_live_evidence": [
+    "initial_empty_recovery_review_passed",
+    "physical_grip_verified",
+    "physical_target_orientation_verified",
+    "left_alignment_verified",
+    "actual_layer_reaction_verified",
+    "loaded_primitive_entry_verified",
+    "loaded_primitive_exit_verified"
+  ],
+  "devices_opened": false
+}

@@ -1,0 +1,224 @@
+{
+  "status": "bounded_model_palm_contact_hold_observation",
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "rows": [
+    {
+      "source": "original_checkpoint1700",
+      "source_path": "next_cycle/handoff_refinement_20261110/early_CCD50_states/state_pool.npz",
+      "source_sha256": "ab57f8900a14d206dcb3d34095f57b52a0325e6d989f66bab23fe53262ba9605",
+      "simulated_substeps": 4050,
+      "seconds": 4.05,
+      "stop": [],
+      "original_guard_violating_substeps": 0,
+      "first_original_guard_violation": null,
+      "original_strict_hold_passed": true,
+      "maximum_cube_angle_drift_deg": 0.6946597917911719,
+      "maximum_cube_center_drift_mm": 0.6263158653841909,
+      "supported_samples": 4050,
+      "supported_fraction": 1.0,
+      "minimum_mf_palm_gap_mm": 0.0,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0027239121204343316,
+        "tracking_rad": 0.03959219839034955,
+        "range_rad": 0.0
+      },
+      "trace": [
+        {
+          "substep": 1,
+          "palm_gap_mm": 3.4660251112090283,
+          "cube_angle_drift_deg": 0.0,
+          "cube_center_drift_mm": 0.0,
+          "upward_support_N": 0.9807479954369598
+        },
+        {
+          "substep": 751,
+          "palm_gap_mm": 3.466472968866139,
+          "cube_angle_drift_deg": 0.12982179145180983,
+          "cube_center_drift_mm": 0.1218739674227888,
+          "upward_support_N": 0.9821787532460359
+        },
+        {
+          "substep": 1501,
+          "palm_gap_mm": 0.0,
+          "cube_angle_drift_deg": 0.258836984239433,
+          "cube_center_drift_mm": 0.2409050990862169,
+          "upward_support_N": 0.9807863747670378
+        },
+        {
+          "substep": 2251,
+          "palm_gap_mm": 3.4662269120345814,
+          "cube_angle_drift_deg": 0.38732554384424944,
+          "cube_center_drift_mm": 0.35721503715766234,
+          "upward_support_N": 0.9821677830570844
+        },
+        {
+          "substep": 3001,
+          "palm_gap_mm": 3.465731477289906,
+          "cube_angle_drift_deg": 0.5155201743760662,
+          "cube_center_drift_mm": 0.47106320525245565,
+          "upward_support_N": 0.980675220280906
+        },
+        {
+          "substep": 3751,
+          "palm_gap_mm": 3.4650908792241455,
+          "cube_angle_drift_deg": 0.6435980815364711,
+          "cube_center_drift_mm": 0.5825110913407449,
+          "upward_support_N": 0.9820997620591813
+        }
+      ],
+      "diagnostic_continuation_pair_limit_mm": 0.01,
+      "only_observation_continues_not_a_qualified_motion": true
+    },
+    {
+      "source": "whole_hand_recovery_cp1700_w0.15",
+      "source_path": "next_cycle/whole_hand_recovery_cp1700_w0.15/end_state.npz",
+      "source_sha256": "ec7727a7d41bcf168d09ea1543a2f3cfa603d517ed36983acb46db408125f3be",
+      "simulated_substeps": 47,
+      "seconds": 0.047,
+      "stop": [
+        "self_mm"
+      ],
+      "original_guard_violating_substeps": 18,
+      "first_original_guard_violation": {
+        "substep": 30,
+        "reasons": [
+          "self_mm"
+        ],
+        "guard": {
+          "self_mm": 0.00022328156528297682,
+          "support_mm": 0.0,
+          "cube_mm": 0.0055895526832606375,
+          "tracking_rad": 0.06845720988375881,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "mf_tip|palm_collision_6": 0.00022328156528297682
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        }
+      },
+      "original_strict_hold_passed": false,
+      "maximum_cube_angle_drift_deg": 0.005864499522887823,
+      "maximum_cube_center_drift_mm": 0.006141308234057075,
+      "supported_samples": 47,
+      "supported_fraction": 1.0,
+      "minimum_mf_palm_gap_mm": -0.0006155408420637406,
+      "worst": {
+        "self_mm": 0.0005482964484065735,
+        "support_mm": 0.0,
+        "cube_mm": 0.005853264203432162,
+        "tracking_rad": 0.0684643354340253,
+        "range_rad": 0.0
+      },
+      "trace": [
+        {
+          "substep": 1,
+          "palm_gap_mm": 0.007193178404425851,
+          "cube_angle_drift_deg": 0.0,
+          "cube_center_drift_mm": 0.0,
+          "upward_support_N": 0.9799724296794051
+        },
+        {
+          "substep": 47,
+          "palm_gap_mm": -0.00046583645856371875,
+          "cube_angle_drift_deg": 0.005864499522887823,
+          "cube_center_drift_mm": 0.006141308234057075,
+          "upward_support_N": 0.981483759361097
+        }
+      ],
+      "diagnostic_continuation_pair_limit_mm": 0.01,
+      "only_observation_continues_not_a_qualified_motion": true
+    },
+    {
+      "source": "whole_hand_recovery_cp1700_w0.15_coupled",
+      "source_path": "next_cycle/whole_hand_recovery_cp1700_w0.15_coupled/end_state.npz",
+      "source_sha256": "db3c201c1ef711f7c8f840363f6d19d161a0a8e8f59502d9d69db737e2bc436b",
+      "simulated_substeps": 46,
+      "seconds": 0.046,
+      "stop": [
+        "self_mm"
+      ],
+      "original_guard_violating_substeps": 31,
+      "first_original_guard_violation": {
+        "substep": 2,
+        "reasons": [
+          "self_mm"
+        ],
+        "guard": {
+          "self_mm": 1.3766442059997679e-05,
+          "support_mm": 0.0,
+          "cube_mm": 0.005242187534001202,
+          "tracking_rad": 0.06011313323441314,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "mf_tip|palm_collision_6": 1.3766442059997679e-05
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        }
+      },
+      "original_strict_hold_passed": false,
+      "maximum_cube_angle_drift_deg": 0.017990595175701358,
+      "maximum_cube_center_drift_mm": 0.004916310657554205,
+      "supported_samples": 46,
+      "supported_fraction": 1.0,
+      "minimum_mf_palm_gap_mm": -8.517299075347997e-05,
+      "worst": {
+        "self_mm": 8.517299075418582e-05,
+        "support_mm": 0.0,
+        "cube_mm": 0.005301355637311717,
+        "tracking_rad": 0.06020610240368074,
+        "range_rad": 0.0
+      },
+      "trace": [
+        {
+          "substep": 1,
+          "palm_gap_mm": 0.0,
+          "cube_angle_drift_deg": 3.818191820832846e-06,
+          "cube_center_drift_mm": 0.0,
+          "upward_support_N": 0.9810135161606252
+        },
+        {
+          "substep": 46,
+          "palm_gap_mm": 0.0,
+          "cube_angle_drift_deg": 0.017990595175701358,
+          "cube_center_drift_mm": 0.004916310657554205,
+          "upward_support_N": 0.9812462425944398
+        }
+      ],
+      "diagnostic_continuation_pair_limit_mm": 0.01,
+      "only_observation_continues_not_a_qualified_motion": true
+    }
+  ],
+  "mf_tip_geom_type": 7,
+  "independent_SAT_used": false,
+  "original_guard_violations_preserved": true,
+  "model_geometry_and_forces_unchanged": true,
+  "no_physical_clearance_or_contact_tolerance_inferred": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

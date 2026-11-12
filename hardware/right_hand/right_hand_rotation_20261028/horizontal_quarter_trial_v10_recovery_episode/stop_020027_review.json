@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-10-28T02:09:21.648000+09:00",
+  "source": "horizontal_quarter_trial_20261028_020027_500658/result.json",
+  "source_sha256": "a1a4397b6ce1671718816355713daaa5797834ffea141a756ec08559236c562f",
+  "status": "stopped_during_empty_open_before_cube",
+  "direct_stop_reason": "Fresh-state confirmation after read recovery failed; no target advance: Another communication failure during read recovery confirmation; OFF",
+  "physical_rotation_stage_reached": false,
+  "read_failure_count": 3,
+  "first_incomplete_ids": [
+    7,
+    7,
+    15
+  ],
+  "all_reported_read_failures_recovered": true,
+  "confirmation_events": [
+    {
+      "version": "two_clean_snapshots_after_recovered_read_v1",
+      "phase": "stage_0_cmc_return",
+      "status": "confirmed",
+      "command": [
+        1985,
+        2344,
+        2964,
+        1832,
+        2006,
+        2017,
+        1784,
+        1943,
+        2985,
+        2158,
+        1816,
+        2020,
+        2114,
+        2549,
+        1752,
+        1946
+      ],
+      "goals_advanced": 0,
+      "goal_writes": 0,
+      "clean_reads": 2,
+      "required_clean_reads": 2,
+      "sample_budget_ms": 200.0,
+      "sample_indices": [
+        18,
+        19
+      ],
+      "elapsed_ms": 77.9999999795109
+    },
+    {
+      "version": "two_clean_snapshots_after_recovered_read_v1",
+      "phase": "stage_3_empty_open",
+      "status": "stopped",
+      "command": [
+        1984,
+        2392,
+        2964,
+        1889,
+        2006,
+        2019,
+        1788,
+        2063,
+        2985,
+        2158,
+        1816,
+        2074,
+        2114,
+        2550,
+        1791,
+        2053
+      ],
+      "goals_advanced": 0,
+      "goal_writes": 0,
+      "clean_reads": 0,
+      "required_clean_reads": 2,
+      "sample_budget_ms": 200.0,
+      "sample_indices": [],
+      "elapsed_ms": 78.00000003771856,
+      "error": "Another communication failure during read recovery confirmation; OFF"
+    }
+  ],
+  "measured_min_voltage_v": 4.9,
+  "measured_peak_current_ma": 108,
+  "measured_max_tracking_rad": 0.09203884727313846,
+  "camera_frames": 181,
+  "camera_blank_frames": 0,
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "corruption_hardware_root_cause_proven": false,
+  "software_findings": "Legacy confirmation immediately stopped on any new receive failure even when the transport recovered it. The last two recovered reads took31ms and47ms; the stop occurred before two new clean confirmations could be tried.",
+  "correction": {
+    "version": "horizontal_bounded_recovery_episode_v1_20261028",
+    "sample_budget_s": 0.2,
+    "required_consecutive_clean_reads": 2,
+    "maximum_confirmation_reads": 5,
+    "new_recovered_failure_resets_clean_count": true,
+    "recovered_packet_counts_as_clean": false,
+    "existing_transport_retry_rate_limit_preserved": true,
+    "goal_or_setting_writes": 0
+  },
+  "timing_replay_scope": "Recorded31ms/47ms recovered READ durations followed by two injected16ms clean snapshots; simulated110ms total, not an actual successful v10 hardware run.",
+  "hardware_execution_after_change_verified": false,
+  "assistant_motor_writes": 0
+}

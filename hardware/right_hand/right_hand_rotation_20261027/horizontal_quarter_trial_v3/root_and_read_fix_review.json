@@ -1,0 +1,70 @@
+{
+  "failures": [
+    {
+      "folder": "horizontal_quarter_trial_20261027_143018_624423",
+      "error": "Goal readback is not the exact preceding <=2-tick packet; no target advance",
+      "motion_started": true,
+      "stage": "EMPTY roots",
+      "cube_placed": false,
+      "minimum_voltage_v": 3.7,
+      "maximum_tracking_rad": 0.09357282806102411,
+      "all_torque_off_verified": true,
+      "settings_restored": true
+    },
+    {
+      "folder": "horizontal_quarter_trial_20261027_143147_188487",
+      "error": "Undervoltage not recovered to >=3.8V twice within150ms/read limit; torque OFF",
+      "motion_started": true,
+      "stage": "EMPTY roots",
+      "cube_placed": false,
+      "minimum_voltage_v": 3.6,
+      "maximum_tracking_rad": 0.09357282806102411,
+      "all_torque_off_verified": true,
+      "settings_restored": true
+    }
+  ],
+  "goal_policy": {
+    "version": "horizontal_per_servo_packet_confirmation_v1_20261027",
+    "confirmation_seconds": 0.15,
+    "maximum_reads": 3,
+    "exact_current_reads": 2,
+    "maximum_packet_step_ticks": 2,
+    "pending_values": "exact_current_or_immediate_previous_per_motor",
+    "accepted_values": "exact_current_whole_vector",
+    "goal_writes": 0,
+    "repeat_window_seconds": 10.0,
+    "repeat_trip": 3
+  },
+  "root_policy": {
+    "version": "horizontal_short_clearance_then_serial_roots_v2_20261027",
+    "motor_order": [
+      8,
+      12,
+      16
+    ],
+    "initial_parallel_clearance_goal_ticks": 1980,
+    "maximum_simultaneously_commanded_roots_after_clearance": 1,
+    "average_root_step_ticks": 1.5,
+    "sample_period_seconds": 0.075,
+    "maximum_goal_step_ticks": 2,
+    "endpoints_unchanged": true,
+    "current_and_pid_unchanged": true,
+    "voltage_thresholds_unchanged": true
+  },
+  "interpretation": "Observed ID16 previous value among 15 current values; no recovery reads were attempted in v2. Persistent power dip is real in saved telemetry, not proved to be a wiring defect.",
+  "fix": "READ-only exact-current confirmation plus short support clearance followed by serial roots",
+  "rejected_model_candidates": [
+    "empty_recovery_screen_serial_only_rejected",
+    "empty_recovery_screen_clearance32_rejected",
+    "empty_recovery_screen_clearance64_rejected"
+  ],
+  "rejection_reason": "initial support clearance exceeded existing 70-goal deadline; no criterion was relaxed",
+  "tests_passed": 61,
+  "fresh_empty_cases_passed": 210,
+  "unchanged_loaded_geometry_cases": 201,
+  "unchanged_loaded_physics_cases": 27,
+  "loaded_path_sha256": "631c4081f5bbf75490479f48a9a84e437c7f7280597cdc484722205b6a0b30df",
+  "physical_voltage_improvement_verified": false,
+  "physical_horizontal_90_verified": false,
+  "assistant_motor_writes": 0
+}

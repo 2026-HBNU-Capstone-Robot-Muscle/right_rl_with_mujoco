@@ -1,0 +1,5687 @@
+{
+  "status": "nominal_index_assisted_free_cube_yaw_search",
+  "family": "all",
+  "seed": 47,
+  "active_motor_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source_checkpoint": "right_hand_rotation_20261105/preintegration/reference_end/end_state.npz",
+  "source_checkpoint_sha256": "00510b509a335f42586b2bda5be0139ab0e495cb13567a175b17b1aaefa97d2e",
+  "prior_report_bindings": {
+    "right_hand_rotation_20261105/canonical_body_grip/free_extension_search/seed23/review.json": "d86b78a71bea6703b59fad8977c101f9c33bf679fd4e809773e4baef94a5201f",
+    "right_hand_rotation_20261105/canonical_body_grip/free_extension_search/seed37/review.json": "74d7c2602c7999166990b7dee79986cdf6058c9a97c9d0338a75dc69cb7b1b57"
+  },
+  "task_target_is_full_rotation90_not_yaw_label_only": true,
+  "cases": [
+    {
+      "index": 0,
+      "origin": "same_state_baseline",
+      "generation": -1,
+      "deltas_by_motor": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0
+      },
+      "goal": [
+        2811,
+        2518,
+        2443,
+        2091,
+        2005,
+        2039,
+        1843,
+        2048,
+        2786,
+        2323,
+        3146,
+        2472,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 30.26086943539416,
+      "whole_yaw_deg": 61.02601048738843,
+      "up_tilt_deg": 2.4357495055271943,
+      "center_shift_mm": 0.12625938581215485,
+      "score": 30.26086943539416,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 68,
+        "whole_yaw_deg": 61.02601048738843,
+        "continuation_yaw_deg": -0.23151885719220158,
+        "tilt_deg": 0.02029915489279143,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.00302422754228544,
+          "tracking_rad": 0.04274905753138347,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.2470358592823286,
+          "if_bs_collision_1": 0.7338038171933905,
+          "mf_tip": 1.5112397149427876,
+          "th_tip": 1.4590737310925133
+        },
+        "hold_drift_deg": 0.17629296464272184,
+        "hold_shift_mm": 0.09683001735270437,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.25218930113488,
+            "contact_N": {
+              "palm_collision_1": 0.24279034055998294,
+              "if_bs_collision_1": 0.738067536515971,
+              "mf_tip": 1.5169555275391302,
+              "th_tip": 1.4604880409103858
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 61.07551686161407,
+            "contact_N": {
+              "palm_collision_1": 0.24607928233815557,
+              "if_bs_collision_1": 0.734772786269202,
+              "mf_tip": 1.5125104053380887,
+              "th_tip": 1.4593949078426516
+            }
+          },
+          {
+            "sample": 68,
+            "whole_yaw_deg": 61.02601048738843,
+            "contact_N": {
+              "palm_collision_1": 0.2470358592823286,
+              "if_bs_collision_1": 0.7338038171933905,
+              "mf_tip": 1.5112397149427876,
+              "th_tip": 1.4590737310925133
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 1.7533940989999994
+    },
+    {
+      "index": 1,
+      "origin": "previous_eight_joint_best",
+      "generation": -1,
+      "deltas_by_motor": {
+        "1": -111,
+        "2": -15,
+        "3": -33,
+        "4": 73,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": -66,
+        "10": 105,
+        "11": 39,
+        "12": 104
+      },
+      "goal": [
+        2700,
+        2503,
+        2410,
+        2164,
+        2005,
+        2039,
+        1843,
+        2048,
+        2720,
+        2428,
+        3185,
+        2576,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.447535804303165,
+      "whole_yaw_deg": 67.07804898641952,
+      "up_tilt_deg": 2.264629341097315,
+      "center_shift_mm": 1.682671338985023,
+      "score": 24.447535804303165,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 123,
+        "whole_yaw_deg": 67.07804898641952,
+        "continuation_yaw_deg": 5.8286404314671785,
+        "tilt_deg": 0.1516217051896929,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.08140162018062451,
+          "tracking_rad": 0.050698224862199145,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.12113087423562821,
+          "if_bs_collision_1": 0.842955436521271,
+          "mf_px_collision": 0.0777983676123461,
+          "mf_tip": 0.9454865726523912,
+          "th_tip": 0.997795461025667
+        },
+        "hold_drift_deg": 0.2858048939837169,
+        "hold_shift_mm": 0.32715538895440255,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.27055118543102,
+            "contact_N": {
+              "palm_collision_1": 0.25544867950228145,
+              "if_bs_collision_1": 0.7249635045282781,
+              "mf_tip": 1.5243796514847334,
+              "th_tip": 1.453268550028911
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.94708147345098,
+            "contact_N": {
+              "palm_collision_1": 0.17234522906268432,
+              "palm_collision_6": 0.262048606509181,
+              "if_bs_collision_1": 0.511379823524055,
+              "mf_tip": 1.1004971566500723,
+              "th_tip": 1.0253252212848922
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 67.21098418709514,
+            "contact_N": {
+              "palm_collision_1": 0.16165027929210435,
+              "if_bs_collision_1": 0.7926699464541387,
+              "mf_tip": 0.9466532201457949,
+              "th_tip": 0.9864716373042646
+            }
+          },
+          {
+            "sample": 123,
+            "whole_yaw_deg": 67.07804898641952,
+            "contact_N": {
+              "palm_collision_1": 0.12113087423562821,
+              "if_bs_collision_1": 0.842955436521271,
+              "mf_px_collision": 0.0777983676123461,
+              "mf_tip": 0.9454865726523912,
+              "th_tip": 0.997795461025667
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.636050386000001
+    },
+    {
+      "index": 2,
+      "origin": "previous_eight_joint_best",
+      "generation": -1,
+      "deltas_by_motor": {
+        "1": -17,
+        "2": -53,
+        "3": -80,
+        "4": -65,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": -11,
+        "10": 97,
+        "11": 49,
+        "12": 145
+      },
+      "goal": [
+        2794,
+        2465,
+        2363,
+        2026,
+        2005,
+        2039,
+        1843,
+        2048,
+        2775,
+        2420,
+        3195,
+        2617,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.550943463241197,
+      "whole_yaw_deg": 67.08810254767204,
+      "up_tilt_deg": 0.5204609802914306,
+      "center_shift_mm": 2.1891875672619756,
+      "score": 24.550943463241197,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 140,
+        "whole_yaw_deg": 67.08810254767204,
+        "continuation_yaw_deg": 6.0034267698448645,
+        "tilt_deg": 2.289639627659541,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.015897314845066707,
+          "tracking_rad": 0.04143695432299732,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.13952474044494306,
+          "palm_collision_6": 0.0066518395109794355,
+          "if_bs_collision_1": 0.8376907407086613,
+          "mf_tip": 0.008274196589558996
+        },
+        "hold_drift_deg": 0.0833270094659939,
+        "hold_shift_mm": 0.06369359195398257,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.255906271271,
+            "contact_N": {
+              "palm_collision_1": 0.3083136860168707,
+              "if_bs_collision_1": 0.7199033342191701,
+              "mf_tip": 1.4747262989596253,
+              "th_tip": 1.4374220943492368
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.50072455243676,
+            "contact_N": {
+              "palm_collision_1": 0.19790096294375165,
+              "palm_collision_6": 0.22078417194086242,
+              "if_bs_collision_1": 0.7952407475948128,
+              "mf_tip": 0.48506766445818206,
+              "th_tip": 0.2975183646736833
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 67.06821236012861,
+            "contact_N": {
+              "palm_collision_1": 0.1308487579130412,
+              "palm_collision_6": 0.018651656389685065,
+              "if_bs_collision_1": 0.8448249401178844,
+              "mf_tip": 0.03331874852642959
+            }
+          },
+          {
+            "sample": 140,
+            "whole_yaw_deg": 67.08810254767204,
+            "contact_N": {
+              "palm_collision_1": 0.13952474044494306,
+              "palm_collision_6": 0.0066518395109794355,
+              "if_bs_collision_1": 0.8376907407086613,
+              "mf_tip": 0.008274196589558996
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.0431608029999992
+    },
+    {
+      "index": 3,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -138,
+        "2": 23,
+        "3": -20,
+        "4": 71,
+        "5": -23,
+        "6": -87,
+        "7": -96,
+        "8": -1,
+        "9": -101,
+        "10": 14,
+        "11": 44,
+        "12": 147
+      },
+      "goal": [
+        2673,
+        2541,
+        2423,
+        2162,
+        1982,
+        1952,
+        1747,
+        2047,
+        2685,
+        2337,
+        3190,
+        2619,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 31.433902158923154,
+      "whole_yaw_deg": 59.812335936147356,
+      "up_tilt_deg": 0.4846784294881454,
+      "center_shift_mm": 1.8652182822421328,
+      "score": 31.433902158923154,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 141,
+        "whole_yaw_deg": 59.812335936147356,
+        "continuation_yaw_deg": -1.2673372553771949,
+        "tilt_deg": 2.293185341097389,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.018863384478674847,
+          "tracking_rad": 0.04756444258283174,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.11896889041252735,
+          "if_bs_collision_1": 0.8573618537181056,
+          "mf_bs_collision_1": 0.03798515866716054,
+          "mf_tip": 0.41089950571765477,
+          "th_tip": 0.44586882753784074
+        },
+        "hold_drift_deg": 0.4006959320133842,
+        "hold_shift_mm": 0.2518662154828793,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26657353497756,
+            "contact_N": {
+              "palm_collision_1": 0.27846758213132355,
+              "if_bs_collision_1": 0.7026180189278892,
+              "mf_tip": 1.4978304288598727,
+              "th_tip": 1.4273230359641904
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 63.83186602115151,
+            "contact_N": {
+              "palm_collision_1": 0.06633438018951496,
+              "palm_collision_6": 0.20828234096778958,
+              "if_bs_collision_1": 0.799960568408265,
+              "mf_px_collision": 0.3216170305585125,
+              "mf_tip": 0.5361717913620411,
+              "th_tip": 0.7280191850050807
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 59.96472097818241,
+            "contact_N": {
+              "palm_collision_1": 0.12156436612579057,
+              "if_bs_collision_1": 0.8552320226264717,
+              "mf_px_collision": 0.047555572163259126,
+              "mf_tip": 0.3540028544336276,
+              "th_tip": 0.4330993955898471
+            }
+          },
+          {
+            "sample": 141,
+            "whole_yaw_deg": 59.812335936147356,
+            "contact_N": {
+              "palm_collision_1": 0.11896889041252735,
+              "if_bs_collision_1": 0.8573618537181056,
+              "mf_bs_collision_1": 0.03798515866716054,
+              "mf_tip": 0.41089950571765477,
+              "th_tip": 0.44586882753784074
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.7964087929999994
+    },
+    {
+      "index": 4,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -73,
+        "2": -9,
+        "3": 40,
+        "4": 102,
+        "5": -41,
+        "6": 91,
+        "7": 83,
+        "8": -125,
+        "9": -82,
+        "10": 97,
+        "11": 23,
+        "12": 66
+      },
+      "goal": [
+        2738,
+        2509,
+        2483,
+        2193,
+        1964,
+        2130,
+        1926,
+        1923,
+        2704,
+        2420,
+        3169,
+        2538,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.98745258293284,
+      "whole_yaw_deg": 65.91460317711899,
+      "up_tilt_deg": 9.30634024109371,
+      "center_shift_mm": 2.9154219894449294,
+      "score": 40.471300804957735,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 130,
+        "whole_yaw_deg": 65.91460317711899,
+        "continuation_yaw_deg": 4.1235250695715795,
+        "tilt_deg": 7.086112827546032,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0021514023591356606,
+          "cube_mm": 0.7683562907070072,
+          "tracking_rad": 0.06371130853051732,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 1.1760346737838303,
+          "mf_tip": 2.1501982538600015,
+          "th_tip": 2.130389449016399
+        },
+        "hold_drift_deg": 3.392864868537226,
+        "hold_shift_mm": 2.389548880834657,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.257313047874796,
+            "contact_N": {
+              "palm_collision_1": 0.23293423241505737,
+              "if_bs_collision_1": 0.681817863288337,
+              "mf_tip": 1.5996026908666958,
+              "th_tip": 1.479939963808412
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 62.531546289389695,
+            "contact_N": {
+              "palm_collision_1": 0.8875261797989671,
+              "mf_tip": 3.012022579835594,
+              "th_tip": 2.600088194031849
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 62.97904301683532,
+            "contact_N": {
+              "palm_collision_1": 1.6884306418022805,
+              "mf_tip": 2.7939686677505855,
+              "th_tip": 2.719684602651624
+            }
+          },
+          {
+            "sample": 130,
+            "whole_yaw_deg": 65.91460317711899,
+            "contact_N": {
+              "palm_collision_1": 1.1760346737838303,
+              "mf_tip": 2.1501982538600015,
+              "th_tip": 2.130389449016399
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.678448381999999
+    },
+    {
+      "index": 5,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -145,
+        "2": -65,
+        "3": -45,
+        "4": 18,
+        "5": -108,
+        "6": -153,
+        "7": -6,
+        "8": -55,
+        "9": -62,
+        "10": 49,
+        "11": 54,
+        "12": 61
+      },
+      "goal": [
+        2666,
+        2453,
+        2398,
+        2109,
+        1897,
+        1886,
+        1837,
+        1993,
+        2724,
+        2372,
+        3200,
+        2533,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 27.65449670145343,
+      "whole_yaw_deg": 62.50137130221694,
+      "up_tilt_deg": 7.123915943509729,
+      "center_shift_mm": 4.968630613817168,
+      "score": 34.02624453198261,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 144,
+        "whole_yaw_deg": 62.50137130221694,
+        "continuation_yaw_deg": 1.4606722399784944,
+        "tilt_deg": 8.271189093033447,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.017874604816180074,
+          "tracking_rad": 0.04228622568302372,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.7962130145649395,
+          "if_px_collision": 0.17767430320143163
+        },
+        "hold_drift_deg": 0.05285126322852724,
+        "hold_shift_mm": 0.47625520691756273,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.262104210166925,
+            "contact_N": {
+              "palm_collision_1": 0.2606213841005379,
+              "if_bs_collision_1": 0.7249139684529952,
+              "mf_tip": 1.4567736709869437,
+              "th_tip": 1.4052330888133335
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 62.55755943768925,
+            "contact_N": {
+              "palm_collision_1": 0.4672860977441811,
+              "if_bs_collision_1": 0.5110316841109936
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 62.54338822266172,
+            "contact_N": {
+              "palm_collision_1": 0.8052171129872374,
+              "if_px_collision": 0.16874568637388332
+            }
+          },
+          {
+            "sample": 144,
+            "whole_yaw_deg": 62.50137130221694,
+            "contact_N": {
+              "palm_collision_1": 0.7962130145649395,
+              "if_px_collision": 0.17767430320143163
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.032443405000002
+    },
+    {
+      "index": 6,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -153,
+        "2": 5,
+        "3": -84,
+        "4": 90,
+        "5": -76,
+        "6": 20,
+        "7": -73,
+        "8": 134,
+        "9": -98,
+        "10": 42,
+        "11": 75,
+        "12": 124
+      },
+      "goal": [
+        2658,
+        2523,
+        2359,
+        2181,
+        1929,
+        2059,
+        1770,
+        2182,
+        2688,
+        2365,
+        3221,
+        2596,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 29.91436277684541,
+      "whole_yaw_deg": 64.85534563654693,
+      "up_tilt_deg": 8.252632040158046,
+      "center_shift_mm": 3.787616125920642,
+      "score": 39.67225889731955,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 144,
+        "whole_yaw_deg": 64.85534563654693,
+        "continuation_yaw_deg": 3.703506370902594,
+        "tilt_deg": 7.73768610699773,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.052904662445728695,
+          "tracking_rad": 0.04794635015830044,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.5305289870454833,
+          "palm_collision_6": 0.060303626842682076,
+          "if_px_collision": 0.4022385783700218,
+          "mf_tip": 0.5001574290019437,
+          "th_tip": 0.46548496887810686
+        },
+        "hold_drift_deg": 0.1548333863057924,
+        "hold_shift_mm": 0.1578399037426043,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.27426584712423,
+            "contact_N": {
+              "palm_collision_1": 0.24172076058282388,
+              "if_bs_collision_1": 0.7484844680109977,
+              "mf_tip": 1.4975964856958506,
+              "th_tip": 1.440614835621887
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.86360334881378,
+            "contact_N": {
+              "palm_collision_1": 0.12460881052420264,
+              "palm_collision_6": 0.21687384735007134,
+              "if_bs_collision_1": 0.7387542610392794,
+              "mf_px_collision": 0.306748830218988,
+              "mf_tip": 0.4822565964102043,
+              "th_tip": 0.6733258006682634
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 65.01289124448653,
+            "contact_N": {
+              "palm_collision_1": 0.5301994039346618,
+              "palm_collision_6": 0.08261364753610509,
+              "if_px_collision": 0.4078003649367893,
+              "mf_tip": 0.48436052698079723,
+              "th_tip": 0.45853514590752936
+            }
+          },
+          {
+            "sample": 144,
+            "whole_yaw_deg": 64.85534563654693,
+            "contact_N": {
+              "palm_collision_1": 0.5305289870454833,
+              "palm_collision_6": 0.060303626842682076,
+              "if_px_collision": 0.4022385783700218,
+              "mf_tip": 0.5001574290019437,
+              "th_tip": 0.46548496887810686
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.2588623020000007
+    },
+    {
+      "index": 7,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -82,
+        "2": -36,
+        "3": -39,
+        "4": 54,
+        "5": 88,
+        "6": 85,
+        "7": 6,
+        "8": 70,
+        "9": -68,
+        "10": 149,
+        "11": 37,
+        "12": 135
+      },
+      "goal": [
+        2729,
+        2482,
+        2404,
+        2145,
+        2093,
+        2124,
+        1849,
+        2118,
+        2718,
+        2472,
+        3183,
+        2607,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.00628720979451,
+      "whole_yaw_deg": 68.06387938168453,
+      "up_tilt_deg": 3.9353799588767573,
+      "center_shift_mm": 2.1759991386042903,
+      "score": 25.00628720979451,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 142,
+        "whole_yaw_deg": 68.06387938168453,
+        "continuation_yaw_deg": 6.9355456462665,
+        "tilt_deg": 3.842227462526254,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.07557376479330873,
+          "tracking_rad": 0.05009511294629456,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.25687887357323086,
+          "if_bs_collision_1": 0.718590871021541,
+          "mf_px_collision": 0.05406193772590967,
+          "mf_tip": 0.9763167588913009,
+          "th_tip": 1.0108794297236736
+        },
+        "hold_drift_deg": 0.06948885633639101,
+        "hold_shift_mm": 0.057455605430139535,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26810240460351,
+            "contact_N": {
+              "palm_collision_1": 0.22500227576408907,
+              "if_bs_collision_1": 0.739311948019381,
+              "mf_tip": 1.5317405016128565,
+              "th_tip": 1.4718066632649704
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.3339795456292,
+            "contact_N": {
+              "palm_collision_1": 0.21885128827765551,
+              "if_bs_collision_1": 0.7310242020338495,
+              "mf_tip": 2.4451997271585095,
+              "th_tip": 2.1995098102688857
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.12711633483418,
+            "contact_N": {
+              "palm_collision_1": 0.24341303321489083,
+              "if_bs_collision_1": 0.712328956300336,
+              "mf_px_collision": 0.07551228592206469,
+              "mf_tip": 0.949164348074911,
+              "th_tip": 1.0119463311478838
+            }
+          },
+          {
+            "sample": 142,
+            "whole_yaw_deg": 68.06387938168453,
+            "contact_N": {
+              "palm_collision_1": 0.25687887357323086,
+              "if_bs_collision_1": 0.718590871021541,
+              "mf_px_collision": 0.05406193772590967,
+              "mf_tip": 0.9763167588913009,
+              "th_tip": 1.0108794297236736
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.073768440000002
+    },
+    {
+      "index": 8,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -106,
+        "2": -78,
+        "3": -105,
+        "4": 78,
+        "5": 52,
+        "6": -62,
+        "7": 68,
+        "8": -169,
+        "9": 8,
+        "10": 148,
+        "11": 6,
+        "12": 127
+      },
+      "goal": [
+        2705,
+        2440,
+        2338,
+        2169,
+        2057,
+        1977,
+        1911,
+        1879,
+        2794,
+        2471,
+        3152,
+        2599,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 27.98834130150402,
+      "whole_yaw_deg": 62.69832639376566,
+      "up_tilt_deg": 13.390967384654973,
+      "center_shift_mm": 18.810606827174542,
+      "score": 53.161243455468934,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 152,
+        "whole_yaw_deg": 62.69832639376566,
+        "continuation_yaw_deg": 1.6965415030689799,
+        "tilt_deg": 14.3993998785254,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0020729613450632817,
+          "cube_mm": 0.17496808459412683,
+          "tracking_rad": 0.052362842240648216,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.514738402305399,
+          "if_px_collision": 0.44224461755471905
+        },
+        "hold_drift_deg": 0.0865809236629153,
+        "hold_shift_mm": 1.3424789157480712,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.257334366098,
+            "contact_N": {
+              "palm_collision_1": 0.24759411201065468,
+              "if_bs_collision_1": 0.7220660574257508,
+              "mf_tip": 1.516158005680159,
+              "th_tip": 1.4484009594109595
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.45965021082249,
+            "contact_N": {
+              "palm_collision_1": 1.0554167699438994,
+              "mf_tip": 0.4885369864488954,
+              "th_tip": 0.42909925872342636
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 62.77355907735343,
+            "contact_N": {
+              "palm_collision_1": 0.531790315919732,
+              "if_px_collision": 0.4255530664917743
+            }
+          },
+          {
+            "sample": 151,
+            "whole_yaw_deg": 62.69971672828088,
+            "contact_N": {
+              "palm_collision_1": 0.5141095820378163,
+              "if_px_collision": 0.44264575599460343
+            }
+          },
+          {
+            "sample": 152,
+            "whole_yaw_deg": 62.69832639376566,
+            "contact_N": {
+              "palm_collision_1": 0.514738402305399,
+              "if_px_collision": 0.44224461755471905
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.381524600999999
+    },
+    {
+      "index": 9,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -137,
+        "2": -3,
+        "3": -80,
+        "4": 49,
+        "5": 174,
+        "6": -110,
+        "7": -9,
+        "8": -52,
+        "9": -91,
+        "10": 161,
+        "11": -15,
+        "12": 62
+      },
+      "goal": [
+        2674,
+        2515,
+        2363,
+        2140,
+        2179,
+        1929,
+        1834,
+        1996,
+        2695,
+        2484,
+        3131,
+        2534,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.21286368174665,
+      "whole_yaw_deg": 63.98263030002569,
+      "up_tilt_deg": 6.81537507650058,
+      "center_shift_mm": 5.057711602081595,
+      "score": 31.65898891124839,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 154,
+        "whole_yaw_deg": 63.98263030002569,
+        "continuation_yaw_deg": 2.9538382146191218,
+        "tilt_deg": 7.974950439997465,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.043178539905403934,
+          "tracking_rad": 0.048330557071835985,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.7934520565704475,
+          "if_px_collision": 0.17980088653384832,
+          "mf_tip": 0.10024217365411665,
+          "th_tip": 0.10276252529049569
+        },
+        "hold_drift_deg": 0.6806341304211141,
+        "hold_shift_mm": 0.5314825671252144,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26552003465024,
+            "contact_N": {
+              "palm_collision_1": 0.2168379411461858,
+              "if_bs_collision_1": 0.7339990095983054,
+              "mf_tip": 1.5181414257636638,
+              "th_tip": 1.4515578015720347
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.66325120411001,
+            "contact_N": {
+              "palm_collision_1": 0.8720472396650466,
+              "mf_px_collision": 0.24218698314404477,
+              "mf_tip": 0.8488290308546186,
+              "th_tip": 0.9854403946540529
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.64382463814019,
+            "contact_N": {
+              "palm_collision_1": 0.8273627559704074,
+              "if_px_collision": 0.158261639713529,
+              "th_tip": 0.0926870818511191
+            }
+          },
+          {
+            "sample": 151,
+            "whole_yaw_deg": 64.01000705718842,
+            "contact_N": {
+              "palm_collision_1": 0.793635683764713,
+              "if_px_collision": 0.179859810305647,
+              "mf_tip": 0.10296987474905757,
+              "th_tip": 0.10588975118681038
+            }
+          },
+          {
+            "sample": 154,
+            "whole_yaw_deg": 63.98263030002569,
+            "contact_N": {
+              "palm_collision_1": 0.7934520565704475,
+              "if_px_collision": 0.17980088653384832,
+              "mf_tip": 0.10024217365411665,
+              "th_tip": 0.10276252529049569
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.2406935779999984
+    },
+    {
+      "index": 10,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -131,
+        "2": -81,
+        "3": -18,
+        "4": 112,
+        "5": 48,
+        "6": 8,
+        "7": -79,
+        "8": -89,
+        "9": -6,
+        "10": 164,
+        "11": 13,
+        "12": 95
+      },
+      "goal": [
+        2680,
+        2437,
+        2425,
+        2203,
+        2053,
+        2047,
+        1764,
+        1959,
+        2780,
+        2487,
+        3159,
+        2567,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.90276692689536,
+      "whole_yaw_deg": 64.45952891511274,
+      "up_tilt_deg": 10.815253138515864,
+      "center_shift_mm": 9.868649078951222,
+      "score": 43.34852634244295,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 149,
+        "whole_yaw_deg": 64.45952891511274,
+        "continuation_yaw_deg": 3.468090150677041,
+        "tilt_deg": 11.863487149170274,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.10673158378980056,
+          "tracking_rad": 0.05173881827826275,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.6848073846974114,
+          "if_px_collision": 0.280232657730141
+        },
+        "hold_drift_deg": 0.08340165154647158,
+        "hold_shift_mm": 0.8669216109920386,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.2604079671928,
+            "contact_N": {
+              "palm_collision_1": 0.2151562821351296,
+              "if_bs_collision_1": 0.7273893835989711,
+              "mf_tip": 1.5128928539288125,
+              "th_tip": 1.4203611048997753
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.03632456400463,
+            "contact_N": {
+              "palm_collision_1": 0.9316349218881783,
+              "mf_tip": 0.8803021316774304,
+              "th_tip": 0.7625179722591
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.389899638023,
+            "contact_N": {
+              "palm_collision_1": 0.7005266408961042,
+              "if_px_collision": 0.26469294140968436
+            }
+          },
+          {
+            "sample": 149,
+            "whole_yaw_deg": 64.45952891511274,
+            "contact_N": {
+              "palm_collision_1": 0.6848073846974114,
+              "if_px_collision": 0.280232657730141
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.030462815
+    },
+    {
+      "index": 11,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -110,
+        "2": 7,
+        "3": -77,
+        "4": 131,
+        "5": 19,
+        "6": 1,
+        "7": 23,
+        "8": 102,
+        "9": -25,
+        "10": 156,
+        "11": -28,
+        "12": 63
+      },
+      "goal": [
+        2701,
+        2525,
+        2366,
+        2222,
+        2024,
+        2040,
+        1866,
+        2150,
+        2761,
+        2479,
+        3118,
+        2535,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.472760276719082,
+      "whole_yaw_deg": 68.28403354348012,
+      "up_tilt_deg": 6.643474771845379,
+      "center_shift_mm": 4.400197065008559,
+      "score": 30.40318459225522,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 145,
+        "whole_yaw_deg": 68.28403354348012,
+        "continuation_yaw_deg": 6.884473087810659,
+        "tilt_deg": 5.056280003387211,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.09072268074324788,
+          "tracking_rad": 0.07442385056587353,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "if_bs_collision_1": 0.6800762197556554,
+          "if_px_collision": 0.24379645575354547,
+          "mf_px_collision": 0.21015676199440247,
+          "mf_tip": 2.5704347846407187,
+          "th_tip": 2.7151917277813116
+        },
+        "hold_drift_deg": 0.5310541084015713,
+        "hold_shift_mm": 0.5158636381091389,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.268019216558265,
+            "contact_N": {
+              "palm_collision_1": 0.20741208650321424,
+              "if_bs_collision_1": 0.7609253128046536,
+              "mf_tip": 1.5597381418623542,
+              "th_tip": 1.48520435652238
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.16413017129152,
+            "contact_N": {
+              "if_bs_collision_1": 0.5143287767288963,
+              "if_px_collision": 0.4629226847905642,
+              "mf_px_collision": 0.293288368080517,
+              "mf_tip": 2.3319301802345858,
+              "th_tip": 2.4951110409678656
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.78097211794272,
+            "contact_N": {
+              "if_bs_collision_1": 0.49880678510937076,
+              "if_px_collision": 0.3818507916630062,
+              "mf_px_collision": 0.2583427598085325,
+              "mf_tip": 2.542735265363881,
+              "th_tip": 2.7286637723850378
+            }
+          },
+          {
+            "sample": 145,
+            "whole_yaw_deg": 68.28403354348012,
+            "contact_N": {
+              "if_bs_collision_1": 0.6800762197556554,
+              "if_px_collision": 0.24379645575354547,
+              "mf_px_collision": 0.21015676199440247,
+              "mf_tip": 2.5704347846407187,
+              "th_tip": 2.7151917277813116
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.956635482000003
+    },
+    {
+      "index": 12,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -144,
+        "2": -150,
+        "3": -24,
+        "4": 96,
+        "5": -30,
+        "6": -43,
+        "7": -52,
+        "8": -37,
+        "9": -118,
+        "10": 95,
+        "11": 57,
+        "12": 81
+      },
+      "goal": [
+        2667,
+        2368,
+        2419,
+        2187,
+        1975,
+        1996,
+        1791,
+        2011,
+        2668,
+        2418,
+        3203,
+        2553,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.595422001963218,
+      "whole_yaw_deg": 64.77004854927291,
+      "up_tilt_deg": 4.805202268481383,
+      "center_shift_mm": 3.0607014786592925,
+      "score": 25.595422001963218,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 142,
+        "whole_yaw_deg": 64.77004854927291,
+        "continuation_yaw_deg": 3.731420013565089,
+        "tilt_deg": 6.075371503234904,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.018009597203585363,
+          "tracking_rad": 0.04872854069441019,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.7159658591318925,
+          "if_bs_collision_1": 0.26158618469411443
+        },
+        "hold_drift_deg": 0.11275202328690047,
+        "hold_shift_mm": 0.2886378456295684,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26316817586223,
+            "contact_N": {
+              "palm_collision_1": 0.22475509152314874,
+              "if_bs_collision_1": 0.7143974004076885,
+              "mf_tip": 1.4651721862826834,
+              "th_tip": 1.3854118322242155
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 63.8561355342317,
+            "contact_N": {
+              "palm_collision_1": 0.8405184963930737,
+              "if_bs_collision_1": 0.15715494260910676,
+              "mf_tip": 0.07379847305333291
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.6871266255331,
+            "contact_N": {
+              "palm_collision_1": 0.7303189954826326,
+              "if_bs_collision_1": 0.24729132366543463
+            }
+          },
+          {
+            "sample": 142,
+            "whole_yaw_deg": 64.77004854927291,
+            "contact_N": {
+              "palm_collision_1": 0.7159658591318925,
+              "if_bs_collision_1": 0.26158618469411443
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.9942017799999974
+    },
+    {
+      "index": 13,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -141,
+        "2": -43,
+        "3": -58,
+        "4": 111,
+        "5": -27,
+        "6": 20,
+        "7": 13,
+        "8": -129,
+        "9": -53,
+        "10": 87,
+        "11": 31,
+        "12": 85
+      },
+      "goal": [
+        2670,
+        2475,
+        2385,
+        2202,
+        1978,
+        2059,
+        1856,
+        1919,
+        2733,
+        2410,
+        3177,
+        2557,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.25083403794407,
+      "whole_yaw_deg": 65.28158097714781,
+      "up_tilt_deg": 3.6830639854612843,
+      "center_shift_mm": 2.663564946397372,
+      "score": 25.25083403794407,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 138,
+        "whole_yaw_deg": 65.28158097714781,
+        "continuation_yaw_deg": 4.2359089266155925,
+        "tilt_deg": 5.0513428901719735,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.002130335082610827,
+          "cube_mm": 0.06213220322870857,
+          "tracking_rad": 0.05090111676945365,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 1.004030992987019,
+          "mf_tip": 0.35065765600491944,
+          "th_tip": 0.3576942897198955
+        },
+        "hold_drift_deg": 0.14988047504029564,
+        "hold_shift_mm": 0.331269980824976,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26326432640146,
+            "contact_N": {
+              "palm_collision_1": 0.23621659019768837,
+              "if_bs_collision_1": 0.7147854914008058,
+              "mf_tip": 1.4903273658890288,
+              "th_tip": 1.4263238622982217
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.18630637942962,
+            "contact_N": {
+              "palm_collision_1": 0.8554616225491356,
+              "mf_tip": 0.7415884802929562,
+              "th_tip": 0.7642758297999531
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 65.42393531190413,
+            "contact_N": {
+              "palm_collision_1": 0.9941278900057977,
+              "mf_tip": 0.3468333684156804,
+              "th_tip": 0.36010017874998235
+            }
+          },
+          {
+            "sample": 138,
+            "whole_yaw_deg": 65.28158097714781,
+            "contact_N": {
+              "palm_collision_1": 1.004030992987019,
+              "mf_tip": 0.35065765600491944,
+              "th_tip": 0.3576942897198955
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.999723987000003
+    },
+    {
+      "index": 14,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -137,
+        "2": -32,
+        "3": -33,
+        "4": 122,
+        "5": 97,
+        "6": -127,
+        "7": 94,
+        "8": 137,
+        "9": 1,
+        "10": 157,
+        "11": 96,
+        "12": 127
+      },
+      "goal": [
+        2674,
+        2486,
+        2410,
+        2213,
+        2102,
+        1912,
+        1937,
+        2185,
+        2787,
+        2480,
+        3242,
+        2599,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 22.21561290926059,
+      "whole_yaw_deg": 75.8745097143515,
+      "up_tilt_deg": 12.991265394526854,
+      "center_shift_mm": 6.620956437937858,
+      "score": 46.189409092841146,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 146,
+        "whole_yaw_deg": 75.8745097143515,
+        "continuation_yaw_deg": 13.932465107485214,
+        "tilt_deg": 10.898274099920377,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.10539458833871418,
+          "tracking_rad": 0.053537949977798344,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.07198262804835581,
+          "if_bs_collision_1": 1.4645425273498878,
+          "mf_px_collision": 0.7500454674339001,
+          "mf_tip": 1.3315957899580582,
+          "th_tip": 1.734301670361508
+        },
+        "hold_drift_deg": 0.06752966431539473,
+        "hold_shift_mm": 0.5194019800580777,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.27450642148652,
+            "contact_N": {
+              "palm_collision_1": 0.23337820438952617,
+              "if_bs_collision_1": 0.7412554062135098,
+              "mf_tip": 1.559370252143344,
+              "th_tip": 1.4600058159879898
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 70.36720643439614,
+            "contact_N": {
+              "palm_collision_1": 0.6506056246203394,
+              "if_bs_collision_1": 0.6403494672065508,
+              "mf_tip": 1.874345904971443,
+              "th_tip": 1.4991119629945118
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 76.00176378219423,
+            "contact_N": {
+              "palm_collision_1": 0.2003733450249537,
+              "if_bs_collision_1": 0.9001980522780397,
+              "mf_px_collision": 0.3324316608739385,
+              "mf_tip": 1.0649164380749494,
+              "th_tip": 1.175108886476296
+            }
+          },
+          {
+            "sample": 146,
+            "whole_yaw_deg": 75.8745097143515,
+            "contact_N": {
+              "palm_collision_1": 0.07198262804835581,
+              "if_bs_collision_1": 1.4645425273498878,
+              "mf_px_collision": 0.7500454674339001,
+              "mf_tip": 1.3315957899580582,
+              "th_tip": 1.734301670361508
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.443522641999998
+    },
+    {
+      "index": 15,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -182,
+        "2": -11,
+        "3": -1,
+        "4": 132,
+        "5": -123,
+        "6": -46,
+        "7": 39,
+        "8": -74,
+        "9": -48,
+        "10": 110,
+        "11": 22,
+        "12": 103
+      },
+      "goal": [
+        2629,
+        2507,
+        2442,
+        2223,
+        1882,
+        1993,
+        1882,
+        1974,
+        2738,
+        2433,
+        3168,
+        2575,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 34.812762170036535,
+      "whole_yaw_deg": 55.25040433562108,
+      "up_tilt_deg": 9.28123060151492,
+      "center_shift_mm": 8.26168371123247,
+      "score": 47.6564539745813,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 158,
+        "whole_yaw_deg": 55.25040433562108,
+        "continuation_yaw_deg": -5.869641271954556,
+        "tilt_deg": 10.36201407267724,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.2521980752454249,
+          "tracking_rad": 0.05083976279968457,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.6945695829396898,
+          "if_px_collision": 0.2746306597164496
+        },
+        "hold_drift_deg": 1.2573089789500111,
+        "hold_shift_mm": 1.0651251989678776,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26223704079098,
+            "contact_N": {
+              "palm_collision_1": 0.22566986853889692,
+              "if_bs_collision_1": 0.7155471030955547,
+              "mf_tip": 1.5148370263204889,
+              "th_tip": 1.4366037872294264
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.73629520840218,
+            "contact_N": {
+              "palm_collision_1": 0.6319268951735637,
+              "palm_collision_6": 0.24573760236119785,
+              "mf_tip": 1.1565961142101926,
+              "th_tip": 0.9698009743228537
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 56.663359274586824,
+            "contact_N": {
+              "palm_collision_1": 0.6172822725171534,
+              "if_px_collision": 0.3410145170673913,
+              "mf_tip": 0.0
+            }
+          },
+          {
+            "sample": 151,
+            "whole_yaw_deg": 55.31203960066851,
+            "contact_N": {
+              "palm_collision_1": 0.6955832904539546,
+              "if_px_collision": 0.2735166348598696
+            }
+          },
+          {
+            "sample": 158,
+            "whole_yaw_deg": 55.25040433562108,
+            "contact_N": {
+              "palm_collision_1": 0.6945695829396898,
+              "if_px_collision": 0.2746306597164496
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.1955949469999965
+    },
+    {
+      "index": 16,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -82,
+        "2": -15,
+        "3": -32,
+        "4": 94,
+        "5": 10,
+        "6": 149,
+        "7": -116,
+        "8": 133,
+        "9": -17,
+        "10": 70,
+        "11": 43,
+        "12": 109
+      },
+      "goal": [
+        2729,
+        2503,
+        2411,
+        2185,
+        2015,
+        2188,
+        1727,
+        2181,
+        2769,
+        2393,
+        3189,
+        2581,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.51949432240303,
+      "whole_yaw_deg": 68.59166658545718,
+      "up_tilt_deg": 9.723586059552206,
+      "center_shift_mm": 4.267744320516096,
+      "score": 40.690252501059646,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 142,
+        "whole_yaw_deg": 68.59166658545718,
+        "continuation_yaw_deg": 6.993563947474637,
+        "tilt_deg": 7.887464092797708,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.10332918985552621,
+          "tracking_rad": 0.05271680399776603,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.5321079293581805,
+          "if_px_collision": 0.46646825980209083,
+          "mf_tip": 1.7109208141311258,
+          "th_tip": 1.5752637477010405
+        },
+        "hold_drift_deg": 0.392320144534861,
+        "hold_shift_mm": 0.4206094493451973,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26576626372582,
+            "contact_N": {
+              "palm_collision_1": 0.2355937215760196,
+              "if_bs_collision_1": 0.7512428573103127,
+              "mf_tip": 1.5455293576969995,
+              "th_tip": 1.4611662724155505
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.46516655371434,
+            "contact_N": {
+              "palm_collision_1": 0.425965171911774,
+              "palm_collision_6": 0.4494216806639925,
+              "if_bs_collision_1": 0.7607835788394475,
+              "mf_tip": 2.1321390443283783,
+              "th_tip": 2.058137770135648
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.23829339807816,
+            "contact_N": {
+              "palm_collision_1": 0.6664513968559869,
+              "if_px_collision": 0.4284078178913917,
+              "mf_tip": 1.754747256324297,
+              "th_tip": 1.611374949046007
+            }
+          },
+          {
+            "sample": 142,
+            "whole_yaw_deg": 68.59166658545718,
+            "contact_N": {
+              "palm_collision_1": 0.5321079293581805,
+              "if_px_collision": 0.46646825980209083,
+              "mf_tip": 1.7109208141311258,
+              "th_tip": 1.5752637477010405
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.0820113080000056
+    },
+    {
+      "index": 17,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -153,
+        "2": 1,
+        "3": 34,
+        "4": 64,
+        "5": -40,
+        "6": 185,
+        "7": 134,
+        "8": 184,
+        "9": -104,
+        "10": 117,
+        "11": 46,
+        "12": 28
+      },
+      "goal": [
+        2658,
+        2519,
+        2477,
+        2155,
+        1965,
+        2224,
+        1977,
+        2232,
+        2682,
+        2440,
+        3192,
+        2500,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 28.21920197026221,
+      "whole_yaw_deg": 69.1243684710107,
+      "up_tilt_deg": 11.995845836491348,
+      "center_shift_mm": 6.314161095702807,
+      "score": 49.20673947973626,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 160,
+        "whole_yaw_deg": 69.1243684710107,
+        "continuation_yaw_deg": 7.637725823547146,
+        "tilt_deg": 10.750453508183613,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.0725601616870927,
+          "tracking_rad": 0.04828302813958535,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.35982621086447036,
+          "if_px_collision": 0.5577773295291534,
+          "mf_tip": 1.1556084882299635,
+          "th_tip": 1.1140296569341603
+        },
+        "hold_drift_deg": 0.13720489721337403,
+        "hold_shift_mm": 0.20785090637620782,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26755286575358,
+            "contact_N": {
+              "palm_collision_1": 0.16433591319218582,
+              "if_bs_collision_1": 0.7712705016332183,
+              "mf_tip": 1.5106018222626234,
+              "th_tip": 1.4356057687696977
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.06127605788022,
+            "contact_N": {
+              "if_bs_collision_1": 0.6250558510235547,
+              "if_px_collision": 0.1278539310220841,
+              "mf_tip": 1.7361049395887318,
+              "th_tip": 1.5624915823976042
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 69.3164349486272,
+            "contact_N": {
+              "palm_collision_1": 0.20497960663514156,
+              "if_px_collision": 0.5909497590987817,
+              "mf_tip": 1.185284629143316,
+              "th_tip": 1.0429310675282957
+            }
+          },
+          {
+            "sample": 151,
+            "whole_yaw_deg": 69.18253782476692,
+            "contact_N": {
+              "palm_collision_1": 0.35612315478331896,
+              "if_px_collision": 0.558216453717745,
+              "mf_tip": 1.1501647704662152,
+              "th_tip": 1.1080038854714258
+            }
+          },
+          {
+            "sample": 160,
+            "whole_yaw_deg": 69.1243684710107,
+            "contact_N": {
+              "palm_collision_1": 0.35982621086447036,
+              "if_px_collision": 0.5577773295291534,
+              "mf_tip": 1.1556084882299635,
+              "th_tip": 1.1140296569341603
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.4121191659999965
+    },
+    {
+      "index": 18,
+      "origin": "truncated_normal",
+      "generation": 0,
+      "deltas_by_motor": {
+        "1": -119,
+        "2": -24,
+        "3": -84,
+        "4": 107,
+        "5": 20,
+        "6": 64,
+        "7": 135,
+        "8": 12,
+        "9": -53,
+        "10": 52,
+        "11": 83,
+        "12": 106
+      },
+      "goal": [
+        2692,
+        2494,
+        2359,
+        2198,
+        2025,
+        2103,
+        1978,
+        2060,
+        2733,
+        2375,
+        3229,
+        2578,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.691541705494565,
+      "whole_yaw_deg": 64.96931602318703,
+      "up_tilt_deg": 1.1266129237908582,
+      "center_shift_mm": 2.048375098964595,
+      "score": 26.691541705494565,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 135,
+        "whole_yaw_deg": 64.96931602318703,
+        "continuation_yaw_deg": 3.861299747181124,
+        "tilt_deg": 2.0253222958866552,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.06394336111241358,
+          "tracking_rad": 0.050596760934152024,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "if_bs_collision_1": 0.8880600890443404,
+          "mf_tip": 0.8565286596608086,
+          "th_tip": 0.8523636881373703
+        },
+        "hold_drift_deg": 0.7436452796250613,
+        "hold_shift_mm": 0.5920472558813387,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.27213917456149,
+            "contact_N": {
+              "palm_collision_1": 0.26554342762821387,
+              "if_bs_collision_1": 0.7193441028231453,
+              "mf_tip": 1.522944323606742,
+              "th_tip": 1.4543551858243304
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.66478178225317,
+            "contact_N": {
+              "palm_collision_1": 0.40245965123481625,
+              "if_bs_collision_1": 0.9322640881908957,
+              "mf_tip": 1.1329520630446568,
+              "th_tip": 1.2097641093034264
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 65.56060864120062,
+            "contact_N": {
+              "palm_collision_1": 0.11847128351814407,
+              "if_bs_collision_1": 0.8370631566289827,
+              "mf_tip": 0.8238538122094151,
+              "th_tip": 0.8599245524200321
+            }
+          },
+          {
+            "sample": 135,
+            "whole_yaw_deg": 64.96931602318703,
+            "contact_N": {
+              "if_bs_collision_1": 0.8880600890443404,
+              "mf_tip": 0.8565286596608086,
+              "th_tip": 0.8523636881373703
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.910297751999991
+    },
+    {
+      "index": 19,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -45,
+        "2": -21,
+        "3": -7,
+        "4": 25,
+        "5": 45,
+        "6": 42,
+        "7": 22,
+        "8": -99,
+        "9": -57,
+        "10": 107,
+        "11": 22,
+        "12": 47
+      },
+      "goal": [
+        2766,
+        2497,
+        2436,
+        2116,
+        2050,
+        2081,
+        1865,
+        1949,
+        2729,
+        2430,
+        3168,
+        2519,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.713518296940556,
+      "whole_yaw_deg": 64.37292108861651,
+      "up_tilt_deg": 1.979025472923551,
+      "center_shift_mm": 2.9123088147507246,
+      "score": 26.713518296940556,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 121,
+        "whole_yaw_deg": 64.37292108861651,
+        "continuation_yaw_deg": 3.146343362756673,
+        "tilt_deg": 1.1690498324776935,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.014845891614572414,
+          "tracking_rad": 0.0507849654811614,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.934135411689127,
+          "mf_tip": 1.4372496091520228,
+          "th_tip": 1.4075500547635107
+        },
+        "hold_drift_deg": 0.02306139463981722,
+        "hold_shift_mm": 0.041449257989505266,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.25500655927908,
+            "contact_N": {
+              "palm_collision_1": 0.24321232847092866,
+              "if_bs_collision_1": 0.7010775366104594,
+              "mf_tip": 1.538977656603233,
+              "th_tip": 1.4595952372882122
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.12810349821794,
+            "contact_N": {
+              "palm_collision_1": 0.7568741653613109,
+              "mf_tip": 1.5710795782542681,
+              "th_tip": 1.4298287555195006
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.37215875580749,
+            "contact_N": {
+              "palm_collision_1": 0.9295708086933678,
+              "mf_tip": 1.4385699550068916,
+              "th_tip": 1.4064121527921807
+            }
+          },
+          {
+            "sample": 121,
+            "whole_yaw_deg": 64.37292108861651,
+            "contact_N": {
+              "palm_collision_1": 0.934135411689127,
+              "mf_tip": 1.4372496091520228,
+              "th_tip": 1.4075500547635107
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.446083729999998
+    },
+    {
+      "index": 20,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -134,
+        "2": 6,
+        "3": -61,
+        "4": 94,
+        "5": 10,
+        "6": -96,
+        "7": -79,
+        "8": 83,
+        "9": -49,
+        "10": 22,
+        "11": 37,
+        "12": 84
+      },
+      "goal": [
+        2677,
+        2524,
+        2382,
+        2185,
+        2015,
+        1943,
+        1764,
+        2131,
+        2737,
+        2345,
+        3183,
+        2556,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 28.770545317751488,
+      "whole_yaw_deg": 64.18192932354938,
+      "up_tilt_deg": 4.921745541664319,
+      "center_shift_mm": 2.072756348275453,
+      "score": 28.770545317751488,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 134,
+        "whole_yaw_deg": 64.18192932354938,
+        "continuation_yaw_deg": 2.9892763315809505,
+        "tilt_deg": 4.17100423931305,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.05545964515455671,
+          "tracking_rad": 0.04931961653619137,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.33064731433687133,
+          "palm_collision_6": 0.09843114164782071,
+          "if_bs_collision_1": 0.5832384388558656,
+          "mf_px_collision": 0.14184490489103518,
+          "mf_tip": 0.5418310559968352,
+          "th_tip": 0.6860595476944287
+        },
+        "hold_drift_deg": 0.10318807018364579,
+        "hold_shift_mm": 0.250492349643364,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26980522545947,
+            "contact_N": {
+              "palm_collision_1": 0.24749398525240407,
+              "if_bs_collision_1": 0.7465897046537773,
+              "mf_tip": 1.479830708590884,
+              "th_tip": 1.4318181127243403
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.90684459283418,
+            "contact_N": {
+              "palm_collision_1": 0.2098895825978301,
+              "if_bs_collision_1": 0.7366377723739452,
+              "mf_px_collision": 0.3209030009011412,
+              "mf_tip": 0.5923410368383383,
+              "th_tip": 0.7600337543675014
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.25020074550844,
+            "contact_N": {
+              "palm_collision_1": 0.30156094035519604,
+              "if_bs_collision_1": 0.6490515597011735,
+              "mf_px_collision": 0.13509218046953378,
+              "mf_tip": 0.5762794942380973,
+              "th_tip": 0.7071207043665184
+            }
+          },
+          {
+            "sample": 134,
+            "whole_yaw_deg": 64.18192932354938,
+            "contact_N": {
+              "palm_collision_1": 0.33064731433687133,
+              "palm_collision_6": 0.09843114164782071,
+              "if_bs_collision_1": 0.5832384388558656,
+              "mf_px_collision": 0.14184490489103518,
+              "mf_tip": 0.5418310559968352,
+              "th_tip": 0.6860595476944287
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.819341912000013
+    },
+    {
+      "index": 21,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -159,
+        "2": -38,
+        "3": -22,
+        "4": 132,
+        "5": 19,
+        "6": -37,
+        "7": 47,
+        "8": 3,
+        "9": -62,
+        "10": 70,
+        "11": 23,
+        "12": 144
+      },
+      "goal": [
+        2652,
+        2480,
+        2421,
+        2223,
+        2024,
+        2002,
+        1890,
+        2051,
+        2724,
+        2393,
+        3169,
+        2616,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 28.908029246780327,
+      "whole_yaw_deg": 62.506675295271286,
+      "up_tilt_deg": 0.6527661546304191,
+      "center_shift_mm": 0.757885517228847,
+      "score": 28.908029246780327,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 147,
+        "whole_yaw_deg": 62.506675295271286,
+        "continuation_yaw_deg": 1.4244566417290434,
+        "tilt_deg": 2.2748747928958095,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.01828746425368375,
+          "tracking_rad": 0.050467103825224194,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.13574158746156673,
+          "if_bs_collision_1": 0.8517419903597243,
+          "mf_tip": 0.21341148358568357,
+          "th_tip": 0.2015490480328539
+        },
+        "hold_drift_deg": 0.3250858495588162,
+        "hold_shift_mm": 0.10677577422034903,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.268549270322424,
+            "contact_N": {
+              "palm_collision_1": 0.23207323007060887,
+              "if_bs_collision_1": 0.7110307845321409,
+              "mf_tip": 1.52921076865084,
+              "th_tip": 1.4466096756157447
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.87901624797831,
+            "contact_N": {
+              "palm_collision_1": 0.29955658153731674,
+              "if_bs_collision_1": 0.5824147923722274,
+              "mf_tip": 0.4748972320260067,
+              "th_tip": 0.5310790961982066
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 62.79342053427132,
+            "contact_N": {
+              "palm_collision_1": 0.13975070493457506,
+              "if_bs_collision_1": 0.8294271391687627,
+              "mf_tip": 0.20496964126694228,
+              "th_tip": 0.21731514531006915
+            }
+          },
+          {
+            "sample": 147,
+            "whole_yaw_deg": 62.506675295271286,
+            "contact_N": {
+              "palm_collision_1": 0.13574158746156673,
+              "if_bs_collision_1": 0.8517419903597243,
+              "mf_tip": 0.21341148358568357,
+              "th_tip": 0.2015490480328539
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.130423229999991
+    },
+    {
+      "index": 22,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -60,
+        "2": -44,
+        "3": -44,
+        "4": 103,
+        "5": 100,
+        "6": 51,
+        "7": 14,
+        "8": -152,
+        "9": -30,
+        "10": 140,
+        "11": 43,
+        "12": 173
+      },
+      "goal": [
+        2751,
+        2474,
+        2399,
+        2194,
+        2105,
+        2090,
+        1857,
+        1896,
+        2756,
+        2463,
+        3189,
+        2645,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 49.48899639581649,
+      "whole_yaw_deg": 40.736062524260724,
+      "up_tilt_deg": 13.270009039274257,
+      "center_shift_mm": 25.836670972877748,
+      "score": 166.1440488395268,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 154,
+        "whole_yaw_deg": 40.736062524260724,
+        "continuation_yaw_deg": -20.634048394638913,
+        "tilt_deg": 14.331608225222427,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0022778249983272654,
+          "cube_mm": 0.13152854259403796,
+          "tracking_rad": 0.05598618776189421,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.44423140569936415,
+          "if_px_collision": 0.5136489151546246
+        },
+        "hold_drift_deg": 27.065020395828615,
+        "hold_shift_mm": 23.273825169827372,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.2589349032922,
+            "contact_N": {
+              "palm_collision_1": 0.2699688195810682,
+              "if_bs_collision_1": 0.706360909431465,
+              "mf_tip": 1.512425487966987,
+              "th_tip": 1.4470577026876699
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.66496970388981,
+            "contact_N": {
+              "palm_collision_1": 0.7839975530392329,
+              "palm_collision_6": 0.422176894169661,
+              "mf_tip": 1.9821120122924554,
+              "th_tip": 1.7289438105129329
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.25171882120021,
+            "contact_N": {
+              "palm_collision_1": 1.1733430512478886,
+              "mf_tip": 1.2436974845397066,
+              "th_tip": 1.180371117461169
+            }
+          },
+          {
+            "sample": 151,
+            "whole_yaw_deg": 40.7293456871285,
+            "contact_N": {
+              "palm_collision_1": 0.44497903368763614,
+              "if_px_collision": 0.5128960258413748
+            }
+          },
+          {
+            "sample": 154,
+            "whole_yaw_deg": 40.736062524260724,
+            "contact_N": {
+              "palm_collision_1": 0.44423140569936415,
+              "if_px_collision": 0.5136489151546246
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.1657132870000027
+    },
+    {
+      "index": 23,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -59,
+        "2": -47,
+        "3": -49,
+        "4": 61,
+        "5": -13,
+        "6": 71,
+        "7": 18,
+        "8": -7,
+        "9": -85,
+        "10": 127,
+        "11": 33,
+        "12": 91
+      },
+      "goal": [
+        2752,
+        2471,
+        2394,
+        2152,
+        1992,
+        2110,
+        1861,
+        2041,
+        2701,
+        2450,
+        3179,
+        2563,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.804846664135138,
+      "whole_yaw_deg": 66.70251106283507,
+      "up_tilt_deg": 0.18821410808972397,
+      "center_shift_mm": 2.130529991015782,
+      "score": 24.804846664135138,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 131,
+        "whole_yaw_deg": 66.70251106283507,
+        "continuation_yaw_deg": 5.6215826587899365,
+        "tilt_deg": 2.3564881940221563,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.051765911721542934,
+          "tracking_rad": 0.05130041418154628,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.1624291649397313,
+          "if_bs_collision_1": 0.8195047719035886,
+          "mf_px_collision": 0.020696817359968464,
+          "mf_tip": 1.068713173392366,
+          "th_tip": 1.0790581730320792
+        },
+        "hold_drift_deg": 0.042996152664317076,
+        "hold_shift_mm": 0.17757247201592857,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26382416259768,
+            "contact_N": {
+              "palm_collision_1": 0.24209991366299777,
+              "if_bs_collision_1": 0.7343784367094974,
+              "mf_tip": 1.520963817574299,
+              "th_tip": 1.4507118688228895
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.16963058714482,
+            "contact_N": {
+              "if_bs_collision_1": 0.9920817509416424,
+              "th_tip": 0.589653961663715
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.74489929705457,
+            "contact_N": {
+              "palm_collision_1": 0.1669860289858528,
+              "if_bs_collision_1": 0.806642050766535,
+              "mf_px_collision": 0.0256256713900884,
+              "mf_tip": 1.0637213121710993,
+              "th_tip": 1.0826906832235696
+            }
+          },
+          {
+            "sample": 131,
+            "whole_yaw_deg": 66.70251106283507,
+            "contact_N": {
+              "palm_collision_1": 0.1624291649397313,
+              "if_bs_collision_1": 0.8195047719035886,
+              "mf_px_collision": 0.020696817359968464,
+              "mf_tip": 1.068713173392366,
+              "th_tip": 1.0790581730320792
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.7949571939999913
+    },
+    {
+      "index": 24,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -27,
+        "2": -24,
+        "3": -32,
+        "4": 121,
+        "5": -56,
+        "6": 57,
+        "7": 28,
+        "8": 60,
+        "9": -28,
+        "10": 132,
+        "11": 57,
+        "12": 86
+      },
+      "goal": [
+        2784,
+        2494,
+        2411,
+        2212,
+        1949,
+        2096,
+        1871,
+        2108,
+        2758,
+        2455,
+        3203,
+        2558,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 21.675035197990724,
+      "whole_yaw_deg": 72.00864318117145,
+      "up_tilt_deg": 8.57015822785141,
+      "center_shift_mm": 5.110897481964358,
+      "score": 33.20506506642477,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 133,
+        "whole_yaw_deg": 72.00864318117145,
+        "continuation_yaw_deg": 10.299146897680979,
+        "tilt_deg": 6.20015371732278,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.29662452804906086,
+          "tracking_rad": 0.11175306867277524,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.28475238198831543,
+          "if_bs_collision_1": 2.016441446853458,
+          "mf_tip": 2.9527699368857707,
+          "th_tip": 3.5067606762891166
+        },
+        "hold_drift_deg": 0.6817061486742679,
+        "hold_shift_mm": 2.4097775924399096,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26326290990259,
+            "contact_N": {
+              "palm_collision_1": 0.24676218671989408,
+              "if_bs_collision_1": 0.7326166386576827,
+              "mf_tip": 1.6117053475299903,
+              "th_tip": 1.508415213748523
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 67.17870891040998,
+            "contact_N": {
+              "palm_collision_1": 0.6383579668029893,
+              "if_bs_collision_1": 0.6023520051676265,
+              "mf_tip": 3.563063641267089,
+              "th_tip": 3.119799647842097
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 72.80921874153644,
+            "contact_N": {
+              "palm_collision_1": 0.07862284936667106,
+              "if_bs_collision_1": 0.6529534013782943,
+              "mf_px_collision": 0.12489595937495405,
+              "mf_tip": 0.02773736742901221
+            }
+          },
+          {
+            "sample": 133,
+            "whole_yaw_deg": 72.00864318117145,
+            "contact_N": {
+              "palm_collision_1": 0.28475238198831543,
+              "if_bs_collision_1": 2.016441446853458,
+              "mf_tip": 2.9527699368857707,
+              "th_tip": 3.5067606762891166
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.0923044279999914
+    },
+    {
+      "index": 25,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -35,
+        "2": -68,
+        "3": -55,
+        "4": 53,
+        "5": -40,
+        "6": 46,
+        "7": 52,
+        "8": 72,
+        "9": -72,
+        "10": 144,
+        "11": 42,
+        "12": 111
+      },
+      "goal": [
+        2776,
+        2450,
+        2388,
+        2144,
+        1965,
+        2085,
+        1895,
+        2120,
+        2714,
+        2467,
+        3188,
+        2583,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.967766495881484,
+      "whole_yaw_deg": 68.15367414271401,
+      "up_tilt_deg": 4.025106421192874,
+      "center_shift_mm": 2.4956144653149255,
+      "score": 24.967766495881484,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 139,
+        "whole_yaw_deg": 68.15367414271401,
+        "continuation_yaw_deg": 7.023569784747042,
+        "tilt_deg": 3.913700299976324,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.05317579056180076,
+          "tracking_rad": 0.05056759823369519,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.4627734971456594,
+          "palm_collision_6": 0.01681575727603199,
+          "if_bs_collision_1": 0.23954243241851497,
+          "if_px_collision": 0.26671227546510057,
+          "mf_tip": 1.0328416709721178,
+          "th_tip": 1.0338260669772699
+        },
+        "hold_drift_deg": 0.14067866983986005,
+        "hold_shift_mm": 0.0515822027738089,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26420525177299,
+            "contact_N": {
+              "palm_collision_1": 0.26422009174334465,
+              "if_bs_collision_1": 0.7259835643333947,
+              "mf_tip": 1.536344206089982,
+              "th_tip": 1.471796554698778
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.45023493642397,
+            "contact_N": {
+              "palm_collision_6": 0.4301740935261935,
+              "if_bs_collision_1": 0.6405634349302074,
+              "mf_tip": 1.4550545341717764,
+              "th_tip": 1.304919690746039
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.08697394434301,
+            "contact_N": {
+              "palm_collision_1": 0.45477497289172475,
+              "palm_collision_6": 0.0307113256325487,
+              "if_bs_collision_1": 0.24892933365403924,
+              "if_px_collision": 0.2632231028163502,
+              "mf_tip": 1.0441242843798044,
+              "th_tip": 1.0343240049789855
+            }
+          },
+          {
+            "sample": 139,
+            "whole_yaw_deg": 68.15367414271401,
+            "contact_N": {
+              "palm_collision_1": 0.4627734971456594,
+              "palm_collision_6": 0.01681575727603199,
+              "if_bs_collision_1": 0.23954243241851497,
+              "if_px_collision": 0.26671227546510057,
+              "mf_tip": 1.0328416709721178,
+              "th_tip": 1.0338260669772699
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.2474110209999907
+    },
+    {
+      "index": 26,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -63,
+        "2": -57,
+        "3": -65,
+        "4": 53,
+        "5": 86,
+        "6": -12,
+        "7": -4,
+        "8": -146,
+        "9": -97,
+        "10": 105,
+        "11": 41,
+        "12": 106
+      },
+      "goal": [
+        2748,
+        2461,
+        2378,
+        2144,
+        2091,
+        2027,
+        1839,
+        1902,
+        2689,
+        2428,
+        3187,
+        2578,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 29.21480535541301,
+      "whole_yaw_deg": 61.43912394892804,
+      "up_tilt_deg": 13.532307402774341,
+      "center_shift_mm": 15.635515854988103,
+      "score": 80.91598890898914,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 140,
+        "whole_yaw_deg": 61.43912394892804,
+        "continuation_yaw_deg": 0.4148768285987746,
+        "tilt_deg": 14.538790262071966,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0025625410044289015,
+          "cube_mm": 0.07505485499550667,
+          "tracking_rad": 0.04853653857061409,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.549412710223284,
+          "if_px_collision": 0.40683494812736176
+        },
+        "hold_drift_deg": 3.669873448687106,
+        "hold_shift_mm": 14.382257223939444,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.25877348870484,
+            "contact_N": {
+              "palm_collision_1": 0.28419288909641016,
+              "if_bs_collision_1": 0.7030849918483826,
+              "mf_tip": 1.5012383839090968,
+              "th_tip": 1.441400106772774
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.11476313392619,
+            "contact_N": {
+              "palm_collision_1": 0.8361954279203838,
+              "mf_px_collision": 0.20815782208327754,
+              "mf_tip": 0.5534576877000359,
+              "th_tip": 0.7019144452276956
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 63.15731136226932,
+            "contact_N": {
+              "if_px_collision": 0.9559367443377432
+            }
+          },
+          {
+            "sample": 140,
+            "whole_yaw_deg": 61.43912394892804,
+            "contact_N": {
+              "palm_collision_1": 0.549412710223284,
+              "if_px_collision": 0.40683494812736176
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.1677134130000013
+    },
+    {
+      "index": 27,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -111,
+        "2": -30,
+        "3": -60,
+        "4": 21,
+        "5": -52,
+        "6": -49,
+        "7": 14,
+        "8": -68,
+        "9": -40,
+        "10": 68,
+        "11": 37,
+        "12": 153
+      },
+      "goal": [
+        2700,
+        2488,
+        2383,
+        2112,
+        1953,
+        1990,
+        1857,
+        1980,
+        2746,
+        2391,
+        3183,
+        2625,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 27.821540119577282,
+      "whole_yaw_deg": 62.328565306216,
+      "up_tilt_deg": 8.583449291869464,
+      "center_shift_mm": 5.520756615662217,
+      "score": 38.571887995185676,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 144,
+        "whole_yaw_deg": 62.328565306216,
+        "continuation_yaw_deg": 1.293892848922182,
+        "tilt_deg": 9.682632749431653,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.015881876233126563,
+          "tracking_rad": 0.042928613719468385,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.773722633795352,
+          "if_px_collision": 0.19699827104423034
+        },
+        "hold_drift_deg": 0.0955279340736048,
+        "hold_shift_mm": 0.5689093176323404,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26077712735666,
+            "contact_N": {
+              "palm_collision_1": 0.2711786828947915,
+              "if_bs_collision_1": 0.7097463979107848,
+              "mf_tip": 1.4902351388401467,
+              "th_tip": 1.4504258506325876
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 62.552399431666224,
+            "contact_N": {
+              "palm_collision_1": 0.6707143177106024,
+              "if_bs_collision_1": 0.306126180939719
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 62.40586158717056,
+            "contact_N": {
+              "palm_collision_1": 0.7844104481371624,
+              "if_px_collision": 0.18639459136252715
+            }
+          },
+          {
+            "sample": 144,
+            "whole_yaw_deg": 62.328565306216,
+            "contact_N": {
+              "palm_collision_1": 0.773722633795352,
+              "if_px_collision": 0.19699827104423034
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.884950806000006
+    },
+    {
+      "index": 28,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -98,
+        "2": 3,
+        "3": -76,
+        "4": 112,
+        "5": -7,
+        "6": -4,
+        "7": 15,
+        "8": -29,
+        "9": -88,
+        "10": 95,
+        "11": 39,
+        "12": 110
+      },
+      "goal": [
+        2713,
+        2521,
+        2367,
+        2203,
+        1998,
+        2035,
+        1858,
+        2019,
+        2698,
+        2418,
+        3185,
+        2582,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 28.22624539575772,
+      "whole_yaw_deg": 62.23186407569219,
+      "up_tilt_deg": 3.6426425848999777,
+      "center_shift_mm": 4.7978961845447206,
+      "score": 29.040752503508415,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 123,
+        "whole_yaw_deg": 62.23186407569219,
+        "continuation_yaw_deg": 0.9913546559287693,
+        "tilt_deg": 3.671913818917471,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.08953652630796465,
+          "tracking_rad": 0.05851250691112067,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "if_bs_collision_1": 1.0046722808127995,
+          "mf_tip": 1.411187371004599,
+          "th_tip": 1.4388104211778723
+        },
+        "hold_drift_deg": 1.9055963505701958,
+        "hold_shift_mm": 2.4072535538753477,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.27169814144448,
+            "contact_N": {
+              "palm_collision_1": 0.2592449813796582,
+              "if_bs_collision_1": 0.7008235641957649,
+              "mf_tip": 1.5429545973826797,
+              "th_tip": 1.4663480110477771
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.10733552419482,
+            "contact_N": {
+              "palm_collision_1": 1.0262993125276014,
+              "mf_tip": 1.8113303406680368,
+              "th_tip": 2.008336787303727
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 63.56496008810851,
+            "contact_N": {
+              "if_bs_collision_1": 0.964119944101159,
+              "mf_tip": 1.5248435694343216,
+              "th_tip": 1.541948715667463
+            }
+          },
+          {
+            "sample": 123,
+            "whole_yaw_deg": 62.23186407569219,
+            "contact_N": {
+              "if_bs_collision_1": 1.0046722808127995,
+              "mf_tip": 1.411187371004599,
+              "th_tip": 1.4388104211778723
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.7697716720000045
+    },
+    {
+      "index": 29,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -45,
+        "2": -8,
+        "3": -26,
+        "4": 74,
+        "5": -1,
+        "6": 61,
+        "7": -23,
+        "8": 86,
+        "9": -32,
+        "10": 92,
+        "11": 42,
+        "12": 120
+      },
+      "goal": [
+        2766,
+        2510,
+        2417,
+        2165,
+        2004,
+        2100,
+        1820,
+        2134,
+        2754,
+        2415,
+        3188,
+        2592,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.927925334305577,
+      "whole_yaw_deg": 69.00578456892929,
+      "up_tilt_deg": 8.782330229046938,
+      "center_shift_mm": 3.4307001142439435,
+      "score": 36.27491602144639,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 127,
+        "whole_yaw_deg": 69.00578456892929,
+        "continuation_yaw_deg": 7.337572772546112,
+        "tilt_deg": 6.55222242976056,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.05825765604093026,
+          "tracking_rad": 0.06069815247911216,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.6069713661113494,
+          "if_bs_collision_1": 0.5575623548446688,
+          "mf_px_collision": 0.20059431533335997,
+          "mf_tip": 2.4485883959355705,
+          "th_tip": 2.4179466198247486
+        },
+        "hold_drift_deg": 0.2644631924995632,
+        "hold_shift_mm": 0.33616205298382584,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26686950353715,
+            "contact_N": {
+              "palm_collision_1": 0.2514818766357326,
+              "if_bs_collision_1": 0.7170817402022779,
+              "mf_tip": 1.5620119032051514,
+              "th_tip": 1.4718056120873442
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 67.38065325494676,
+            "contact_N": {
+              "palm_collision_1": 0.49389468617289123,
+              "palm_collision_6": 0.24566278084093446,
+              "if_bs_collision_1": 0.525751174717934,
+              "mf_px_collision": 0.2760790263466725,
+              "mf_tip": 2.261127732394567,
+              "th_tip": 2.1806440525661395
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.99380384414756,
+            "contact_N": {
+              "palm_collision_1": 0.6828417450931556,
+              "if_bs_collision_1": 0.5124473634647053,
+              "mf_px_collision": 0.1818153729415914,
+              "mf_tip": 2.7377283973380315,
+              "th_tip": 2.640884040646555
+            }
+          },
+          {
+            "sample": 127,
+            "whole_yaw_deg": 69.00578456892929,
+            "contact_N": {
+              "palm_collision_1": 0.6069713661113494,
+              "if_bs_collision_1": 0.5575623548446688,
+              "mf_px_collision": 0.20059431533335997,
+              "mf_tip": 2.4485883959355705,
+              "th_tip": 2.4179466198247486
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.884093192000009
+    },
+    {
+      "index": 30,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -126,
+        "2": -2,
+        "3": -61,
+        "4": 61,
+        "5": 54,
+        "6": 12,
+        "7": -71,
+        "8": -95,
+        "9": -61,
+        "10": 116,
+        "11": 21,
+        "12": 139
+      },
+      "goal": [
+        2685,
+        2516,
+        2382,
+        2152,
+        2059,
+        2051,
+        1772,
+        1953,
+        2725,
+        2439,
+        3167,
+        2611,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 32.522561777604786,
+      "whole_yaw_deg": 57.72464752877542,
+      "up_tilt_deg": 11.524612583804203,
+      "center_shift_mm": 8.398225659179273,
+      "score": 52.09639952901739,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 137,
+        "whole_yaw_deg": 57.72464752877542,
+        "continuation_yaw_deg": -3.366378145255197,
+        "tilt_deg": 12.560066420486294,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.09554547391309351,
+          "tracking_rad": 0.048407788543399374,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.681210167739011,
+          "if_px_collision": 0.28172156024892636
+        },
+        "hold_drift_deg": 0.2547594813919849,
+        "hold_shift_mm": 0.9482123834185305,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26712147935283,
+            "contact_N": {
+              "palm_collision_1": 0.23921518958609764,
+              "if_bs_collision_1": 0.7182920385978598,
+              "mf_tip": 1.5144005763751347,
+              "th_tip": 1.4502110459283073
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.38610264515574,
+            "contact_N": {
+              "palm_collision_1": 0.9154025609626564,
+              "mf_px_collision": 0.28214294911047605,
+              "mf_tip": 0.9241806975889869,
+              "th_tip": 1.1118163975081967
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 57.856873468081105,
+            "contact_N": {
+              "palm_collision_1": 0.7034183418408748,
+              "if_px_collision": 0.2612809665351664,
+              "th_tip": 0.01227913467055656
+            }
+          },
+          {
+            "sample": 137,
+            "whole_yaw_deg": 57.72464752877542,
+            "contact_N": {
+              "palm_collision_1": 0.681210167739011,
+              "if_px_collision": 0.28172156024892636
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.96059025400001
+    },
+    {
+      "index": 31,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -63,
+        "2": -36,
+        "3": -53,
+        "4": 62,
+        "5": -3,
+        "6": -50,
+        "7": -20,
+        "8": 2,
+        "9": -38,
+        "10": 92,
+        "11": 15,
+        "12": 90
+      },
+      "goal": [
+        2748,
+        2482,
+        2390,
+        2153,
+        2002,
+        1989,
+        1823,
+        2050,
+        2748,
+        2415,
+        3161,
+        2562,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.102775084172894,
+      "whole_yaw_deg": 65.47115572662942,
+      "up_tilt_deg": 0.6401657111881061,
+      "center_shift_mm": 1.355225076757787,
+      "score": 26.102775084172894,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 113,
+        "whole_yaw_deg": 65.47115572662942,
+        "continuation_yaw_deg": 4.386387068275749,
+        "tilt_deg": 2.27491721748459,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.027412611214200692,
+          "tracking_rad": 0.05165321472451467,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.25725710585653727,
+          "if_bs_collision_1": 0.7138904971934282,
+          "mf_px_collision": 0.04045366763699503,
+          "mf_tip": 0.9475243018461603,
+          "th_tip": 0.990109439362452
+        },
+        "hold_drift_deg": 0.23694323674250684,
+        "hold_shift_mm": 0.1688256868514893,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26422374817663,
+            "contact_N": {
+              "palm_collision_1": 0.23427793816318276,
+              "if_bs_collision_1": 0.7257208047925905,
+              "mf_tip": 1.5054019071491145,
+              "th_tip": 1.4454724748636842
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.8235654583529,
+            "contact_N": {
+              "palm_collision_1": 0.11882336190583767,
+              "if_bs_collision_1": 0.7336464152492159,
+              "mf_px_collision": 0.11222075238707727,
+              "mf_tip": 0.830895368303138,
+              "th_tip": 0.980404729159248
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 65.4767164177762,
+            "contact_N": {
+              "palm_collision_1": 0.25112784614639694,
+              "if_bs_collision_1": 0.7130522219105803,
+              "mf_px_collision": 0.043783341879265414,
+              "mf_tip": 0.9408710884163427,
+              "th_tip": 0.9889823128033004
+            }
+          },
+          {
+            "sample": 113,
+            "whole_yaw_deg": 65.47115572662942,
+            "contact_N": {
+              "palm_collision_1": 0.25725710585653727,
+              "if_bs_collision_1": 0.7138904971934282,
+              "mf_px_collision": 0.04045366763699503,
+              "mf_tip": 0.9475243018461603,
+              "th_tip": 0.990109439362452
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.6691909700000025
+    },
+    {
+      "index": 32,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -122,
+        "2": -10,
+        "3": -92,
+        "4": 8,
+        "5": -32,
+        "6": 55,
+        "7": 3,
+        "8": 53,
+        "9": -68,
+        "10": 105,
+        "11": 68,
+        "12": 173
+      },
+      "goal": [
+        2689,
+        2508,
+        2351,
+        2099,
+        1973,
+        2094,
+        1846,
+        2101,
+        2718,
+        2428,
+        3214,
+        2645,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.52490551975932,
+      "whole_yaw_deg": 65.94923655597742,
+      "up_tilt_deg": 3.0481494779949947,
+      "center_shift_mm": 1.8856925043433885,
+      "score": 26.52490551975932,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 154,
+        "whole_yaw_deg": 65.94923655597742,
+        "continuation_yaw_deg": 4.8406764915783835,
+        "tilt_deg": 3.1706540642051837,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.016594409168919053,
+          "tracking_rad": 0.04274903058054269,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.12755147691548463,
+          "palm_collision_6": 0.028008435949094558,
+          "if_bs_collision_1": 0.834430261572038,
+          "mf_tip": 0.0323126088971388
+        },
+        "hold_drift_deg": 0.05635195228672757,
+        "hold_shift_mm": 0.13489791766460396,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.266366703426165,
+            "contact_N": {
+              "palm_collision_1": 0.2734685280385236,
+              "if_bs_collision_1": 0.7301080364901318,
+              "mf_tip": 1.4984888112057715,
+              "th_tip": 1.4526462139293161
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.03874014346555,
+            "contact_N": {
+              "palm_collision_1": 0.2871263695874745,
+              "palm_collision_6": 0.27215444433828884,
+              "if_bs_collision_1": 0.8100913268488454,
+              "mf_px_collision": 0.1755994523230897,
+              "mf_tip": 0.699647429229125,
+              "th_tip": 0.5811583140660446
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.00528334171928,
+            "contact_N": {
+              "palm_collision_1": 0.0774595387072983,
+              "palm_collision_6": 0.07201141229358052,
+              "if_bs_collision_1": 0.8625046799346812,
+              "mf_tip": 0.09013413985583604
+            }
+          },
+          {
+            "sample": 151,
+            "whole_yaw_deg": 65.95507520858231,
+            "contact_N": {
+              "palm_collision_1": 0.12737699587799878,
+              "palm_collision_6": 0.027598873568089724,
+              "if_bs_collision_1": 0.8350307542149581,
+              "mf_tip": 0.03328646919741145
+            }
+          },
+          {
+            "sample": 154,
+            "whole_yaw_deg": 65.94923655597742,
+            "contact_N": {
+              "palm_collision_1": 0.12755147691548463,
+              "palm_collision_6": 0.028008435949094558,
+              "if_bs_collision_1": 0.834430261572038,
+              "mf_tip": 0.0323126088971388
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.6833697579999978
+    },
+    {
+      "index": 33,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -136,
+        "2": -21,
+        "3": -46,
+        "4": -50,
+        "5": 121,
+        "6": -87,
+        "7": 1,
+        "8": 59,
+        "9": -3,
+        "10": 91,
+        "11": 41,
+        "12": 54
+      },
+      "goal": [
+        2675,
+        2497,
+        2397,
+        2041,
+        2126,
+        1952,
+        1844,
+        2107,
+        2783,
+        2414,
+        3187,
+        2526,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.91607911248453,
+      "whole_yaw_deg": 66.7534896396221,
+      "up_tilt_deg": 3.3403616470501745,
+      "center_shift_mm": 3.098517036867921,
+      "score": 25.91607911248453,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 135,
+        "whole_yaw_deg": 66.7534896396221,
+        "continuation_yaw_deg": 5.638526399920823,
+        "tilt_deg": 3.3813043600154993,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.01589664636769057,
+          "tracking_rad": 0.042748916335381804,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.26290879879673723,
+          "palm_collision_6": 0.047794806763315906,
+          "if_bs_collision_1": 0.6866315717065118,
+          "mf_tip": 0.02930882733973214
+        },
+        "hold_drift_deg": 0.04625462447273274,
+        "hold_shift_mm": 0.163812126065641,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.265006832671624,
+            "contact_N": {
+              "palm_collision_1": 0.24926940257898678,
+              "if_bs_collision_1": 0.761983402479463,
+              "mf_tip": 1.4630078233005173,
+              "th_tip": 1.4185772820060154
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.84617512952845,
+            "contact_N": {
+              "palm_collision_1": 0.07069136384304554,
+              "palm_collision_6": 0.11977748145873542,
+              "if_bs_collision_1": 0.8932969203155753,
+              "mf_tip": 0.2267885853880224
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.81718612293221,
+            "contact_N": {
+              "palm_collision_1": 0.2545997562165503,
+              "palm_collision_6": 0.054520606817771815,
+              "if_bs_collision_1": 0.6974544346034848,
+              "mf_tip": 0.06437119753483879
+            }
+          },
+          {
+            "sample": 135,
+            "whole_yaw_deg": 66.7534896396221,
+            "contact_N": {
+              "palm_collision_1": 0.26290879879673723,
+              "palm_collision_6": 0.047794806763315906,
+              "if_bs_collision_1": 0.6866315717065118,
+              "mf_tip": 0.02930882733973214
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 5.762729675000003
+    },
+    {
+      "index": 34,
+      "origin": "truncated_normal",
+      "generation": 1,
+      "deltas_by_motor": {
+        "1": -32,
+        "2": -43,
+        "3": -24,
+        "4": 13,
+        "5": 15,
+        "6": 19,
+        "7": 9,
+        "8": -2,
+        "9": -60,
+        "10": 103,
+        "11": 17,
+        "12": 114
+      },
+      "goal": [
+        2779,
+        2475,
+        2419,
+        2104,
+        2020,
+        2058,
+        1852,
+        2046,
+        2726,
+        2426,
+        3163,
+        2586,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 27.37992834749041,
+      "whole_yaw_deg": 64.04062601648563,
+      "up_tilt_deg": 0.40355276444281873,
+      "center_shift_mm": 1.693541603344954,
+      "score": 27.37992834749041,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 124,
+        "whole_yaw_deg": 64.04062601648563,
+        "continuation_yaw_deg": 2.9588528825166778,
+        "tilt_deg": 2.3076435449293378,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.0158692309100416,
+          "tracking_rad": 0.0442143496136044,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.0896173064775665,
+          "if_bs_collision_1": 0.8993091360027727,
+          "mf_tip": 0.5672953924625596,
+          "th_tip": 0.5259425640291803
+        },
+        "hold_drift_deg": 0.5932145954658998,
+        "hold_shift_mm": 0.357887988294969,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.25931591051886,
+            "contact_N": {
+              "palm_collision_1": 0.23300431348770972,
+              "if_bs_collision_1": 0.7128932802994619,
+              "mf_tip": 1.5035714121990948,
+              "th_tip": 1.4294184118917523
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.26868252406383,
+            "contact_N": {
+              "palm_collision_6": 0.31244726619104213,
+              "if_bs_collision_1": 0.670809781693502,
+              "mf_tip": 0.8156109532103326,
+              "th_tip": 0.7212488736671024
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.41754150557823,
+            "contact_N": {
+              "palm_collision_1": 0.10544203414229361,
+              "if_bs_collision_1": 0.8779768296552835,
+              "mf_tip": 0.5766138929057034,
+              "th_tip": 0.5550271686785508
+            }
+          },
+          {
+            "sample": 124,
+            "whole_yaw_deg": 64.04062601648563,
+            "contact_N": {
+              "palm_collision_1": 0.0896173064775665,
+              "if_bs_collision_1": 0.8993091360027727,
+              "mf_tip": 0.5672953924625596,
+              "th_tip": 0.5259425640291803
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.822028978000006
+    },
+    {
+      "index": 35,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -62,
+        "2": -67,
+        "3": -82,
+        "4": 34,
+        "5": 74,
+        "6": 38,
+        "7": -35,
+        "8": -23,
+        "9": -29,
+        "10": 103,
+        "11": 49,
+        "12": 127
+      },
+      "goal": [
+        2749,
+        2451,
+        2361,
+        2125,
+        2079,
+        2077,
+        1808,
+        2025,
+        2757,
+        2426,
+        3195,
+        2599,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 23.74177612473975,
+      "whole_yaw_deg": 67.14789116069359,
+      "up_tilt_deg": 2.179607240504664,
+      "center_shift_mm": 2.8420730998725836,
+      "score": 23.74177612473975,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 131,
+        "whole_yaw_deg": 67.14789116069359,
+        "continuation_yaw_deg": 6.094131605807583,
+        "tilt_deg": 3.7698902379851567,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.016331270192117282,
+          "tracking_rad": 0.04591027551082984,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.5315726880432384,
+          "if_bs_collision_1": 0.44905134963621357,
+          "mf_px_collision": 0.007942961405726423
+        },
+        "hold_drift_deg": 0.06132573463341486,
+        "hold_shift_mm": 0.2182850877215467,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.2645296257309,
+            "contact_N": {
+              "palm_collision_1": 0.2722577259411717,
+              "if_bs_collision_1": 0.7267208353090437,
+              "mf_tip": 1.5206940792722734,
+              "th_tip": 1.4492840234294224
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.02406340853709,
+            "contact_N": {
+              "palm_collision_1": 1.0177562308871,
+              "mf_px_collision": 0.16987021190264218,
+              "mf_tip": 0.3472408832696091,
+              "th_tip": 0.294086592651546
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 67.12507801349336,
+            "contact_N": {
+              "palm_collision_1": 0.5453689995845624,
+              "if_bs_collision_1": 0.4328128179706642,
+              "mf_px_collision": 0.01021793927020596
+            }
+          },
+          {
+            "sample": 131,
+            "whole_yaw_deg": 67.14789116069359,
+            "contact_N": {
+              "palm_collision_1": 0.5315726880432384,
+              "if_bs_collision_1": 0.44905134963621357,
+              "mf_px_collision": 0.007942961405726423
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.4863247129999877
+    },
+    {
+      "index": 36,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -10,
+        "2": -38,
+        "3": -75,
+        "4": -30,
+        "5": -3,
+        "6": 37,
+        "7": 31,
+        "8": -30,
+        "9": -105,
+        "10": 102,
+        "11": 47,
+        "12": 99
+      },
+      "goal": [
+        2801,
+        2480,
+        2368,
+        2061,
+        2002,
+        2076,
+        1874,
+        2018,
+        2681,
+        2425,
+        3193,
+        2571,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.431262073263863,
+      "whole_yaw_deg": 64.12279764278085,
+      "up_tilt_deg": 3.3525700332688975,
+      "center_shift_mm": 2.607744847184523,
+      "score": 26.431262073263863,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 120,
+        "whole_yaw_deg": 64.12279764278085,
+        "continuation_yaw_deg": 3.0694065182603225,
+        "tilt_deg": 4.761519347157813,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.015617016957646113,
+          "tracking_rad": 0.04155582817326642,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.3879544314906164,
+          "if_bs_collision_1": 0.5943494414048118,
+          "th_tip": 0.11028236011545711
+        },
+        "hold_drift_deg": 1.575544910741372,
+        "hold_shift_mm": 1.3347691096945096,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.25614887085179,
+            "contact_N": {
+              "palm_collision_1": 0.29250233395549374,
+              "if_bs_collision_1": 0.694000643700178,
+              "mf_tip": 1.4928477426234341,
+              "th_tip": 1.4493976239560493
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.66643099506999,
+            "contact_N": {
+              "palm_collision_1": 0.9741043343344508,
+              "palm_collision_6": 0.191376344220238,
+              "mf_px_collision": 0.1350830495494854,
+              "mf_tip": 0.5908314273659458,
+              "th_tip": 0.5349183367542326
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 65.217207501506,
+            "contact_N": {
+              "palm_collision_1": 1.0545009099827152,
+              "mf_tip": 0.2785377125236575,
+              "th_tip": 0.2911060675284219
+            }
+          },
+          {
+            "sample": 120,
+            "whole_yaw_deg": 64.12279764278085,
+            "contact_N": {
+              "palm_collision_1": 0.3879544314906164,
+              "if_bs_collision_1": 0.5943494414048118,
+              "th_tip": 0.11028236011545711
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.944761488999987
+    },
+    {
+      "index": 37,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -108,
+        "2": -16,
+        "3": -48,
+        "4": 18,
+        "5": -48,
+        "6": 22,
+        "7": 14,
+        "8": 17,
+        "9": -96,
+        "10": 119,
+        "11": 54,
+        "12": 56
+      },
+      "goal": [
+        2703,
+        2502,
+        2395,
+        2109,
+        1957,
+        2061,
+        1857,
+        2065,
+        2690,
+        2442,
+        3200,
+        2528,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 23.66443249294511,
+      "whole_yaw_deg": 68.35039843570907,
+      "up_tilt_deg": 1.3226142635094942,
+      "center_shift_mm": 2.523237363989563,
+      "score": 23.66443249294511,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 127,
+        "whole_yaw_deg": 68.35039843570907,
+        "continuation_yaw_deg": 7.254399849264965,
+        "tilt_deg": 2.320244715704041,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.05593365383466068,
+          "tracking_rad": 0.044360334059810415,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.11333337335855873,
+          "if_bs_collision_1": 0.8688354473174908,
+          "mf_px_collision": 0.01593093594798431,
+          "mf_tip": 0.42507531298859375,
+          "th_tip": 0.43620037076817825
+        },
+        "hold_drift_deg": 0.04003950311261498,
+        "hold_shift_mm": 0.029491524698542805,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26753312009592,
+            "contact_N": {
+              "palm_collision_1": 0.22937202383438093,
+              "if_bs_collision_1": 0.7343470527357465,
+              "mf_tip": 1.5029230403946623,
+              "th_tip": 1.442624453783804
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 67.01902644517608,
+            "contact_N": {
+              "if_bs_collision_1": 0.9249431687596082,
+              "mf_tip": 0.6627679780275936,
+              "th_tip": 0.5830632084322176
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.35646617491086,
+            "contact_N": {
+              "palm_collision_1": 0.11467168685879583,
+              "if_bs_collision_1": 0.8716882002382289,
+              "mf_px_collision": 0.02145252607256226,
+              "mf_tip": 0.4224988595436246,
+              "th_tip": 0.43722566703120536
+            }
+          },
+          {
+            "sample": 127,
+            "whole_yaw_deg": 68.35039843570907,
+            "contact_N": {
+              "palm_collision_1": 0.11333337335855873,
+              "if_bs_collision_1": 0.8688354473174908,
+              "mf_px_collision": 0.01593093594798431,
+              "mf_tip": 0.42507531298859375,
+              "th_tip": 0.43620037076817825
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.7285717209999945
+    },
+    {
+      "index": 38,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -38,
+        "2": -42,
+        "3": -38,
+        "4": 12,
+        "5": -4,
+        "6": 36,
+        "7": 14,
+        "8": 17,
+        "9": -51,
+        "10": 101,
+        "11": 62,
+        "12": 123
+      },
+      "goal": [
+        2773,
+        2476,
+        2405,
+        2103,
+        2001,
+        2075,
+        1857,
+        2065,
+        2735,
+        2424,
+        3208,
+        2595,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.78588701479709,
+      "whole_yaw_deg": 66.05881972568463,
+      "up_tilt_deg": 1.3402854622774405,
+      "center_shift_mm": 2.337334077197801,
+      "score": 25.78588701479709,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 129,
+        "whole_yaw_deg": 66.05881972568463,
+        "continuation_yaw_deg": 4.966614057769551,
+        "tilt_deg": 2.3232899137464096,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.03403906345051402,
+          "tracking_rad": 0.04388996448091145,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.29482854882983794,
+          "if_bs_collision_1": 0.7305886129380408,
+          "mf_tip": 1.2755744008784369,
+          "th_tip": 1.2555535154520585
+        },
+        "hold_drift_deg": 0.5108844376742573,
+        "hold_shift_mm": 0.26558272820135703,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.263143106727256,
+            "contact_N": {
+              "palm_collision_1": 0.2685531367278434,
+              "if_bs_collision_1": 0.7204078871017576,
+              "mf_tip": 1.4954348835178266,
+              "th_tip": 1.4372941383927293
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.64675608928276,
+            "contact_N": {
+              "palm_collision_1": 0.34945306510630125,
+              "palm_collision_6": 0.380037967722319,
+              "if_bs_collision_1": 0.5806924539429906,
+              "mf_tip": 1.1626623440260013,
+              "th_tip": 0.9187750867289021
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.32414978427369,
+            "contact_N": {
+              "palm_collision_1": 0.3289730643932759,
+              "if_bs_collision_1": 0.7090632913072008,
+              "mf_tip": 1.2715388539829766,
+              "th_tip": 1.2550505621294767
+            }
+          },
+          {
+            "sample": 129,
+            "whole_yaw_deg": 66.05881972568463,
+            "contact_N": {
+              "palm_collision_1": 0.29482854882983794,
+              "if_bs_collision_1": 0.7305886129380408,
+              "mf_tip": 1.2755744008784369,
+              "th_tip": 1.2555535154520585
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.025377118999998
+    },
+    {
+      "index": 39,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -78,
+        "2": -30,
+        "3": -46,
+        "4": 61,
+        "5": 5,
+        "6": 15,
+        "7": -14,
+        "8": -27,
+        "9": -26,
+        "10": 145,
+        "11": 13,
+        "12": 139
+      },
+      "goal": [
+        2733,
+        2488,
+        2397,
+        2152,
+        2010,
+        2054,
+        1829,
+        2021,
+        2760,
+        2468,
+        3159,
+        2611,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 28.938145317480384,
+      "whole_yaw_deg": 61.54587723458758,
+      "up_tilt_deg": 3.377511607303785,
+      "center_shift_mm": 3.835628972473221,
+      "score": 34.02816250163876,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 140,
+        "whole_yaw_deg": 61.54587723458758,
+        "continuation_yaw_deg": 0.4805619728992324,
+        "tilt_deg": 4.7806458555533435,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.06451372295007775,
+          "tracking_rad": 0.05076649648251229,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "if_bs_collision_1": 1.0047199277351846,
+          "mf_tip": 0.7564227288682204,
+          "th_tip": 0.7081652774722752
+        },
+        "hold_drift_deg": 5.471098037650428,
+        "hold_shift_mm": 2.0739105544287595,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26501243824693,
+            "contact_N": {
+              "palm_collision_1": 0.24674345949850537,
+              "if_bs_collision_1": 0.7336520540184082,
+              "mf_tip": 1.5369869289048472,
+              "th_tip": 1.4725581224389184
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.08677019593435,
+            "contact_N": {
+              "palm_collision_1": 0.23338451419513656,
+              "palm_collision_6": 0.37519764658845745,
+              "if_bs_collision_1": 0.4667777605159791,
+              "mf_tip": 1.6360383121846622,
+              "th_tip": 1.5485263953328778
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 67.09257889926869,
+            "contact_N": {
+              "palm_collision_1": 0.9887104599435721,
+              "mf_tip": 1.150154071627795,
+              "th_tip": 1.1582071491364327
+            }
+          },
+          {
+            "sample": 140,
+            "whole_yaw_deg": 61.54587723458758,
+            "contact_N": {
+              "if_bs_collision_1": 1.0047199277351846,
+              "mf_tip": 0.7564227288682204,
+              "th_tip": 0.7081652774722752
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.115479375999996
+    },
+    {
+      "index": 40,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -37,
+        "2": -61,
+        "3": -40,
+        "4": 29,
+        "5": -56,
+        "6": 12,
+        "7": -3,
+        "8": -80,
+        "9": -66,
+        "10": 139,
+        "11": 41,
+        "12": 98
+      },
+      "goal": [
+        2774,
+        2457,
+        2403,
+        2120,
+        1949,
+        2051,
+        1840,
+        1968,
+        2720,
+        2462,
+        3187,
+        2570,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.20867949716481,
+      "whole_yaw_deg": 66.12439600995704,
+      "up_tilt_deg": 0.27712979357351,
+      "center_shift_mm": 3.4431811972479096,
+      "score": 25.20867949716481,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 137,
+        "whole_yaw_deg": 66.12439600995704,
+        "continuation_yaw_deg": 5.048284972143122,
+        "tilt_deg": 2.523460661957369,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.032104377368449115,
+          "tracking_rad": 0.04764214138697212,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.9807263137727011,
+          "mf_tip": 0.8373673412008484,
+          "th_tip": 0.8454200651525227
+        },
+        "hold_drift_deg": 0.1117361107720106,
+        "hold_shift_mm": 0.08611688736355444,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.25935079510062,
+            "contact_N": {
+              "palm_collision_1": 0.26013195079869894,
+              "if_bs_collision_1": 0.7224100684229178,
+              "mf_tip": 1.5009473794696473,
+              "th_tip": 1.4394720860692531
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.78461123660452,
+            "contact_N": {
+              "palm_collision_1": 0.7057654209840729,
+              "palm_collision_6": 0.3584161264325539,
+              "mf_tip": 1.3021807953577837,
+              "th_tip": 1.0894072509755435
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.06535708786386,
+            "contact_N": {
+              "palm_collision_1": 0.9847967539099698,
+              "mf_tip": 0.8355002893264771,
+              "th_tip": 0.8478656852029719
+            }
+          },
+          {
+            "sample": 137,
+            "whole_yaw_deg": 66.12439600995704,
+            "contact_N": {
+              "palm_collision_1": 0.9807263137727011,
+              "mf_tip": 0.8373673412008484,
+              "th_tip": 0.8454200651525227
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.9853559080000025
+    },
+    {
+      "index": 41,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -45,
+        "2": -81,
+        "3": -61,
+        "4": 30,
+        "5": -30,
+        "6": 2,
+        "7": -47,
+        "8": -6,
+        "9": -90,
+        "10": 97,
+        "11": 52,
+        "12": 153
+      },
+      "goal": [
+        2766,
+        2437,
+        2382,
+        2121,
+        1975,
+        2041,
+        1796,
+        2042,
+        2696,
+        2420,
+        3198,
+        2625,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.72591317183655,
+      "whole_yaw_deg": 64.68335045506777,
+      "up_tilt_deg": 0.249579397260832,
+      "center_shift_mm": 1.2231986324586377,
+      "score": 26.72591317183655,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 144,
+        "whole_yaw_deg": 64.68335045506777,
+        "continuation_yaw_deg": 3.6025371070993986,
+        "tilt_deg": 2.341825502490541,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.016681336572517812,
+          "tracking_rad": 0.04471288375406279,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.1759774774067961,
+          "if_bs_collision_1": 0.8050132179628491
+        },
+        "hold_drift_deg": 0.005117013446969803,
+        "hold_shift_mm": 0.006559311371226437,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26249111194168,
+            "contact_N": {
+              "palm_collision_1": 0.2827409527037531,
+              "if_bs_collision_1": 0.7165208684930593,
+              "mf_tip": 1.4721532376977908,
+              "th_tip": 1.4263145527333034
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.50335933931129,
+            "contact_N": {
+              "palm_collision_1": 0.14268982386272158,
+              "palm_collision_6": 0.020172832245186588,
+              "if_bs_collision_1": 0.816714901387866,
+              "th_tip": 0.05425213579543944
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.6868296220919,
+            "contact_N": {
+              "palm_collision_1": 0.1757202034659699,
+              "if_bs_collision_1": 0.80527050511754
+            }
+          },
+          {
+            "sample": 144,
+            "whole_yaw_deg": 64.68335045506777,
+            "contact_N": {
+              "palm_collision_1": 0.1759774774067961,
+              "if_bs_collision_1": 0.8050132179628491
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.1217026870000097
+    },
+    {
+      "index": 42,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -72,
+        "2": -27,
+        "3": -87,
+        "4": 1,
+        "5": -33,
+        "6": -31,
+        "7": 33,
+        "8": -19,
+        "9": -84,
+        "10": 117,
+        "11": 35,
+        "12": 90
+      },
+      "goal": [
+        2739,
+        2491,
+        2356,
+        2092,
+        1972,
+        2008,
+        1876,
+        2029,
+        2702,
+        2440,
+        3181,
+        2562,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.203841445978014,
+      "whole_yaw_deg": 66.90088596211899,
+      "up_tilt_deg": 1.2522672537040833,
+      "center_shift_mm": 2.3274985814627414,
+      "score": 24.203841445978014,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 126,
+        "whole_yaw_deg": 66.90088596211899,
+        "continuation_yaw_deg": 5.836041246697969,
+        "tilt_deg": 3.080267118330183,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.015631640433214113,
+          "tracking_rad": 0.042763391466613565,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.7313425571372876,
+          "if_bs_collision_1": 0.258101276777123,
+          "mf_tip": 0.09073658166450475,
+          "th_tip": 0.09577384686012388
+        },
+        "hold_drift_deg": 0.018670104639436566,
+        "hold_shift_mm": 0.12458446383371112,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26482268295896,
+            "contact_N": {
+              "palm_collision_1": 0.2732341096495338,
+              "if_bs_collision_1": 0.7202914044494313,
+              "mf_tip": 1.523549179462163,
+              "th_tip": 1.4644603425898812
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.12115969574992,
+            "contact_N": {
+              "palm_collision_1": 0.6738372982535293,
+              "palm_collision_6": 0.17570302193310047,
+              "if_bs_collision_1": 0.23930228454437086,
+              "mf_px_collision": 0.1094627850032473,
+              "mf_tip": 0.5109995028277714,
+              "th_tip": 0.41991490675972226
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.91795623537271,
+            "contact_N": {
+              "palm_collision_1": 0.8015031306451396,
+              "if_bs_collision_1": 0.19685495315522733,
+              "mf_tip": 0.09075329176186583,
+              "th_tip": 0.09777370196789047
+            }
+          },
+          {
+            "sample": 126,
+            "whole_yaw_deg": 66.90088596211899,
+            "contact_N": {
+              "palm_collision_1": 0.7313425571372876,
+              "if_bs_collision_1": 0.258101276777123,
+              "mf_tip": 0.09073658166450475,
+              "th_tip": 0.09577384686012388
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.414057549000006
+    },
+    {
+      "index": 43,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -73,
+        "2": -34,
+        "3": -35,
+        "4": 25,
+        "5": -20,
+        "6": 59,
+        "7": 56,
+        "8": -14,
+        "9": -51,
+        "10": 101,
+        "11": 35,
+        "12": 98
+      },
+      "goal": [
+        2738,
+        2484,
+        2408,
+        2116,
+        1985,
+        2098,
+        1899,
+        2034,
+        2735,
+        2424,
+        3181,
+        2570,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.051781740101568,
+      "whole_yaw_deg": 66.32520113269977,
+      "up_tilt_deg": 0.16649001754052942,
+      "center_shift_mm": 2.109069894951896,
+      "score": 25.051781740101568,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 118,
+        "whole_yaw_deg": 66.32520113269977,
+        "continuation_yaw_deg": 5.248097986284399,
+        "tilt_deg": 2.4777638719730404,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.03832410368422717,
+          "tracking_rad": 0.046237102526224164,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.8228528419973282,
+          "if_bs_collision_1": 0.16696163046455123,
+          "mf_tip": 0.47463312050817885,
+          "th_tip": 0.4665900213891923
+        },
+        "hold_drift_deg": 0.04111359970815457,
+        "hold_shift_mm": 0.11010243578137492,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26313910090451,
+            "contact_N": {
+              "palm_collision_1": 0.2685532066918548,
+              "if_bs_collision_1": 0.7204077560436299,
+              "mf_tip": 1.4954350234710123,
+              "th_tip": 1.4372941728403523
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.16169753612034,
+            "contact_N": {
+              "palm_collision_6": 0.3892081517030762,
+              "if_bs_collision_1": 0.5541390481914167,
+              "mf_tip": 1.072469480912721,
+              "th_tip": 0.9142093611929267
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.3595188943698,
+            "contact_N": {
+              "palm_collision_1": 0.8715618476751124,
+              "if_bs_collision_1": 0.12212702150052654,
+              "mf_tip": 0.47253813991560756,
+              "th_tip": 0.4683944306680926
+            }
+          },
+          {
+            "sample": 118,
+            "whole_yaw_deg": 66.32520113269977,
+            "contact_N": {
+              "palm_collision_1": 0.8228528419973282,
+              "if_bs_collision_1": 0.16696163046455123,
+              "mf_tip": 0.47463312050817885,
+              "th_tip": 0.4665900213891923
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.622529415999992
+    },
+    {
+      "index": 44,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -130,
+        "2": -47,
+        "3": -47,
+        "4": 18,
+        "5": -56,
+        "6": 25,
+        "7": 9,
+        "8": 100,
+        "9": -41,
+        "10": 111,
+        "11": 62,
+        "12": 36
+      },
+      "goal": [
+        2681,
+        2471,
+        2396,
+        2109,
+        1949,
+        2064,
+        1852,
+        2148,
+        2745,
+        2434,
+        3208,
+        2508,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.84177117259318,
+      "whole_yaw_deg": 68.21986937311824,
+      "up_tilt_deg": 5.92814006474012,
+      "center_shift_mm": 4.480728863126734,
+      "score": 28.62619136681354,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 132,
+        "whole_yaw_deg": 68.21986937311824,
+        "continuation_yaw_deg": 7.065632636790958,
+        "tilt_deg": 5.576816643835719,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.02733673829487252,
+          "tracking_rad": 0.04304809737356975,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.5036232341613999,
+          "palm_collision_6": 0.09281389889198656,
+          "if_px_collision": 0.41213333534546637,
+          "mf_tip": 0.04806050550787053
+        },
+        "hold_drift_deg": 0.24986035918004407,
+        "hold_shift_mm": 0.21500699005472554,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26937155757237,
+            "contact_N": {
+              "palm_collision_1": 0.20452579527964895,
+              "if_bs_collision_1": 0.7699439869522183,
+              "mf_tip": 1.4747312250401945,
+              "th_tip": 1.4137046921589853
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 67.62896308872692,
+            "contact_N": {
+              "palm_collision_1": 0.48037519623567515,
+              "palm_collision_6": 0.15684012714400736,
+              "if_px_collision": 0.4505239173573389,
+              "mf_tip": 0.23435413727642082
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 68.3645877791097,
+            "contact_N": {
+              "palm_collision_1": 0.4285527913482914,
+              "palm_collision_6": 0.1592663125681465,
+              "if_px_collision": 0.42159046697164226,
+              "mf_tip": 0.10373820952170998
+            }
+          },
+          {
+            "sample": 132,
+            "whole_yaw_deg": 68.21986937311824,
+            "contact_N": {
+              "palm_collision_1": 0.5036232341613999,
+              "palm_collision_6": 0.09281389889198656,
+              "if_px_collision": 0.41213333534546637,
+              "mf_tip": 0.04806050550787053
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.672575026000004
+    },
+    {
+      "index": 45,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": 11,
+        "2": -30,
+        "3": -62,
+        "4": 116,
+        "5": 30,
+        "6": -20,
+        "7": -8,
+        "8": 36,
+        "9": -35,
+        "10": 147,
+        "11": 21,
+        "12": 83
+      },
+      "goal": [
+        2822,
+        2488,
+        2381,
+        2207,
+        2035,
+        2019,
+        1835,
+        2084,
+        2751,
+        2470,
+        3167,
+        2555,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.014048643827262,
+      "whole_yaw_deg": 68.26662606538497,
+      "up_tilt_deg": 4.255854392146993,
+      "center_shift_mm": 2.388424506212339,
+      "score": 24.014048643827262,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 141,
+        "whole_yaw_deg": 68.26662606538497,
+        "continuation_yaw_deg": 6.902454102100925,
+        "tilt_deg": 2.1180682000734508,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.04915443423401917,
+          "tracking_rad": 0.13356195619763078,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.24392045135198231,
+          "if_bs_collision_1": 0.7910801017373972,
+          "mf_tip": 3.0572047259271873,
+          "th_tip": 2.9313320868957304
+        },
+        "hold_drift_deg": 0.8648282879432869,
+        "hold_shift_mm": 0.8978506725330748,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26228341010856,
+            "contact_N": {
+              "palm_collision_1": 0.23398151786629548,
+              "if_bs_collision_1": 0.741237885360251,
+              "mf_tip": 1.5834159987029155,
+              "th_tip": 1.5092422674772437
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.23777487707285,
+            "contact_N": {
+              "palm_collision_1": 0.1870972836543227,
+              "if_bs_collision_1": 0.7384287840489815,
+              "mf_tip": 3.3434373422308132,
+              "th_tip": 3.1199544218606965
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 67.46711498146276,
+            "contact_N": {
+              "palm_collision_1": 0.2108459735307634,
+              "if_bs_collision_1": 0.7531170258034825,
+              "mf_tip": 3.2596127756805666,
+              "th_tip": 3.0844095946269254
+            }
+          },
+          {
+            "sample": 141,
+            "whole_yaw_deg": 68.26662606538497,
+            "contact_N": {
+              "palm_collision_1": 0.24392045135198231,
+              "if_bs_collision_1": 0.7910801017373972,
+              "mf_tip": 3.0572047259271873,
+              "th_tip": 2.9313320868957304
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.8508794879999755
+    },
+    {
+      "index": 46,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -58,
+        "2": -25,
+        "3": -51,
+        "4": 82,
+        "5": 32,
+        "6": 58,
+        "7": -14,
+        "8": -32,
+        "9": -39,
+        "10": 120,
+        "11": 18,
+        "12": 117
+      },
+      "goal": [
+        2753,
+        2493,
+        2392,
+        2173,
+        2037,
+        2097,
+        1829,
+        2016,
+        2747,
+        2443,
+        3164,
+        2589,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 28.249233141767505,
+      "whole_yaw_deg": 62.17019198008329,
+      "up_tilt_deg": 3.957492727121592,
+      "center_shift_mm": 3.93729529330257,
+      "score": 33.11401750469958,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 127,
+        "whole_yaw_deg": 62.17019198008329,
+        "continuation_yaw_deg": 0.9114011960767296,
+        "tilt_deg": 3.885460229384318,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.061615722238917134,
+          "tracking_rad": 0.05713352389019577,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "if_bs_collision_1": 1.0039261950821918,
+          "mf_tip": 1.3054023693674428,
+          "th_tip": 1.291816419016923
+        },
+        "hold_drift_deg": 4.875338681413686,
+        "hold_shift_mm": 2.557053500052353,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26370846644894,
+            "contact_N": {
+              "palm_collision_1": 0.25291070890557354,
+              "if_bs_collision_1": 0.7119012866411889,
+              "mf_tip": 1.5352955472629775,
+              "th_tip": 1.473474892499818
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.40074395949675,
+            "contact_N": {
+              "palm_collision_1": 0.6971570014271775,
+              "palm_collision_6": 0.34584566610453366,
+              "mf_tip": 1.8585254499272597,
+              "th_tip": 1.8342776180613067
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.64535661270612,
+            "contact_N": {
+              "palm_collision_1": 0.5874683689825241,
+              "if_bs_collision_1": 0.5316336784677246,
+              "mf_tip": 1.5821547109820424,
+              "th_tip": 1.5375433984814002
+            }
+          },
+          {
+            "sample": 127,
+            "whole_yaw_deg": 62.17019198008329,
+            "contact_N": {
+              "if_bs_collision_1": 1.0039261950821918,
+              "mf_tip": 1.3054023693674428,
+              "th_tip": 1.291816419016923
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.882405288000001
+    },
+    {
+      "index": 47,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -106,
+        "2": -41,
+        "3": -45,
+        "4": 118,
+        "5": -29,
+        "6": 15,
+        "7": 34,
+        "8": -23,
+        "9": -71,
+        "10": 86,
+        "11": 47,
+        "12": 122
+      },
+      "goal": [
+        2705,
+        2477,
+        2398,
+        2209,
+        1976,
+        2054,
+        1877,
+        2025,
+        2715,
+        2409,
+        3193,
+        2594,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.17968150984624,
+      "whole_yaw_deg": 64.67185174918191,
+      "up_tilt_deg": 2.654260343409171,
+      "center_shift_mm": 1.9949936347553927,
+      "score": 26.17968150984624,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 128,
+        "whole_yaw_deg": 64.67185174918191,
+        "continuation_yaw_deg": 3.4182014230222793,
+        "tilt_deg": 2.0201353480382584,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.05837194343347775,
+          "tracking_rad": 0.05232405738487362,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.8727439383062613
+        },
+        "hold_drift_deg": 1.956734592761052,
+        "hold_shift_mm": 0.932882953150196,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.27044705338498,
+            "contact_N": {
+              "palm_collision_1": 0.2608830036746509,
+              "if_bs_collision_1": 0.7194439362329592,
+              "mf_tip": 1.494833391597723,
+              "th_tip": 1.4271935319579279
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 66.44694289343789,
+            "contact_N": {
+              "palm_collision_1": 0.21473785150436084,
+              "if_bs_collision_1": 0.6264504967175566,
+              "mf_px_collision": 0.3239286800509637,
+              "mf_tip": 0.9054458773449047,
+              "th_tip": 0.9686622810554546
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.25368898849533,
+            "contact_N": {
+              "palm_collision_1": 0.37377439487954084,
+              "if_bs_collision_1": 0.5659098477211717,
+              "mf_tip": 0.7481213833022738,
+              "th_tip": 0.7964240326053482
+            }
+          },
+          {
+            "sample": 128,
+            "whole_yaw_deg": 64.67185174918191,
+            "contact_N": {
+              "palm_collision_1": 0.8727439383062613
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.81259409499998
+    },
+    {
+      "index": 48,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -63,
+        "2": -49,
+        "3": -32,
+        "4": 39,
+        "5": -37,
+        "6": 64,
+        "7": 40,
+        "8": -20,
+        "9": -40,
+        "10": 137,
+        "11": 57,
+        "12": 81
+      },
+      "goal": [
+        2748,
+        2469,
+        2411,
+        2130,
+        1968,
+        2103,
+        1883,
+        2028,
+        2746,
+        2460,
+        3203,
+        2553,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 25.312447911013617,
+      "whole_yaw_deg": 66.09988272788289,
+      "up_tilt_deg": 0.004668259028528888,
+      "center_shift_mm": 4.478361933222049,
+      "score": 25.312447911013617,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 136,
+        "whole_yaw_deg": 66.09988272788289,
+        "continuation_yaw_deg": 5.020884463325768,
+        "tilt_deg": 2.4141577175839544,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.03958471633697906,
+          "tracking_rad": 0.05002747077518874,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.9745262306346687,
+          "mf_tip": 1.1376551082384,
+          "th_tip": 1.1346336313989127
+        },
+        "hold_drift_deg": 0.06060546763087945,
+        "hold_shift_mm": 0.25310143743552466,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.261246336247325,
+            "contact_N": {
+              "palm_collision_1": 0.23698648740527606,
+              "if_bs_collision_1": 0.7197338572384884,
+              "mf_tip": 1.540659160235485,
+              "th_tip": 1.4467465329750513
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.96833274695284,
+            "contact_N": {
+              "palm_collision_1": 0.36672271574229326,
+              "if_bs_collision_1": 0.5485126767951427,
+              "mf_tip": 1.3746712823874487,
+              "th_tip": 1.1962508180826434
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 66.17692837127949,
+            "contact_N": {
+              "palm_collision_1": 0.9903683791052156,
+              "mf_tip": 1.1534466529384593,
+              "th_tip": 1.131546101600709
+            }
+          },
+          {
+            "sample": 136,
+            "whole_yaw_deg": 66.09988272788289,
+            "contact_N": {
+              "palm_collision_1": 0.9745262306346687,
+              "mf_tip": 1.1376551082384,
+              "th_tip": 1.1346336313989127
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.8937752429999932
+    },
+    {
+      "index": 49,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -53,
+        "2": -50,
+        "3": -49,
+        "4": 28,
+        "5": 34,
+        "6": 42,
+        "7": 43,
+        "8": -23,
+        "9": -60,
+        "10": 87,
+        "11": 47,
+        "12": 142
+      },
+      "goal": [
+        2758,
+        2468,
+        2394,
+        2119,
+        2039,
+        2081,
+        1886,
+        2025,
+        2726,
+        2410,
+        3193,
+        2614,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 26.577351225923497,
+      "whole_yaw_deg": 64.20298486745934,
+      "up_tilt_deg": 2.1531325525520844,
+      "center_shift_mm": 1.9180871093458665,
+      "score": 26.577351225923497,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 138,
+        "whole_yaw_deg": 64.20298486745934,
+        "continuation_yaw_deg": 3.1404349003156096,
+        "tilt_deg": 3.7486960996432814,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.015730298966295474,
+          "tracking_rad": 0.04517161447396355,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.6108000160960878,
+          "if_bs_collision_1": 0.36952510485963197
+        },
+        "hold_drift_deg": 0.21554278872673416,
+        "hold_shift_mm": 0.18761945428788995,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.26248309786638,
+            "contact_N": {
+              "palm_collision_1": 0.2827410925347552,
+              "if_bs_collision_1": 0.7165206079229214,
+              "mf_tip": 1.4721535209684968,
+              "th_tip": 1.426314622525016
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 64.47232847744662,
+            "contact_N": {
+              "palm_collision_1": 0.942949231299865,
+              "mf_tip": 0.7082295047253407,
+              "th_tip": 0.7544843129689667
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 64.31609631329006,
+            "contact_N": {
+              "palm_collision_1": 0.6723032007390297,
+              "if_bs_collision_1": 0.31013343527897796,
+              "th_tip": 0.01697926126031267
+            }
+          },
+          {
+            "sample": 138,
+            "whole_yaw_deg": 64.20298486745934,
+            "contact_N": {
+              "palm_collision_1": 0.6108000160960878,
+              "if_bs_collision_1": 0.36952510485963197
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 2.9945268420000275
+    },
+    {
+      "index": 50,
+      "origin": "truncated_normal",
+      "generation": 2,
+      "deltas_by_motor": {
+        "1": -115,
+        "2": -84,
+        "3": -43,
+        "4": 16,
+        "5": -4,
+        "6": -82,
+        "7": 33,
+        "8": 12,
+        "9": -73,
+        "10": 156,
+        "11": 38,
+        "12": 86
+      },
+      "goal": [
+        2696,
+        2434,
+        2400,
+        2107,
+        2001,
+        1957,
+        1876,
+        2060,
+        2713,
+        2479,
+        3184,
+        2558,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "orientation_error_to_true90_deg": 24.124488635547,
+      "whole_yaw_deg": 67.75666885600229,
+      "up_tilt_deg": 1.086375609325556,
+      "center_shift_mm": 3.749923293780479,
+      "score": 24.124488635547,
+      "target90_direction_filter_passed": false,
+      "dynamic": {
+        "safety_passed": true,
+        "stop": null,
+        "samples_completed": 145,
+        "whole_yaw_deg": 67.75666885600229,
+        "continuation_yaw_deg": 6.664645462010619,
+        "tilt_deg": 2.282772391082455,
+        "worst": {
+          "self_mm": 0.0,
+          "support_mm": 0.0,
+          "cube_mm": 0.015918331284801343,
+          "tracking_rad": 0.0431446557656665,
+          "range_rad": 0.0
+        },
+        "final_contact_N": {
+          "palm_collision_1": 0.12148638715893158,
+          "palm_collision_6": 0.0165614093631373,
+          "if_bs_collision_1": 0.8476991684109132,
+          "mf_tip": 0.010559112358669603
+        },
+        "hold_drift_deg": 0.04893485777632499,
+        "hold_shift_mm": 0.10377944127437697,
+        "lower_body_opposed_contact_fraction": 0.0,
+        "hold_evaluated_steps": 4050,
+        "trace": [
+          {
+            "sample": 1,
+            "whole_yaw_deg": 61.260349717739274,
+            "contact_N": {
+              "palm_collision_1": 0.21598716707811566,
+              "if_bs_collision_1": 0.7431621995632626,
+              "mf_tip": 1.4873409206994421,
+              "th_tip": 1.4347416835327456
+            }
+          },
+          {
+            "sample": 51,
+            "whole_yaw_deg": 65.69576224473363,
+            "contact_N": {
+              "if_bs_collision_1": 0.9613564671834983,
+              "mf_tip": 0.14034225267426054
+            }
+          },
+          {
+            "sample": 101,
+            "whole_yaw_deg": 67.81761536312953,
+            "contact_N": {
+              "palm_collision_6": 0.11687204766203206,
+              "if_bs_collision_1": 0.8766539709459478,
+              "mf_tip": 0.04288667168228485
+            }
+          },
+          {
+            "sample": 145,
+            "whole_yaw_deg": 67.75666885600229,
+            "contact_N": {
+              "palm_collision_1": 0.12148638715893158,
+              "palm_collision_6": 0.0165614093631373,
+              "if_bs_collision_1": 0.8476991684109132,
+              "mf_tip": 0.010559112358669603
+            }
+          }
+        ]
+      },
+      "elapsed_seconds": 3.4873525609999945
+    }
+  ],
+  "best_index": 37,
+  "best_target90_passed": false,
+  "best_yaw_deg": 68.35039843570907,
+  "best_orientation_error_deg": 23.66443249294511,
+  "native_goal_bounds_and_original_dynamic_guards_unchanged": true,
+  "goal_step_limit_ticks": 2,
+  "maximum_endpoint_change_ticks": 192,
+  "current_PID_and_geometry_not_modified": true,
+  "cube_pose_never_reset_after_trial_start": true,
+  "full_initial_placement_not_replayed": true,
+  "common_grip_return_and_upper_layer_clearance_not_yet_validated": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false
+}

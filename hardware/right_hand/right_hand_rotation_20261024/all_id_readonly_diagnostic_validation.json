@@ -1,0 +1,27 @@
+{
+  "status": "passed_fake_SDK_and_clock_tests",
+  "tests_run": 18,
+  "failures": 0,
+  "errors": 0,
+  "command": ".runtime\\python\\python.exe -X utf8 -B -m unittest test_bus_readonly_diagnose test_camera_readonly_check",
+  "new_diagnostic_tests": 12,
+  "existing_readonly_transport_tests": 6,
+  "covered": [
+    "All 16 IDs checked in three rounds before five-second 83-byte READ stream",
+    "Missing ID1 does not hide responses from IDs 2 through 16",
+    "No responses do not establish that torque is OFF",
+    "Unsupported model not decoded using XC330-M288 registers",
+    "Torque ON, hardware error, watchdog, undervoltage and overtemperature stop without reset writes",
+    "Failed health read recorded while other IDs are checked",
+    "Failed stream read cannot reuse stale OFF state",
+    "Receive trace preserves SDK return code and limits saved raw bytes",
+    "Cancellation before first read",
+    "No-execute mode creates no bus or device",
+    "Slow reads are not a passing diagnostic"
+  ],
+  "motion_programs_changed": false,
+  "current_or_tracking_or_time_limits_changed": false,
+  "real_serial_port_opened_by_validation": false,
+  "real_camera_opened_by_validation": false,
+  "servo_write_commands_sent": 0
+}

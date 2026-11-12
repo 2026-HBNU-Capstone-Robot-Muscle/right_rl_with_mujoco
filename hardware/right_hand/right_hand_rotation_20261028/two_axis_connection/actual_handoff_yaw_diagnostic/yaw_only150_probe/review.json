@@ -1,0 +1,335 @@
+{
+  "status": "conditional_yaw_from_saved_handoff_hypotheses",
+  "cases": [
+    {
+      "seed": "image_yaw+0_wrist+3",
+      "stop": null,
+      "motion_health_passed": true,
+      "last_phase": "remove_hold",
+      "samples_completed": 2072,
+      "requested_samples": 2072,
+      "max_self_mm": 0.0,
+      "max_support_mm": 0.0,
+      "max_cube_overlap_mm": 0.970848267505488,
+      "max_tracking_rad": 0.09893402573674093,
+      "native_range_excess_rad": 0.0,
+      "max_no_hand_contact_seconds": 0.04000000000000002,
+      "external_cube_contact": false,
+      "worst_self_pair": null,
+      "phase_checkpoints": {
+        "initial_hold": {
+          "sample": 39,
+          "cube_qpos": [
+            0.12768759495301613,
+            -0.02584878001273934,
+            0.0018816618549918377,
+            0.6544909500273367,
+            -0.5522645412395593,
+            -0.394655036497652,
+            -0.3330058182506906
+          ],
+          "horizontal_twist_deg": -0.33757471950499196,
+          "red_up_error_deg": 7.96839430498465,
+          "green_up_error_deg": 82.14579383115561
+        },
+        "grasp": {
+          "sample": 644,
+          "cube_qpos": [
+            0.1324970660371716,
+            -0.029368370489438658,
+            -0.00044319921619695,
+            0.7349661137781689,
+            -0.4346922035125513,
+            -0.44792718646452545,
+            -0.26500704788588847
+          ],
+          "horizontal_twist_deg": 18.8045843288428,
+          "red_up_error_deg": 7.422720148081745,
+          "green_up_error_deg": 83.50249833937895
+        },
+        "grasp_hold": {
+          "sample": 684,
+          "cube_qpos": [
+            0.1327440730260791,
+            -0.029721964156327548,
+            -0.0005832206757260408,
+            0.7391499571239989,
+            -0.4275827750166139,
+            -0.4506462095998205,
+            -0.2602850459899652
+          ],
+          "horizontal_twist_deg": 19.940626509534667,
+          "red_up_error_deg": 7.427595142774072,
+          "green_up_error_deg": 83.55011486151734
+        },
+        "yaw": {
+          "sample": 1322,
+          "cube_qpos": [
+            0.1414892996846925,
+            -0.041941265327605684,
+            -0.0045756863915820956,
+            0.8537548037588818,
+            0.03691147290837645,
+            -0.5181782108257467,
+            0.035094444742650534
+          ],
+          "horizontal_twist_deg": 85.95836627221283,
+          "red_up_error_deg": 7.675636473269903,
+          "green_up_error_deg": 89.52622074063257
+        },
+        "yaw_hold": {
+          "sample": 1362,
+          "cube_qpos": [
+            0.14156357612431333,
+            -0.0420706331547054,
+            -0.004591225946748655,
+            0.853841193089876,
+            0.03434765594347448,
+            -0.5182915598864419,
+            0.033901540739694674
+          ],
+          "horizontal_twist_deg": 85.63622957043115,
+          "red_up_error_deg": 7.677333357039278,
+          "green_up_error_deg": 89.447894484082
+        },
+        "release": {
+          "sample": 2031,
+          "cube_qpos": [
+            0.14031649086845163,
+            -0.03762837787003415,
+            -0.005533304021989301,
+            0.8411484255404412,
+            -0.0056733797599181745,
+            -0.540774049210986,
+            0.0007527767857910223
+          ],
+          "horizontal_twist_deg": 79.68751617246583,
+          "red_up_error_deg": 4.694614838106249,
+          "green_up_error_deg": 89.53652128697418
+        },
+        "remove_hold": {
+          "sample": 2071,
+          "cube_qpos": [
+            0.1403165042387225,
+            -0.03762684278572812,
+            -0.005533271053982724,
+            0.8411461297738977,
+            -0.00568142933997693,
+            -0.5407775341514923,
+            0.0007538461911399543
+          ],
+          "horizontal_twist_deg": 79.68681406271898,
+          "red_up_error_deg": 4.694198338025735,
+          "green_up_error_deg": 89.53586551212909
+        }
+      },
+      "phase_cube_contacts": {
+        "initial_hold": {
+          "palm_collision_6": 2865,
+          "palm_collision_7": 4,
+          "if_bs_collision_1": 1463,
+          "palm_collision_2": 5
+        },
+        "grasp": {
+          "palm_collision_6": 40500,
+          "if_bs_collision_1": 26800,
+          "th_tip": 6512,
+          "mf_bs_collision_1": 3519,
+          "mf_tip": 2231
+        },
+        "grasp_hold": {
+          "palm_collision_6": 2054,
+          "if_bs_collision_1": 2267,
+          "mf_tip": 556,
+          "th_tip": 2218
+        },
+        "yaw": {
+          "palm_collision_6": 69956,
+          "th_tip": 48560,
+          "if_bs_collision_1": 65339,
+          "mf_tip": 45877,
+          "if_px_collision": 7854,
+          "mf_bs_collision_1": 2503
+        },
+        "yaw_hold": {
+          "palm_collision_6": 1460,
+          "if_px_collision": 1284,
+          "mf_tip": 1500,
+          "th_tip": 1445,
+          "if_bs_collision_1": 1427
+        },
+        "release": {
+          "palm_collision_6": 39365,
+          "if_bs_collision_1": 25719,
+          "mf_tip": 4252,
+          "th_tip": 11794,
+          "if_px_collision": 21398,
+          "mf_bs_collision_1": 8834
+        },
+        "remove_hold": {
+          "palm_collision_6": 3000,
+          "if_bs_collision_1": 1500,
+          "if_px_collision": 1500,
+          "mf_bs_collision_1": 1043
+        }
+      },
+      "held_horizontal_twist_deg": 85.63622957043115,
+      "trace": "image_yaw+0_wrist+3_trace.npz",
+      "initial_cube_qpos": [
+        0.12903064036612438,
+        -0.025129902986193123,
+        0.013868583336949675,
+        0.6144555883854855,
+        -0.5364492694696871,
+        -0.45574686465021735,
+        -0.35631630126726194
+      ],
+      "final_cube_qpos": [
+        0.1403165042387225,
+        -0.03762684278572812,
+        -0.005533271053982724,
+        0.8411461297738977,
+        -0.00568142933997693,
+        -0.5407775341514923,
+        0.0007538461911399543
+      ],
+      "legacy_baseline_warmup": null
+    }
+  ],
+  "seed_metadata": {
+    "hypothesis_delta_palm_mm": [
+      -18.914336658748734,
+      -11.439753978670106,
+      -0.10965861726149051
+    ],
+    "hypothesis_delta_world_mm": [
+      -17.75301839421034,
+      11.439753978670106,
+      6.5264457515293275
+    ],
+    "hypothesis_displacement_mm": 22.10502493428416,
+    "all_image_pose_fits_are_rejected": true,
+    "physical_metric_registration_verified": false,
+    "absolute_camera_translation_not_used": true,
+    "common_rigid_mount_translation_cancels_in_relative_delta": true,
+    "relative_rotation_rebased_on_model_yaw_seed": true,
+    "source_sha256": "0f593a79294f76964b5415670ae47fdabaaf7d09eeed7e0bb473ddd89ee0c46a"
+  },
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "path_source": "/mnt/c/Users/\uae40\uc900\uc11c/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/right_hand_rotation_20261028/observed90_prefix638/full_loaded_27/loaded_path.npz",
+  "path_sha256": "8cf6342cc438c466e7f803f12066ebb649af892646146c33bd2f4ca76ce67dac",
+  "simulation_script_sha256": "99077774c929ffb4af733327d5bee5c80e71e6b2fe19b95f86f8fd326e23d820",
+  "simulation_timestep_s": 0.002,
+  "command_period_s": 0.075,
+  "slow150ms_phases": [
+    "yaw"
+  ],
+  "phase_goal_counts": {
+    "grasp": 605,
+    "grasp_hold": 40,
+    "yaw": 638,
+    "yaw_hold": 40,
+    "release": 669,
+    "remove_hold": 40
+  },
+  "nominal_loaded_path_seconds": 200.25,
+  "finite_actuators": true,
+  "hand_pose_prescribed_during_rollout": false,
+  "cube_pose_prescribed_during_rollout": false,
+  "existing_seam_policy_reused": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false,
+  "elapsed_seconds": 21.228011295000016
+}

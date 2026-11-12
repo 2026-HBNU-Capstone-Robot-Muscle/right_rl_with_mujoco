@@ -1,0 +1,559 @@
+{
+  "status": "exact_recorded_RF_vs_clipped_static_geometry",
+  "limit_provenance": {
+    "motor_id": 14,
+    "joint_name": "rf_rot",
+    "exported_limit_json": "right_hand_rotation_20261023/native_motor_limits.json",
+    "exported_limit_sha256": "c2258197bcd016fcbfec3bac6c99d1f4da00d870b24bd2f337a988eec0e31716",
+    "exporter": "export_native_motor_limits_20261023.py",
+    "exporter_sha256": "9702866a6b9059e23fd200bb4b2aab75c194890d514c9f1fe7e655d8bbf61b5a",
+    "source_is_intersection_of_model_joint_and_actuator_ranges": true,
+    "hardware_EEPROM_limit_was_not_read_to_derive_this_bound": true,
+    "model_joint_range_deg": [
+      -59.98868115019719,
+      59.98868115019719
+    ],
+    "model_actuator_ctrlrange_deg": [
+      -59.98868115019719,
+      59.98868115019719
+    ],
+    "software_upper_ticks": 2730.5378833089103,
+    "recorded_ticks": 2829,
+    "recorded_goal_ticks": 2829,
+    "record_above_software_upper_deg": 8.653896974802805
+  },
+  "recorded_source_sha256": "01a2145d4c602f1eecf7b7dcf88cb072e4a2c1f616f35941bc6e40c816d240ab",
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "results": [
+    {
+      "source": "middle_probe_grasp",
+      "source_path": "right_hand_rotation_20261109/middle_probe_reconstruction_linux/checkpoint_927.npz",
+      "source_sha256": "665b4beb68c56308f3afd3c21d159bc075cfd2afb2444c7b055972c4fdd26e58",
+      "mode": "source",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        2038.4411798315884,
+        2559.9323855330135,
+        2299.758463527601,
+        2119.1987808961503
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 34.06459565885433
+        },
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 34.52395224811193
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 34.52395224811193
+        },
+        {
+          "geom": "rf_px_visual",
+          "signed_SAT_gap_mm": 37.52855962207883
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0007620907101360888,
+        "tracking_rad": 0.0,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.14924821266807553,
+        -0.03948684226505777,
+        -0.00829406327225578
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "middle_probe_grasp",
+      "source_path": "right_hand_rotation_20261109/middle_probe_reconstruction_linux/checkpoint_927.npz",
+      "source_sha256": "665b4beb68c56308f3afd3c21d159bc075cfd2afb2444c7b055972c4fdd26e58",
+      "mode": "clipped_reference",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        3053.0,
+        2730.5378833089103,
+        2961.0,
+        3018.0
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 35.44538935409123
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 35.44538935409123
+        },
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 35.45364831784159
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 38.984342060114116
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0007620907101360888,
+        "tracking_rad": 0.0,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.14924821266807553,
+        -0.03948684226505777,
+        -0.00829406327225578
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "middle_probe_grasp",
+      "source_path": "right_hand_rotation_20261109/middle_probe_reconstruction_linux/checkpoint_927.npz",
+      "source_sha256": "665b4beb68c56308f3afd3c21d159bc075cfd2afb2444c7b055972c4fdd26e58",
+      "mode": "exact_recorded_reference",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        3053.0,
+        2829.0,
+        2961.0,
+        3018.0
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 35.44538935409123
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 35.44538935409123
+        },
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 35.45364831784159
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 41.122632166614466
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0007620907101360888,
+        "tracking_rad": 0.0,
+        "range_rad": 0.15103899533868592,
+        "reasons": [
+          "range_rad"
+        ],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.14924821266807553,
+        -0.03948684226505777,
+        -0.00829406327225578
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "middle_probe_clearance",
+      "source_path": "right_hand_rotation_20261109/middle_probe_reconstruction_linux/checkpoint_1042.npz",
+      "source_sha256": "ab282822df435c59e14695517dffc42675bd677167519527d989747502f0b7d2",
+      "mode": "source",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        2038.4411798315884,
+        2559.9323855330135,
+        2299.758463527601,
+        2119.1987808961503
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 34.77809255236304
+        },
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 35.35564883942685
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 35.35564883942685
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 35.9299004037564
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0008393663718521101,
+        "tracking_rad": 0.0,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.14975211394788804,
+        -0.038191353907933406,
+        -0.009636427300037546
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "middle_probe_clearance",
+      "source_path": "right_hand_rotation_20261109/middle_probe_reconstruction_linux/checkpoint_1042.npz",
+      "source_sha256": "ab282822df435c59e14695517dffc42675bd677167519527d989747502f0b7d2",
+      "mode": "clipped_reference",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        3053.0,
+        2730.5378833089103,
+        2961.0,
+        3018.0
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 36.80274080508597
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 36.80274080508597
+        },
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 37.86607274639743
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 39.18863388865899
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0008393663718521101,
+        "tracking_rad": 0.0,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.14975211394788804,
+        -0.038191353907933406,
+        -0.009636427300037546
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "middle_probe_clearance",
+      "source_path": "right_hand_rotation_20261109/middle_probe_reconstruction_linux/checkpoint_1042.npz",
+      "source_sha256": "ab282822df435c59e14695517dffc42675bd677167519527d989747502f0b7d2",
+      "mode": "exact_recorded_reference",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        3053.0,
+        2829.0,
+        2961.0,
+        3018.0
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 36.80274080508597
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 36.80274080508597
+        },
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 37.86607274639743
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 40.93164376156551
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0008393663718521101,
+        "tracking_rad": 0.0,
+        "range_rad": 0.15103899533868592,
+        "reasons": [
+          "range_rad"
+        ],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.14975211394788804,
+        -0.038191353907933406,
+        -0.009636427300037546
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "historical_first_rotation_hold",
+      "source_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/end_state.npz",
+      "source_sha256": "4883d921db4a731f3006ffbfa7c14e60afcf0e40a1f6d9a2a6a7eb714a843e27",
+      "mode": "source",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        2083.4481832504202,
+        2561.249819238101,
+        2313.8663121536547,
+        2118.2326284468886
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 49.547043765071145
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 49.61928965478729
+        },
+        {
+          "geom": "rf_px_visual",
+          "signed_SAT_gap_mm": 50.987103122355684
+        },
+        {
+          "geom": "rf_px_visual_support_proxy",
+          "signed_SAT_gap_mm": 50.987103122355684
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.001236940642725901,
+        "tracking_rad": 0.0,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.16304272410610077,
+        -0.05285913904163693,
+        -0.014401497645900088
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "historical_first_rotation_hold",
+      "source_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/end_state.npz",
+      "source_sha256": "4883d921db4a731f3006ffbfa7c14e60afcf0e40a1f6d9a2a6a7eb714a843e27",
+      "mode": "clipped_reference",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        3053.0,
+        2730.5378833089103,
+        2961.0,
+        3018.0
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 52.821026802950364
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 52.821026802950364
+        },
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 54.83169851560631
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 55.34458226729529
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.001236940642725901,
+        "tracking_rad": 0.0,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.16304272410610077,
+        -0.05285913904163693,
+        -0.014401497645900088
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    },
+    {
+      "source": "historical_first_rotation_hold",
+      "source_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/end_state.npz",
+      "source_sha256": "4883d921db4a731f3006ffbfa7c14e60afcf0e40a1f6d9a2a6a7eb714a843e27",
+      "mode": "exact_recorded_reference",
+      "ring_ids_sim_order": [
+        16,
+        14,
+        15,
+        13
+      ],
+      "ring_pose_ticks": [
+        3053.0,
+        2829.0,
+        2961.0,
+        3018.0
+      ],
+      "closest_rf": [
+        {
+          "geom": "rf_bs_visual",
+          "signed_SAT_gap_mm": 52.821026802950364
+        },
+        {
+          "geom": "rf_bs_visual_support_proxy",
+          "signed_SAT_gap_mm": 52.821026802950364
+        },
+        {
+          "geom": "rf_bs_collision_1",
+          "signed_SAT_gap_mm": 54.83169851560631
+        },
+        {
+          "geom": "rf_px_collision",
+          "signed_SAT_gap_mm": 56.982852330964434
+        }
+      ],
+      "rf_cube_contacts": [],
+      "original_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.001236940642725901,
+        "tracking_rad": 0.0,
+        "range_rad": 0.15103899533868592,
+        "reasons": [
+          "range_rad"
+        ],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      },
+      "cube_center": [
+        0.16304272410610077,
+        -0.05285913904163693,
+        -0.014401497645900088
+      ],
+      "only_static_geometry_query": true,
+      "not_a_motion_or_holding_success": true
+    }
+  ],
+  "original_model_and_software_limits_unchanged": true,
+  "exact_reference_is_not_discarded_for_exceeding_model_bound": true,
+  "no_physical_cube_pose_was_measured_for_this_record": true,
+  "original_limits_rejection_is_not_a_mechanical_unreachability_proof": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

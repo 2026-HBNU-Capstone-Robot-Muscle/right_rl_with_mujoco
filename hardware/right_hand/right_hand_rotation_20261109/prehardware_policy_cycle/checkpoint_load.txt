@@ -1,0 +1,15 @@
+def load_policy(
+    path: Union[str, epath.Path],
+    network_factory: types.NetworkFactory[
+        sac_networks.SACNetworks
+    ] = sac_networks.make_sac_networks,
+    deterministic: bool = True,
+):
+  """Loads policy inference function from SAC checkpoint."""
+  path = epath.Path(path)
+  config = load_config(path)
+  params = load(path)
+  sac_network = _get_network(config, network_factory)
+  make_inference_fn = sac_networks.make_inference_fn(sac_network)
+
+  return make_inference_fn(params, deterministic=deterministic)

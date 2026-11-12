@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-10-25T21:35:02.075454+09:00",
+  "material_confirmation": {
+    "timestamp": "2026-10-25T21:22:54.720122+09:00",
+    "question": "Existing cube-contact index and middle fingertip material",
+    "user_answer": "단단한 플라스틱",
+    "confirmed_contact_material": "rigid plastic",
+    "coefficient_of_friction_measured": false,
+    "numeric_friction_cannot_be_inferred_from_material_alone": true,
+    "hardware_commands_sent": 0
+  },
+  "surface_comparison_cases": 20,
+  "coarse_summary": {
+    "baseline": {
+      "cases": 5,
+      "eligible": 1
+    },
+    "four_tips": {
+      "cases": 5,
+      "eligible": 1
+    },
+    "index_middle_links": {
+      "cases": 5,
+      "eligible": 4
+    },
+    "tips_and_links": {
+      "cases": 5,
+      "eligible": 4
+    }
+  },
+  "smaller_timestep_cases": 12,
+  "smaller_timestep_summaries": [
+    {
+      "timestep": 0.002,
+      "summary": {
+        "baseline": {
+          "cases": 3,
+          "eligible": 3
+        },
+        "index_middle_links": {
+          "cases": 3,
+          "eligible": 2
+        }
+      }
+    },
+    {
+      "timestep": 0.001,
+      "summary": {
+        "baseline": {
+          "cases": 3,
+          "eligible": 2
+        },
+        "index_middle_links": {
+          "cases": 3,
+          "eligible": 2
+        }
+      }
+    }
+  ],
+  "traction_only_recommendation_supported": false,
+  "reason": "Traction changes are not consistently beneficial across time steps and positions; contact penetration peaks exceed3mm in several cases. Actual contact surface and initial seating remain unregistered.",
+  "fingertip_only_friction_change_did_not_improve_coarse_cases": true,
+  "numeric_friction_not_inferred_from_rigid_material": true,
+  "maximum_cube_contact_penetration_mm": 5.950436657934892,
+  "physical_friction_identified": false,
+  "physical_ninety_degree_rotation_verified": false,
+  "hardware_rotation_candidate_ready": false,
+  "next_user_command": "leap_quarter_support_photo.cmd",
+  "next_user_command_ready": true,
+  "next_user_command_photo_only": true,
+  "next_user_command_has_empty_preparation_motion": true,
+  "next_user_command_has_loaded_motion": false,
+  "photo_mode_review": {
+    "timestamp": "2026-10-25T21:32:22.077107+09:00",
+    "script_sha256": "81a960fd6b2a63f62f9e4fda01baf9a105a379816ed365599390903549dd806e",
+    "command_sha256": "d331aeb549d48eb8e36b8e59f84e794d0de743e6e88c0da06e284e3a3e5820c4",
+    "test_script_sha256": "84f80bf28a771198225a94a03c8a74b4521eb33339a24dc57660e94b8a8be91b",
+    "native_full_route_proof_sha256": "addcdaa1270700c78159b14dca8c70e89a0be95980fcc15085d5c2e2ffab3320",
+    "device_free_tests_passed": 7,
+    "loaded_goals_sent_in_mock": 0,
+    "off_and_settings_restored_in_mock": true,
+    "uses_only_already_reviewed_empty_prefix": true,
+    "current_pose_rescreen_required_at_runtime": true,
+    "hardware_commands_sent_during_review": 0,
+    "execution_requires_user_first_space": true,
+    "user_cube_placement_and_removal_required": true,
+    "physical_rotation_verified": false
+  },
+  "review_camera_guide": "right_hand_rotation_20261024/rigid_contact_review_20261025/camera_support_side_guide.html",
+  "next_action": "One side support photo in the reviewed quarter-turn starting pose; show Cube bottom edge and supporting links. EMPTY first SPACE, PLACE/photo second SPACE, REMOVE Cube before third SPACE/OFF. No loaded rotation.",
+  "assistant_motor_goal_writes": 0,
+  "assistant_torque_changes": 0,
+  "actual_device_acquisition_this_turn": false,
+  "original_reference_preserved": true,
+  "poster_unchanged": true,
+  "source_references": [
+    "https://mujoco.readthedocs.io/en/stable/modeling.html#contact-parameters",
+    "https://v1.leaphand.com/leap_cad"
+  ]
+}

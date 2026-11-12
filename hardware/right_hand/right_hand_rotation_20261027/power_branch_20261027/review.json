@@ -1,0 +1,70 @@
+{
+  "status": "awaiting_power_off_hub_photo_for_branch_wiring",
+  "timestamp": "2026-10-27T16:00:36.475248+09:00",
+  "latest_user_trial": "horizontal_quarter_trial_20261027_155220_214230",
+  "error": "Undervoltage not recovered to >=3.8V twice within150ms/read limit; torque OFF",
+  "root_recovery_completed": true,
+  "stopped_phase": "stage_3_empty_open",
+  "cube_placed": false,
+  "minimum_voltage_v": 3.6,
+  "final_voltage_v": [
+    3.7,
+    3.7,
+    3.7,
+    3.7,
+    3.9,
+    3.8,
+    3.9,
+    3.8,
+    4.2,
+    4.1,
+    4.2,
+    4.1,
+    4.6,
+    4.5,
+    4.7,
+    4.4
+  ],
+  "final_root_current_ma": [
+    79,
+    81,
+    72
+  ],
+  "final_root_tracking_rad": [
+    0.06902913545485385,
+    0.07056311624273949,
+    0.06442719309119693
+  ],
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "exact_voltage_loss_location_verified": false,
+  "user_proposed_counts": [
+    3,
+    13
+  ],
+  "interpretation": "two motor chains fed separately from the same existing 5V TTL power hub",
+  "alternative_recommendation_counts": [
+    8,
+    8
+  ],
+  "alternative_reason": "engineering preference for shorter, more balanced motor-chain power paths; improvement not guaranteed",
+  "wiring_changed": false,
+  "port_specific_instructions_ready": false,
+  "prerequisites": [
+    "5V motor supply OFF before unplugging or reconnecting motor cables",
+    "same existing 5V power source and common TTL 3-pin hub",
+    "U2D2 remains on the same TTL bus",
+    "identify actual hub ports and current chain boundary from a photo"
+  ],
+  "next_user_action": "Power off and send a photo showing the blue hub, 3-pin connectors, and plugged-in cables.",
+  "next_motor_run_requested": false,
+  "after_wiring": "PING/READ all16 with torque already OFF, then compare voltage before any new motion",
+  "official_sources": [
+    "https://emanual.robotis.com/docs/en/parts/interface/u2d2_power_hub/",
+    "https://emanual.robotis.com/docs/en/parts/interface/u2d2/",
+    "https://v1.leaphand.com/assembly"
+  ],
+  "hardware_execution_allowed": false,
+  "assistant_motor_writes": 0,
+  "assistant_torque_or_setting_writes": 0
+}

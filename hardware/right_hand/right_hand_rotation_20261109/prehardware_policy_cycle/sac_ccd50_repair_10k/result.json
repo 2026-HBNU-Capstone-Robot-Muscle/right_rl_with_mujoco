@@ -1,0 +1,52 @@
+{
+  "algorithm": "Brax SAC",
+  "steps": 10000,
+  "residual_rad": 0.01,
+  "observation_size": 110,
+  "action_size": 16,
+  "integer_encoder_observations": true,
+  "current_model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+  "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+  "numerical_CCD_iterations": 50,
+  "control_seconds": 0.075,
+  "max_goal_ticks": 2,
+  "restored_actor": "right_hand_rotation_20261109/prehardware_policy_cycle/sac_current_contract_v4_20k/checkpoints/000000010256",
+  "restore_scope": "actor and normalization; new critics/optimizers",
+  "reset_indices": [
+    3000,
+    3400,
+    3600
+  ],
+  "reset_source": "actual free-physics CCD50 parent rollout",
+  "learning_windows_not_continuous_cycle_success": true,
+  "planned_deployment_gate": [
+    3000,
+    4300
+  ],
+  "native_geometry_limits_force_caps_and_guards_preserved": true,
+  "contract_checks": [
+    {
+      "start": 3400,
+      "packed_roundtrip_max_abs": 0.0,
+      "one_step_goal_delta_ticks": 2,
+      "reward": -0.916279673576355
+    },
+    {
+      "start": 3400,
+      "packed_roundtrip_max_abs": 0.0,
+      "one_step_goal_delta_ticks": 2,
+      "reward": -0.916279673576355
+    },
+    {
+      "start": 3000,
+      "packed_roundtrip_max_abs": 0.0,
+      "one_step_goal_delta_ticks": 2,
+      "reward": -1.3390799760818481
+    }
+  ],
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "status": "offline_CCD50_SAC_repair_training_complete",
+  "elapsed_seconds": 482.96761346100004,
+  "task_success_certified": false
+}

@@ -1,0 +1,191 @@
+{
+  "status": "RF_tip_palm_clearance_before_pressure_release",
+  "source": "next_cycle/handoff_refinement_20261110/ring_thumb_MF_support_feedback_v2/force0.5/end_state.npz",
+  "source_sha256": "7b415c5ce85b313048fb7955d6fac9af7eca74c3e2f194f050c9a0c499b3e7cd",
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "static_proposals": [
+    {
+      "margin_mm": 0.2,
+      "separation_lower_bounds_mm": [
+        1.8169058830024356,
+        1.8169058830024392,
+        2.89207732348809
+      ],
+      "tip_cube_gap_screen_mm": -0.02499811956201759,
+      "static_valid": true,
+      "nfev": 8611
+    },
+    {
+      "margin_mm": 0.5,
+      "separation_lower_bounds_mm": [
+        1.762169271268779,
+        1.7621692712687862,
+        11.12643587594131
+      ],
+      "tip_cube_gap_screen_mm": -0.022088830295858793,
+      "static_valid": true,
+      "nfev": 8944
+    },
+    {
+      "margin_mm": 1.0,
+      "separation_lower_bounds_mm": [
+        7.30075610918357,
+        7.3007561091835775,
+        8.85363413216107
+      ],
+      "tip_cube_gap_screen_mm": -0.024999708053381774,
+      "static_valid": true,
+      "nfev": 8602
+    }
+  ],
+  "trials": [
+    {
+      "path": "next_cycle/handoff_refinement_20261110/ring_thumb_three_contact_retreat8/trial0",
+      "margin_objective_mm": 0.2,
+      "steps": 77,
+      "stop": [],
+      "RF_palm_gap_lower_bounds_mm": [
+        1.4336143182870285,
+        1.4336143182870422,
+        2.826257431430293
+      ],
+      "whole_hand_support_fraction": 1.0,
+      "samples": 2250,
+      "cube_shift_mm": 1.0403180128077547,
+      "orientation_change_deg": 1.9691092105784738,
+      "RF_clear_supported_waypoint_passed": false,
+      "required_finger_loaded_fractions": {
+        "mf": 0.0,
+        "th": 1.0
+      },
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0034529991235899673,
+        "tracking_rad": 0.03842172634614993,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0031396330600993623,
+        "tracking_rad": 0.03431159218041285,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/ring_thumb_three_contact_retreat8/trial1",
+      "margin_objective_mm": 0.5,
+      "steps": 78,
+      "stop": [],
+      "RF_palm_gap_lower_bounds_mm": [
+        1.3990007439192118,
+        1.399000743919219,
+        10.220545227386978
+      ],
+      "whole_hand_support_fraction": 1.0,
+      "samples": 2250,
+      "cube_shift_mm": 0.8549898714754656,
+      "orientation_change_deg": 0.48437333848396763,
+      "RF_clear_supported_waypoint_passed": false,
+      "required_finger_loaded_fractions": {
+        "mf": 0.0,
+        "th": 1.0
+      },
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.011391810387163056,
+        "tracking_rad": 0.05556666509182867,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0031943201818539287,
+        "tracking_rad": 0.039677792171240234,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/ring_thumb_three_contact_retreat8/trial2",
+      "margin_objective_mm": 1.0,
+      "steps": 48,
+      "stop": [
+        "external_cube_support"
+      ],
+      "RF_palm_gap_lower_bounds_mm": [
+        5.396959383203982,
+        5.396959383203989,
+        6.7129887855432795
+      ],
+      "whole_hand_support_fraction": 0.0,
+      "samples": 0,
+      "cube_shift_mm": 1.6566176529077357,
+      "orientation_change_deg": 0.3762525151169407,
+      "RF_clear_supported_waypoint_passed": false,
+      "required_finger_loaded_fractions": {
+        "mf": 0.0,
+        "th": 0.0
+      },
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.021122817162286735,
+        "tracking_rad": 0.048694960792844466,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.011348896387771524,
+        "tracking_rad": 0.04390489248205859,
+        "range_rad": 0.0,
+        "reasons": [
+          "external_cube_support"
+        ],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": true
+      }
+    }
+  ],
+  "other_finger_commands_unchanged": true,
+  "original_guards_and_bounds_preserved": true,
+  "intermediate_clearance_not_full_turn": true,
+  "thumb_clearance_included": true,
+  "RF14_requested_retreat_deg": 8.0,
+  "local_planning_window_deg": 12.0,
+  "required_contact_fingers": [
+    "mf",
+    "th"
+  ],
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

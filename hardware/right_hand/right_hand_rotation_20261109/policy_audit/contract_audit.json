@@ -1,0 +1,213 @@
+{
+  "status": "saved_policy_contract_audit_complete",
+  "original_policy_sha256": "dc220d146bc5532c4ae09907c6d6bbc887335389d215afaafb69eeab679560e7",
+  "original_108_policy_matches_team_recorded_sha256": true,
+  "original_vs_middleware_inference": {
+    "samples": 512,
+    "maximum_action_difference": 0.0
+  },
+  "original_vs_middleware_observations": {
+    "consecutive_samples": 128,
+    "maximum_difference": 0.0
+  },
+  "trained_reference_residual": {
+    "observation_size": 110,
+    "action_size": 16,
+    "training_timesteps_recorded": 20000,
+    "control_dt_s": 0.05,
+    "reference_plus_sac_residual_rad": 0.05,
+    "actor_sha256": "4fd647260cf679ce06d4506122298f38bd02e861e46c15e31b018d2c02c16ac8",
+    "saved_independent_jax_fixture_comparison": {
+      "status": "passed",
+      "action_samples": 602,
+      "rollout_samples": 90,
+      "max_action_error": 3.0547380447387695e-07,
+      "max_goal_error_rad": 2.384185791015625e-07,
+      "random_default_gpu_error": 0.0006102025508880615,
+      "motor_commands_sent": 0,
+      "hardware_validated": false
+    },
+    "checkpoint_file_checks": [
+      {
+        "path": "_CHECKPOINT_METADATA",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "_METADATA",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "_sharding",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "array_metadatas/process_0",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "d/04c7eec52fbf65aededccc4a1c1a26ae",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "manifest.ocdbt",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "ocdbt.process_0/d/5b645879ba6f55a877414f9717c78a54",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "ocdbt.process_0/d/dc1761090b202420b74af7e65002130d",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "ocdbt.process_0/d/dd7c2f688865116d2abbf65d276335ad",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "ocdbt.process_0/d/fe048f14ca386bde757f8b89867cd29a",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "ocdbt.process_0/manifest.ocdbt",
+        "present": true,
+        "hash_matches": true
+      },
+      {
+        "path": "sac_network_config.json",
+        "present": true,
+        "hash_matches": true
+      }
+    ]
+  },
+  "historical_dynamic_evaluations_not_rerun_today": [
+    {
+      "path": "sac_forward_support_reference_v1_20k\\supported_batch_eval.json",
+      "sha256": "d6540cecb9099119a8db692e1c9c598b3742bff52504b03731f39b6fa4559912",
+      "summary": {
+        "status": "offline_supported_batch_evaluation_complete",
+        "motor_commands_sent": 0,
+        "metric_version": "forward_quaternion_v2",
+        "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+        "dynamics_version": "support_contacts_v2_all_pairs_128",
+        "checkpoint": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_reference_v1_20k/checkpoints/000000020000",
+        "teacher": false,
+        "teacher_sha256": null,
+        "control_dt": 0.05,
+        "required_hold_steps": 23,
+        "max_steps": 120,
+        "reference": "sac_supported_motion_search_20hz_result.json",
+        "reference_sha256": "b6daaadfcd4301899af62c403614151187da5f00fc3accd55520c706aff7f1d0",
+        "zero_correction_reference": false,
+        "completed_step": 90,
+        "elapsed_seconds": 96.12632319199997,
+        "successes": 10,
+        "trials": 10,
+        "caveat": "Derived simulated starts; not hardware success. Width/friction and actuator calibration remain provisional."
+      }
+    },
+    {
+      "path": "sac_forward_support_reference_v1_20k\\supported_batch_eval_sac_cube55_resets_cube55mm.json",
+      "sha256": "be66bf290fc6d7b3f1d1e55fad6104caa67bf24713241d21502717855deda07c",
+      "summary": {
+        "status": "offline_supported_batch_evaluation_complete",
+        "motor_commands_sent": 0,
+        "metric_version": "forward_quaternion_v2",
+        "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+        "dynamics_version": "support_contacts_v2_all_pairs_128",
+        "checkpoint": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_reference_v1_20k/checkpoints/000000020000",
+        "teacher": false,
+        "teacher_sha256": null,
+        "control_dt": 0.05,
+        "required_hold_steps": 23,
+        "max_steps": 120,
+        "reference": "sac_supported_motion_search_20hz_result.json",
+        "reference_sha256": "b6daaadfcd4301899af62c403614151187da5f00fc3accd55520c706aff7f1d0",
+        "zero_correction_reference": false,
+        "diagnostic_resets": "sac_cube55_resets.json",
+        "diagnostic_resets_sha256": "fa312bd9d7780efa74de3004005c06d9b61d9a2ffcf56c7791141bfc742ae6d8",
+        "warning": "Additional simulated starts; no hardware placement tolerance certified",
+        "diagnostic_cube_side_mm": 55.0,
+        "geometry_transfer_test": true,
+        "completed_step": 100,
+        "elapsed_seconds": 84.89164829799999,
+        "successes": 10,
+        "trials": 10,
+        "caveat": "Derived simulated starts; not hardware success. Width/friction and actuator calibration remain provisional."
+      }
+    },
+    {
+      "path": "sac_forward_support_reference_v1_20k\\supported_batch_eval_sac_start_tolerance_resets.json",
+      "sha256": "94647580dc1b91b1861a4520d9ba718cfc71c8deefea56ec25f8656b693b99c5",
+      "summary": {
+        "status": "offline_supported_batch_evaluation_complete",
+        "motor_commands_sent": 0,
+        "metric_version": "forward_quaternion_v2",
+        "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+        "dynamics_version": "support_contacts_v2_all_pairs_128",
+        "checkpoint": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_reference_v1_20k/checkpoints/000000020000",
+        "teacher": false,
+        "teacher_sha256": null,
+        "control_dt": 0.05,
+        "required_hold_steps": 23,
+        "max_steps": 120,
+        "reference": "sac_supported_motion_search_20hz_result.json",
+        "reference_sha256": "b6daaadfcd4301899af62c403614151187da5f00fc3accd55520c706aff7f1d0",
+        "zero_correction_reference": false,
+        "diagnostic_resets": "sac_start_tolerance_resets.json",
+        "diagnostic_resets_sha256": "85ba957658b51de2e4d6f595818fbc38136da3a8e2670172ee2cbe969df4360b",
+        "warning": "Additional simulated starts; no hardware placement tolerance certified",
+        "completed_step": 120,
+        "elapsed_seconds": 81.06973795799999,
+        "successes": 10,
+        "trials": 12,
+        "caveat": "Derived simulated starts; not hardware success. Width/friction and actuator calibration remain provisional."
+      }
+    },
+    {
+      "path": "sac_forward_support_reference_v1_20k\\supported_batch_eval_sac_cube55_resets_cube55mm_positionbias15mm.json",
+      "sha256": "197c7fc123c40a3dd399085ba9ebe930fae50e24eacd1d69ca23dd6b4e423912",
+      "summary": {
+        "status": "offline_supported_batch_evaluation_complete",
+        "motor_commands_sent": 0,
+        "metric_version": "forward_quaternion_v2",
+        "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+        "dynamics_version": "support_contacts_v2_all_pairs_128",
+        "checkpoint": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_reference_v1_20k/checkpoints/000000020000",
+        "teacher": false,
+        "teacher_sha256": null,
+        "control_dt": 0.05,
+        "required_hold_steps": 23,
+        "max_steps": 120,
+        "reference": "sac_supported_motion_search_20hz_result.json",
+        "reference_sha256": "b6daaadfcd4301899af62c403614151187da5f00fc3accd55520c706aff7f1d0",
+        "zero_correction_reference": false,
+        "diagnostic_resets": "sac_cube55_resets.json",
+        "diagnostic_resets_sha256": "fa312bd9d7780efa74de3004005c06d9b61d9a2ffcf56c7791141bfc742ae6d8",
+        "warning": "Additional simulated starts; no hardware placement tolerance certified",
+        "diagnostic_cube_side_mm": 55.0,
+        "geometry_transfer_test": true,
+        "sensor_bias_scope": "Constant cube XYZ observation error; physical state, goal and success metric unchanged. Orientation/occlusion not tested.",
+        "completed_step": 120,
+        "elapsed_seconds": 109.049683931,
+        "successes": 69,
+        "trials": 70,
+        "caveat": "Derived simulated starts; not hardware success. Width/friction and actuator calibration remain provisional."
+      }
+    }
+  ],
+  "current_rig_dynamic_policy_evaluation_completed": false,
+  "new_training_performed_today": false,
+  "physical_policy_execution_verified": false,
+  "devices_opened": 0
+}

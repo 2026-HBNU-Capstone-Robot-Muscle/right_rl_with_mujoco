@@ -1,0 +1,2231 @@
+{
+  "status": "read_only_environment_contract_comparison",
+  "training_model_is_explicit_archive_parameter_reconstruction": true,
+  "archive_source_hash_check": {
+    "sac_stage0_reset_audit_result.json": {
+      "expected": "5eaa886b4cbb21039a9863a00f3ee52c6623a1ab3d100ef8c70f0aa2ac24ba26",
+      "current": "5eaa886b4cbb21039a9863a00f3ee52c6623a1ab3d100ef8c70f0aa2ac24ba26"
+    },
+    "wood_glass_support_measurements.json": {
+      "expected": "1faa4ffce49657cb214dc885fc3f889d968da15303a4e15fad2c8e3afd6d3e6f",
+      "current": "78a0be2617b7fa7713a1b346c01ca8ad49930ded6102ced26db21330f45f6476"
+    },
+    "sac_wood_glass_model.py": {
+      "expected": "599edd054111040113256b9afcc7e3c38a88048421f1e3aca4d22ef14cb517ac",
+      "current": "599edd054111040113256b9afcc7e3c38a88048421f1e3aca4d22ef14cb517ac"
+    }
+  },
+  "archive_source_hash_mismatches": [
+    "wood_glass_support_measurements.json"
+  ],
+  "reconstructed_support_manifest": {
+    "projection_mm": 34.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 11.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          11.3
+        ],
+        [
+          37.0,
+          65.0,
+          17.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          17.3
+        ],
+        [
+          37.0,
+          65.0,
+          77.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details."
+  },
+  "current_model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+  "training_source_file": "/home/star1209042/mujoco_playground/mujoco_playground/_src/manipulation/leap_hand/face_up.py",
+  "training_source_sha256": "ab4628d65f0643411cb16984a029ef989bb786ee9eca1338af956cb12da6961c",
+  "training_config": {
+    "action_delay_steps": 0,
+    "action_repeat": 1,
+    "action_scale": 0.2,
+    "actuator_force_limit": 0.0,
+    "chain_goals": false,
+    "ctrl_dt": 0.05,
+    "ema_alpha": 1.0,
+    "episode_length": 1000,
+    "face_onehot_obs": false,
+    "face_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "goal_angle_beta_a": 1.0,
+    "goal_angle_beta_b": 1.0,
+    "goal_angle_bias": 0.0,
+    "goal_angle_scale": 1.0,
+    "goal_angle_scale_min": 0.0,
+    "goal_axis_index": -1,
+    "goal_timeout_steps": 600,
+    "history_len": 3,
+    "hold_gated_success": false,
+    "hold_stairs": 1,
+    "hyperext_floor": -9.0,
+    "impl": "jax",
+    "include_start_face": false,
+    "joint_limit_margin": 0.0,
+    "joint_limit_soft_factor": 0.75,
+    "naconmax": 245760,
+    "njmax": 160,
+    "obs_noise": {
+      "level": 1.0,
+      "random_ori_injection_prob": 0.0,
+      "scales": {
+        "cube_ori": 0.1,
+        "cube_pos": 0.02,
+        "joint_pos": 0.05
+      }
+    },
+    "pert_config": {
+      "angular_velocity_pert": [
+        0.0,
+        0.5
+      ],
+      "enable": false,
+      "linear_velocity_pert": [
+        0.0,
+        3.0
+      ],
+      "pert_duration_steps": [
+        1,
+        100
+      ],
+      "pert_wait_steps": [
+        60,
+        150
+      ]
+    },
+    "position_reference": "palm",
+    "position_threshold": 0.015,
+    "reset_best_on_episode": false,
+    "reward_config": {
+      "hold_bonus": 0.0,
+      "scales": {
+        "action_rate": -0.005,
+        "best_progress": 50.0,
+        "direct_penalty": 2.0,
+        "energy": -0.0002,
+        "fine_020": 0.0,
+        "fine_025": 0.0,
+        "hand_pose": -0.001,
+        "joint_limit": 0.0,
+        "joint_vel": -0.001,
+        "orientation": 20.0,
+        "position": 4.0,
+        "precision": 0.0,
+        "progress": 10.0,
+        "termination": -20.0
+      },
+      "success_reward": 600.0
+    },
+    "settle_steps": 0,
+    "sim_dt": 0.01,
+    "success_hold_steps": 20,
+    "success_threshold": 0.15,
+    "target_face": -1
+  },
+  "same_joint_order": true,
+  "same_actuator_joint_order": true,
+  "same_joint_axes": true,
+  "same_palm_origin": true,
+  "same_palm_rotation": true,
+  "training_gravity": [
+    -3.9700269217252693,
+    -0.2684224280438546,
+    -8.967607592080386
+  ],
+  "current_gravity": [
+    -3.331473620375985,
+    -0.0,
+    -9.226992116434204
+  ],
+  "training_timestep": 0.01,
+  "current_timestep": 0.001,
+  "training_control_dt": 0.05,
+  "training_force_limit": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "current_force_limit": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "training_joint_force_limit": [
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "current_joint_force_limit": [
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      -0.2196,
+      0.2196
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "training_gain": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0
+  ],
+  "current_gain": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0
+  ],
+  "training_damping": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "current_damping": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "training_palm_position_sensor": {
+    "objtype": 6,
+    "objid": 0,
+    "value": [
+      0.11,
+      0.0,
+      0.03
+    ]
+  },
+  "current_palm_position_sensor": {
+    "objtype": 6,
+    "objid": 0,
+    "value": [
+      0.11,
+      0.0,
+      0.03
+    ]
+  },
+  "training_palm_body_origin": [
+    0.124,
+    -0.0305,
+    -0.06045
+  ],
+  "current_palm_body_origin": [
+    0.124,
+    -0.0305,
+    -0.06045
+  ],
+  "common_geom_differences": {
+    "floor": {
+      "solref": {
+        "training": [
+          0.02,
+          1.0
+        ],
+        "current": [
+          0.004,
+          1.0
+        ]
+      }
+    },
+    "support_glass": {
+      "size": {
+        "training": [
+          0.0835,
+          0.095,
+          0.002999999999999999
+        ],
+        "current": [
+          0.0915,
+          0.095,
+          0.002999999999999999
+        ]
+      },
+      "local_pos": {
+        "training": [
+          0.07540721649484536,
+          -0.0005000000000000004,
+          -0.058108762886597935
+        ],
+        "current": [
+          0.07613978168587021,
+          -0.0005000000000000004,
+          -0.07963696179502729
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.0
+        ],
+        "current": [
+          0.004,
+          1.0
+        ]
+      }
+    },
+    "support_wood": {
+      "size": {
+        "training": [
+          0.0835,
+          0.095,
+          0.03
+        ],
+        "current": [
+          0.0915,
+          0.095,
+          0.03
+        ]
+      },
+      "local_pos": {
+        "training": [
+          0.06420042449969679,
+          -0.0005000000000000004,
+          -0.08914757428744693
+        ],
+        "current": [
+          0.06493298969072164,
+          -0.0005000000000000004,
+          -0.11067577319587629
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.0
+        ],
+        "current": [
+          0.004,
+          1.0
+        ]
+      }
+    },
+    "leap_mount_visual": {
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "leap_mount_collision_0": {
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "leap_mount_collision_1": {
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_2": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_3": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_4": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_5": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_6": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_7": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_8": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_9": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "palm_collision_10": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_bs_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_bs_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_bs_visual_support_proxy": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_px_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_px_collision": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_px_visual_support_proxy": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_md_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_md_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_md_collision_5": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_ds_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_ds_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "if_tip": {
+      "type": {
+        "training": 6,
+        "current": 7
+      },
+      "size": {
+        "training": [
+          0.01,
+          0.012,
+          0.016
+        ],
+        "current": [
+          0.011355209599014711,
+          0.012280593844237452,
+          0.016757690131050686
+        ]
+      },
+      "local_pos": {
+        "training": [
+          -0.0012969,
+          -0.0335524,
+          0.0145207
+        ],
+        "current": [
+          -0.001296903161143803,
+          -0.033552395765232425,
+          0.014520657667431451
+        ]
+      },
+      "local_quat": {
+        "training": [
+          0.703551567862374,
+          0.7095955641500119,
+          -0.029210682058124274,
+          -0.025220284509118635
+        ],
+        "current": [
+          0.7034819825636226,
+          0.7096704138371671,
+          -0.02733107034904445,
+          -0.027092739361603457
+        ]
+      },
+      "friction": {
+        "training": [
+          0.7,
+          0.05,
+          0.0002
+        ],
+        "current": [
+          0.3,
+          0.05,
+          0.0002
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "": {
+      "solref": {
+        "training": [
+          0.02,
+          1.0
+        ],
+        "current": [
+          0.004,
+          1.0
+        ]
+      }
+    },
+    "mf_bs_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_bs_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_bs_visual_support_proxy": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_px_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_px_collision": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_px_visual_support_proxy": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_md_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_md_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_md_collision_5": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_ds_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_ds_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "mf_tip": {
+      "type": {
+        "training": 6,
+        "current": 7
+      },
+      "size": {
+        "training": [
+          0.01,
+          0.012,
+          0.016
+        ],
+        "current": [
+          0.011355209599014711,
+          0.012280593844237452,
+          0.016757690131050686
+        ]
+      },
+      "local_pos": {
+        "training": [
+          -0.0012969,
+          -0.0335524,
+          0.0145207
+        ],
+        "current": [
+          -0.001296903161143803,
+          -0.033552395765232425,
+          0.014520657667431451
+        ]
+      },
+      "local_quat": {
+        "training": [
+          0.703551567862374,
+          0.7095955641500119,
+          -0.029210682058124274,
+          -0.025220284509118635
+        ],
+        "current": [
+          0.7034819825636226,
+          0.7096704138371671,
+          -0.02733107034904445,
+          -0.027092739361603457
+        ]
+      },
+      "friction": {
+        "training": [
+          0.7,
+          0.05,
+          0.0002
+        ],
+        "current": [
+          0.3,
+          0.05,
+          0.0002
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_bs_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_bs_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_bs_visual_support_proxy": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_px_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_px_collision": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_px_visual_support_proxy": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_md_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_md_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_md_collision_5": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_ds_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_ds_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "rf_tip": {
+      "type": {
+        "training": 6,
+        "current": 7
+      },
+      "size": {
+        "training": [
+          0.01,
+          0.012,
+          0.016
+        ],
+        "current": [
+          0.011355209599014711,
+          0.012280593844237452,
+          0.016757690131050686
+        ]
+      },
+      "local_pos": {
+        "training": [
+          -0.0012969,
+          -0.0335524,
+          0.0145207
+        ],
+        "current": [
+          -0.001296903161143803,
+          -0.033552395765232425,
+          0.014520657667431451
+        ]
+      },
+      "local_quat": {
+        "training": [
+          0.703551567862374,
+          0.7095955641500119,
+          -0.029210682058124274,
+          -0.025220284509118635
+        ],
+        "current": [
+          0.7034819825636226,
+          0.7096704138371671,
+          -0.02733107034904445,
+          -0.027092739361603457
+        ]
+      },
+      "friction": {
+        "training": [
+          0.7,
+          0.05,
+          0.0002
+        ],
+        "current": [
+          0.3,
+          0.05,
+          0.0002
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_mp_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_mp_collision": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_bs_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_px_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_px_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_ds_visual": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_ds_collision_1": {
+      "friction": {
+        "training": [
+          0.2,
+          0.005,
+          0.0001
+        ],
+        "current": [
+          0.3,
+          0.005,
+          0.0001
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "th_tip": {
+      "type": {
+        "training": 6,
+        "current": 7
+      },
+      "size": {
+        "training": [
+          0.01,
+          0.012,
+          0.016
+        ],
+        "current": [
+          0.01128980012877007,
+          0.012172378884707184,
+          0.017060467387970908
+        ]
+      },
+      "local_pos": {
+        "training": [
+          -0.00127744,
+          -0.0455619,
+          -0.0144774
+        ],
+        "current": [
+          -0.00127744377325541,
+          -0.04556193662786432,
+          -0.014477408474461434
+        ]
+      },
+      "local_quat": {
+        "training": [
+          0.7081010521314494,
+          0.7050720519084499,
+          -0.02949020217111241,
+          -0.024426001798278467
+        ],
+        "current": [
+          0.7080068402475256,
+          0.705175545010165,
+          -0.026906687849627315,
+          -0.027014718789867453
+        ]
+      },
+      "friction": {
+        "training": [
+          0.7,
+          0.05,
+          0.0002
+        ],
+        "current": [
+          0.3,
+          0.05,
+          0.0002
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.5
+        ],
+        "current": [
+          0.004,
+          1.5
+        ]
+      }
+    },
+    "cube": {
+      "size": {
+        "training": [
+          0.02725,
+          0.02725,
+          0.02725
+        ],
+        "current": [
+          0.0275,
+          0.0275,
+          0.0275
+        ]
+      },
+      "solref": {
+        "training": [
+          0.02,
+          1.0
+        ],
+        "current": [
+          0.004,
+          1.0
+        ]
+      }
+    }
+  },
+  "training_only_geoms": [],
+  "current_only_geoms": [
+    "cadtip_mf_rf_mf_bs_0",
+    "cadtip_mf_rf_mf_ds_0",
+    "cadtip_mf_rf_mf_ds_1",
+    "cadtip_mf_rf_mf_md_0",
+    "cadtip_mf_rf_mf_px_0",
+    "cadtip_mf_rf_rf_bs_0",
+    "cadtip_mf_rf_rf_ds_0",
+    "cadtip_mf_rf_rf_ds_1",
+    "cadtip_mf_rf_rf_md_0",
+    "cadtip_mf_rf_rf_px_0",
+    "cadtip_mf_th_mf_bs_0",
+    "cadtip_mf_th_mf_ds_0",
+    "cadtip_mf_th_mf_ds_1",
+    "cadtip_mf_th_mf_md_0",
+    "cadtip_mf_th_mf_px_0",
+    "cadtip_mf_th_th_ds_0",
+    "cadtip_mf_th_th_ds_1",
+    "cadtip_mf_th_th_px_0",
+    "support_book"
+  ],
+  "devices_opened": 0,
+  "new_training_executed": false,
+  "hardware_execution_allowed": false
+}

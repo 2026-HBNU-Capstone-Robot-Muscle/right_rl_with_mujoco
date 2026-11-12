@@ -1,0 +1,145 @@
+"""Scientific images and a local evidence report from saved model results."""
+import os
+os.environ.setdefault('MUJOCO_GL','egl')
+import json
+import html
+import numpy as np
+import mujoco
+from native_cycle import OUT,ROOT,ACTIVE_MODEL,assets,sha,save_json
+from render_canonical_grip_evidence_20261105 import display_physical_cube,cube_display,extra,png
+
+
+def main():
+    folder=OUT/'review';folder.mkdir(exist_ok=True)
+    m,initial,_,_,_=assets('active');display_physical_cube(m)
+    m.vis.global_.offwidth=1000;m.vis.global_.offheight=800
+    palette={'if_':[.22,.45,.83,1],'mf_':[.25,.65,.4,1],'rf_':[.88,.69,.14,1],'th_':[.83,.3,.3,1]}
+    for g in range(m.ngeom):
+        body=m.body(int(m.geom_bodyid[g])).name
+        if m.geom_group[g]<3 and body!='cube':m.geom_group[g]=0
+        for prefix,color in palette.items():
+            if body.startswith(prefix):m.geom_matid[g]=-1;m.geom_rgba[g]=color
+    renderer=mujoco.Renderer(m,height=720,width=960);camera=mujoco.MjvCamera()
+    camera.type=mujoco.mjtCamera.mjCAMERA_FREE;camera.distance=.34
+    camera.azimuth=130;camera.elevation=-30;camera.lookat[:]=[.14,-.025,-.008]
+    opt=mujoco.MjvOption();opt.geomgroup[:]=[1,1,1,0,0,0];cube=m.geom('cube').id
+    def stickers(d):
+        C=d.geom_xpos[cube];B=d.geom_xmat[cube].reshape(3,3);cube_display(renderer.scene,C,B,False)
+        for axis,sign,color in ((0,1,[.85,.16,.13,1]),(0,-1,[1,.45,.07,1]),(1,1,[.12,.3,.85,1]),
+                                 (1,-1,[.13,.7,.3,1]),(2,1,[.95,.95,.95,1]),(2,-1,[.95,.82,.08,1])):
+            other=[i for i in range(3) if i!=axis]
+            for u in (-1,0,1):
+                for v in (-1,0,1):
+                    size=np.full(3,.0083);size[axis]=.00015;p=np.zeros(3);p[axis]=sign*.0277;p[other]=np.array([u,v])*.055/3
+                    extra(renderer.scene,mujoco.mjtGeom.mjGEOM_BOX,size,C+B@p,B,color)
+    sources=[('start',ROOT/'right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz'),
+             ('sac_hold',OUT/'sac_current_contract_v4_20k/export_000000010256/evaluation_active_certified/end_state.npz'),
+             ('upper_space_failure',OUT/'sac_current_contract_v4_20k/export_000000020000/evaluation_active/end_state.npz'),
+             ('teacher_correction',OUT/'connected_sac_and_teacher/first_quarter_end_state.npz'),
+              ('next_turn_stop',OUT/'next_model_feedback_90_second_quarter/end_state.npz'),
+              ('learned_hold',OUT/'connected_sac_student_hold_nominal/first_quarter_end_state.npz'),
+              ('next_turn_from_learned_hold_stop',OUT/'next_model_feedback_90_from_student_hold/end_state.npz'),
+              ('ring_static_proposal',OUT/'next_cycle/clearance_rf_keep_index_contact/proposal0.npz'),
+              ('integer_hold',OUT/'next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/end_state.npz'),
+              ('ring_path_end',OUT/'next_cycle/rrt_rf_seed5_integer_equilibrium3/end_state.npz'),
+              ('loaded_endpoint_proposal',OUT/'next_cycle/handoff_refinement_20261110/endpoint_screen/qualified3/end_state.npz')]
+    records=[]
+    for name,path in sources:
+        d=mujoco.MjData(m);d.qpos[:]=np.load(path,allow_pickle=False)['qpos'];mujoco.mj_forward(m,d)
+        renderer.update_scene(d,camera=camera,scene_option=opt);stickers(d);png(folder/(name+'.png'),renderer.render())
+        records.append({'image':name+'.png','source':str(path.relative_to(ROOT)),'source_sha256':sha(path),
+                        'static_geometry_only_not_validated_motion':name=='ring_static_proposal',
+                        'initialized_endpoint_only_not_reached_motion':name=='loaded_endpoint_proposal'})
+        if name!='start':
+            B=d.geom_xmat[cube].reshape(3,3);C=d.geom_xpos[cube]
+            R=np.column_stack([B[:,0],B[:,2],-B[:,1]])
+            extra(renderer.scene,mujoco.mjtGeom.mjGEOM_CYLINDER,[.0275*np.sqrt(2),.055/6,0],
+                  C+B@np.array([0.,-.055/3,0.]),R,[.8,.2,.65,.18])
+            png(folder/(name+'_sweep.png'),renderer.render())
+    renderer.close()
+    manifest={'scientific_saved_model_renders_not_physical_photos':True,'source_model_sha256':sha(ACTIVE_MODEL),
+              'states':records,'cylinder_is_upper_layer90_sweep_display_only':True,'devices_opened':0}
+    save_json(folder/'image_sources.json',manifest)
+    source=OUT/'sac_current_contract_v4_20k/export_000000010256/evaluation_active_certified/closed_loop_trace.npz'
+    observations=np.load(source,allow_pickle=False)['observations'];error=np.degrees(observations[:,107])
+    selected=np.linspace(0,len(error)-1,250).astype(int);points=' '.join(f'{45+i/(len(error)-1)*850:.2f},{240-min(e,110)/110*210:.2f}' for i,e in zip(selected,error[selected]))
+    svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280"><rect width="940" height="280" fill="white"/><path d="M45 25V240H900" fill="none" stroke="#526273"/><polyline points="{points}" fill="none" stroke="#147d92" stroke-width="2"/><text x="55" y="20" font-size="14">목표 자세 오차 (도)</text><text x="700" y="270" font-size="14">모델 경과 시간: 0 → {len(error)*.075:.2f}초</text><text x="10" y="240" font-size="13">0</text><text x="10" y="52" font-size="13">100</text></svg>'
+    (folder/'orientation_error.svg').write_text(svg,encoding='utf-8')
+    evaluations=[]
+    for path in sorted(OUT.glob('sac_*/export_*/evaluation_*/review.json')):
+        r=json.loads(path.read_text());e=r['endpoint']
+        if path.parent.name=='evaluation_active' and (path.parent.parent/'evaluation_active_certified/review.json').exists():continue
+        export_manifest=json.loads((path.parent.parent/'manifest.json').read_text())
+        label='기존 SAC (이번 학습 전)' if export_manifest.get('is_original_actor_before_new_training') else path.parts[-4]
+        evaluations.append({'run':label,'checkpoint':r['checkpoint'],'case':r.get('case','nominal'),
+                            'pass':r['rotation_and_hold_passed'],'yaw':e['yaw_deg'],
+                            'gap':r['settled_upper_gap_sampled_75ms_mm'],'lower':r['settled_lower_contact_fraction'],
+                            'reason':r['reasons'],'path':str(path.relative_to(folder.parent))})
+    rows=''.join('<tr><td>'+html.escape(v['run']+' / '+v['checkpoint'])+'</td><td>'+html.escape(v['case'])+'</td><td>'+('통과' if v['pass'] else '미달')+'</td><td>'+f"{v['yaw']:.2f}°"+'</td><td>'+(f"{v['gap']:.3f}mm" if v['gap'] is not None else '미완료')+'</td><td>'+f"{v['lower']*100:.1f}%"+'</td><td>'+html.escape(', '.join(v['reason']))+'</td><td><a href="../'+html.escape(v['path'])+'">결과</a></td></tr>' for v in evaluations)
+    nextrows=[]
+    for path in sorted(OUT.glob('sac_next_*/evaluation_*/review.json')):
+        r=json.loads(path.read_text());nextrows.append(f"<li>{html.escape(path.parts[-3])} / {r['checkpoint']}: {r['increment_deg']:g}도 교육 단계, 목표 오차 {r['final_goal_error_deg']:.3f}도, {'달성' if r['success'] else '미달'}. 두 번째90도 성공은 아니다.</li>")
+    training=[];completed_requested_steps=0
+    for path in sorted(OUT.glob('sac_*/result.json')):
+        r=json.loads(path.read_text());steps=r.get('steps',r.get('timesteps'))
+        completed_requested_steps+=steps
+        training.append(f'<li>{html.escape(path.parent.name)}: SAC {steps:,}스텝 완료. <a href="../{path.parent.name}/result.json">학습 기록</a></li>')
+    teacherrows=[]
+    for path in sorted(OUT.glob('next_model_feedback_*/review.json')):
+        r=json.loads(path.read_text());final=r.get('final') or {}
+        teacherrows.append(f'<li>{html.escape(path.parent.name)}: 목표 {r["curriculum_turn_deg"]:g}도, 최종 자세 오차 {final.get("error_deg",float("nan")):.3f}도, {"조건 통과" if r["success"] else "미달"}. SAC가 아닌 오프라인 모델 예측 제어. <a href="../{path.parent.name}/review.json">근거</a></li>')
+    connected=json.loads((OUT/'connected_sac_and_teacher/review.json').read_text())
+    endpoint=connected['endpoint'];hold=connected['final_hold'];reverse=connected.get('reverse_joint_baseline')
+    connected_text=f'초기 배치부터 SAC를 새로 추론한 뒤 저장된 모델 교사109목표를 연결했다. 중간 상태를 초기화하지 않았다. 전체 회전 {endpoint["yaw_deg"]:.3f}도, 목표 자세 오차 {endpoint["target90_error_deg"]:.3f}도, 기울기 {endpoint["up_tilt_deg"]:.3f}도, 공통 파지 위치 오차 {connected["common_station_error_mm"]:.3f}mm다. 마지막4.05초의 매1ms 공간 인증을 포함한 판정은 {"통과" if connected["first_rotation_and_hold_passed"] else "미달"}이다.'
+    if reverse:
+        connected_text+=f' 이후 관절 경로를 거꾸로 재생한 비교도 수행했다. 이는 학습 정책이 아니며 다음 회전 성공으로 세지 않는다. 종료 사유: {reverse["stop"]}.'
+    latest=[]
+    for case in ('nominal','x_plus05','friction025'):
+        r=json.loads((OUT/('connected_sac_student_hold_'+case)/'review.json').read_text());e=r['endpoint'];h=r['final_hold']
+        latest.append(f'<tr><td>{html.escape(case)}</td><td>{e["yaw_deg"]:.3f}°</td><td>{e["target90_error_deg"]:.3f}°</td><td>{r["common_station_error_mm"]:.3f}mm</td><td>{h["gap"]:.3f}mm</td><td>{h["lower"]}/{h["samples"]}</td><td>{"통과" if r["first_rotation_and_hold_passed"] else "미달"}</td><td><a href="../connected_sac_student_hold_{case}/review.json">기록</a></td></tr>')
+    packaged=[]
+    for path in sorted(OUT.glob('next_cycle/staged_model_*/review.json')):
+        r=json.loads(path.read_text());f=r['final']
+        packaged.append(f'<li><a href="../{path.relative_to(OUT).as_posix()}">{html.escape(path.parent.name)}</a>: {"통과" if r["first_rotation_and_hold_passed"] else "미달"}, {r["steps"]}목표, 자세 오차{f["error_deg"]:.3f}도, 위치 오차{f["center_error_mm"]:.3f}mm. {html.escape(", ".join(r["reasons"]))}</li>')
+    continuation='''<h2>기존 접촉 계산10회 모델: 끝 보정과 위치 유지 연결 기록</h2>
+<p>아래 세 조건의 첫 회전 성공은 기존10회 모델의 기록이며50회 모델의 성공으로 이전하지 않는다. 초기 배치→기준 궤적과 SAC 잔차6300목표→별도 신경망 보정→위치 지령 유지, 총6556목표를 세 조건에서 처음부터 새로 실행했다. 중간 손·큐브 상태 초기화와 끝 보정의 저장 교사 관절 경로 재생은 없다. 끝 보정은303개 모델 교사 자료를 모방 학습한 부품이며 SAC가 아니다. 세 조건이 교사 자료에도 쓰였으므로 독립 일반화 성공률로 해석하지 않는다.</p>
+<div class="wide"><table><thead><tr><th>모델 조건</th><th>회전</th><th>90도 자세 오차</th><th>위치 오차</th><th>윗단 인증 하한</th><th>하부 접촉 상태</th><th>첫 회전·유지</th><th>근거</th></tr></thead><tbody>'''+''.join(latest)+'''</tbody></table></div>
+<p>윗단 인증과 하부 접촉은 마지막4050개1ms 상태다. 양 손끝 각각 모델 법선력0.2N 초과를 하부 접촉으로 센다. 이 힘과 형상 인증은 실물 하중·치수의 측정값이 아니다. X+0.5mm의 절단 단면/방사 지표0.141mm와 독립 분리면 인증 하한0.313mm는 다른 계산이다. 빠른 단면 지표는 원통 끝면 주변의 전체 최소거리 하한이 아니므로0.3mm 여유 증명으로 쓰지 않는다. 인증에는 정확한 원통 지지 함수를 다시 검사했으며 형상과0.3mm 기준은 바꾸지 않았다.</p>
+<div class="grid"><figure><img src="learned_hold_sweep.png"><figcaption>학습 보정 후 위치 유지. 토크를 끈 자세가 아니며 모델의 원래 위치 서보가 동작한다.</figcaption></figure><figure><img src="ring_static_proposal.png"><figcaption>검지·중지를 함께 옮겨 약지 접촉을 만든 정적 기하 후보. 도달 동작·지지력·다음 회전의 성공 자세가 아니다.</figcaption></figure><figure><img src="next_turn_from_learned_hold_stop_sweep.png"><figcaption>학습 보정 뒤 파지에서 다음180도 목표를 시도한 중단 상태. 추가 회전 약4도 부근에서 정체됐고 위치도 벗어났다.</figcaption></figure></div>
+<p>약지가 큐브에 닿을 수 없다는 문제가 아니다. 손가락 사이를 통과하는 우회 경로는 찾았지만, 검지를 움직여 약지에 하중을 넘기는 동안 큐브 지지가 풀렸다. 힘 피드백을 포함한 전환 비교도 약지의 안정적 지지 인계까지 통과하지 못했다. <strong>다음90도 및 회전→유지→다음 회전→유지 전체는 미완료다.</strong></p>
+<h2>단계 연결부의 추가 검증</h2><p>모터 출력 API가 없는 NumPy 연결부가 세 조건의19668개 목표와 전부 일치했다. 신선한 공간 근거, 모델 해시·표본 번호, 확인 응답 오류의 단계 유지, 유지 지령 보존을 검사했다. 이 비교에는 모델의 소수 틱 관측을 썼으며 실제 인코더·카메라 정확도 검증은 아니다.</p><ul>'''+''.join(packaged)+'''</ul>
+<p><strong>정수 인코더 조건의 개선:</strong> 원래 관절 범위 안의 가장 가까운 증분 목표를 선택하는 변형은 초기 배치부터6956목표를 통과했다. v2 보정 부품의 최종 자세 오차1.369도, 위치 오차1.498mm, 마지막4050상태 하부 접촉100%, 원통 공간 인증 하한0.572mm였다. 위치 유지 전환 뒤 약41초를 이어갔다. 정수 오차를 반영한v3 학습만으로는 미달이 해결되지 않았고 범위 안 목표 선택과 함께 비교했다. 동일 명목 조건의 변형·재확인을 독립적인 성공 조건으로 합산하지 않는다.</p>
+<p>Y+0.5mm 배치는 목표 각도와 위치가 맞아도 공간 인증이 미달했다. 독립적인 최근접점·지지 함수 확인에서 끝 상태의 검지 끝과 원통 사이 거리는0.258744mm로0.3mm보다 작았다. 큰 빠른 지표값을 근거로 통과시키지 않았다. <a href="../next_cycle/upper_gap_metric_audit.json">거리 확인 근거</a>.</p>
+<p><a href="../next_cycle/STATUS.md">후속 전체 기록</a> · <a href="../next_cycle/staged_shadow_runtime_verification.json">19668목표·오류 처리 검사</a> · <a href="../next_cycle/staged_shadow_bundle_v2/bundle.json">출력 없는 제어 묶음</a></p>'''
+    refinement=OUT/'next_cycle/handoff_refinement_20261110/summary.json'
+    if refinement.exists():
+        continuation+='''<h2>약지 하중 인계의 추가 작업</h2><p>검지 뿌리의 무게 지지를 검산하고, 약지·엄지·검지 뿌리로 유지할 수 있는 모델 끝 자세3개를 따로 확인했다. 그 자세로 직접 초기화한 검사와 첫 파지에서 이동한 검사는 구분한다. 현재 첫 회전 뒤 새 경로1265목표는 큐브를 놓치지 않고 진행했지만 방향 오차15.94도와 약지 힘 부족으로 미달이다. 실제 끝 상태를 이어 자세·접촉 보정과 하중이 생긴 순간의 위치 유지, 모델 중력 보정을 비교했다. 다음90도 및 실물 준비 완료는 아니다.</p>
+<div class="grid"><figure><img src="integer_hold.png"><figcaption>기존10회 모델의 정수 관측 첫 회전·유지 끝. 실물 사진이 아니다.</figcaption></figure><figure><img src="ring_path_end.png"><figcaption>기존10회 모델에서 새 경로1265목표의 자유 동역학 끝. 큐브는 남았지만 약지 하중 인계와 방향이 미달이다.</figcaption></figure><figure><img src="loaded_endpoint_proposal.png"><figcaption>직접 초기화한 뒤 약지 지지를 유지한 별도 모델 끝 자세. 이 자세까지 이동했다는 결과가 아니다.</figcaption></figure></div>
+<p><a href="../next_cycle/handoff_refinement_20261110/index.html">새 전환 구간의 결과와 출처</a> · <a href="../next_cycle/handoff_refinement_20261110/STATUS.md">상세 기록</a></p>'''
+    body='''<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>실기 전 SAC 회전·파지 검증</title><style>body{font:16px/1.7 system-ui;max-width:1200px;margin:24px auto;padding:0 18px;color:#1c303b}h1{font-size:28px}h2{font-size:22px}.note{padding:16px;background:#fff1cb;border-radius:8px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}figure{margin:0}img{width:100%;display:block}figcaption{padding:8px}table{border-collapse:collapse;font-size:14px;width:100%}td,th{border-bottom:1px solid #ddd;padding:8px;text-align:left}.wide{overflow:auto}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style>
+<h1>실기 전 SAC 회전·파지·다음 회전 검증</h1>
+<p class="note">모든 그림과 성공 판정은 저장 모델의 오프라인 결과다. 실물 모터·카메라는 열지 않았다. 첫 회전·유지의 확인된 조건과 미학습 배치/마찰 및 다음 회전의 미달을 구분한다. 원래 실물 실행 파일170개는 유지한다.</p>
+'''+continuation+'''
+<h2>앞선 SAC 학습과 비교 기록</h2><p>4회 합계6만 스텝의 새 SAC 학습을 완료했다. 후속 모방 학습의 최적화 횟수를 SAC 환경 스텝에 더하지 않는다. 학습량을 성공률이나 완성도로 환산하지 않는다. 최종 체크포인트가 중간 체크포인트보다 나빠진 결과도 보존했고 자동 채택하지 않았다.</p><ul>'''+''.join(training)+'''</ul>
+<h2>앞선 SAC 단독 첫 회전과 유지</h2><p>기존 actor에서 이어 학습한10256체크포인트는 현재 모델의 한 명목 조건에서 초기 배치부터6300목표를 연결했다. 약85.40도 회전, 전체 자세 오차4.78도, 기울기1.66도다. 마지막4.05초의 하부 손끝 접촉은92.5%, 공간 지표는 약1.94mm였다. 같은 조건에서 모든1ms 상태의 분리 공간 인증도 통과했다. 반복성이나 실물 성공을 뜻하지 않는다.</p>
+<div class="grid"><figure><img src="start.png"><figcaption>모델 출발 자세. 실제 손·사진이 아니다.</figcaption></figure><figure><img src="sac_hold_sweep.png"><figcaption>SAC10256의 명목 회전·유지 끝 상태. 분홍 원통은 윗단90도 회전에 필요한 공간의 표시다.</figcaption></figure><figure><img src="upper_space_failure_sweep.png"><figcaption>학습을 더 진행한20000체크포인트는 손끝과 윗단 공간 조건을 함께 만족하지 못했다. 최종 체크포인트를 자동 채택하지 않는다.</figcaption></figure></div>
+<img src="orientation_error.svg" alt="SAC 명목 경로의 목표 자세 오차">
+<p>현재 목표 간격은 최대2틱, 주기는75ms다. 입력과 모델의 시간 조건을 맞춘 새 보정 학습을 실제 실행했다. 학습의 짧은 상태 창과 이 표의 전체 연속 경로는 다른 평가다. 모델의0.15N·m는450mA 환산값이 아니다.</p>
+<h2>동일 기준의 전체 경로 평가</h2><div class="wide"><table><thead><tr><th>정책</th><th>조건</th><th>회전·유지</th><th>회전</th><th>윗단75ms 표본 여유</th><th>하부 접촉</th><th>미달 사유</th><th>근거</th></tr></thead><tbody>'''+rows+'''</tbody></table></div>
+<p>동일 명목 조건을 인증을 위해 재실행한 횟수를 독립적인 성공 조건으로 합산하지 않는다. 표의 배치/마찰/구동/관측 오차는 가정한 모델 조건이며 실물 허용 오차를 측정한 값이 아니다.</p>
+<h2>다음 회전</h2><p>고정된 두 접촉점을 유지하는 다음90도 제안은 통과하지 못했다. 접촉을 바꾸는 SAC 교육 단계를 별도로 시험하며, 아래 작은 각도의 결과를 다음90도 성공으로 표시하지 않는다.</p><ul>'''+''.join(nextrows)+'''</ul>
+<h2>처음부터 연결한 모델 교사 보정과 다음90도</h2><p>'''+html.escape(connected_text)+''' <a href="../connected_sac_and_teacher/review.json">연속 검증</a></p>
+<div class="grid"><figure><img src="teacher_correction_sweep.png"><figcaption>첫 회전 뒤 모델 교사 보정을 연결한 상태. 저장 교사 목표를 재생한 부분은 SAC로 세지 않는다.</figcaption></figure><figure><img src="next_turn_stop_sweep.png"><figcaption>다음90도 모델 예측 탐색의 중단 상태. 첫 회전 뒤 파지에서 목표180도까지 도달하지 못했다.</figcaption></figure></div><ul>'''+''.join(teacherrows)+'''</ul>
+<p>앞선 약지270개와 중지270개의 제한된 추가 지지 탐색에서는 후보를 찾지 못했다. 이후 다른 손가락을 함께 움직이는 정적 후보와 우회 경로는 위 후속 기록에서 추가로 찾았지만 하중 인계는 아직 통과하지 못했다. 이동 중 윗단 공간을 비우는 조건과 최종 유지 자세의 조건도 구분해 비교했다.</p>
+<h2>실물 출력 없는 연결 준비</h2><p>별도 NumPy shadow 연결부의14개 검사가 통과했다. 현재 모터 대응, 학습 손바닥 기준점, 입력 신선도, 전송 확인 전 단계 유지와 파지 유지 중 계속 갱신을 검사했다. 실물 카메라 등록과 다음 회전은 미인증이어서 물리 실행은 허용하지 않는다. NumPy 이식은 증류가 아니다.</p>
+<h2>저장 실물 자료로 확인한 범위</h2><p>빈손550개 기록에서 지령과 인코더 응답 지연을 비교했다. 전류를 토크로 환산하거나 힘 한도를 보정한 결과가 아니다. 저장 사진2,275장의 마커를 검사했으며 실제 파지 중에는 손 기준 마커가 확보되지 않았다. 고정 카메라 등록을 재사용할 수 있는지는 미검증이며, 가림만으로 실시간 제어가 불가능하다고 판정하지 않는다.</p>
+<p>기존 내부 보정3개와 손 등록 자료도 읽었다. 손 마커의 모델 등록은 미검증으로 남아 있고, 옛 anchor 코드의 ID41=30mm 등은 최근 인계의 약27mm와 달랐다. 내부 보정 파일의 존재를 현재 카메라와 정책 좌표계의 등록 완료로 해석하지 않는다.</p>
+<p><a href="../recorded_tracking_fit.json">인코더 응답</a> · <a href="../recorded_pose_visibility.json">저장 사진 검사</a> · <a href="../saved_calibration_asset_review.json">기존 보정 자료</a> · <a href="../evaluation_summary.json">전체 결과 목록</a></p>
+<p><a href="../WORK_STATUS.md">작업 상태</a> · <a href="../shadow_runtime_verification.json">연결부 검사</a> · <a href="../artifact_manifest.json">소스·가중치 해시</a> · <a href="../artifact_verification.json">자료 검사</a> · <a href="image_sources.json">그림 출처</a></p></html>'''
+    body=body.replace('4회 합계6만 스텝의 새 SAC 학습을 완료했다.',f'{len(training)}회 합계{completed_requested_steps:,}스텝의 요청 학습 분량을 완료했다. 실제 trainer의 묶음 진행 번호는 각 progress.json에 남겼다.')
+    body=body.replace('<p class="note">모든 그림과 성공 판정은', '<p class="note"><strong>최신 판정:</strong> 이전 첫 회전·유지 통과는 접촉 계산10회 모델의 기록이다. 누락 접촉을 확인한 뒤 별도50회 모델에서 첫 회전을 다시 시험했고 기존 정책은4118목표에서 중단됐다. 같은4118명령의50/100회 최종 상태는 일치한다. 기존 SAC 보정과 새 초기 배치 검증은 <a href="../next_cycle/handoff_refinement_20261110/index.html">최신 접촉 계산·정책 검토</a>를 따른다. 전체 동작의 실물 준비 완료가 아니다.</p><p class="note">모든 그림과 성공 판정은')
+    (folder/'index.html').write_text(body,encoding='utf-8')
+    print(json.dumps({'report':str(folder/'index.html'),'evaluation_rows':len(evaluations),'devices_opened':0}),flush=True)
+
+
+if __name__=='__main__':main()

@@ -1,0 +1,104 @@
+{
+  "status": "collision_planned_cooperative_support_bridge",
+  "seed": 0,
+  "source_sha256": "62ec99dd86b24ab9148b0d1d4ef5d838d9195135531b55b7ff5f157d433908f5",
+  "proposal_sha256": "bc1b297d91b3baae96e0f97972636405c89ce0597b5d4cd50fee53b3a038cdf2",
+  "model_provenance": {
+    "model_kind": "active",
+    "model_path": "right_hand_rotation_20261106/middle_clearance_probe/evidence/model.mjb",
+    "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "start_valid": true,
+  "end_valid": true,
+  "iterations": 379,
+  "queries": 9102,
+  "collision_rejections": {
+    "self": 618,
+    "cube": 109,
+    "index_contact": 339,
+    "support": 2
+  },
+  "collision_plan_found": true,
+  "static_cube_used_only_for_planning": true,
+  "dynamic": {
+    "goals_completed": 435,
+    "planned_goals": 1047,
+    "stop": [
+      "cube_translation_over80mm"
+    ],
+    "worst": {
+      "self_mm": 0.0,
+      "support_mm": 0.0,
+      "cube_mm": 0.015891354152777662,
+      "tracking_rad": 0.03442542632316703,
+      "range_rad": 0.0
+    },
+    "endpoint": {
+      "yaw_deg": 48.55670869030395,
+      "target90_error_deg": 89.7074519851882,
+      "up_tilt_deg": 84.35693684447826,
+      "center": [
+        0.14943466773367722,
+        -0.09220563408298743,
+        -0.060137144898203564
+      ],
+      "upper_sweep_gap_mm": 10.467399281019658,
+      "closest_upper_geoms": [
+        [
+          "th_px_collision_1",
+          10.467399281019658
+        ],
+        [
+          "th_tip",
+          16.074957839678525
+        ],
+        [
+          "cadtip_mf_th_th_ds_1",
+          16.074957839678525
+        ],
+        [
+          "cadtip_mf_th_th_ds_0",
+          23.125281459938726
+        ],
+        [
+          "th_ds_collision_1",
+          34.39717729849444
+        ]
+      ],
+      "contacts": [],
+      "guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0,
+        "tracking_rad": 0.0297444000180358,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.001,
+        "external_cube_support": false
+      },
+      "physical_hold_load_not_verified": true
+    },
+    "hold_samples": 0,
+    "third_support_fraction": 0.0,
+    "orientation_drift_deg": 89.20364062359947,
+    "center_error_mm": 61.600458433120956,
+    "hold_orientation_drift_deg": 0.0,
+    "hold_center_drift_mm": 0.0,
+    "temporary_third_support_passed": false,
+    "actual_cube_dynamics_never_reset_after_source": true
+  },
+  "existing_index_contact_retained_during_static_plan": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "second90_rotation_passed": false,
+  "elapsed_seconds": 14.751548707000001
+}

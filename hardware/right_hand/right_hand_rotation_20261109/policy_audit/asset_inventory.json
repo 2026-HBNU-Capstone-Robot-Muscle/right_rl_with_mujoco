@@ -1,0 +1,553 @@
+{
+  "original_policy": {
+    "path": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\work\\Leap_Test\\policy\\policy_np.npz",
+    "sha256": "dc220d146bc5532c4ae09907c6d6bbc887335389d215afaafb69eeab679560e7",
+    "arrays": {
+      "mean": {
+        "shape": [
+          108
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "std": {
+        "shape": [
+          108
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "hidden": {
+        "shape": [
+          3
+        ],
+        "dtype": "int64",
+        "finite": true
+      },
+      "action_size": {
+        "shape": [],
+        "dtype": "int64",
+        "finite": true
+      },
+      "W:params/hidden_0/bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_0/kernel": {
+        "shape": [
+          108,
+          512
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_1/bias": {
+        "shape": [
+          256
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_1/kernel": {
+        "shape": [
+          512,
+          256
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_2/bias": {
+        "shape": [
+          128
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_2/kernel": {
+        "shape": [
+          256,
+          128
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_3/bias": {
+        "shape": [
+          32
+        ],
+        "dtype": "float32",
+        "finite": true
+      },
+      "W:params/hidden_3/kernel": {
+        "shape": [
+          128,
+          32
+        ],
+        "dtype": "float32",
+        "finite": true
+      }
+    }
+  },
+  "training_records": [
+    {
+      "folder": "sac_forward_stage0_residual_v2_20k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 20000,
+          "elapsed_seconds": 379.327565629,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage0_residual_v2_20k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage0_residual_v2_20k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 20000,
+          "num_envs": 16,
+          "batch_size": 64,
+          "grad_updates": 1,
+          "evals": 2,
+          "seed": 0,
+          "name": "sac_forward_stage0_residual_v2_20k",
+          "residual": true,
+          "residual_scale": 0.15,
+          "learning_rate": 0.0001,
+          "stage2_forward": false,
+          "stage0_forward": true,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 5,
+          "directional_task_experimental": true,
+          "direction_metric_version": "forward_quaternion_v2",
+          "start_phase": "place_cube_after_stage_0",
+          "reset_manifest_sha256": "5eaa886b4cbb21039a9863a00f3ee52c6623a1ab3d100ef8c70f0aa2ac24ba26",
+          "friction_scale": 1.0,
+          "hardware_authorized": false,
+          "teacher_sha256": "dc220d146bc5532c4ae09907c6d6bbc887335389d215afaafb69eeab679560e7",
+          "deterministic_eval": true
+        }
+      }
+    },
+    {
+      "folder": "sac_forward_stage0_v2_20k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 20000,
+          "elapsed_seconds": 593.3483098270001,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage0_v2_20k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage0_v2_20k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 20000,
+          "num_envs": 8,
+          "batch_size": 64,
+          "grad_updates": 1,
+          "evals": 3,
+          "seed": 0,
+          "name": "sac_forward_stage0_v2_20k",
+          "residual": false,
+          "stage2_forward": false,
+          "stage0_forward": true,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 5,
+          "directional_task_experimental": true,
+          "direction_metric_version": "forward_quaternion_v2",
+          "start_phase": "place_cube_after_stage_0",
+          "reset_manifest_sha256": "5eaa886b4cbb21039a9863a00f3ee52c6623a1ab3d100ef8c70f0aa2ac24ba26",
+          "friction_scale": 1.0,
+          "hardware_authorized": false
+        }
+      }
+    },
+    {
+      "folder": "sac_forward_stage2_20k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 20000,
+          "elapsed_seconds": 420.665080448,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage2_20k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage2_20k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 20000,
+          "num_envs": 8,
+          "batch_size": 64,
+          "grad_updates": 1,
+          "evals": 3,
+          "seed": 0,
+          "name": "sac_forward_stage2_20k",
+          "residual": false,
+          "stage2_forward": true,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 7,
+          "directional_task_experimental": true,
+          "friction_scale": 2.0,
+          "hardware_authorized": false
+        }
+      }
+    },
+    {
+      "folder": "sac_forward_stage2_pilot_2k",
+      "records": {
+        "settings.json": {
+          "timesteps": 2000,
+          "num_envs": 4,
+          "batch_size": 32,
+          "grad_updates": 1,
+          "evals": 2,
+          "seed": 0,
+          "name": "sac_forward_stage2_pilot_2k",
+          "residual": false,
+          "stage2_forward": true,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 7,
+          "directional_task_experimental": true,
+          "friction_scale": 2.0,
+          "hardware_authorized": false
+        }
+      }
+    },
+    {
+      "folder": "sac_forward_stage2_pilot_2k_v2",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 2000,
+          "elapsed_seconds": 228.88176223100004,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage2_pilot_2k_v2/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_stage2_pilot_2k_v2/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 2000,
+          "num_envs": 4,
+          "batch_size": 32,
+          "grad_updates": 1,
+          "evals": 2,
+          "seed": 0,
+          "name": "sac_forward_stage2_pilot_2k_v2",
+          "residual": false,
+          "stage2_forward": true,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 7,
+          "directional_task_experimental": true,
+          "friction_scale": 2.0,
+          "hardware_authorized": false
+        }
+      }
+    },
+    {
+      "folder": "sac_forward_support_reference_v1_20k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 20000,
+          "elapsed_seconds": 564.608328112,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_reference_v1_20k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_reference_v1_20k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 20000,
+          "num_envs": 16,
+          "batch_size": 128,
+          "grad_updates": 2,
+          "evals": 2,
+          "seed": 0,
+          "name": "sac_forward_support_reference_v1_20k",
+          "residual": false,
+          "residual_scale": 0.3,
+          "learning_rate": 0.0001,
+          "stage2_forward": false,
+          "stage0_forward": true,
+          "support_aware": true,
+          "reference_residual": "sac_supported_motion_search_20hz_result.json",
+          "reference_scale": 0.05,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 5,
+          "directional_task_experimental": true,
+          "direction_metric_version": "forward_quaternion_v2",
+          "start_phase": "derived_settled_support_candidate",
+          "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+          "friction_scale": 1.0,
+          "hardware_authorized": false,
+          "teacher_sha256": null,
+          "dynamics_version": "support_contacts_v2_all_pairs_128",
+          "reference_sha256": "b6daaadfcd4301899af62c403614151187da5f00fc3accd55520c706aff7f1d0",
+          "deterministic_eval": true
+        },
+        "numpy_export/manifest.json": {
+          "format": "leap_reference_sac_numpy_v1",
+          "checkpoint": "000000020000",
+          "checkpoint_files_sha256": {
+            "_CHECKPOINT_METADATA": "2c9a74c9625784d3b1926e270bba9e5c92f95f52b83238f5ad4c6618c380266b",
+            "_METADATA": "6a9c41f10ee93938d7797bcf48982ace7bef3f8d6f28ac0fdd4e38e13501c55e",
+            "_sharding": "e8023538f8f13d2a6ee5533635229a487573c8c109c9bb092440d4c7dee66a9e",
+            "array_metadatas/process_0": "c58be384bd70358075caa0a9339c71212768ee03c2c89c784732aed062311912",
+            "d/04c7eec52fbf65aededccc4a1c1a26ae": "2172171575a6e664fe611b75486db9ebb958dd0a2d9c76b208081c4b47f74d18",
+            "manifest.ocdbt": "1c48616cc7351f1f94c5b1747ea069a80e05ba891bec54f29abdffe052cb9f37",
+            "ocdbt.process_0/d/5b645879ba6f55a877414f9717c78a54": "260ae042878f738379ac6a36fb7395425fd65a14f8b39bf7b434359abdd76215",
+            "ocdbt.process_0/d/dc1761090b202420b74af7e65002130d": "5f2d9e3dff502989c08c3520aa36f2975fada71fa40106face87c9da89a6d8c8",
+            "ocdbt.process_0/d/dd7c2f688865116d2abbf65d276335ad": "5f94680fc78ff26871f5a0f640ef57e9d5b0a88b23d8bb16536bc008690872de",
+            "ocdbt.process_0/d/fe048f14ca386bde757f8b89867cd29a": "26538f301fbc26afbb56f7754de46ab2cc1dc698e9c8c5de48c5882efc5b0097",
+            "ocdbt.process_0/manifest.ocdbt": "c0841018d077268fba1b2c64c1e0507cbeb29ac20f035af3e02225c3e7dc0028",
+            "sac_network_config.json": "c80c1784990adf53e77777f62f8beb7d73c03d48dcdc93583e6661c7ac7a82af"
+          },
+          "actor_sha256": "4fd647260cf679ce06d4506122298f38bd02e861e46c15e31b018d2c02c16ac8",
+          "fixture_sha256": "9f0db4425b747dda69c4b1cbec6c2b0a611e43c5f8b292b2455e3cc7cab52a1c",
+          "observation_size": 110,
+          "action_size": 16,
+          "control_dt": 0.05,
+          "reference_waypoint_seconds": 1.2,
+          "residual_rad": 0.05,
+          "base_action_scale_rad": 0.2,
+          "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+          "reference_sha256": "b6daaadfcd4301899af62c403614151187da5f00fc3accd55520c706aff7f1d0",
+          "dynamics_version": "support_contacts_v2_all_pairs_128",
+          "hardware_validated": false,
+          "fixture_note": "90 consecutive MJX steps use original GPU inference; 512 random inputs use highest matmul precision. Default GPU random outputs retained separately. Parity, not a new success evaluation."
+        },
+        "numpy_export/windows_parity.json": {
+          "status": "passed",
+          "action_samples": 602,
+          "rollout_samples": 90,
+          "max_action_error": 3.0547380447387695e-07,
+          "max_goal_error_rad": 2.384185791015625e-07,
+          "random_default_gpu_error": 0.0006102025508880615,
+          "motor_commands_sent": 0,
+          "hardware_validated": false
+        }
+      }
+    },
+    {
+      "folder": "sac_forward_support_v1_20k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 20000,
+          "elapsed_seconds": 454.30511388199994,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_v1_20k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_forward_support_v1_20k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 20000,
+          "num_envs": 16,
+          "batch_size": 128,
+          "grad_updates": 2,
+          "evals": 2,
+          "seed": 0,
+          "name": "sac_forward_support_v1_20k",
+          "residual": false,
+          "residual_scale": 0.3,
+          "learning_rate": 0.0001,
+          "stage2_forward": false,
+          "stage0_forward": true,
+          "support_aware": true,
+          "direction_sign": 1,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 5,
+          "directional_task_experimental": true,
+          "direction_metric_version": "forward_quaternion_v2",
+          "start_phase": "derived_settled_support_candidate",
+          "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+          "friction_scale": 1.0,
+          "hardware_authorized": false,
+          "teacher_sha256": null,
+          "deterministic_eval": true
+        }
+      }
+    },
+    {
+      "folder": "sac_real_start_100k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 100000,
+          "elapsed_seconds": 426.113306266,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_real_start_100k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_real_start_100k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 100000,
+          "num_envs": 32,
+          "batch_size": 128,
+          "grad_updates": 2,
+          "evals": 4,
+          "seed": 0,
+          "name": "sac_real_start_100k",
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 18,
+          "hardware_authorized": false
+        }
+      }
+    },
+    {
+      "folder": "sac_real_start_pilot",
+      "records": {
+        "pilot_result.json": {
+          "status": "offline_sac_trainer_pilot_complete",
+          "hardware_authorized": false,
+          "num_timesteps": 2048,
+          "elapsed_seconds": 260.68487495200003,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_real_start_pilot/checkpoints",
+          "caveat": "A 2048-step integration pilot cannot train a cube-turning policy."
+        }
+      }
+    },
+    {
+      "folder": "sac_real_start_residual_100k",
+      "records": {
+        "result.json": {
+          "status": "offline_sac_training_complete",
+          "hardware_authorized": false,
+          "timesteps": 100000,
+          "elapsed_seconds": 426.99342235899996,
+          "checkpoint_dir": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_real_start_residual_100k/checkpoints",
+          "metrics_path": "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/sac_real_start_residual_100k/metrics.jsonl",
+          "caveat": "Training completion is not physical flip validation."
+        },
+        "settings.json": {
+          "timesteps": 100000,
+          "num_envs": 32,
+          "batch_size": 128,
+          "grad_updates": 2,
+          "evals": 4,
+          "seed": 0,
+          "name": "sac_real_start_residual_100k",
+          "residual": true,
+          "cube_side_m": 0.0545,
+          "cube_mass_kg": 0.1,
+          "gravity_sim_m_s2_candidate": [
+            -3.9700269217252693,
+            -0.2684224280438546,
+            -8.967607592080386
+          ],
+          "start_offset_candidates": 18,
+          "hardware_authorized": false
+        }
+      }
+    }
+  ],
+  "root_evaluations": [
+    {
+      "path": "sac_supported_teacher_batch_eval.json",
+      "summary": {
+        "status": "offline_supported_batch_evaluation_complete",
+        "motor_commands_sent": 0,
+        "metric_version": "forward_quaternion_v2",
+        "reset_manifest_sha256": "681cfd3bf4eacd67b537a85600b3f9b60ca388776520332f2e163bd7ddf71e21",
+        "checkpoint": null,
+        "teacher": true,
+        "teacher_sha256": "dc220d146bc5532c4ae09907c6d6bbc887335389d215afaafb69eeab679560e7",
+        "control_dt": 0.05,
+        "required_hold_steps": 23,
+        "max_steps": 180,
+        "completed_step": 180,
+        "elapsed_seconds": 124.73938635900001,
+        "successes": 0,
+        "trials": 10,
+        "caveat": "Derived simulated starts; not hardware success. Width/friction and actuator calibration remain provisional."
+      }
+    },
+    {
+      "path": "sac_stage0_teacher_v2_result.json",
+      "summary": {
+        "status": "offline_stage0_forward_v2_eval",
+        "metric_version": "forward_quaternion_v2",
+        "motor_commands_sent": 0,
+        "checkpoint": null,
+        "reset_manifest_sha256": "5eaa886b4cbb21039a9863a00f3ee52c6623a1ab3d100ef8c70f0aa2ac24ba26",
+        "trials": 10,
+        "distinct_offsets": 5,
+        "successes": 2,
+        "zero_action": false,
+        "teacher": true,
+        "caveat": "Approximate real placement model; no calibrated external wood or camera occlusion. Simulation success is not hardware success.",
+        "teacher_sha256": "dc220d146bc5532c4ae09907c6d6bbc887335389d215afaafb69eeab679560e7",
+        "teacher_hash_provenance": "Recorded after this completed audit; work/policy source was read-only and not changed during the run."
+      }
+    },
+    {
+      "path": "sac_oct8_recompiled_policy_probe_result.json",
+      "summary": {
+        "model": "recompiled_palm_visual_without_boxes",
+        "cube_side_m": 0.0545,
+        "cube_mass_kg": 0.1,
+        "target_face": 3,
+        "steps_run": 300,
+        "ever_success": false,
+        "hardware_authorized": false,
+        "caveat": "Single candidate/target and unvalidated real-to-sim reset. No hardware inference."
+      }
+    }
+  ],
+  "devices_opened": 0
+}

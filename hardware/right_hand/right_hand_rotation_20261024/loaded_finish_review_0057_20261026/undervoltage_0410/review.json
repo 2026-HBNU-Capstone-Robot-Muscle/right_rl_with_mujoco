@@ -1,0 +1,180 @@
+{
+  "source": "recovered_forward_placement_20261026_041024_485668",
+  "source_sha256": "4e5ee109a1cb35522e95db51b04d79e32c2f2625e5cb92b2a6f9321698cea97c",
+  "error": "Undervoltage: ID1 3.5V; immediate stop",
+  "failed_phase": "stage_6_loaded_quarter_reference",
+  "phases": {
+    "stage_0_ring_pip_release": 32,
+    "stage_0_book_clearance": 63,
+    "stage_3_empty_return_with_tip_clearance": 347,
+    "stage_5_empty_start_hold": 40,
+    "placement_checkpoint": 20,
+    "prepared_empty_reference": 6,
+    "place_cube": 301,
+    "loaded_countdown": 64,
+    "stage_6_loaded_quarter_reference": 657
+  },
+  "last_goal_ticks": [
+    2687,
+    3185,
+    2739,
+    2488,
+    2092,
+    2145,
+    1878,
+    2284,
+    2144,
+    2006,
+    1902,
+    2289,
+    2995,
+    2120,
+    2618,
+    3252
+  ],
+  "phase_sample_count": 657,
+  "sample_count": 1530,
+  "motor_write_events": 1157,
+  "voltage_before_fault_v": [
+    3.8,
+    3.8,
+    3.9,
+    3.8,
+    4.0,
+    3.9,
+    4.0,
+    3.9,
+    4.3,
+    4.3,
+    4.4,
+    4.2,
+    4.8,
+    4.7,
+    4.8,
+    4.6
+  ],
+  "voltage_at_fault_v": [
+    3.5,
+    3.5,
+    3.6,
+    3.6,
+    3.8,
+    3.7,
+    3.9,
+    3.7,
+    4.2,
+    4.1,
+    4.3,
+    4.0,
+    4.7,
+    4.6,
+    4.8,
+    4.5
+  ],
+  "groups": [
+    {
+      "finger": "thumb",
+      "motor_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "final_min_v": 3.5,
+      "final_max_v": 3.6,
+      "whole_run_min_v": 3.5
+    },
+    {
+      "finger": "index",
+      "motor_ids": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "final_min_v": 3.7,
+      "final_max_v": 3.9,
+      "whole_run_min_v": 3.7
+    },
+    {
+      "finger": "middle",
+      "motor_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "final_min_v": 4.0,
+      "final_max_v": 4.3,
+      "whole_run_min_v": 4.0
+    },
+    {
+      "finger": "ring",
+      "motor_ids": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "final_min_v": 4.5,
+      "final_max_v": 4.8,
+      "whole_run_min_v": 4.5
+    }
+  ],
+  "sub_3_7_v_sample_count": 1,
+  "sub_3_7_v_samples_before_fault": 0,
+  "first_sub_3_7_sample_index": 1529,
+  "last_healthy_to_fault_read_interval_s": 0.062000000005355105,
+  "low_voltage_duration_determined": false,
+  "duration_reason": "Immediate OFF after first3.5V read censors the subsequent loaded-voltage duration.",
+  "last_inter_motor_voltage_spread_v": 1.2999999999999998,
+  "max_tracking_rad": 0.11504855909142309,
+  "peak_motor_current_ma": 132,
+  "motor_current_telemetry_is_not_supply_current": true,
+  "thumb_release_confirmed": true,
+  "thumb_release_actual": 3177,
+  "thumb_release_threshold": 3200,
+  "cube_placement_confirmed": true,
+  "cube_removal_confirmed": null,
+  "cube_present": true,
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "physical_cube_rotation_verified": false,
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\recovered_forward_placement_20261026_041024_485668\\camera",
+    "status": "complete",
+    "frame_count": 1572,
+    "error": null,
+    "image_signal_usable_frames": 1572,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true,
+    "exposure_settings_modified": false,
+    "exposure_restoration_required": false,
+    "exposure_restoration_verified": null
+  },
+  "voltage_guard_events": {},
+  "operator_confirmed_power_topology": "One3pin cable from power hub supplies all16 motors",
+  "inference": "Voltage loss along the single feed/chain or its connections is likely; supply/connection measurements are still needed to localize it.",
+  "wiring_fault_localized": false,
+  "undervoltage_trip_threshold_changed": false,
+  "official_motor_voltage_range_v": [
+    3.7,
+    6.0
+  ],
+  "official_recommended_voltage_v": 5.0,
+  "sources": [
+    {
+      "title": "ROBOTIS XC330-M288 specifications",
+      "url": "https://docs.robotis.com/docs/dxl/model_reference/x_series/xc_series/xc330-m288/"
+    },
+    {
+      "title": "ROBOTIS U2D2 Power Hub",
+      "url": "https://emanual.robotis.com/docs/en/parts/interface/u2d2_power_hub/"
+    },
+    {
+      "title": "LEAP Hand assembly electronics",
+      "url": "https://v1.leaphand.com/assembly"
+    }
+  ],
+  "next_action": "Remove Cube if still present, turn motor power OFF, then show the power-hub3pin ports and cable to hand. Identify a split-feed arrangement from the actual connections before rewiring. No repeated loaded trial yet."
+}

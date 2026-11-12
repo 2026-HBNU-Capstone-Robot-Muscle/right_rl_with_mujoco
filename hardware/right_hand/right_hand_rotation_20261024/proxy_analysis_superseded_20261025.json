@@ -1,0 +1,84 @@
+{
+  "reason": "Visual mesh clones lost their class without explicit type=mesh; some housing proxies compiled as spheres.",
+  "affected_derived_analyses": [
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/adapted_reference_path.json",
+      "sha256": "c19fabf75be8168d85beb7f2fe225f53bb1d08cde7a00cc6bf7d89dc527e9144"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/adapted_reference_path_v2.json",
+      "sha256": "b5ee5fc97d72d042acf8dd83626b80a894a244c8d0a9eeca5cbd73a410dae029"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/horizontal_reference_primitive.json",
+      "sha256": "6350f577255aff033ae00c5928dee877750e20989103eb71c7d69a9672c3259e"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/horizontal_reference_primitive_to6.json",
+      "sha256": "5aeab7f5c025df7a5f2599f84d714f3e371f37b2a5ec9d4e8e16c65975ff4195"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/horizontal_cube_dynamics.json",
+      "sha256": "30e2087b38264821d4b17aef21d3c85b0e35a6d62e91deaceb5d1784c09562c9"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/horizontal_cube_dynamics_to6.json",
+      "sha256": "deb78dea88e6d2899908ed7e30712d85c35c85517bd4f288ceed5baf13b33a80"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/whole_ninety_finish_search.json",
+      "sha256": "1c599344cd7de1887bd8721baca859e051c6f732e29be22d07bc6ed255f80be0"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/regrasp_configuration_search.json",
+      "sha256": "61c071c716228ae8c3e6b19f1151e873c96fa56b6edd235d0358c643d59993b3"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/regrasp_configuration_search_v2.json",
+      "sha256": "382c8623c326ff4eff48ed11a471cfd2ad9ff91338fb15f432d47fdf53dffb70"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/regrasp_configuration_search_v3.json",
+      "sha256": "b557a5ea8eb08e3164e252c043ea3dd2ca812e35221b8635d1d0f2dd24a995fa"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/free_cube_regrasp_review.json",
+      "sha256": "cd46f7ab68ea091829db6054d231c5e413aa9dbc2574a6554c0ac68554042060"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/free_cube_regrasp_review_v3.json",
+      "sha256": "d99da3b84ea3febe0bb21e21a2bcdf8ba7fbb625c1916440374455d33d1c4afe"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/regrasp_timing_control_review.json",
+      "sha256": "a5a722f72cfe59d6a019b29eb49c90f89d807ce539f08cb10f0732ab249d69a6"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_clearance/fingertip_collision_visual_inventory.json",
+      "sha256": "34debbd17c8807d12ecc6d150aaf64701789fd18d32d204084248d3a57ab2aa9"
+    },
+    {
+      "file": "right_hand_rotation_20261024/middle_ring_side_review/paired_native_geometry.json",
+      "sha256": "095415654befd78d6d0aea58077dbff9371cc135f27ce24f3f281fdf9b24809e"
+    },
+    {
+      "file": "right_hand_rotation_20261024/middle_ring_side_review/progress_20261025.json",
+      "sha256": "8ee024355a9517705e3530d9b4f996ab0163e751dc5a0735d22a1a8a6abf97dc"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_review/source_and_path_audit.json",
+      "sha256": "0f2d97b5badb854831bc17cff6aa237a2ec30ada62a971c76d708f26a4d1ee54"
+    },
+    {
+      "file": "right_hand_rotation_20261024/original_sequence_review/review_summary.json",
+      "sha256": "0d1e8a36ce100131922ea6b2dab0722cfd815f3d04b33fa6e352228b866accac"
+    }
+  ],
+  "discard_path_approval_claims_from_these_hashes": true,
+  "operator_raw_recordings_affected": false,
+  "source_recorded_sequence_affected": false,
+  "native_model_and_actual_control_code_affected": false,
+  "hardware_commands_sent_from_affected_plans": 0,
+  "corrected_model_revision": "explicit_mesh_type_v1_20261025",
+  "requirement": "Recheck exact compiled mesh types, transforms and a known recorded middle/ring overlap before reusing proposals."
+}

@@ -1,0 +1,215 @@
+{
+  "status": "actual_first90_to_opposite_next_quarter_probe",
+  "source": "next_cycle/handoff_refinement_20261110/initial_to_reached_workstation90/end_state.npz",
+  "source_files_sha256": {
+    "next_cycle/handoff_refinement_20261110/initial_to_reached_workstation90/end_state.npz": "37f9bb098ccf2cc393624da1798b4e124bcb75d8e0a05a1073193d28cd5bad45",
+    "next_cycle/handoff_refinement_20261110/resumed_next90_joined_branch/research_goals.npz": "107bece2d14004b5bb08ab6e43cad39dccd87581b42cbf1a4f2a5bf92bc2cd80",
+    "next_cycle/handoff_refinement_20261110/resumed_next90_joined_branch/end_state.npz": "83a74cf9b83d0fd95d4b518800d8f604db4261d5997606b61a8920d45d614f86",
+    "next_cycle/handoff_refinement_20261110/opposing_workspace_next90/start_state.npz": "677c34a761b7f6db5f8aaca2777fb53bf957b19cd49eb4fa0927a6625420f08c"
+  },
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "steps": 751,
+  "stop": [
+    "self_mm"
+  ],
+  "stages": [
+    {
+      "stage": "A_posture_alignment",
+      "after_goals": 336,
+      "stop": [],
+      "whole_hand": {
+        "supported_sample": true,
+        "hand_normal_load_N": 0.9810300082172632,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.7707072846485759,
+            "force_world_N": [
+              0.2653368772055078,
+              0.005708054362059702,
+              0.7236005277553262
+            ],
+            "upward_N": 0.7707053182435388
+          },
+          "if_px_collision": {
+            "normal_N": 0.21032272356868725,
+            "force_world_N": [
+              0.06781263196693325,
+              -0.005705474809942469,
+              0.19909790952257742
+            ],
+            "upward_N": 0.21029468257792616
+          }
+        },
+        "hand_force_world_N": [
+          0.33314950917244107,
+          2.5795521172329583e-06,
+          0.9226984372779037
+        ],
+        "upward_support_N": 0.981000000821465,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.000000000837375,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          2.1471348425339265e-06,
+          2.5795521172329583e-06,
+          -7.743655167091745e-07
+        ]
+      }
+    },
+    {
+      "stage": "first90_space_hold",
+      "after_goals": 390,
+      "stop": [],
+      "whole_hand": {
+        "supported_sample": true,
+        "hand_normal_load_N": 0.9810006355396883,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.77091688878903,
+            "force_world_N": [
+              0.2623837926126298,
+              0.0001453936231256708,
+              0.7248914601915757
+            ],
+            "upward_N": 0.770916663808494
+          },
+          "if_px_collision": {
+            "normal_N": 0.21008374675065833,
+            "force_world_N": [
+              0.0707635721225103,
+              -0.00014539032743611082,
+              0.19780775055386832
+            ],
+            "upward_N": 0.21008333626298092
+          }
+        },
+        "hand_force_world_N": [
+          0.33314736473514006,
+          3.2956895599882668e-09,
+          0.922699210745444
+        ],
+        "upward_support_N": 0.981000000071475,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0000000000728593,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          2.697541523488667e-09,
+          3.2956895599882668e-09,
+          -8.979763599370472e-10
+        ]
+      },
+      "samples": 4050,
+      "certified_samples": 4050,
+      "upper_lower_mm": 0.8735568344288343,
+      "support_fraction": 1.0,
+      "loaded_fractions": {},
+      "hold_shift_mm": 0.015018950397431934,
+      "hold_drift_deg": 0.041517001685631626,
+      "error_deg": 2.5162290808543477,
+      "station_error_mm": 0.5492976712019363,
+      "passed": true,
+      "begin_goal": 336
+    },
+    {
+      "stage": "reverse_quarter",
+      "after_goals": 751,
+      "stop": [
+        "self_mm"
+      ],
+      "whole_hand": {
+        "supported_sample": true,
+        "hand_normal_load_N": 0.9785165808668459,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.6824616784674544,
+            "force_world_N": [
+              0.2160683405325288,
+              0.03274027840952781,
+              0.6493462621201651
+            ],
+            "upward_N": 0.6841323973599711
+          },
+          "if_px_collision": {
+            "normal_N": 0.2960549023993915,
+            "force_world_N": [
+              0.11531655019532944,
+              -0.039333915084567204,
+              0.27630959024937146
+            ],
+            "upward_N": 0.2990499955040386
+          }
+        },
+        "hand_force_world_N": [
+          0.33138489072785826,
+          -0.006593636675039392,
+          0.9256558523695366
+        ],
+        "upward_support_N": 0.9831823928640098,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0022246614312025,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0017624713097402767,
+          -0.006593636675039392,
+          0.002956640726116233
+        ]
+      },
+      "executed_reverse_goals": 361
+    }
+  ],
+  "first90_posture_hold_passed": true,
+  "opposite_next_quarter_and_hold_passed": false,
+  "additional_yaw_deg": -2.265770894657437,
+  "actual_state_resets_after_start": 0,
+  "requested_next_direction": "negative90_global90_to0",
+  "two_positive_quarters_not_claimed": true,
+  "initial_prefix_not_replayed_by_this_probe": true,
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "worst": {
+    "self_mm": 0.0006339147421534352,
+    "support_mm": 0.0,
+    "cube_mm": 0.017514620072310142,
+    "tracking_rad": 0.046178590274234904,
+    "range_rad": 0.0
+  }
+}

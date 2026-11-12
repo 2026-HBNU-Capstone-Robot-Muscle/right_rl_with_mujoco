@@ -1,0 +1,149 @@
+{
+  "status": "independently_initialized90_grip_free_hold",
+  "source_model_sha256": "c16efc2d36f0e411fe21a38414aaa6bfa005997a1cd276bac5ac75403a67e0bc",
+  "source_reference_state_sha256": "1364ad2b8f373557edccb925dcc6763bdbf579eab7fc07055b5ff294aaadb260",
+  "source_proposal": "right_hand_rotation_20261105/canonical_body_grip/lower_countergrip_station_force2_span12_equilibrium/seed4/static_proposal.npz",
+  "source_proposal_sha256": "a94a2e096052d818cddce05a1e0af979a847fc12d2c91594664a3c9dfe84ffa6",
+  "independent_initial_state_sha256": "a580d236844efc6307abf884a0d9bca6ac1df0aace8c743331914a230369e0fb",
+  "dynamic": {
+    "top_face_id": 5,
+    "top_face_explicitly_selected": true,
+    "required_lower_contacts": [
+      "if_tip",
+      "th_tip"
+    ],
+    "lower_contact_presence_does_not_prove_antipodal_force_closure": true,
+    "safety_passed": true,
+    "stop": null,
+    "completed_goals": 134,
+    "total_goals": 134,
+    "worst": {
+      "self_mm": 0.0,
+      "support_mm": 0.0012021667115498145,
+      "cube_mm": 0.1350870994886785,
+      "tracking_rad": 0.04275863820425285,
+      "range_rad": 0.0
+    },
+    "forward_yaw_from_placement_deg": 90.06638951582455,
+    "final_yaw_from_placement_deg": 88.75085343559279,
+    "regrasp_yaw_change_deg": 0.16993349529312318,
+    "final_up_tilt_deg": 19.569795020386035,
+    "final_center_world_m": [
+      0.15897631148499933,
+      -0.05945915666879543,
+      -0.018115727457878702
+    ],
+    "final_rotation_world": [
+      [
+        -0.41383333077881856,
+        -0.506185140274504,
+        -0.756649574176707
+      ],
+      [
+        0.7570860056677059,
+        0.2701916044467247,
+        -0.5948254171676135
+      ],
+      [
+        0.5055321496785636,
+        -0.8190073874219865,
+        0.27141139436211026
+      ]
+    ],
+    "regrasp_translation_mm": 10.908300735553121,
+    "full_fixed_hold": {
+      "seconds": 10.05,
+      "yaw_drift_deg": 1.0152112215809757,
+      "center_shift_mm": 11.030577750390593,
+      "minimum_upper_gap_sampled_75ms_mm": -5.867349153315935
+    },
+    "settled_tail": {
+      "seconds": 4.05,
+      "yaw_drift_deg": 0.01625471907564222,
+      "center_shift_mm": 0.8441654571289119,
+      "minimum_upper_gap_sampled_75ms_mm": -5.867349153315935,
+      "opposed_lower_body_contact_fraction": 1.0,
+      "minimum_separating_plane_gap_1ms_mm": -3.9616685404650127,
+      "separation_certificate_bad_steps_1ms": 1,
+      "certificate_unqueried_steps_after_first_failure": 4049,
+      "certificate_failure_is_latched_and_cannot_pass": true,
+      "certificate": {
+        "geoms": 56,
+        "minimum_required_gap_mm": 0.3,
+        "queries": 1,
+        "plane_repairs": 53,
+        "polygon_searches": 6,
+        "exact_cylinder_support_rechecked": true,
+        "model_changes": 0,
+        "certificate_scope": "Queried simulated poses only; continuous physical motion and geometry calibration are not certified"
+      }
+    },
+    "final_contact_N": {
+      "if_bs_collision_1": 0.9013414433339579,
+      "if_tip": 1.8564145179359532,
+      "th_tip": 1.8571874260357344
+    },
+    "whole_grip_task_passed": false,
+    "trace": [
+      {
+        "sample": 1,
+        "whole_yaw_deg": 90.06638951582455,
+        "relative_forward_yaw_deg": 0.0,
+        "upper_gap_mm": 3.105618498394156
+      },
+      {
+        "sample": 21,
+        "whole_yaw_deg": 90.66579279450227,
+        "relative_forward_yaw_deg": 0.060728732901293485,
+        "upper_gap_mm": 4.534665086099173
+      },
+      {
+        "sample": 41,
+        "whole_yaw_deg": 90.15164351125057,
+        "relative_forward_yaw_deg": -0.02542736073186834,
+        "upper_gap_mm": 1.193276105790929
+      },
+      {
+        "sample": 61,
+        "whole_yaw_deg": 89.08079495716919,
+        "relative_forward_yaw_deg": -0.11251423269727011,
+        "upper_gap_mm": -4.8697811383208744
+      },
+      {
+        "sample": 81,
+        "whole_yaw_deg": 88.70237225874794,
+        "relative_forward_yaw_deg": 0.18862403395339686,
+        "upper_gap_mm": -5.723999443019395
+      },
+      {
+        "sample": 101,
+        "whole_yaw_deg": 88.71213952518423,
+        "relative_forward_yaw_deg": 0.1665992870804116,
+        "upper_gap_mm": -5.815832594083467
+      },
+      {
+        "sample": 121,
+        "whole_yaw_deg": 88.73852435428999,
+        "relative_forward_yaw_deg": 0.16724197179956848,
+        "upper_gap_mm": -5.858982454824968
+      },
+      {
+        "sample": 134,
+        "whole_yaw_deg": 88.75085343559279,
+        "relative_forward_yaw_deg": 0.16993349529312318,
+        "upper_gap_mm": -5.86463434345999
+      }
+    ]
+  },
+  "reasons": [
+    "working_top_or_target_orientation",
+    "common_center_not_restored",
+    "exact_upper_space_not_proved_at_every_tail_state"
+  ],
+  "independent_hold90_passed": false,
+  "load_cases": [],
+  "not_a_reaching_or_reorientation_trajectory": true,
+  "no_cube_pose_reset_after_independent_initialization": true,
+  "devices_opened": false,
+  "hardware_execution_allowed": false
+}

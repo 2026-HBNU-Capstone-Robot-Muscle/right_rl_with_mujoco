@@ -1,0 +1,29 @@
+{
+  "status": "manufacturer_reference_and_model_force_scope_review",
+  "manufacturer_source": "https://emanual.robotis.com/docs/en/dxl/x/xc330-m288/",
+  "current_mode_source": "https://emanual.robotis.com/docs/en/dxl/x/xc330-m288/#goal-current102",
+  "checked_date": "2026-11-05",
+  "factory_specification_not_a_measurement_of_this_hand": {
+    "model": "XC330-M288-T",
+    "stall_at_5V": {"torque_Nm": 0.93, "current_A": 1.80},
+    "stall_is_not_continuous_or_guaranteed_working_output": true,
+    "goal_current_is_a_current_limit_in_current_based_position_mode": true,
+    "XC330_senses_input_supply_current_instead_of_motor_phase_current": true
+  },
+  "local_model_findings": {
+    "source": "full_placement_v3_thumb12/front-10/g1_f0.3/model.mjb",
+    "separate_actuator_force_limit_disabled_in_source_model": true,
+    "tracking_error_guard_still_limits_motion": true,
+    "tracking_error_guard_rad": 0.18,
+    "real450mA_is_not_a_calibrated_fixed_torque_limit_in_this_model": true
+  },
+  "additional_torque_caps_Nm": [0.15, 0.23],
+  "caps_are_independent_model_hypotheses_not_a450mA_conversion": true,
+  "native_friction_reference": "https://mujoco.readthedocs.io/en/stable/computation/#friction-cones",
+  "native_point_force_decoder_reference": "https://github.com/google-deepmind/mujoco/blob/main/python/mujoco/functions.cc",
+  "older_elliptic_force_allocations_are_separate_planning_hypotheses": true,
+  "native_pyramidal_allocations_are_separately_tagged": true,
+  "actual_current_PID_voltage_limits_or_wiring_not_modified": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false
+}

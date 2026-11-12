@@ -1,0 +1,95 @@
+{
+  "status": "offline_temporal_access_protocol_review",
+  "synthetic_cycle_only": true,
+  "intents": [
+    {
+      "token": "1:rotate_whole_cube",
+      "recipient": "right",
+      "operation": "rotate_whole_cube",
+      "payload": {
+        "path_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "upper_clearance_required": false,
+        "left_must_remain_clear": true,
+        "automatic_open": false
+      },
+      "simulated": true
+    },
+    {
+      "token": "2:regrasp_then_clear_upper_space",
+      "recipient": "right",
+      "operation": "regrasp_then_clear_upper_space",
+      "payload": {
+        "common_frame": "synthetic-common-frame",
+        "upper_clearance_required_at_handoff": true,
+        "left_must_remain_clear": true
+      },
+      "simulated": true
+    },
+    {
+      "token": "3:approach_cube",
+      "recipient": "left",
+      "operation": "approach_cube",
+      "payload": {
+        "common_frame": "synthetic-common-frame",
+        "right_targets_constant": true
+      },
+      "simulated": true
+    },
+    {
+      "token": "4:turn_upper_layer",
+      "recipient": "left",
+      "operation": "turn_upper_layer",
+      "payload": {
+        "degrees": 90,
+        "right_targets_constant": true
+      },
+      "simulated": true
+    },
+    {
+      "token": "5:retreat_clear_of_cube",
+      "recipient": "left",
+      "operation": "retreat_clear_of_cube",
+      "payload": {
+        "right_targets_constant": true,
+        "upper_clearance_required_until_left_clear": true
+      },
+      "simulated": true
+    }
+  ],
+  "clearance_not_required_during_right_rotation_or_regrasp": true,
+  "clearance_required_during_left_approach_turn_retreat": true,
+  "next_motion_requires_left_clear_and_matching_primitive_entry": true,
+  "saved_candidate_denials": [
+    {
+      "label": "89deg_grip_upper_space_blocked",
+      "source": "right_hand_rotation_20261105/canonical_body_grip/countergrip_level/seed0_source1_lift2_normal1.5_n850/review.json",
+      "sha256": "71f9922186bee576cb32bac7611816b416eba7bedb164b26e99bfeb42a89c3f8",
+      "left_access_denied": true,
+      "gap_mm": -3.2891322295677767,
+      "target_pose_confirmed": true
+    },
+    {
+      "label": "83deg_temporary_hold_pose_unqualified",
+      "source": "right_hand_rotation_20261105/canonical_body_grip/temporary_handoff_load/review.json",
+      "sha256": "76b517a4a84f145beb68a024b11e4cb5a1c532c6feee2b6a9ec209c0464f7ef2",
+      "left_access_denied": true,
+      "gap_mm": 0.37592366711678693,
+      "target_pose_confirmed": false
+    }
+  ],
+  "new_nominal_model_admission": {
+    "source": "right_hand_rotation_20261105/canonical_body_grip/continuous_handoff/review.json",
+    "sha256": "663849eaf613babcac4b4759fde37119aa4825c962a7a2b44859f3126caecfd9",
+    "candidate_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "nominal_model_handoff_admitted": true,
+    "synthetic_observation_from_saved_simulation_only": true,
+    "load_envelope_fully_qualified": false,
+    "actual_left_motion_executed": false
+  },
+  "actual_loaded_motion_connection_implemented": false,
+  "actual_left_geometry_calibrated": false,
+  "protocol_source_sha256": "784622f7bb8f9fc90c3f8e4c57b175d0e38c2a025f4c2cbc26b53b8099c3d62e",
+  "test_source_sha256": "8a31fa8fa6eab057f8dca051b54c78e5ddce4530c27ffae9106b12a52c67e541",
+  "devices_opened": false,
+  "hardware_execution_allowed": false
+}

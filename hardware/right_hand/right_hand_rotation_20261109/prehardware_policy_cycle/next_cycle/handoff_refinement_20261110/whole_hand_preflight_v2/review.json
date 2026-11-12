@@ -1,0 +1,798 @@
+{
+  "status": "whole_hand_evaluator_prepared_and_saved_evidence_reprocessed",
+  "date": "2026-11-10",
+  "support_contract": {
+    "version": "whole_hand_support_v1",
+    "hand_membership": "palm body and all descendants, by body ID",
+    "loaded_geometry_normal_force_N": 0.2,
+    "loaded_geometry_threshold_source": "Existing per-geometry force threshold retained for diagnostics only",
+    "minimum_upward_hand_load_N": 0.2,
+    "support_threshold_source": "Explicit research criterion for whole-hand upward resultant using the existing0.2N force scale; not a hardware load calibration",
+    "upward_resultant_required": true,
+    "external_loaded_contact_allowed": false,
+    "final_window_samples": 4050,
+    "required_supported_sample_fraction_strictly_above": 0.8,
+    "pose_drift_duration_clearance_and_native_guards_are_separate_required_gates": true,
+    "weight_support_ratio_is_diagnostic_not_a_new_tuned_acceptance_threshold": true,
+    "is_force_closure_or_external_load_capacity_certificate": false,
+    "hardware_execution_allowed": false
+  },
+  "source_support_audit_sha256": "16e923e25dc053ed811994a4c25c1430d83365d7d2ce8a43bd3f1d436fc1fca8",
+  "cached_model_force_checks": [
+    {
+      "source": "connected_sac_and_teacher/first_quarter_end_state.npz",
+      "source_sha256": "62ec99dd86b24ab9148b0d1d4ef5d838d9195135531b55b7ff5f157d433908f5",
+      "model_kind": "active",
+      "load_accounting": {
+        "supported_sample": true,
+        "hand_normal_load_N": 1.8551389806812946,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 1.0787946289124832,
+            "force_world_N": [
+              0.34225687545717054,
+              -0.04393353289661976,
+              1.0228631195372322
+            ],
+            "upward_N": 1.0783047596472182
+          },
+          "if_tip": {
+            "normal_N": 0.366809576814295,
+            "force_world_N": [
+              -0.2887661507143407,
+              -0.20147549311937932,
+              0.10481103277004587
+            ],
+            "upward_N": 0.0005172028055248006
+          },
+          "th_tip": {
+            "normal_N": 0.40953477495451646,
+            "force_world_N": [
+              0.27517675206593417,
+              0.24747795012111437,
+              -0.20206084017825882
+            ],
+            "upward_N": -0.0966024147723204
+          }
+        },
+        "hand_force_world_N": [
+          0.328667476808764,
+          0.002068924105115305,
+          0.9256133121290191
+        ],
+        "upward_support_N": 0.9822195476804224,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0012431678699514,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.004479885228834524,
+          0.002068924105115305,
+          0.002914100485598703
+        ]
+      },
+      "external_contact_data_available": false,
+      "conditional_contact_accounting_only_not_a_new_hold_pass": true,
+      "existing_constraint_force_error": 1.1102230246251565e-16
+    },
+    {
+      "source": "next_cycle/rrt0_force_feedback_root_fixed/end_state.npz",
+      "source_sha256": "9c48b6fc1513636bde2eb73319ed2e3df669c6818fd54caa52dd702340e8192a",
+      "model_kind": "active",
+      "load_accounting": {
+        "supported_sample": true,
+        "hand_normal_load_N": 1.7134429364417754,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 1.0731623529372802,
+            "force_world_N": [
+              0.36822237901152566,
+              -0.10507666770954503,
+              1.0027154063391959
+            ],
+            "upward_N": 1.0681723028978456
+          },
+          "if_tip": {
+            "normal_N": 0.2956133555938628,
+            "force_world_N": [
+              -0.275682478096287,
+              -0.11947091611157086,
+              0.03991381847087245
+            ],
+            "upward_N": -0.05607996075536538
+          },
+          "th_tip": {
+            "normal_N": 0.3446672279106324,
+            "force_world_N": [
+              0.24064530650689311,
+              0.22453304388279124,
+              -0.11995507693774614
+            ],
+            "upward_N": -0.031103064091318463
+          }
+        },
+        "hand_force_world_N": [
+          0.33318520742213176,
+          -1.453993832464806e-05,
+          0.9226741478723223
+        ],
+        "upward_support_N": 0.9809892780511618,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.999989070388544,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          3.7845384533219395e-05,
+          -1.453993832464806e-05,
+          -2.5063771098121634e-05
+        ]
+      },
+      "external_contact_data_available": false,
+      "conditional_contact_accounting_only_not_a_new_hold_pass": true,
+      "existing_constraint_force_error": 8.326672684688674e-17
+    },
+    {
+      "source": "next_cycle/rrt0_force_feedback_lookahead2/end_state.npz",
+      "source_sha256": "b70e44dd1d4809578f5e4ecaf8222ee221b1148ee72ead4bb767f6e70fafa320",
+      "model_kind": "active",
+      "load_accounting": {
+        "supported_sample": true,
+        "hand_normal_load_N": 1.4841969520287812,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision",
+          "if_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision",
+          "if_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.6845743465675475,
+            "force_world_N": [
+              0.2154878002428536,
+              -0.014272965596900635,
+              0.649833685718243
+            ],
+            "upward_N": 0.684393702052755
+          },
+          "if_px_collision": {
+            "normal_N": 0.2323630522010116,
+            "force_world_N": [
+              0.0547420558075948,
+              -0.007236588842889032,
+              0.22712578120339508
+            ],
+            "upward_N": 0.23221809454136985
+          },
+          "if_tip": {
+            "normal_N": 0.2601917687149532,
+            "force_world_N": [
+              -0.2005127498030204,
+              -0.14968085581058738,
+              0.07165206396915828
+            ],
+            "upward_N": -0.0007002963453771403
+          },
+          "th_tip": {
+            "normal_N": 0.307067784545269,
+            "force_world_N": [
+              0.26734795153028845,
+              0.1628678938295369,
+              -0.026811582631022724
+            ],
+            "upward_N": 0.06557312807534582
+          }
+        },
+        "hand_force_world_N": [
+          0.33706505777771645,
+          -0.008322516420840143,
+          0.9217999482597736
+        ],
+        "upward_support_N": 0.9814846283240936,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0004940146015224,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          0.00391769574011791,
+          -0.008322516420840143,
+          -0.0008992633836467645
+        ]
+      },
+      "external_contact_data_available": false,
+      "conditional_contact_accounting_only_not_a_new_hold_pass": true,
+      "existing_constraint_force_error": 2.220446049250313e-16
+    },
+    {
+      "source": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/end_state.npz",
+      "source_sha256": "4883d921db4a731f3006ffbfa7c14e60afcf0e40a1f6d9a2a6a7eb714a843e27",
+      "model_kind": "active",
+      "load_accounting": {
+        "supported_sample": true,
+        "hand_normal_load_N": 1.7916487454258625,
+        "contact_hand_geoms": [
+          "if_bs_collision_1",
+          "if_px_collision",
+          "if_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "if_bs_collision_1",
+          "if_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.8461751201615944,
+            "force_world_N": [
+              0.2859542209732985,
+              -0.010113027046966013,
+              0.7963346800304925
+            ],
+            "upward_N": 0.8461185278789212
+          },
+          "if_px_collision": {
+            "normal_N": 0.13573240188064487,
+            "force_world_N": [
+              0.0471739280387193,
+              0.004894513404377149,
+              0.12737235217756465
+            ],
+            "upward_N": 0.1358228732135146
+          },
+          "if_tip": {
+            "normal_N": 0.40322248445674236,
+            "force_world_N": [
+              -0.31500385053832364,
+              -0.22755091070721128,
+              0.10781352037150628
+            ],
+            "upward_N": -0.005569063799426895
+          },
+          "th_tip": {
+            "normal_N": 0.40651873892688084,
+            "force_world_N": [
+              0.3150230831765089,
+              0.2327694247849177,
+              -0.10882134692462164
+            ],
+            "upward_N": 0.0046276637348434055
+          }
+        },
+        "hand_force_world_N": [
+          0.333147381650203,
+          4.3511755309921796e-10,
+          0.9226992056549418
+        ],
+        "upward_support_N": 0.9810000010278523,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0000000010477597,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          1.9612604484908758e-08,
+          4.3511755309921796e-10,
+          -5.988478601892666e-09
+        ]
+      },
+      "external_contact_data_available": false,
+      "conditional_contact_accounting_only_not_a_new_hold_pass": true,
+      "existing_constraint_force_error": 3.3306690738754696e-16
+    }
+  ],
+  "archived_trial_review": [
+    {
+      "path": "next_cycle/staged_model_friction035_fractional_encoders/review.json",
+      "sha256": "72cfa93dbe65b356ee2fe1b6d9fd9af8214517ed6433a401251e527b0da1e27c",
+      "steps": 3978,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_fractional_encoders_recovery_bc_v3_long_encoder_aug/review.json",
+      "sha256": "0688ff2cd61f5e5677fbd518f37c6a38fb98caf72c7863c901bea14404a31e1d",
+      "steps": 6329,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400/review.json",
+      "sha256": "254be230aae132cae4294b62303a87e5d8e2198a0145a3d807908e893fa21582",
+      "steps": 6956,
+      "model_kind": "active",
+      "original_passed": true,
+      "original_reasons": [],
+      "stop": [],
+      "remaining_reasons_if_legacy_tip_pair_removed": [],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_active_ccd50/review.json",
+      "sha256": "34555ba4d0324dc89e0aa75472810360e095df4064143f4436c9c80d4bfc719c",
+      "steps": 4118,
+      "model_kind": "active_ccd50",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false,
+      "stored_endpoint_kinematics": {
+        "state_sha256": "64e9042c65dfe6eeb56f4e3a399a2b776e7ff37022436c3ecee36c317d744889",
+        "relative_to_initial_center_mm": [
+          12.114483226158852,
+          -54.44928659931047,
+          -57.573982743001174
+        ],
+        "displacement_mm": 80.16388840308417,
+        "upward_mm": -50.03828782762031,
+        "lateral_mm": 62.62921646629757,
+        "cube_linear_velocity_world_m_s": [
+          -0.2771783645296988,
+          -0.2197291082841274,
+          -0.8159589321394792
+        ],
+        "upward_velocity_m_s": -0.8615962327986438,
+        "hand_contact_forces_at_stop_not_saved": true,
+        "complete_hand_contact_loss_or_outside_hand_not_established_by_this_analysis": true
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair10000_active_ccd50/review.json",
+      "sha256": "9bc2497bd014cd472fcbec273d3456d588d23b7d3009820f0bb26827880e544e",
+      "steps": 4243,
+      "model_kind": "active_ccd50",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false,
+      "stored_endpoint_kinematics": {
+        "state_sha256": "7daebf1d430ca8a9c83071b415b366217829f2856800ebc050686342762d9b8a",
+        "relative_to_initial_center_mm": [
+          12.837588436133862,
+          -54.31551752658203,
+          -57.37800121952036
+        ],
+        "displacement_mm": 80.04507570727432,
+        "upward_mm": -49.60838712385757,
+        "lateral_mm": 62.81896267810191,
+        "cube_linear_velocity_world_m_s": [
+          -0.2737951228445909,
+          -0.22029168655225154,
+          -0.811390516679536
+        ],
+        "upward_velocity_m_s": -0.8561503700199705,
+        "hand_contact_forces_at_stop_not_saved": true,
+        "complete_hand_contact_loss_or_outside_hand_not_established_by_this_analysis": true
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair5256_active_ccd50/review.json",
+      "sha256": "22f4b6c5868f9bb061a21097e7b751b0e197de57835a1e1399afc5e15b701e05",
+      "steps": 4267,
+      "model_kind": "active_ccd50",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false,
+      "stored_endpoint_kinematics": {
+        "state_sha256": "cd06c19cc20c35664a0f202ddefcdb1e3c2eac6599be114167b725ddd8ac3278",
+        "relative_to_initial_center_mm": [
+          12.859734099970655,
+          -54.84463301620194,
+          -57.16977888537611
+        ],
+        "displacement_mm": 80.2601404783633,
+        "upward_mm": -49.4050187721254,
+        "lateral_mm": 63.25214834084728,
+        "cube_linear_velocity_world_m_s": [
+          -0.2731483466691365,
+          -0.22809579569113672,
+          -0.8083691868497291
+        ],
+        "upward_velocity_m_s": -0.8530889526613987,
+        "hand_contact_forces_at_stop_not_saved": true,
+        "complete_hand_contact_loss_or_outside_hand_not_established_by_this_analysis": true
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair_early10000_active_ccd50/review.json",
+      "sha256": "180ffdc584e0b9b3a0d43408983195cbf84410185900f62d7b5ff2c3d59aa54d",
+      "steps": 4233,
+      "model_kind": "active_ccd50",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false,
+      "stored_endpoint_kinematics": {
+        "state_sha256": "1c1ab4953bb355dbe06b76922ff4841a7582ef4a009a9dc0e3b398ff432f93ba",
+        "relative_to_initial_center_mm": [
+          12.662368065822937,
+          -54.571544238837,
+          -57.593128576259595
+        ],
+        "displacement_mm": 80.34523921706429,
+        "upward_mm": -49.870234266172105,
+        "lateral_mm": 62.994580712029496,
+        "cube_linear_velocity_world_m_s": [
+          -0.278343737213282,
+          -0.22266781037287905,
+          -0.8109045025043613
+        ],
+        "upward_velocity_m_s": -0.8572379479828396,
+        "hand_contact_forces_at_stop_not_saved": true,
+        "complete_hand_contact_loss_or_outside_hand_not_established_by_this_analysis": true
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair_long10000_active_ccd50/review.json",
+      "sha256": "5bc4b24f5c0c018607c2c347e533f508cd2d23a59ee123bff2640c2f3de221a3",
+      "steps": 4313,
+      "model_kind": "active_ccd50",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false,
+      "stored_endpoint_kinematics": {
+        "state_sha256": "7bf12909f41b2adc7f7d6f1f4f366cbcc06cf030c0bf49f81d5f10f15cc55633",
+        "relative_to_initial_center_mm": [
+          12.52469990183519,
+          -54.77972510903417,
+          -57.20964716025053
+        ],
+        "displacement_mm": 80.19120973556105,
+        "upward_mm": -49.55629520953359,
+        "lateral_mm": 63.046044475115956,
+        "cube_linear_velocity_world_m_s": [
+          -0.2743211965247882,
+          -0.22601677440917434,
+          -0.8110187431381852
+        ],
+        "upward_velocity_m_s": -0.8559793454585851,
+        "hand_contact_forces_at_stop_not_saved": true,
+        "complete_hand_contact_loss_or_outside_hand_not_established_by_this_analysis": true
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/review.json",
+      "sha256": "6c3579745e2dfd4fe1a6cfc951bb78224317d46eaaffa0199665c198ccaea7c0",
+      "steps": 6956,
+      "model_kind": "active",
+      "original_passed": true,
+      "original_reasons": [],
+      "stop": [],
+      "remaining_reasons_if_legacy_tip_pair_removed": [],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_extra_hold400/review.json",
+      "sha256": "6ade434bcda01d45841289f930361f503d8f26c108255a8eef02918c23a89a00",
+      "steps": 6307,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_recovery_bc_v3_long_encoder_aug_admissible_correction_extra_hold400/review.json",
+      "sha256": "f807b04022fc97a16ef3e0070affa15a5c3184299d7f4fa35814044cb660ccae",
+      "steps": 6956,
+      "model_kind": "active",
+      "original_passed": true,
+      "original_reasons": [],
+      "stop": [],
+      "remaining_reasons_if_legacy_tip_pair_removed": [],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_recovery_bc_v3_long_encoder_aug_extra_hold400/review.json",
+      "sha256": "a875282b83cef9ab602f747832a47a3c1e657d11dd7a41d1987182def8c68a24",
+      "steps": 6315,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_y_plus05_fractional_encoders/review.json",
+      "sha256": "6ff894a32d1c96655acc8beacf54fcc40e0b05cea9e0cbe1b4b1afab77940229",
+      "steps": 6353,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_y_plus05_fractional_encoders_admissible_correction/review.json",
+      "sha256": "59c3ce7f76e3f30e78d91e277a06a4968f02e2d241c98008cf4161b80988304c",
+      "steps": 6556,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "upper_space_certificate"
+      ],
+      "stop": [],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "upper_space_certificate"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    },
+    {
+      "path": "next_cycle/staged_model_y_plus05_fractional_encoders_recovery_bc_v3_long_encoder_aug/review.json",
+      "sha256": "64ff5dd83e3b6d190a5ccf9635640c0b238e46d07c2dd68ec86cb424adc4665f",
+      "steps": 6305,
+      "model_kind": "active",
+      "original_passed": false,
+      "original_reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "remaining_reasons_if_legacy_tip_pair_removed": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete"
+      ],
+      "only_legacy_contact_reason_might_change": false,
+      "old_result_reclassified": false
+    }
+  ],
+  "archived_failures_only_due_to_legacy_tip_contacts": 0,
+  "fresh_native_model_evaluations_executed": false,
+  "exact_recorded_ring_geometry_evaluation_executed": false,
+  "native_execution_blocker": {
+    "action": "WSL native model comparison",
+    "reason": "Automatic approval review usage limit; prior requested action was not executed",
+    "is_unsafe_action_determination": false,
+    "approval_bypass_attempted": false
+  },
+  "unchanged_hardware_contract": {
+    "current_mA": 450,
+    "max_goal_increment_ticks": 2,
+    "period_seconds": 0.075,
+    "existing_PID_and_native_guards_preserved": true
+  },
+  "first_rotation_and_hold_passed_on_new_whole_hand_criterion": false,
+  "next_rotation_passed": false,
+  "whole_cycle_ready_for_hardware": false,
+  "hardware_execution_allowed": false,
+  "devices_opened": 0,
+  "remote_writes": 0,
+  "monitoring_ui_changes": 0,
+  "files_sha256": {
+    "whole_hand_support.py": "d6dcac5b49f0d8532200334dd7420919856031acbc15fd842080c4185097149d",
+    "test_whole_hand_support.py": "27238c77ff963ad3eb82a56f3d9eecc5b9b0e388d682e9b5dd5a6249ffd56d18",
+    "evaluate_staged_shadow_model.py": "2d799f281d802601ed048b26afe63adf9e2bed726d53f9cdd2a4e86bcb650698",
+    "audit_recorded_ring_pose.py": "e4c031ff7e99376e300d479b0a04894756096526a87a29fbd900622c14c2f797",
+    "prepare_whole_hand_preflight.py": "f3d4fef201bbeb68080217f29c1ee69a15008ae371f665da5bb5d48038af9595"
+  }
+}

@@ -1,0 +1,18 @@
+@struct.dataclass
+class State:
+  """Environment state for training and inference."""
+
+  data: mjx.Data
+  obs: Observation
+  reward: jax.Array
+  done: jax.Array
+  metrics: Dict[str, jax.Array]
+  info: Dict[str, Any]
+
+  def tree_replace(
+      self, params: Dict[str, Optional[jax.typing.ArrayLike]]
+  ) -> "State":
+    new = self
+    for k, v in params.items():
+      new = _tree_replace(new, k.split("."), v)
+    return new

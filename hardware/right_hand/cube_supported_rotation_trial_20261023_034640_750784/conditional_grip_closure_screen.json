@@ -1,0 +1,189 @@
+{
+  "status": "conditional_grip_geometry_screen",
+  "source": "cube_supported_rotation_trial_20261023_034640_750784",
+  "proposals": [
+    {
+      "name": "unchanged",
+      "delta_by_raw_motor_id": {},
+      "max_static_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "native_ranges_unchanged": true,
+      "within_native_bounds": true,
+      "pose_uncertainty_cases": 27,
+      "initially_feasible_cases": 2,
+      "feasible_after_cases": 2,
+      "opposed_tip_contact_cases": 0,
+      "initial_overlap_range_mm": [
+        0.0,
+        5.858893016816261
+      ],
+      "final_overlap_range_mm": [
+        0.0,
+        5.858893016816261
+      ]
+    },
+    {
+      "name": "index_middle_small",
+      "delta_by_raw_motor_id": {
+        "7": 24,
+        "8": 8,
+        "11": 16
+      },
+      "max_static_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "native_ranges_unchanged": true,
+      "within_native_bounds": true,
+      "pose_uncertainty_cases": 27,
+      "initially_feasible_cases": 2,
+      "feasible_after_cases": 0,
+      "opposed_tip_contact_cases": 0,
+      "initial_overlap_range_mm": [
+        0.0,
+        5.858893016816261
+      ],
+      "final_overlap_range_mm": [
+        1.5929168058740375,
+        5.858893016816261
+      ]
+    },
+    {
+      "name": "index_middle_medium",
+      "delta_by_raw_motor_id": {
+        "7": 40,
+        "8": 16,
+        "11": 24
+      },
+      "max_static_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "native_ranges_unchanged": true,
+      "within_native_bounds": true,
+      "pose_uncertainty_cases": 27,
+      "initially_feasible_cases": 2,
+      "feasible_after_cases": 0,
+      "opposed_tip_contact_cases": 0,
+      "initial_overlap_range_mm": [
+        0.0,
+        5.858893016816261
+      ],
+      "final_overlap_range_mm": [
+        1.6302097067172643,
+        5.858893016816261
+      ]
+    },
+    {
+      "name": "tips_small",
+      "delta_by_raw_motor_id": {
+        "5": 24,
+        "7": 16,
+        "9": 16,
+        "11": 8
+      },
+      "max_static_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "native_ranges_unchanged": true,
+      "within_native_bounds": true,
+      "pose_uncertainty_cases": 27,
+      "initially_feasible_cases": 2,
+      "feasible_after_cases": 1,
+      "opposed_tip_contact_cases": 0,
+      "initial_overlap_range_mm": [
+        0.0,
+        5.858893016816261
+      ],
+      "final_overlap_range_mm": [
+        0.25469034696223314,
+        5.858893016816261
+      ]
+    }
+  ],
+  "model_manifest": {
+    "projection_mm": 34.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 11.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          11.3
+        ],
+        [
+          37.0,
+          65.0,
+          17.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          17.3
+        ],
+        [
+          37.0,
+          65.0,
+          77.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "additional_middle_thumb_hull_proxies": [
+      {
+        "name": "mf_bs_offline_hull_0",
+        "body": "mf_bs",
+        "source_mesh": "base"
+      },
+      {
+        "name": "mf_px_offline_hull_0",
+        "body": "mf_px",
+        "source_mesh": "proximal"
+      },
+      {
+        "name": "mf_md_offline_hull_0",
+        "body": "mf_md",
+        "source_mesh": "medial"
+      },
+      {
+        "name": "mf_ds_offline_hull_0",
+        "body": "mf_ds",
+        "source_mesh": "distal"
+      },
+      {
+        "name": "mf_ds_offline_hull_3",
+        "body": "mf_ds",
+        "source_mesh": "tip"
+      },
+      {
+        "name": "th_px_offline_hull_0",
+        "body": "th_px",
+        "source_mesh": "thumb_proximal"
+      },
+      {
+        "name": "th_ds_offline_hull_0",
+        "body": "th_ds",
+        "source_mesh": "thumb_distal"
+      },
+      {
+        "name": "th_ds_offline_hull_3",
+        "body": "th_ds",
+        "source_mesh": "thumb_tip"
+      }
+    ],
+    "additional_proxy_caveat": "Offline sensitivity: convex visual-mesh hulls overapproximate concavities; no cube contacts, no fitted offsets."
+  },
+  "registration_verified": false,
+  "hardware_execution_allowed": false,
+  "hardware_commands_sent": 0,
+  "search_joint_bounds_widened": false,
+  "conclusion": "Geometry screen alone does not authorize a loaded closure or establish an accurate cube start."
+}

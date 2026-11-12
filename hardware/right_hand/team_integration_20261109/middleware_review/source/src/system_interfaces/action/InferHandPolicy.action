@@ -1,0 +1,29 @@
+# Explicitly select one offline-trained model and run one deterministic inference.
+string scan_id
+string execution_id
+uint32 step_index
+string hand_id
+string policy_id
+# Open-loop policy observation, ordered exactly as defined by the selected model.
+float64[] observation
+---
+bool success
+string scan_id
+string execution_id
+uint32 step_index
+string hand_id
+string policy_id
+# Normalized model output only; never a motor command.
+float64[] action_values
+bool shadow_only
+string error_code
+string error_message
+---
+uint8 STATE_ACCEPTED=0
+uint8 STATE_INFERENCING=1
+uint8 STATE_COMPLETED=2
+uint8 STATE_FAILED=3
+uint8 state
+string hand_id
+string policy_id
+string message

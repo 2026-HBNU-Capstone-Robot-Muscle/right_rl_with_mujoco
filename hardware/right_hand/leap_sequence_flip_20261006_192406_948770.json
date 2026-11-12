@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-10-06T19:23:39.608786+09:00",
+  "source": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\sequence_flip_poses.json",
+  "source_sha256": "cc1e1841e5b441031fc61bbb4de2be7b424273863592385142ceb0d51bff9c6b",
+  "status": "stopped",
+  "phase": "preflight",
+  "all_torque_off_verified": false,
+  "settings_restored": false,
+  "policy_used": false,
+  "physical_flip_verified": false,
+  "empty_check": false,
+  "capture_placement_only": true,
+  "capture_anchor_placement": true,
+  "write_events": [],
+  "ping_events": [
+    {
+      "motor_id": 1,
+      "model_number": 0,
+      "communication": -3001,
+      "device_error": 0
+    }
+  ],
+  "error": "COM7 at 3000000 baud: ID 1 no response (timeout), code=-3001. Check motor power and the adapter-to-hand cable; no motion started.",
+  "failed_phase": "preflight",
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 1,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "attempt": 1,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 32.00000000651926,
+      "retry_requested": true,
+      "recovered": false
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 1,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "attempt": 2,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 63.000000023748726,
+      "retry_requested": false,
+      "recovered": false
+    }
+  ],
+  "final_check_error": "Sync read at 64 failed: comm=-3001, error=0; first incomplete ID 1; no target advance",
+  "vision_recording": {
+    "status": "complete",
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\sequence_vision_20261006_192406_915402",
+    "result": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\sequence_vision_20261006_192406_915402\\result.json",
+    "summary": {
+      "frames": 4,
+      "eligible_frames": 0,
+      "eligible_percent": 0.0,
+      "longest_valid_streak": 0,
+      "reason_counts": {
+        "cube_markers_below_2": 4
+      },
+      "by_cube_ids": {
+        "none": {
+          "frames": 4,
+          "eligible": 0,
+          "median_reprojection_px": null,
+          "max_reprojection_px": null
+        }
+      }
+    },
+    "by_phase": {
+      "preflight": {
+        "frames": 4,
+        "eligible_frames": 0,
+        "eligible_percent": 0.0,
+        "longest_valid_streak": 0,
+        "reason_counts": {
+          "cube_markers_below_2": 4
+        },
+        "by_cube_ids": {
+          "none": {
+            "frames": 4,
+            "eligible": 0,
+            "median_reprojection_px": null,
+            "max_reprojection_px": null
+          }
+        }
+      }
+    },
+    "error": null,
+    "save_errors": []
+  }
+}

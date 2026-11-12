@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-10-25T07:42:47.165204+09:00",
+  "status": "stopped",
+  "phase": "preflight",
+  "joint_mapping": {
+    "version": "all_finger_orders_user_confirmed_20261018_v2",
+    "sim_joint_names": [
+      "if_mcp",
+      "if_rot",
+      "if_pip",
+      "if_dip",
+      "mf_mcp",
+      "mf_rot",
+      "mf_pip",
+      "mf_dip",
+      "rf_mcp",
+      "rf_rot",
+      "rf_pip",
+      "rf_dip",
+      "th_cmc",
+      "th_axl",
+      "th_mcp",
+      "th_ipl"
+    ],
+    "motor_ids_in_sim_order": [
+      8,
+      6,
+      7,
+      5,
+      12,
+      10,
+      11,
+      9,
+      16,
+      14,
+      15,
+      13,
+      4,
+      3,
+      2,
+      1
+    ],
+    "middle_tip_to_root_ids": [
+      9,
+      11,
+      10,
+      12
+    ],
+    "tip_to_root_ids": {
+      "thumb": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "index": [
+        5,
+        7,
+        6,
+        8
+      ],
+      "middle": [
+        9,
+        11,
+        10,
+        12
+      ],
+      "ring": [
+        13,
+        15,
+        14,
+        16
+      ]
+    },
+    "middle_order_basis": "User explicit physical order confirmation, 2026-10-18; saved tip flexion ID9 +9.492 degrees.",
+    "other_fingers_basis": "User explicitly answered the tip-to-root ID question: thumb 1,2,3,4; index 5,7,6,8; ring 13,15,14,16.",
+    "geometric_calibration_verified": false,
+    "trajectory_validation_complete": false
+  },
+  "policy_used": false,
+  "physical_flip_verified": false,
+  "all_torque_off_verified": false,
+  "settings_restored": false,
+  "hardware_authorized": true,
+  "recording_requested": true,
+  "camera_requested_exposure": null,
+  "camera_exposure_control": "unchanged",
+  "marker_visibility_is_motion_gate": false,
+  "empty_start_marker_screen_is_empty_hand_proof": false,
+  "camera_preview_owner": "camera_worker_process",
+  "camera_startup": {
+    "expected_device": "Streaming Webcam",
+    "backend": "DSHOW",
+    "timeout_seconds": 10.0,
+    "motors_accessed": false,
+    "devices": [
+      "Streaming Webcam",
+      "USB2.0 HD UVC WebCam",
+      "OBS Virtual Camera"
+    ],
+    "camera_index": 0,
+    "device_name": "Streaming Webcam"
+  },
+  "camera_image_signal": {
+    "usable": true,
+    "reason": "scene_signal",
+    "minimum": 0.0,
+    "maximum": 255.0,
+    "std": 83.42359366272454
+  },
+  "empty_start_marker_screen": {
+    "camera_read_monotonic": 57265.609,
+    "decoded_cube_ids": [],
+    "confirmed_cube_ids": [],
+    "candidates": [],
+    "consecutive_frames_without_decoded_cube": 335,
+    "confirmation_frames": 3,
+    "confirmation_seconds": 0.2,
+    "minimum_marker_edge_px": 20.0,
+    "absence_proves_empty_hand": false,
+    "required_frames": 10
+  },
+  "camera_instruction": "EMPTY HAND for FIRST SPACE; cube only after PLACE CUBE",
+  "empty_start_marker_screen_accepted": true,
+  "write_events": [],
+  "ping_events": [
+    {
+      "motor_id": 1,
+      "model_number": 0,
+      "communication": -3001,
+      "device_error": 0
+    }
+  ],
+  "error": "COM7 at 3000000 baud: ID 1 no response (timeout), code=-3001. Check motor power and the adapter-to-hand cable; no motion started.",
+  "failed_phase": "preflight",
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 1,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "attempt": 1,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 31.9999999992433,
+      "retry_requested": true,
+      "recovered": false
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 1,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "attempt": 2,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 62.999999994644895,
+      "retry_requested": false,
+      "recovered": false
+    }
+  ],
+  "final_check_error": "Sync read at 64 failed: comm=-3001, error=0; first incomplete ID 1; no target advance",
+  "camera_worker_stopped": true,
+  "camera_exposure_settings_modified": false,
+  "camera_exposure_restoration_required": false,
+  "camera_exposure_restoration_verified": null,
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\reverse_start_placement_20261025_074247_164214\\camera",
+    "status": "complete",
+    "frame_count": 4,
+    "error": null,
+    "image_signal_usable_frames": 4,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true,
+    "exposure_settings_modified": false,
+    "exposure_restoration_required": false,
+    "exposure_restoration_verified": null
+  }
+}

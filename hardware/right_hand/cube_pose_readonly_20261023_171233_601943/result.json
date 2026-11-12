@@ -1,0 +1,4065 @@
+{
+  "timestamp": "2026-10-23T17:12:33.601943+09:00",
+  "status": "readonly_cube_pose_pairs_saved",
+  "servo_write_commands_sent": 0,
+  "torque_changes_requested": 0,
+  "policy_actions_sent": 0,
+  "geometry_calibration_verified": false,
+  "old_encoder_readings_reused": false,
+  "requested_camera_exposure": -7.0,
+  "auto_mode_meaning_verified": false,
+  "dimensions_mm": {
+    "cube": 55.0,
+    "palm_marker40": 28.2,
+    "cube_marker5": 10.7
+  },
+  "motor_id_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "sim_to_motor_ids": [
+    8,
+    6,
+    7,
+    5,
+    12,
+    10,
+    11,
+    9,
+    16,
+    14,
+    15,
+    13,
+    4,
+    3,
+    2,
+    1
+  ],
+  "mapping": "all_finger_orders_user_confirmed_20261018_v2",
+  "available_ports": [
+    {
+      "device": "COM3",
+      "description": "표준 Bluetooth에서 직렬 링크(COM3)",
+      "vid": null,
+      "pid": null
+    },
+    {
+      "device": "COM4",
+      "description": "표준 Bluetooth에서 직렬 링크(COM4)",
+      "vid": null,
+      "pid": null
+    },
+    {
+      "device": "COM7",
+      "description": "USB Serial Port(COM7)",
+      "vid": 1027,
+      "pid": 24596
+    }
+  ],
+  "camera_preview_owner": "camera_worker_process",
+  "camera_startup": {
+    "expected_device": "Streaming Webcam",
+    "backend": "DSHOW",
+    "timeout_seconds": 10.0,
+    "motors_accessed": false,
+    "devices": [
+      "Streaming Webcam",
+      "USB2.0 HD UVC WebCam",
+      "OBS Virtual Camera"
+    ],
+    "camera_index": 0,
+    "device_name": "Streaming Webcam"
+  },
+  "camera_metadata": {
+    "backend": "DSHOW",
+    "requested_format": "MJPG",
+    "actual_size": [
+      1280,
+      720
+    ],
+    "actual_format": "MJPG",
+    "reported_fps": 30.00003000003,
+    "camera_index": 0,
+    "device_name": "Streaming Webcam",
+    "attempts": [
+      {
+        "backend": "DSHOW",
+        "requested_format": "MJPG",
+        "actual_size": [
+          1280,
+          720
+        ],
+        "actual_format": "MJPG",
+        "reported_fps": 30.00003000003
+      }
+    ],
+    "exposure_profile": {
+      "requested_exposure": -7.0,
+      "set_auto_returned": true,
+      "set_exposure_returned": true,
+      "readback": {
+        "auto": -1.0,
+        "exposure": -7.0
+      },
+      "supported": true
+    }
+  },
+  "preflight_marker_readiness": {
+    "frames_examined": 51,
+    "required_consecutive_frames": 3,
+    "last_quality": {
+      "ids": [
+        40,
+        5
+      ],
+      "minimum_edge_px": {
+        "40": 97.7,
+        "5": 26.6
+      },
+      "readable_pair": true,
+      "instruction": "PALM + CUBE visible: keep hand, cube and camera still"
+    }
+  },
+  "phase": "paired_capture",
+  "motor_connection_verified": true,
+  "pairs": [
+    {
+      "index": 0,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521974.984,
+        "read_ended_monotonic": 521975.0,
+        "read_ms": 16.00000000325963,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            4.9,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521975.062,
+      "frame_received_monotonic": 521975.062,
+      "image": "pair_00.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521975.062,
+        "read_ended_monotonic": 521975.093,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2314,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 108.99999999674037,
+      "markers": {
+        "ids": [
+          5
+        ],
+        "corners": {
+          "5": [
+            [
+              714.954833984375,
+              155.689697265625
+            ],
+            [
+              734.7725219726562,
+              176.11883544921875
+            ],
+            [
+              686.2359008789062,
+              181.79324340820312
+            ],
+            [
+              669.7666015625,
+              161.68939208984375
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "5": 26.0
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            5
+          ],
+          "min_edge_px_by_id": {
+            "5": 26.0
+          },
+          "detect_ms": 79.00000002700835
+        },
+        "palm_and_cube_same_frame": false,
+        "size_threshold_passed": false
+      },
+      "image_sha256": "914e66ac1c28947cedc5372075f1a7ee415840984830a1180df590df1c96900d",
+      "usable_paired_observation": false
+    },
+    {
+      "index": 1,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521975.171,
+        "read_ended_monotonic": 521975.187,
+        "read_ms": 16.00000000325963,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            4.9,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521975.25,
+      "frame_received_monotonic": 521975.265,
+      "image": "pair_01.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521975.265,
+        "read_ended_monotonic": 521975.296,
+        "read_ms": 30.999999959021807,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2861,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 125.0,
+      "markers": {
+        "ids": [
+          5
+        ],
+        "corners": {
+          "5": [
+            [
+              715.6480102539062,
+              156.3125457763672
+            ],
+            [
+              733.3369140625,
+              176.1403045654297
+            ],
+            [
+              685.8505859375,
+              181.38067626953125
+            ],
+            [
+              670.9440307617188,
+              161.80126953125
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "5": 24.6
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            5
+          ],
+          "min_edge_px_by_id": {
+            "5": 24.6
+          },
+          "detect_ms": 77.9999999795109
+        },
+        "palm_and_cube_same_frame": false,
+        "size_threshold_passed": false
+      },
+      "image_sha256": "0dc3cfd46c826289cd5c16aefebdc1902a820daa12c7602e3d87767d652dc71c",
+      "usable_paired_observation": false
+    },
+    {
+      "index": 2,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521975.359,
+        "read_ended_monotonic": 521975.375,
+        "read_ms": 16.00000000325963,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2861,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521975.437,
+      "frame_received_monotonic": 521975.453,
+      "image": "pair_02.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521975.453,
+        "read_ended_monotonic": 521975.484,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2406,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 125.0,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.5373840332031,
+              413.52117919921875
+            ],
+            [
+              529.5221557617188,
+              405.04461669921875
+            ],
+            [
+              535.488525390625,
+              500.88134765625
+            ],
+            [
+              406.80322265625,
+              512.9255981445312
+            ]
+          ],
+          "5": [
+            [
+              715.450927734375,
+              155.67877197265625
+            ],
+            [
+              734.3853149414062,
+              176.17494201660156
+            ],
+            [
+              686.0543823242188,
+              181.4108123779297
+            ],
+            [
+              668.834228515625,
+              161.6797332763672
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 96.0,
+          "5": 26.2
+        },
+        "detector_stats": {
+          "method": "raw_dense_threshold",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 96.0,
+            "5": 26.2
+          },
+          "detect_ms": 31.000000017229468
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "e872e13a265fbeb20636700131dc5496841c82c5dd4ecdb083be9d26da5402a1",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 3,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521975.531,
+        "read_ended_monotonic": 521975.562,
+        "read_ms": 30.999999959021807,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2861,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521975.578,
+      "frame_received_monotonic": 521975.578,
+      "image": "pair_03.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521975.578,
+        "read_ended_monotonic": 521975.609,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 77.9999999795109,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.2794494628906,
+              413.9756164550781
+            ],
+            [
+              529.3580322265625,
+              404.8922119140625
+            ],
+            [
+              537.9813842773438,
+              501.9378967285156
+            ],
+            [
+              407.4106750488281,
+              512.091552734375
+            ]
+          ],
+          "5": [
+            [
+              715.20166015625,
+              155.4883575439453
+            ],
+            [
+              734.2444458007812,
+              176.18698120117188
+            ],
+            [
+              686.3607788085938,
+              182.050048828125
+            ],
+            [
+              669.2401733398438,
+              161.09652709960938
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.4,
+          "5": 27.1
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.4,
+            "5": 27.1
+          },
+          "detect_ms": 14.999999955762178
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "cbee6d8324d730e06750e9ea88d959dfba0cbfd904ed2c015589f33f44ba7ba6",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 4,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521975.671,
+        "read_ended_monotonic": 521975.687,
+        "read_ms": 16.00000000325963,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521975.718,
+      "frame_received_monotonic": 521975.734,
+      "image": "pair_04.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521975.734,
+        "read_ended_monotonic": 521975.75,
+        "read_ms": 16.00000000325963,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2406,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 79.00000002700835,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              407.7095947265625,
+              413.6317138671875
+            ],
+            [
+              529.7788696289062,
+              405.0322265625
+            ],
+            [
+              538.3038940429688,
+              501.9240417480469
+            ],
+            [
+              407.43072509765625,
+              512.4710083007812
+            ]
+          ],
+          "5": [
+            [
+              715.16748046875,
+              155.06076049804688
+            ],
+            [
+              733.9607543945312,
+              176.11004638671875
+            ],
+            [
+              686.0762329101562,
+              182.20831298828125
+            ],
+            [
+              668.7387084960938,
+              161.23080444335938
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.3,
+          "5": 27.2
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.3,
+            "5": 27.2
+          },
+          "detect_ms": 16.00000000325963
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "a1aebf4d9f54ddcb22575747a0b0f9cb6055dcd4a8cc86259aa27484ab3052cb",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 5,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521975.812,
+        "read_ended_monotonic": 521975.843,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521975.875,
+      "frame_received_monotonic": 521975.89,
+      "image": "pair_05.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521975.89,
+        "read_ended_monotonic": 521975.921,
+        "read_ms": 30.999999959021807,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximum_drift_ticks": 0,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 108.99999999674037,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.1846618652344,
+              413.9089050292969
+            ],
+            [
+              529.5079956054688,
+              404.9106140136719
+            ],
+            [
+              538.0136108398438,
+              501.8656005859375
+            ],
+            [
+              407.6789245605469,
+              512.3555908203125
+            ]
+          ],
+          "5": [
+            [
+              715.8745727539062,
+              155.2205047607422
+            ],
+            [
+              733.797607421875,
+              175.97052001953125
+            ],
+            [
+              685.6755981445312,
+              182.13845825195312
+            ],
+            [
+              669.1083984375,
+              160.96890258789062
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.3,
+          "5": 26.9
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.3,
+            "5": 26.9
+          },
+          "detect_ms": 0.0
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "909f4f23cdddf6e6172c8b0181d4e6e3e82c3932385ea9285cd55b927231ab8e",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 6,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521975.968,
+        "read_ended_monotonic": 521976.0,
+        "read_ms": 32.00000000651926,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2861,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521976.015,
+      "frame_received_monotonic": 521976.031,
+      "image": "pair_06.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521976.031,
+        "read_ended_monotonic": 521976.062,
+        "read_ms": 30.999999959021807,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 93.99999998277053,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.3332214355469,
+              413.6828308105469
+            ],
+            [
+              529.7022094726562,
+              404.9602355957031
+            ],
+            [
+              538.258056640625,
+              502.01495361328125
+            ],
+            [
+              407.3854675292969,
+              512.2853393554688
+            ]
+          ],
+          "5": [
+            [
+              714.9489135742188,
+              154.9608154296875
+            ],
+            [
+              734.334228515625,
+              175.87893676757812
+            ],
+            [
+              686.1188354492188,
+              182.0550994873047
+            ],
+            [
+              669.1177978515625,
+              161.6467742919922
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.4,
+          "5": 26.6
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.4,
+            "5": 26.6
+          },
+          "detect_ms": 0.0
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "e7b7532bfac1b43fa3fef3c01d12a9c24f2d6599bf6e0d84e00999dc7700e95a",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 7,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521976.125,
+        "read_ended_monotonic": 521976.156,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2488,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            4.9,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521976.187,
+      "frame_received_monotonic": 521976.187,
+      "image": "pair_07.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521976.187,
+        "read_ended_monotonic": 521976.218,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3091,
+            2437,
+            2488,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 92.99999999348074,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.8304748535156,
+              413.30242919921875
+            ],
+            [
+              529.8399658203125,
+              404.75848388671875
+            ],
+            [
+              538.1063232421875,
+              501.9438171386719
+            ],
+            [
+              406.88177490234375,
+              512.4956665039062
+            ]
+          ],
+          "5": [
+            [
+              715.387939453125,
+              155.30931091308594
+            ],
+            [
+              734.7696533203125,
+              176.09454345703125
+            ],
+            [
+              685.9978637695312,
+              182.24765014648438
+            ],
+            [
+              669.0360107421875,
+              161.38140869140625
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.5,
+          "5": 26.9
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.5,
+            "5": 26.9
+          },
+          "detect_ms": 16.00000000325963
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "19055a937e40b22658f8d2bd694478e43636a5fef42fb7b721b3f67f3c1c482a",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 8,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521976.281,
+        "read_ended_monotonic": 521976.312,
+        "read_ms": 30.999999959021807,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2314,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521976.343,
+      "frame_received_monotonic": 521976.343,
+      "image": "pair_08.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521976.343,
+        "read_ended_monotonic": 521976.375,
+        "read_ms": 32.00000000651926,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2406,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 93.99999998277053,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.73736572265625,
+              413.9918518066406
+            ],
+            [
+              529.7652587890625,
+              404.799560546875
+            ],
+            [
+              538.346923828125,
+              502.0031433105469
+            ],
+            [
+              407.46844482421875,
+              512.3477783203125
+            ]
+          ],
+          "5": [
+            [
+              715.2928466796875,
+              155.17169189453125
+            ],
+            [
+              734.989990234375,
+              176.42529296875
+            ],
+            [
+              685.7062377929688,
+              182.33946228027344
+            ],
+            [
+              669.1018676757812,
+              161.53501892089844
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.6,
+          "5": 26.6
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.6,
+            "5": 26.6
+          },
+          "detect_ms": 16.00000000325963
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "00a6c89d235f4a5d16e5e70de411ae7d0ebf2d2a4396a3a77262c2a05c2a5a38",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 9,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521976.437,
+        "read_ended_monotonic": 521976.468,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2406,
+            3091,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521976.484,
+      "frame_received_monotonic": 521976.5,
+      "image": "pair_09.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521976.5,
+        "read_ended_monotonic": 521976.515,
+        "read_ms": 15.000000013969839,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2861,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 78.00000003771856,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.2164611816406,
+              413.6180114746094
+            ],
+            [
+              529.8203125,
+              404.70806884765625
+            ],
+            [
+              538.1927490234375,
+              502.0063781738281
+            ],
+            [
+              407.38946533203125,
+              512.5676879882812
+            ]
+          ],
+          "5": [
+            [
+              715.5748291015625,
+              155.1138458251953
+            ],
+            [
+              734.583740234375,
+              176.1280975341797
+            ],
+            [
+              685.6410522460938,
+              182.232666015625
+            ],
+            [
+              668.8092651367188,
+              161.50454711914062
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.7,
+          "5": 26.7
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.7,
+            "5": 26.7
+          },
+          "detect_ms": 15.000000013969839
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "0cd6981d8a1bdf6e97a2f68e5827aeac9d9c8cd3b463e86114f7d2ba4cccd14a",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 10,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521976.578,
+        "read_ended_monotonic": 521976.609,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521976.64,
+      "frame_received_monotonic": 521976.656,
+      "image": "pair_10.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521976.656,
+        "read_ended_monotonic": 521976.671,
+        "read_ms": 14.999999955762178,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2861,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            4.9,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 92.99999999348074,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.3568420410156,
+              414.37066650390625
+            ],
+            [
+              529.8140869140625,
+              404.7466735839844
+            ],
+            [
+              537.3807983398438,
+              502.1160583496094
+            ],
+            [
+              407.33392333984375,
+              512.3067626953125
+            ]
+          ],
+          "5": [
+            [
+              715.7112426757812,
+              155.48081970214844
+            ],
+            [
+              734.5580444335938,
+              176.2484130859375
+            ],
+            [
+              686.543212890625,
+              182.0192108154297
+            ],
+            [
+              669.0267944335938,
+              161.46109008789062
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 97.7,
+          "5": 27.0
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 97.7,
+            "5": 27.0
+          },
+          "detect_ms": 0.0
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "812de7ff0dad19f6f6d5bfad128351d19de350ef71654ddbd00eee8a5590d413",
+      "usable_paired_observation": true
+    },
+    {
+      "index": 11,
+      "status": "paired",
+      "before": {
+        "read_started_monotonic": 521976.734,
+        "read_ended_monotonic": 521976.765,
+        "read_ms": 31.000000017229468,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2407,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2315,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            4.9,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "camera_read_monotonic": 521976.781,
+      "frame_received_monotonic": 521976.796,
+      "image": "pair_11.png",
+      "timestamp_semantics": "Camera timestamp is driver-read return, not sensor exposure",
+      "after": {
+        "read_started_monotonic": 521976.796,
+        "read_ended_monotonic": 521976.828,
+        "read_ms": 32.00000000651926,
+        "snapshot": {
+          "torque": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "hardware_error": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "watchdog": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "position_ticks": [
+            3036,
+            2911,
+            2893,
+            1791,
+            3293,
+            2043,
+            1736,
+            2406,
+            3090,
+            2437,
+            2487,
+            2412,
+            3233,
+            2314,
+            2860,
+            3055
+          ],
+          "voltage_v": [
+            4.6,
+            4.6,
+            4.6,
+            4.6,
+            4.7,
+            4.7,
+            4.7,
+            4.7,
+            4.8,
+            4.8,
+            4.8,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            4.9
+          ],
+          "temperature_c": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            23,
+            22,
+            22,
+            22,
+            22,
+            22
+          ]
+        }
+      },
+      "position_drift_ticks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "maximum_drift_ticks": 1,
+      "stationary_endpoints": true,
+      "continuous_stationarity_verified": false,
+      "frame_bracket_ms": 93.99999998277053,
+      "markers": {
+        "ids": [
+          40,
+          5
+        ],
+        "corners": {
+          "40": [
+            [
+              408.3438720703125,
+              413.4765930175781
+            ],
+            [
+              529.854736328125,
+              405.1032409667969
+            ],
+            [
+              535.75146484375,
+              500.8275451660156
+            ],
+            [
+              407.3020935058594,
+              512.8755493164062
+            ]
+          ],
+          "5": [
+            [
+              714.96044921875,
+              155.9699249267578
+            ],
+            [
+              733.3744506835938,
+              175.94491577148438
+            ],
+            [
+              686.4270629882812,
+              181.72396850585938
+            ],
+            [
+              670.6142578125,
+              161.69015502929688
+            ]
+          ]
+        },
+        "minimum_edge_px": {
+          "40": 95.9,
+          "5": 25.5
+        },
+        "detector_stats": {
+          "method": "contour",
+          "corner_refinement": "contour",
+          "ids": [
+            40,
+            5
+          ],
+          "min_edge_px_by_id": {
+            "40": 95.9,
+            "5": 25.5
+          },
+          "detect_ms": 0.0
+        },
+        "palm_and_cube_same_frame": true,
+        "size_threshold_passed": true
+      },
+      "image_sha256": "7c34319cdfc19c3fbcc3fdb905708e212eaedf3616801e30c6be0ab8a2aa0733",
+      "usable_paired_observation": true
+    }
+  ],
+  "capture_elapsed_seconds": 1.8910000000032596,
+  "camera_worker_stopped": true,
+  "camera_worker": {
+    "status": "closed",
+    "requested_exposure": -7.0,
+    "auto_mode_meaning_verified": false,
+    "motors_accessed": false,
+    "frames_sent": 102,
+    "original_settings": {
+      "auto": -1.0,
+      "exposure": -5.0
+    },
+    "applied": {
+      "requested_exposure": -7.0,
+      "set_auto_returned": true,
+      "set_exposure_returned": true,
+      "readback": {
+        "auto": -1.0,
+        "exposure": -7.0
+      },
+      "supported": true
+    },
+    "last_stream_exposure_readback": -7.0,
+    "last_marker_readiness": {
+      "ids": [
+        40,
+        5
+      ],
+      "minimum_edge_px": {
+        "40": 93.8,
+        "5": 25.6
+      },
+      "readable_pair": true,
+      "instruction": "PALM + CUBE visible: keep hand, cube and camera still"
+    },
+    "restoration": {
+      "changes_attempted": true,
+      "set_returns": {
+        "exposure": true,
+        "auto": true
+      },
+      "readback": {
+        "auto": -1.0,
+        "exposure": -5.0
+      },
+      "restored_original_readbacks": true,
+      "errors": [],
+      "note": "Camera auto mode can change its exposure readback again. Readbacks are recorded; restoration is not claimed when they do not match."
+    },
+    "finished_monotonic": 521977.062
+  },
+  "camera_restoration_verified": true,
+  "usable_pair_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "usable_pair_count": 10,
+  "minimum_usable_pairs": 3,
+  "completed_encoder_pair_count": 12,
+  "all_completed_pairs_have_off_endpoints": true
+}

@@ -1,0 +1,3683 @@
+{
+  "source_sha256": "38b4fe88e83170f9b818c65aa0f7f8a219615d3c177abdca291dd510fa26f833",
+  "target_sha256": "c83df6609a994159d169c2aac42c6e989efbda16fda77e1e9ecb7a4d726f3f5f",
+  "model_manifest": {
+    "projection_mm": 34.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 11.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          11.3
+        ],
+        [
+          37.0,
+          65.0,
+          17.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          17.3
+        ],
+        [
+          37.0,
+          65.0,
+          77.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "additional_middle_thumb_hull_proxies": [
+      {
+        "name": "mf_bs_offline_hull_0",
+        "body": "mf_bs",
+        "source_mesh": "base"
+      },
+      {
+        "name": "mf_px_offline_hull_0",
+        "body": "mf_px",
+        "source_mesh": "proximal"
+      },
+      {
+        "name": "mf_md_offline_hull_0",
+        "body": "mf_md",
+        "source_mesh": "medial"
+      },
+      {
+        "name": "mf_ds_offline_hull_0",
+        "body": "mf_ds",
+        "source_mesh": "distal"
+      },
+      {
+        "name": "mf_ds_offline_hull_3",
+        "body": "mf_ds",
+        "source_mesh": "tip"
+      },
+      {
+        "name": "th_px_offline_hull_0",
+        "body": "th_px",
+        "source_mesh": "thumb_proximal"
+      },
+      {
+        "name": "th_ds_offline_hull_0",
+        "body": "th_ds",
+        "source_mesh": "thumb_distal"
+      },
+      {
+        "name": "th_ds_offline_hull_3",
+        "body": "th_ds",
+        "source_mesh": "thumb_tip"
+      }
+    ],
+    "additional_proxy_caveat": "Offline sensitivity: convex visual-mesh hulls overapproximate concavities; no cube contacts, no fitted offsets."
+  },
+  "selected_pairs": [
+    [
+      "th_tip",
+      "palm_collision_1"
+    ],
+    [
+      "th_tip",
+      "palm_collision_2"
+    ],
+    [
+      "th_tip",
+      "palm_collision_3"
+    ],
+    [
+      "th_tip",
+      "palm_collision_4"
+    ],
+    [
+      "th_tip",
+      "palm_collision_5"
+    ],
+    [
+      "th_tip",
+      "palm_collision_6"
+    ],
+    [
+      "th_tip",
+      "palm_collision_7"
+    ],
+    [
+      "th_tip",
+      "palm_collision_8"
+    ],
+    [
+      "th_tip",
+      "palm_collision_9"
+    ],
+    [
+      "th_tip",
+      "palm_collision_10"
+    ],
+    [
+      "mf_bs_offline_hull_0",
+      "th_px_offline_hull_0"
+    ],
+    [
+      "mf_bs_offline_hull_0",
+      "th_ds_offline_hull_0"
+    ],
+    [
+      "mf_bs_offline_hull_0",
+      "th_ds_offline_hull_3"
+    ],
+    [
+      "mf_px_offline_hull_0",
+      "th_px_offline_hull_0"
+    ],
+    [
+      "mf_px_offline_hull_0",
+      "th_ds_offline_hull_0"
+    ],
+    [
+      "mf_px_offline_hull_0",
+      "th_ds_offline_hull_3"
+    ],
+    [
+      "mf_md_offline_hull_0",
+      "th_px_offline_hull_0"
+    ],
+    [
+      "mf_md_offline_hull_0",
+      "th_ds_offline_hull_0"
+    ],
+    [
+      "mf_md_offline_hull_0",
+      "th_ds_offline_hull_3"
+    ],
+    [
+      "mf_ds_offline_hull_0",
+      "th_px_offline_hull_0"
+    ],
+    [
+      "mf_ds_offline_hull_0",
+      "th_ds_offline_hull_0"
+    ],
+    [
+      "mf_ds_offline_hull_0",
+      "th_ds_offline_hull_3"
+    ],
+    [
+      "mf_ds_offline_hull_3",
+      "th_px_offline_hull_0"
+    ],
+    [
+      "mf_ds_offline_hull_3",
+      "th_ds_offline_hull_0"
+    ],
+    [
+      "mf_ds_offline_hull_3",
+      "th_ds_offline_hull_3"
+    ]
+  ],
+  "results": {
+    "-16": {
+      "nominal": {
+        "sample": 0,
+        "start_offset_ticks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "samples": 206,
+        "min_selected_gap_mm": 1.1053834091699286,
+        "nearest": {
+          "pair": [
+            "th_tip",
+            "palm_collision_4"
+          ],
+          "fraction": 1.0
+        },
+        "max_self_overlap_mm": 0.0,
+        "max_support_overlap_mm": 0.0
+      },
+      "sampled_starts": 35,
+      "worst_selected_gap_mm": 1.1053834091699286,
+      "max_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "rows": [
+        {
+          "sample": 0,
+          "start_offset_ticks": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 1,
+          "start_offset_ticks": [
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 2,
+          "start_offset_ticks": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 3,
+          "start_offset_ticks": [
+            23,
+            24,
+            -25,
+            -24,
+            -3,
+            23,
+            15,
+            -8,
+            -22,
+            14,
+            0,
+            26,
+            -6,
+            -27,
+            9,
+            27
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 4,
+          "start_offset_ticks": [
+            29,
+            -18,
+            21,
+            15,
+            26,
+            32,
+            -20,
+            -7,
+            25,
+            -15,
+            -5,
+            1,
+            -23,
+            3,
+            7,
+            5
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 5,
+          "start_offset_ticks": [
+            -30,
+            17,
+            -8,
+            10,
+            8,
+            2,
+            23,
+            5,
+            20,
+            -9,
+            13,
+            16,
+            -16,
+            12,
+            31,
+            -29
+          ],
+          "samples": 202,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 6,
+          "start_offset_ticks": [
+            -3,
+            -28,
+            1,
+            -7,
+            1,
+            -7,
+            -29,
+            -10,
+            13,
+            13,
+            -30,
+            8,
+            -2,
+            27,
+            5,
+            -1
+          ],
+          "samples": 211,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 7,
+          "start_offset_ticks": [
+            -4,
+            18,
+            16,
+            16,
+            27,
+            -19,
+            20,
+            -1,
+            -8,
+            11,
+            32,
+            15,
+            12,
+            9,
+            -31,
+            23
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 8,
+          "start_offset_ticks": [
+            1,
+            -21,
+            -10,
+            3,
+            25,
+            2,
+            32,
+            12,
+            -20,
+            -4,
+            16,
+            -13,
+            -18,
+            -20,
+            26,
+            -30
+          ],
+          "samples": 210,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 9,
+          "start_offset_ticks": [
+            -25,
+            -29,
+            26,
+            27,
+            32,
+            -21,
+            -3,
+            29,
+            6,
+            24,
+            24,
+            -25,
+            0,
+            -19,
+            -21,
+            -7
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 10,
+          "start_offset_ticks": [
+            17,
+            -7,
+            10,
+            7,
+            -30,
+            -25,
+            -4,
+            2,
+            4,
+            -32,
+            31,
+            -11,
+            5,
+            32,
+            -8,
+            -29
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 11,
+          "start_offset_ticks": [
+            9,
+            -3,
+            -25,
+            28,
+            -32,
+            -8,
+            7,
+            8,
+            12,
+            7,
+            14,
+            15,
+            2,
+            12,
+            -18,
+            20
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 12,
+          "start_offset_ticks": [
+            6,
+            -31,
+            18,
+            30,
+            15,
+            -3,
+            -1,
+            -15,
+            -1,
+            -10,
+            -20,
+            26,
+            17,
+            14,
+            7,
+            17
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 13,
+          "start_offset_ticks": [
+            31,
+            -5,
+            -9,
+            -27,
+            24,
+            -19,
+            29,
+            -29,
+            0,
+            -28,
+            31,
+            -12,
+            2,
+            -16,
+            4,
+            13
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 14,
+          "start_offset_ticks": [
+            -21,
+            -16,
+            -12,
+            24,
+            -18,
+            24,
+            17,
+            -4,
+            17,
+            -6,
+            -7,
+            -17,
+            15,
+            -26,
+            2,
+            4
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 15,
+          "start_offset_ticks": [
+            -12,
+            -1,
+            -7,
+            6,
+            30,
+            18,
+            21,
+            -6,
+            6,
+            11,
+            15,
+            -19,
+            10,
+            -22,
+            -11,
+            -7
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 16,
+          "start_offset_ticks": [
+            -26,
+            -13,
+            -9,
+            -20,
+            5,
+            23,
+            -28,
+            -12,
+            23,
+            -12,
+            2,
+            25,
+            -1,
+            -19,
+            -6,
+            -1
+          ],
+          "samples": 208,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 17,
+          "start_offset_ticks": [
+            9,
+            24,
+            -17,
+            -2,
+            27,
+            13,
+            21,
+            -25,
+            18,
+            -32,
+            -24,
+            10,
+            5,
+            -32,
+            -7,
+            -30
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 18,
+          "start_offset_ticks": [
+            -23,
+            -31,
+            29,
+            -11,
+            10,
+            9,
+            19,
+            -24,
+            -16,
+            26,
+            -27,
+            28,
+            2,
+            -6,
+            11,
+            -16
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 19,
+          "start_offset_ticks": [
+            -12,
+            1,
+            -5,
+            14,
+            15,
+            -14,
+            30,
+            -5,
+            22,
+            15,
+            -20,
+            21,
+            -17,
+            1,
+            0,
+            -8
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 20,
+          "start_offset_ticks": [
+            25,
+            -1,
+            -23,
+            0,
+            -17,
+            32,
+            11,
+            13,
+            -32,
+            -23,
+            27,
+            -12,
+            -14,
+            1,
+            -17,
+            -6
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 21,
+          "start_offset_ticks": [
+            0,
+            -17,
+            -31,
+            29,
+            32,
+            -32,
+            31,
+            -1,
+            -26,
+            -8,
+            -23,
+            -19,
+            0,
+            18,
+            -32,
+            -20
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 22,
+          "start_offset_ticks": [
+            -17,
+            16,
+            -23,
+            -17,
+            -11,
+            25,
+            1,
+            -28,
+            11,
+            -17,
+            -11,
+            -11,
+            11,
+            30,
+            -3,
+            -27
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 23,
+          "start_offset_ticks": [
+            8,
+            32,
+            17,
+            4,
+            -10,
+            24,
+            -4,
+            9,
+            8,
+            -30,
+            -32,
+            -29,
+            14,
+            32,
+            -31,
+            2
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 24,
+          "start_offset_ticks": [
+            -27,
+            -31,
+            -24,
+            -28,
+            10,
+            -20,
+            24,
+            -4,
+            4,
+            32,
+            -3,
+            -8,
+            30,
+            1,
+            -9,
+            -32
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 25,
+          "start_offset_ticks": [
+            -2,
+            -10,
+            -15,
+            -18,
+            23,
+            10,
+            0,
+            31,
+            23,
+            -27,
+            -13,
+            -18,
+            31,
+            -13,
+            -17,
+            -29
+          ],
+          "samples": 208,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 26,
+          "start_offset_ticks": [
+            13,
+            -30,
+            -27,
+            -24,
+            -6,
+            8,
+            -4,
+            -8,
+            0,
+            19,
+            -31,
+            19,
+            -23,
+            7,
+            3,
+            -5
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 27,
+          "start_offset_ticks": [
+            21,
+            19,
+            7,
+            -21,
+            28,
+            -29,
+            -2,
+            -7,
+            11,
+            8,
+            -29,
+            16,
+            20,
+            3,
+            -18,
+            -31
+          ],
+          "samples": 202,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 28,
+          "start_offset_ticks": [
+            -8,
+            0,
+            -8,
+            0,
+            -6,
+            -8,
+            -27,
+            9,
+            25,
+            -27,
+            -10,
+            2,
+            7,
+            11,
+            -24,
+            16
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 29,
+          "start_offset_ticks": [
+            10,
+            -14,
+            21,
+            -16,
+            13,
+            -24,
+            -13,
+            -24,
+            5,
+            -19,
+            4,
+            -30,
+            -26,
+            -16,
+            0,
+            6
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 30,
+          "start_offset_ticks": [
+            -12,
+            -7,
+            2,
+            -26,
+            13,
+            4,
+            -20,
+            7,
+            18,
+            8,
+            3,
+            -7,
+            -29,
+            -19,
+            -12,
+            -22
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 31,
+          "start_offset_ticks": [
+            -22,
+            5,
+            -23,
+            9,
+            -8,
+            -4,
+            20,
+            -20,
+            31,
+            6,
+            -29,
+            15,
+            26,
+            -18,
+            -31,
+            -30
+          ],
+          "samples": 205,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 32,
+          "start_offset_ticks": [
+            -8,
+            22,
+            -24,
+            -9,
+            7,
+            -8,
+            4,
+            -27,
+            -1,
+            13,
+            -15,
+            -9,
+            16,
+            -1,
+            5,
+            28
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 33,
+          "start_offset_ticks": [
+            -14,
+            22,
+            -15,
+            -3,
+            15,
+            26,
+            0,
+            30,
+            -32,
+            9,
+            -21,
+            15,
+            13,
+            -29,
+            4,
+            9
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 34,
+          "start_offset_ticks": [
+            -30,
+            4,
+            12,
+            2,
+            19,
+            -21,
+            31,
+            13,
+            -17,
+            0,
+            19,
+            -8,
+            -10,
+            17,
+            17,
+            -32
+          ],
+          "samples": 205,
+          "min_selected_gap_mm": 1.1053834091699286,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        }
+      ]
+    },
+    "-32": {
+      "nominal": {
+        "sample": 0,
+        "start_offset_ticks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "samples": 206,
+        "min_selected_gap_mm": 2.362511154168266,
+        "nearest": {
+          "pair": [
+            "th_tip",
+            "palm_collision_4"
+          ],
+          "fraction": 1.0
+        },
+        "max_self_overlap_mm": 0.0,
+        "max_support_overlap_mm": 0.0
+      },
+      "sampled_starts": 35,
+      "worst_selected_gap_mm": 2.362511154168266,
+      "max_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "rows": [
+        {
+          "sample": 0,
+          "start_offset_ticks": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 1,
+          "start_offset_ticks": [
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 2,
+          "start_offset_ticks": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 3,
+          "start_offset_ticks": [
+            23,
+            24,
+            -25,
+            -24,
+            -3,
+            23,
+            15,
+            -8,
+            -22,
+            14,
+            0,
+            26,
+            -6,
+            -27,
+            9,
+            27
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 4,
+          "start_offset_ticks": [
+            29,
+            -18,
+            21,
+            15,
+            26,
+            32,
+            -20,
+            -7,
+            25,
+            -15,
+            -5,
+            1,
+            -23,
+            3,
+            7,
+            5
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 5,
+          "start_offset_ticks": [
+            -30,
+            17,
+            -8,
+            10,
+            8,
+            2,
+            23,
+            5,
+            20,
+            -9,
+            13,
+            16,
+            -16,
+            12,
+            31,
+            -29
+          ],
+          "samples": 202,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 6,
+          "start_offset_ticks": [
+            -3,
+            -28,
+            1,
+            -7,
+            1,
+            -7,
+            -29,
+            -10,
+            13,
+            13,
+            -30,
+            8,
+            -2,
+            27,
+            5,
+            -1
+          ],
+          "samples": 211,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 7,
+          "start_offset_ticks": [
+            -4,
+            18,
+            16,
+            16,
+            27,
+            -19,
+            20,
+            -1,
+            -8,
+            11,
+            32,
+            15,
+            12,
+            9,
+            -31,
+            23
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 8,
+          "start_offset_ticks": [
+            1,
+            -21,
+            -10,
+            3,
+            25,
+            2,
+            32,
+            12,
+            -20,
+            -4,
+            16,
+            -13,
+            -18,
+            -20,
+            26,
+            -30
+          ],
+          "samples": 210,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 9,
+          "start_offset_ticks": [
+            -25,
+            -29,
+            26,
+            27,
+            32,
+            -21,
+            -3,
+            29,
+            6,
+            24,
+            24,
+            -25,
+            0,
+            -19,
+            -21,
+            -7
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 10,
+          "start_offset_ticks": [
+            17,
+            -7,
+            10,
+            7,
+            -30,
+            -25,
+            -4,
+            2,
+            4,
+            -32,
+            31,
+            -11,
+            5,
+            32,
+            -8,
+            -29
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 11,
+          "start_offset_ticks": [
+            9,
+            -3,
+            -25,
+            28,
+            -32,
+            -8,
+            7,
+            8,
+            12,
+            7,
+            14,
+            15,
+            2,
+            12,
+            -18,
+            20
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 12,
+          "start_offset_ticks": [
+            6,
+            -31,
+            18,
+            30,
+            15,
+            -3,
+            -1,
+            -15,
+            -1,
+            -10,
+            -20,
+            26,
+            17,
+            14,
+            7,
+            17
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 13,
+          "start_offset_ticks": [
+            31,
+            -5,
+            -9,
+            -27,
+            24,
+            -19,
+            29,
+            -29,
+            0,
+            -28,
+            31,
+            -12,
+            2,
+            -16,
+            4,
+            13
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 14,
+          "start_offset_ticks": [
+            -21,
+            -16,
+            -12,
+            24,
+            -18,
+            24,
+            17,
+            -4,
+            17,
+            -6,
+            -7,
+            -17,
+            15,
+            -26,
+            2,
+            4
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 15,
+          "start_offset_ticks": [
+            -12,
+            -1,
+            -7,
+            6,
+            30,
+            18,
+            21,
+            -6,
+            6,
+            11,
+            15,
+            -19,
+            10,
+            -22,
+            -11,
+            -7
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 16,
+          "start_offset_ticks": [
+            -26,
+            -13,
+            -9,
+            -20,
+            5,
+            23,
+            -28,
+            -12,
+            23,
+            -12,
+            2,
+            25,
+            -1,
+            -19,
+            -6,
+            -1
+          ],
+          "samples": 208,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 17,
+          "start_offset_ticks": [
+            9,
+            24,
+            -17,
+            -2,
+            27,
+            13,
+            21,
+            -25,
+            18,
+            -32,
+            -24,
+            10,
+            5,
+            -32,
+            -7,
+            -30
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 18,
+          "start_offset_ticks": [
+            -23,
+            -31,
+            29,
+            -11,
+            10,
+            9,
+            19,
+            -24,
+            -16,
+            26,
+            -27,
+            28,
+            2,
+            -6,
+            11,
+            -16
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 19,
+          "start_offset_ticks": [
+            -12,
+            1,
+            -5,
+            14,
+            15,
+            -14,
+            30,
+            -5,
+            22,
+            15,
+            -20,
+            21,
+            -17,
+            1,
+            0,
+            -8
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 20,
+          "start_offset_ticks": [
+            25,
+            -1,
+            -23,
+            0,
+            -17,
+            32,
+            11,
+            13,
+            -32,
+            -23,
+            27,
+            -12,
+            -14,
+            1,
+            -17,
+            -6
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 21,
+          "start_offset_ticks": [
+            0,
+            -17,
+            -31,
+            29,
+            32,
+            -32,
+            31,
+            -1,
+            -26,
+            -8,
+            -23,
+            -19,
+            0,
+            18,
+            -32,
+            -20
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 22,
+          "start_offset_ticks": [
+            -17,
+            16,
+            -23,
+            -17,
+            -11,
+            25,
+            1,
+            -28,
+            11,
+            -17,
+            -11,
+            -11,
+            11,
+            30,
+            -3,
+            -27
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 23,
+          "start_offset_ticks": [
+            8,
+            32,
+            17,
+            4,
+            -10,
+            24,
+            -4,
+            9,
+            8,
+            -30,
+            -32,
+            -29,
+            14,
+            32,
+            -31,
+            2
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 24,
+          "start_offset_ticks": [
+            -27,
+            -31,
+            -24,
+            -28,
+            10,
+            -20,
+            24,
+            -4,
+            4,
+            32,
+            -3,
+            -8,
+            30,
+            1,
+            -9,
+            -32
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 25,
+          "start_offset_ticks": [
+            -2,
+            -10,
+            -15,
+            -18,
+            23,
+            10,
+            0,
+            31,
+            23,
+            -27,
+            -13,
+            -18,
+            31,
+            -13,
+            -17,
+            -29
+          ],
+          "samples": 208,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 26,
+          "start_offset_ticks": [
+            13,
+            -30,
+            -27,
+            -24,
+            -6,
+            8,
+            -4,
+            -8,
+            0,
+            19,
+            -31,
+            19,
+            -23,
+            7,
+            3,
+            -5
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 27,
+          "start_offset_ticks": [
+            21,
+            19,
+            7,
+            -21,
+            28,
+            -29,
+            -2,
+            -7,
+            11,
+            8,
+            -29,
+            16,
+            20,
+            3,
+            -18,
+            -31
+          ],
+          "samples": 202,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 28,
+          "start_offset_ticks": [
+            -8,
+            0,
+            -8,
+            0,
+            -6,
+            -8,
+            -27,
+            9,
+            25,
+            -27,
+            -10,
+            2,
+            7,
+            11,
+            -24,
+            16
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 29,
+          "start_offset_ticks": [
+            10,
+            -14,
+            21,
+            -16,
+            13,
+            -24,
+            -13,
+            -24,
+            5,
+            -19,
+            4,
+            -30,
+            -26,
+            -16,
+            0,
+            6
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 30,
+          "start_offset_ticks": [
+            -12,
+            -7,
+            2,
+            -26,
+            13,
+            4,
+            -20,
+            7,
+            18,
+            8,
+            3,
+            -7,
+            -29,
+            -19,
+            -12,
+            -22
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 31,
+          "start_offset_ticks": [
+            -22,
+            5,
+            -23,
+            9,
+            -8,
+            -4,
+            20,
+            -20,
+            31,
+            6,
+            -29,
+            15,
+            26,
+            -18,
+            -31,
+            -30
+          ],
+          "samples": 205,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 32,
+          "start_offset_ticks": [
+            -8,
+            22,
+            -24,
+            -9,
+            7,
+            -8,
+            4,
+            -27,
+            -1,
+            13,
+            -15,
+            -9,
+            16,
+            -1,
+            5,
+            28
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 33,
+          "start_offset_ticks": [
+            -14,
+            22,
+            -15,
+            -3,
+            15,
+            26,
+            0,
+            30,
+            -32,
+            9,
+            -21,
+            15,
+            13,
+            -29,
+            4,
+            9
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 34,
+          "start_offset_ticks": [
+            -30,
+            4,
+            12,
+            2,
+            19,
+            -21,
+            31,
+            13,
+            -17,
+            0,
+            19,
+            -8,
+            -10,
+            17,
+            17,
+            -32
+          ],
+          "samples": 205,
+          "min_selected_gap_mm": 2.362511154168266,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        }
+      ]
+    },
+    "-64": {
+      "nominal": {
+        "sample": 0,
+        "start_offset_ticks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "samples": 206,
+        "min_selected_gap_mm": 4.937930039383663,
+        "nearest": {
+          "pair": [
+            "th_tip",
+            "palm_collision_4"
+          ],
+          "fraction": 1.0
+        },
+        "max_self_overlap_mm": 0.0,
+        "max_support_overlap_mm": 0.0
+      },
+      "sampled_starts": 35,
+      "worst_selected_gap_mm": 4.937930039383663,
+      "max_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "rows": [
+        {
+          "sample": 0,
+          "start_offset_ticks": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 1,
+          "start_offset_ticks": [
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32,
+            -32
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 2,
+          "start_offset_ticks": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 3,
+          "start_offset_ticks": [
+            23,
+            24,
+            -25,
+            -24,
+            -3,
+            23,
+            15,
+            -8,
+            -22,
+            14,
+            0,
+            26,
+            -6,
+            -27,
+            9,
+            27
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 4,
+          "start_offset_ticks": [
+            29,
+            -18,
+            21,
+            15,
+            26,
+            32,
+            -20,
+            -7,
+            25,
+            -15,
+            -5,
+            1,
+            -23,
+            3,
+            7,
+            5
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 5,
+          "start_offset_ticks": [
+            -30,
+            17,
+            -8,
+            10,
+            8,
+            2,
+            23,
+            5,
+            20,
+            -9,
+            13,
+            16,
+            -16,
+            12,
+            31,
+            -29
+          ],
+          "samples": 202,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 6,
+          "start_offset_ticks": [
+            -3,
+            -28,
+            1,
+            -7,
+            1,
+            -7,
+            -29,
+            -10,
+            13,
+            13,
+            -30,
+            8,
+            -2,
+            27,
+            5,
+            -1
+          ],
+          "samples": 211,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 7,
+          "start_offset_ticks": [
+            -4,
+            18,
+            16,
+            16,
+            27,
+            -19,
+            20,
+            -1,
+            -8,
+            11,
+            32,
+            15,
+            12,
+            9,
+            -31,
+            23
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 8,
+          "start_offset_ticks": [
+            1,
+            -21,
+            -10,
+            3,
+            25,
+            2,
+            32,
+            12,
+            -20,
+            -4,
+            16,
+            -13,
+            -18,
+            -20,
+            26,
+            -30
+          ],
+          "samples": 210,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 9,
+          "start_offset_ticks": [
+            -25,
+            -29,
+            26,
+            27,
+            32,
+            -21,
+            -3,
+            29,
+            6,
+            24,
+            24,
+            -25,
+            0,
+            -19,
+            -21,
+            -7
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 10,
+          "start_offset_ticks": [
+            17,
+            -7,
+            10,
+            7,
+            -30,
+            -25,
+            -4,
+            2,
+            4,
+            -32,
+            31,
+            -11,
+            5,
+            32,
+            -8,
+            -29
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 11,
+          "start_offset_ticks": [
+            9,
+            -3,
+            -25,
+            28,
+            -32,
+            -8,
+            7,
+            8,
+            12,
+            7,
+            14,
+            15,
+            2,
+            12,
+            -18,
+            20
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 12,
+          "start_offset_ticks": [
+            6,
+            -31,
+            18,
+            30,
+            15,
+            -3,
+            -1,
+            -15,
+            -1,
+            -10,
+            -20,
+            26,
+            17,
+            14,
+            7,
+            17
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 13,
+          "start_offset_ticks": [
+            31,
+            -5,
+            -9,
+            -27,
+            24,
+            -19,
+            29,
+            -29,
+            0,
+            -28,
+            31,
+            -12,
+            2,
+            -16,
+            4,
+            13
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 14,
+          "start_offset_ticks": [
+            -21,
+            -16,
+            -12,
+            24,
+            -18,
+            24,
+            17,
+            -4,
+            17,
+            -6,
+            -7,
+            -17,
+            15,
+            -26,
+            2,
+            4
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 15,
+          "start_offset_ticks": [
+            -12,
+            -1,
+            -7,
+            6,
+            30,
+            18,
+            21,
+            -6,
+            6,
+            11,
+            15,
+            -19,
+            10,
+            -22,
+            -11,
+            -7
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 16,
+          "start_offset_ticks": [
+            -26,
+            -13,
+            -9,
+            -20,
+            5,
+            23,
+            -28,
+            -12,
+            23,
+            -12,
+            2,
+            25,
+            -1,
+            -19,
+            -6,
+            -1
+          ],
+          "samples": 208,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 17,
+          "start_offset_ticks": [
+            9,
+            24,
+            -17,
+            -2,
+            27,
+            13,
+            21,
+            -25,
+            18,
+            -32,
+            -24,
+            10,
+            5,
+            -32,
+            -7,
+            -30
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 18,
+          "start_offset_ticks": [
+            -23,
+            -31,
+            29,
+            -11,
+            10,
+            9,
+            19,
+            -24,
+            -16,
+            26,
+            -27,
+            28,
+            2,
+            -6,
+            11,
+            -16
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 19,
+          "start_offset_ticks": [
+            -12,
+            1,
+            -5,
+            14,
+            15,
+            -14,
+            30,
+            -5,
+            22,
+            15,
+            -20,
+            21,
+            -17,
+            1,
+            0,
+            -8
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 20,
+          "start_offset_ticks": [
+            25,
+            -1,
+            -23,
+            0,
+            -17,
+            32,
+            11,
+            13,
+            -32,
+            -23,
+            27,
+            -12,
+            -14,
+            1,
+            -17,
+            -6
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 21,
+          "start_offset_ticks": [
+            0,
+            -17,
+            -31,
+            29,
+            32,
+            -32,
+            31,
+            -1,
+            -26,
+            -8,
+            -23,
+            -19,
+            0,
+            18,
+            -32,
+            -20
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 22,
+          "start_offset_ticks": [
+            -17,
+            16,
+            -23,
+            -17,
+            -11,
+            25,
+            1,
+            -28,
+            11,
+            -17,
+            -11,
+            -11,
+            11,
+            30,
+            -3,
+            -27
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 23,
+          "start_offset_ticks": [
+            8,
+            32,
+            17,
+            4,
+            -10,
+            24,
+            -4,
+            9,
+            8,
+            -30,
+            -32,
+            -29,
+            14,
+            32,
+            -31,
+            2
+          ],
+          "samples": 203,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 24,
+          "start_offset_ticks": [
+            -27,
+            -31,
+            -24,
+            -28,
+            10,
+            -20,
+            24,
+            -4,
+            4,
+            32,
+            -3,
+            -8,
+            30,
+            1,
+            -9,
+            -32
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 25,
+          "start_offset_ticks": [
+            -2,
+            -10,
+            -15,
+            -18,
+            23,
+            10,
+            0,
+            31,
+            23,
+            -27,
+            -13,
+            -18,
+            31,
+            -13,
+            -17,
+            -29
+          ],
+          "samples": 208,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 26,
+          "start_offset_ticks": [
+            13,
+            -30,
+            -27,
+            -24,
+            -6,
+            8,
+            -4,
+            -8,
+            0,
+            19,
+            -31,
+            19,
+            -23,
+            7,
+            3,
+            -5
+          ],
+          "samples": 212,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 27,
+          "start_offset_ticks": [
+            21,
+            19,
+            7,
+            -21,
+            28,
+            -29,
+            -2,
+            -7,
+            11,
+            8,
+            -29,
+            16,
+            20,
+            3,
+            -18,
+            -31
+          ],
+          "samples": 202,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 28,
+          "start_offset_ticks": [
+            -8,
+            0,
+            -8,
+            0,
+            -6,
+            -8,
+            -27,
+            9,
+            25,
+            -27,
+            -10,
+            2,
+            7,
+            11,
+            -24,
+            16
+          ],
+          "samples": 206,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 29,
+          "start_offset_ticks": [
+            10,
+            -14,
+            21,
+            -16,
+            13,
+            -24,
+            -13,
+            -24,
+            5,
+            -19,
+            4,
+            -30,
+            -26,
+            -16,
+            0,
+            6
+          ],
+          "samples": 209,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 30,
+          "start_offset_ticks": [
+            -12,
+            -7,
+            2,
+            -26,
+            13,
+            4,
+            -20,
+            7,
+            18,
+            8,
+            3,
+            -7,
+            -29,
+            -19,
+            -12,
+            -22
+          ],
+          "samples": 207,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 31,
+          "start_offset_ticks": [
+            -22,
+            5,
+            -23,
+            9,
+            -8,
+            -4,
+            20,
+            -20,
+            31,
+            6,
+            -29,
+            15,
+            26,
+            -18,
+            -31,
+            -30
+          ],
+          "samples": 205,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 32,
+          "start_offset_ticks": [
+            -8,
+            22,
+            -24,
+            -9,
+            7,
+            -8,
+            4,
+            -27,
+            -1,
+            13,
+            -15,
+            -9,
+            16,
+            -1,
+            5,
+            28
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 33,
+          "start_offset_ticks": [
+            -14,
+            22,
+            -15,
+            -3,
+            15,
+            26,
+            0,
+            30,
+            -32,
+            9,
+            -21,
+            15,
+            13,
+            -29,
+            4,
+            9
+          ],
+          "samples": 201,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        },
+        {
+          "sample": 34,
+          "start_offset_ticks": [
+            -30,
+            4,
+            12,
+            2,
+            19,
+            -21,
+            31,
+            13,
+            -17,
+            0,
+            19,
+            -8,
+            -10,
+            17,
+            17,
+            -32
+          ],
+          "samples": 205,
+          "min_selected_gap_mm": 4.937930039383663,
+          "nearest": {
+            "pair": [
+              "th_tip",
+              "palm_collision_4"
+            ],
+            "fraction": 1.0
+          },
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0
+        }
+      ]
+    }
+  },
+  "contact_observation": "User did not observe clearly; physical contact remains unknown.",
+  "hardware_execution_allowed": false,
+  "motor_commands_sent": 0,
+  "limitations": [
+    "Sampled static paths; not exhaustive bounds, dynamic validation or physical calibration.",
+    "Box pairs use an independent SAT separation lower bound; mesh pairs use MuJoCo convex distance. Minimum is a conservative clearance estimate, not exact geometry calibration.",
+    "Clearance distances cover listed pairs only; contact overlap checks cover enabled hand/support pairs.",
+    "Current OFF pose is unknown. Source is final ON telemetry.",
+    "ID3 measured start outside native range is retained without wrap, limit changes or calibration claims."
+  ]
+}

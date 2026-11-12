@@ -1,0 +1,99 @@
+{
+  "status": "offline_first_forward_flip_direction_audit",
+  "motor_commands_sent": 0,
+  "thresholds_deg": {
+    "forward_progress": 30,
+    "full_flip": 60,
+    "max_side_yaw": "max(20, forward_tip / 2)"
+  },
+  "checks": [
+    {
+      "source": "sac_relative_cube_motion_result.json",
+      "reference": "physical_ID41_relative",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": true,
+      "forward_tip_deg": -8.774978318684871,
+      "side_yaw_deg": 33.96671818501905,
+      "top_normal_change_deg": 11.186033832887372
+    },
+    {
+      "source": "sac_recorded_encoder_replay_result.json",
+      "reference": "approximate_MuJoCo_replay",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": false,
+      "forward_tip_deg": -0.01348419416942882,
+      "side_yaw_deg": -3.4550915287365944,
+      "top_normal_change_deg": 0.01398797135696328
+    },
+    {
+      "source": "sac_recorded_encoder_replay_offset_0_10_5_result.json",
+      "reference": "approximate_MuJoCo_replay",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": false,
+      "forward_tip_deg": 0.005889416637355274,
+      "side_yaw_deg": -5.240464961349673,
+      "top_normal_change_deg": 0.009871523232588664
+    },
+    {
+      "source": "sac_recorded_encoder_replay_offset_0_7.5_0_result.json",
+      "reference": "approximate_MuJoCo_replay",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": false,
+      "forward_tip_deg": -0.011369612219864295,
+      "side_yaw_deg": -3.790162068525892,
+      "top_normal_change_deg": 0.011900486086727328
+    },
+    {
+      "source": "sac_recorded_encoder_replay_offset_0_7.5_2.5_result.json",
+      "reference": "approximate_MuJoCo_replay",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": false,
+      "forward_tip_deg": -0.005578147696937797,
+      "side_yaw_deg": -5.162328365950841,
+      "top_normal_change_deg": 0.007663090015722273
+    },
+    {
+      "source": "sac_recorded_encoder_replay_stage2_same_session_result.json",
+      "reference": "approximate_MuJoCo_replay",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": false,
+      "forward_tip_deg": 6.680700101620187,
+      "side_yaw_deg": 14.449206727089402,
+      "top_normal_change_deg": 6.688082093928007
+    },
+    {
+      "source": "sac_recorded_encoder_replay_stage2_offset_1.875_0_0_friction_2_result.json",
+      "reference": "approximate_MuJoCo_replay",
+      "forward_progress": false,
+      "full_forward_flip": false,
+      "wrong_side_turn": true,
+      "forward_tip_deg": -8.522406860508509,
+      "side_yaw_deg": 34.08577402486896,
+      "top_normal_change_deg": 13.339161866687341
+    },
+    {
+      "source": "sac_sim_measured_cube_real_cube_100g_hold20_result.json",
+      "reference": "approximate_MJX_policy_rollout",
+      "face_up_reward_success": true,
+      "sampled_forward_progress": false,
+      "sampled_full_forward_flip": false,
+      "sample_count": 6,
+      "final_sample": {
+        "forward_progress": false,
+        "full_forward_flip": false,
+        "wrong_side_turn": false,
+        "forward_tip_deg": -71.04430034696665,
+        "side_yaw_deg": 5.011163329437256,
+        "top_normal_change_deg": 71.07178370745385
+      },
+      "caveat": "Relative to the first saved policy sample (step 1), after the pre-policy hold. Sparse samples and original contact/reset are not calibrated to the October 11 physical trial."
+    }
+  ],
+  "interpretation": "A front-face color change or face-up reward alone does not establish the requested forward flip. Simulated contact is currently uncalibrated; passing this gate in simulation would not validate transfer to the real hand."
+}

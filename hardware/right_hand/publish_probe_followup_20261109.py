@@ -1,0 +1,40 @@
+"""Publish saved-image review and research provenance without device access."""
+from pathlib import Path
+import hashlib,html,json,math
+
+ROOT=Path(__file__).resolve().parent
+OUT=ROOT/'right_hand_rotation_20261109/middle_probe_actual_review'
+
+
+def main():
+    actual=json.loads((OUT/'review.json').read_bytes())
+    actual['image_review']['visual_labels_basis']='assistant visual inspection of both original saved photos; labels are not automatic 3D geometry estimates'
+    (OUT/'review.json').write_text(json.dumps(actual,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+    ready=json.loads((ROOT/'right_hand_rotation_20261106/middle_clearance_probe/ready.json').read_bytes())
+    changed=[name for name,expected in ready['code_hashes'].items() if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected]
+    if changed:raise RuntimeError(f'Original bindings changed: {changed}')
+    integrity={'frozen_bindings_checked':len(ready['code_hashes']),'all_unchanged':True,'devices_opened':False}
+    (OUT/'integrity.json').write_text(json.dumps(integrity,indent=2)+'\n',encoding='utf-8')
+    changes={row['motor_id']:row for row in actual['joint_changes']}
+    labels={9:'중지 끝',11:'중지 두 번째',10:'중지 회전',12:'중지 뿌리'}
+    table=''.join(f'<tr><td>ID{ident} {labels[ident]}</td><td>{changes[ident]["before_actual_ticks"]}</td><td>{changes[ident]["after_actual_ticks"]}</td><td>{changes[ident]["delta_deg"]:+.2f}°</td></tr>' for ident in (9,11,10,12))
+    imagebase='../../middle_clearance_probe_20261106_230902_998326/'
+    middle_shift=next(row for row in actual['image_review']['marker_displacement'] if row['marker_id']==3)['center_shift_px']
+    pixels=math.hypot(*middle_shift)
+    page=f'''<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>중지 진단 실물 결과 검토</title>
+<style>body{{font:17px/1.75 system-ui;max-width:1120px;margin:30px auto;padding:0 20px;color:#172329}}h1{{font-size:28px}}.note{{padding:15px;background:#fff1d7;border-radius:8px}}.ok{{background:#e8f3ee;padding:15px;border-radius:8px}}.pair{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}img{{width:100%;display:block}}figure{{margin:0}}figcaption{{padding:6px}}table{{border-collapse:collapse;width:100%}}th,td{{text-align:left;padding:8px;border-bottom:1px solid #ddd}}.overlay{{position:relative}}.overlay img+img{{position:absolute;left:0;top:0}}input{{width:100%}}@media(max-width:760px){{.pair{{grid-template-columns:1fr}}}}</style>
+<h1>저번 중지 관찰에서 확인된 것</h1><p>2026-11-06 실행을 2026-11-09에 검토했다. 로봇이나 카메라를 다시 열지 않았다.</p>
+<div class="ok">기존 파지 → 중지 접기 → 복귀/열기 → 큐브 제거까지 완료됐다. 토크 OFF와 설정 복구가 기록됐다. 다른 손가락의 두 관찰 시점 차이는 최대 3틱이었다.</div>
+<h2>원본 사진 비교</h2><div class="pair"><figure><a href="{imagebase}cube_grasp_hold.jpg"><img src="{imagebase}cube_grasp_hold.jpg" alt="중지를 접기 전 원본 파지 사진"></a><figcaption>접기 전: 엄지가 큐브 윗단 옆에 있다.</figcaption></figure><figure><a href="{imagebase}middle_probe_hold.jpg"><img src="{imagebase}middle_probe_hold.jpg" alt="중지를 접은 뒤 원본 사진"></a><figcaption>접은 뒤: 큐브는 비슷한 화면 위치에 남고 중지는 큐브 뒤에 가려져 있다.</figcaption></figure></div>
+<p>아래 슬라이더로 두 원본을 겹쳐 비교할 수 있다. 사진 파일을 변형하거나 3D 좌표로 정합하지 않았다.</p><div class="overlay"><img src="{imagebase}cube_grasp_hold.jpg" alt="접기 전"><img id="after" src="{imagebase}middle_probe_hold.jpg" style="opacity:.5" alt="접은 뒤 겹쳐보기"></div><label>접기 전 ↔ 접은 뒤 <input type="range" min="0" max="100" value="50" aria-label="접은 뒤 사진 불투명도" oninput="document.getElementById('after').style.opacity=this.value/100"></label>
+<p>앞면 ID3 마커 중심의 화면 이동은 약 {pixels:.2f}픽셀이다. 두 사진에서 기준 ID40/41은 검출되지 않아 카메라와 큐브의 움직임을 분리하거나 mm 및 실제 회전각으로 환산하지 않는다.</p>
+<h2>기록된 실제 중지 각도 변화</h2><table><thead><tr><th>관절</th><th>접기 전 실제 틱</th><th>접은 뒤 실제 틱</th><th>변화</th></tr></thead><tbody>{table}</tbody></table><p>프로그램에 저장된 두 관찰 시점의 인코더 값이다. 중지가 움직였다는 근거이며, 각도를 음수/양수 방향으로 더 밀면 성공한다는 뜻은 아니다.</p>
+<h2>판단과 다음 검토</h2><div class="note">큐브가 두 사진에서 남아 있는 것은 확인된다. 엄지와 중지가 윗단 90° 회전 공간을 완전히 비웠는지, 하단을 잡은 채 다른 손의 회전 하중을 버티는지는 아직 증명하지 못했다. 엄지 끝은 여전히 윗단 옆에 있다.</div>
+<p>동일한 Linux 모델 경로를 다시 재생하고 중간 상태를 원본과 비교했다. 엄지만 내리는 후보, 검지/엄지 파지로 옮기는 후보와 검지 접촉을 낮추는 후보를 별도 연구 폴더에 기록한다. 원래 실행 명령과 170개 결합 원본 파일은 바꾸지 않았다.</p>
+<p><a href="review.json">실물 기록 요약</a> · <a href="integrity.json">원본 해시 확인</a> · <a href="../middle_probe_reconstruction_linux/review.json">Linux 원래 경로 재생</a> · <a href="../index_thumb_transfer/review.json">검지/엄지 전환</a> · <a href="../lower_index_refinement/review.json">검지 접촉 낮추기</a> · <a href="../lower_grip_yaw_tuning/review.json">방향 미세 조정 연구</a></p>
+</html>'''
+    (OUT/'index.html').write_text(page,encoding='utf-8')
+    print(json.dumps({'page':str(OUT/'index.html'),'source_bindings_unchanged':170,'front_marker_raw_shift_px':pixels,'devices_opened':False},ensure_ascii=False))
+
+
+if __name__=='__main__':main()

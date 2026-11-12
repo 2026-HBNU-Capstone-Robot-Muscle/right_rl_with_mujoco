@@ -1,0 +1,206 @@
+{
+  "environment": "LeapCubeFaceUp",
+  "real_cube_collision_size_applied": true,
+  "cube_physics": {
+    "original_side_m": 0.07,
+    "original_mass_kg": 0.108,
+    "side_m": 0.0545,
+    "mass_kg": 0.1,
+    "inertia_assumption": "original cube is uniform; scale by mass ratio and squared side ratio",
+    "visual_mesh_changed": false
+  },
+  "jax_devices": [
+    "cuda:0"
+  ],
+  "action_size": 16,
+  "observation": {
+    "state": [
+      108
+    ],
+    "privileged_state": [
+      179
+    ]
+  },
+  "cube_position": [
+    0.09021320194005966,
+    0.0004209112375974655,
+    0.05907928943634033
+  ],
+  "palm_position": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cube_quaternion": [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "target_quaternion": [
+    0.7071067690849304,
+    0.0,
+    0.7071067690849304,
+    0.0
+  ],
+  "start_pose_comparison": {
+    "sim_joint_rad": [
+      0.6612231731414795,
+      0.07748543471097946,
+      0.9540493488311768,
+      0.9841910600662231,
+      0.7137064933776855,
+      -0.08070163428783417,
+      0.7799475789070129,
+      0.8783472180366516,
+      0.7014026641845703,
+      0.02637660875916481,
+      0.6767897009849548,
+      0.7696176767349243,
+      0.8072068691253662,
+      0.9401061534881592,
+      0.8887046575546265,
+      0.1139146238565445
+    ],
+    "recorded_joint_rad": [
+      -0.110443963137973,
+      0.2178279254695541,
+      0.059827904317333314,
+      1.2808766114743033,
+      0.015342461468649482,
+      -0.044482789258890154,
+      0.2208958870453257,
+      1.2640028228075613,
+      1.5401193646269773,
+      0.09050752007504625,
+      0.8820416066240373,
+      1.854585426143533,
+      1.1029348400795689,
+      1.5738669419604614,
+      1.6781776355366844,
+      0.9863523002002603
+    ],
+    "max_abs_gap_rad": 1.0849677494086087,
+    "mean_abs_gap_rad": 0.5354170923180491
+  },
+  "config": {
+    "ctrl_dt": 0.05,
+    "action_scale": 0.2,
+    "position_threshold": 0.015
+  },
+  "info_keys": [
+    "rng",
+    "action_delay",
+    "step",
+    "steps_since_last_success",
+    "success_hold_steps",
+    "best_hold_steps",
+    "success_count",
+    "last_act",
+    "act_hist",
+    "last_last_act",
+    "motor_targets",
+    "qpos_error_history",
+    "cube_pos_error_history",
+    "cube_ori_error_history",
+    "goal_quat_dquat",
+    "start_cube_pos",
+    "goal_count",
+    "steps_since_goal",
+    "prev_ori_error",
+    "best_ori_error",
+    "pert_wait_steps",
+    "pert_duration_steps",
+    "pert_vel",
+    "pert_dir",
+    "last_pert_step"
+  ],
+  "fitted_contact_input": {
+    "start_m": [
+      0.10500000000000001,
+      0.025,
+      0.085
+    ],
+    "end_m": [
+      0.09877286446165964,
+      0.02293883781351987,
+      0.07538103185810438
+    ],
+    "drift_m": 0.01164260085576415,
+    "initial_penetration_m": 0.0,
+    "cube_held_above_palm": true
+  },
+  "recorded_start_test": {
+    "cube_position_before_step": [
+      0.10499999672174454,
+      0.02500000037252903,
+      0.08500000089406967
+    ],
+    "contact_count_before_step": 30,
+    "cube_position_after_step": [
+      0.1016555055975914,
+      0.022163189947605133,
+      0.07745315879583359
+    ],
+    "contact_count_after_step": 30,
+    "done_after_step": 0.0
+  },
+  "steps_run": 21,
+  "ever_success": false,
+  "rollout": [
+    {
+      "step": 1,
+      "cube_position": [
+        0.10221748054027557,
+        0.021882569417357445,
+        0.07475448399782181
+      ],
+      "cube_quaternion": [
+        0.7764225602149963,
+        -0.6277539134025574,
+        -0.049760110676288605,
+        0.02483997866511345
+      ],
+      "reward": 0.8019245266914368,
+      "done": 0.0,
+      "success": 0.0,
+      "orientation_error": 1.610329270362854
+    },
+    {
+      "step": 20,
+      "cube_position": [
+        0.13602319359779358,
+        -0.08811243623495102,
+        -0.025420309975743294
+      ],
+      "cube_quaternion": [
+        0.4246249794960022,
+        0.5612321496009827,
+        -0.7084349989891052,
+        0.053217317909002304
+      ],
+      "reward": 0.43351036310195923,
+      "done": 0.0,
+      "success": 0.0,
+      "orientation_error": 2.423279285430908
+    },
+    {
+      "step": 21,
+      "cube_position": [
+        0.13538847863674164,
+        -0.09805650264024734,
+        -0.06128496676683426
+      ],
+      "cube_quaternion": [
+        0.1742791086435318,
+        0.6804131269454956,
+        -0.7003944516181946,
+        -0.12693512439727783
+      ],
+      "reward": -0.17968301475048065,
+      "done": 1.0,
+      "success": 0.0,
+      "orientation_error": 1.7723910808563232
+    }
+  ]
+}

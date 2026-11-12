@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/screen_new_pair_grasp_20261027.py", line 99, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/screen_new_pair_grasp_20261027.py", line 21, in main
+    began=time.perf_counter();plan=NewPairGraspPlan(args.request);raw=plan.source_position();rows=plan.plan(raw);before=hashes();seed=json.loads(SEED.read_bytes());up=np.array(seed['up_world']);cfg=registry.get_default_config('LeapCubeFaceUp');cfg.impl='jax';env=registry.load('LeapCubeFaceUp',config=cfg);static=[];dynamic=[];loaded=[];hwlo,hwhi=limits();simids=np.array(SIM_TO_MOTOR_IDS)-1;native_lo=(hwlo[simids]-2048)*TICK;native_hi=(hwhi[simids]-2048)*TICK
+                                                                                                  ~~~~~~~~~^^^^^
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/new_pair_grasp_plan_20261027.py", line 43, in plan
+    if np.max(abs(values[:,:4]-a[:4]))>self.MAX_THUMB_TRAVEL or (len(rows)+40)*self.SAMPLE_PERIOD+10>self.ON_TIMEOUT:raise ValueError('Grasp cycle exceeds bounded travel/time; no writes')
+                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Grasp cycle exceeds bounded travel/time; no writes

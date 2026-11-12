@@ -1,0 +1,916 @@
+{
+  "status": "direct_opening_cube_trial_v3_ready",
+  "plan_version": "cube_place_then_completed_approach_v3",
+  "launcher": "leap_cube_grasp_trial.cmd",
+  "user_task": "큐브를 빼고 손은 그대로 두고 같은 leap_cube_grasp_trial.cmd 실행. v3 배너 확인 후 첫 터미널 SPACE. 약지 분리/엄지 여유/열기 완료와 PLACE까지 큐브는 올리지 않기. PLACE 후 초록 위·주황 카메라 쪽으로 놓고 손 제거/두 번째 SPACE. REMOVE 후 큐브 제거/세 번째 SPACE. 걸리거나 이상 소리면 Q. 로그 전달.",
+  "user_confirmed_ring_tip_palm_contact": true,
+  "observed_id12_stall_not_a_voltage_or_start_pose_gate": true,
+  "physical_root_cause_established": false,
+  "previous_simulator_failed_to_predict_physical_id12_stall": true,
+  "removed_closed_waypoint_before_placement": true,
+  "recovery_order": [
+    "ring_contact_release",
+    "thumb_clearance",
+    "open_preparation"
+  ],
+  "preplacement_id12_goal": 2472,
+  "loaded_id12_goal": 2613,
+  "loaded_approach_goals_unchanged": true,
+  "checkpoint_settle_reads": 20,
+  "checkpoint_max_error_ticks": 64,
+  "planned_motion_and_settle_budget_s": 50,
+  "live_motion_timeout_s": 55,
+  "current_pid_voltage_tracking_stops_unchanged": true,
+  "tests_passed": 97,
+  "test_duration_s": 31.105,
+  "measured_id12_plateau_regression_test_passed": true,
+  "windows_wsl_fixtures": [
+    {
+      "fixture": "grasp_trial_v3_fixture",
+      "static_cases": 67,
+      "native_ranges_unchanged": true,
+      "motion_goals": 860,
+      "nominal_motion_seconds": 43.0,
+      "preplacement_max_id12_goal": 2472,
+      "max_unapproved_self_overlap_mm": 0.0,
+      "max_unapproved_native_range_violation_rad": 0.0,
+      "dynamics": [
+        {
+          "gain_scale": 0.5,
+          "max_tracking_rad": 0.05465839255109506,
+          "max_self_overlap_mm": 1.3738550868349069,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {
+            "palm_collision_4|rf_tip": 1.081506493089996,
+            "palm_collision_6|rf_tip": 1.3738550868349069,
+            "palm_collision_7|rf_tip": 1.2277590120688444
+          },
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.0028383653717995814,
+          "self_escape_complete_at": 1.490000000000001,
+          "self_escape_complete": true
+        },
+        {
+          "gain_scale": 1.0,
+          "max_tracking_rad": 0.04626676574128191,
+          "max_self_overlap_mm": 1.3738550868349069,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {
+            "palm_collision_4|rf_tip": 1.081506493089996,
+            "palm_collision_6|rf_tip": 1.3738550868349069,
+            "palm_collision_7|rf_tip": 1.2277590120688444
+          },
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.001450066113663328,
+          "self_escape_complete_at": 1.420000000000001,
+          "self_escape_complete": true
+        },
+        {
+          "gain_scale": 1.5,
+          "max_tracking_rad": 0.04627293920403491,
+          "max_self_overlap_mm": 1.3738550868349069,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {
+            "palm_collision_4|rf_tip": 1.081506493089996,
+            "palm_collision_6|rf_tip": 1.3738550868349069,
+            "palm_collision_7|rf_tip": 1.2277590120688444
+          },
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 4.958294400834389e-05,
+          "self_escape_complete_at": 1.380000000000001,
+          "self_escape_complete": true
+        }
+      ],
+      "source_fixture_only": true
+    },
+    {
+      "fixture": "grasp_trial_v3_after_stop_fixture",
+      "static_cases": 67,
+      "native_ranges_unchanged": true,
+      "motion_goals": 824,
+      "nominal_motion_seconds": 41.2,
+      "preplacement_max_id12_goal": 2472,
+      "max_unapproved_self_overlap_mm": 0.0,
+      "max_unapproved_native_range_violation_rad": 0.0,
+      "dynamics": [
+        {
+          "gain_scale": 0.5,
+          "max_tracking_rad": 0.05465869616361474,
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {},
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.0,
+          "self_escape_complete_at": 0,
+          "self_escape_complete": true
+        },
+        {
+          "gain_scale": 1.0,
+          "max_tracking_rad": 0.04319688855490594,
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {},
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.0,
+          "self_escape_complete_at": 0,
+          "self_escape_complete": true
+        },
+        {
+          "gain_scale": 1.5,
+          "max_tracking_rad": 0.043203053182171935,
+          "max_self_overlap_mm": 0.0,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {},
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.0,
+          "self_escape_complete_at": 0,
+          "self_escape_complete": true
+        }
+      ],
+      "source_fixture_only": true
+    },
+    {
+      "fixture": "grasp_trial_v3_first_stop_fixture",
+      "static_cases": 67,
+      "native_ranges_unchanged": true,
+      "motion_goals": 859,
+      "nominal_motion_seconds": 42.95,
+      "preplacement_max_id12_goal": 2472,
+      "max_unapproved_self_overlap_mm": 0.0,
+      "max_unapproved_native_range_violation_rad": 0.0,
+      "dynamics": [
+        {
+          "gain_scale": 0.5,
+          "max_tracking_rad": 0.05465844294703415,
+          "max_self_overlap_mm": 1.2772483448487852,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {
+            "palm_collision_4|rf_tip": 0.9784652431149583,
+            "palm_collision_6|rf_tip": 1.2772483448487852,
+            "palm_collision_7|rf_tip": 1.1303794546509496
+          },
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 1.4614351350095291e-05,
+          "self_escape_complete_at": 1.440000000000001,
+          "self_escape_complete": true
+        },
+        {
+          "gain_scale": 1.0,
+          "max_tracking_rad": 0.027456282964391954,
+          "max_self_overlap_mm": 1.2772483448487852,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {
+            "palm_collision_4|rf_tip": 0.9784652431149583,
+            "palm_collision_6|rf_tip": 1.2772483448487852,
+            "palm_collision_7|rf_tip": 1.1303794546509496
+          },
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.003923945652531522,
+          "self_escape_complete_at": 1.350000000000001,
+          "self_escape_complete": true
+        },
+        {
+          "gain_scale": 1.5,
+          "max_tracking_rad": 0.026335009288692812,
+          "max_self_overlap_mm": 1.2772483448487852,
+          "max_support_overlap_mm": 0.0,
+          "finite": true,
+          "initial_self_contacts_mm": {
+            "palm_collision_4|rf_tip": 0.9784652431149583,
+            "palm_collision_6|rf_tip": 1.2772483448487852,
+            "palm_collision_7|rf_tip": 1.1303794546509496
+          },
+          "self_escape_max_unapproved_overlap_mm": 0.0,
+          "self_escape_max_step_increase_mm": 0.0,
+          "self_escape_complete_at": 1.320000000000001,
+          "self_escape_complete": true
+        }
+      ],
+      "source_fixture_only": true
+    }
+  ],
+  "latest_user_trials": [
+    {
+      "folder": "cube_grasp_trial_20261022_023904_356527",
+      "sha256": "483a823c4ad7b6842c8dd2dd1430cc435f27f56af643ec94273a91ae84421b9b",
+      "status": "stopped",
+      "error": "ID12 no progress over 20 fresh samples with >=64 tick error; no target advance",
+      "all_torque_off_verified": true,
+      "settings_restored": true,
+      "initial_ticks": [
+        3031,
+        2900,
+        2894,
+        1803,
+        3293,
+        2049,
+        2243,
+        2407,
+        3090,
+        2417,
+        2489,
+        2412,
+        3232,
+        2146,
+        2847,
+        3056
+      ],
+      "final_actual_ticks": [
+        3032,
+        2902,
+        2893,
+        2000,
+        3293,
+        2049,
+        2249,
+        2439,
+        3090,
+        2466,
+        2490,
+        2477,
+        3232,
+        2146,
+        2671,
+        3061
+      ],
+      "final_goal_ticks": [
+        3042,
+        2915,
+        2889,
+        2015,
+        3295,
+        2044,
+        2254,
+        2460,
+        3090,
+        2496,
+        2496,
+        2575,
+        3237,
+        2144,
+        2667,
+        3054
+      ],
+      "off_snapshots": [
+        [
+          3031,
+          2899,
+          2893,
+          1781,
+          3293,
+          2049,
+          2246,
+          2406,
+          3090,
+          2437,
+          2488,
+          2412,
+          3232,
+          2146,
+          2731,
+          3061
+        ],
+        [
+          3031,
+          2890,
+          2893,
+          1790,
+          3293,
+          2049,
+          2246,
+          2406,
+          3090,
+          2437,
+          2488,
+          2412,
+          3232,
+          2146,
+          2779,
+          3061
+        ]
+      ],
+      "minimum_voltage_v": 4.2,
+      "peak_current_ma": 171,
+      "samples": 107,
+      "motion_goal_writes": 108,
+      "images_by_phase": {
+        "preflight": {
+          "count": 20,
+          "first": "frame_00000.jpg",
+          "last": "frame_00019.jpg"
+        },
+        "stable_off_readings": {
+          "count": 4,
+          "first": "frame_00020.jpg",
+          "last": "frame_00023.jpg"
+        },
+        "screen_current_pose": {
+          "count": 264,
+          "first": "frame_00024.jpg",
+          "last": "frame_00287.jpg"
+        },
+        "countdown": {
+          "count": 47,
+          "first": "frame_00288.jpg",
+          "last": "frame_00334.jpg"
+        },
+        "configure_off": {
+          "count": 2,
+          "first": "frame_00335.jpg",
+          "last": "frame_00336.jpg"
+        },
+        "enable_hold": {
+          "count": 2,
+          "first": "frame_00337.jpg",
+          "last": "frame_00338.jpg"
+        },
+        "stage_0_empty_recover": {
+          "count": 47,
+          "first": "frame_00339.jpg",
+          "last": "frame_00385.jpg"
+        },
+        "post_off_reference": {
+          "count": 6,
+          "first": "frame_00386.jpg",
+          "last": "frame_00391.jpg"
+        }
+      },
+      "id12_trace": [
+        {
+          "goal": 2412,
+          "actual": 2412,
+          "current_ma": 0,
+          "tracking_rad": 0.0,
+          "t": 0.29599999997299165
+        },
+        {
+          "goal": 2427,
+          "actual": 2414,
+          "current_ma": 24,
+          "tracking_rad": 0.019941750242513337,
+          "t": 0.8119999999762513
+        },
+        {
+          "goal": 2443,
+          "actual": 2417,
+          "current_ma": 46,
+          "tracking_rad": 0.039883500485026674,
+          "t": 1.2959999999729916
+        },
+        {
+          "goal": 2458,
+          "actual": 2422,
+          "current_ma": 58,
+          "tracking_rad": 0.05522330836388308,
+          "t": 1.8429999999934807
+        },
+        {
+          "goal": 2473,
+          "actual": 2441,
+          "current_ma": 56,
+          "tracking_rad": 0.04908738521234052,
+          "t": 2.375
+        },
+        {
+          "goal": 2489,
+          "actual": 2448,
+          "current_ma": 72,
+          "tracking_rad": 0.06289321230331128,
+          "t": 2.8429999999934807
+        },
+        {
+          "goal": 2504,
+          "actual": 2456,
+          "current_ma": 84,
+          "tracking_rad": 0.07363107781851078,
+          "t": 3.2959999999729916
+        },
+        {
+          "goal": 2519,
+          "actual": 2462,
+          "current_ma": 101,
+          "tracking_rad": 0.08743690490948154,
+          "t": 3.89000000001397
+        },
+        {
+          "goal": 2535,
+          "actual": 2470,
+          "current_ma": 113,
+          "tracking_rad": 0.09970875121256667,
+          "t": 4.48399999999674
+        },
+        {
+          "goal": 2545,
+          "actual": 2475,
+          "current_ma": 128,
+          "tracking_rad": 0.10737865515199488,
+          "t": 4.920999999972992
+        },
+        {
+          "goal": 2547,
+          "actual": 2475,
+          "current_ma": 126,
+          "tracking_rad": 0.11044661672776616,
+          "t": 4.98399999999674
+        },
+        {
+          "goal": 2549,
+          "actual": 2475,
+          "current_ma": 130,
+          "tracking_rad": 0.11351457830353745,
+          "t": 5.045999999972992
+        },
+        {
+          "goal": 2550,
+          "actual": 2475,
+          "current_ma": 131,
+          "tracking_rad": 0.11504855909142309,
+          "t": 5.10899999999674
+        },
+        {
+          "goal": 2552,
+          "actual": 2475,
+          "current_ma": 134,
+          "tracking_rad": 0.11811652066719437,
+          "t": 5.170999999972992
+        },
+        {
+          "goal": 2553,
+          "actual": 2475,
+          "current_ma": 136,
+          "tracking_rad": 0.11965050145508001,
+          "t": 5.23399999999674
+        },
+        {
+          "goal": 2555,
+          "actual": 2475,
+          "current_ma": 139,
+          "tracking_rad": 0.1227184630308513,
+          "t": 5.295999999972992
+        },
+        {
+          "goal": 2556,
+          "actual": 2475,
+          "current_ma": 142,
+          "tracking_rad": 0.12425244381873693,
+          "t": 5.35899999999674
+        },
+        {
+          "goal": 2558,
+          "actual": 2475,
+          "current_ma": 145,
+          "tracking_rad": 0.12732040539450823,
+          "t": 5.4060000000172295
+        },
+        {
+          "goal": 2559,
+          "actual": 2476,
+          "current_ma": 146,
+          "tracking_rad": 0.12732040539450823,
+          "t": 5.452999999979511
+        },
+        {
+          "goal": 2561,
+          "actual": 2476,
+          "current_ma": 158,
+          "tracking_rad": 0.1303883669702795,
+          "t": 5.5
+        },
+        {
+          "goal": 2562,
+          "actual": 2477,
+          "current_ma": 149,
+          "tracking_rad": 0.1303883669702795,
+          "t": 5.5310000000172295
+        },
+        {
+          "goal": 2564,
+          "actual": 2477,
+          "current_ma": 151,
+          "tracking_rad": 0.13345632854605077,
+          "t": 5.577999999979511
+        },
+        {
+          "goal": 2565,
+          "actual": 2477,
+          "current_ma": 153,
+          "tracking_rad": 0.1349903093339364,
+          "t": 5.64000000001397
+        },
+        {
+          "goal": 2567,
+          "actual": 2477,
+          "current_ma": 158,
+          "tracking_rad": 0.1380582709097077,
+          "t": 5.702999999979511
+        },
+        {
+          "goal": 2569,
+          "actual": 2477,
+          "current_ma": 161,
+          "tracking_rad": 0.14112623248547898,
+          "t": 5.76500000001397
+        },
+        {
+          "goal": 2570,
+          "actual": 2477,
+          "current_ma": 162,
+          "tracking_rad": 0.14266021327336462,
+          "t": 5.811999999976251
+        },
+        {
+          "goal": 2572,
+          "actual": 2477,
+          "current_ma": 165,
+          "tracking_rad": 0.14572817484913592,
+          "t": 5.85899999999674
+        },
+        {
+          "goal": 2573,
+          "actual": 2477,
+          "current_ma": 168,
+          "tracking_rad": 0.14726215563702155,
+          "t": 5.9060000000172295
+        },
+        {
+          "goal": 2575,
+          "actual": 2477,
+          "current_ma": 171,
+          "tracking_rad": 0.15033011721279282,
+          "t": 5.952999999979511
+        }
+      ]
+    },
+    {
+      "folder": "cube_grasp_trial_20261022_024003_945968",
+      "sha256": "3da3965f913baf175a424ddd34ad2004e249909a55c13cc8d017265f272096ef",
+      "status": "stopped",
+      "error": "ID12 tracking 0.181rad; goal=2578, actual=2460, current=207mA",
+      "all_torque_off_verified": true,
+      "settings_restored": true,
+      "initial_ticks": [
+        3031,
+        2890,
+        2893,
+        1790,
+        3293,
+        2049,
+        2246,
+        2405,
+        3090,
+        2437,
+        2488,
+        2412,
+        3231,
+        2146,
+        2848,
+        3057
+      ],
+      "final_actual_ticks": [
+        3032,
+        2901,
+        2894,
+        2003,
+        3293,
+        2049,
+        2250,
+        2441,
+        3088,
+        2471,
+        2487,
+        2460,
+        3232,
+        2146,
+        2667,
+        3063
+      ],
+      "final_goal_ticks": [
+        3043,
+        2913,
+        2889,
+        2017,
+        3295,
+        2044,
+        2255,
+        2461,
+        3090,
+        2501,
+        2496,
+        2578,
+        3237,
+        2144,
+        2664,
+        3054
+      ],
+      "off_snapshots": [
+        [
+          3031,
+          2897,
+          2893,
+          1781,
+          3293,
+          2049,
+          2248,
+          2406,
+          3092,
+          2453,
+          2473,
+          2412,
+          3232,
+          2152,
+          2726,
+          3070
+        ],
+        [
+          3031,
+          2885,
+          2894,
+          1792,
+          3293,
+          2049,
+          2248,
+          2406,
+          3092,
+          2453,
+          2473,
+          2412,
+          3232,
+          2161,
+          2776,
+          3070
+        ]
+      ],
+      "minimum_voltage_v": 4.1,
+      "peak_current_ma": 207,
+      "samples": 115,
+      "motion_goal_writes": 116,
+      "images_by_phase": {
+        "preflight": {
+          "count": 20,
+          "first": "frame_00000.jpg",
+          "last": "frame_00019.jpg"
+        },
+        "stable_off_readings": {
+          "count": 4,
+          "first": "frame_00020.jpg",
+          "last": "frame_00023.jpg"
+        },
+        "screen_current_pose": {
+          "count": 249,
+          "first": "frame_00024.jpg",
+          "last": "frame_00272.jpg"
+        },
+        "countdown": {
+          "count": 45,
+          "first": "frame_00273.jpg",
+          "last": "frame_00317.jpg"
+        },
+        "configure_off": {
+          "count": 2,
+          "first": "frame_00318.jpg",
+          "last": "frame_00319.jpg"
+        },
+        "enable_hold": {
+          "count": 2,
+          "first": "frame_00320.jpg",
+          "last": "frame_00321.jpg"
+        },
+        "stage_0_empty_recover": {
+          "count": 47,
+          "first": "frame_00322.jpg",
+          "last": "frame_00368.jpg"
+        },
+        "post_off_reference": {
+          "count": 5,
+          "first": "frame_00369.jpg",
+          "last": "frame_00373.jpg"
+        }
+      },
+      "id12_trace": [
+        {
+          "goal": 2412,
+          "actual": 2412,
+          "current_ma": 0,
+          "tracking_rad": 0.0,
+          "t": 0.2970000000204891
+        },
+        {
+          "goal": 2427,
+          "actual": 2414,
+          "current_ma": 23,
+          "tracking_rad": 0.019941750242513337,
+          "t": 0.8120000000344589
+        },
+        {
+          "goal": 2441,
+          "actual": 2417,
+          "current_ma": 42,
+          "tracking_rad": 0.03681553890925539,
+          "t": 1.3429999999934807
+        },
+        {
+          "goal": 2456,
+          "actual": 2420,
+          "current_ma": 64,
+          "tracking_rad": 0.05522330836388308,
+          "t": 1.8429999999934807
+        },
+        {
+          "goal": 2470,
+          "actual": 2431,
+          "current_ma": 67,
+          "tracking_rad": 0.059825250727540004,
+          "t": 2.312000000034459
+        },
+        {
+          "goal": 2485,
+          "actual": 2436,
+          "current_ma": 87,
+          "tracking_rad": 0.07516505860639641,
+          "t": 2.7810000000172295
+        },
+        {
+          "goal": 2499,
+          "actual": 2440,
+          "current_ma": 101,
+          "tracking_rad": 0.09050486648525283,
+          "t": 3.25
+        },
+        {
+          "goal": 2514,
+          "actual": 2445,
+          "current_ma": 119,
+          "tracking_rad": 0.10584467436410924,
+          "t": 3.7179999999934807
+        },
+        {
+          "goal": 2529,
+          "actual": 2446,
+          "current_ma": 145,
+          "tracking_rad": 0.12732040539450823,
+          "t": 4.172000000020489
+        },
+        {
+          "goal": 2543,
+          "actual": 2449,
+          "current_ma": 163,
+          "tracking_rad": 0.14419419406125028,
+          "t": 4.75
+        },
+        {
+          "goal": 2550,
+          "actual": 2454,
+          "current_ma": 166,
+          "tracking_rad": 0.14726215563702155,
+          "t": 5.047000000020489
+        },
+        {
+          "goal": 2552,
+          "actual": 2454,
+          "current_ma": 170,
+          "tracking_rad": 0.15033011721279282,
+          "t": 5.10899999999674
+        },
+        {
+          "goal": 2553,
+          "actual": 2454,
+          "current_ma": 173,
+          "tracking_rad": 0.1518640980006785,
+          "t": 5.172000000020489
+        },
+        {
+          "goal": 2555,
+          "actual": 2454,
+          "current_ma": 178,
+          "tracking_rad": 0.15493205957644976,
+          "t": 5.23399999999674
+        },
+        {
+          "goal": 2556,
+          "actual": 2454,
+          "current_ma": 181,
+          "tracking_rad": 0.1564660403643354,
+          "t": 5.297000000020489
+        },
+        {
+          "goal": 2558,
+          "actual": 2454,
+          "current_ma": 182,
+          "tracking_rad": 0.1595340019401067,
+          "t": 5.35899999999674
+        },
+        {
+          "goal": 2559,
+          "actual": 2454,
+          "current_ma": 184,
+          "tracking_rad": 0.16106798272799233,
+          "t": 5.422000000020489
+        },
+        {
+          "goal": 2561,
+          "actual": 2455,
+          "current_ma": 187,
+          "tracking_rad": 0.16260196351587797,
+          "t": 5.48399999999674
+        },
+        {
+          "goal": 2562,
+          "actual": 2455,
+          "current_ma": 188,
+          "tracking_rad": 0.1641359443037636,
+          "t": 5.547000000020489
+        },
+        {
+          "goal": 2563,
+          "actual": 2455,
+          "current_ma": 190,
+          "tracking_rad": 0.16566992509164924,
+          "t": 5.60899999999674
+        },
+        {
+          "goal": 2565,
+          "actual": 2455,
+          "current_ma": 193,
+          "tracking_rad": 0.16873788666742054,
+          "t": 5.6560000000172295
+        },
+        {
+          "goal": 2566,
+          "actual": 2455,
+          "current_ma": 197,
+          "tracking_rad": 0.17027186745530618,
+          "t": 5.703000000037719
+        },
+        {
+          "goal": 2568,
+          "actual": 2455,
+          "current_ma": 197,
+          "tracking_rad": 0.17333982903107745,
+          "t": 5.76500000001397
+        },
+        {
+          "goal": 2569,
+          "actual": 2455,
+          "current_ma": 201,
+          "tracking_rad": 0.17487380981896308,
+          "t": 5.828000000037719
+        },
+        {
+          "goal": 2571,
+          "actual": 2455,
+          "current_ma": 204,
+          "tracking_rad": 0.17794177139473438,
+          "t": 5.89000000001397
+        },
+        {
+          "goal": 2572,
+          "actual": 2459,
+          "current_ma": 198,
+          "tracking_rad": 0.17333982903107745,
+          "t": 5.953000000037719
+        },
+        {
+          "goal": 2574,
+          "actual": 2460,
+          "current_ma": 200,
+          "tracking_rad": 0.17487380981896308,
+          "t": 6.0
+        },
+        {
+          "goal": 2575,
+          "actual": 2460,
+          "current_ma": 203,
+          "tracking_rad": 0.17640779060684875,
+          "t": 6.062000000034459
+        },
+        {
+          "goal": 2577,
+          "actual": 2460,
+          "current_ma": 202,
+          "tracking_rad": 0.17947575218262002,
+          "t": 6.10899999999674
+        },
+        {
+          "goal": 2578,
+          "actual": 2460,
+          "current_ma": 207,
+          "tracking_rad": 0.18100973297050565,
+          "t": 6.172000000020489
+        }
+      ]
+    }
+  ],
+  "hardware_commands_sent_by_assistant": 0,
+  "physical_grasp_verified": false,
+  "physical_rotation_verified": false,
+  "live_sac": false,
+  "limitation": "Geometry and native dynamics are not calibrated enough to predict every real contact, cable load or static friction. The revised physical opening still requires an operator-run observation."
+}

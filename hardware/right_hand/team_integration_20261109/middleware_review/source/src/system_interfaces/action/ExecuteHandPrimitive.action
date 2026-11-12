@@ -1,0 +1,31 @@
+# Goal: 손 어댑터에서 하나의 추상 동작 수행
+string scan_id
+string execution_id
+uint32 move_index
+uint32 step_index
+string cube_move
+string target_face
+# Current URFDLB direction slots contain these original face labels.
+string face_direction_order
+uint8 target_face_direction_index
+# Signed quarter turns, clockwise as viewed from outside target_face. 0 for non-rotation steps.
+int8 clockwise_quarter_turns
+string primitive_id
+bool dry_run
+# Optional deterministic model output passed by the dry-run sequence executor.
+string policy_id
+float64[] policy_action_values
+---
+# Result
+bool success
+string error_code
+string error_message
+---
+# Feedback state
+uint8 STATE_ACCEPTED=0
+uint8 STATE_EXECUTING=1
+uint8 STATE_COMPLETED=2
+uint8 STATE_FAILED=3
+uint8 STATE_CANCELLED=4
+uint8 state
+string message

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/evaluate_feedback_body_hold_20261106.py", line 63, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/evaluate_feedback_body_hold_20261106.py", line 62, in main
+    folder=out/f'torque{torque:+g}';folder.mkdir(exist_ok=True);v=trial(m,z,torque,a.mode,folder);cases.append(v);report=dict(status='perfect_simulated_pose_feedback_hold_under_unknown_load',source_state=source.relative_to(R).as_posix(),source_state_sha256=sha(source),source_model_sha256=sha(model),cases=cases,not_a_live_camera_or_SAC_controller=True,controller_does_not_read_the_load=True,native_geometry_force_limits_and_health_bounds_unchanged=True,devices_opened=False,hardware_execution_allowed=False);(out/'review.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps({k:v for k,v in v.items() if k not in ('trace','certificate')}),flush=True)
+                                                                  ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/evaluate_feedback_body_hold_20261106.py", line 31, in trial
+    proposal=proposal-m.actuator_biasprm[:,2]*d.qvel[:16]/m.actuator_gainprm[:,0];wanted=np.empty(16);wanted[ids]=proposal/TICK+2048;goals=planner.advance(wanted-planner.continuous)
+                                                                                                                                           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/김준서/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/offline_fractional_goal_accumulator_20261105.py", line 22, in advance
+    if np.any(proposed<self.lower-1e-10) or np.any(proposed>self.upper+1e-10):raise ValueError('native planner bound')
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: native planner bound

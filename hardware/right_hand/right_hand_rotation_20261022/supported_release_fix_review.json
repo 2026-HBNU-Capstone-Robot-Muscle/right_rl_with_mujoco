@@ -1,0 +1,81 @@
+{
+  "status": "revised_EMPTY_rehearsal_ready_for_operator",
+  "source_run": "supported_yaw_empty_20261022_155659_749370",
+  "source_result_sha256": "7b8bfcc730b0d1a4645bf391c308b2cc3e907404f4bf911fc8ce0fcc68e7de58",
+  "source_hardware_write_count": 0,
+  "source_torque_off_verified": true,
+  "source_camera_good_frames": 405,
+  "source_camera_blank_frames": 0,
+  "actual_failure": "Low-gain dynamics recontacted the same ring-tip/palm pair at 2.51s, after the 2.5s separation deadline.",
+  "modeled_recontact_mm": 0.001097412265664384,
+  "diagnostic_bug": "Derived EMPTY plan used the historical 64-tick diagnostic limit; its active certificate limit was 80.",
+  "plan_version": "supported_yaw_empty_rehearsal_v2",
+  "revision": "For PIP recovery travel beyond 80 ticks, add up to 64 ticks of ring-tip extension in the initial EMPTY release. Short releases and the subsequent suffix remain unchanged.",
+  "fixture_static_cases": 67,
+  "fixture_dynamic_cases": 3,
+  "maximum_static_separation_ticks": 80,
+  "dynamics": [
+    {
+      "gain_scale": 0.5,
+      "max_tracking_rad": 0.05574254110795507,
+      "max_self_overlap_mm": 2.8646465194977657,
+      "max_support_overlap_mm": 0.0,
+      "finite": true,
+      "initial_self_contacts_mm": {
+        "palm_collision_4|rf_tip": 2.7049452837281804,
+        "palm_collision_6|rf_tip": 2.8646465194977657,
+        "palm_collision_7|rf_tip": 2.7467636892667238
+      },
+      "self_escape_max_unapproved_overlap_mm": 0.0,
+      "self_escape_max_step_increase_mm": 0.014400885570316213,
+      "self_escape_complete_at": 2.349999999999994,
+      "self_escape_complete": true
+    },
+    {
+      "gain_scale": 1.0,
+      "max_tracking_rad": 0.05149577314529319,
+      "max_self_overlap_mm": 2.8646465194977657,
+      "max_support_overlap_mm": 0.0,
+      "finite": true,
+      "initial_self_contacts_mm": {
+        "palm_collision_4|rf_tip": 2.7049452837281804,
+        "palm_collision_6|rf_tip": 2.8646465194977657,
+        "palm_collision_7|rf_tip": 2.7467636892667238
+      },
+      "self_escape_max_unapproved_overlap_mm": 0.0,
+      "self_escape_max_step_increase_mm": 0.05229332966958673,
+      "self_escape_complete_at": 2.2799999999999954,
+      "self_escape_complete": true
+    },
+    {
+      "gain_scale": 1.5,
+      "max_tracking_rad": 0.0493700419364691,
+      "max_self_overlap_mm": 2.8646465194977657,
+      "max_support_overlap_mm": 0.0,
+      "finite": true,
+      "initial_self_contacts_mm": {
+        "palm_collision_4|rf_tip": 2.7049452837281804,
+        "palm_collision_6|rf_tip": 2.8646465194977657,
+        "palm_collision_7|rf_tip": 2.7467636892667238
+      },
+      "self_escape_max_unapproved_overlap_mm": 0.0,
+      "self_escape_max_step_increase_mm": 0.014062885313180923,
+      "self_escape_complete_at": 2.299999999999995,
+      "self_escape_complete": true
+    }
+  ],
+  "native_ranges_unchanged": true,
+  "release_deadline_s": 2.5,
+  "release_travel_limit_ticks": 80,
+  "current_cap_ma": 450,
+  "maximum_goal_step_ticks": 2,
+  "motion_deadline_s": 75,
+  "windows_wsl_fixtures_passed": 18,
+  "tests_passed": 152,
+  "agent_hardware_commands_sent": 0,
+  "cube_allowed": false,
+  "loaded_path_approved": false,
+  "physical_rotation_verified": false,
+  "live_sac": false,
+  "next_action": "Cube OUT. Leave the hand as-is. Run leap_supported_yaw_empty.cmd; SPACE, observe ring-tip/palm separation and SPACE. Automatic OFF after rehearsal; Q stops."
+}

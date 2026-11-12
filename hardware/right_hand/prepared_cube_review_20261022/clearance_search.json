@@ -1,0 +1,808 @@
+{
+  "status": "offline_clearance_search",
+  "hardware_execution_allowed": false,
+  "motor_commands_sent": 0,
+  "cube_reset_synthetic": true,
+  "model_manifest": {
+    "projection_mm": 34.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 11.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          11.3
+        ],
+        [
+          37.0,
+          65.0,
+          17.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          17.3
+        ],
+        [
+          37.0,
+          65.0,
+          77.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "additional_middle_thumb_hull_proxies": [
+      {
+        "name": "mf_bs_offline_hull_0",
+        "body": "mf_bs",
+        "source_mesh": "base"
+      },
+      {
+        "name": "mf_px_offline_hull_0",
+        "body": "mf_px",
+        "source_mesh": "proximal"
+      },
+      {
+        "name": "mf_md_offline_hull_0",
+        "body": "mf_md",
+        "source_mesh": "medial"
+      },
+      {
+        "name": "mf_ds_offline_hull_0",
+        "body": "mf_ds",
+        "source_mesh": "distal"
+      },
+      {
+        "name": "mf_ds_offline_hull_3",
+        "body": "mf_ds",
+        "source_mesh": "tip"
+      },
+      {
+        "name": "th_px_offline_hull_0",
+        "body": "th_px",
+        "source_mesh": "thumb_proximal"
+      },
+      {
+        "name": "th_ds_offline_hull_0",
+        "body": "th_ds",
+        "source_mesh": "thumb_distal"
+      },
+      {
+        "name": "th_ds_offline_hull_3",
+        "body": "th_ds",
+        "source_mesh": "thumb_tip"
+      }
+    ],
+    "additional_proxy_caveat": "Offline sensitivity: convex visual-mesh hulls overapproximate concavities; no cube contacts, no fitted offsets."
+  },
+  "variants": [
+    {
+      "delta_id1": 0,
+      "fade": false,
+      "static_overlap_mm": 16.097473574396474,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.16516660009986,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.1049266297446978,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.3024518990285883,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10206552054812912,
+          "tip_deg": 89.88373870159565,
+          "off_axis_deg": 0.07415452533339936,
+          "target_error_deg": 0.13789699506267525,
+          "shift_mm": 10.070083751045356
+        }
+      ]
+    },
+    {
+      "delta_id1": -16,
+      "fade": false,
+      "static_overlap_mm": 15.085021834119246,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.0437050235665957,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10252332591088309,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.2668578231622447,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10207909363871659,
+          "tip_deg": 89.88160796570833,
+          "off_axis_deg": 0.07682757344086293,
+          "target_error_deg": 0.1411352107887209,
+          "shift_mm": 9.601078075547552
+        }
+      ]
+    },
+    {
+      "delta_id1": -16,
+      "fade": true,
+      "static_overlap_mm": 15.340727154541437,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.1314987935630736,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10311261440123953,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.3494036000486929,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10207545114561678,
+          "tip_deg": 89.9009723494985,
+          "off_axis_deg": 0.10077195401450588,
+          "target_error_deg": 0.14128503017593733,
+          "shift_mm": 9.099642928659426
+        }
+      ]
+    },
+    {
+      "delta_id1": -32,
+      "fade": false,
+      "static_overlap_mm": 14.045175131658867,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.236778740103443,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10423836079023352,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.3386082589105994,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10452653704296466,
+          "tip_deg": 89.92151572921277,
+          "off_axis_deg": 0.11201763670844687,
+          "target_error_deg": 0.1367762030935749,
+          "shift_mm": 8.193027759827757
+        }
+      ]
+    },
+    {
+      "delta_id1": -32,
+      "fade": true,
+      "static_overlap_mm": 14.633423211703235,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.070076279949172,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10403539439295262,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.395344240885654,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10210324707546792,
+          "tip_deg": 89.88291767549276,
+          "off_axis_deg": 0.07838427455669658,
+          "target_error_deg": 0.14089841401436973,
+          "shift_mm": 9.91388992759395
+        }
+      ]
+    },
+    {
+      "delta_id1": -64,
+      "fade": false,
+      "static_overlap_mm": 11.885818423675595,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.0672957477042424,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.11811281731559581,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.2962118565451206,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.14293915478688746,
+          "tip_deg": 89.99451324464832,
+          "off_axis_deg": 0.5247456428925851,
+          "target_error_deg": 0.5247743267430471,
+          "shift_mm": 9.710781813963946
+        }
+      ]
+    },
+    {
+      "delta_id1": -64,
+      "fade": true,
+      "static_overlap_mm": 13.04599544771453,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.044234398616236,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10270120946465067,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.1089549965919103,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10416640719381198,
+          "tip_deg": 89.2585856036804,
+          "off_axis_deg": 0.10774485636857313,
+          "target_error_deg": 0.7492023085610745,
+          "shift_mm": 11.492056925411076
+        }
+      ]
+    },
+    {
+      "delta_id1": -96,
+      "fade": false,
+      "static_overlap_mm": 9.624605529893469,
+      "pair": [
+        "palm_collision_4",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.0422582075244948,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.15726746716676338,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.3060124612156025,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.19166463551057467,
+          "tip_deg": 89.99045311710925,
+          "off_axis_deg": 1.0258147936924165,
+          "target_error_deg": 1.0258592162165836,
+          "shift_mm": 9.00737307198945
+        }
+      ]
+    },
+    {
+      "delta_id1": -96,
+      "fade": true,
+      "static_overlap_mm": 11.469438610025435,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.0423081228353146,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.11323608613116551,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.2265976825181282,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.1360246402900319,
+          "tip_deg": 89.96731046841123,
+          "off_axis_deg": 0.14772262872308664,
+          "target_error_deg": 0.1512963314836233,
+          "shift_mm": 8.222303692562829
+        }
+      ]
+    },
+    {
+      "delta_id1": -128,
+      "fade": false,
+      "static_overlap_mm": 8.92686175677918,
+      "pair": [
+        "rf_tip",
+        "th_tip"
+      ],
+      "worst_sample": 24,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.1062018282415993,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.19548400781994785,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 0.968917201536786,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.24385236252278109,
+          "tip_deg": 90.010548425324,
+          "off_axis_deg": 0.36281700399527694,
+          "target_error_deg": 0.3629703118618802,
+          "shift_mm": 10.337632717049093
+        }
+      ]
+    },
+    {
+      "delta_id1": -128,
+      "fade": true,
+      "static_overlap_mm": 9.768813527943914,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.0440944848162068,
+          "pair": [
+            "if_md_collision_5",
+            "mf_md_collision_5"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.14248781479738176,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 0.9537311132951383,
+          "pair": [
+            "mf_md_collision_5",
+            "rf_ds_collision_1"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.1633147135796919,
+          "tip_deg": 89.9792298688569,
+          "off_axis_deg": 0.1565713710904759,
+          "target_error_deg": 0.15794300340437367,
+          "shift_mm": 8.046864502614525
+        }
+      ]
+    },
+    {
+      "delta_id1": 16,
+      "fade": false,
+      "static_overlap_mm": 17.081920489420227,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.3056987831758793,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10325413663351735,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.438892991517401,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10204432650046802,
+          "tip_deg": 89.96369529059538,
+          "off_axis_deg": 0.14448157392827368,
+          "target_error_deg": 0.14897300571349334,
+          "shift_mm": 8.7598308685095
+        }
+      ]
+    },
+    {
+      "delta_id1": 16,
+      "fade": true,
+      "static_overlap_mm": 16.838466934075058,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.1972916238067315,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10319995991719666,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.4319932509633095,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10218014286570742,
+          "tip_deg": 89.88906827562563,
+          "off_axis_deg": 0.09417439622769515,
+          "target_error_deg": 0.14551515937203655,
+          "shift_mm": 9.226439018552586
+        }
+      ]
+    },
+    {
+      "delta_id1": 32,
+      "fade": false,
+      "static_overlap_mm": 18.03776958517973,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.385035767873334,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10749579710549773,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.4225967158337298,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.11413496800715461,
+          "tip_deg": 89.89287795592935,
+          "off_axis_deg": 0.09751309980251123,
+          "target_error_deg": 0.1448583245420107,
+          "shift_mm": 10.34616302272961
+        }
+      ]
+    },
+    {
+      "delta_id1": 32,
+      "fade": true,
+      "static_overlap_mm": 17.503657689037805,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.2223265034154536,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10303218390425961,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 1.93853147042586,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.10862424197200249,
+          "tip_deg": 89.93101158158136,
+          "off_axis_deg": 0.11933652376143325,
+          "target_error_deg": 0.13784268590968332,
+          "shift_mm": 8.824025305058015
+        }
+      ]
+    },
+    {
+      "delta_id1": 64,
+      "fade": false,
+      "static_overlap_mm": 19.861388820968834,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.5587854186498258,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.15953362877495825,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 2.440169013579392,
+          "pair": [
+            "palm_collision_8",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.15954295755229841,
+          "tip_deg": 89.95113166781493,
+          "off_axis_deg": 0.1459215420651246,
+          "target_error_deg": 0.15388700087527615,
+          "shift_mm": 10.384358033971518
+        }
+      ]
+    },
+    {
+      "delta_id1": 64,
+      "fade": true,
+      "static_overlap_mm": 18.90739322042538,
+      "pair": [
+        "palm_collision_8",
+        "th_tip"
+      ],
+      "worst_sample": 32,
+      "static_support_mm": 0.0,
+      "outside_native_range": false,
+      "dynamic": [
+        {
+          "loaded": false,
+          "max_self_overlap_mm": 1.426480013656974,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.1150563127251325,
+          "tip_deg": null,
+          "off_axis_deg": null,
+          "target_error_deg": null,
+          "shift_mm": null
+        },
+        {
+          "loaded": true,
+          "max_self_overlap_mm": 2.4415681207986095,
+          "pair": [
+            "palm_collision_4",
+            "th_tip"
+          ],
+          "max_support_mm": 0.0,
+          "max_tracking_rad": 0.11494317495641515,
+          "tip_deg": 89.89551069281434,
+          "off_axis_deg": 0.1000582377325454,
+          "target_error_deg": 0.14467087986026145,
+          "shift_mm": 9.252369350770492
+        }
+      ]
+    }
+  ],
+  "caveat": "Small anatomical thumb-tip changes, not trained SAC actions or physical clearance proof."
+}

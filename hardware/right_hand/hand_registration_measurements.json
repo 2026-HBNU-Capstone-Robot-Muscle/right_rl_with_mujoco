@@ -1,0 +1,54 @@
+{
+  "status": "approximate_axis_correction_pending_visual_validation",
+  "hardware_authorized": false,
+  "marker_id": 40,
+  "reference_joint_motor_id": 9,
+  "reference_joint_sim_name": "mf_mcp",
+  "reference_point": "Middle motor 9 axis: user estimates about 7 mm toward fingertips beyond the previously measured joint start at 40 mm",
+  "reference_point_clarification": {
+    "annotation_photo": "C:/Users/김준서/AppData/Local/Temp/codex-clipboard-cba70b79-e2cd-44ce-b3ca-2be1957e7307.png",
+    "middle_motor_axis": "User purple transverse line lies toward fingertips from the old axis 9 cross",
+    "thumb_motor_axis": "User purple longitudinal line lies toward the thumb from the old axis 1 cross in the annotated image",
+    "numeric_correction_mm": {"toward_fingertips": 7.0},
+    "previous_toward_fingertips_mm": 40.0,
+    "note": "Forward distance corrected approximately. Lateral registration now uses the separate user-estimated 50 mm distance to the thumb axis; original 18 mm middle-point lateral measurement is superseded as a registration constraint. Depth remains provisional. Not confirmed 3D registration."
+  },
+  "marker_center_to_reference_axis_mm": {
+    "toward_fingertips": 47.0,
+    "away_from_thumb": -18.0,
+    "above_marker_plane": -14.0
+  },
+  "thumb_axis_lateral_constraint": {
+    "marker_center_to_axis_toward_thumb_mm": 50.0,
+    "source": "User approximate ruler measurement to motor 1 axis line",
+    "supersedes_middle_point_lateral_constraint": true,
+    "note": "Use this perpendicular distance to the thumb axis for common rigid translation, not a thumb-only landmark shift. Keep the old middle-point lateral value as measurement history."
+  },
+  "measurement_uncertainty_mm": null,
+  "orientation_verified": false,
+  "user_dimension_confirmation": {
+    "date": "2026-10-03",
+    "hand_marker_outer_black_edge_mm": 28.2,
+    "motor_9_axis_below_marker_plane_mm": 14.0,
+    "source": "User confirmed both stated dimensions in conversation; no new measurement precision supplied",
+    "scope": "Dimension confirmation only; does not verify marker-plane tilt, exact yaw, or full 3D registration"
+  },
+  "first_link_support_surface": {
+    "below_marker_printed_plane_mm": 8.0,
+    "approximate": true,
+    "source": "User ruler estimate on 2026-10-06",
+    "note": "This is the cube support surface, not the middle motor axis or the simulation grasp_site; do not overwrite the 14 mm motor-axis measurement with it."
+  },
+  "lateral_direction_correction": "User corrected to TOWARD thumb 18 mm; prior away-from-thumb value is superseded.",
+  "marker_axis_photo_check": "Canonical +X points to thumb side and +Y toward fingertips in the supplied photo; exact 3D alignment remains unverified.",
+  "assumptions_requiring_validation": [
+    "47 mm forward distance includes an approximate 7 mm user correction from joint start to motor 9 axis",
+    "50 mm thumb-axis distance is approximate and overrides the old middle-point 18 mm lateral constraint; lateral position of model motor 9 is derived, not a new user measurement",
+    "14 mm below marker plane is retained provisionally; full 3D registration remains unverified",
+    "Marker mounting plane is parallel to palm model's local XY plane",
+    "Toward fingertips corresponds to palm local +X and away from thumb to local -Y",
+    "Photo supports cardinal marker-axis correspondence, not exact yaw or mounting-plane tilt"
+  ],
+  "do_not_use_as": "PALM_IN_MARKER; this measures a joint axis, not grasp_site",
+  "photo": "C:/Users/김준서/Documents/카카오톡 받은 파일/KakaoTalk_20260926_192923791.jpg"
+}

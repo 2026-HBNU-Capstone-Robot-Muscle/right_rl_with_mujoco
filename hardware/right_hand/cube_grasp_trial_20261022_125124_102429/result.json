@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-10-22T12:51:24.117428+09:00",
+  "status": "stopped",
+  "phase": "preflight",
+  "joint_mapping": {
+    "version": "all_finger_orders_user_confirmed_20261018_v2",
+    "sim_joint_names": [
+      "if_mcp",
+      "if_rot",
+      "if_pip",
+      "if_dip",
+      "mf_mcp",
+      "mf_rot",
+      "mf_pip",
+      "mf_dip",
+      "rf_mcp",
+      "rf_rot",
+      "rf_pip",
+      "rf_dip",
+      "th_cmc",
+      "th_axl",
+      "th_mcp",
+      "th_ipl"
+    ],
+    "motor_ids_in_sim_order": [
+      8,
+      6,
+      7,
+      5,
+      12,
+      10,
+      11,
+      9,
+      16,
+      14,
+      15,
+      13,
+      4,
+      3,
+      2,
+      1
+    ],
+    "middle_tip_to_root_ids": [
+      9,
+      11,
+      10,
+      12
+    ],
+    "tip_to_root_ids": {
+      "thumb": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "index": [
+        5,
+        7,
+        6,
+        8
+      ],
+      "middle": [
+        9,
+        11,
+        10,
+        12
+      ],
+      "ring": [
+        13,
+        15,
+        14,
+        16
+      ]
+    },
+    "middle_order_basis": "User explicit physical order confirmation, 2026-10-18; saved tip flexion ID9 +9.492 degrees.",
+    "other_fingers_basis": "User explicitly answered the tip-to-root ID question: thumb 1,2,3,4; index 5,7,6,8; ring 13,15,14,16.",
+    "geometric_calibration_verified": false,
+    "trajectory_validation_complete": false
+  },
+  "policy_used": false,
+  "physical_flip_verified": false,
+  "all_torque_off_verified": false,
+  "settings_restored": false,
+  "hardware_authorized": true,
+  "recording_requested": true,
+  "camera_startup": {
+    "expected_device": "Streaming Webcam",
+    "backend": "DSHOW",
+    "timeout_seconds": 10.0,
+    "motors_accessed": false,
+    "devices": [
+      "Streaming Webcam",
+      "USB2.0 HD UVC WebCam",
+      "OBS Virtual Camera"
+    ],
+    "camera_index": 0,
+    "device_name": "Streaming Webcam"
+  },
+  "write_events": [],
+  "ping_events": [
+    {
+      "motor_id": 1,
+      "model_number": 0,
+      "communication": -3001,
+      "device_error": 0
+    }
+  ],
+  "error": "COM7 at 3000000 baud: ID 1 no response (timeout), code=-3001. Check motor power and the adapter-to-hand cable; no motion started.",
+  "failed_phase": "preflight",
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 1,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "attempt": 1,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 32.00000000651926,
+      "retry_requested": true,
+      "recovered": false
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 1,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "attempt": 2,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 63.000000023748726,
+      "retry_requested": false,
+      "recovered": false
+    }
+  ],
+  "final_check_error": "Sync read at 64 failed: comm=-3001, error=0; first incomplete ID 1; no target advance",
+  "camera_worker_stopped": true,
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\cube_grasp_trial_20261022_125124_102429\\camera",
+    "status": "complete",
+    "frame_count": 4,
+    "error": null
+  }
+}

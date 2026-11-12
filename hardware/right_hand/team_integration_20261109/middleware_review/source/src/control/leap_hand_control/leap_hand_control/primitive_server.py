@@ -1,0 +1,170 @@
+"""Dry-run-only LEAP Hand action endpoint; hardware commands are disabled."""
+
+import rclpy
+import re
+import math
+from pathlib import Path
+from ament_index_python.packages import get_package_share_directory
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
+from rclpy.node import Node
+from system_interfaces.action import ExecuteHandPrimitive
+from leap_hand_control.policy_adapter import LeapPolicyAdapter
+
+
+class LeapHandPrimitiveServer(Node):
+    """Validate requests for the LEAP Hand primitive endpoint."""
+
+    def __init__(self):
+        super().__init__('leap_hand_primitive_server')
+        default_policy = (
+            Path(get_package_share_directory('leap_hand_control'))
+            / 'models' / 'policy_np.npz')
+        self.declare_parameter('policy_path', str(default_policy))
+        policy_path = self.get_parameter('policy_path').value.strip()
+        self._policy_adapter = None
+        self._policy_error = '정책 파일 경로가 설정되지 않았습니다.'
+        if policy_path:
+            try:
+                self._policy_adapter = LeapPolicyAdapter(policy_path)
+                self._policy_error = ''
+                self.get_logger().info(
+                    'LEAP 정책 파일 형식과 108→16 추론기를 준비했습니다. '
+                    '관측·pose 입력과 하드웨어 출력은 연결되지 않았습니다.')
+            except (RuntimeError, ValueError) as exc:
+                self._policy_error = str(exc)
+                self.get_logger().warning(f'LEAP 정책 어댑터를 사용할 수 없습니다: {exc}')
+        self._server = ActionServer(
+            self,
+            ExecuteHandPrimitive,
+            '/leap_hand/execute_primitive',
+            execute_callback=self._execute,
+            goal_callback=self._goal_request,
+            cancel_callback=self._cancel_request,
+        )
+        self.get_logger().info(
+            'Ready: /leap_hand/execute_primitive (dry-run only; hardware disabled)')
+
+    @staticmethod
+    def _goal_request(_goal_request):
+        return GoalResponse.ACCEPT
+
+    @staticmethod
+    def _cancel_request(_goal_handle):
+        return CancelResponse.ACCEPT
+
+    def _execute(self, goal_handle):
+        goal = goal_handle.request
+        result = ExecuteHandPrimitive.Result()
+        feedback = ExecuteHandPrimitive.Feedback()
+        feedback.state = feedback.STATE_ACCEPTED
+        feedback.message = 'LEAP Hand primitive 요청을 확인했습니다.'
+        goal_handle.publish_feedback(feedback)
+
+        if (not goal.scan_id or not goal.execution_id or not goal.primitive_id
+                or goal.move_index == 0 or goal.step_index == 0
+                or not re.fullmatch(r"[URFDLB](?:2|')?", goal.cube_move)
+                or goal.target_face not in ('U', 'R', 'F', 'D', 'L', 'B')
+                or goal.primitive_id != 'orient_face_up_and_support'
+                or goal.clockwise_quarter_turns != 0):
+            result.success = False
+            result.error_code = 'INVALID_PRIMITIVE'
+            result.error_message = (
+                '식별자, 유효한 face/move/LEAP primitive가 필요합니다.')
+            feedback.state = feedback.STATE_FAILED
+            feedback.message = result.error_message
+            goal_handle.publish_feedback(feedback)
+            goal_handle.abort()
+            return result
+
+        if (goal.face_direction_order
+                and (len(goal.face_direction_order) != 6
+                     or set(goal.face_direction_order) != set('URFDLB')
+                     or goal.target_face_direction_index >= 6
+                     or goal.face_direction_order[
+                         goal.target_face_direction_index] != goal.target_face)):
+            result.success = False
+            result.error_code = 'INVALID_FACE_DIRECTION_STATE'
+            result.error_message = (
+                'face_direction_order는 URFDLB의 순열이어야 하고 index의 면은 '
+                'target_face와 일치해야 합니다.')
+            feedback.state = feedback.STATE_FAILED
+            feedback.message = result.error_message
+            goal_handle.publish_feedback(feedback)
+            goal_handle.abort()
+            return result
+
+        if (goal.policy_id
+                and (goal.policy_id != 'leap_faceup_v1'
+                     or len(goal.policy_action_values) != 16
+                     or not all(math.isfinite(value)
+                                for value in goal.policy_action_values)
+                     or any(abs(value) > 1.000001
+                            for value in goal.policy_action_values))):
+            result.success = False
+            result.error_code = 'INVALID_POLICY_OUTPUT'
+            result.error_message = (
+                'LEAP primitive에는 leap_faceup_v1의 유한한 action 16개가 필요합니다.')
+            feedback.state = feedback.STATE_FAILED
+            feedback.message = result.error_message
+            goal_handle.publish_feedback(feedback)
+            goal_handle.abort()
+            return result
+        if not goal.policy_id and goal.policy_action_values:
+            result.success = False
+            result.error_code = 'INVALID_POLICY_OUTPUT'
+            result.error_message = 'policy_id 없이 policy_action_values를 받을 수 없습니다.'
+            feedback.state = feedback.STATE_FAILED
+            feedback.message = result.error_message
+            goal_handle.publish_feedback(feedback)
+            goal_handle.abort()
+            return result
+
+        if goal_handle.is_cancel_requested:
+            result.error_code = 'CANCELLED'
+            result.error_message = '요청이 취소되었습니다.'
+            feedback.state = feedback.STATE_CANCELLED
+            feedback.message = result.error_message
+            goal_handle.publish_feedback(feedback)
+            goal_handle.canceled()
+            return result
+
+        if not goal.dry_run:
+            result.success = False
+            if self._policy_adapter is None:
+                result.error_code = 'POLICY_NOT_CONFIGURED'
+                result.error_message = (
+                    'LEAP 정책 어댑터를 준비하지 못했습니다: ' + self._policy_error)
+            else:
+                result.error_code = 'POSE_SOURCE_UNAVAILABLE'
+                result.error_message = (
+                    '정책 추론기는 준비됐지만 108차원 관측을 구성할 큐브 pose와 '
+                    '16개 관절 상태 입력이 연결되지 않았습니다. 모터 명령은 비활성화되어 있습니다.')
+            feedback.state = feedback.STATE_FAILED
+            feedback.message = result.error_message
+            goal_handle.publish_feedback(feedback)
+            goal_handle.abort()
+            return result
+
+        result.success = True
+        result.error_code = ''
+        result.error_message = (
+            'dry-run 요청과 leap_faceup_v1 shadow action을 확인했습니다. '
+            '모터 명령은 보내지 않았습니다.' if goal.policy_id else
+            'dry-run 요청을 검증했습니다. 모터 명령은 보내지 않았습니다.')
+        feedback.state = feedback.STATE_COMPLETED
+        feedback.message = result.error_message
+        goal_handle.publish_feedback(feedback)
+        goal_handle.succeed()
+        return result
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = LeapHandPrimitiveServer()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()

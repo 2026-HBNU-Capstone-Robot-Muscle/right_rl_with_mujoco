@@ -1,0 +1,66 @@
+"""Save explicit user confirmation and completed audit; never touch hardware."""
+import json
+from pathlib import Path
+from hand_motor_mapping import metadata
+ROOT=Path(__file__).resolve().parent;out=ROOT/'middle_mapping_review_20261018';out.mkdir(exist_ok=True)
+confirmation=dict(**metadata(),user_statement='끝마디가 9 다음이 11 다음이 10 다음이 12네',
+                  scope='Middle finger only; physical tip-to-root order explicitly supplied by user.',
+                  additional_middle_capture_needed=False,
+                  controller_mapping_installed=False,device_settings_changed=False)
+(out/'confirmed_mapping.json').write_text(json.dumps(confirmation,ensure_ascii=False,indent=2),encoding='utf-8')
+heading='## CURRENT 2026-10-18: 중지 순서 사용자 확인 완료 — 끝부터 9,11,10,12'
+note='''사용자가 직접 중지 손끝→손바닥 순서 **9 → 11 → 10 → 12**를 확인했다.
+모델의 뿌리/회전/중간굽힘/끝굽힘 순서는 **12 → 10 → 11 → 9**다.
+이전 추가 관측 요청 `leap_middle_joint_order_readonly.cmd`는 취소했고, 실행해도
+안내만 출력하고 장치를 열지 않도록 했다. 중지 확인 사진·수동 움직임은 더 필요 없다.
+
+`hand_motor_mapping.py`에 이 변환과 역변환을 분리해 구현했다. 읽기 전용 검사도
+새 관절 이름/ID를 표시한다. 중지 외 손가락은 기존 연결을 임시 유지하며, 전체
+영점·부호·형상 보정이나 실물 경로 검증 완료로 표시하지 않는다. 실제 장치의
+ID·영점·게인·목표는 변경하지 않았다. 기존 배포 폴더의 live controller 변환을
+무검증으로 덮어쓰지 않았다.
+
+오프라인 검증 완료: 저장 경로120자세, 이전 복귀진단 실제각196샘플을 새 순서로
+재해석했다. 기존 명령과 시뮬레이션 의도 사이에서 중지 뿌리/끝의 차이는 최대
+75.586°였다. ID9·12를 교환하면 원래 모델 의도를 정확히 복원할 수 있지만,
+원래 경로 자체에도 모델 손가락 겹침과 일부 관절 범위 초과가 남는다. 변환 수정만으로
+경로가 실물 실행 가능해진 것은 아니다. 모델상 최대 겹침 약16mm는 주로 엄지/약지
+쪽이며, 실제 침투량이 아니다. 중지 이외 매핑/형상도 검토해야 한다.
+
+기존 SAC 시작·빈손 경로/ID12진단과 loaded/empty policy 실행은 잘못된 매핑을
+재사용하지 않도록 장치 접근 전에 중단한다. 기존 raw-ID 시퀀스를 자동 재배열하지 않는다.
+새 경로는 `middle_mapping_review_20261018/remapped_path_OFFLINE_ONLY.json`에 분석용으로만
+저장했다. 하드웨어 로더가 받아들이는 형식이 아니며 실행 명령을 새로 제공하지 않았다.
+40개 테스트 통과: 사용자 ID 대응, 역변환, 읽기 전용 검사, 기존 실행의 장치 접근 전 중단 등.
+
+현재 사용자에게 필요한 정보: 검지·약지·엄지의 손끝→손바닥 ID 순서(아는 번호만,
+모터 구동 불필요). 중지만의 특이 연결인지 확인한 뒤 전체 변환과 준비 경로/간섭을
+검증한다. 추가 사진을 요청한 것은 아니다. 아직 SAC 실물 회전·전체 큐브 풀이 성공 아님.
+
+산출물: `middle_mapping_review_20261018/confirmed_mapping.json`, `path_audit.json`,
+`historical_vs_intended_path.jpg`, `README.md`. 아래 이전 기록의 후보/추가 중지 관측
+계획은 이 확인으로 대체됐다.
+'''
+for name in ('sac_current_status.md','professor_progress_20261015.md'):
+    p=ROOT/name;old=p.read_text(encoding='utf-8-sig')
+    if heading not in old:p.write_text(heading+'\n\n'+note+'\n---\n\n'+old,encoding='utf-8')
+(out/'README.md').write_text(heading+'\n\n'+note+'''
+### 수치의 범위
+
+- 비교한 명령 경로는119개 목표와 시작 자세1개다. 모델을 각 자세에 대입한 정적
+  충돌 검사이며, 새 SAC 학습이나 물체를 포함한 동역학 성공 검증이 아니다.
+- 기존/교정 경로 모두 전체120자세 중119자세에서 모델 self-contact가 보고됐다.
+  중지만의 접촉은 기존63자세, 교정51자세였다. 전체 결과가 같은 것은 엄지·약지 등
+  다른 부품이 겹침을 지배하기 때문이며, 중지 교정이 효과 없다는 뜻이 아니다.
+- 관절 범위 초과54자세는 `if_pip`, `th_mcp`, `rf_rot`에서 나온다. 중지 순서를
+  바꾸는 것만으로 다른 손가락의 범위 검사가 바뀌지 않는다.
+- 실제196샘플을 모델에 대입한 결과와 목표 경로의 결과를 섞지 않는다.
+  실제각 재구성에서는 중지–엄지 접촉이 여전히 재현되지 않았다. 정확한 형상과
+  전체 관절 대응 검증은 남아 있다. 중지 순서 확인이 곧 전체 기하 보정은 아니다.
+- 원본 기록은 덮어쓰지 않았다. 모든 입력 해시는 `path_audit.json`에 있다.
+''',encoding='utf-8')
+for name in ('leap_middle_joint_order_readonly_README.md','middle_direction_review_20261018/README.md'):
+    p=ROOT/name;old=p.read_text(encoding='utf-8-sig')
+    message='> 2026-10-18 사용자 확인으로 대체됨: 중지 손끝부터9,11,10,12. 추가 중지 관측은 필요 없음. 최신 분석은 `middle_mapping_review_20261018/README.md`.\n\n'
+    if not old.startswith(message):p.write_text(message+old,encoding='utf-8')
+print('Confirmed middle order recorded; extra capture cancelled; offline report and progress notes updated.')

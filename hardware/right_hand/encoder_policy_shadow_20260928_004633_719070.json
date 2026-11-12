@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-09-28T00:46:25.368412+09:00",
+  "status": "stopped_error",
+  "servo_write_commands_sent": 0,
+  "torque_changes_requested": 0,
+  "hardware_authorized": false,
+  "joint_source": "live encoder + stored goal registers; torque OFF",
+  "last_action_source": "zero: no policy action sent; not closed-loop validation",
+  "timing_note": "Host capture/read/vision duration, NOT sensor exposure or synchronization guarantee",
+  "frames": 0,
+  "samples": [],
+  "read_failures": 0,
+  "registration": {
+    "status": "unverified_visual_candidate",
+    "hardware_authorized": false,
+    "hand_to_world_candidate": [
+      [
+        0.0,
+        0.9405700424499697,
+        0.33959975742874465
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.33959975742874465,
+        0.9405700424499697
+      ]
+    ],
+    "grasp_site_in_marker_m_candidate": [
+      0.020700000000000003,
+      0.010215221346270474,
+      0.04762016373559733
+    ],
+    "motor_axis_landmarks_in_marker_m": {
+      "5": [
+        0.0742,
+        0.0471,
+        -0.013999999999999999
+      ],
+      "9": [
+        0.028800000000000003,
+        0.047,
+        -0.013999999999999999
+      ],
+      "13": [
+        -0.016599999999999997,
+        0.04701,
+        -0.013999999999999999
+      ],
+      "1": [
+        0.05,
+        -0.015199999999999998,
+        -0.011099999999999999
+      ]
+    },
+    "assumptions": [
+      "47 mm forward distance includes an approximate 7 mm user correction from joint start to motor 9 axis",
+      "50 mm thumb-axis distance is approximate and overrides the old middle-point 18 mm lateral constraint; lateral position of model motor 9 is derived, not a new user measurement",
+      "14 mm below marker plane is retained provisionally; full 3D registration remains unverified",
+      "Marker mounting plane is parallel to palm model's local XY plane",
+      "Toward fingertips corresponds to palm local +X and away from thumb to local -Y",
+      "Photo supports cardinal marker-axis correspondence, not exact yaw or mounting-plane tilt"
+    ],
+    "measurements": {
+      "toward_fingertips": 47.0,
+      "away_from_thumb": -28.800000000000004,
+      "above_marker_plane": -14.0
+    },
+    "measurement_note": "Effective registration inputs; lateral motor-9 coordinate is derived when thumb constraint is present",
+    "thumb_axis_lateral_constraint": {
+      "marker_center_to_axis_toward_thumb_mm": 50.0,
+      "source": "User approximate ruler measurement to motor 1 axis line",
+      "supersedes_middle_point_lateral_constraint": true,
+      "note": "Use this perpendicular distance to the thumb axis for common rigid translation, not a thumb-only landmark shift. Keep the old middle-point lateral value as measurement history."
+    }
+  },
+  "registration_depth_verified": false,
+  "initial_positions_raw": [
+    2569,
+    2541,
+    2506,
+    1767,
+    2571,
+    2051,
+    2568,
+    2494,
+    2570,
+    2053,
+    2565,
+    2457,
+    2570,
+    2049,
+    2568,
+    2456
+  ],
+  "error": "No actual 1280x720 frame with MJPG (YUY2 fallback rejected). Attempts: [{\"backend\": \"DSHOW\", \"requested_format\": \"MJPG\", \"actual_size\": [1280, 720], \"actual_format\": \"NV12\", \"reported_fps\": 30.00003000003}, {\"backend\": \"MSMF\", \"requested_format\": \"MJPG\", \"error\": \"not opened\"}]",
+  "all_torque_off_observed_at_end": true,
+  "final_positions_raw": [
+    2569,
+    2541,
+    2506,
+    1767,
+    2571,
+    2051,
+    2568,
+    2494,
+    2570,
+    2053,
+    2564,
+    2457,
+    2570,
+    2049,
+    2567,
+    2456
+  ],
+  "inference_percent": null,
+  "all_joints_in_policy_range_samples": 0
+}

@@ -1,0 +1,4 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent
+s=(R/'screen_lower_body_free_20261030.py').read_text(encoding='utf-8');needle="'stage_14_body_hold':'body_hold'";assert s.count(needle)==1;s=s.replace(needle,needle+",'stage_15_body_contact_release':'contact_release','stage_16_unclamped_remove_hold':'unclamped_remove_hold'");s=s.replace("status='continuous_forward_then_lower_body_regrasp_model_diagnostic'","status='continuous_forward_lower_body_hold_and_evolved_contact_release_model'");(R/'screen_held_contact_free_20261030.py').write_text(s,encoding='utf-8')
+s=(R/'screen_controlled_body_release_hand_20261030.py').read_text(encoding='utf-8').replace("lower_body_gap_release","held_contact_release");(R/'screen_held_contact_hand_20261030.py').write_text(s,encoding='utf-8');print('Created separate whole-path model checks; earlier proofs unchanged.')

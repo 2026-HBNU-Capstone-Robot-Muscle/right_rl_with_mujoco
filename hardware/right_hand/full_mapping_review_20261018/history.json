@@ -1,0 +1,719 @@
+{
+  "status": "source_and_saved_record_history_not_commit_history",
+  "sources": [
+    {
+      "path": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\work\\Leap_Test\\deploy\\leap_hw.py",
+      "sha256": "bcac41f9ab95a406c3ad571a84c7bdb4a98ff44f420759f204b266b627c452eb",
+      "hits": [
+        {
+          "line": 15,
+          "text": "  실기에서 각 손가락의 ID가 손바닥 쪽부터 증가함을 확인했다:"
+        },
+        {
+          "line": 20,
+          "text": "  순으로 둔다. main.py의 \"역순\" 주석은 이 실기 배선과 일치하지 않는다."
+        },
+        {
+          "line": 30,
+          "text": "SIM2ARR = np.array([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3])"
+        },
+        {
+          "line": 45,
+          "text": "SIDE_MOTOR_IDS = [6, 10, 14]     # 검지/중지/약지 MCP Side (엄지 AXL=2 는 제외)"
+        },
+        {
+          "line": 51,
+          "text": "    hw[SIM2ARR] = np.asarray(q_sim, dtype=float) + OFFSET"
+        },
+        {
+          "line": 57,
+          "text": "    return np.asarray(hw, dtype=float)[SIM2ARR] - OFFSET"
+        },
+        {
+          "line": 83,
+          "text": "        self.c.sync_write(SIDE_MOTOR_IDS, np.ones(3) * kp * 0.75, 84, 2)"
+        },
+        {
+          "line": 84,
+          "text": "        self.c.sync_write(SIDE_MOTOR_IDS, np.ones(3) * kd * 0.75, 80, 2)"
+        },
+        {
+          "line": 135,
+          "text": "        return hw_to_sim(p), np.asarray(v)[SIM2ARR], np.asarray(cur)[SIM2ARR]"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\김준서\\Documents\\GitHub\\LEAP_Hand_API\\python\\main.py",
+      "sha256": "f707291eca0e7168c0fc8c0f2b50fe080ea34c8d4a42dc6e30c12c244f77adec",
+      "hits": [
+        {
+          "line": 41,
+          "text": "        self.motors = motors = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]"
+        }
+      ]
+    }
+  ],
+  "dated_records": [
+    {
+      "file": "leap_drive_readonly_result.json",
+      "timestamp": "2026-10-15T00:49:35.140627+09:00",
+      "sha256": "24a7f73dcbd70f016f274a49a49b5e9d2731d371e745130cd67d0b4a1114f8a1",
+      "hits": [
+        {
+          "path": "/joint_map",
+          "row": [
+            {
+              "motor_id": 5,
+              "joint": "if_mcp",
+              "angle_rad": 0.9434008381394623,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 6,
+              "joint": "if_rot",
+              "angle_rad": 0.07670169298407536,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 7,
+              "joint": "if_pip",
+              "angle_rad": -0.45558964041224215,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 8,
+              "joint": "if_dip",
+              "angle_rad": -0.35588088919967564,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 9,
+              "joint": "mf_mcp",
+              "angle_rad": 0.6703522578958183,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 10,
+              "joint": "mf_rot",
+              "angle_rad": 0.3666240618944614,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 11,
+              "joint": "mf_pip",
+              "angle_rad": 0.6504105076533051,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 12,
+              "joint": "mf_dip",
+              "angle_rad": 1.6244883079606875,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 13,
+              "joint": "rf_mcp",
+              "angle_rad": 1.724197059173254,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 14,
+              "joint": "rf_rot",
+              "angle_rad": 0.6473425460775339,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 15,
+              "joint": "rf_pip",
+              "angle_rad": 0.9341969534121484,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 16,
+              "joint": "rf_dip",
+              "angle_rad": 1.794760175415993,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 1,
+              "joint": "th_cmc",
+              "angle_rad": 1.1167406671705402,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 2,
+              "joint": "th_axl",
+              "angle_rad": 1.6137504424454878,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 3,
+              "joint": "th_mcp",
+              "angle_rad": 1.7027213281428546,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 4,
+              "joint": "th_ipl",
+              "angle_rad": 0.9127212223817498,
+              "outside_configured_range": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hand_readonly_check_result.json",
+      "timestamp": "2026-10-16T19:39:38.544737+09:00",
+      "sha256": "0f2e7af9553937fa4c7d746e4f9527e9131b55bdf5ed4589240b958df0cce46e",
+      "hits": [
+        {
+          "path": "/joint_map",
+          "row": [
+            {
+              "motor_id": 5,
+              "joint": "if_mcp",
+              "angle_rad": 0.8943134529271219,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 6,
+              "joint": "if_rot",
+              "angle_rad": 0.12425509740853036,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 7,
+              "joint": "if_pip",
+              "angle_rad": -0.4387158517455001,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 8,
+              "joint": "if_dip",
+              "angle_rad": -0.357414869987561,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 9,
+              "joint": "mf_mcp",
+              "angle_rad": 0.7025658544414171,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 10,
+              "joint": "mf_rot",
+              "angle_rad": 0.30526483037903596,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 11,
+              "joint": "mf_pip",
+              "angle_rad": 0.7133037199566163,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 12,
+              "joint": "mf_dip",
+              "angle_rad": 1.6613038468699424,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 13,
+              "joint": "rf_mcp",
+              "angle_rad": 1.724197059173254,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 14,
+              "joint": "rf_rot",
+              "angle_rad": 0.573711468259023,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 15,
+              "joint": "rf_pip",
+              "angle_rad": 0.9510707420788904,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 16,
+              "joint": "rf_dip",
+              "angle_rad": 1.7794203675371367,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 1,
+              "joint": "th_cmc",
+              "angle_rad": 1.1121387248068828,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 2,
+              "joint": "th_axl",
+              "angle_rad": 1.604546557718174,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 3,
+              "joint": "th_mcp",
+              "angle_rad": 1.6935174434155407,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 4,
+              "joint": "th_ipl",
+              "angle_rad": 0.9311289918363777,
+              "outside_configured_range": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "leap_middle_direction_readonly_result.json",
+      "timestamp": "2026-10-18T07:20:23.698689+09:00",
+      "sha256": "8dfd45a17401249bc2aca2794296842496ef72717656ea9f9f97c76ffdfb2ca3",
+      "hits": [
+        {
+          "path": "/direction_pairs/0/snapshots/0/joint_map",
+          "row": [
+            {
+              "motor_id": 5,
+              "joint": "if_mcp",
+              "angle_rad": 0.8805076258361515,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 6,
+              "joint": "if_rot",
+              "angle_rad": 0.015342461468649482,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 7,
+              "joint": "if_pip",
+              "angle_rad": -0.45712362120012795,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 8,
+              "joint": "if_dip",
+              "angle_rad": -0.35588088919967564,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 9,
+              "joint": "mf_mcp",
+              "angle_rad": -0.029142981380033905,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 10,
+              "joint": "mf_rot",
+              "angle_rad": -0.07362842422871774,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 11,
+              "joint": "mf_pip",
+              "angle_rad": 0.2653813298940091,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 12,
+              "joint": "mf_dip",
+              "angle_rad": 1.448080517353839,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 13,
+              "joint": "rf_mcp",
+              "angle_rad": 1.741070847839996,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 14,
+              "joint": "rf_rot",
+              "angle_rad": 0.8498280100784386,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 15,
+              "joint": "rf_pip",
+              "angle_rad": 1.0016921080791166,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 16,
+              "joint": "rf_dip",
+              "angle_rad": 1.793226194628108,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 1,
+              "joint": "th_cmc",
+              "angle_rad": 1.145886302140367,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 2,
+              "joint": "th_axl",
+              "angle_rad": 1.7180611360217117,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 3,
+              "joint": "th_mcp",
+              "angle_rad": 2.130701967962949,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 4,
+              "joint": "th_ipl",
+              "angle_rad": -0.37428865865430305,
+              "outside_configured_range": false
+            }
+          ]
+        },
+        {
+          "path": "/direction_pairs/0/snapshots/1/joint_map",
+          "row": [
+            {
+              "motor_id": 5,
+              "joint": "if_mcp",
+              "angle_rad": 0.8805076258361515,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 6,
+              "joint": "if_rot",
+              "angle_rad": 0.015342461468649482,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 7,
+              "joint": "if_pip",
+              "angle_rad": -0.45712362120012795,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 8,
+              "joint": "if_dip",
+              "angle_rad": -0.357414869987561,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 9,
+              "joint": "mf_mcp",
+              "angle_rad": -0.029142981380033905,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 10,
+              "joint": "mf_rot",
+              "angle_rad": -0.07362842422871774,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 11,
+              "joint": "mf_pip",
+              "angle_rad": 0.2653813298940091,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 12,
+              "joint": "mf_dip",
+              "angle_rad": 1.448080517353839,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 13,
+              "joint": "rf_mcp",
+              "angle_rad": 1.742604828627882,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 14,
+              "joint": "rf_rot",
+              "angle_rad": 0.8498280100784386,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 15,
+              "joint": "rf_pip",
+              "angle_rad": 1.0016921080791166,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 16,
+              "joint": "rf_dip",
+              "angle_rad": 1.793226194628108,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 1,
+              "joint": "th_cmc",
+              "angle_rad": 1.145886302140367,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 2,
+              "joint": "th_axl",
+              "angle_rad": 1.7180611360217117,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 3,
+              "joint": "th_mcp",
+              "angle_rad": 2.130701967962949,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 4,
+              "joint": "th_ipl",
+              "angle_rad": -0.37428865865430305,
+              "outside_configured_range": false
+            }
+          ]
+        },
+        {
+          "path": "/direction_pairs/1/snapshots/0/joint_map",
+          "row": [
+            {
+              "motor_id": 5,
+              "joint": "if_mcp",
+              "angle_rad": 0.8805076258361515,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 6,
+              "joint": "if_rot",
+              "angle_rad": 0.015342461468649482,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 7,
+              "joint": "if_pip",
+              "angle_rad": -0.45712362120012795,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 8,
+              "joint": "if_dip",
+              "angle_rad": -0.35588088919967564,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 9,
+              "joint": "mf_mcp",
+              "angle_rad": 0.13652694371161544,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 10,
+              "joint": "mf_rot",
+              "angle_rad": -0.07209444344083193,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 11,
+              "joint": "mf_pip",
+              "angle_rad": 0.300662888015379,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 12,
+              "joint": "mf_dip",
+              "angle_rad": 1.4189348823840113,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 13,
+              "joint": "rf_mcp",
+              "angle_rad": 1.742604828627882,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 14,
+              "joint": "rf_rot",
+              "angle_rad": 0.8498280100784386,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 15,
+              "joint": "rf_pip",
+              "angle_rad": 1.0016921080791166,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 16,
+              "joint": "rf_dip",
+              "angle_rad": 1.793226194628108,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 1,
+              "joint": "th_cmc",
+              "angle_rad": 1.145886302140367,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 2,
+              "joint": "th_axl",
+              "angle_rad": 1.7180611360217117,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 3,
+              "joint": "th_mcp",
+              "angle_rad": 2.130701967962949,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 4,
+              "joint": "th_ipl",
+              "angle_rad": -0.37428865865430305,
+              "outside_configured_range": false
+            }
+          ]
+        },
+        {
+          "path": "/direction_pairs/1/snapshots/1/joint_map",
+          "row": [
+            {
+              "motor_id": 5,
+              "joint": "if_mcp",
+              "angle_rad": 0.8805076258361515,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 6,
+              "joint": "if_rot",
+              "angle_rad": 0.015342461468649482,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 7,
+              "joint": "if_pip",
+              "angle_rad": -0.45712362120012795,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 8,
+              "joint": "if_dip",
+              "angle_rad": -0.35588088919967564,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 9,
+              "joint": "mf_mcp",
+              "angle_rad": 0.13652694371161544,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 10,
+              "joint": "mf_rot",
+              "angle_rad": -0.07362842422871774,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 11,
+              "joint": "mf_pip",
+              "angle_rad": 0.300662888015379,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 12,
+              "joint": "mf_dip",
+              "angle_rad": 1.4189348823840113,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 13,
+              "joint": "rf_mcp",
+              "angle_rad": 1.741070847839996,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 14,
+              "joint": "rf_rot",
+              "angle_rad": 0.8498280100784386,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 15,
+              "joint": "rf_pip",
+              "angle_rad": 1.0016921080791166,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 16,
+              "joint": "rf_dip",
+              "angle_rad": 1.793226194628108,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 1,
+              "joint": "th_cmc",
+              "angle_rad": 1.145886302140367,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 2,
+              "joint": "th_axl",
+              "angle_rad": 1.7180611360217117,
+              "outside_configured_range": false
+            },
+            {
+              "motor_id": 3,
+              "joint": "th_mcp",
+              "angle_rad": 2.130701967962949,
+              "outside_configured_range": true
+            },
+            {
+              "motor_id": 4,
+              "joint": "th_ipl",
+              "angle_rad": -0.37428865865430305,
+              "outside_configured_range": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "code_references": [
+    {
+      "file": "leap_sac_start_empty.py",
+      "hits": [
+        {
+          "line": 16,
+          "text": "SIM_TO_ID=np.array([5,6,7,8,9,10,11,12,13,14,15,16,1,2,3,4])"
+        }
+      ]
+    }
+  ],
+  "repositories": [
+    {
+      "path": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs",
+      "git_metadata_present": false
+    },
+    {
+      "path": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap",
+      "git_metadata_present": false
+    },
+    {
+      "path": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\work\\Leap_Test",
+      "git_metadata_present": false
+    },
+    {
+      "path": "C:\\Users\\김준서\\Documents\\GitHub\\LEAP_Hand_API",
+      "git_metadata_present": true
+    }
+  ],
+  "limitations": [
+    "File mtimes are not used as evidence of introduction date.",
+    "Existing comments claim user confirmation; comments alone do not establish what was actually verified."
+  ]
+}

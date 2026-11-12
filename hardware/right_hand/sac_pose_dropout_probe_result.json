@@ -1,0 +1,63 @@
+{
+  "status": "offline_pose_dropout_probe",
+  "motor_commands_sent": 0,
+  "observation_layout": {
+    "joints": "0:16",
+    "joint_history": "16:64",
+    "cube_position_orientation_history": "64:91",
+    "last_action": "91:107",
+    "orientation_error": "107"
+  },
+  "results": [
+    {
+      "mode": "clear",
+      "seed": 0,
+      "blackout_steps": null,
+      "steps": 300,
+      "first_success_step": 204,
+      "done": false,
+      "final_orientation_error": 0.17258180677890778,
+      "final_cube_displacement_mm": 38.855125427246094
+    },
+    {
+      "mode": "blackout_1s",
+      "seed": 0,
+      "blackout_steps": [
+        20,
+        40
+      ],
+      "steps": 300,
+      "first_success_step": null,
+      "done": false,
+      "final_orientation_error": 0.27317166328430176,
+      "final_cube_displacement_mm": 24.922870635986328
+    },
+    {
+      "mode": "blackout_5s",
+      "seed": 0,
+      "blackout_steps": [
+        20,
+        120
+      ],
+      "steps": 300,
+      "first_success_step": null,
+      "done": false,
+      "final_orientation_error": 1.057292103767395,
+      "final_cube_displacement_mm": 33.20869064331055
+    },
+    {
+      "mode": "blackout_10s",
+      "seed": 0,
+      "blackout_steps": [
+        20,
+        220
+      ],
+      "steps": 300,
+      "first_success_step": null,
+      "done": false,
+      "final_orientation_error": 1.0533078908920288,
+      "final_cube_displacement_mm": 33.9188346862793
+    }
+  ],
+  "caveat": "Single simulated seed and default reset. Synthetic frozen pose does not model camera noise, occlusion geometry, or real contact."
+}

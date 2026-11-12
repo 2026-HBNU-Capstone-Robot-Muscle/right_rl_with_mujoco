@@ -1,0 +1,37 @@
+"""Record offline findings and the remaining operator observation."""
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent
+OUT=ROOT/"right_hand_root_success_20261020"
+p=json.loads((OUT/"thumb_clearance_sensitivity.json").read_text())
+assert p["motor_commands_sent"]==0 and not p["hardware_execution_allowed"]
+observation=dict(status="unknown",user_answer="잘 못 봐서 모르겠음",
+    interpretation="No claim of contact-free physical movement. Do not request the same root motion merely to recover the missing observation.")
+(OUT/"physical_contact_observation.json").write_text(json.dumps(observation,ensure_ascii=False,indent=2),encoding="utf-8")
+summary_path=OUT/"summary.json"
+s=json.loads(summary_path.read_text(encoding="utf-8"))
+s["physical_contact_observation"]=observation
+summary_path.write_text(json.dumps(s,ensure_ascii=False,indent=2),encoding="utf-8")
+note="""## CURRENT 2026-10-20: 엄지 준비 후보 간격 검토, 실제 접촉 관찰은 미확인
+
+- 사용자: 뿌리 시험의 접촉·걸림은 잘 못 봐서 모름. 접촉 없음으로 간주하지 않는다. 같은 뿌리 동작 반복을 요청하지 않는다.
+- 엄지 끝 목표 변경 -16/-32/-64틱 × 시작각 주변 35개 = 105개 정적 경로 검토. 시작 변화는 ±32틱 범위의 표본이며 전 범위를 증명한 것이 아니다.
+- MuJoCo 상자 거리 질의가 분리된 최근접점에도 0을 반환한 사례를 발견하여, 상자 쌍은 별도의 분리축 거리 하한으로 계산했다. 메쉬 쌍은 MuJoCo 볼록형상 거리를 사용했다.
+- 주요 검사 쌍의 최소 간격 추정: -16틱 1.105mm, -32틱 2.363mm, -64틱 4.938mm. 모든 후보에서 활성화된 손/받침 접촉 겹침 없음. 실물 형상·간격이 검증됐다는 의미는 아니다.
+- -64틱(엄지 끝 약 5.625° 덜 굽힘)은 후속 검토 후보로만 보관. 실물 실행 파일이나 SAC 경로 변경 없음. 동역학/실제 시작 자세/ID3 모델 범위 문제는 미해결.
+- 증거: `right_hand_root_success_20261020/thumb_clearance_sensitivity.json`.
+- 현재 사용자 작업: 손가락을 재배치하지 않고 `leap_pose_pair_readonly.cmd`로 현재 사진과 전후 각도를 한 번 저장. USB와 모터 전원 연결, 토크 OFF, 다른 모터 프로그램 종료. 이 프로그램은 목표/토크 명령을 보내지 않는다.
+- 목적: 성공 시험 뒤 토크 OFF로 이완된 실제 현재 자세를 확인하고, 엄지·중지·손바닥의 배치를 모델과 비교. 과거 시험의 접촉 여부를 새 사진으로 확정하지 않는다.
+
+"""
+(OUT/"thumb_clearance_review.md").write_text(note,encoding="utf-8")
+for name in ("professor_progress_20261015.md","sac_current_status.md"):
+    f=ROOT/name;text=f.read_text(encoding="utf-8")
+    if note.splitlines()[0] not in text:f.write_text(note+text,encoding="utf-8")
+f=ROOT/"right_hand_start_20261019/objective_and_schedule.json"
+x=json.loads(f.read_text(encoding="utf-8"))
+x["current_user_task"]="Run leap_pose_pair_readonly.cmd once without repositioning fingers; whole hand, middle and thumb visible. Read-only photo/encoders, no motion."
+x["current_blocker"]="Physical contact during root trial is unknown. Current OFF pose/photo needed for next preparation. Offline thumb target alternatives screened, but dynamics and native thumb-range calibration remain unresolved."
+x["latest_offline_review"]="right_hand_root_success_20261020/thumb_clearance_sensitivity.json"
+f.write_text(json.dumps(x,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+print("Observation, review and task updated; no hardware access.")

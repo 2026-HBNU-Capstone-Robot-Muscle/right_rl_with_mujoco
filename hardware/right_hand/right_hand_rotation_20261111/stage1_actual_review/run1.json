@@ -1,0 +1,1013 @@
+{
+  "run": "forward_hold_observe_20261111_220404_103327",
+  "source_result_sha256": "3454d7de61c563c868a8b6541d3d6e658fe3df3e0e7dbac8fbcf08253d1186ad",
+  "user_reported_bad_placement": true,
+  "excluded_from_correct_placement_task_assessment": true,
+  "status": "forward_hold_observation_complete",
+  "error": null,
+  "failed_phase": null,
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "cube_support_confirmed_before_off": true,
+  "cube_removal_after_exit_observed": false,
+  "post_OFF_reference_stationary": false,
+  "post_OFF_sag_is_not_an_ON_hold_failure": true,
+  "sample_count": 2691,
+  "sample_fields": [
+    "phase",
+    "t",
+    "goal",
+    "goal_readback",
+    "actual",
+    "current_ma",
+    "voltage_v",
+    "temperature_c",
+    "tracking_rad",
+    "watchdog",
+    "torque",
+    "error",
+    "read_ms"
+  ],
+  "phase_ranges": {
+    "stage_0_cmc_return": {
+      "samples": 20,
+      "first_t": 0.1720000000022992,
+      "last_t": 1.5780000000013388
+    },
+    "stage_1_roots_clear": {
+      "samples": 195,
+      "first_t": 1.6720000000022992,
+      "last_t": 16.31300000000192
+    },
+    "stage_3_empty_open": {
+      "samples": 629,
+      "first_t": 16.39099999999962,
+      "last_t": 63.90599999999904
+    },
+    "stage_4_place_hold": {
+      "samples": 20,
+      "first_t": 63.98500000000058,
+      "last_t": 65.43800000000192
+    },
+    "placement_checkpoint": {
+      "samples": 10,
+      "first_t": 65.51599999999962,
+      "last_t": 66.20300000000134
+    },
+    "open_before_cube": {
+      "samples": 4,
+      "first_t": 66.28099999999904,
+      "last_t": 66.5
+    },
+    "place_cube": {
+      "samples": 273,
+      "first_t": 66.57800000000134,
+      "last_t": 87.06300000000192
+    },
+    "loaded_countdown": {
+      "samples": 41,
+      "first_t": 87.14099999999962,
+      "last_t": 90.15599999999904
+    },
+    "stage_5_loaded_grasp": {
+      "samples": 606,
+      "first_t": 90.20300000000134,
+      "last_t": 135.9220000000023
+    },
+    "stage_6_grasp_hold": {
+      "samples": 40,
+      "first_t": 135.98500000000058,
+      "last_t": 138.96900000000096
+    },
+    "stage_7_horizontal_yaw": {
+      "samples": 639,
+      "first_t": 139.06300000000192,
+      "last_t": 187.39099999999962
+    },
+    "stage_8_horizontal_hold": {
+      "samples": 134,
+      "first_t": 187.46900000000096,
+      "last_t": 197.625
+    },
+    "stage_2_fixed_hold": {
+      "samples": 20,
+      "first_t": 197.68800000000192,
+      "last_t": 199.15599999999904
+    },
+    "fixed_hold_observation": {
+      "samples": 4,
+      "first_t": 199.25,
+      "last_t": 199.46900000000096
+    },
+    "support_cube_for_off": {
+      "samples": 56,
+      "first_t": 199.5470000000023,
+      "last_t": 203.70300000000134
+    }
+  },
+  "minimum_voltage_v": 4.8,
+  "peak_absolute_current_ma": 108,
+  "maximum_temperature_c": 24,
+  "maximum_tracking_rad": 0.08743690490948154,
+  "read_failure_count": 5,
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "first_incomplete_id": 13,
+      "requested_ids": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "receive_window_ms": 40.0,
+      "health_reply_group_size": 4,
+      "fast_sync_read": true,
+      "received_packet_bytes": 0,
+      "expected_packet_bytes": 356,
+      "attempt": 1,
+      "comm": -3001,
+      "device_error": 0,
+      "elapsed_ms": 60.21310000141966,
+      "retry_requested": true,
+      "recovered": true,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+      "quiet_resynchronization": {
+        "status": "quiet",
+        "discarded_bytes": 177,
+        "observations": [
+          {
+            "elapsed_ms": 4.94299999991199,
+            "available_bytes": 177
+          },
+          {
+            "elapsed_ms": 6.648299997323193,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 11.784700000134762,
+            "available_bytes": 0
+          }
+        ],
+        "elapsed_ms": 11.834199998702388,
+        "remaining_shared_budget_ms": 127.84110000211513
+      },
+      "remaining_budget_after_quiet_ms": 127.83890000355314,
+      "total_elapsed_ms": 104.18539999955101
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "requested_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "receive_window_ms": 40.0,
+      "health_reply_group_size": 4,
+      "fast_sync_read": true,
+      "received_packet_bytes": 198,
+      "expected_packet_bytes": 356,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 43.71779999928549,
+      "retry_requested": true,
+      "recovered": true,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+      "quiet_resynchronization": {
+        "status": "quiet",
+        "discarded_bytes": 0,
+        "observations": [
+          {
+            "elapsed_ms": 0.11649999942164868,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 1.3049000008322764,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 3.2350000001315493,
+            "available_bytes": 0
+          }
+        ],
+        "elapsed_ms": 3.268100001150742,
+        "remaining_shared_budget_ms": 152.48200000132783
+      },
+      "remaining_budget_after_quiet_ms": 152.4798999998893,
+      "total_elapsed_ms": 68.51280000046245
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [],
+      "first_incomplete_id": 1,
+      "requested_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "receive_window_ms": 40.0,
+      "health_reply_group_size": 4,
+      "fast_sync_read": true,
+      "received_packet_bytes": 17,
+      "expected_packet_bytes": 356,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 47.62109999865061,
+      "retry_requested": true,
+      "recovered": true,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+      "quiet_resynchronization": {
+        "status": "quiet",
+        "discarded_bytes": 0,
+        "observations": [
+          {
+            "elapsed_ms": 0.12340000102994964,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 1.7691000030026771,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 3.341999999975087,
+            "available_bytes": 0
+          }
+        ],
+        "elapsed_ms": 3.3791999994718935,
+        "remaining_shared_budget_ms": 148.90190000005532
+      },
+      "remaining_budget_after_quiet_ms": 148.90050000030897,
+      "total_elapsed_ms": 71.02329999906942
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "first_incomplete_id": 13,
+      "requested_ids": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "receive_window_ms": 40.0,
+      "health_reply_group_size": 4,
+      "fast_sync_read": true,
+      "received_packet_bytes": 284,
+      "expected_packet_bytes": 356,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 57.069399997999426,
+      "retry_requested": true,
+      "recovered": true,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+      "quiet_resynchronization": {
+        "status": "quiet",
+        "discarded_bytes": 0,
+        "observations": [
+          {
+            "elapsed_ms": 0.09810000119614415,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 1.5547000002698041,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 3.7496000004466623,
+            "available_bytes": 0
+          }
+        ],
+        "elapsed_ms": 3.803900002822047,
+        "remaining_shared_budget_ms": 138.9973999976064
+      },
+      "remaining_budget_after_quiet_ms": 138.9960999986215,
+      "total_elapsed_ms": 83.75119999982417
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "first_incomplete_id": 9,
+      "requested_ids": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "receive_window_ms": 40.0,
+      "health_reply_group_size": 4,
+      "fast_sync_read": true,
+      "received_packet_bytes": 339,
+      "expected_packet_bytes": 356,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 52.12590000155615,
+      "retry_requested": true,
+      "recovered": true,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+      "quiet_resynchronization": {
+        "status": "quiet",
+        "discarded_bytes": 0,
+        "observations": [
+          {
+            "elapsed_ms": 0.1280999968003016,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 1.5414999979839195,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 3.45289999677334,
+            "available_bytes": 0
+          }
+        ],
+        "elapsed_ms": 3.49139999889303,
+        "remaining_shared_budget_ms": 144.26610000009532
+      },
+      "remaining_budget_after_quiet_ms": 144.26450000246405,
+      "total_elapsed_ms": 77.72280000062892
+    }
+  ],
+  "hold_samples": 134,
+  "hold_sample_time_span_s": 10.15599999999904,
+  "hold_goals_fixed": true,
+  "assistant_motor_writes": 0,
+  "live_devices_opened": false,
+  "physical_exact90_certified": false,
+  "physical_grip_force_measured": false,
+  "new_two_turn_cycle_tested": false,
+  "named_photos": [
+    {
+      "image": "cube_before_grasp.jpg",
+      "sha256": "20c0741bb8c64e8d207ed638f60131426a495e4ecb37b717bbca01186d57fb9b",
+      "detected_ids": [
+        3,
+        40,
+        41
+      ],
+      "marker_corners_px": {
+        "41": [
+          [
+            519.0,
+            562.0
+          ],
+          [
+            519.0,
+            643.0
+          ],
+          [
+            381.0,
+            647.0
+          ],
+          [
+            371.0,
+            563.0
+          ]
+        ],
+        "40": [
+          [
+            397.0,
+            333.0
+          ],
+          [
+            526.0,
+            332.0
+          ],
+          [
+            527.0,
+            419.0
+          ],
+          [
+            388.0,
+            423.0
+          ]
+        ],
+        "3": [
+          [
+            695.0,
+            228.0
+          ],
+          [
+            689.0,
+            274.0
+          ],
+          [
+            638.0,
+            271.0
+          ],
+          [
+            643.0,
+            225.0
+          ]
+        ]
+      },
+      "pose": {
+        "visible_face_ids": [
+          3
+        ],
+        "visible_face_names": [
+          "orange"
+        ],
+        "full_orientation_observable": false,
+        "hardware_execution_allowed": false,
+        "real_devices_opened": false,
+        "centre_marker_spin_estimated_per_observation": true,
+        "status": "single_face_normal_only",
+        "normal_candidates": [
+          {
+            "face_id": 3,
+            "normal_in_camera": [
+              0.041171755848712355,
+              0.5740577081423072,
+              -0.8177790864547319
+            ],
+            "cube_center_in_camera_m": [
+              0.006801829816019038,
+              -0.04539669136214339,
+              0.2778609690065168
+            ],
+            "reprojection_rms_px": 0.08588223402966987
+          },
+          {
+            "face_id": 3,
+            "normal_in_camera": [
+              -0.09519079410339404,
+              -0.3720886214822339,
+              -0.92330318448569
+            ],
+            "cube_center_in_camera_m": [
+              0.010536650933105279,
+              -0.01946309970832492,
+              0.28069324379030697
+            ],
+            "reprojection_rms_px": 0.43258853064846337
+          }
+        ],
+        "whole_cube_yaw_not_observable": true
+      }
+    },
+    {
+      "image": "cube_grasp_hold.jpg",
+      "sha256": "34b15bbb10de915a684f68fdfaa5f7ccdb72ad44af9e73ce43a29238821309bc",
+      "detected_ids": [
+        3
+      ],
+      "marker_corners_px": {
+        "3": [
+          [
+            645.0,
+            261.0
+          ],
+          [
+            642.0,
+            305.0
+          ],
+          [
+            589.0,
+            303.0
+          ],
+          [
+            591.0,
+            259.0
+          ]
+        ]
+      },
+      "pose": {
+        "visible_face_ids": [
+          3
+        ],
+        "visible_face_names": [
+          "orange"
+        ],
+        "full_orientation_observable": false,
+        "hardware_execution_allowed": false,
+        "real_devices_opened": false,
+        "centre_marker_spin_estimated_per_observation": true,
+        "status": "single_face_normal_only",
+        "normal_candidates": [
+          {
+            "face_id": 3,
+            "normal_in_camera": [
+              0.010907318462738902,
+              0.6470378368892262,
+              -0.7623798712175338
+            ],
+            "cube_center_in_camera_m": [
+              -0.0025067258697374284,
+              -0.03998567870461238,
+              0.2682401500162476
+            ],
+            "reprojection_rms_px": 0.13646080163862143
+          },
+          {
+            "face_id": 3,
+            "normal_in_camera": [
+              0.0036623350325709347,
+              -0.5007893431117444,
+              -0.8655614484990749
+            ],
+            "cube_center_in_camera_m": [
+              -0.0023074735333788897,
+              -0.008521568023440462,
+              0.2709898650705615
+            ],
+            "reprojection_rms_px": 0.5307090544126642
+          }
+        ],
+        "whole_cube_yaw_not_observable": true
+      }
+    },
+    {
+      "image": "cube_horizontal_turn_hold.jpg",
+      "sha256": "b7e74164046dce44c4a246168877ad6db711b73106ee09f901e288e96fb4b1f5",
+      "detected_ids": [
+        3,
+        5
+      ],
+      "marker_corners_px": {
+        "5": [
+          [
+            700.0,
+            179.0
+          ],
+          [
+            728.0,
+            212.0
+          ],
+          [
+            678.0,
+            230.0
+          ],
+          [
+            651.0,
+            194.0
+          ]
+        ],
+        "3": [
+          [
+            785.0,
+            391.0
+          ],
+          [
+            773.0,
+            429.0
+          ],
+          [
+            725.0,
+            445.0
+          ],
+          [
+            736.0,
+            407.0
+          ]
+        ]
+      },
+      "pose": {
+        "visible_face_ids": [
+          3,
+          5
+        ],
+        "visible_face_names": [
+          "orange",
+          "green"
+        ],
+        "full_orientation_observable": false,
+        "hardware_execution_allowed": false,
+        "real_devices_opened": false,
+        "centre_marker_spin_estimated_per_observation": true,
+        "status": "multi_face_pose_uncertain",
+        "R_cube_camera": [
+          [
+            -0.49555541990427665,
+            -0.0746097744603994,
+            -0.8653659384089856
+          ],
+          [
+            -0.6506929993778674,
+            0.6918428283844846,
+            0.31297303617658634
+          ],
+          [
+            0.5753463707751449,
+            0.7181830423839903,
+            -0.39139452125437924
+          ]
+        ],
+        "cube_center_in_camera_m": [
+          0.008636647954349007,
+          -0.013584424699713504,
+          0.233219910169555
+        ],
+        "face_normals_in_camera": {
+          "0": [
+            -0.8653659384089856,
+            0.31297303617658634,
+            -0.39139452125437924
+          ],
+          "1": [
+            0.8653659384089856,
+            -0.31297303617658634,
+            0.39139452125437924
+          ],
+          "2": [
+            -0.49555541990427665,
+            -0.6506929993778674,
+            0.5753463707751449
+          ],
+          "3": [
+            0.49555541990427665,
+            0.6506929993778674,
+            -0.5753463707751449
+          ],
+          "4": [
+            -0.0746097744603994,
+            0.6918428283844846,
+            0.7181830423839903
+          ],
+          "5": [
+            0.0746097744603994,
+            -0.6918428283844846,
+            -0.7181830423839903
+          ]
+        },
+        "marker_quarter_rotations": {
+          "3": 2,
+          "5": 3
+        },
+        "reprojection_rms_px": 3.020071289547907,
+        "distinct_rotation_rival_error_gap_px": 25.316767344355487,
+        "dimensions_approximate": true,
+        "marker_mount_offsets_not_calibrated": true
+      }
+    },
+    {
+      "image": "cube_after_fixed_hold.jpg",
+      "sha256": "3974a5c309c331503bc4e370cd143935605d94038b656bfb809e45e5c21569da",
+      "detected_ids": [
+        3,
+        5,
+        41
+      ],
+      "marker_corners_px": {
+        "41": [
+          [
+            520.0,
+            604.0
+          ],
+          [
+            519.0,
+            670.0
+          ],
+          [
+            383.0,
+            671.0
+          ],
+          [
+            371.0,
+            606.0
+          ]
+        ],
+        "5": [
+          [
+            698.0,
+            178.0
+          ],
+          [
+            727.0,
+            212.0
+          ],
+          [
+            678.0,
+            230.0
+          ],
+          [
+            651.0,
+            194.0
+          ]
+        ],
+        "3": [
+          [
+            785.0,
+            391.0
+          ],
+          [
+            772.0,
+            429.0
+          ],
+          [
+            725.0,
+            445.0
+          ],
+          [
+            734.0,
+            408.0
+          ]
+        ]
+      },
+      "pose": {
+        "visible_face_ids": [
+          3,
+          5
+        ],
+        "visible_face_names": [
+          "orange",
+          "green"
+        ],
+        "full_orientation_observable": false,
+        "hardware_execution_allowed": false,
+        "real_devices_opened": false,
+        "centre_marker_spin_estimated_per_observation": true,
+        "status": "multi_face_pose_uncertain",
+        "R_cube_camera": [
+          [
+            -0.49939720803851556,
+            -0.0776768269226587,
+            -0.8628839662217411
+          ],
+          [
+            -0.6556474015144447,
+            0.6849299802671978,
+            0.3178008920983896
+          ],
+          [
+            0.5663293330657455,
+            0.7244565084878477,
+            -0.39298072957704266
+          ]
+        ],
+        "cube_center_in_camera_m": [
+          0.00837914026346613,
+          -0.0136963654326588,
+          0.23268345462950996
+        ],
+        "face_normals_in_camera": {
+          "0": [
+            -0.8628839662217411,
+            0.3178008920983896,
+            -0.39298072957704266
+          ],
+          "1": [
+            0.8628839662217411,
+            -0.3178008920983896,
+            0.39298072957704266
+          ],
+          "2": [
+            -0.49939720803851556,
+            -0.6556474015144447,
+            0.5663293330657455
+          ],
+          "3": [
+            0.49939720803851556,
+            0.6556474015144447,
+            -0.5663293330657455
+          ],
+          "4": [
+            -0.0776768269226587,
+            0.6849299802671978,
+            0.7244565084878477
+          ],
+          "5": [
+            0.0776768269226587,
+            -0.6849299802671978,
+            -0.7244565084878477
+          ]
+        },
+        "marker_quarter_rotations": {
+          "3": 2,
+          "5": 3
+        },
+        "reprojection_rms_px": 3.1478095565481286,
+        "distinct_rotation_rival_error_gap_px": 25.348283369155066,
+        "dimensions_approximate": true,
+        "marker_mount_offsets_not_calibrated": true
+      }
+    }
+  ],
+  "hold_joint_actual_peak_to_peak_ticks_by_id": [
+    4,
+    0,
+    5,
+    3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hold_maximum_tracking_rad": 0.04601942363656923,
+  "hold_health_flags_normal": true,
+  "named_pose_comparisons": [
+    {
+      "before": "cube_before_grasp.jpg",
+      "after": "cube_after_fixed_hold.jpg",
+      "accepted": false,
+      "frame": "camera",
+      "approximate_only": true
+    },
+    {
+      "before": "cube_grasp_hold.jpg",
+      "after": "cube_after_fixed_hold.jpg",
+      "accepted": false,
+      "frame": "camera",
+      "approximate_only": true
+    },
+    {
+      "before": "cube_horizontal_turn_hold.jpg",
+      "after": "cube_after_fixed_hold.jpg",
+      "accepted": false,
+      "frame": "camera",
+      "approximate_only": true
+    }
+  ],
+  "frame_metadata_sha256": "eaae6ba12928db3a6e59e4515ffca8df5883b283069c03a1c0a0783f6d0c23cd",
+  "saved_frame_count": 2187,
+  "saved_frame_phase_counts": {
+    "preflight": 4,
+    "stable_off_readings": 4,
+    "screen_current_pose": 559,
+    "countdown": 32,
+    "configure_off": 2,
+    "enable_hold": 2,
+    "stage_0_cmc_return": 11,
+    "stage_1_roots_clear": 116,
+    "stage_3_empty_open": 368,
+    "stage_4_place_hold": 18,
+    "open_before_cube": 2,
+    "place_cube": 158,
+    "loaded_countdown": 24,
+    "stage_5_loaded_grasp": 356,
+    "stage_6_grasp_hold": 24,
+    "stage_7_horizontal_yaw": 371,
+    "stage_8_horizontal_hold": 79,
+    "stage_2_fixed_hold": 13,
+    "fixed_hold_observation": 3,
+    "support_cube_for_off": 35,
+    "post_off_reference": 6
+  },
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\forward_hold_observe_20261111_220404_103327\\camera",
+    "status": "complete",
+    "frame_count": 2187,
+    "error": null,
+    "image_signal_usable_frames": 2187,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true,
+    "exposure_settings_modified": false,
+    "exposure_restoration_required": false,
+    "exposure_restoration_verified": null
+  },
+  "selected_source_frames": [
+    {
+      "label": "grasp_hold",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01656.jpg",
+      "phase": "stage_6_grasp_hold",
+      "t": 135.95300000000134,
+      "target_t": 135.98500000000058
+    },
+    {
+      "label": "turn_0",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01680.jpg",
+      "phase": "stage_7_horizontal_yaw",
+      "t": 139.03099999999904,
+      "target_t": 139.06300000000192
+    },
+    {
+      "label": "turn_1",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01742.jpg",
+      "phase": "stage_7_horizontal_yaw",
+      "t": 147.15599999999904,
+      "target_t": 147.1176666666682
+    },
+    {
+      "label": "turn_2",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01803.jpg",
+      "phase": "stage_7_horizontal_yaw",
+      "t": 155.1720000000023,
+      "target_t": 155.17233333333448
+    },
+    {
+      "label": "turn_3",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01866.jpg",
+      "phase": "stage_7_horizontal_yaw",
+      "t": 163.15599999999904,
+      "target_t": 163.22700000000077
+    },
+    {
+      "label": "turn_4",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01928.jpg",
+      "phase": "stage_7_horizontal_yaw",
+      "t": 171.2970000000023,
+      "target_t": 171.28166666666706
+    },
+    {
+      "label": "turn_5",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_01989.jpg",
+      "phase": "stage_7_horizontal_yaw",
+      "t": 179.26599999999962,
+      "target_t": 179.33633333333336
+    },
+    {
+      "label": "turn_6",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_02051.jpg",
+      "phase": "stage_8_horizontal_hold",
+      "t": 187.43800000000192,
+      "target_t": 187.39099999999962
+    },
+    {
+      "label": "hold_0",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_02051.jpg",
+      "phase": "stage_8_horizontal_hold",
+      "t": 187.43800000000192,
+      "target_t": 187.46900000000096
+    },
+    {
+      "label": "hold_1",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_02071.jpg",
+      "phase": "stage_8_horizontal_hold",
+      "t": 190.0470000000023,
+      "target_t": 190.00800000000072
+    },
+    {
+      "label": "hold_2",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_02090.jpg",
+      "phase": "stage_8_horizontal_hold",
+      "t": 192.56300000000192,
+      "target_t": 192.54700000000048
+    },
+    {
+      "label": "hold_3",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_02110.jpg",
+      "phase": "stage_8_horizontal_hold",
+      "t": 195.09400000000096,
+      "target_t": 195.08600000000024
+    },
+    {
+      "label": "hold_4",
+      "image": "forward_hold_observe_20261111_220404_103327/camera/frame_02130.jpg",
+      "phase": "stage_2_fixed_hold",
+      "t": 197.65599999999904,
+      "target_t": 197.625
+    }
+  ]
+}

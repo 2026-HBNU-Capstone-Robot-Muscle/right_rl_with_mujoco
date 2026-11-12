@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-10-23T04:38:42.137539+09:00",
+  "status": "preview_isolated_readonly_physical_check_ready",
+  "initiating_trial": "cube_grasp_trial_20261023_041546_404551",
+  "observed_controller_gap_ms": 718,
+  "observed_fault": "all sixteen watchdogs 255 during remove_cube",
+  "exact_original_blocking_call_verified": false,
+  "change": "imshow/waitKey/window management moved from control thread to the disposable camera worker process.",
+  "control_preview_updates": "nonblocking bounded metadata queue; no frame drawing, GUI waits or frame copies in camera.check",
+  "original_frame_pixels_preserved": true,
+  "watchdog_ms_unchanged": 500,
+  "camera_stale_seconds_unchanged": 2.0,
+  "blank_stop_seconds_unchanged": 0.5,
+  "servo_goal_or_limit_changes": false,
+  "paths": [
+    {
+      "source": "cube_grasp_trial_20261023_041546_404551",
+      "plan_sha256": "b9c541f70ee8b050d0941be9694e06827901232faede50a05855c7b41970df50",
+      "exact_goals_unchanged": true
+    },
+    {
+      "source": "cube_supported_rotation_trial_20261023_034640_750784",
+      "plan_sha256": "20c8ed145429571d09990db0eb5b2ed3ad4f5dc46773ba02e2d87f1f61dfe0dd",
+      "exact_goals_unchanged": true
+    }
+  ],
+  "regression_tests_passed": 173,
+  "fresh_native_start_proofs": 21,
+  "fresh_static_cases": 1407,
+  "fresh_dynamic_cases": 63,
+  "hardware_commands_sent_by_agent": 0,
+  "real_camera_or_serial_opened_by_agent": false,
+  "real_camera_integration_verified": false,
+  "physical_cube_rotation_verified": false,
+  "new_readonly_program": "leap_camera_readonly_check.cmd",
+  "new_program_servo_writes": 0,
+  "next_user_action": "Cube out; USB + motor power connected, torque already OFF. Run new cmd, terminal SPACE once; briefly drag camera window 2-3 times during the automatic 12s read-only check.",
+  "file_sha256": {
+    "camera_stream.py": "0a557ccf820932d57b0f7ab155908dc5619d1c3b4a797074eac6996c443fa835",
+    "empty_trial_camera.py": "92169e2a1177ace12fc3e9a7bccd728f5cfd5224024ddd92073679141f90df41",
+    "leap_camera_readonly_check.py": "6833b2efcc792ad4aeff485c0c770c4801741204db5e771f1a843832db051349",
+    "leap_camera_readonly_check.cmd": "bda185458182ae65287e3b1a98d59f2ccea7becb231fe01c6385439e9cad4187",
+    "test_camera_preview_isolation.py": "efd708e88e5aa2e6fdadc7da37dd9ec819a630dbc343da83eb0a8020711ee4d2",
+    "test_camera_readonly_check.py": "e046f610eef5e8685731ac98fcdb14b9493696ff19070f0a1877a5f4b550404d"
+  },
+  "limitation": "Removing a GUI blocking path does not eliminate USB, OS scheduling, storage or other controller stalls. Existing stop checks stay active."
+}

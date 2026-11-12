@@ -1,0 +1,360 @@
+{
+  "timestamp": "2026-10-29T01:43:56.535298+09:00",
+  "status": "stopped",
+  "error": "Fresh-state confirmation failed; no target advance: Sync read at 64 failed: comm=-3002, error=0; no target advance",
+  "failed_phase": "stage_5_loaded_grasp",
+  "plan_version": "supervised_red_up_yaw150ms_v1_20261029",
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "cube_placement_confirmed": true,
+  "cube_present": true,
+  "placement_orientation": "RED up; GREEN wristward",
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "first_incomplete_id": 9,
+      "receive_window_ms": 40.0,
+      "requested_ids": [
+        9
+      ],
+      "health_reply_group_size": 1,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 89.20450002187863,
+      "retry_requested": true,
+      "recovered": true,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+      "quiet_resynchronization": {
+        "status": "quiet",
+        "discarded_bytes": 0,
+        "observations": [
+          {
+            "elapsed_ms": 2.4914999958127737,
+            "available_bytes": 0
+          },
+          {
+            "elapsed_ms": 4.508500045631081,
+            "available_bytes": 0
+          }
+        ],
+        "elapsed_ms": 4.651800030842423,
+        "remaining_shared_budget_ms": 105.5593000492081
+      },
+      "remaining_budget_after_quiet_ms": 105.55740003474057,
+      "total_elapsed_ms": 157.40580001147464
+    },
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "first_incomplete_id": 11,
+      "receive_window_ms": 0.6293000187724829,
+      "requested_ids": [
+        11
+      ],
+      "health_reply_group_size": 1,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 35.85949999978766,
+      "retry_requested": false,
+      "recovered": false,
+      "recovery_policy": "shared200ms_quiet_and_two_complete_QPC_v2_20261029"
+    }
+  ],
+  "read_recovery_confirmation_events": [
+    {
+      "version": "two_complete_after_last_bad_read_QPC_v1_20261028",
+      "policy": {
+        "version": "two_complete_after_last_bad_read_QPC_v1_20261028",
+        "sample_budget_s": 0.2,
+        "required_consecutive_clean_reads": 2,
+        "maximum_confirmation_reads": 5,
+        "recovered_complete_snapshot_counts_as_first_healthy": true,
+        "partial_snapshot_counts_as_healthy": false,
+        "new_recovered_failure_resets_to_one_after_fresh_full_validation": true,
+        "existing_transport_retry_rate_limit_preserved": true,
+        "goal_or_setting_writes": 0,
+        "budget_clock": "time.perf_counter"
+      },
+      "phase": "stage_5_loaded_grasp",
+      "status": "stopped",
+      "command": [
+        2428,
+        2872,
+        2840,
+        2091,
+        2005,
+        2039,
+        1843,
+        2048,
+        2914,
+        2290,
+        2317,
+        2139,
+        2120,
+        2560,
+        2304,
+        2053
+      ],
+      "goals_advanced": 0,
+      "goal_writes": 0,
+      "clean_reads": 1,
+      "required_clean_reads": 2,
+      "sample_budget_ms": 200,
+      "sample_indices": [
+        1495
+      ],
+      "consecutive_clean_sample_indices": [
+        1495
+      ],
+      "confirmation_reads": 0,
+      "clean_count_resets": 0,
+      "elapsed_ms": 200.38319996092469,
+      "error": "Sync read at 64 failed: comm=-3002, error=0; no target advance"
+    }
+  ],
+  "read_resynchronization_policy": {
+    "version": "shared200ms_quiet_and_two_complete_QPC_v2_20261029",
+    "budget_clock": "time.perf_counter",
+    "maximum_requests": 3,
+    "total_read_budget_s": 0.2,
+    "quiet_s": 0.003,
+    "quiet_uses_remaining_shared_sample_budget": true,
+    "independent_drain_deadline_s": null,
+    "predicted_retry_reservation_s": null,
+    "maximum_retries_per10s": 3,
+    "scope_address": 64,
+    "scope_length": 83,
+    "consecutive_healthy_snapshots_after_recovery": 2,
+    "goal_or_setting_write_retries": 0,
+    "missing_or_partial_snapshot_accepted": false,
+    "shared_sample_deadline_respected": true,
+    "resynchronization_trace_recorded": true
+  },
+  "last_issued_phase": "stage_5_loaded_grasp",
+  "camera_worker_stopped": true,
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\retained_slow_yaw_20261029_014356_533789\\camera",
+    "status": "complete",
+    "frame_count": 825,
+    "error": null,
+    "image_signal_usable_frames": 825,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true,
+    "exposure_settings_modified": false,
+    "exposure_restoration_required": false,
+    "exposure_restoration_verified": null
+  },
+  "placement_photo": {
+    "image": "cube_before_grasp.jpg",
+    "camera_read_monotonic": 381410.718,
+    "registration_verified": false
+  },
+  "current_start_screen_accepted": true,
+  "phase_counts": {
+    "stage_0_cmc_return": 70,
+    "stage_1_roots_clear": 161,
+    "stage_3_empty_open": 301,
+    "stage_4_place_hold": 20,
+    "placement_checkpoint": 10,
+    "open_before_cube": 5,
+    "place_cube": 617,
+    "loaded_countdown": 57,
+    "stage_5_loaded_grasp": 255
+  },
+  "sample_count": 1496,
+  "measured": {
+    "min_voltage_v": 4.9,
+    "peak_abs_current_ma": 123,
+    "max_tracking_rad": 0.09970875121256667
+  },
+  "last_sample": {
+    "phase": "stage_5_loaded_grasp",
+    "t": 99.0,
+    "goal": [
+      2428,
+      2872,
+      2840,
+      2091,
+      2005,
+      2039,
+      1843,
+      2048,
+      2914,
+      2290,
+      2317,
+      2139,
+      2120,
+      2560,
+      2304,
+      2053
+    ],
+    "actual": [
+      2420,
+      2875,
+      2844,
+      2085,
+      2008,
+      2039,
+      1835,
+      2031,
+      2918,
+      2288,
+      2306,
+      2121,
+      2120,
+      2556,
+      2300,
+      2025
+    ],
+    "tracking_rad": [
+      0.01227184630308513,
+      0.0046019423636569235,
+      0.006135923151542565,
+      0.009203884727313847,
+      0.0046019423636569235,
+      0.0,
+      0.01227184630308513,
+      0.0260776733940559,
+      0.006135923151542565,
+      0.0030679615757712823,
+      0.01687378866674205,
+      0.02761165418194154,
+      0.0,
+      0.006135923151542565,
+      0.006135923151542565,
+      0.04295146206079795
+    ]
+  },
+  "camera": {
+    "status": "complete",
+    "error": null,
+    "motor_commands_sent": 0,
+    "image_signal_usable_frames": 825,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true
+  },
+  "camera_phase_indices": {
+    "preflight": {
+      "first": 0,
+      "middle": 2,
+      "last": 3,
+      "count": 4
+    },
+    "stable_off_readings": {
+      "first": 4,
+      "middle": 6,
+      "last": 7,
+      "count": 4
+    },
+    "screen_current_pose": {
+      "first": 8,
+      "middle": 12,
+      "last": 16,
+      "count": 9
+    },
+    "countdown": {
+      "first": 17,
+      "middle": 33,
+      "last": 48,
+      "count": 32
+    },
+    "configure_off": {
+      "first": 49,
+      "middle": 49,
+      "last": 49,
+      "count": 1
+    },
+    "enable_hold": {
+      "first": 50,
+      "middle": 51,
+      "last": 51,
+      "count": 2
+    },
+    "stage_0_cmc_return": {
+      "first": 52,
+      "middle": 72,
+      "last": 92,
+      "count": 41
+    },
+    "stage_1_roots_clear": {
+      "first": 93,
+      "middle": 140,
+      "last": 186,
+      "count": 94
+    },
+    "stage_3_empty_open": {
+      "first": 187,
+      "middle": 274,
+      "last": 361,
+      "count": 175
+    },
+    "stage_4_place_hold": {
+      "first": 362,
+      "middle": 371,
+      "last": 379,
+      "count": 18
+    },
+    "open_before_cube": {
+      "first": 380,
+      "middle": 381,
+      "last": 381,
+      "count": 2
+    },
+    "place_cube": {
+      "first": 382,
+      "middle": 512,
+      "last": 641,
+      "count": 260
+    },
+    "loaded_countdown": {
+      "first": 642,
+      "middle": 654,
+      "last": 666,
+      "count": 25
+    },
+    "stage_5_loaded_grasp": {
+      "first": 667,
+      "middle": 743,
+      "last": 818,
+      "count": 152
+    },
+    "post_off_reference": {
+      "first": 819,
+      "middle": 822,
+      "last": 824,
+      "count": 6
+    }
+  },
+  "named_images": [
+    "cube_before_grasp.jpg",
+    "open_before_cube.jpg"
+  ],
+  "result_sha256": "5b3a4ba98a62761d21503fb4dc10390fc98e464baf5b3692726b37180603ebdf"
+}

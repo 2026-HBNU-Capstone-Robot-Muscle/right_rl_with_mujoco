@@ -1,0 +1,35 @@
+{
+  "request": "Prepare 2x requested rate for comparison",
+  "move_period_seconds": 0.0375,
+  "requested_speed_multiplier": 2,
+  "health_gap_ms": 10,
+  "maximum_step_ticks": 2,
+  "current_cap_ma": 450,
+  "transport_policy": {
+    "version": "direct_outer_two_complete_shutdown_verify_v2_20261124",
+    "minimum_complete_health_read_gap_ms": 10,
+    "full16_required": true,
+    "motion_recovery_policy_unchanged": true,
+    "motion_sample_budget_ms": 200,
+    "motion_confirmation_owner": "calibrated_two_full_health_20261028.sample",
+    "validated_consecutive_recovery_snapshots": 2,
+    "duplicate_transport_confirmation_removed": true,
+    "shutdown_read_attempts_per_snapshot": 1,
+    "shutdown_read_budget_ms": 200,
+    "shutdown_snapshot_uses_motion_retry_allowance": false,
+    "goal_writes_after_shutdown_prohibited": true
+  },
+  "candidate_unchanged": true,
+  "candidate_sha256": "54e5d319d770b8e53e815abccf63644961cbd51aa8b732196ee37b42e40b15c5",
+  "tests_passed": 28,
+  "test_output_sha256": "0c12f2d91208fdd92eb2688da47c92f2b61c8816bf617645bfb0adc59453cc82",
+  "actual_speed_and_communication_stability_verified": false,
+  "prior_actual_cycle_ms_approximate": [
+    42,
+    47
+  ],
+  "prior_actual_cycle_slower_than_2x_requested_period": true,
+  "may_not_change_actual_bus_load_substantially": true,
+  "power_and_connector_inspection_still_needed": true,
+  "assistant_devices_opened": false
+}

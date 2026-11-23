@@ -63,6 +63,7 @@ def scope_approved():
 def hashes():
     paths=[*(ROOT/name for name in FILES),CANDIDATE,MANIFEST,REQUEST,APPROVAL]
     paths+=sorted((OUT/'models').glob('*.json'))
+    paths += [ROOT/'empty_start_thumb_index_scope_20261113.py',ROOT/'screen_empty_initial_scope_20261113.py']
     return {**original_hashes(),**{p.relative_to(ROOT).as_posix():sha(p) for p in paths}}
 
 class TipFirstTrialPlan(ForwardHoldPlan):

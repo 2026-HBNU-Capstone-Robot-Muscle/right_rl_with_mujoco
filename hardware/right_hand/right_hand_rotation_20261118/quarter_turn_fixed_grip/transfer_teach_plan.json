@@ -1,0 +1,69 @@
+{
+  "kind": "user_directed_palm_supported_transfer_teaching",
+  "date": "2026-11-18",
+  "purpose": "Identify missing intermediate geometry before rebuilding the blocked receiving path.",
+  "rotation_source_preserved": "right_hand_rotation_20261104/forward_hold/candidate.npz",
+  "fixed_final_grip_preserved": "right_hand_rotation_20261117/user_measured_grip/reference.json",
+  "existing_loose_reference": "right_hand_rotation_20261118/quarter_turn_fixed_grip/receiving_reference.json",
+  "existing_loose_reference_is_not_proof_of_cube_transfer": true,
+  "palm_support_allowed": true,
+  "continuous_fingertip_contact_required": false,
+  "user_sequence": "Cube rests on palm; clear middle finger, push cube slightly toward middle finger with thumb, disengage thumb and move it toward wrist, then close fixed final grip.",
+  "stages": [
+    {
+      "id": "middle_clear",
+      "description_ko": "회전 뒤 큐브 자리를 기준으로 손바닥에 받친 채 중지만 이동 통로에서 뒤로 빼 둔 자세. 엄지로 밀기 전.",
+      "status": "reference_saved",
+      "reference": "right_hand_rotation_20261118\\quarter_turn_fixed_grip\\middle_clear_reference.json"
+    },
+    {
+      "id": "cube_pushed",
+      "description_ko": "중지가 비켜 있는 상태에서 엄지로 큐브를 중지 쪽으로 조금 옮긴 직후. 엄지가 큐브에 닿아 있는 마지막 자세.",
+      "status": "reference_saved",
+      "reference": "right_hand_rotation_20261118\\quarter_turn_fixed_grip\\cube_pushed_reference.json",
+      "cube_visible_in_photo": false,
+      "cube_push_success_verified": false,
+      "user_confirmed_cube_removed_after_pose_set": true,
+      "cube_absence_clarified": true
+    },
+    {
+      "id": "thumb_wrist_clear",
+      "description_ko": "옮긴 큐브를 손바닥에 둔 채 엄지를 큐브에서 떼고 손목 쪽으로 옮긴 자세. 이후 기존 확정 파지로 닫기 직전.",
+      "status": "reference_saved",
+      "reference": "right_hand_rotation_20261118\\quarter_turn_fixed_grip\\thumb_wrist_clear_reference.json"
+    },
+    {
+      "id": "index_middle_lower_seat",
+      "description_ko": "검지·중지 끝마디를 먼저 굽혀 큐브 아래를 받친 뒤 밀어 올리는 중간 자세. 엄지는3번처럼 비켜 둔다.",
+      "status": "reference_saved",
+      "reference": "right_hand_rotation_20261118\\quarter_turn_fixed_grip\\index_middle_lower_seat_reference.json"
+    }
+  ],
+  "recording": {
+    "entrypoint": "read_receiving_waypoint_20261118.py --record --camera --stage STAGE",
+    "manual_adjustment_requires_torque_OFF": true,
+    "read_all_16_joints_twice": true,
+    "preserve_actual_and_stored_goal_separately": true,
+    "motor_writes": 0,
+    "torque_changes": 0,
+    "OFF_angles_are_geometry_only": true,
+    "successful_state_transfer_not_implied_by_recorded_waypoints": true
+  },
+  "new_execution_path_ready": false,
+  "new_SAC_training": false,
+  "next_stage": "fixed_grip_to_next_rotation_connection",
+  "all_three_references_saved": true,
+  "operator_observation_candidate_prepared": true,
+  "full_model_task_passed": false,
+  "revised_closure_sequence": "Index and middle distal links curl first; maintain their curl while pushing cube bottom; then finish fixed grip.",
+  "tip_first_finger_ids": [
+    5,
+    9
+  ],
+  "preserve_existing_thumb_wrist_waypoint": true,
+  "overlap_thumb_wrist_and_index_middle_tips_authorized": true,
+  "all_four_references_saved": true,
+  "current_transition_user_observed_success": true,
+  "current_transition_success_evidence": "right_hand_rotation_20261118\\quarter_turn_fixed_grip\\tip_first_lower_seat\\success_receipt_064459.json",
+  "final_grip_unchanged": true
+}

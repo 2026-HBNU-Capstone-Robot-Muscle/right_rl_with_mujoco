@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 import four_reply_yaw_gate_20261029 as transport
 from calibrated_quarter_gate_20261028 import bounded
+from empty_start_thumb_index_scope_20261113 import validate_report as validate_initial_scope
 from verified_off_restore_context_20261105 import POLICY as OFF_POLICY
 from pitch_handoff_offscreen_process_20261028 import run_screen as process_screen
 from support_first_trial_plan_20261112 import ROOT,OUT,REQUEST,PROOF,CANDIDATE,SupportFirstTrialPlan,candidate,hashes,sha,scope_approved
@@ -46,6 +47,7 @@ def models():
         intermediate90_is_diagnostic_only=True,final_left_alignment_verified=False,next_rotation_included=False)
 
 def make_review(plan,empty,before):
+    initial_scope=validate_initial_scope(empty)
     r=transport.make_review(plan,empty,transport.hashes());new=models()
     if before!=hashes():raise RuntimeError('Transfer sources changed during review')
     for key in ('loaded_model_cases','loaded_model_all_passed','loaded_model_nominal_angle_deg','loaded_geometry_cases','completed_physical_reference'):
@@ -53,6 +55,7 @@ def make_review(plan,empty,before):
     approved=scope_approved()
     r.update(status='supervised_support_first_transfer_trial_review',code_hashes=hashes(),
         loaded_goals=len(candidate()['goals']),support_first_models=new,active_motion_limit_s=500,
+        empty_initial_thumb_index_scope=initial_scope,
         existing500s_approval_retained=approved,accepted_for_operator_trial=approved,loaded_motion_authorized=approved,
         physical_transfer_success=False,physical_upper_clearance_verified=False,full_task_success_certified=False,
         intermediate90_is_diagnostic_only=True,final_left_alignment_verified=False,second_rotation_included=False,

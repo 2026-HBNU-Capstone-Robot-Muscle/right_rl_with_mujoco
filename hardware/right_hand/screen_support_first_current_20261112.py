@@ -11,7 +11,7 @@ def main():
     output=Path(a.output).resolve();output.relative_to(ROOT)
     if output.exists():raise RuntimeError('Preserve current-pose proof')
     plan=SupportFirstTrialPlan(a.request);before=hashes()
-    import screen_calibrated_empty_margin_20261028 as screen
+    import screen_empty_initial_scope_20261113 as screen
     screen.OfflineRecovery=SupportFirstTrialPlan;folder=output.parent/'empty_recovery_screen';old=sys.argv
     try:
         sys.argv=['empty','--request',str(plan.SOURCE),'--output-folder',folder.relative_to(ROOT).as_posix()];screen.main()

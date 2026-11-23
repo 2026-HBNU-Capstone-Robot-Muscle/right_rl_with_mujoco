@@ -25,3 +25,7 @@
 기록은 `support_first_trial_날짜_시간/`에 저장된다. 전체 영상과 각 관절 목표/실제값, 마지막 `cube_support_first_hold.jpg`를 함께 검토한다. 기존 `leap_cycle_nominal_two_turns.cmd`의 낙하한v3과 이번 파일은 서로 다른 경로다.
 
 근거: `READY.json`, `review.json`, `models/`, `runtime_guard_review.json`, `software_verification.json`, `empty_prefix_inheritance.json`. 새 실물 결과는 아직 없다.
+
+## 2026-11-13 시작 검사 수정
+
+사용자가 허용한 엄지 끝–검지 뿌리의 기존 초기 모델 겹침만 빈손 복귀에서 분류 예외로 처리했다. 초기 모델 깊이 상한1.75mm(관절 교란 조건 포함) 안에서 초기값보다 깊어지지 않고, OPEN 48목표 이내에 사라져 배치 유지 때0이어야 한다. 형상과 접촉력 계산은 그대로이며 다른 접촉·적재 경로·모터 감시 한도는 유지한다. 최근 저장 자세3개에서 각각201정적/9동적 조건을 검사했다. 같은실행파일을 사용한다. 새실물실행은아직하지않았다.

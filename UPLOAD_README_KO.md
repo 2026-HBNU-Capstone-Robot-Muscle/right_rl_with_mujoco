@@ -1,6 +1,6 @@
 # 오른손 개발 자료 공유
 
-2026-11-25 최신: 가로·세로 마지막 파지를 검지 완료→중지 이동으로 바꾸고, 최대10초 READ 복구에 완전한 읽기203ms 시간 초과도 연결했다. `hardware/right_hand/run_current_horizontal.cmd`, `run_current_vertical.cmd`, `run_current_keyboard.cmd`와 [실행 안내](docs/current-rotations-20261125.md)를 사용한다. 미들웨어에는 같은 자세/순서를 기존2틱 속도로 내보낸 후보를 제공한다. 이번 추가 파일/해시는 `RIGHT_HAND_CURRENT_ROTATIONS_20261125_MANIFEST.json`에 있다. 실제 ROS/양손 검증은 남아 있다.
+2026-11-25 최신: 가로·세로 마지막 파지를 검지 완료→중지 이동으로 바꾸고, 최대10초 READ 복구에 완전한 읽기203ms 시간 초과도 연결했다. `hardware/right_hand/run_current_horizontal.cmd`, `run_current_vertical.cmd`, `run_current_keyboard.cmd`와 [실행 안내](docs/current-rotations-20261125.md)를 사용한다. 미들웨어에도 같은 선택 속도를 적용한 후보와 원래2틱 경로 증명을 제공한다. 추가 목록은 RIGHT_HAND_MIDDLEWARE_SPEED_20261125_MANIFEST.json이다. 이번 추가 파일/해시는 `RIGHT_HAND_CURRENT_ROTATIONS_20261125_MANIFEST.json`에 있다. 실제 ROS/양손 검증은 남아 있다.
 
 2026-11-24 갱신: 최신 실행파일과 진행 상태는 [hardware/right_hand/README.md](hardware/right_hand/README.md)를 먼저 확인한다. 이번 변경 목록과 원본 SHA256은 `RIGHT_HAND_UPDATE_20261124_MANIFEST.json`에 있다. 확정 G, 가로/세로 단독 실행과 새 가로→G→세로→G 연속 파일을 포함한다. 새 연속 파일의 실물 성공은 아직 미확인이다.
 

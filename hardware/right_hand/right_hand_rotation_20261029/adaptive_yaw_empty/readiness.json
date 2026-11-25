@@ -1,0 +1,85 @@
+{
+  "status": "EMPTY_bounded_catch_up_ready",
+  "timestamp": "2026-10-29T06:17:54.446257+09:00",
+  "proof": "right_hand_rotation_20261029/adaptive_yaw_empty/review.json",
+  "proof_sha256": "d31e2991baf5cde1a8f47392fb581ebe97ec96e2637a4f75d0f648875b6b839f",
+  "latest_readonly": "fast_off_readonly_20261029_061601_083408/result.json",
+  "current_pose_difference_ticks": 1,
+  "current_recovery_static_cases": 201,
+  "current_recovery_dynamic_cases": 9,
+  "fixed_goal_hold_stress_dynamic_cases": 9,
+  "software_checks_passed": 11,
+  "software_check_sources": {
+    "test_root_lag_pause_20261029.py": "5a757e05be7b5a2ed3aafe3612cbea3b29b8312cfb61a7bc8a7a9da21ef65999",
+    "test_adaptive_yaw_empty_20261029.py": "067777d523729b65448d13f80a3f23d94b139697dd828f1ff05c1611bdc79ca2"
+  },
+  "latest_completed_empty_result": "yaw_load_empty_20261029_055917_615720/result.json",
+  "latest_completed_empty_sha256": "47aad16a0a3b461d78cbca8f5418205f4118c832a8ba9c9032d8656909cf1e73",
+  "measured_cube_comparison": "yaw_load_empty_20261029_055917_615720/offline_review/loaded_comparison.json",
+  "measured_same_command_ID12": {
+    "loaded": {
+      "t": 141.75,
+      "goal": 2322,
+      "actual": 2203,
+      "error_ticks": 119,
+      "tracking_rad": 0.1825437137583913,
+      "current_ma": 209
+    },
+    "empty": {
+      "t": 132.26600000000326,
+      "goal": 2322,
+      "actual": 2229,
+      "error_ticks": 93,
+      "tracking_rad": 0.14266021327336462,
+      "current_ma": 162
+    },
+    "all16_goal_values_match": true
+  },
+  "measured_empty_fixed_hold": {
+    "first": {
+      "t": 136.329000000027,
+      "goal": 2421,
+      "actual": 2371,
+      "error_ticks": 50,
+      "tracking_rad": 0.07669903939428206,
+      "current_ma": 90
+    },
+    "last": {
+      "t": 137.76600000000326,
+      "goal": 2421,
+      "actual": 2378,
+      "error_ticks": 43,
+      "tracking_rad": 0.06596117387908257,
+      "current_ma": 78
+    }
+  },
+  "steady_state_response_cause_not_proven": true,
+  "same_angular_targets_and_current_PID": true,
+  "yaw_targets": 320,
+  "root_lag_pause_policy": {
+    "version": "middle_root_preemptive_wait_v1_20261029",
+    "motor_id": 12,
+    "phase": "stage_7_horizontal_yaw",
+    "enter_error_rad": 0.12,
+    "resume_error_rad": 0.1,
+    "consecutive_good_samples": 2,
+    "maximum_single_wait_s": 1.2,
+    "maximum_total_wait_s": 20.0,
+    "period_s": 0.075,
+    "fresh_read_reservation_s": 0.2,
+    "original_health_checks_and_progress_guard": true,
+    "original_tracking_stop_rad": 0.18,
+    "goal_writes_during_wait": 0,
+    "wait_counts_toward_original_motion_timeout": true
+  },
+  "nominal_motion_seconds": 135.975,
+  "maximum_added_wait_seconds": 20.0,
+  "active_motion_limit_s": 300,
+  "cube_stays_OUT": true,
+  "one_terminal_SPACE_only": true,
+  "no_PLACE_or_REMOVE": true,
+  "physical_wait_controller_success_not_yet_verified": true,
+  "loaded_controller_trial_ready": false,
+  "assistant_motor_writes": 0,
+  "protected_hashes_unchanged": true
+}

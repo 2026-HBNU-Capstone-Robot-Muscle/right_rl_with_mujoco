@@ -1,0 +1,132 @@
+{
+  "status": "conditional_RF_endpoint_to_clear_work_grip_joined_replay",
+  "source": "next_cycle/handoff_refinement_20261110/RF_endpoint_CCD50_load_screen/qualified0_end_state.npz",
+  "source_sha256": "6dfabba25036e3573be1a2bea280e2260623daa26107f2ea56ad70bbf7c7ae4f",
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "source_reports_sha256": {
+    "next_cycle/handoff_refinement_20261110/RF_index_clearance_margin2/review.json": "d2d18e43e257ee280ec8c8b698debfb4813c44bfe2f4256d5e19df3cb2981e45",
+    "next_cycle/handoff_refinement_20261110/RF_clearance_free_arrivals/review.json": "3b23f0f2f33baffa085c5f748a5b618239552ecbea87569df16b91a86c561534"
+  },
+  "steps": 392,
+  "stage_goals": [
+    90,
+    302
+  ],
+  "stop": [],
+  "seams": [
+    {
+      "after_goals": 90,
+      "state_max_abs_difference": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "act": 0.0,
+        "qacc_warmstart": 0.0
+      },
+      "exact_bound_state_equal": true
+    },
+    {
+      "after_goals": 392,
+      "state_max_abs_difference": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "act": 0.0,
+        "qacc_warmstart": 0.0
+      },
+      "exact_bound_state_equal": true
+    }
+  ],
+  "actual_state_resets_after_start": 0,
+  "final_hold_samples": 4050,
+  "certified_samples": 4050,
+  "upper_certificate_minimum_lower_mm": 0.37206109009700583,
+  "whole_hand_support_fraction": 1.0,
+  "hold_angle_drift_deg": 0.01846419564488394,
+  "hold_center_drift_mm": 0.011588579592222282,
+  "final_global90_error_deg": 0.519583143485161,
+  "final_tilt_deg": 0.2779911497818856,
+  "common_station_error_mm": 1.6331453969863174,
+  "conditional_clear_work_grip_suffix_passed": true,
+  "terminal_support": {
+    "supported_sample": true,
+    "hand_normal_load_N": 0.9837083059136262,
+    "contact_hand_geoms": [
+      "if_bs_collision_1",
+      "if_px_collision",
+      "th_tip"
+    ],
+    "loaded_hand_geoms": [
+      "if_bs_collision_1"
+    ],
+    "by_geom": {
+      "if_bs_collision_1": {
+        "normal_N": 0.8073209980382539,
+        "force_world_N": [
+          0.27160191861580757,
+          -0.001542681630147621,
+          0.7602637252874345
+        ],
+        "upward_N": 0.8073172300458843
+      },
+      "if_px_collision": {
+        "normal_N": 0.17362952313505683,
+        "force_world_N": [
+          0.05902766114456687,
+          0.0005112476839942106,
+          0.16329117250225905
+        ],
+        "upward_N": 0.17363256445843617
+      },
+      "th_tip": {
+        "normal_N": 0.0027577847403155273,
+        "force_world_N": [
+          0.002517065551616013,
+          0.001030898151011192,
+          -0.0008555802941626806
+        ],
+        "upward_N": 5.0061657161097255e-05
+      }
+    },
+    "hand_force_world_N": [
+      0.33314664531199045,
+      -5.357951422184197e-07,
+      0.9226993174955308
+    ],
+    "upward_support_N": 0.9809998561614816,
+    "weight_N": 0.9810000000000001,
+    "upward_support_over_weight": 0.9999998533756183,
+    "external_loaded_contacts": [],
+    "force_with_gravity_world_N": [
+      -7.167256080853335e-07,
+      -5.357951422184197e-07,
+      1.0585211041025389e-07
+    ]
+  },
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.0013474453595369996,
+    "tracking_rad": 0.034177391972986734,
+    "range_rad": 0.0
+  },
+  "initial_RF_endpoint_itself_was_initialized_not_reached_from_initial_placement": true,
+  "first_rotation_from_initial_placement_or_next_rotation_not_certified": true,
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

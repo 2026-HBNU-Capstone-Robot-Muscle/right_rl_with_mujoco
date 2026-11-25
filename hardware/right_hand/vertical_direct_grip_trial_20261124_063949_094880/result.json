@@ -1,0 +1,66 @@
+{
+  "status": "stopped",
+  "holding": false,
+  "settings_restored": false,
+  "all_torque_off_verified": false,
+  "workflow": "vertical_turn_direct_thumb_return_G",
+  "source_candidate_sha256": "54e5d319d770b8e53e815abccf63644961cbd51aa8b732196ee37b42e40b15c5",
+  "physical_task_success_verified": false,
+  "physical_direct_return_verified": false,
+  "port": "COM7",
+  "precise_transport_clock_policy": {
+    "version": "calibrated_QPC_clock_v1_20261028",
+    "budget_clock": "time.perf_counter",
+    "driver_timeout_clock": "time.perf_counter milliseconds",
+    "legacy_log_clock_unchanged": true,
+    "sample_budget_ms": 200,
+    "wall_clock_or_GetTickCount_not_used_for_health_budget": true
+  },
+  "active_health_read_policy": {
+    "version": "paired_standard_sync_read_QPC_v1_20261118",
+    "instruction": 130,
+    "group_size": 2,
+    "packet_window_ms": 40.0,
+    "sample_budget_ms": 200,
+    "full16_required": true,
+    "each_status_error_checked": true,
+    "SDK_CRC_and_stuffing_preserved": true,
+    "partial_snapshot_reused": false,
+    "goal_writes": 0,
+    "host_read_timeout_seconds": 0.001,
+    "maximum_failed_packet_traces": 64
+  },
+  "direct_transport_policy": {
+    "version": "direct_outer_two_complete_shutdown_verify_v2_20261124",
+    "minimum_complete_health_read_gap_ms": 10,
+    "full16_required": true,
+    "motion_recovery_policy_unchanged": true,
+    "motion_sample_budget_ms": 200,
+    "motion_confirmation_owner": "calibrated_two_full_health_20261028.sample",
+    "validated_consecutive_recovery_snapshots": 2,
+    "duplicate_transport_confirmation_removed": true,
+    "shutdown_read_attempts_per_snapshot": 1,
+    "shutdown_read_budget_ms": 200,
+    "shutdown_snapshot_uses_motion_retry_allowance": false,
+    "goal_writes_after_shutdown_prohibited": true
+  },
+  "failed_raw_packets": [
+    {
+      "comm": -3001,
+      "received_bytes": 0,
+      "declared_bytes": null,
+      "length_complete": false,
+      "raw_hex": "",
+      "elapsed_ms": 42.03409999900032,
+      "crc_matches": null
+    }
+  ],
+  "error": "ID1 PING/model mismatch; no writes",
+  "live_state_writer": {
+    "worker_stopped": true,
+    "error": null,
+    "motor_reads_added": 0,
+    "motor_writes_added": 0
+  },
+  "serial_port_closed": true
+}

@@ -1,0 +1,19 @@
+======================================================================
+ERROR: test_OFF_start_enables_once_and_has_no_midcycle_OFF (test_two_axis_cycle_20261124.Tests.test_OFF_start_enables_once_and_has_no_midcycle_OFF)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\김준서\Documents\Codex\2026-09-23\files-mentioned-by-the-user-leap\outputs\test_two_axis_cycle_20261124.py", line 90, in test_OFF_start_enables_once_and_has_no_midcycle_OFF
+    seq,bus,_=self.execute(initial=state(0))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\김준서\Documents\Codex\2026-09-23\files-mentioned-by-the-user-leap\outputs\test_two_axis_cycle_20261124.py", line 30, in execute
+    pose.run_pose(bus,initial,start,seq.rows(start),bus.report,cancel,
+  File "C:\Users\김준서\Documents\Codex\2026-09-23\files-mentioned-by-the-user-leap\outputs\leap_measured_grip_hold_20261117.py", line 396, in run_pose
+    checked.health(state,state['goal'],**bus.checked_control_profile)
+  File "C:\Users\김준서\Documents\Codex\2026-09-23\files-mentioned-by-the-user-leap\outputs\sequence_flip_checked.py", line 150, in health
+    raise RuntimeError(f'ID{i+1} measured current {currents[i]}mA exceeded {trips[i]}mA')
+RuntimeError: ID1 measured current 600mA exceeded 550mA
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.343s
+
+FAILED (errors=1)

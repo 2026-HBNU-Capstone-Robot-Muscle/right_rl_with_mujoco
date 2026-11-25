@@ -1,0 +1,101 @@
+{
+  "status": "quasistatic_force_allocation_to_bounded_position_goals",
+  "task": "hold",
+  "hypothetical_model_torque_cap_Nm": 0.15,
+  "source_state": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/end_state.npz",
+  "source_state_sha256": "bda9e2d8c1f6c840dc03482b68141dba1fc606a43c327c8d136ce79b31244a4f",
+  "source_model_sha256": "c16efc2d36f0e411fe21a38414aaa6bfa005997a1cd276bac5ac75403a67e0bc",
+  "samples": 62,
+  "final_phase": "hold",
+  "fixed_hold_samples": 63,
+  "guard_stop": null,
+  "search_stop": "static_force_allocation_not_certified",
+  "allocation_at_exit": {
+    "reason": "static_force_allocation_not_certified",
+    "message": "Positive directional derivative for linesearch",
+    "wrench_residual": [
+      0.08353898371241897,
+      0.1391246098748163,
+      0.08740659509244642,
+      -0.0030261675152384528,
+      -0.000233327966985983,
+      -0.002193638605681627
+    ],
+    "violation": 0.4186549838271869
+  },
+  "final_yaw_deg": 62.82671425368948,
+  "final_center_shift_mm": 0.3719671741085494,
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.011433762374600406,
+    "tracking_rad": 0.044722429888786275,
+    "range_rad": 0.0
+  },
+  "trace": [
+    {
+      "sample": 20,
+      "phase": "hold",
+      "yaw_deg": 62.788127969477074,
+      "tilt_deg": 4.084600904552408,
+      "lift_mm": -0.014724360719963569,
+      "position_error_mm": 0.13793245881307725,
+      "rotation_error_deg": 0.30606583537003024,
+      "allocation": {
+        "contact_points": 4,
+        "normal_N": {
+          "if_bs_collision_1": 1.189206638215618,
+          "mf_tip": 1.4837190899990484,
+          "th_tip": 1.5504688717321076
+        },
+        "wrench_error": 1.1102230246251565e-16
+      }
+    },
+    {
+      "sample": 40,
+      "phase": "hold",
+      "yaw_deg": 62.83332546946143,
+      "tilt_deg": 4.189459110816939,
+      "lift_mm": -0.03648319947716277,
+      "position_error_mm": 0.32576159404865884,
+      "rotation_error_deg": 0.729946918306766,
+      "allocation": {
+        "contact_points": 4,
+        "normal_N": {
+          "if_bs_collision_1": 1.213008588492513,
+          "mf_tip": 1.5003738379583962,
+          "th_tip": 1.56210497055975
+        },
+        "wrench_error": 3.3306690738754696e-16
+      }
+    },
+    {
+      "sample": 60,
+      "phase": "hold",
+      "yaw_deg": 62.823227217063135,
+      "tilt_deg": 4.2407632451598465,
+      "lift_mm": -0.03241007996278122,
+      "position_error_mm": 0.36285378447795436,
+      "rotation_error_deg": 0.7335530727931732,
+      "allocation": {
+        "contact_points": 4,
+        "normal_N": {
+          "if_bs_collision_1": 1.223839579764618,
+          "mf_tip": 1.6886238001190694,
+          "th_tip": 1.692721283429835
+        },
+        "wrench_error": 1.1102230246251565e-16
+      }
+    }
+  ],
+  "recorded_goal_replay_verification": null,
+  "perfect_simulated_contact_and_pose_feedback": true,
+  "force_allocation_is_quasistatic_hypothesis": true,
+  "no_external_cube_force_or_pose_written": true,
+  "ring_targets_held_fixed": true,
+  "current_PID_and_original_dynamic_bounds_not_changed": true,
+  "full_initial_placement_not_replayed_for_this_feedback_path": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false,
+  "elapsed_seconds": 2.8210133289999995
+}

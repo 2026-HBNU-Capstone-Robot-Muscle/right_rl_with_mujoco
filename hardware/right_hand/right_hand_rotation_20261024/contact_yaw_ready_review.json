@@ -1,0 +1,97 @@
+{
+  "status": "bounded_contact_refinement_and_small_yaw_ready_for_operator_trial",
+  "date_client": "2026-10-24",
+  "previous_physical_source": "grasped_yaw_trial_20261023_234707_886202",
+  "previous_physical_source_sha256": "adc0cf67dfb20d1e0de6127b8d5961fa19beae6173d657c06fa96b65dc58948c",
+  "previous_turn_commands_complete": true,
+  "previous_stop_phase": "remove_cube",
+  "previous_all_torque_off_verified": true,
+  "previous_settings_restored": true,
+  "previous_goal_yaw_verified": false,
+  "cube_image_translation_px": [
+    17.1422119140625,
+    -0.6742706298828125
+  ],
+  "candidate": "right_hand_rotation_20261024\\contact_refined_small_yaw_candidate.json",
+  "candidate_sha256": "e16ee60f16bf36c4d9f79dedf4118689fb6ebff40e03d010cabe575ef14c76bd",
+  "refinement_samples": 20,
+  "turn_samples": 70,
+  "simulated_yaw_range_deg": [
+    0.9340094116914318,
+    3.2440511437041346
+  ],
+  "simulated_lateral_range_mm": [
+    2.9834935118086823,
+    4.664821798571526
+  ],
+  "same_predicted_direction_in_nine_cases": true,
+  "full_held_out_angle_criterion_passed": false,
+  "robust_policy": false,
+  "live_sac": false,
+  "physical_rotation_verified": false,
+  "native_proofs": [
+    {
+      "fixture": "right_hand_rotation_20261023\\grasped_yaw_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.05465835931720431
+    },
+    {
+      "fixture": "right_hand_rotation_20261023\\grasped_yaw_prior_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.06266947541439949
+    },
+    {
+      "fixture": "right_hand_rotation_20261023\\grasped_yaw_open_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.060054054209013
+    },
+    {
+      "fixture": "right_hand_rotation_20261023\\grasped_yaw_after_stop_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.054658313001404
+    },
+    {
+      "fixture": "right_hand_rotation_20261023\\grasped_yaw_goal_stop_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.05942289436084003
+    },
+    {
+      "fixture": "right_hand_rotation_20261023\\grasped_yaw_LED_complete_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.06062056028966778
+    },
+    {
+      "fixture": "right_hand_rotation_20261024\\grasped_yaw_completed_turn_off_fixture",
+      "accepted": true,
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.05465916307540042
+    }
+  ],
+  "regression_tests": 252,
+  "maximum_native_tracking_rad": 0.06266947541439949,
+  "simulation_video": "contact_point_yaw_simulation.mp4",
+  "next_operator_command": "leap_grasped_yaw_trial.cmd",
+  "fresh_OFF_and_full_screen_required_at_runtime": true,
+  "source_images_modified": false,
+  "hardware_commands_sent": 0,
+  "real_devices_opened": false,
+  "limitations": [
+    "All nine evaluated contact scenarios preserve the predicted positive direction, but one response-offset case rotates only about 0.93 degrees.",
+    "Hand response is prescribed and the cube pose/friction are hypotheses; this is not a calibrated physical prediction.",
+    "The kinematic angle parameter is negative; positive physical yaw is the contact-simulation prediction, not a sign relabeling of the kinematic target.",
+    "An operator trial still requires a fresh full native path proof and unchanged health/communication stops."
+  ]
+}

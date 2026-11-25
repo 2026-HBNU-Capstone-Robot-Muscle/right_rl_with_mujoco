@@ -1,0 +1,53 @@
+{
+  "status": "validated_model_teacher_correction_dataset",
+  "sources": [
+    {
+      "case": "nominal",
+      "source_state": "sac_current_contract_v4_20k/export_000000010256/evaluation_active_certified/end_state.npz",
+      "source_sha256": "80ffa6bcf0604e80e44fda78a7ffbc3607dd48959825384370840dd3178e03a2",
+      "teacher_goals": "next_model_feedback_5_recover_long_nominal_center15/research_goals.npz",
+      "teacher_sha256": "9ca9210228fbab36bc534fd2ec4e64fe4590db0d802c3f5dc77d688129217856",
+      "hypothetical_friction_override": null,
+      "examples": 256,
+      "replay_qpos_error": 0.0,
+      "constant_hold": null
+    },
+    {
+      "case": "x_plus05",
+      "source_state": "sac_current_contract_v4_20k/export_000000010256/evaluation_active_x_plus05/end_state.npz",
+      "source_sha256": "74e2faac9fb0b49f6030ad9494444452b3f2561fdbedc254676daa65eb1c7273",
+      "teacher_goals": "next_model_feedback_5_recover_long_x_plus05/research_goals.npz",
+      "teacher_sha256": "ce12c1dc16c3d64ab408176c843d0cbbc3e38908296481a53cb825600fc39058",
+      "hypothetical_friction_override": null,
+      "examples": 256,
+      "replay_qpos_error": 0.0,
+      "constant_hold": null
+    },
+    {
+      "case": "friction025",
+      "source_state": "sac_current_contract_v4_20k/export_000000010256/evaluation_active_friction025/end_state.npz",
+      "source_sha256": "e750239fc46146a8fe7551838a72b84de5a1378272508b74a332d6fbdd373bef",
+      "teacher_goals": "next_model_feedback_5_recover_long_friction025/research_goals.npz",
+      "teacher_sha256": "314dc474f88c2e2749ff33cc200acf54f34656c3b3dc3ea7d93fec00aa8a7b4e",
+      "hypothetical_friction_override": 0.25,
+      "examples": 256,
+      "replay_qpos_error": 0.0,
+      "constant_hold": null
+    }
+  ],
+  "examples": 768,
+  "observation_size": 110,
+  "action_size": 16,
+  "appended_validated_constant_hold_steps_per_case": 0,
+  "longer_feedback_teachers": true,
+  "explicit_nominal_teacher_override": "next_model_feedback_5_recover_long_nominal_center15",
+  "input_contract": "original108 sensor-contract observations +1 constant +consecutive qualifying pose count/54",
+  "action_contract": "incremental sim-order joint action; rounded2ticks per75ms; no reference joint path used by student",
+  "goal": "absolute original90-degree orientation and unchanged common station",
+  "builder_history_warmup": "Three repeated noiseless initial model observations; physical sampling not certified",
+  "no_contact_force_or_model_internal_state_in_student_observation": true,
+  "is_new_SAC_training": false,
+  "is_whole_cycle_distillation": false,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

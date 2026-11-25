@@ -1,0 +1,92 @@
+{
+  "status": "OFF_LED_diagnostic_ready_for_operator",
+  "saved_v1_evidence": [
+    {
+      "source": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\bus_echo_off_20261023_225756_510581\\result.json",
+      "sha256": "db709413835a9cb5b20c1183c4d06773aca88625396c97c45d0d4fdfc4779b61",
+      "status": "stopped",
+      "error": "OFF goal echo missing after fresh reads; no further probe",
+      "reads": 7,
+      "goal_equals_position_reads": 7,
+      "goal_probe_writes": 1,
+      "restoration_writes": 0,
+      "camera_opened": false,
+      "all_torque_off_verified": true,
+      "original_goal_restoration_observed": true
+    },
+    {
+      "source": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\bus_echo_off_20261023_225847_477065\\result.json",
+      "sha256": "080780d5d30eade4757b907e7d08bd77e4444078c896c373a60163730b1d6ee8",
+      "status": "stopped",
+      "error": "OFF goal echo missing after fresh reads; no further probe",
+      "reads": 7,
+      "goal_equals_position_reads": 7,
+      "goal_probe_writes": 0,
+      "restoration_writes": 1,
+      "camera_opened": false,
+      "all_torque_off_verified": true,
+      "original_goal_restoration_observed": true
+    }
+  ],
+  "diagnosis": "Goal Position did not remain fixed while OFF; v1 echo assumption invalid for these observations.",
+  "firmware_root_cause_verified": false,
+  "physical_communication_root_cause_resolved": false,
+  "original_latest_motion_goal_failure_still_unresolved": true,
+  "latest_motion_source": "grasped_yaw_trial_20261023_222816_628099",
+  "replacement_register": {
+    "name": "LED",
+    "address": 65,
+    "bytes": 1,
+    "values": [
+      0,
+      1
+    ],
+    "memory": "RAM"
+  },
+  "official_source": "https://emanual.robotis.com/docs/en/dxl/x/xc330-m288/#led65",
+  "goal_torque_drive_eeprom_writes": 0,
+  "restore_original_LED_values": true,
+  "existing_motion_paths_or_limits_changed": false,
+  "tests_run": 15,
+  "tests_passed": true,
+  "unchanged_motion_native_proofs_validated": [
+    {
+      "fixture": "grasped_yaw_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3
+    },
+    {
+      "fixture": "grasped_yaw_prior_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3
+    },
+    {
+      "fixture": "grasped_yaw_open_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3
+    },
+    {
+      "fixture": "grasped_yaw_after_stop_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3
+    },
+    {
+      "fixture": "grasped_yaw_goal_stop_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3
+    },
+    {
+      "fixture": "slow_grasp_demo_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3
+    }
+  ],
+  "raw_execution_results_modified": false,
+  "assistant_opened_real_devices": false,
+  "actual_cube_rotation_verified": false,
+  "loaded_goal_delivery_verified": false,
+  "limitation": "One-byte LED writes with 83-byte reads compare camera traffic conditions; they do not prove loaded four-byte Goal Position delivery.",
+  "next_user_command": "leap_bus_echo_off.cmd",
+  "needs_markers_or_cube_placement": false,
+  "source_sha256": "f10a346b9c3cdbb6621d870727eab4c3ecdd1620aafd732dc47849590554a8b3"
+}

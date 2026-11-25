@@ -1,0 +1,67 @@
+"""Document explicit user order and history bounds; preserve original evidence."""
+import json,hashlib
+from pathlib import Path
+from hand_motor_mapping import metadata
+R=Path(__file__).resolve().parent;O=R/'full_mapping_review_20261018';O.mkdir(exist_ok=True)
+confirmation=dict(**metadata(),user_statement='엄지는 1,2, 3, 4가 맞고 다음이 5 7 6 8 끝이 13 15 14 16이네 ....... 언제부터 이랬던거지',
+    question_orientation='Each finger tip to palm',
+    note='Thumb 1,2,3,4 interpreted in the requested tip-to-palm orientation; geometric validation still required.',
+    prior_middle_statement='끝마디가 9 다음이 11 다음이 10 다음이 12네',
+    motor_ids_reprogrammed=False,hardware_goals_sent=0,live_controller_migrated=False)
+(O/'confirmed_mapping.json').write_text(json.dumps(confirmation,ensure_ascii=False,indent=2),encoding='utf-8')
+early=R/'encoder_policy_shadow_20260928_004633_719070.json'
+d=json.loads(early.read_text(encoding='utf-8'))
+history=dict(earliest_located_root_label_evidence=dict(file=early.name,timestamp=d['timestamp'],
+    sha256=hashlib.sha256(early.read_bytes()).hexdigest(),
+    scope='Saved marker-to-model registration labels roots as IDs5/9/13 and thumb root as ID1; not a full source revision archive.'),
+    exact_first_source_edit_date_known=False,deploy_repository_git_history_available=False,
+    conclusion='The incorrect root-ID assumption existed by 2026-09-28. Exact initial code introduction date is not established.',
+    distinction='A dated numeric landmark record bounds the root-label assumption, but is not proof of the exact full permutation source on that date.')
+(O/'history_conclusion.json').write_text(json.dumps(history,ensure_ascii=False,indent=2),encoding='utf-8')
+head='## CURRENT 2026-10-18: 네 손가락 ID 순서 사용자 확인 완료'
+note='''사용자가 손끝→손바닥 순서를 알려줬다. 질문 방향 그대로 해석하면 다음과 같다.
+
+| 손가락 | 손끝→손바닥 | 모델 뿌리→손끝 |
+|---|---|---|
+| 검지 | 5,7,6,8 | 8,6,7,5 |
+| 중지 | 9,11,10,12 | 12,10,11,9 |
+| 약지 | 13,15,14,16 | 16,14,15,13 |
+| 엄지 | 1,2,3,4 | 4,3,2,1 |
+
+엄지의 ‘1,2,3,4가 맞고’도 손끝부터 번호를 요청한 질문에 대한 답으로 기록했다.
+추가 중지 촬영은 계속 취소 상태다. 나머지 ID 질문도 답변 완료됐으므로 반복하지 않는다.
+
+원인: `work/Leap_Test/deploy/leap_hw.py`는 손바닥 쪽부터 모터 ID가 증가한다고
+가정해 SIMD 순서에 오름차순 ID를 넣었다. 주석에는 확인됐다고 적혀 있으나,
+현재 사용자 확인 및 중지 끝 굽힘 차분 자료와 모순된다. 주석 자체를 실측 검증
+근거로 인정하지 않는다. 드라이버/작업 폴더에 Git 이력이 없어 최초 수정일은 미확정.
+추가 추적한 9월28일00:46 저장 기록에도 이미 뿌리를5/9/13, 엄지 뿌리를1로
+붙인 좌표 등록이 남아 있다. **적어도9월28일에는 잘못된 뿌리 ID 가정이 있었다.**
+이 자료만으로 정확한 전체 순열의 최초 소스 작성 날짜까지 확정하지 않는다.
+
+공통 오프라인/읽기 변환 `hand_motor_mapping.py`를 v2로 갱신했다. 모델16관절→
+실제 ID 순서는 `[8,6,7,5,12,10,11,9,16,14,15,13,4,3,2,1]`.
+실물 장치의 번호·영점·게인을 바꾸거나 명령을 보내지 않았다. 외부 배포 소스는
+아직 이전 연결이므로 기존 live SAC/시작/경로 실행 차단을 유지한다.
+
+저장 경로120자세 및 복귀진단 실제각196샘플을 전체 순서로 오프라인 재검증했다.
+원래 모델 의도를 새 ID로 재인코딩하면 수치적으로 일치하지만, 원래 경로에도
+모델 self-contact119/120, 관절 범위 초과54/120이 남는다. 실물 재실행 불가.
+과거 실제 목표를 새 순서로 해석하면 받침 접촉76/120을 예측한다. 이는 모델
+정적 충돌 결과이며 당시 실제 접촉 횟수나 모든 실패 원인을 확정하는 수치가 아니다.
+구조·부호·영점, 접촉 모델과 ID를 전제로 한 마커 등록 역시 재검토가 필요하다.
+
+테스트41개 통과:16모터 독립 대응, 역변환, 읽기 전용, 이전 실행의 장치 접근 전
+중단. 새 경로는 분석 전용 형식으로 저장했으며 사용자용 구동 명령은 제공하지 않았다.
+원래 `sequence_flip`의 raw-ID 저장값은 모델 변환과 별개이므로 일괄 뒤집지 않는다.
+
+다음 자율 작업: 최신 ID 순서로 저장 사진/엔코더 전체 손 자세를 재구성하고,
+이전 카메라 등록의 잘못된 ID 전제를 분리한다. 그 뒤 준비 자세/충돌/정책 입력과
+출력 양방향을 검증해 경로를 다시 만든다. 현재 추가 촬영이나 실물 실행 요청 없음.
+아래 이전 중지 전용 후보와 ‘다른 손가락 미확인’ 기록은 이 절로 대체한다.
+'''
+(O/'README.md').write_text(head+'\n\n'+note,encoding='utf-8')
+for name in ('sac_current_status.md','professor_progress_20261015.md'):
+    p=R/name;old=p.read_text(encoding='utf-8-sig')
+    if head not in old:p.write_text(head+'\n\n'+note+'\n---\n\n'+old,encoding='utf-8')
+print('All four ID orders and bounded history conclusion recorded; no hardware action.')

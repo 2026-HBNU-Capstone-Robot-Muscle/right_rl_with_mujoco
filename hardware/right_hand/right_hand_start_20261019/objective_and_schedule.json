@@ -1,0 +1,1035 @@
+{
+  "user_confirmed_scope": "Right hand physically reorients the cube in requested vertical and horizontal directions.",
+  "started_local_date": "2026-10-19",
+  "target_local_date": "2026-10-24",
+  "timezone": "Asia/Seoul",
+  "deadline_is_target_not_guarantee": true,
+  "minimum_demo": "Actual cube orientation changes in each requested maneuver, stays in hand, no human correction during maneuver, before/after visible in video.",
+  "sac_requirement": "Keep SAC integration as the approach; label fixed SAC-derived trajectory replay separately from live feedback policy.",
+  "excluded_from_this_five_day_scope": [
+    "Left-hand layer turns",
+    "Full scrambled-cube solve"
+  ],
+  "milestones": [
+    {
+      "target": "2026-10-19..2026-10-20",
+      "deliverable": "Resolve physical joint conversion and validate empty preparation/trajectory",
+      "status": "empty_preparation_and_new_approach_passed_full_cube_trajectory_not_verified"
+    },
+    {
+      "target": "2026-10-21",
+      "deliverable": "First verified physical vertical reorientation",
+      "status": "not_verified"
+    },
+    {
+      "target": "2026-10-22",
+      "deliverable": "First verified physical horizontal reorientation",
+      "status": "not_verified"
+    },
+    {
+      "target": "2026-10-23..2026-10-24",
+      "deliverable": "Direction selection, SAC integration check and complete maneuver demonstration video",
+      "status": "not_verified"
+    }
+  ],
+  "current_user_task": "현재 새 실행/사진 불필요. 작은 회전 후보 시뮬레이션 진행.",
+  "current_blocker": "Loaded approach completed. Final photo retains cube; human assistance and stable grasp force are not established. Rotation not yet tested.",
+  "hardware_commands_sent": 0,
+  "startup_product_requirement": "Read valid current empty-hand state and plan a collision-checked transition to preparation; do not require exact manual reproduction of archived angles. Not yet implemented for arbitrary starts.",
+  "latest_user_hardware_trial": {
+    "source": "cube_grasp_trial_20261022_141534_666300\\result.json",
+    "source_sha256": "82a761e02dc2c0c6b27c9f6ee3ad346a3f0f67916c9489b1190f6ef88a31ab2c",
+    "timestamp": "2026-10-22T14:15:34.666300+09:00",
+    "status": "cube_grasp_approach_trial_complete",
+    "approach_sequence_completed": true,
+    "error": null,
+    "failed_phase": null,
+    "all_torque_off_verified": true,
+    "settings_restored": true,
+    "setting_or_goal_writes": 616,
+    "min_voltage_v": 4.1,
+    "peak_current_ma": 97,
+    "max_tracking_rad": 0.0782330201821677,
+    "camera_status": "complete",
+    "cube_removal_confirmed": true,
+    "physical_grasp_verified": false,
+    "physical_rotation_verified": false,
+    "report_workflow": "실행이 끝나면 했어라고만 알리면 조수가 저장된 결과와 사진을 확인합니다.",
+    "plan_version": "cube_place_then_completed_approach_v6",
+    "phase_sample_counts": {
+      "stage_0_empty_recover": 113,
+      "release_checkpoint": 1,
+      "release_contact_confirmation": 189,
+      "stage_1_thumb_clearance": 64,
+      "stage_2_empty_open": 98,
+      "placement_checkpoint": 20,
+      "open_before_cube": 5,
+      "place_cube": 294,
+      "loaded_countdown": 49,
+      "stage_3_loaded_approach": 322,
+      "stage_2_fixed_hold": 20,
+      "grasp_observation": 4,
+      "remove_cube": 407
+    },
+    "motion_goal_writes": 597,
+    "camera_frames": 906,
+    "operator_release_confirmation": true,
+    "placement_confirmed": true,
+    "before_after_photos_reviewed": [
+      "cube_before_approach.jpg",
+      "cube_after_approach.jpg"
+    ],
+    "cube_visible_on_hand_in_final_photo": true,
+    "physical_stable_grasp_force_verified": false,
+    "human_cube_correction_during_motion_known": false,
+    "hardware_commands_sent_by_assistant": 0
+  },
+  "latest_offline_review": "prepared_cube_review_20261022/grasp_trial_v6_125613_fixture/windows_integration.json",
+  "next_trial_review": "prepared_cube_review_20261022/grasp_trial_v6_ready.json",
+  "last_completed_user_hardware_trial": {
+    "timestamp": "2026-10-22T02:07:51.741219+09:00",
+    "status": "empty_grasp_approach_complete",
+    "source": "grasp_approach_current_empty_20261022_020751_741219\\result.json",
+    "source_sha256": "72d12e547078ef534fe55d9b5b87d7442e94e8cee90c403b8f173516f0a5fc07",
+    "motion_samples": 616,
+    "final_hold_samples": 20,
+    "minimum_voltage_v": 4.3,
+    "peak_current_ma": 91,
+    "maximum_tracking_rad": 0.07976700097005335,
+    "final_on_position_ticks": [
+      3032,
+      2924,
+      2893,
+      2061,
+      3293,
+      2049,
+      2252,
+      2452,
+      3090,
+      2486,
+      2498,
+      2584,
+      3232,
+      2146,
+      2628,
+      3053
+    ],
+    "final_on_goal_ticks": [
+      3045,
+      2918,
+      2888,
+      2065,
+      3295,
+      2043,
+      2257,
+      2473,
+      3090,
+      2515,
+      2498,
+      2613,
+      3238,
+      2144,
+      2625,
+      3053
+    ],
+    "final_off_position_ticks": [
+      3031,
+      2908,
+      2893,
+      1802,
+      3293,
+      2049,
+      2244,
+      2408,
+      3090,
+      2417,
+      2489,
+      2412,
+      3232,
+      2146,
+      2660,
+      3057
+    ],
+    "on_to_off_position_change_ticks": [
+      -1,
+      -16,
+      0,
+      -259,
+      0,
+      0,
+      -8,
+      -44,
+      0,
+      -69,
+      -9,
+      -172,
+      0,
+      0,
+      32,
+      4
+    ],
+    "final_off_reference_valid": false,
+    "all_torque_off_verified": true,
+    "settings_restored": true,
+    "camera_frames": 578,
+    "camera_status": "complete",
+    "empty_grasp_approach_motor_motion_verified": true,
+    "physical_grasp_verified": false,
+    "physical_cube_rotation_verified": false,
+    "physical_no_contact_verified": false,
+    "maximum_tracking_deg": 4.5703125
+  },
+  "latest_user_tracking_trials": [
+    {
+      "folder": "cube_grasp_trial_20261022_023904_356527",
+      "sha256": "483a823c4ad7b6842c8dd2dd1430cc435f27f56af643ec94273a91ae84421b9b",
+      "status": "stopped",
+      "error": "ID12 no progress over 20 fresh samples with >=64 tick error; no target advance",
+      "all_torque_off_verified": true,
+      "settings_restored": true,
+      "initial_ticks": [
+        3031,
+        2900,
+        2894,
+        1803,
+        3293,
+        2049,
+        2243,
+        2407,
+        3090,
+        2417,
+        2489,
+        2412,
+        3232,
+        2146,
+        2847,
+        3056
+      ],
+      "final_actual_ticks": [
+        3032,
+        2902,
+        2893,
+        2000,
+        3293,
+        2049,
+        2249,
+        2439,
+        3090,
+        2466,
+        2490,
+        2477,
+        3232,
+        2146,
+        2671,
+        3061
+      ],
+      "final_goal_ticks": [
+        3042,
+        2915,
+        2889,
+        2015,
+        3295,
+        2044,
+        2254,
+        2460,
+        3090,
+        2496,
+        2496,
+        2575,
+        3237,
+        2144,
+        2667,
+        3054
+      ],
+      "off_snapshots": [
+        [
+          3031,
+          2899,
+          2893,
+          1781,
+          3293,
+          2049,
+          2246,
+          2406,
+          3090,
+          2437,
+          2488,
+          2412,
+          3232,
+          2146,
+          2731,
+          3061
+        ],
+        [
+          3031,
+          2890,
+          2893,
+          1790,
+          3293,
+          2049,
+          2246,
+          2406,
+          3090,
+          2437,
+          2488,
+          2412,
+          3232,
+          2146,
+          2779,
+          3061
+        ]
+      ],
+      "minimum_voltage_v": 4.2,
+      "peak_current_ma": 171,
+      "samples": 107,
+      "motion_goal_writes": 108,
+      "images_by_phase": {
+        "preflight": {
+          "count": 20,
+          "first": "frame_00000.jpg",
+          "last": "frame_00019.jpg"
+        },
+        "stable_off_readings": {
+          "count": 4,
+          "first": "frame_00020.jpg",
+          "last": "frame_00023.jpg"
+        },
+        "screen_current_pose": {
+          "count": 264,
+          "first": "frame_00024.jpg",
+          "last": "frame_00287.jpg"
+        },
+        "countdown": {
+          "count": 47,
+          "first": "frame_00288.jpg",
+          "last": "frame_00334.jpg"
+        },
+        "configure_off": {
+          "count": 2,
+          "first": "frame_00335.jpg",
+          "last": "frame_00336.jpg"
+        },
+        "enable_hold": {
+          "count": 2,
+          "first": "frame_00337.jpg",
+          "last": "frame_00338.jpg"
+        },
+        "stage_0_empty_recover": {
+          "count": 47,
+          "first": "frame_00339.jpg",
+          "last": "frame_00385.jpg"
+        },
+        "post_off_reference": {
+          "count": 6,
+          "first": "frame_00386.jpg",
+          "last": "frame_00391.jpg"
+        }
+      },
+      "id12_trace": [
+        {
+          "goal": 2412,
+          "actual": 2412,
+          "current_ma": 0,
+          "tracking_rad": 0.0,
+          "t": 0.29599999997299165
+        },
+        {
+          "goal": 2427,
+          "actual": 2414,
+          "current_ma": 24,
+          "tracking_rad": 0.019941750242513337,
+          "t": 0.8119999999762513
+        },
+        {
+          "goal": 2443,
+          "actual": 2417,
+          "current_ma": 46,
+          "tracking_rad": 0.039883500485026674,
+          "t": 1.2959999999729916
+        },
+        {
+          "goal": 2458,
+          "actual": 2422,
+          "current_ma": 58,
+          "tracking_rad": 0.05522330836388308,
+          "t": 1.8429999999934807
+        },
+        {
+          "goal": 2473,
+          "actual": 2441,
+          "current_ma": 56,
+          "tracking_rad": 0.04908738521234052,
+          "t": 2.375
+        },
+        {
+          "goal": 2489,
+          "actual": 2448,
+          "current_ma": 72,
+          "tracking_rad": 0.06289321230331128,
+          "t": 2.8429999999934807
+        },
+        {
+          "goal": 2504,
+          "actual": 2456,
+          "current_ma": 84,
+          "tracking_rad": 0.07363107781851078,
+          "t": 3.2959999999729916
+        },
+        {
+          "goal": 2519,
+          "actual": 2462,
+          "current_ma": 101,
+          "tracking_rad": 0.08743690490948154,
+          "t": 3.89000000001397
+        },
+        {
+          "goal": 2535,
+          "actual": 2470,
+          "current_ma": 113,
+          "tracking_rad": 0.09970875121256667,
+          "t": 4.48399999999674
+        },
+        {
+          "goal": 2545,
+          "actual": 2475,
+          "current_ma": 128,
+          "tracking_rad": 0.10737865515199488,
+          "t": 4.920999999972992
+        },
+        {
+          "goal": 2547,
+          "actual": 2475,
+          "current_ma": 126,
+          "tracking_rad": 0.11044661672776616,
+          "t": 4.98399999999674
+        },
+        {
+          "goal": 2549,
+          "actual": 2475,
+          "current_ma": 130,
+          "tracking_rad": 0.11351457830353745,
+          "t": 5.045999999972992
+        },
+        {
+          "goal": 2550,
+          "actual": 2475,
+          "current_ma": 131,
+          "tracking_rad": 0.11504855909142309,
+          "t": 5.10899999999674
+        },
+        {
+          "goal": 2552,
+          "actual": 2475,
+          "current_ma": 134,
+          "tracking_rad": 0.11811652066719437,
+          "t": 5.170999999972992
+        },
+        {
+          "goal": 2553,
+          "actual": 2475,
+          "current_ma": 136,
+          "tracking_rad": 0.11965050145508001,
+          "t": 5.23399999999674
+        },
+        {
+          "goal": 2555,
+          "actual": 2475,
+          "current_ma": 139,
+          "tracking_rad": 0.1227184630308513,
+          "t": 5.295999999972992
+        },
+        {
+          "goal": 2556,
+          "actual": 2475,
+          "current_ma": 142,
+          "tracking_rad": 0.12425244381873693,
+          "t": 5.35899999999674
+        },
+        {
+          "goal": 2558,
+          "actual": 2475,
+          "current_ma": 145,
+          "tracking_rad": 0.12732040539450823,
+          "t": 5.4060000000172295
+        },
+        {
+          "goal": 2559,
+          "actual": 2476,
+          "current_ma": 146,
+          "tracking_rad": 0.12732040539450823,
+          "t": 5.452999999979511
+        },
+        {
+          "goal": 2561,
+          "actual": 2476,
+          "current_ma": 158,
+          "tracking_rad": 0.1303883669702795,
+          "t": 5.5
+        },
+        {
+          "goal": 2562,
+          "actual": 2477,
+          "current_ma": 149,
+          "tracking_rad": 0.1303883669702795,
+          "t": 5.5310000000172295
+        },
+        {
+          "goal": 2564,
+          "actual": 2477,
+          "current_ma": 151,
+          "tracking_rad": 0.13345632854605077,
+          "t": 5.577999999979511
+        },
+        {
+          "goal": 2565,
+          "actual": 2477,
+          "current_ma": 153,
+          "tracking_rad": 0.1349903093339364,
+          "t": 5.64000000001397
+        },
+        {
+          "goal": 2567,
+          "actual": 2477,
+          "current_ma": 158,
+          "tracking_rad": 0.1380582709097077,
+          "t": 5.702999999979511
+        },
+        {
+          "goal": 2569,
+          "actual": 2477,
+          "current_ma": 161,
+          "tracking_rad": 0.14112623248547898,
+          "t": 5.76500000001397
+        },
+        {
+          "goal": 2570,
+          "actual": 2477,
+          "current_ma": 162,
+          "tracking_rad": 0.14266021327336462,
+          "t": 5.811999999976251
+        },
+        {
+          "goal": 2572,
+          "actual": 2477,
+          "current_ma": 165,
+          "tracking_rad": 0.14572817484913592,
+          "t": 5.85899999999674
+        },
+        {
+          "goal": 2573,
+          "actual": 2477,
+          "current_ma": 168,
+          "tracking_rad": 0.14726215563702155,
+          "t": 5.9060000000172295
+        },
+        {
+          "goal": 2575,
+          "actual": 2477,
+          "current_ma": 171,
+          "tracking_rad": 0.15033011721279282,
+          "t": 5.952999999979511
+        }
+      ]
+    },
+    {
+      "folder": "cube_grasp_trial_20261022_024003_945968",
+      "sha256": "3da3965f913baf175a424ddd34ad2004e249909a55c13cc8d017265f272096ef",
+      "status": "stopped",
+      "error": "ID12 tracking 0.181rad; goal=2578, actual=2460, current=207mA",
+      "all_torque_off_verified": true,
+      "settings_restored": true,
+      "initial_ticks": [
+        3031,
+        2890,
+        2893,
+        1790,
+        3293,
+        2049,
+        2246,
+        2405,
+        3090,
+        2437,
+        2488,
+        2412,
+        3231,
+        2146,
+        2848,
+        3057
+      ],
+      "final_actual_ticks": [
+        3032,
+        2901,
+        2894,
+        2003,
+        3293,
+        2049,
+        2250,
+        2441,
+        3088,
+        2471,
+        2487,
+        2460,
+        3232,
+        2146,
+        2667,
+        3063
+      ],
+      "final_goal_ticks": [
+        3043,
+        2913,
+        2889,
+        2017,
+        3295,
+        2044,
+        2255,
+        2461,
+        3090,
+        2501,
+        2496,
+        2578,
+        3237,
+        2144,
+        2664,
+        3054
+      ],
+      "off_snapshots": [
+        [
+          3031,
+          2897,
+          2893,
+          1781,
+          3293,
+          2049,
+          2248,
+          2406,
+          3092,
+          2453,
+          2473,
+          2412,
+          3232,
+          2152,
+          2726,
+          3070
+        ],
+        [
+          3031,
+          2885,
+          2894,
+          1792,
+          3293,
+          2049,
+          2248,
+          2406,
+          3092,
+          2453,
+          2473,
+          2412,
+          3232,
+          2161,
+          2776,
+          3070
+        ]
+      ],
+      "minimum_voltage_v": 4.1,
+      "peak_current_ma": 207,
+      "samples": 115,
+      "motion_goal_writes": 116,
+      "images_by_phase": {
+        "preflight": {
+          "count": 20,
+          "first": "frame_00000.jpg",
+          "last": "frame_00019.jpg"
+        },
+        "stable_off_readings": {
+          "count": 4,
+          "first": "frame_00020.jpg",
+          "last": "frame_00023.jpg"
+        },
+        "screen_current_pose": {
+          "count": 249,
+          "first": "frame_00024.jpg",
+          "last": "frame_00272.jpg"
+        },
+        "countdown": {
+          "count": 45,
+          "first": "frame_00273.jpg",
+          "last": "frame_00317.jpg"
+        },
+        "configure_off": {
+          "count": 2,
+          "first": "frame_00318.jpg",
+          "last": "frame_00319.jpg"
+        },
+        "enable_hold": {
+          "count": 2,
+          "first": "frame_00320.jpg",
+          "last": "frame_00321.jpg"
+        },
+        "stage_0_empty_recover": {
+          "count": 47,
+          "first": "frame_00322.jpg",
+          "last": "frame_00368.jpg"
+        },
+        "post_off_reference": {
+          "count": 5,
+          "first": "frame_00369.jpg",
+          "last": "frame_00373.jpg"
+        }
+      },
+      "id12_trace": [
+        {
+          "goal": 2412,
+          "actual": 2412,
+          "current_ma": 0,
+          "tracking_rad": 0.0,
+          "t": 0.2970000000204891
+        },
+        {
+          "goal": 2427,
+          "actual": 2414,
+          "current_ma": 23,
+          "tracking_rad": 0.019941750242513337,
+          "t": 0.8120000000344589
+        },
+        {
+          "goal": 2441,
+          "actual": 2417,
+          "current_ma": 42,
+          "tracking_rad": 0.03681553890925539,
+          "t": 1.3429999999934807
+        },
+        {
+          "goal": 2456,
+          "actual": 2420,
+          "current_ma": 64,
+          "tracking_rad": 0.05522330836388308,
+          "t": 1.8429999999934807
+        },
+        {
+          "goal": 2470,
+          "actual": 2431,
+          "current_ma": 67,
+          "tracking_rad": 0.059825250727540004,
+          "t": 2.312000000034459
+        },
+        {
+          "goal": 2485,
+          "actual": 2436,
+          "current_ma": 87,
+          "tracking_rad": 0.07516505860639641,
+          "t": 2.7810000000172295
+        },
+        {
+          "goal": 2499,
+          "actual": 2440,
+          "current_ma": 101,
+          "tracking_rad": 0.09050486648525283,
+          "t": 3.25
+        },
+        {
+          "goal": 2514,
+          "actual": 2445,
+          "current_ma": 119,
+          "tracking_rad": 0.10584467436410924,
+          "t": 3.7179999999934807
+        },
+        {
+          "goal": 2529,
+          "actual": 2446,
+          "current_ma": 145,
+          "tracking_rad": 0.12732040539450823,
+          "t": 4.172000000020489
+        },
+        {
+          "goal": 2543,
+          "actual": 2449,
+          "current_ma": 163,
+          "tracking_rad": 0.14419419406125028,
+          "t": 4.75
+        },
+        {
+          "goal": 2550,
+          "actual": 2454,
+          "current_ma": 166,
+          "tracking_rad": 0.14726215563702155,
+          "t": 5.047000000020489
+        },
+        {
+          "goal": 2552,
+          "actual": 2454,
+          "current_ma": 170,
+          "tracking_rad": 0.15033011721279282,
+          "t": 5.10899999999674
+        },
+        {
+          "goal": 2553,
+          "actual": 2454,
+          "current_ma": 173,
+          "tracking_rad": 0.1518640980006785,
+          "t": 5.172000000020489
+        },
+        {
+          "goal": 2555,
+          "actual": 2454,
+          "current_ma": 178,
+          "tracking_rad": 0.15493205957644976,
+          "t": 5.23399999999674
+        },
+        {
+          "goal": 2556,
+          "actual": 2454,
+          "current_ma": 181,
+          "tracking_rad": 0.1564660403643354,
+          "t": 5.297000000020489
+        },
+        {
+          "goal": 2558,
+          "actual": 2454,
+          "current_ma": 182,
+          "tracking_rad": 0.1595340019401067,
+          "t": 5.35899999999674
+        },
+        {
+          "goal": 2559,
+          "actual": 2454,
+          "current_ma": 184,
+          "tracking_rad": 0.16106798272799233,
+          "t": 5.422000000020489
+        },
+        {
+          "goal": 2561,
+          "actual": 2455,
+          "current_ma": 187,
+          "tracking_rad": 0.16260196351587797,
+          "t": 5.48399999999674
+        },
+        {
+          "goal": 2562,
+          "actual": 2455,
+          "current_ma": 188,
+          "tracking_rad": 0.1641359443037636,
+          "t": 5.547000000020489
+        },
+        {
+          "goal": 2563,
+          "actual": 2455,
+          "current_ma": 190,
+          "tracking_rad": 0.16566992509164924,
+          "t": 5.60899999999674
+        },
+        {
+          "goal": 2565,
+          "actual": 2455,
+          "current_ma": 193,
+          "tracking_rad": 0.16873788666742054,
+          "t": 5.6560000000172295
+        },
+        {
+          "goal": 2566,
+          "actual": 2455,
+          "current_ma": 197,
+          "tracking_rad": 0.17027186745530618,
+          "t": 5.703000000037719
+        },
+        {
+          "goal": 2568,
+          "actual": 2455,
+          "current_ma": 197,
+          "tracking_rad": 0.17333982903107745,
+          "t": 5.76500000001397
+        },
+        {
+          "goal": 2569,
+          "actual": 2455,
+          "current_ma": 201,
+          "tracking_rad": 0.17487380981896308,
+          "t": 5.828000000037719
+        },
+        {
+          "goal": 2571,
+          "actual": 2455,
+          "current_ma": 204,
+          "tracking_rad": 0.17794177139473438,
+          "t": 5.89000000001397
+        },
+        {
+          "goal": 2572,
+          "actual": 2459,
+          "current_ma": 198,
+          "tracking_rad": 0.17333982903107745,
+          "t": 5.953000000037719
+        },
+        {
+          "goal": 2574,
+          "actual": 2460,
+          "current_ma": 200,
+          "tracking_rad": 0.17487380981896308,
+          "t": 6.0
+        },
+        {
+          "goal": 2575,
+          "actual": 2460,
+          "current_ma": 203,
+          "tracking_rad": 0.17640779060684875,
+          "t": 6.062000000034459
+        },
+        {
+          "goal": 2577,
+          "actual": 2460,
+          "current_ma": 202,
+          "tracking_rad": 0.17947575218262002,
+          "t": 6.10899999999674
+        },
+        {
+          "goal": 2578,
+          "actual": 2460,
+          "current_ma": 207,
+          "tracking_rad": 0.18100973297050565,
+          "t": 6.172000000020489
+        }
+      ]
+    }
+  ],
+  "status": "unassisted_grasp_approach_confirmed_rotation_search",
+  "latest_update": "2026-10-22 14:15 completed v6",
+  "latest_hardware_stop_review": "cube_grasp_trial_20261022_123011_432278\\stop_review.json",
+  "latest_ready_record": "prepared_cube_review_20261022/grasp_trial_v6_ready.json",
+  "next_user_task": "현재 새 실행/사진 불필요. 작은 회전 후보 시뮬레이션 진행.",
+  "physical_grasp_verified": false,
+  "physical_rotation_verified": false,
+  "latest_user_screen_stops": [
+    {
+      "source_sha256": "93f0a55801f1bdf75a3c21dbeccf679b1e5fb52275a18ca3137cf2cf937651e4",
+      "source": "cube_grasp_trial_20261022_125440_000527\\result.json",
+      "original_status": "stopped",
+      "original_error": "Current-pose path screen failed: ring contact could not clear within the short release; no motion started; see C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\cube_grasp_trial_20261022_125440_000527\\current_start_screen.log",
+      "write_attempts": 0,
+      "all_torque_off_verified": true,
+      "settings_restored": false,
+      "restoration_needed": false,
+      "off_position": [
+        2784,
+        3053,
+        3004,
+        2447,
+        3033,
+        2133,
+        2140,
+        2404,
+        2952,
+        2238,
+        2300,
+        2411,
+        3232,
+        2255,
+        2851,
+        3060
+      ],
+      "nominal_release_pip_travel_ticks": 66,
+      "maximum_release_pip_travel_ticks": 74,
+      "maximum_static_separation_goal": 37,
+      "maximum_dynamic_separation_seconds": 2.209999999999997,
+      "cause": "Only the additional 64-tick first-separation cutoff failed. Monotone separation, no new contacts, native ranges, support clearance, <=40 goals and <=2.5s native separation all passed.",
+      "original_results_preserved": true,
+      "physical_release_in_this_pose_verified": false
+    },
+    {
+      "source_sha256": "717d3f6ad8f3634fbb60388211615501e552f6ddd98c509e2bf9e874ae9cf4bc",
+      "source": "cube_grasp_trial_20261022_125613_698937\\result.json",
+      "original_status": "stopped",
+      "original_error": "Current-pose path screen failed: ring contact could not clear within the short release; no motion started; see C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\cube_grasp_trial_20261022_125613_698937\\current_start_screen.log",
+      "write_attempts": 0,
+      "all_torque_off_verified": true,
+      "settings_restored": false,
+      "restoration_needed": false,
+      "off_position": [
+        2784,
+        3053,
+        3004,
+        2447,
+        3033,
+        2133,
+        2140,
+        2404,
+        2952,
+        2238,
+        2300,
+        2412,
+        3232,
+        2255,
+        2851,
+        3060
+      ],
+      "nominal_release_pip_travel_ticks": 66,
+      "maximum_release_pip_travel_ticks": 74,
+      "maximum_static_separation_goal": 37,
+      "maximum_dynamic_separation_seconds": 2.209999999999997,
+      "cause": "Only the additional 64-tick first-separation cutoff failed. Monotone separation, no new contacts, native ranges, support clearance, <=40 goals and <=2.5s native separation all passed.",
+      "original_results_preserved": true,
+      "physical_release_in_this_pose_verified": false
+    }
+  ],
+  "latest_completed_loaded_approach": {
+    "source": "cube_grasp_trial_20261022_141534_666300\\result.json",
+    "source_sha256": "82a761e02dc2c0c6b27c9f6ee3ad346a3f0f67916c9489b1190f6ef88a31ab2c",
+    "timestamp": "2026-10-22T14:15:34.666300+09:00",
+    "status": "cube_grasp_approach_trial_complete",
+    "approach_sequence_completed": true,
+    "error": null,
+    "failed_phase": null,
+    "all_torque_off_verified": true,
+    "settings_restored": true,
+    "setting_or_goal_writes": 616,
+    "min_voltage_v": 4.1,
+    "peak_current_ma": 97,
+    "max_tracking_rad": 0.0782330201821677,
+    "camera_status": "complete",
+    "cube_removal_confirmed": true,
+    "physical_grasp_verified": false,
+    "physical_rotation_verified": false,
+    "report_workflow": "실행이 끝나면 했어라고만 알리면 조수가 저장된 결과와 사진을 확인합니다.",
+    "plan_version": "cube_place_then_completed_approach_v6",
+    "phase_sample_counts": {
+      "stage_0_empty_recover": 113,
+      "release_checkpoint": 1,
+      "release_contact_confirmation": 189,
+      "stage_1_thumb_clearance": 64,
+      "stage_2_empty_open": 98,
+      "placement_checkpoint": 20,
+      "open_before_cube": 5,
+      "place_cube": 294,
+      "loaded_countdown": 49,
+      "stage_3_loaded_approach": 322,
+      "stage_2_fixed_hold": 20,
+      "grasp_observation": 4,
+      "remove_cube": 407
+    },
+    "motion_goal_writes": 597,
+    "camera_frames": 906,
+    "operator_release_confirmation": true,
+    "placement_confirmed": true,
+    "before_after_photos_reviewed": [
+      "cube_before_approach.jpg",
+      "cube_after_approach.jpg"
+    ],
+    "cube_visible_on_hand_in_final_photo": true,
+    "physical_stable_grasp_force_verified": false,
+    "human_cube_correction_during_motion_known": false,
+    "hardware_commands_sent_by_assistant": 0
+  },
+  "complete_log_copy_required": false,
+  "human_assistance_required": false,
+  "user_confirmation": {
+    "source_trial": "cube_grasp_trial_20261022_141534_666300",
+    "source": "user_confirmation_after_completed_v6",
+    "user_statement": "그런건 없었는데 그냥 큐브쥐기만 한거아님?",
+    "human_cube_correction_during_motion_known": true,
+    "human_assistance_required": false,
+    "unassisted_cube_retention_during_approach_user_confirmed": true,
+    "approach_only": true,
+    "rotation_command_sent": false,
+    "physical_rotation_verified": false,
+    "next_objective": "A small deliberate cube rotation from this reached grasp, followed by larger requested rotations.",
+    "current_repeated_grasp_or_new_photo_requested": false
+  }
+}

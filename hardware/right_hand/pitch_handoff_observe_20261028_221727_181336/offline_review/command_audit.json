@@ -1,0 +1,84 @@
+{
+  "status": "saved_command_sequence_and_shutdown_verified",
+  "source": "pitch_handoff_observe_20261028_221727_181336",
+  "source_result_sha256": "782e672b732ecf4712e1fd66d0c44ffce2652799c9ddc3913c25566ae255731d",
+  "request": "fresh_off_request.json",
+  "planned_targets": 3120,
+  "recorded_position_writes": 3122,
+  "initial_preload_and_enable_writes": 2,
+  "exact_ordered_target_match": true,
+  "goal_packets_resent_during_read_recovery": 0,
+  "all3372_sample_goal_readbacks_exact": true,
+  "plan_phases": {
+    "stage_0_cmc_return": 37,
+    "stage_1_roots_clear": 202,
+    "stage_3_empty_open": 933,
+    "stage_4_place_hold": 40,
+    "stage_5_known_pitch_rf_clearance": 1208,
+    "stage_6_pitch_hold": 60,
+    "stage_7_loaded_pose_transfer": 600,
+    "stage_8_transfer_observe_hold": 40
+  },
+  "read_failures": 1,
+  "recovery_confirmations": [
+    {
+      "version": "two_complete_after_last_bad_read_QPC_v1_20261028",
+      "policy": {
+        "version": "two_complete_after_last_bad_read_QPC_v1_20261028",
+        "sample_budget_s": 0.2,
+        "required_consecutive_clean_reads": 2,
+        "maximum_confirmation_reads": 5,
+        "recovered_complete_snapshot_counts_as_first_healthy": true,
+        "partial_snapshot_counts_as_healthy": false,
+        "new_recovered_failure_resets_to_one_after_fresh_full_validation": true,
+        "existing_transport_retry_rate_limit_preserved": true,
+        "goal_or_setting_writes": 0,
+        "budget_clock": "time.perf_counter"
+      },
+      "phase": "stage_5_known_pitch_rf_clearance",
+      "status": "confirmed",
+      "command": [
+        2710,
+        3015,
+        3130,
+        2423,
+        2052,
+        2147,
+        1951,
+        2852,
+        2114,
+        2016,
+        2003,
+        2851,
+        2994,
+        2126,
+        2617,
+        3253
+      ],
+      "goals_advanced": 0,
+      "goal_writes": 0,
+      "clean_reads": 2,
+      "required_clean_reads": 2,
+      "sample_budget_ms": 200,
+      "sample_indices": [
+        2468,
+        2469
+      ],
+      "consecutive_clean_sample_indices": [
+        2468,
+        2469
+      ],
+      "confirmation_reads": 1,
+      "clean_count_resets": 0,
+      "elapsed_ms": 116.76440003793687
+    }
+  ],
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "cube_removal_confirmed": true,
+  "subsequent_yaw_executed": false,
+  "devices_opened": false,
+  "robot_commands": 0,
+  "raw_physical_flip_verified_unchanged": false,
+  "raw_physical_handoff_verified_unchanged": false
+}

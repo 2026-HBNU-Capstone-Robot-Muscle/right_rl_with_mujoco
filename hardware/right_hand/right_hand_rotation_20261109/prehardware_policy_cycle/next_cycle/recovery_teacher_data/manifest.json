@@ -1,0 +1,47 @@
+{
+  "status": "validated_model_teacher_correction_dataset",
+  "sources": [
+    {
+      "case": "nominal",
+      "source_state": "sac_current_contract_v4_20k/export_000000010256/evaluation_active_certified/end_state.npz",
+      "source_sha256": "80ffa6bcf0604e80e44fda78a7ffbc3607dd48959825384370840dd3178e03a2",
+      "teacher_goals": "next_model_feedback_5_all_fingers/research_goals.npz",
+      "teacher_sha256": "f1c7eb67ef1bbf6ca6ded31bec88c49889abe14aae45540f891f27502df034a2",
+      "hypothetical_friction_override": null,
+      "examples": 109,
+      "replay_qpos_error": 0.0
+    },
+    {
+      "case": "x_plus05",
+      "source_state": "sac_current_contract_v4_20k/export_000000010256/evaluation_active_x_plus05/end_state.npz",
+      "source_sha256": "74e2faac9fb0b49f6030ad9494444452b3f2561fdbedc254676daa65eb1c7273",
+      "teacher_goals": "next_model_feedback_5_recover_x_plus05/research_goals.npz",
+      "teacher_sha256": "3f17d9aca085d80fc7b7145425c99a303242eda815d4aea3bdc3897f1bb77e4b",
+      "hypothetical_friction_override": null,
+      "examples": 102,
+      "replay_qpos_error": 0.0
+    },
+    {
+      "case": "friction025",
+      "source_state": "sac_current_contract_v4_20k/export_000000010256/evaluation_active_friction025/end_state.npz",
+      "source_sha256": "e750239fc46146a8fe7551838a72b84de5a1378272508b74a332d6fbdd373bef",
+      "teacher_goals": "next_model_feedback_5_recover_friction025/research_goals.npz",
+      "teacher_sha256": "4e361cddb1d335ab5b3d1ab793bda1170fb41b123e5fdfe1825a1f188ef18b90",
+      "hypothetical_friction_override": 0.25,
+      "examples": 92,
+      "replay_qpos_error": 0.0
+    }
+  ],
+  "examples": 303,
+  "observation_size": 110,
+  "action_size": 16,
+  "input_contract": "original108 sensor-contract observations +1 constant +consecutive qualifying pose count/54",
+  "action_contract": "incremental sim-order joint action; rounded2ticks per75ms; no reference joint path used by student",
+  "goal": "absolute original90-degree orientation and unchanged common station",
+  "builder_history_warmup": "Three repeated noiseless initial model observations; physical sampling not certified",
+  "no_contact_force_or_model_internal_state_in_student_observation": true,
+  "is_new_SAC_training": false,
+  "is_whole_cycle_distillation": false,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

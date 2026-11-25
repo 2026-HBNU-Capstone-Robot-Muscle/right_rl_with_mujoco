@@ -1,0 +1,242 @@
+{
+  "case": "palm_offset",
+  "pressure_objective_weight": null,
+  "exact_wrench_required": true,
+  "model_sha256": "c16efc2d36f0e411fe21a38414aaa6bfa005997a1cd276bac5ac75403a67e0bc",
+  "source_sha256": "e6d507ad9a28aff27fcbb5446759ca019357b8f6edcebf0eed0b3a91ae9d9935",
+  "proposal_sha256": "cd25f73128849b5ded6e55234feb13fc64d8f3dc6cb67a0d3b22426de188effb",
+  "geometry_passed": true,
+  "force_passed": true,
+  "actual_contacts": [
+    {
+      "name": "palm_collision_1",
+      "gap_mm": -0.019242144671264103,
+      "local_mm": [
+        27.500000000000007,
+        27.490378927664363,
+        1.1136705636862283
+      ]
+    },
+    {
+      "name": "palm_collision_1",
+      "gap_mm": -0.019242144671247994,
+      "local_mm": [
+        27.49999999999999,
+        27.49037892766437,
+        19.33617607678737
+      ]
+    },
+    {
+      "name": "palm_collision_1",
+      "gap_mm": -0.019242144671254513,
+      "local_mm": [
+        18.8020251528101,
+        27.490378927664374,
+        7.5119617739921365
+      ]
+    },
+    {
+      "name": "if_tip",
+      "gap_mm": -0.030144646138066312,
+      "local_mm": [
+        -15.888171265629754,
+        12.161371382531835,
+        -27.484927676930972
+      ]
+    },
+    {
+      "name": "th_tip",
+      "gap_mm": -0.029998174419323228,
+      "local_mm": [
+        -17.857159659425914,
+        13.861499726685263,
+        27.485000912790323
+      ]
+    }
+  ],
+  "actual_underside_support": [
+    {
+      "name": "palm_collision_1",
+      "gap_mm": -0.019242144671264103,
+      "local_mm": [
+        27.500000000000007,
+        27.490378927664363,
+        1.1136705636862283
+      ]
+    },
+    {
+      "name": "palm_collision_1",
+      "gap_mm": -0.019242144671247994,
+      "local_mm": [
+        27.49999999999999,
+        27.49037892766437,
+        19.33617607678737
+      ]
+    },
+    {
+      "name": "palm_collision_1",
+      "gap_mm": -0.019242144671254513,
+      "local_mm": [
+        18.8020251528101,
+        27.490378927664374,
+        7.5119617739921365
+      ]
+    }
+  ],
+  "upper_gap_mm": 0.3076927575765609,
+  "hold": {
+    "top_face_id": 5,
+    "top_face_explicitly_selected": true,
+    "required_lower_contacts": [
+      "if_tip",
+      "th_tip"
+    ],
+    "lower_contact_presence_does_not_prove_antipodal_force_closure": true,
+    "safety_passed": true,
+    "stop": null,
+    "completed_goals": 134,
+    "total_goals": 134,
+    "worst": {
+      "self_mm": 0.0,
+      "support_mm": 1.0865914198013794e-05,
+      "cube_mm": 0.030144646138066312,
+      "tracking_rad": 0.042397728470106144,
+      "range_rad": 0.0
+    },
+    "forward_yaw_from_placement_deg": 0.03559443688076627,
+    "final_yaw_from_placement_deg": 0.9274574312511221,
+    "regrasp_yaw_change_deg": 0.8903846936324363,
+    "final_up_tilt_deg": 9.235449705892192,
+    "final_center_world_m": [
+      0.16114574652106203,
+      -0.06461356195303487,
+      -0.018071703931356584
+    ],
+    "final_rotation_world": [
+      [
+        -0.5090510763950195,
+        -0.41339407279730345,
+        -0.7549651264774637
+      ],
+      [
+        0.7848078677973843,
+        0.13728013718598092,
+        -0.6043432588997123
+      ],
+      [
+        0.3534736372976044,
+        -0.900144157627132,
+        0.2545523192299485
+      ]
+    ],
+    "regrasp_translation_mm": 4.039018184032575,
+    "full_fixed_hold": {
+      "seconds": 10.05,
+      "yaw_drift_deg": 1.1039175642475016,
+      "center_shift_mm": 4.115261822316609,
+      "minimum_upper_gap_sampled_75ms_mm": 0.029842509860134925
+    },
+    "settled_tail": {
+      "seconds": 4.05,
+      "yaw_drift_deg": 0.18937854475242166,
+      "center_shift_mm": 0.2715289963403957,
+      "minimum_upper_gap_sampled_75ms_mm": 4.25946115511595,
+      "opposed_lower_body_contact_fraction": 1.0,
+      "minimum_separating_plane_gap_1ms_mm": 5.66556064823682,
+      "separation_certificate_bad_steps_1ms": 0,
+      "certificate_unqueried_steps_after_first_failure": 0,
+      "certificate_failure_is_latched_and_cannot_pass": true,
+      "certificate": {
+        "geoms": 56,
+        "minimum_required_gap_mm": 0.3,
+        "queries": 4050,
+        "plane_repairs": 56,
+        "polygon_searches": 0,
+        "exact_cylinder_support_rechecked": true,
+        "model_changes": 0,
+        "certificate_scope": "Queried simulated poses only; continuous physical motion and geometry calibration are not certified"
+      }
+    },
+    "final_contact_N": {
+      "palm_collision_1": 0.46565110627705997,
+      "if_ds_collision_1": 0.5548806859696445,
+      "if_tip": 1.514037820176415,
+      "th_tip": 1.540936312205924
+    },
+    "whole_grip_task_passed": false,
+    "trace": [
+      {
+        "sample": 1,
+        "whole_yaw_deg": 0.03559443688076627,
+        "relative_forward_yaw_deg": 0.0,
+        "upper_gap_mm": 1.6202376362209376
+      },
+      {
+        "sample": 21,
+        "whole_yaw_deg": 0.3355737208523424,
+        "relative_forward_yaw_deg": 0.2999644768682203,
+        "upper_gap_mm": 5.391840010960163
+      },
+      {
+        "sample": 41,
+        "whole_yaw_deg": 0.6621541402014496,
+        "relative_forward_yaw_deg": 0.6264020731013646,
+        "upper_gap_mm": 1.437317490357418
+      },
+      {
+        "sample": 61,
+        "whole_yaw_deg": 0.9703380036799347,
+        "relative_forward_yaw_deg": 0.934384189977194,
+        "upper_gap_mm": 3.854588610466914
+      },
+      {
+        "sample": 81,
+        "whole_yaw_deg": 1.0578383486893514,
+        "relative_forward_yaw_deg": 1.021686030221959,
+        "upper_gap_mm": 5.075456603980096
+      },
+      {
+        "sample": 101,
+        "whole_yaw_deg": 1.0589632764742323,
+        "relative_forward_yaw_deg": 1.022345253935282,
+        "upper_gap_mm": 5.08152453700594
+      },
+      {
+        "sample": 121,
+        "whole_yaw_deg": 0.9837960325008133,
+        "relative_forward_yaw_deg": 0.946779911310181,
+        "upper_gap_mm": 4.446642491008836
+      },
+      {
+        "sample": 134,
+        "whole_yaw_deg": 0.9274574312511221,
+        "relative_forward_yaw_deg": 0.8903846936324363,
+        "upper_gap_mm": 4.25946115511595
+      }
+    ]
+  },
+  "allocation": {
+    "contact_points": 5,
+    "exact_wrench_residual": [
+      1.1102230246251565e-16,
+      -2.7755575615628914e-17,
+      1.1102230246251565e-16,
+      -1.734723475976807e-18,
+      -3.469446951953614e-18,
+      1.734723475976807e-18
+    ],
+    "constraint_violation": 0.0,
+    "normal_N": {
+      "palm_collision_1": 0.3456605020287599,
+      "if_tip": 1.6,
+      "th_tip": 1.6
+    },
+    "underside_normal_N": 0.3456605020287599,
+    "tip_minimum_N": 1.6,
+    "native_contact_model_unchanged": true
+  },
+  "independent_initialization_is_not_reaching": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false,
+  "elapsed_seconds": 5.67022556500001
+}

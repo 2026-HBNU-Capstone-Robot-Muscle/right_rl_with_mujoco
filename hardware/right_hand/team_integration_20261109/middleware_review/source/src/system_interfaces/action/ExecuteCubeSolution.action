@@ -1,0 +1,33 @@
+# Goal: 저장된 풀이를 명시적으로 실행
+string scan_id
+string workflow_id
+bool dry_run
+# Invoke the registered pretrained model once at each primitive stage.
+bool run_pretrained_policies
+system_interfaces/OpenLoopPolicyState initial_open_loop_state
+---
+# Result
+bool success
+bool dry_run
+string scan_id
+string execution_id
+uint32 completed_moves
+uint32 completed_steps
+string error_code
+string error_message
+# Policy outputs, in primitive order. action_sizes delimits the flattened values.
+string[] policy_ids
+uint32[] policy_step_indices
+uint32[] policy_observation_sizes
+float64[] policy_observations
+uint32[] policy_action_sizes
+float64[] policy_action_values
+# Direction-slot order is URFDLB; each character is the initial face label
+# currently occupying that direction. These trace arrays align with policy_steps.
+string[] face_direction_orders_before
+string[] face_direction_orders_after
+uint32[] target_face_direction_indices_before
+uint32[] target_face_direction_indices_after
+---
+# Feedback
+system_interfaces/CubeExecutionStatus status

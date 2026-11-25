@@ -1,0 +1,180 @@
+{
+  "timestamp": "2026-10-23T21:52:19.201399+09:00",
+  "status": "stopped",
+  "phase": "preview",
+  "joint_mapping": {
+    "version": "all_finger_orders_user_confirmed_20261018_v2",
+    "sim_joint_names": [
+      "if_mcp",
+      "if_rot",
+      "if_pip",
+      "if_dip",
+      "mf_mcp",
+      "mf_rot",
+      "mf_pip",
+      "mf_dip",
+      "rf_mcp",
+      "rf_rot",
+      "rf_pip",
+      "rf_dip",
+      "th_cmc",
+      "th_axl",
+      "th_mcp",
+      "th_ipl"
+    ],
+    "motor_ids_in_sim_order": [
+      8,
+      6,
+      7,
+      5,
+      12,
+      10,
+      11,
+      9,
+      16,
+      14,
+      15,
+      13,
+      4,
+      3,
+      2,
+      1
+    ],
+    "middle_tip_to_root_ids": [
+      9,
+      11,
+      10,
+      12
+    ],
+    "tip_to_root_ids": {
+      "thumb": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "index": [
+        5,
+        7,
+        6,
+        8
+      ],
+      "middle": [
+        9,
+        11,
+        10,
+        12
+      ],
+      "ring": [
+        13,
+        15,
+        14,
+        16
+      ]
+    },
+    "middle_order_basis": "User explicit physical order confirmation, 2026-10-18; saved tip flexion ID9 +9.492 degrees.",
+    "other_fingers_basis": "User explicitly answered the tip-to-root ID question: thumb 1,2,3,4; index 5,7,6,8; ring 13,15,14,16.",
+    "geometric_calibration_verified": false,
+    "trajectory_validation_complete": false
+  },
+  "policy_used": false,
+  "physical_flip_verified": false,
+  "all_torque_off_verified": false,
+  "settings_restored": false,
+  "hardware_authorized": false,
+  "recording_requested": false,
+  "camera_requested_exposure": -7.0,
+  "marker_visibility_is_motion_gate": false,
+  "empty_start_marker_screen_is_empty_hand_proof": false,
+  "camera_preview_owner": "camera_worker_process",
+  "camera_startup": {
+    "expected_device": "Streaming Webcam",
+    "backend": "DSHOW",
+    "timeout_seconds": 10.0,
+    "motors_accessed": false,
+    "devices": [
+      "Streaming Webcam",
+      "USB2.0 HD UVC WebCam",
+      "OBS Virtual Camera"
+    ],
+    "camera_index": 0,
+    "device_name": "Streaming Webcam"
+  },
+  "camera_image_signal": {
+    "usable": true,
+    "reason": "scene_signal",
+    "minimum": 0.0,
+    "maximum": 255.0,
+    "std": 30.964157612026305
+  },
+  "empty_start_marker_screen": {
+    "camera_read_monotonic": 538757.843,
+    "decoded_cube_ids": [],
+    "confirmed_cube_ids": [],
+    "candidates": [],
+    "consecutive_frames_without_decoded_cube": 93,
+    "confirmation_frames": 3,
+    "confirmation_seconds": 0.2,
+    "minimum_marker_edge_px": 20.0,
+    "absence_proves_empty_hand": false,
+    "required_frames": 10
+  },
+  "camera_instruction": "EMPTY HAND for FIRST SPACE; cube only after PLACE CUBE",
+  "error": "Camera user stop",
+  "failed_phase": "preview",
+  "camera_worker_stopped": true,
+  "camera_exposure_worker": {
+    "status": "user_stop",
+    "requested_exposure": -7.0,
+    "auto_mode_meaning_verified": false,
+    "motors_accessed": false,
+    "frames_sent": 93,
+    "original_settings": {
+      "auto": -1.0,
+      "exposure": -5.0
+    },
+    "applied": {
+      "requested_exposure": -7.0,
+      "set_auto_returned": true,
+      "set_exposure_returned": true,
+      "readback": {
+        "auto": -1.0,
+        "exposure": -7.0
+      },
+      "supported": true
+    },
+    "last_stream_exposure_readback": -7.0,
+    "last_marker_readiness": {
+      "ids": [],
+      "minimum_edge_px": {},
+      "readable_pair": false,
+      "instruction": "PALM ID40 missing: shade its glare or adjust CAMERA slightly"
+    },
+    "restoration": {
+      "changes_attempted": true,
+      "set_returns": {
+        "exposure": true,
+        "auto": true
+      },
+      "readback": {
+        "auto": -1.0,
+        "exposure": -5.0
+      },
+      "restored_original_readbacks": true,
+      "errors": [],
+      "note": "Camera auto mode can change its exposure readback again. Readbacks are recorded; restoration is not claimed when they do not match."
+    },
+    "finished_monotonic": 538758.078
+  },
+  "camera_exposure_restoration_verified": true,
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\grasped_yaw_trial_20261023_215219_200390\\camera",
+    "status": "incomplete",
+    "frame_count": 0,
+    "error": null,
+    "image_signal_usable_frames": 0,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true,
+    "exposure_restoration_verified": true
+  }
+}

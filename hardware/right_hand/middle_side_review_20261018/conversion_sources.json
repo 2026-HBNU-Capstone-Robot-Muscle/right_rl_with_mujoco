@@ -1,0 +1,61 @@
+{
+  "hardware_commands_sent": 0,
+  "sources": [
+    {
+      "path": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\work\\Leap_Test\\deploy\\leap_hw.py",
+      "sha256": "bcac41f9ab95a406c3ad571a84c7bdb4a98ff44f420759f204b266b627c452eb",
+      "snippets": [
+        "SIM2ARR = np.array([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3])",
+        "OFFSET = 3.14159",
+        "def sim_to_hw(q_sim):\n    \"\"\"시뮬 규약 16개 -> 서보에 쓸 배열 16개.\"\"\"\n    hw = np.empty(16, dtype=float)\n    hw[SIM2ARR] = np.asarray(q_sim, dtype=float) + OFFSET\n    return hw",
+        "def hw_to_sim(hw):\n    \"\"\"서보에서 읽은 배열 16개 -> 시뮬 규약 16개.\"\"\"\n    return np.asarray(hw, dtype=float)[SIM2ARR] - OFFSET",
+        "hw[SIM2ARR] = np.asarray(q_sim, dtype=float) + OFFSET",
+        "def write_sim(self, q_sim):\n        self.c.write_desired_pos(MOTORS, sim_to_hw(q_sim))",
+        "def move_to(self, q_target, seconds=1.5, hz=50.0):\n        \"\"\"현재 자세에서 목표까지 선형으로 램프한다.\n\n        정지 상태에서 계단 명령을 주면 서보가 최대 속도로 달린다. 시작 자세로\n        갈 때는 반드시 이걸 쓸 것. 제어 루프 안에서는 정책이 낸 증분이 이미\n        작으므로(action_scale 0.2 rad) 램프가 필요 없다.\n        \"\"\"\n        import time\n        q0 = self.read_sim()\n        q1 = np.clip(np.asarray(q_target, float), -np.pi, np.pi)\n        n = max(int(seconds * hz), 1)\n        for k in range(1, n + 1):\n            self.write_sim(q0 + (q1 - q0) * (k / n))\n            time.sleep(1.0 / hz)",
+        "def read_sim(self):\n        return hw_to_sim(self.c.read_pos())",
+        "def read_sim_vel_cur(self):\n        p, v, cur = self.c.read_pos_vel_cur()\n        return hw_to_sim(p), np.asarray(v)[SIM2ARR], np.asarray(cur)[SIM2ARR]",
+        "q1 = np.clip(np.asarray(q_target, float), -np.pi, np.pi)"
+      ]
+    },
+    {
+      "path": "C:\\Users\\김준서\\Documents\\GitHub\\LEAP_Hand_API\\python\\leap_hand_utils\\leap_hand_utils.py",
+      "sha256": "d5459627ef5b80cf5626d000edb24ffb2b90c07a1d71d07b600981bfc5ec1c17",
+      "snippets": [
+        "def LEAPsim_to_LEAPhand(joints):\n    joints = np.array(joints)\n    ret_joints = joints + 3.14159\n    return ret_joints",
+        "def LEAPhand_to_LEAPsim(joints):\n    joints = np.array(joints)\n    ret_joints = joints - 3.14159\n    return ret_joints",
+        "def allegro_to_LEAPhand(joints, teleop = False, zeros = True):\n    joints = np.array(joints)\n    ret_joints = joints + 3.14159\n    if zeros:\n        ret_joints[0] = ret_joints[4] = ret_joints[8] = 3.14\n    if teleop:\n        ret_joints[12] = joints[12] + 0.2 \n        ret_joints[14] = joints[14] - 0.2   \n    return ret_joints",
+        "def LEAPhand_to_allegro(joints, teleop = False, zeros = True):\n    joints = np.array(joints)\n    ret_joints = joints - 3.14159\n    if zeros:\n        ret_joints[0] = ret_joints[4] = ret_joints[8] = 0\n    if teleop:\n        ret_joints[12] = joints[12] - 0.2\n        ret_joints[14] = joints[14] + 0.2    \n    return ret_joints",
+        "ret_joints = joints + 3.14159",
+        "ret_joints = joints - 3.14159",
+        "ret_joints = joints + 3.14159",
+        "ret_joints = joints - 3.14159"
+      ]
+    }
+  ],
+  "middle_saved_settings": [
+    {
+      "id": 9,
+      "drive_mode": 0,
+      "homing_offset_raw": 0,
+      "position_ticks_signed": 1975
+    },
+    {
+      "id": 10,
+      "drive_mode": 0,
+      "homing_offset_raw": 0,
+      "position_ticks_signed": 2001
+    },
+    {
+      "id": 11,
+      "drive_mode": 0,
+      "homing_offset_raw": 0,
+      "position_ticks_signed": 2194
+    },
+    {
+      "id": 12,
+      "drive_mode": 0,
+      "homing_offset_raw": 0,
+      "position_ticks_signed": 2976
+    }
+  ]
+}

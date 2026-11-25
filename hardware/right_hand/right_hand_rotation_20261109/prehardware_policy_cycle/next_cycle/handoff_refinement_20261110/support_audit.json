@@ -1,0 +1,236 @@
+{
+  "status": "contact_wrench_convention_and_saved_state_audit",
+  "model_provenance": {
+    "model_kind": "active",
+    "model_path": "right_hand_rotation_20261106/middle_clearance_probe/evidence/model.mjb",
+    "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "states": [
+    {
+      "source": "connected_sac_and_teacher/first_quarter_end_state.npz",
+      "source_sha256": "62ec99dd86b24ab9148b0d1d4ef5d838d9195135531b55b7ff5f157d433908f5",
+      "wrench": {
+        "force_world_N": [
+          0.328667476808764,
+          0.002068924105115305,
+          0.9256133121290191
+        ],
+        "torque_world_Nm": [
+          -0.0001024771470890186,
+          -0.00012677967655631058,
+          -9.046380672798893e-05
+        ],
+        "net_force_with_gravity_N": [
+          -0.004479885228834524,
+          0.002068924105115305,
+          0.002914100485598703
+        ],
+        "upward_support_N": 0.9822195476804224,
+        "weight_N": 0.9810000000000001,
+        "constraint_force_error": 1.1102230246251565e-16,
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 1.0787946289124832,
+            "force_world_N": [
+              0.34225687545717054,
+              -0.04393353289661976,
+              1.0228631195372322
+            ]
+          },
+          "if_tip": {
+            "normal_N": 0.366809576814295,
+            "force_world_N": [
+              -0.2887661507143407,
+              -0.20147549311937932,
+              0.10481103277004587
+            ]
+          },
+          "th_tip": {
+            "normal_N": 0.40953477495451646,
+            "force_world_N": [
+              0.27517675206593417,
+              0.24747795012111437,
+              -0.20206084017825882
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source": "next_cycle/rrt0_force_feedback_root_fixed/end_state.npz",
+      "source_sha256": "9c48b6fc1513636bde2eb73319ed2e3df669c6818fd54caa52dd702340e8192a",
+      "wrench": {
+        "force_world_N": [
+          0.33318520742213176,
+          -1.453993832464806e-05,
+          0.9226741478723223
+        ],
+        "torque_world_Nm": [
+          7.175010314980964e-07,
+          7.383135542538694e-07,
+          5.597835205910923e-07
+        ],
+        "net_force_with_gravity_N": [
+          3.7845384533219395e-05,
+          -1.453993832464806e-05,
+          -2.5063771098121634e-05
+        ],
+        "upward_support_N": 0.9809892780511618,
+        "weight_N": 0.9810000000000001,
+        "constraint_force_error": 8.326672684688674e-17,
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 1.0731623529372802,
+            "force_world_N": [
+              0.36822237901152566,
+              -0.10507666770954503,
+              1.0027154063391959
+            ]
+          },
+          "if_tip": {
+            "normal_N": 0.2956133555938628,
+            "force_world_N": [
+              -0.275682478096287,
+              -0.11947091611157086,
+              0.03991381847087245
+            ]
+          },
+          "th_tip": {
+            "normal_N": 0.3446672279106324,
+            "force_world_N": [
+              0.24064530650689311,
+              0.22453304388279124,
+              -0.11995507693774614
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source": "next_cycle/rrt0_force_feedback_lookahead2/end_state.npz",
+      "source_sha256": "b70e44dd1d4809578f5e4ecaf8222ee221b1148ee72ead4bb767f6e70fafa320",
+      "wrench": {
+        "force_world_N": [
+          0.33706505777771645,
+          -0.008322516420840143,
+          0.9217999482597736
+        ],
+        "torque_world_Nm": [
+          0.00016252893235309718,
+          2.5721334742704076e-05,
+          -0.00015009814208331602
+        ],
+        "net_force_with_gravity_N": [
+          0.00391769574011791,
+          -0.008322516420840143,
+          -0.0008992633836467645
+        ],
+        "upward_support_N": 0.9814846283240936,
+        "weight_N": 0.9810000000000001,
+        "constraint_force_error": 2.220446049250313e-16,
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.6845743465675475,
+            "force_world_N": [
+              0.2154878002428536,
+              -0.014272965596900635,
+              0.649833685718243
+            ]
+          },
+          "if_px_collision": {
+            "normal_N": 0.2323630522010116,
+            "force_world_N": [
+              0.0547420558075948,
+              -0.007236588842889032,
+              0.22712578120339508
+            ]
+          },
+          "if_tip": {
+            "normal_N": 0.2601917687149532,
+            "force_world_N": [
+              -0.2005127498030204,
+              -0.14968085581058738,
+              0.07165206396915828
+            ]
+          },
+          "th_tip": {
+            "normal_N": 0.307067784545269,
+            "force_world_N": [
+              0.26734795153028845,
+              0.1628678938295369,
+              -0.026811582631022724
+            ]
+          }
+        }
+      }
+    },
+    {
+      "source": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/end_state.npz",
+      "source_sha256": "4883d921db4a731f3006ffbfa7c14e60afcf0e40a1f6d9a2a6a7eb714a843e27",
+      "wrench": {
+        "force_world_N": [
+          0.333147381650203,
+          4.3511755309921796e-10,
+          0.9226992056549418
+        ],
+        "torque_world_Nm": [
+          3.805786804136121e-10,
+          1.2329402256094912e-11,
+          4.4800840728193014e-10
+        ],
+        "net_force_with_gravity_N": [
+          1.9612604484908758e-08,
+          4.3511755309921796e-10,
+          -5.988478601892666e-09
+        ],
+        "upward_support_N": 0.9810000010278523,
+        "weight_N": 0.9810000000000001,
+        "constraint_force_error": 3.3306690738754696e-16,
+        "by_geom": {
+          "if_bs_collision_1": {
+            "normal_N": 0.8461751201615944,
+            "force_world_N": [
+              0.2859542209732985,
+              -0.010113027046966013,
+              0.7963346800304925
+            ]
+          },
+          "if_px_collision": {
+            "normal_N": 0.13573240188064487,
+            "force_world_N": [
+              0.0471739280387193,
+              0.004894513404377149,
+              0.12737235217756465
+            ]
+          },
+          "if_tip": {
+            "normal_N": 0.40322248445674236,
+            "force_world_N": [
+              -0.31500385053832364,
+              -0.22755091070721128,
+              0.10781352037150628
+            ]
+          },
+          "th_tip": {
+            "normal_N": 0.40651873892688084,
+            "force_world_N": [
+              0.3150230831765089,
+              0.2327694247849177,
+              -0.10882134692462164
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "acceptance_criteria_unchanged": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

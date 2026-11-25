@@ -1,0 +1,76 @@
+{
+  "status": "empty_grasp_approach_v2_ready",
+  "plan_version": "empty_tilted_cube_grasp_approach_v2",
+  "launcher": "leap_grasp_approach_empty.cmd",
+  "tests_passed": 79,
+  "actual_windows_wsl_subprocess_passed": true,
+  "static_cases": 67,
+  "native_ranges_unchanged": true,
+  "dynamics": [
+    {
+      "gain_scale": 0.5,
+      "max_tracking_rad": 0.06804231077297984,
+      "max_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "finite": true
+    },
+    {
+      "gain_scale": 1.0,
+      "max_tracking_rad": 0.034274823332690274,
+      "max_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "finite": true
+    },
+    {
+      "gain_scale": 1.5,
+      "max_tracking_rad": 0.023022940895610633,
+      "max_self_overlap_mm": 0.0,
+      "max_support_overlap_mm": 0.0,
+      "finite": true
+    }
+  ],
+  "fixture_motion_samples": 616,
+  "source_is_saved_read_only_pose_not_current_verified_stable": true,
+  "fresh_start_screen_required_each_run": true,
+  "held_joint_guard": "last_command_settling_interval_v1",
+  "additional_held_motion_margin_ticks": 20,
+  "absolute_tracking_trip_rad": 0.18,
+  "current_and_pid_unchanged": true,
+  "voltage_policy_unchanged": true,
+  "no_goal_or_enable_retry": true,
+  "diagnosis": {
+    "first_trial": "grasp_approach_current_empty_20261022_015038_969787/result.json",
+    "first_failed_phase": "stage_3_ring_clearance",
+    "original_status_unchanged": "stopped",
+    "fixed_roots": [
+      {
+        "id": 8,
+        "actual": 2443,
+        "goal": 2472,
+        "prior_goal_error_ticks": -29,
+        "actual_change_from_previous_read_ticks": 0
+      },
+      {
+        "id": 12,
+        "actual": 2447,
+        "goal": 2472,
+        "prior_goal_error_ticks": -25,
+        "actual_change_from_previous_read_ticks": 0
+      }
+    ],
+    "minimum_voltage_v": 4.3,
+    "peak_current_ma": 58,
+    "second_trial": "grasp_approach_current_empty_20261022_015140_792784/result.json",
+    "second_id15_ticks": 2700,
+    "second_write_attempts": 0,
+    "first_torque_off_verified": true,
+    "first_settings_restored": true,
+    "second_torque_off_verified": true,
+    "interpretation": "First failure classified existing tracking offsets as movement. Second failure rejected a changed OFF posture before writes."
+  },
+  "hardware_commands_sent_by_assistant": 0,
+  "physical_grasp_verified": false,
+  "physical_rotation_verified": false,
+  "live_sac": false,
+  "user_task": "Remove cube; leave hand as it is. Same leap_grasp_approach_empty.cmd, confirm v2 banner, one terminal SPACE. Camera records. Stop with Q for contact; send result log."
+}

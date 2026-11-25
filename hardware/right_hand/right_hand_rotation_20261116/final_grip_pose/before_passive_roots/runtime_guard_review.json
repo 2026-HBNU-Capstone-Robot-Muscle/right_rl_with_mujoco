@@ -1,0 +1,42 @@
+{
+  "passed": false,
+  "cases": [
+    {
+      "scope": "whole_path",
+      "gain": 0.5,
+      "passed": false,
+      "done": 5,
+      "expected": 1791,
+      "fault": "A fixed finger joint left its held-position bounds: ID8 actual=1940, reference=1961, goal=1961, allowed=[1941,1981]; no target advance"
+    },
+    {
+      "scope": "whole_path",
+      "gain": 1.0,
+      "passed": true,
+      "done": 1791,
+      "expected": 1791,
+      "fault": null
+    },
+    {
+      "scope": "whole_path",
+      "gain": 1.5,
+      "passed": true,
+      "done": 1791,
+      "expected": 1791,
+      "fault": null
+    },
+    {
+      "scope": "new_pose_segment",
+      "gain": 0.5,
+      "passed": true,
+      "done": 1007,
+      "expected": 1007,
+      "fault": null
+    }
+  ],
+  "devices_opened": false,
+  "candidate_sha256": "854eacddad865ba55abf73b2838bc59f0933138b43c0ae4083214ff56e98c5f7",
+  "held_policy": "last_command_settling_interval_v1",
+  "additional_fixed_hold_seconds": 30,
+  "thresholds_changed": false
+}

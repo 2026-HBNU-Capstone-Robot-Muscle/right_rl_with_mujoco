@@ -1,0 +1,4346 @@
+{
+  "status": "receding_horizon_clear_work_grip_bridge",
+  "mode": "next",
+  "source": "next_cycle/handoff_refinement_20261110/ring_thumb_turn_checkpoint/state.npz",
+  "source_sha256": "a30be1b558ce7af7bea64d88d93d26b2e3beff279fc3050b1ef73f3336a1b2f7",
+  "source_index": null,
+  "goal_reference": "next_cycle/handoff_refinement_20261110/ring_thumb_photo_prior_seed431/axis0_ring+1/free_hold_tests/force0p8/end_state.npz",
+  "goal_reference_sha256": "d414119aae558a0f5983840e88843e0c565aec450666d2cd96bd208ecfa06875",
+  "global_yaw_target_deg": 180.0,
+  "orientation_tolerance_deg": 5.0,
+  "prediction_horizon_cycles": 12,
+  "commit_cycles": 8,
+  "transport_first_requested": false,
+  "transport_phase_completed": true,
+  "explicit_source_state_override": "next_cycle/handoff_refinement_20261110/ring_thumb_turn_checkpoint/state.npz",
+  "center_target_scope": "reference",
+  "center_target_world_m": [
+    0.1072712910413636,
+    -0.005713453644761987,
+    0.011609294931955687
+  ],
+  "canonical_station_world_m": [
+    0.16156464486378935,
+    -0.05262315041165623,
+    -0.014341172240876256
+  ],
+  "alternative_goal_reference_explicit": true,
+  "original_canonical_target_not_reclassified": true,
+  "center_objective_weight": 0.7,
+  "joint_reference_objective_weight": 0.005,
+  "ring14_reserve_objective_deg": 8.0,
+  "contact_pressure_objective_target_N": 1.5,
+  "relief_terms_are_planning_costs_not_native_guard_changes": true,
+  "hybrid_centering_requested": false,
+  "phase_switches": [],
+  "final_global_orientation_target_not_changed_by_waypoints": true,
+  "proactive_clearance_margin_mm": 1.0,
+  "planning_pairs": [
+    [
+      "mf_tip",
+      "palm_collision_1"
+    ],
+    [
+      "mf_tip",
+      "palm_collision_4"
+    ],
+    [
+      "mf_tip",
+      "palm_collision_6"
+    ],
+    [
+      "mf_tip",
+      "palm_collision_8"
+    ],
+    [
+      "mf_tip",
+      "rf_md_collision_5"
+    ],
+    [
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_rf_md_0"
+    ],
+    [
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_rf_md_0"
+    ]
+  ],
+  "source_model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "planning_pair_cost": "bounded_axes_not_native_collision_or_final_certificate",
+  "planning_pair_cost_source_sha256": "4ee6b39f107cc39d00c7c889f976f256415acc4a0ae696cab718ca6ea534c1b1",
+  "steps": 280,
+  "stop": "horizon_objective_stalled",
+  "start": {
+    "error_deg": 74.02601811074148,
+    "tilt_deg": 4.1431334750918145,
+    "planning_phase": "orient_and_clear",
+    "center_target_error_mm": 14.145052282614218,
+    "center_from_source_mm": 0.0,
+    "canonical_station_error_mm": 90.35655187364226,
+    "reference_grip_center_error_mm": 14.145052282614218,
+    "upper_screen_mm": 0.5358158256502605,
+    "minimum_planning_pair_gap_mm": 55.13527036824055,
+    "planning_pair_gaps_mm": [
+      81.74066815672317,
+      94.00164926823516,
+      85.64987709519085,
+      113.43057913040097,
+      92.08281541533243,
+      55.13527036824055,
+      57.65910485065941
+    ],
+    "tracking_rad": 0.06815341649409179,
+    "whole_hand_support": {
+      "supported_sample": true,
+      "hand_normal_load_N": 8.178782676370657,
+      "contact_hand_geoms": [
+        "palm_collision_6",
+        "rf_tip",
+        "th_ds_collision_1",
+        "th_tip"
+      ],
+      "loaded_hand_geoms": [
+        "palm_collision_6",
+        "rf_tip",
+        "th_tip"
+      ],
+      "by_geom": {
+        "palm_collision_6": {
+          "normal_N": 0.9476485953643881,
+          "force_world_N": [
+            0.35285808172490113,
+            -0.013362441959129417,
+            0.8802238600355907
+          ],
+          "upward_N": 0.9477427123597004
+        },
+        "rf_tip": {
+          "normal_N": 3.596648703068914,
+          "force_world_N": [
+            2.6166891125127627,
+            -2.1879359452798743,
+            -1.1411748567097935
+          ],
+          "upward_N": -0.1847278955425973
+        },
+        "th_ds_collision_1": {
+          "normal_N": 0.09346300604489866,
+          "force_world_N": [
+            -0.06903384888982275,
+            0.05047191445156799,
+            0.0394108352974066
+          ],
+          "upward_N": 0.013624772691314072
+        },
+        "th_tip": {
+          "normal_N": 3.5410223718924563,
+          "force_world_N": [
+            -2.5699416197434166,
+            2.150889485432704,
+            1.1436978774909976
+          ],
+          "upward_N": 0.20297641051074858
+        }
+      },
+      "hand_force_world_N": [
+        0.3305717256044245,
+        6.301264526831218e-05,
+        0.9221577161142015
+      ],
+      "upward_support_N": 0.9796160000191658,
+      "weight_N": 0.9810000000000001,
+      "upward_support_over_weight": 0.9985891947188233,
+      "external_loaded_contacts": [],
+      "force_with_gravity_world_N": [
+        -0.0025756364331740444,
+        6.301264526831218e-05,
+        -0.0005414955292188939
+      ]
+    },
+    "RF14_upper_room_deg": 0.548666892895572,
+    "contact_finger_normals_N": {
+      "rf": 3.596648703068914,
+      "th": 3.634485377937355
+    }
+  },
+  "final": {
+    "error_deg": 74.02675824418114,
+    "tilt_deg": 4.032147028173374,
+    "planning_phase": "orient_and_clear",
+    "center_target_error_mm": 14.102625655263754,
+    "center_from_source_mm": 0.2704852329639474,
+    "canonical_station_error_mm": 90.33958823170329,
+    "reference_grip_center_error_mm": 14.102625655263754,
+    "upper_screen_mm": 2.0336148137680103,
+    "minimum_planning_pair_gap_mm": 55.57870574829834,
+    "planning_pair_gaps_mm": [
+      81.72928528326044,
+      94.5971441254191,
+      86.2453719523748,
+      114.02607398758492,
+      93.37054541978151,
+      55.57870574829834,
+      58.267162755484165
+    ],
+    "tracking_rad": 0.0679029457222311,
+    "whole_hand_support": {
+      "supported_sample": true,
+      "hand_normal_load_N": 8.17788017624288,
+      "contact_hand_geoms": [
+        "palm_collision_6",
+        "rf_tip",
+        "th_ds_collision_1",
+        "th_tip"
+      ],
+      "loaded_hand_geoms": [
+        "palm_collision_6",
+        "rf_tip",
+        "th_tip"
+      ],
+      "by_geom": {
+        "palm_collision_6": {
+          "normal_N": 0.968348627043865,
+          "force_world_N": [
+            0.3748886776268384,
+            -0.02121933611746695,
+            0.8930341760794893
+          ],
+          "upward_N": 0.9672732968892163
+        },
+        "rf_tip": {
+          "normal_N": 3.5770181919114483,
+          "force_world_N": [
+            2.6022096984354497,
+            -2.175623398807749,
+            -1.1360101760531274
+          ],
+          "upward_N": -0.18478735714648217
+        },
+        "th_ds_collision_1": {
+          "normal_N": 0.09175709987948139,
+          "force_world_N": [
+            -0.0719895993223761,
+            0.04770982990645122,
+            0.03271227209445548
+          ],
+          "upward_N": 0.006320532685245506
+        },
+        "th_tip": {
+          "normal_N": 3.540756257408086,
+          "force_world_N": [
+            -2.576380831583374,
+            2.149041810576115,
+            1.1318563903303704
+          ],
+          "upward_N": 0.18965190765052486
+        }
+      },
+      "hand_force_world_N": [
+        0.32872794515653814,
+        -9.109444264954192e-05,
+        0.9215926624511879
+      ],
+      "upward_support_N": 0.9784583800785045,
+      "weight_N": 0.9810000000000001,
+      "upward_support_over_weight": 0.9974091540045916,
+      "external_loaded_contacts": [],
+      "force_with_gravity_world_N": [
+        -0.004419416881060401,
+        -9.109444264954192e-05,
+        -0.00110654919223252
+      ]
+    },
+    "RF14_upper_room_deg": 0.5489939678275272,
+    "contact_finger_normals_N": {
+      "rf": 3.5770181919114483,
+      "th": 3.6325133572875674
+    }
+  },
+  "trace": [
+    {
+      "error_deg": 74.02598616749928,
+      "tilt_deg": 4.10878426104289,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.141690249403943,
+      "center_from_source_mm": 0.011718199418085462,
+      "canonical_station_error_mm": 90.35340635101508,
+      "reference_grip_center_error_mm": 14.141690249403943,
+      "upper_screen_mm": 1.23545509827865,
+      "minimum_planning_pair_gap_mm": 55.438157154573716,
+      "planning_pair_gaps_mm": [
+        81.73140233021387,
+        94.40460668600713,
+        86.05283451296282,
+        113.83353654817294,
+        92.95261747902143,
+        55.438157154573716,
+        58.06892098254865
+      ],
+      "tracking_rad": 0.06807248646117364,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.19565472373273,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9516102791034119,
+            "force_world_N": [
+              0.3626028049303146,
+              -0.02003891340219787,
+              0.8802055732908547
+            ],
+            "upward_N": 0.9510348180321965
+          },
+          "rf_tip": {
+            "normal_N": 3.598113324414314,
+            "force_world_N": [
+              2.620162941184068,
+              -2.1870406625356758,
+              -1.139576678616451
+            ],
+            "upward_N": -0.1820449857313752
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09072719777999469,
+            "force_world_N": [
+              -0.06711232662598562,
+              0.048764749620243096,
+              0.03848163226672195
+            ],
+            "upward_N": 0.013403340651991393
+          },
+          "th_tip": {
+            "normal_N": 3.5552039224350085,
+            "force_world_N": [
+              -2.5832889359752285,
+              2.1583898818122385,
+              1.1435176846786144
+            ],
+            "upward_N": 0.198274181194908
+          }
+        },
+        "hand_force_world_N": [
+          0.3323644835131687,
+          7.505549460784522e-05,
+          0.9226282116197401
+        ],
+        "upward_support_N": 0.9806673541477208,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996609114655665,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0007828785244298198,
+          7.505549460784522e-05,
+          -7.100002368032321e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.549116350540147,
+      "contact_finger_normals_N": {
+        "rf": 3.598113324414314,
+        "th": 3.6459311202150033
+      },
+      "step": 8,
+      "score": 76.68755286679405,
+      "predicted_horizon_score": 76.68706126920105,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 21,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02600178237239,
+      "tilt_deg": 4.082217922267019,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.138389759351712,
+      "center_from_source_mm": 0.021126610586523823,
+      "canonical_station_error_mm": 90.35039791216919,
+      "reference_grip_center_error_mm": 14.138389759351712,
+      "upper_screen_mm": 1.663236496109893,
+      "minimum_planning_pair_gap_mm": 55.521583399351634,
+      "planning_pair_gaps_mm": [
+        81.73001007273193,
+        94.51643907256232,
+        86.16466689951801,
+        113.94536893472815,
+        93.19774557509201,
+        55.521583399351634,
+        58.18412673384525
+      ],
+      "tracking_rad": 0.06802373901346065,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.19454079187627,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9556456215577136,
+            "force_world_N": [
+              0.36640176482294573,
+              -0.021145642505383554,
+              0.8829213010616151
+            ],
+            "upward_N": 0.9548792760748422
+          },
+          "rf_tip": {
+            "normal_N": 3.5941586991605656,
+            "force_world_N": [
+              2.617809479842683,
+              -2.1841028421363586,
+              -1.1381273627267632
+            ],
+            "upward_N": -0.1814810375241404
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08898261936231994,
+            "force_world_N": [
+              -0.0668712972825364,
+              0.047149795191366035,
+              0.03667199131346017
+            ],
+            "upward_N": 0.011783100090331322
+          },
+          "th_tip": {
+            "normal_N": 3.5557538517956706,
+            "force_world_N": [
+              -2.5853053812043445,
+              2.1581731132800543,
+              1.1410937554626683
+            ],
+            "upward_N": 0.19530952167869373
+          }
+        },
+        "hand_force_world_N": [
+          0.33203456617874805,
+          7.442382967814964e-05,
+          0.9225596851109805
+        ],
+        "upward_support_N": 0.980490860319727,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9994809993065513,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0011127958588504905,
+          7.442382967814964e-05,
+          -0.0001395265324398709
+        ]
+      },
+      "RF14_upper_room_deg": 0.5491743233363542,
+      "contact_finger_normals_N": {
+        "rf": 3.5941586991605656,
+        "th": 3.6447364711579904
+      },
+      "step": 16,
+      "score": 76.6859735888579,
+      "predicted_horizon_score": 76.67902195682964,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02598016477243,
+      "tilt_deg": 4.061435100990088,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.135362794491574,
+      "center_from_source_mm": 0.028922845244501134,
+      "canonical_station_error_mm": 90.34774076217917,
+      "reference_grip_center_error_mm": 14.135362794491574,
+      "upper_screen_mm": 1.8575148146219407,
+      "minimum_planning_pair_gap_mm": 55.55491222127789,
+      "planning_pair_gaps_mm": [
+        81.72956160277565,
+        94.56190506489098,
+        86.2101328918467,
+        113.99083492705684,
+        93.29731280418052,
+        55.55491222127789,
+        58.23142917578107
+      ],
+      "tracking_rad": 0.06799412295178198,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.191086061067505,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.959019842572389,
+            "force_world_N": [
+              0.36869975784159303,
+              -0.021397231914941077,
+              0.8855842468440289
+            ],
+            "upward_N": 0.9581643609741547
+          },
+          "rf_tip": {
+            "normal_N": 3.5900752056013596,
+            "force_world_N": [
+              2.614963595507528,
+              -2.1813716230533746,
+              -1.1370007262526471
+            ],
+            "upward_N": -0.1813878186377443
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08770082073322347,
+            "force_world_N": [
+              -0.06693819135442682,
+              0.04585824022347902,
+              0.03498970785068087
+            ],
+            "upward_N": 0.010178077451744707
+          },
+          "th_tip": {
+            "normal_N": 3.554290192160533,
+            "force_world_N": [
+              -2.58528867693458,
+              2.1569742836600443,
+              1.1388474000184048
+            ],
+            "upward_N": 0.1932023398090851
+          }
+        },
+        "hand_force_world_N": [
+          0.3314364850601139,
+          6.36689152075931e-05,
+          0.9224206284604675
+        ],
+        "upward_support_N": 0.9801569595972401,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9991406315975944,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.001710876977484621,
+          6.36689152075931e-05,
+          -0.0002785831829529295
+        ]
+      },
+      "RF14_upper_room_deg": 0.5490773553853515,
+      "contact_finger_normals_N": {
+        "rf": 3.5900752056013596,
+        "th": 3.6419910128937567
+      },
+      "step": 24,
+      "score": 76.68402374700257,
+      "predicted_horizon_score": 76.68166979632959,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02572063507522,
+      "tilt_deg": 4.044813699026681,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.132764809397479,
+      "center_from_source_mm": 0.03564140330893272,
+      "canonical_station_error_mm": 90.34557548322503,
+      "reference_grip_center_error_mm": 14.132764809397479,
+      "upper_screen_mm": 1.9569464434829325,
+      "minimum_planning_pair_gap_mm": 55.56896162375101,
+      "planning_pair_gaps_mm": [
+        81.72939501630411,
+        94.58174185643131,
+        86.229969683387,
+        114.01067171859714,
+        93.34029463938198,
+        55.56896162375101,
+        58.252261936048825
+      ],
+      "tracking_rad": 0.06797526706412721,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.196457582849797,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9604256800072984,
+            "force_world_N": [
+              0.3726595033121305,
+              -0.024915766806761983,
+              0.8853606248136526
+            ],
+            "upward_N": 0.959298757392825
+          },
+          "rf_tip": {
+            "normal_N": 3.5897041190248515,
+            "force_world_N": [
+              2.615492874330738,
+              -2.1806538661622032,
+              -1.1360000653927227
+            ],
+            "upward_N": -0.18026688405027277
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08713662253753886,
+            "force_world_N": [
+              -0.06634610641116995,
+              0.04578708264104116,
+              0.03470729438804647
+            ],
+            "upward_N": 0.010113519712313473
+          },
+          "th_tip": {
+            "normal_N": 3.5591911612801086,
+            "force_world_N": [
+              -2.5897886841258733,
+              2.1598517040660843,
+              1.1384869005553555
+            ],
+            "upward_N": 0.19133506346323093
+          }
+        },
+        "hand_force_world_N": [
+          0.3320175871058253,
+          6.915373816029913e-05,
+          0.922554754364332
+        ],
+        "upward_support_N": 0.9804804565180966,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9994703940041758,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.001129774931773242,
+          6.915373816029913e-05,
+          -0.00014445727908840578
+        ]
+      },
+      "RF14_upper_room_deg": 0.5489500113858257,
+      "contact_finger_normals_N": {
+        "rf": 3.5897041190248515,
+        "th": 3.6463277838176475
+      },
+      "step": 32,
+      "score": 76.68458834572547,
+      "predicted_horizon_score": 76.68313966170587,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02547049853835,
+      "tilt_deg": 4.031690799927347,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.130468425597385,
+      "center_from_source_mm": 0.04161329903738439,
+      "canonical_station_error_mm": 90.34377066997631,
+      "reference_grip_center_error_mm": 14.130468425597385,
+      "upper_screen_mm": 2.0116678633784906,
+      "minimum_planning_pair_gap_mm": 55.574696409975815,
+      "planning_pair_gaps_mm": [
+        81.72933011673263,
+        94.5904107281991,
+        86.2386385551548,
+        114.01934059036492,
+        93.35862979596726,
+        55.574696409975815,
+        58.261487722627486
+      ],
+      "tracking_rad": 0.06796435549038571,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.669706012784436,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0904040934523593,
+            "force_world_N": [
+              0.4795015361843902,
+              0.07559393594934745,
+              0.9801988854422898
+            ],
+            "upward_N": 1.084784312664797
+          },
+          "rf_tip": {
+            "normal_N": 3.7746160745558344,
+            "force_world_N": [
+              2.578532539313914,
+              -2.4368857055341246,
+              -1.3085922228812372
+            ],
+            "upward_N": -0.35515361775197546
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.0,
+            "force_world_N": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "upward_N": 0.0
+          },
+          "th_tip": {
+            "normal_N": 3.8046858447762424,
+            "force_world_N": [
+              -2.706988223678941,
+              2.361546605611626,
+              1.255489715995393
+            ],
+            "upward_N": 0.26158347134545057
+          }
+        },
+        "hand_force_world_N": [
+          0.3510458518193631,
+          0.00025483602684861495,
+          0.9270963785564457
+        ],
+        "upward_support_N": 0.9912141662582721,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0104119941470662,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          0.01789848978176456,
+          0.00025483602684861495,
+          0.004397166913025274
+        ]
+      },
+      "RF14_upper_room_deg": 0.548793144587611,
+      "contact_finger_normals_N": {
+        "rf": 3.7746160745558344,
+        "th": 3.8046858447762424
+      },
+      "step": 40,
+      "score": 76.77286903808005,
+      "predicted_horizon_score": 76.68385061689068,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02545075716459,
+      "tilt_deg": 4.021577997251445,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.1283617729198,
+      "center_from_source_mm": 0.0471090033726747,
+      "canonical_station_error_mm": 90.34220927521096,
+      "reference_grip_center_error_mm": 14.1283617729198,
+      "upper_screen_mm": 2.044005309274719,
+      "minimum_planning_pair_gap_mm": 55.57688165169315,
+      "planning_pair_gaps_mm": [
+        81.7293039718594,
+        94.59420077989877,
+        86.24242860685449,
+        114.02313064206463,
+        93.36627447458515,
+        55.57688165169315,
+        58.265607938379254
+      ],
+      "tracking_rad": 0.06795702908073997,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.197562030214252,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9631373483095215,
+            "force_world_N": [
+              0.37652893857411257,
+              -0.027529724760682935,
+              0.8866056563451368
+            ],
+            "upward_N": 0.9617838560295999
+          },
+          "rf_tip": {
+            "normal_N": 3.5869030173917626,
+            "force_world_N": [
+              2.6139415327982105,
+              -2.178575756888774,
+              -1.1347038655082886
+            ],
+            "upward_N": -0.17957455247808254
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08623803386069147,
+            "force_world_N": [
+              -0.06607949772297936,
+              0.04518845863044277,
+              0.03365172130098455
+            ],
+            "upward_N": 0.009211219534844519
+          },
+          "th_tip": {
+            "normal_N": 3.5612836306522757,
+            "force_world_N": [
+              -2.5923802524305697,
+              2.1609824876016597,
+              1.1369983466605968
+            ],
+            "upward_N": 0.18905487829561377
+          }
+        },
+        "hand_force_world_N": [
+          0.33201072121877395,
+          6.546458264589106e-05,
+          0.9225518587984296
+        ],
+        "upward_support_N": 0.9804754013819756,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9994652409602197,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0011366408188245858,
+          6.546458264589106e-05,
+          -0.00014735284499078904
+        ]
+      },
+      "RF14_upper_room_deg": 0.5486685629868333,
+      "contact_finger_normals_N": {
+        "rf": 3.5869030173917626,
+        "th": 3.647521664512967
+      },
+      "step": 48,
+      "score": 76.68365395083062,
+      "predicted_horizon_score": 76.67122166335632,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02534663150176,
+      "tilt_deg": 4.013551935897818,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.1265264700452,
+      "center_from_source_mm": 0.052376611660887966,
+      "canonical_station_error_mm": 90.34095522598675,
+      "reference_grip_center_error_mm": 14.1265264700452,
+      "upper_screen_mm": 2.0650744929543174,
+      "minimum_planning_pair_gap_mm": 55.57757677415688,
+      "planning_pair_gaps_mm": [
+        81.72929318614435,
+        94.59585775962017,
+        86.24408558657586,
+        114.024787621786,
+        93.3693065884591,
+        55.57757677415688,
+        58.26747113189129
+      ],
+      "tracking_rad": 0.06795289664088872,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.200462908704983,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9637423978327743,
+            "force_world_N": [
+              0.3785392835505058,
+              -0.02935256397447463,
+              0.8863756936716386
+            ],
+            "upward_N": 0.9622502726943571
+          },
+          "rf_tip": {
+            "normal_N": 3.5868262720779116,
+            "force_world_N": [
+              2.614265185686797,
+              -2.1782848849361183,
+              -1.1342796645576443
+            ],
+            "upward_N": -0.1790656493294726
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08597477025192354,
+            "force_world_N": [
+              -0.06580702535639732,
+              0.0451500415606385,
+              0.03352102512581216
+            ],
+            "upward_N": 0.00918082217741187
+          },
+          "th_tip": {
+            "normal_N": 3.5639194685423736,
+            "force_world_N": [
+              -2.5946866534050748,
+              2.162560944780881,
+              1.1370005317583778
+            ],
+            "upward_N": 0.18827368032165093
+          }
+        },
+        "hand_force_world_N": [
+          0.3323107904758307,
+          7.353743092686216e-05,
+          0.9226175859981842
+        ],
+        "upward_support_N": 0.9806391258639473,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996321364566231,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0008365715617678626,
+          7.353743092686216e-05,
+          -8.162564523617188e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.5485467350608347,
+      "contact_finger_normals_N": {
+        "rf": 3.5868262720779116,
+        "th": 3.649894238794297
+      },
+      "step": 56,
+      "score": 76.68401462096047,
+      "predicted_horizon_score": 76.68316547901519,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 24,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.0252730931164,
+      "tilt_deg": 4.007262703353745,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.124909727402157,
+      "center_from_source_mm": 0.05755398535158674,
+      "canonical_station_error_mm": 90.33994989243236,
+      "reference_grip_center_error_mm": 14.124909727402157,
+      "upper_screen_mm": 2.0796357550597246,
+      "minimum_planning_pair_gap_mm": 55.57768096727941,
+      "planning_pair_gaps_mm": [
+        81.72928865993353,
+        94.59658204447696,
+        86.24480987143265,
+        114.02551190664279,
+        93.37038945630839,
+        55.57768096727941,
+        58.268333812736735
+      ],
+      "tracking_rad": 0.06795028547442128,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.19824745824893,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9647438655930124,
+            "force_world_N": [
+              0.3789720770830351,
+              -0.029213075642801033,
+              0.8872778384619081
+            ],
+            "upward_N": 0.9632457796367005
+          },
+          "rf_tip": {
+            "normal_N": 3.585152745230009,
+            "force_world_N": [
+              2.6129157349174785,
+              -2.1773177170742275,
+              -1.1339447095286923
+            ],
+            "upward_N": -0.17920887381759498
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08579381280570886,
+            "force_world_N": [
+              -0.06596858802838802,
+              0.044898824523180676,
+              0.03307054346102834
+            ],
+            "upward_N": 0.008702245974625636
+          },
+          "th_tip": {
+            "normal_N": 3.5625570346202,
+            "force_world_N": [
+              -2.593912038689706,
+              2.1616951250629683,
+              1.1361465210286605
+            ],
+            "upward_N": 0.18773348238278803
+          }
+        },
+        "hand_force_world_N": [
+          0.33200718528241957,
+          6.315686912072849e-05,
+          0.9225501934229047
+        ],
+        "upward_support_N": 0.9804726341765192,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9994624201595506,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0011401767551789677,
+          6.315686912072849e-05,
+          -0.00014901822051571756
+        ]
+      },
+      "RF14_upper_room_deg": 0.5484535255761718,
+      "contact_finger_normals_N": {
+        "rf": 3.585152745230009,
+        "th": 3.6483508474259088
+      },
+      "step": 64,
+      "score": 76.68303493418148,
+      "predicted_horizon_score": 76.67047710002744,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02331339202736,
+      "tilt_deg": 4.1143129436543795,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.127170194240833,
+      "center_from_source_mm": 0.08098374042540694,
+      "canonical_station_error_mm": 90.34668052962431,
+      "reference_grip_center_error_mm": 14.127170194240833,
+      "upper_screen_mm": 1.8746161635771506,
+      "minimum_planning_pair_gap_mm": 55.58211934453986,
+      "planning_pair_gaps_mm": [
+        81.7292867368084,
+        94.59689856834933,
+        86.24512639530502,
+        114.02582843051515,
+        93.37156348352671,
+        55.58211934453986,
+        58.25790032885116
+      ],
+      "tracking_rad": 0.09000726373046275,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.438806944341179,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0510090823838687,
+            "force_world_N": [
+              0.4573339413690784,
+              -0.08538873567743178,
+              0.9468764799915419
+            ],
+            "upward_N": 1.0459141465333932
+          },
+          "rf_tip": {
+            "normal_N": 3.6257238261140836,
+            "force_world_N": [
+              2.634454921659766,
+              -2.202802169671289,
+              -1.1633383714462366
+            ],
+            "upward_N": -0.19954096906224647
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.1178228106974864,
+            "force_world_N": [
+              -0.09813563212829042,
+              0.06914131406402593,
+              0.014255781469664467
+            ],
+            "upward_N": -0.019918275883804147
+          },
+          "th_tip": {
+            "normal_N": 3.6442512251457404,
+            "force_world_N": [
+              -2.6637921153490107,
+              2.218923820250177,
+              1.1243536867306572
+            ],
+            "upward_N": 0.15291023864390763
+          }
+        },
+        "hand_force_world_N": [
+          0.3298611155515436,
+          -0.00012577103451816285,
+          0.9221475767456269
+        ],
+        "upward_support_N": 0.9793651402312503,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9983334762805812,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.003286246486054911,
+          -0.00012577103451816285,
+          -0.0005516348977935293
+        ]
+      },
+      "RF14_upper_room_deg": 0.5392651449869582,
+      "contact_finger_normals_N": {
+        "rf": 3.6257238261140836,
+        "th": 3.7620740358432267
+      },
+      "step": 72,
+      "score": 76.72437516182703,
+      "predicted_horizon_score": 76.72157762281277,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.0422894523058,
+      "tilt_deg": 4.23067457070551,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.1681721502825,
+      "center_from_source_mm": 0.1357338939615731,
+      "canonical_station_error_mm": 90.39223538471053,
+      "reference_grip_center_error_mm": 14.1681721502825,
+      "upper_screen_mm": 1.6514211078278178,
+      "minimum_planning_pair_gap_mm": 55.597109180430444,
+      "planning_pair_gaps_mm": [
+        81.72928591230685,
+        94.5970368656236,
+        86.24526469257931,
+        114.02596672778945,
+        93.3930619375589,
+        55.597109180430444,
+        58.24882287782303
+      ],
+      "tracking_rad": 0.09216383458974786,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.502922048185097,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9570418193190563,
+            "force_world_N": [
+              0.4261495061634283,
+              -0.09860836563834166,
+              0.8578171108491532
+            ],
+            "upward_N": 0.9515573452871781
+          },
+          "rf_tip": {
+            "normal_N": 3.6967806185720407,
+            "force_world_N": [
+              2.696368428121418,
+              -2.2361346935188937,
+              -1.181756537194851
+            ],
+            "upward_N": -0.19583873222633136
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.1177394603840478,
+            "force_world_N": [
+              -0.08571849781442634,
+              0.06734804797399174,
+              0.04529807389851819
+            ],
+            "upward_N": 0.01349603022469556
+          },
+          "th_tip": {
+            "normal_N": 3.7313601499099516,
+            "force_world_N": [
+              -2.709424280064516,
+              2.26733117161183,
+              1.2006283522544132
+            ],
+            "upward_N": 0.20915523196511004
+          }
+        },
+        "hand_force_world_N": [
+          0.32737515640590376,
+          -6.38395714136486e-05,
+          0.9219869998072336
+        ],
+        "upward_support_N": 0.9783698752506523,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9973189350159554,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.005772205631694782,
+          -6.38395714136486e-05,
+          -0.0007122118361867491
+        ]
+      },
+      "RF14_upper_room_deg": 0.5252591198993408,
+      "contact_finger_normals_N": {
+        "rf": 3.6967806185720407,
+        "th": 3.849099610293999
+      },
+      "step": 80,
+      "score": 76.79336792797369,
+      "predicted_horizon_score": 76.89776160065111,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 2,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.05805273864136,
+      "tilt_deg": 4.290306562919909,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.199049218739644,
+      "center_from_source_mm": 0.17177776647683218,
+      "canonical_station_error_mm": 90.42518486514862,
+      "reference_grip_center_error_mm": 14.199049218739644,
+      "upper_screen_mm": 1.5370086027889807,
+      "minimum_planning_pair_gap_mm": 55.60654702270304,
+      "planning_pair_gaps_mm": [
+        81.72928555651465,
+        94.59709728032502,
+        86.24532510728073,
+        114.02602714249088,
+        93.40812665000563,
+        55.60654702270304,
+        58.247660168911665
+      ],
+      "tracking_rad": 0.09108371772447249,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.740882197209295,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9740608185675332,
+            "force_world_N": [
+              0.45769434415696353,
+              0.0762600170828236,
+              0.8622855361075554
+            ],
+            "upward_N": 0.9664728315528915
+          },
+          "rf_tip": {
+            "normal_N": 3.856624998213398,
+            "force_world_N": [
+              2.645178452664233,
+              -2.490056643456534,
+              -1.3110629874156237
+            ],
+            "upward_N": -0.3348446088475817
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.0,
+            "force_world_N": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "upward_N": 0.0
+          },
+          "th_tip": {
+            "normal_N": 3.9101963804283644,
+            "force_world_N": [
+              -2.754315162144404,
+              2.414181369274558,
+              1.3758436941951784
+            ],
+            "upward_N": 0.358712600907129
+          }
+        },
+        "hand_force_world_N": [
+          0.348557634676792,
+          0.00038474290084788976,
+          0.9270662428871101
+        ],
+        "upward_support_N": 0.9903408236124387,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0095217366079905,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          0.015410272639193479,
+          0.00038474290084788976,
+          0.004367031243689756
+        ]
+      },
+      "RF14_upper_room_deg": 0.5224369311201377,
+      "contact_finger_normals_N": {
+        "rf": 3.856624998213398,
+        "th": 3.9101963804283644
+      },
+      "step": 88,
+      "score": 76.87210385362368,
+      "predicted_horizon_score": 76.7152951122756,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 26,
+      "chosen_velocity": [
+        0.0,
+        -2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.06572166766254,
+      "tilt_deg": 4.21529773950893,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.205235657998843,
+      "center_from_source_mm": 0.14900383823954286,
+      "canonical_station_error_mm": 90.42952517116173,
+      "reference_grip_center_error_mm": 14.205235657998843,
+      "upper_screen_mm": 1.681111964938939,
+      "minimum_planning_pair_gap_mm": 55.60556632444651,
+      "planning_pair_gaps_mm": [
+        81.72928540226964,
+        94.59712366831037,
+        86.24535149526606,
+        114.02605353047619,
+        93.41190661084683,
+        55.60556632444651,
+        58.258423964264615
+      ],
+      "tracking_rad": 0.06655599852806882,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.230172621763428,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0223153693136786,
+            "force_world_N": [
+              0.3602891723737516,
+              0.038243550094741785,
+              0.9587299476248838
+            ],
+            "upward_N": 1.0241067830779236
+          },
+          "rf_tip": {
+            "normal_N": 3.6093054055453555,
+            "force_world_N": [
+              2.6186490180568143,
+              -2.1969089429577036,
+              -1.1591007159112086
+            ],
+            "upward_N": -0.20092283824528134
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08496620301191493,
+            "force_world_N": [
+              -0.0742503311869114,
+              0.04127450505482056,
+              0.018802072694797195
+            ],
+            "upward_N": -0.007530728147386252
+          },
+          "th_tip": {
+            "normal_N": 3.513585643892479,
+            "force_world_N": [
+              -2.577469830323285,
+              2.1185361859198006,
+              1.1030814258332247
+            ],
+            "upward_N": 0.16221721436403413
+          }
+        },
+        "hand_force_world_N": [
+          0.32721802892036944,
+          0.0011452981116595318,
+          0.9215127302416971
+        ],
+        "upward_support_N": 0.9778704310492901,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9968098175833741,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.005929333117229096,
+          0.0011452981116595318,
+          -0.0011864814017232828
+        ]
+      },
+      "RF14_upper_room_deg": 0.5329730363743425,
+      "contact_finger_normals_N": {
+        "rf": 3.6093054055453555,
+        "th": 3.598551846904394
+      },
+      "step": 96,
+      "score": 76.72890761889889,
+      "predicted_horizon_score": 76.64479369369657,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 26,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        -2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.04930751835175,
+      "tilt_deg": 4.190287781334887,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.170492332041075,
+      "center_from_source_mm": 0.12821577861632388,
+      "canonical_station_error_mm": 90.39408654016364,
+      "reference_grip_center_error_mm": 14.170492332041075,
+      "upper_screen_mm": 1.7292730654379591,
+      "minimum_planning_pair_gap_mm": 55.594926130483806,
+      "planning_pair_gaps_mm": [
+        81.7292853351833,
+        94.59713519265,
+        86.24536301960569,
+        114.02606505481583,
+        93.39261785245917,
+        55.594926130483806,
+        58.261195799090814
+      ],
+      "tracking_rad": 0.0669658353731597,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.217917822502162,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0008553736106374,
+            "force_world_N": [
+              0.3603776814748516,
+              0.013086939287205588,
+              0.9351625341228216
+            ],
+            "upward_N": 1.0019700376291165
+          },
+          "rf_tip": {
+            "normal_N": 3.6039217033463946,
+            "force_world_N": [
+              2.6194126545700094,
+              -2.1915031762581516,
+              -1.15091414774715
+            ],
+            "upward_N": -0.19296346670504846
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08300785554127602,
+            "force_world_N": [
+              -0.07112490537835574,
+              0.0413435088307117,
+              0.01958460061951967
+            ],
+            "upward_N": -0.005733311977564706
+          },
+          "th_tip": {
+            "normal_N": 3.5301328900038538,
+            "force_world_N": [
+              -2.5778476804506,
+              2.1370957629871143,
+              1.1183362953613387
+            ],
+            "upward_N": 0.1764371698320805
+          }
+        },
+        "hand_force_world_N": [
+          0.3308177502159051,
+          2.3034846880154447e-05,
+          0.92216928235653
+        ],
+        "upward_support_N": 0.9797104287785839,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9986854523736839,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0023296118216934447,
+          2.3034846880154447e-05,
+          -0.0005299292868904404
+        ]
+      },
+      "RF14_upper_room_deg": 0.543608546138244,
+      "contact_finger_normals_N": {
+        "rf": 3.6039217033463946,
+        "th": 3.6131407455451297
+      },
+      "step": 104,
+      "score": 76.70804948173053,
+      "predicted_horizon_score": 76.69811278069005,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.03974633498969,
+      "tilt_deg": 4.156383204829888,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.151469260903552,
+      "center_from_source_mm": 0.12023427897658974,
+      "canonical_station_error_mm": 90.37477794851618,
+      "reference_grip_center_error_mm": 14.151469260903552,
+      "upper_screen_mm": 1.794511677748475,
+      "minimum_planning_pair_gap_mm": 55.58952103576752,
+      "planning_pair_gaps_mm": [
+        81.72928530594046,
+        94.5971402251296,
+        86.2453680520853,
+        114.02607008729542,
+        93.38411355190594,
+        55.58952103576752,
+        58.26329874077658
+      ],
+      "tracking_rad": 0.06714825779158384,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.221431725838942,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.985098874884138,
+            "force_world_N": [
+              0.3653138678764891,
+              -0.004255132728514901,
+              0.9156820891326818
+            ],
+            "upward_N": 0.9853236423624157
+          },
+          "rf_tip": {
+            "normal_N": 3.6038283819947914,
+            "force_world_N": [
+              2.621795609888888,
+              -2.19107390909045,
+              -1.1460609416002616
+            ],
+            "upward_N": -0.18758943534519645
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08781184115823851,
+            "force_world_N": [
+              -0.07102122710072431,
+              0.045723905689246315,
+              0.026407291379782274
+            ],
+            "upward_N": 0.0007191156783727737
+          },
+          "th_tip": {
+            "normal_N": 3.5446926278017736,
+            "force_world_N": [
+              -2.5836527985473805,
+              2.1496766378522025,
+              1.1266058064258786
+            ],
+            "upward_N": 0.18224380750758337
+          }
+        },
+        "hand_force_world_N": [
+          0.3324354521172719,
+          7.150172248415743e-05,
+          0.922634245338081
+        ],
+        "upward_support_N": 0.9806971302031753,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996912642234201,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0007119099203266588,
+          7.150172248415743e-05,
+          -6.496630533936454e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.547869576495968,
+      "contact_finger_normals_N": {
+        "rf": 3.6038283819947914,
+        "th": 3.632504468960012
+      },
+      "step": 112,
+      "score": 76.70024245527998,
+      "predicted_horizon_score": 76.68945466756324,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.03421542409528,
+      "tilt_deg": 4.125137974992403,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.139798366289684,
+      "center_from_source_mm": 0.11925454471264979,
+      "canonical_station_error_mm": 90.36313859168855,
+      "reference_grip_center_error_mm": 14.139798366289684,
+      "upper_screen_mm": 1.8546386420007694,
+      "minimum_planning_pair_gap_mm": 55.58626892902412,
+      "planning_pair_gaps_mm": [
+        81.72928529317471,
+        94.5971424225463,
+        86.24537024950199,
+        114.02607228471211,
+        93.37972758090406,
+        55.58626892902412,
+        58.26474877511456
+      ],
+      "tracking_rad": 0.06734065331939865,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.214364695628852,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9764359097757563,
+            "force_world_N": [
+              0.36757751931234783,
+              -0.012492116041856727,
+              0.9051713497325732
+            ],
+            "upward_N": 0.9762062912371958
+          },
+          "rf_tip": {
+            "normal_N": 3.599586245983519,
+            "force_world_N": [
+              2.6195784702150053,
+              -2.188492407209464,
+              -1.142734746995975
+            ],
+            "upward_N": -0.18521385644048188
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08994682417211351,
+            "force_world_N": [
+              -0.0705462355460336,
+              0.04796763558988002,
+              0.02984579658370312
+            ],
+            "upward_N": 0.004114577680742711
+          },
+          "th_tip": {
+            "normal_N": 3.548395715697464,
+            "force_world_N": [
+              -2.5842123886954704,
+              2.1530899045157548,
+              1.1303484808293305
+            ],
+            "upward_N": 0.18557401825156364
+          }
+        },
+        "hand_force_world_N": [
+          0.33239736528584896,
+          7.301685431437832e-05,
+          0.9226308801496318
+        ],
+        "upward_support_N": 0.9806810307290202,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.999674852934781,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.000749996751749582,
+          7.301685431437832e-05,
+          -6.833149378859815e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.5493677396927296,
+      "contact_finger_normals_N": {
+        "rf": 3.599586245983519,
+        "th": 3.6383425398695777
+      },
+      "step": 120,
+      "score": 76.69368311660945,
+      "predicted_horizon_score": 76.69189488828951,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.03104160678208,
+      "tilt_deg": 4.098749382083354,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.132065326086487,
+      "center_from_source_mm": 0.12195648817219742,
+      "canonical_station_error_mm": 90.35563446902408,
+      "reference_grip_center_error_mm": 14.132065326086487,
+      "upper_screen_mm": 1.9054269823039531,
+      "minimum_planning_pair_gap_mm": 55.58406125361201,
+      "planning_pair_gaps_mm": [
+        81.72928528759657,
+        94.59714338197765,
+        86.24537120893334,
+        114.02607324414346,
+        93.3771191520006,
+        55.58406125361201,
+        58.265769519167634
+      ],
+      "tracking_rad": 0.0675553518489378,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.195391796802081,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9724971705790157,
+            "force_world_N": [
+              0.3669014781318424,
+              -0.013559542722569755,
+              0.9011458360285406
+            ],
+            "upward_N": 0.9721904302207994
+          },
+          "rf_tip": {
+            "normal_N": 3.5907792207788685,
+            "force_world_N": [
+              2.612635277984287,
+              -2.183668613526988,
+              -1.1401107481405754
+            ],
+            "upward_N": -0.18510370812300306
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09066032786763911,
+            "force_world_N": [
+              -0.07107061590423003,
+              0.04798134506496583,
+              0.030855014393985133
+            ],
+            "upward_N": 0.004885738276957026
+          },
+          "th_tip": {
+            "normal_N": 3.5414550775765576,
+            "force_world_N": [
+              -2.57787602463113,
+              2.1492693337560596,
+              1.130260831268241
+            ],
+            "upward_N": 0.18764340539939922
+          }
+        },
+        "hand_force_world_N": [
+          0.3305901155807698,
+          2.252257146784231e-05,
+          0.9221509335501912
+        ],
+        "upward_support_N": 0.9796158657741526,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9985890578737538,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0025572464568287545,
+          2.252257146784231e-05,
+          -0.0005482780932292153
+        ]
+      },
+      "RF14_upper_room_deg": 0.5497305436859561,
+      "contact_finger_normals_N": {
+        "rf": 3.5907792207788685,
+        "th": 3.6321154054441966
+      },
+      "step": 128,
+      "score": 76.68605413456265,
+      "predicted_horizon_score": 76.68137169340272,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02898614891203,
+      "tilt_deg": 4.076939815941227,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.126713459872239,
+      "center_from_source_mm": 0.12649925589635308,
+      "canonical_station_error_mm": 90.35063003151102,
+      "reference_grip_center_error_mm": 14.126713459872239,
+      "upper_screen_mm": 1.9474006634726466,
+      "minimum_planning_pair_gap_mm": 55.582446702279434,
+      "planning_pair_gaps_mm": [
+        81.729285285158,
+        94.59714380086017,
+        86.24537162781586,
+        114.02607366302598,
+        93.37536494284804,
+        55.582446702279434,
+        58.26650580759495
+      ],
+      "tracking_rad": 0.06769035021903214,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.156512255589249,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9691501489541969,
+            "force_world_N": [
+              0.3644606830459647,
+              -0.011644454797194344,
+              0.8985545312082985
+            ],
+            "upward_N": 0.9689242331169262
+          },
+          "rf_tip": {
+            "normal_N": 3.5726998178369436,
+            "force_world_N": [
+              2.5968655221132257,
+              -2.174795132838375,
+              -1.1362197532599707
+            ],
+            "upward_N": -0.18679936017150303
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09320662699668691,
+            "force_world_N": [
+              -0.07353875971861945,
+              0.048737141626624,
+              0.03178011714008837
+            ],
+            "upward_N": 0.004917681165464024
+          },
+          "th_tip": {
+            "normal_N": 3.521455661801422,
+            "force_world_N": [
+              -2.561908941127794,
+              2.1374818534828237,
+              1.1263762787037446
+            ],
+            "upward_N": 0.18941212931348902
+          }
+        },
+        "hand_force_world_N": [
+          0.32587850431277676,
+          -0.00022059252612205427,
+          0.9204911737921608
+        ],
+        "upward_support_N": 0.9764546834243764,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9953666497700064,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.007268857724821776,
+          -0.00022059252612205427,
+          -0.002208037851259559
+        ]
+      },
+      "RF14_upper_room_deg": 0.5496756071226014,
+      "contact_finger_normals_N": {
+        "rf": 3.5726998178369436,
+        "th": 3.614662288798109
+      },
+      "step": 136,
+      "score": 76.67484268722154,
+      "predicted_horizon_score": 76.67394001488881,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02774375174302,
+      "tilt_deg": 4.059521312348549,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.122701661906296,
+      "center_from_source_mm": 0.13207791110247097,
+      "canonical_station_error_mm": 90.34705307733054,
+      "reference_grip_center_error_mm": 14.122701661906296,
+      "upper_screen_mm": 1.9809253601490804,
+      "minimum_planning_pair_gap_mm": 55.58120580257746,
+      "planning_pair_gaps_mm": [
+        81.72928528409142,
+        94.59714398373386,
+        86.24537181068955,
+        114.02607384589967,
+        93.37406054295758,
+        55.58120580257746,
+        58.26702944811918
+      ],
+      "tracking_rad": 0.06777642077939317,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.205521381083141,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9671954295955414,
+            "force_world_N": [
+              0.37456388411162306,
+              -0.023960782385666506,
+              0.8919266464494859
+            ],
+            "upward_N": 0.9661212878991278
+          },
+          "rf_tip": {
+            "normal_N": 3.591615573076788,
+            "force_world_N": [
+              2.615608554992316,
+              -2.1827824401887113,
+              -1.137661787854314
+            ],
+            "upward_N": -0.18179056529190077
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08981258470061804,
+            "force_world_N": [
+              -0.06877526525938957,
+              0.0480430100086597,
+              0.033273223959475705
+            ],
+            "upward_N": 0.007939734272825148
+          },
+          "th_tip": {
+            "normal_N": 3.5568977937101947,
+            "force_world_N": [
+              -2.5890435881513016,
+              2.1587712435679416,
+              1.1350856163736809
+            ],
+            "upward_N": 0.1883889518683144
+          }
+        },
+        "hand_force_world_N": [
+          0.332353585693248,
+          7.103100222316527e-05,
+          0.9226236989283285
+        ],
+        "upward_support_N": 0.9806594087483667,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996528121797824,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0007937763443505164,
+          7.103100222316527e-05,
+          -7.55127150918744e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.5494805102189931,
+      "contact_finger_normals_N": {
+        "rf": 3.591615573076788,
+        "th": 3.6467103784108126
+      },
+      "step": 144,
+      "score": 76.68599209523322,
+      "predicted_horizon_score": 76.67834368374663,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02715797230081,
+      "tilt_deg": 4.045920526558622,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.119533135110625,
+      "center_from_source_mm": 0.13824664237710044,
+      "canonical_station_error_mm": 90.3443848209455,
+      "reference_grip_center_error_mm": 14.119533135110625,
+      "upper_screen_mm": 2.0071096216427,
+      "minimum_planning_pair_gap_mm": 55.58024338654844,
+      "planning_pair_gaps_mm": [
+        81.72928528362505,
+        94.5971440635693,
+        86.24537189052502,
+        114.02607392573515,
+        93.37305323970794,
+        55.58024338654844,
+        58.26740812429334
+      ],
+      "tracking_rad": 0.06783288343561877,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.17658378175198,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.967830725938638,
+            "force_world_N": [
+              0.3710987972794908,
+              -0.019001601348637508,
+              0.8941518605059005
+            ],
+            "upward_N": 0.9670375149309682
+          },
+          "rf_tip": {
+            "normal_N": 3.5788788133202987,
+            "force_world_N": [
+              2.604218537985177,
+              -2.176378727392007,
+              -1.1358465279979526
+            ],
+            "upward_N": -0.18395123326447888
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09025941002410634,
+            "force_world_N": [
+              -0.07069789569683262,
+              0.04705914606252812,
+              0.032197677437390305
+            ],
+            "upward_N": 0.006275182604709586
+          },
+          "th_tip": {
+            "normal_N": 3.5396148324689363,
+            "force_world_N": [
+              -2.575830756309714,
+              2.1482321688176005,
+              1.1310856142722514
+            ],
+            "upward_N": 0.18911374421032295
+          }
+        },
+        "hand_force_world_N": [
+          0.3287886832581215,
+          -8.901386051585192e-05,
+          0.9215886242175896
+        ],
+        "upward_support_N": 0.9784752084815219,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9974263083399815,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.004358678779477043,
+          -8.901386051585192e-05,
+          -0.0011105874258308113
+        ]
+      },
+      "RF14_upper_room_deg": 0.549249934429204,
+      "contact_finger_normals_N": {
+        "rf": 3.5788788133202987,
+        "th": 3.6298742424930426
+      },
+      "step": 152,
+      "score": 76.67788842786675,
+      "predicted_horizon_score": 76.68463152948279,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02648166638843,
+      "tilt_deg": 4.034828255522991,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.117114400803084,
+      "center_from_source_mm": 0.14465276963255488,
+      "canonical_station_error_mm": 90.34250335217779,
+      "reference_grip_center_error_mm": 14.117114400803084,
+      "upper_screen_mm": 2.0284575456228815,
+      "minimum_planning_pair_gap_mm": 55.57948744342931,
+      "planning_pair_gaps_mm": [
+        81.72928528342099,
+        94.59714409842118,
+        86.24537192537687,
+        114.026073960587,
+        93.372248564067,
+        55.57948744342931,
+        58.26768523165197
+      ],
+      "tracking_rad": 0.06786854868332148,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.203911601305387,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9661043616509419,
+            "force_world_N": [
+              0.3778101893201098,
+              -0.02729709753230739,
+              0.889286892993548
+            ],
+            "upward_N": 0.9647408593403606
+          },
+          "rf_tip": {
+            "normal_N": 3.588741153323089,
+            "force_world_N": [
+              2.6141305855552517,
+              -2.1806066713590857,
+              -1.1361563978811922
+            ],
+            "upward_N": -0.18087655864329202
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08905669477515321,
+            "force_world_N": [
+              -0.06810603031943294,
+              0.04740369998967617,
+              0.03364668378703635
+            ],
+            "upward_N": 0.008518271421959336
+          },
+          "th_tip": {
+            "normal_N": 3.560009391556203,
+            "force_world_N": [
+              -2.5914834061981606,
+              2.1605688715013174,
+              1.1358444510108923
+            ],
+            "upward_N": 0.1882741273783652
+          }
+        },
+        "hand_force_world_N": [
+          0.3323513383577681,
+          6.880259960029278e-05,
+          0.9226216299102845
+        ],
+        "upward_support_N": 0.9806566994973933,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996500504560584,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0007960236798304487,
+          6.880259960029278e-05,
+          -7.758173313587857e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.54907250565864,
+      "contact_finger_normals_N": {
+        "rf": 3.588741153323089,
+        "th": 3.649066086331356
+      },
+      "step": 160,
+      "score": 76.68431693439717,
+      "predicted_horizon_score": 76.67693975392775,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02634197171493,
+      "tilt_deg": 4.026549243819715,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.114974627890001,
+      "center_from_source_mm": 0.1513510496747024,
+      "canonical_station_error_mm": 90.34094545515708,
+      "reference_grip_center_error_mm": 14.114974627890001,
+      "upper_screen_mm": 2.0443991323042416,
+      "minimum_planning_pair_gap_mm": 55.578890661381706,
+      "planning_pair_gaps_mm": [
+        81.72928528333179,
+        94.59714411363537,
+        86.24537194059108,
+        114.02607397580121,
+        93.37159735619466,
+        55.578890661381706,
+        58.26787811407881
+      ],
+      "tracking_rad": 0.06789334650632767,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.152186013393983,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9673964762110293,
+            "force_world_N": [
+              0.37062996392090575,
+              -0.01764303703698862,
+              0.8938760919463309
+            ],
+            "upward_N": 0.9666189195903375
+          },
+          "rf_tip": {
+            "normal_N": 3.566511654640058,
+            "force_world_N": [
+              2.5934718476389325,
+              -2.170129830422676,
+              -1.1334366272149528
+            ],
+            "upward_N": -0.18533412621745896
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09134471901407465,
+            "force_world_N": [
+              -0.0723796132861226,
+              0.04692232049416806,
+              0.032043565213217974
+            ],
+            "upward_N": 0.005559118378091229
+          },
+          "th_tip": {
+            "normal_N": 3.526933163528822,
+            "force_world_N": [
+              -2.5661466511205613,
+              2.1405693984830303,
+              1.127990133460003
+            ],
+            "upward_N": 0.1894909474644941
+          }
+        },
+        "hand_force_world_N": [
+          0.3255755471531545,
+          -0.00028114848246652,
+          0.9204731634045992
+        ],
+        "upward_support_N": 0.9763348592154639,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9952445048067929,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.007571814884444028,
+          -0.00028114848246652,
+          -0.002226048238821221
+        ]
+      },
+      "RF14_upper_room_deg": 0.5488919574524345,
+      "contact_finger_normals_N": {
+        "rf": 3.566511654640058,
+        "th": 3.618277882542897
+      },
+      "step": 168,
+      "score": 76.67093002936674,
+      "predicted_horizon_score": 76.6709405521815,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 24,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.0241613749344,
+      "tilt_deg": 4.131445046260817,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.117178474116345,
+      "center_from_source_mm": 0.19270884527177584,
+      "canonical_station_error_mm": 90.3472933637816,
+      "reference_grip_center_error_mm": 14.117178474116345,
+      "upper_screen_mm": 1.842463721314565,
+      "minimum_planning_pair_gap_mm": 55.582951387239596,
+      "planning_pair_gaps_mm": [
+        81.72928528329282,
+        94.59714412027685,
+        86.24537194723254,
+        114.02607398244267,
+        93.37196053606071,
+        55.582951387239596,
+        58.2572195652447
+      ],
+      "tracking_rad": 0.08994899758344066,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.428048588729318,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0521803288414147,
+            "force_world_N": [
+              0.4579963508588786,
+              -0.08343138109869233,
+              0.9478528454208538
+            ],
+            "upward_N": 1.0470574407087425
+          },
+          "rf_tip": {
+            "normal_N": 3.6195093703992396,
+            "force_world_N": [
+              2.626587885891923,
+              -2.2023328725535203,
+              -1.162622427971078
+            ],
+            "upward_N": -0.20153921751586742
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.12350167211778396,
+            "force_world_N": [
+              -0.10278795939957415,
+              0.07265003851182324,
+              0.01480438589851513
+            ],
+            "upward_N": -0.02098220420567893
+          },
+          "th_tip": {
+            "normal_N": 3.63285721737088,
+            "force_world_N": [
+              -2.6543649103067284,
+              2.213016015003008,
+              1.1213980590114156
+            ],
+            "upward_N": 0.15333174030014443
+          }
+        },
+        "hand_force_world_N": [
+          0.32743136704449904,
+          -9.820013738126576e-05,
+          0.9214328623597066
+        ],
+        "upward_support_N": 0.9778677592873405,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9968070940747609,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0057159949930994935,
+          -9.820013738126576e-05,
+          -0.0012663492837138302
+        ]
+      },
+      "RF14_upper_room_deg": 0.5397022473533246,
+      "contact_finger_normals_N": {
+        "rf": 3.6195093703992396,
+        "th": 3.7563588894886637
+      },
+      "step": 176,
+      "score": 76.72106087149169,
+      "predicted_horizon_score": 76.73462504752304,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.04297751167567,
+      "tilt_deg": 4.246393305712552,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.158703840809103,
+      "center_from_source_mm": 0.2455912707850132,
+      "canonical_station_error_mm": 90.39302000012138,
+      "reference_grip_center_error_mm": 14.158703840809103,
+      "upper_screen_mm": 1.621553773232077,
+      "minimum_planning_pair_gap_mm": 55.59780121735111,
+      "planning_pair_gaps_mm": [
+        81.72928528327564,
+        94.59714412317588,
+        86.24537195013157,
+        114.0260739853417,
+        93.3931143742808,
+        55.59780121735111,
+        58.247942283218556
+      ],
+      "tracking_rad": 0.09213823527285331,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.94411228886205,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0820285741930142,
+            "force_world_N": [
+              0.537687713990783,
+              0.010754336851749896,
+              0.944837524511793
+            ],
+            "upward_N": 1.0712844877820678
+          },
+          "rf_tip": {
+            "normal_N": 3.8675601419147494,
+            "force_world_N": [
+              2.634512666589427,
+              -2.49289286494089,
+              -1.3636955339305605
+            ],
+            "upward_N": -0.38797130372117683
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.0,
+            "force_world_N": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "upward_N": 0.0
+          },
+          "th_tip": {
+            "normal_N": 3.994523572754286,
+            "force_world_N": [
+              -2.8282760386394252,
+              2.4821401631163025,
+              1.343260489759621
+            ],
+            "upward_N": 0.3029487192110943
+          }
+        },
+        "hand_force_world_N": [
+          0.3439243419407849,
+          1.635027162549818e-06,
+          0.9244024803408535
+        ],
+        "upward_support_N": 0.9862619032719852,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0053638157716462,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          0.010776979903186379,
+          1.635027162549818e-06,
+          0.0017032686974330913
+        ]
+      },
+      "RF14_upper_room_deg": 0.5255441005362967,
+      "contact_finger_normals_N": {
+        "rf": 3.8675601419147494,
+        "th": 3.994523572754286
+      },
+      "step": 184,
+      "score": 76.87996845193094,
+      "predicted_horizon_score": 76.80735771862464,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 2,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.0590559372394,
+      "tilt_deg": 4.305472367202642,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.1894351723304,
+      "center_from_source_mm": 0.2768735818079703,
+      "canonical_station_error_mm": 90.42565471329233,
+      "reference_grip_center_error_mm": 14.1894351723304,
+      "upper_screen_mm": 1.5080110680410925,
+      "minimum_planning_pair_gap_mm": 55.607105403088596,
+      "planning_pair_gaps_mm": [
+        81.72928528326801,
+        94.59714412444126,
+        86.24537195139695,
+        114.02607398660707,
+        93.40794526694788,
+        55.607105403088596,
+        58.24671552694768
+      ],
+      "tracking_rad": 0.09106362383176397,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.169189584953903,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.861007942106546,
+            "force_world_N": [
+              0.31093242364085544,
+              -0.005179572026274981,
+              0.804186264478981
+            ],
+            "upward_N": 0.861986084563844
+          },
+          "rf_tip": {
+            "normal_N": 3.640512339637972,
+            "force_world_N": [
+              2.6661918031944074,
+              -2.188473753795542,
+              -1.1652886670876015
+            ],
+            "upward_N": -0.19059752144572598
+          },
+          "th_tip": {
+            "normal_N": 3.6676693032093852,
+            "force_world_N": [
+              -2.649013716272699,
+              2.191663519818345,
+              1.281344685299064
+            ],
+            "upward_N": 0.30559000957315785
+          }
+        },
+        "hand_force_world_N": [
+          0.3281105105625639,
+          -0.0019898060034719833,
+          0.9202422826904435
+        ],
+        "upward_support_N": 0.9769785726912757,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9959006857199548,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.005036851475034632,
+          -0.0019898060034719833,
+          -0.002456928952976889
+        ]
+      },
+      "RF14_upper_room_deg": 0.5226740666394846,
+      "contact_finger_normals_N": {
+        "rf": 3.640512339637972,
+        "th": 3.6676693032093852
+      },
+      "step": 192,
+      "score": 76.75012689327319,
+      "predicted_horizon_score": 76.72541933246409,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 26,
+      "chosen_velocity": [
+        0.0,
+        -2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.06656706405145,
+      "tilt_deg": 4.229922291794745,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.195273500528234,
+      "center_from_source_mm": 0.25310457555660876,
+      "canonical_station_error_mm": 90.42980121189812,
+      "reference_grip_center_error_mm": 14.195273500528234,
+      "upper_screen_mm": 1.6530488892721236,
+      "minimum_planning_pair_gap_mm": 55.60604070447868,
+      "planning_pair_gaps_mm": [
+        81.72928528326513,
+        94.59714412499396,
+        86.24537195194968,
+        114.0260739871598,
+        93.41158160299933,
+        55.60604070447868,
+        58.257446903597284
+      ],
+      "tracking_rad": 0.06650082186136985,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.24235582351983,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0234422819032887,
+            "force_world_N": [
+              0.36177166826082807,
+              0.03757723696977072,
+              0.9593191169036401
+            ],
+            "upward_N": 1.0251643932950938
+          },
+          "rf_tip": {
+            "normal_N": 3.615149561574823,
+            "force_world_N": [
+              2.6231424904252276,
+              -2.2001194062931964,
+              -1.1610719443590272
+            ],
+            "upward_N": -0.20125093454379864
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08407414282103866,
+            "force_world_N": [
+              -0.07345958665464396,
+              0.040857877611418,
+              0.0186063464907889
+            ],
+            "upward_N": -0.007446285700052774
+          },
+          "th_tip": {
+            "normal_N": 3.519689837220679,
+            "force_world_N": [
+              -2.581779137133783,
+              2.1223060150904036,
+              1.1052343293015556
+            ],
+            "upward_N": 0.1627787313231016
+          }
+        },
+        "hand_force_world_N": [
+          0.3296754348976285,
+          0.0006217233783960552,
+          0.9220878483369574
+        ],
+        "upward_support_N": 0.9792459043743439,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9982119310645706,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0034719271399700213,
+          0.0006217233783960552,
+          -0.000611363306462942
+        ]
+      },
+      "RF14_upper_room_deg": 0.5331626887309381,
+      "contact_finger_normals_N": {
+        "rf": 3.615149561574823,
+        "th": 3.603763980041718
+      },
+      "step": 200,
+      "score": 76.73147818989779,
+      "predicted_horizon_score": 76.66645969158112,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 26,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        -2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.05000198499572,
+      "tilt_deg": 4.204095705616807,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.160443273126793,
+      "center_from_source_mm": 0.23828790825985308,
+      "canonical_station_error_mm": 90.39434607596979,
+      "reference_grip_center_error_mm": 14.160443273126793,
+      "upper_screen_mm": 1.7027356965411098,
+      "minimum_planning_pair_gap_mm": 55.59537270400535,
+      "planning_pair_gaps_mm": [
+        81.7292852832629,
+        94.59714412523438,
+        86.24537195219011,
+        114.02607398740024,
+        93.39230659472749,
+        55.59537270400535,
+        58.260294421066895
+      ],
+      "tracking_rad": 0.06691606071570777,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.219960423313825,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.001412463138526,
+            "force_world_N": [
+              0.3602900515180239,
+              0.014356514876247959,
+              0.9358254635448586
+            ],
+            "upward_N": 1.0025638100716612
+          },
+          "rf_tip": {
+            "normal_N": 3.6051981080718147,
+            "force_world_N": [
+              2.6191342452261748,
+              -2.193118344575278,
+              -1.1524477599640932
+            ],
+            "upward_N": -0.1945004841586726
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.08545645002804969,
+            "force_world_N": [
+              -0.07303509167635637,
+              0.04272862615822115,
+              0.02027707904191671
+            ],
+            "upward_N": -0.005730686321859761
+          },
+          "th_tip": {
+            "normal_N": 3.527893402075436,
+            "force_world_N": [
+              -2.5755504119602435,
+              2.1360622977054278,
+              1.1185177784320675
+            ],
+            "upward_N": 0.17738801919369357
+          }
+        },
+        "hand_force_world_N": [
+          0.3308387931075991,
+          2.9094164618825857e-05,
+          0.9221725610547495
+        ],
+        "upward_support_N": 0.9797206587848224,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9986958805145997,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0023085689299994216,
+          2.9094164618825857e-05,
+          -0.0005266505886708517
+        ]
+      },
+      "RF14_upper_room_deg": 0.5438270949386129,
+      "contact_finger_normals_N": {
+        "rf": 3.6051981080718147,
+        "th": 3.6133498521034855
+      },
+      "step": 208,
+      "score": 76.70809261562417,
+      "predicted_horizon_score": 76.70570702460323,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.04041210231806,
+      "tilt_deg": 4.169854338270607,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.14124203721313,
+      "center_from_source_mm": 0.2326353614906485,
+      "canonical_station_error_mm": 90.37491341429181,
+      "reference_grip_center_error_mm": 14.14124203721313,
+      "upper_screen_mm": 1.768600316066359,
+      "minimum_planning_pair_gap_mm": 55.58993005570599,
+      "planning_pair_gaps_mm": [
+        81.72928528326185,
+        94.59714412533926,
+        86.24537195229497,
+        114.02607398750511,
+        93.38376095828657,
+        55.58993005570599,
+        58.26241760768151
+      ],
+      "tracking_rad": 0.06710107928880049,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.224525854612036,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9854185185602287,
+            "force_world_N": [
+              0.3657166112802617,
+              -0.0038268033504999365,
+              0.9158625961532304
+            ],
+            "upward_N": 0.9856301934206229
+          },
+          "rf_tip": {
+            "normal_N": 3.6052959280888,
+            "force_world_N": [
+              2.6218009913119227,
+              -2.1927141706541065,
+              -1.1475075550839846
+            ],
+            "upward_N": -0.18894824912103325
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09020604145393475,
+            "force_world_N": [
+              -0.07262331740460462,
+              0.047336719206610936,
+              0.02718754265999714
+            ],
+            "upward_N": 0.0009089271795494152
+          },
+          "th_tip": {
+            "normal_N": 3.543605366509073,
+            "force_world_N": [
+              -2.5822689021685306,
+              2.1492688440040553,
+              1.1271241954569027
+            ],
+            "upward_N": 0.1832013595750632
+          }
+        },
+        "hand_force_world_N": [
+          0.33262538301904954,
+          6.458920605956209e-05,
+          0.9226667791861456
+        ],
+        "upward_support_N": 0.9807922310542023,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9997882069869544,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0005219790185490014,
+          6.458920605956209e-05,
+          -3.2432457274800264e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.5480914295760331,
+      "contact_finger_normals_N": {
+        "rf": 3.6052959280888,
+        "th": 3.633811407963008
+      },
+      "step": 216,
+      "score": 76.70056417346402,
+      "predicted_horizon_score": 76.69679635556557,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.03485291877864,
+      "tilt_deg": 4.138350224278376,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.129446758257961,
+      "center_from_source_mm": 0.23228252565067126,
+      "canonical_station_error_mm": 90.36318411732589,
+      "reference_grip_center_error_mm": 14.129446758257961,
+      "upper_screen_mm": 1.8292149094786705,
+      "minimum_planning_pair_gap_mm": 55.58665170762518,
+      "planning_pair_gaps_mm": [
+        81.72928528326106,
+        94.5971441253847,
+        86.24537195234042,
+        114.02607398755055,
+        93.37933815704669,
+        55.58665170762518,
+        58.263876700378425
+      ],
+      "tracking_rad": 0.06733059765534588,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.216067911316253,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.97699318412866,
+            "force_world_N": [
+              0.36750676839180507,
+              -0.011407844410626318,
+              0.9058209030592084
+            ],
+            "upward_N": 0.9767932146417484
+          },
+          "rf_tip": {
+            "normal_N": 3.600626313427148,
+            "force_world_N": [
+              2.6191301045849613,
+              -2.1899477662716262,
+              -1.1442262304507478
+            ],
+            "upward_N": -0.18676896595605322
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09230202626144726,
+            "force_world_N": [
+              -0.07228463452630958,
+              0.04945168315042298,
+              0.030440731721910728
+            ],
+            "upward_N": 0.004083795976925521
+          },
+          "th_tip": {
+            "normal_N": 3.5461463874989985,
+            "force_world_N": [
+              -2.5819383080205873,
+              2.1519750955308727,
+              1.1305974043839608
+            ],
+            "upward_N": 0.18658042553547283
+          }
+        },
+        "hand_force_world_N": [
+          0.33241393042986944,
+          7.116799904283155e-05,
+          0.9226328087143322
+        ],
+        "upward_support_N": 0.9806884701980936,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996824364914306,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0007334316077290959,
+          7.116799904283155e-05,
+          -6.640292908821621e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.5495965957565769,
+      "contact_finger_normals_N": {
+        "rf": 3.600626313427148,
+        "th": 3.638448413760446
+      },
+      "step": 224,
+      "score": 76.69355764588555,
+      "predicted_horizon_score": 76.68442124284563,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.03159300253654,
+      "tilt_deg": 4.111622138652244,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.121676134771082,
+      "center_from_source_mm": 0.23484112316513273,
+      "canonical_station_error_mm": 90.35565886616452,
+      "reference_grip_center_error_mm": 14.121676134771082,
+      "upper_screen_mm": 1.8806492291752308,
+      "minimum_planning_pair_gap_mm": 55.58442754385345,
+      "planning_pair_gaps_mm": [
+        81.72928528326065,
+        94.59714412540436,
+        86.24537195236006,
+        114.02607398757019,
+        93.37670722145597,
+        55.58442754385345,
+        58.26490923520878
+      ],
+      "tracking_rad": 0.06754628327677703,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.184308257371017,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9729030523702684,
+            "force_world_N": [
+              0.3648982606798776,
+              -0.010286914893911082,
+              0.9024878547332458
+            ],
+            "upward_N": 0.9727724006500884
+          },
+          "rf_tip": {
+            "normal_N": 3.5864883953389914,
+            "force_world_N": [
+              2.607150891875325,
+              -2.1827663845108556,
+              -1.1408374518197106
+            ],
+            "upward_N": -0.1876497200255849
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09406336319890823,
+            "force_world_N": [
+              -0.07395937808199204,
+              0.04982872777121129,
+              0.03142837987758513
+            ],
+            "upward_N": 0.004444005739368708
+          },
+          "th_tip": {
+            "normal_N": 3.530853446462848,
+            "force_world_N": [
+              -2.5691375784413104,
+              2.143182290299784,
+              1.1285250088906897
+            ],
+            "upward_N": 0.1889783170784271
+          }
+        },
+        "hand_force_world_N": [
+          0.3289521960319002,
+          -4.2281333771043705e-05,
+          0.9216037916818101
+        ],
+        "upward_support_N": 0.9785450034422993,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.99749745508899,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.004195166005698359,
+          -4.2281333771043705e-05,
+          -0.0010954199616103333
+        ]
+      },
+      "RF14_upper_room_deg": 0.5499731881603926,
+      "contact_finger_normals_N": {
+        "rf": 3.5864883953389914,
+        "th": 3.624916809661756
+      },
+      "step": 232,
+      "score": 76.68270466713892,
+      "predicted_horizon_score": 76.68765906094494,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02933978116867,
+      "tilt_deg": 4.089383365681275,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.11633813479439,
+      "center_from_source_mm": 0.23899757363037857,
+      "canonical_station_error_mm": 90.35067289018453,
+      "reference_grip_center_error_mm": 14.11633813479439,
+      "upper_screen_mm": 1.923439531052022,
+      "minimum_planning_pair_gap_mm": 55.58279508929305,
+      "planning_pair_gaps_mm": [
+        81.72928528326051,
+        94.59714412541277,
+        86.24537195236846,
+        114.0260739875786,
+        93.37492847467612,
+        55.58279508929305,
+        58.26565334598716
+      ],
+      "tracking_rad": 0.06768192440416082,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.674636767556828,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 1.0979325969163953,
+            "force_world_N": [
+              0.47950878020036264,
+              0.0804405408864254,
+              0.9883875692876622
+            ],
+            "upward_N": 1.0924888034429152
+          },
+          "rf_tip": {
+            "normal_N": 3.7763502318743933,
+            "force_world_N": [
+              2.575372277455065,
+              -2.440222988347122,
+              -1.3143856720779379
+            ],
+            "upward_N": -0.3616759866695244
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.0,
+            "force_world_N": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "upward_N": 0.0
+          },
+          "th_tip": {
+            "normal_N": 3.8003539387660403,
+            "force_world_N": [
+              -2.703557673875625,
+              2.3597304268861468,
+              1.2530614069074073
+            ],
+            "upward_N": 0.26046449044453557
+          }
+        },
+        "hand_force_world_N": [
+          0.35132338377980243,
+          -5.2020574549782594e-05,
+          0.9270633041171317
+        ],
+        "upward_support_N": 0.9912773072179264,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 1.0104763580203122,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          0.018176021742203896,
+          -5.2020574549782594e-05,
+          0.0043640924737112785
+        ]
+      },
+      "RF14_upper_room_deg": 0.5499251290714763,
+      "contact_finger_normals_N": {
+        "rf": 3.7763502318743933,
+        "th": 3.8003539387660403
+      },
+      "step": 240,
+      "score": 76.77418009431082,
+      "predicted_horizon_score": 76.68273456076955,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02836707997412,
+      "tilt_deg": 4.072129649103423,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.112170698664015,
+      "center_from_source_mm": 0.24435189954427064,
+      "canonical_station_error_mm": 90.34694794588533,
+      "reference_grip_center_error_mm": 14.112170698664015,
+      "upper_screen_mm": 1.956651499889393,
+      "minimum_planning_pair_gap_mm": 55.58153618086725,
+      "planning_pair_gaps_mm": [
+        81.72928528326044,
+        94.59714412541642,
+        86.24537195237214,
+        114.02607398758227,
+        93.37360058347416,
+        55.58153618086725,
+        58.26617534333386
+      ],
+      "tracking_rad": 0.06776910961211385,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.204861814727666,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9682618018680449,
+            "force_world_N": [
+              0.3737717226310995,
+              -0.021735253731908197,
+              0.8934492829854372
+            ],
+            "upward_N": 0.9672844163637532
+          },
+          "rf_tip": {
+            "normal_N": 3.5918550197270704,
+            "force_world_N": [
+              2.6143202963560537,
+              -2.18387781613868,
+              -1.1392421565808928
+            ],
+            "upward_N": -0.18371450509252582
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.0921030817849785,
+            "force_world_N": [
+              -0.07080670535952019,
+              0.049268302398174944,
+              0.033494940830479006
+            ],
+            "upward_N": 0.007458397954361215
+          },
+          "th_tip": {
+            "normal_N": 3.5526419113475725,
+            "force_world_N": [
+              -2.5852535700180095,
+              2.1564177089557393,
+              1.1348585464170262
+            ],
+            "upward_N": 0.18946246590826116
+          }
+        },
+        "hand_force_world_N": [
+          0.3320317436096234,
+          7.294148332626094e-05,
+          0.9225606136520497
+        ],
+        "upward_support_N": 0.9804907751338497,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9994809124707947,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0011156184279751402,
+          7.294148332626094e-05,
+          -0.00013859799137072581
+        ]
+      },
+      "RF14_upper_room_deg": 0.5497181985959928,
+      "contact_finger_normals_N": {
+        "rf": 3.5918550197270704,
+        "th": 3.644744993132551
+      },
+      "step": 248,
+      "score": 76.68511534765726,
+      "predicted_horizon_score": 76.68345333795901,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02765597525243,
+      "tilt_deg": 4.058221994832253,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.109037962765084,
+      "center_from_source_mm": 0.25030372853985994,
+      "canonical_station_error_mm": 90.34430752577781,
+      "reference_grip_center_error_mm": 14.109037962765084,
+      "upper_screen_mm": 1.9834219064109693,
+      "minimum_planning_pair_gap_mm": 55.580563824290735,
+      "planning_pair_gaps_mm": [
+        81.72928528326042,
+        94.59714412541807,
+        86.24537195237376,
+        114.0260739875839,
+        93.37257990234727,
+        55.580563824290735,
+        58.266560195365216
+      ],
+      "tracking_rad": 0.06782575047706002,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.156265589717215,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9679480624520116,
+            "force_world_N": [
+              0.3681674124821692,
+              -0.014580559107308447,
+              0.8955851972259482
+            ],
+            "upward_N": 0.9673901709444879
+          },
+          "rf_tip": {
+            "normal_N": 3.5703968891012456,
+            "force_world_N": [
+              2.5946982493276742,
+              -2.173698890285113,
+              -1.1360078449714779
+            ],
+            "upward_N": -0.1873360508958551
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09475948241030169,
+            "force_world_N": [
+              -0.07467684025920351,
+              0.049366377258134274,
+              0.03285227175889338
+            ],
+            "upward_N": 0.0055396258052696655
+          },
+          "th_tip": {
+            "normal_N": 3.5231611557536553,
+            "force_world_N": [
+              -2.5624874278880236,
+              2.1386963378785477,
+              1.128067246993592
+            ],
+            "upward_N": 0.19080614946620275
+          }
+        },
+        "hand_force_world_N": [
+          0.32570139366261586,
+          -0.0002167342557397589,
+          0.9204968710069557
+        ],
+        "upward_support_N": 0.9763998953201051,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9953108005301784,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.007445968374982681,
+          -0.0002167342557397589,
+          -0.002202340636464739
+        ]
+      },
+      "RF14_upper_room_deg": 0.5494939295079169,
+      "contact_finger_normals_N": {
+        "rf": 3.5703968891012456,
+        "th": 3.617920638163957
+      },
+      "step": 256,
+      "score": 76.6722837589048,
+      "predicted_horizon_score": 76.67188836417468,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02712819548101,
+      "tilt_deg": 4.047205305606471,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.106531757290924,
+      "center_from_source_mm": 0.25670613286706834,
+      "canonical_station_error_mm": 90.34233439902611,
+      "reference_grip_center_error_mm": 14.106531757290924,
+      "upper_screen_mm": 2.0046257199957527,
+      "minimum_planning_pair_gap_mm": 55.57979381116325,
+      "planning_pair_gaps_mm": [
+        81.72928528326045,
+        94.59714412541875,
+        86.24537195237444,
+        114.02607398758458,
+        93.37175651614618,
+        55.57979381116325,
+        58.26683424872627
+      ],
+      "tracking_rad": 0.06786211686340499,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.203250104001865,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9672576504186146,
+            "force_world_N": [
+              0.37708892792084,
+              -0.02507253400729434,
+              0.8908714031624594
+            ],
+            "upward_N": 0.9659862619409612
+          },
+          "rf_tip": {
+            "normal_N": 3.5889158470712452,
+            "force_world_N": [
+              2.6128125902972585,
+              -2.1816273732469815,
+              -1.1377457616142077
+            ],
+            "upward_N": -0.18281905742702956
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09123105431897302,
+            "force_world_N": [
+              -0.07012046178006089,
+              0.048510867617338777,
+              0.03376852025283777
+            ],
+            "upward_N": 0.007948766716384045
+          },
+          "th_tip": {
+            "normal_N": 3.555845552193033,
+            "force_world_N": [
+              -2.5877639417069234,
+              2.158258715097951,
+              1.1356632968433982
+            ],
+            "upward_N": 0.1893668684343444
+          }
+        },
+        "hand_force_world_N": [
+          0.33201711473111395,
+          6.967546101410704e-05,
+          0.9225574586444876
+        ],
+        "upward_support_N": 0.9804828396646599,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9994728233075023,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0011302473064845886,
+          6.967546101410704e-05,
+          -0.00014175299893282034
+        ]
+      },
+      "RF14_upper_room_deg": 0.549304703953109,
+      "contact_finger_normals_N": {
+        "rf": 3.5889158470712452,
+        "th": 3.647076606512006
+      },
+      "step": 264,
+      "score": 76.683437830058,
+      "predicted_horizon_score": 76.68205472031819,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 22,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02672724604153,
+      "tilt_deg": 4.038504195092229,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.104498887726907,
+      "center_from_source_mm": 0.263419215538265,
+      "canonical_station_error_mm": 90.34086482356949,
+      "reference_grip_center_error_mm": 14.104498887726907,
+      "upper_screen_mm": 2.021373135226784,
+      "minimum_planning_pair_gap_mm": 55.57919004148358,
+      "planning_pair_gaps_mm": [
+        81.72928528326044,
+        94.5971441254191,
+        86.2453719523748,
+        114.02607398758492,
+        93.37109492242837,
+        55.57919004148358,
+        58.26703346749861
+      ],
+      "tracking_rad": 0.06788594627602917,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.205306723958063,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.9666912798460103,
+            "force_world_N": [
+              0.3790668556870036,
+              -0.027305552307299016,
+              0.889373239964546
+            ],
+            "upward_N": 0.9652488383079035
+          },
+          "rf_tip": {
+            "normal_N": 3.5887005572129143,
+            "force_world_N": [
+              2.613085129364609,
+              -2.181256301677135,
+              -1.1371582319323148
+            ],
+            "upward_N": -0.18217389040802887
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.0910712585136406,
+            "force_world_N": [
+              -0.06967798095065457,
+              0.04856406313131326,
+              0.03416928078466507
+            ],
+            "upward_N": 0.008475976449150381
+          },
+          "th_tip": {
+            "normal_N": 3.558843628385499,
+            "force_world_N": [
+              -2.5901229430898454,
+              2.1600670240229394,
+              1.1362388515481892
+            ],
+            "upward_N": 0.1891071016500475
+          }
+        },
+        "hand_force_world_N": [
+          0.33235106101111267,
+          6.923316981843897e-05,
+          0.9226231403650854
+        ],
+        "upward_support_N": 0.9806580259990726,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9996514026494113,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.0007963010264858683,
+          6.923316981843897e-05,
+          -7.607127833497707e-05
+        ]
+      },
+      "RF14_upper_room_deg": 0.549151363292414,
+      "contact_finger_normals_N": {
+        "rf": 3.5887005572129143,
+        "th": 3.64991488689914
+      },
+      "step": 272,
+      "score": 76.68359004247928,
+      "predicted_horizon_score": 76.67969821889324,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "error_deg": 74.02675824418114,
+      "tilt_deg": 4.032147028173374,
+      "planning_phase": "orient_and_clear",
+      "center_target_error_mm": 14.102625655263754,
+      "center_from_source_mm": 0.2704852329639474,
+      "canonical_station_error_mm": 90.33958823170329,
+      "reference_grip_center_error_mm": 14.102625655263754,
+      "upper_screen_mm": 2.0336148137680103,
+      "minimum_planning_pair_gap_mm": 55.57870574829834,
+      "planning_pair_gaps_mm": [
+        81.72928528326044,
+        94.5971441254191,
+        86.2453719523748,
+        114.02607398758492,
+        93.37054541978151,
+        55.57870574829834,
+        58.267162755484165
+      ],
+      "tracking_rad": 0.0679029457222311,
+      "whole_hand_support": {
+        "supported_sample": true,
+        "hand_normal_load_N": 8.17788017624288,
+        "contact_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_ds_collision_1",
+          "th_tip"
+        ],
+        "loaded_hand_geoms": [
+          "palm_collision_6",
+          "rf_tip",
+          "th_tip"
+        ],
+        "by_geom": {
+          "palm_collision_6": {
+            "normal_N": 0.968348627043865,
+            "force_world_N": [
+              0.3748886776268384,
+              -0.02121933611746695,
+              0.8930341760794893
+            ],
+            "upward_N": 0.9672732968892163
+          },
+          "rf_tip": {
+            "normal_N": 3.5770181919114483,
+            "force_world_N": [
+              2.6022096984354497,
+              -2.175623398807749,
+              -1.1360101760531274
+            ],
+            "upward_N": -0.18478735714648217
+          },
+          "th_ds_collision_1": {
+            "normal_N": 0.09175709987948139,
+            "force_world_N": [
+              -0.0719895993223761,
+              0.04770982990645122,
+              0.03271227209445548
+            ],
+            "upward_N": 0.006320532685245506
+          },
+          "th_tip": {
+            "normal_N": 3.540756257408086,
+            "force_world_N": [
+              -2.576380831583374,
+              2.149041810576115,
+              1.1318563903303704
+            ],
+            "upward_N": 0.18965190765052486
+          }
+        },
+        "hand_force_world_N": [
+          0.32872794515653814,
+          -9.109444264954192e-05,
+          0.9215926624511879
+        ],
+        "upward_support_N": 0.9784583800785045,
+        "weight_N": 0.9810000000000001,
+        "upward_support_over_weight": 0.9974091540045916,
+        "external_loaded_contacts": [],
+        "force_with_gravity_world_N": [
+          -0.004419416881060401,
+          -9.109444264954192e-05,
+          -0.00110654919223252
+        ]
+      },
+      "RF14_upper_room_deg": 0.5489939678275272,
+      "contact_finger_normals_N": {
+        "rf": 3.5770181919114483,
+        "th": 3.6325133572875674
+      },
+      "step": 280,
+      "score": 76.67628373553895,
+      "predicted_horizon_score": 76.67614464363163,
+      "prediction_commit_qpos_error": 0.0,
+      "valid_proposals": 23,
+      "chosen_velocity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "planning_calls": 1855,
+  "prediction_rejections": {
+    "self_mm": 1063,
+    "range_rad": 32
+  },
+  "final_hold": null,
+  "hold_attempts": [],
+  "strict_upper_acquisition_failures": 0,
+  "conditional_bridge_and_hold_passed": false,
+  "best_sampled_error_deg": 74.02331339202736,
+  "actual_state_resets_after_start": 0,
+  "original_native_guards_and_joint_limits_preserved": true,
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.007138363459276238,
+    "tracking_rad": 0.09227375004323174,
+    "range_rad": 0.0
+  },
+  "model_based_teacher_not_SAC": true,
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "full_initial_placement_two_turn_cycle_passed": false,
+  "elapsed_seconds": 318.650527175
+}

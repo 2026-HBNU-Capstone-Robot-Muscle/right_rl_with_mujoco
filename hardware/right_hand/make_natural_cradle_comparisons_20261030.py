@@ -1,0 +1,7 @@
+from pathlib import Path
+import numpy as np
+R=Path(__file__).resolve().parent;O=R/'right_hand_rotation_20261030/stable_support_research';base=np.load(R/'right_hand_rotation_20261030/single_forward/candidate.npz');end=int(base['forward_end_sample']);f=O/'unchanged_reference';f.mkdir(exist_ok=True);np.savez_compressed(f/'candidate.npz',start=base['start'],goals=base['goals'][:end],phases=base['phases'][:end],forward_end_sample=np.array(end))
+s=(R/'propose_natural_cradle_forward_20261030.py').read_text(encoding='utf-8').replace("O=BASE/'retargeted_forward'","O=BASE/'retargeted_grasp_bounded'").replace("end=int(source['forward_end_sample']);goals=[]","end=int(np.sum(np.isin(source['phases'],['stage_5_loaded_grasp','stage_6_grasp_hold'])));goals=[]")
+s=s.replace("guess=np.clip(q[active]+correction,ql[active]+1e-10,qh[active]-1e-10);opt=least_squares(residual,guess,bounds=(ql[active],qh[active])","lower=np.maximum(ql[active],q[active]-128*TICK);upper=np.minimum(qh[active],q[active]+128*TICK);guess=np.clip(q[active]+correction,lower+1e-10,upper-1e-10);opt=least_squares(residual,guess,bounds=(lower,upper)")
+s=s.replace("status='natural_recess_forward_task_frame_retarget_research_only'","status='natural_recess_grasp_only_bounded128tick_retarget_research'")
+(R/'propose_natural_cradle_grasp_20261030.py').write_text(s,encoding='utf-8');print('Prepared baseline and bounded grasp-only comparisons; no hardware program.')

@@ -1,0 +1,39 @@
+{
+  "status": "common_terminal_grip_design_goal_initial_support_filter_complete",
+  "user_intent": "Choose the easiest feasible common terminal grip that withstands the other hand turning the upper layer. Keep terminal center/height/tilt reproducible after the needed whole-cube reorientations.",
+  "desired_terminal_invariants": [
+    "cube center relative to palm",
+    "top-layer height",
+    "cube tilt and edge alignment"
+  ],
+  "during_rotation_center_need_not_be_exactly_constant": true,
+  "preferred_first_hypothesis": "Reuse the successful placement and reorientation where possible, then compare minimal regrasp changes. Palm support, index support, and a position between fingers remain alternatives rather than prescribed locations.",
+  "selection_priority": [
+    "Upper layer can sweep through a quarter turn without hitting any right-hand part",
+    "Lower-body grip withstands actual layer-turn load after integration",
+    "Continuous transitions from the required whole-cube reorientations return to a reproducible terminal pose",
+    "Among passing candidates, minimize extra joint changes, regrasp time, and manual placement sensitivity"
+  ],
+  "candidate_preference_is_an_engineering_hypothesis_not_a_physical_trial_result": true,
+  "initial_support_counts": {
+    "current_reference": 9,
+    "palmward_10mm": 9,
+    "indexward_10mm": 9,
+    "index_middle_midline": 9
+  },
+  "comparison_scope": "4 starting-center hypotheses x9 gain/friction cases; same open hand and finite actuators. Not a comparison of complete grasp trajectories or lifting between fingertips.",
+  "no_initial_support_winner_established": true,
+  "terminal_metric_target_selected": false,
+  "all_direction_upper_layer_load_resistance_verified": false,
+  "automatic_real_cube_repositioning_implemented": false,
+  "physical_model_registration_verified": false,
+  "remaining": [
+    "Find a lower-body contact arrangement that clears the whole upper-layer sweep",
+    "Check a continuous free-cube transition to the same terminal pose after each needed reorientation",
+    "Verify terminal pose reproduction physically",
+    "Verify actual left-hand layer-turn load after integration"
+  ],
+  "no_new_user_hand_or_cube_repositioning_requested": true,
+  "hardware_execution_allowed": false,
+  "assistant_motor_writes": 0
+}

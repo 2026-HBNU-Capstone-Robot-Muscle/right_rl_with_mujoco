@@ -1,0 +1,592 @@
+{
+  "timestamp": "2026-10-06T01:08:04.522334+09:00",
+  "motor_port_opened": false,
+  "policy_actions_sent": 0,
+  "status": "stopped",
+  "frames": [
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 32.00000000651926,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 0.625
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 31.000000017229468,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 1.6560000000172295
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 31.000000017229468,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 2.6560000000172295
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 45.999999972991645,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 3.6709999999729916
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 45.999999972991645,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 4.670999999972992
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 16.00000000325963,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 5.6560000000172295
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 30.999999959021807,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 6.670999999972992
+    },
+    {
+      "reason": "no_pose",
+      "frame_age_ms": 30.999999959021807,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [],
+      "min_edge_px_by_id": {},
+      "time_s": 7.670999999972992
+    }
+  ],
+  "required_cube_ids": [],
+  "wrong_target_space_count": 0,
+  "motion_sweep": true,
+  "external_motion_observation": true,
+  "registration": {
+    "status": "unverified_visual_candidate",
+    "hardware_authorized": false,
+    "hand_to_world_candidate": [
+      [
+        0.0,
+        0.9405700424499697,
+        0.33959975742874465
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.33959975742874465,
+        0.9405700424499697
+      ]
+    ],
+    "grasp_site_in_marker_m_candidate": [
+      0.020700000000000003,
+      0.010215221346270474,
+      0.04762016373559733
+    ],
+    "motor_axis_landmarks_in_marker_m": {
+      "5": [
+        0.0742,
+        0.0471,
+        -0.013999999999999999
+      ],
+      "9": [
+        0.028800000000000003,
+        0.047,
+        -0.013999999999999999
+      ],
+      "13": [
+        -0.016599999999999997,
+        0.04701,
+        -0.013999999999999999
+      ],
+      "1": [
+        0.05,
+        -0.015199999999999998,
+        -0.011099999999999999
+      ]
+    },
+    "assumptions": [
+      "47 mm forward distance includes an approximate 7 mm user correction from joint start to motor 9 axis",
+      "50 mm thumb-axis distance is approximate and overrides the old middle-point 18 mm lateral constraint; lateral position of model motor 9 is derived, not a new user measurement",
+      "14 mm below marker plane is retained provisionally; full 3D registration remains unverified",
+      "Marker mounting plane is parallel to palm model's local XY plane",
+      "Toward fingertips corresponds to palm local +X and away from thumb to local -Y",
+      "Photo supports cardinal marker-axis correspondence, not exact yaw or mounting-plane tilt"
+    ],
+    "measurements": {
+      "toward_fingertips": 47.0,
+      "away_from_thumb": -28.800000000000004,
+      "above_marker_plane": -14.0
+    },
+    "measurement_note": "Effective registration inputs; lateral motor-9 coordinate is derived when thumb constraint is present",
+    "thumb_axis_lateral_constraint": {
+      "marker_center_to_axis_toward_thumb_mm": 50.0,
+      "source": "User approximate ruler measurement to motor 1 axis line",
+      "supersedes_middle_point_lateral_constraint": true,
+      "note": "Use this perpendicular distance to the thumb axis for common rigid translation, not a thumb-only landmark shift. Keep the old middle-point lateral value as measurement history."
+    }
+  },
+  "registration_depth_verified": false,
+  "marker_detector": "contour corners + raw dense/contrast/dense/strong-threshold fallbacks; max 5 same-frame passes; decoded board IDs only",
+  "face_rot": [
+    1,
+    3,
+    3,
+    2,
+    1,
+    3
+  ],
+  "camera_startup": {
+    "expected_device": "Streaming Webcam",
+    "backend": "DSHOW",
+    "timeout_seconds": 10.0,
+    "motors_accessed": false,
+    "devices": [
+      "Streaming Webcam",
+      "USB2.0 HD UVC WebCam",
+      "OBS Virtual Camera"
+    ],
+    "camera_index": 0,
+    "device_name": "Streaming Webcam"
+  },
+  "capture": {
+    "backend": "DSHOW",
+    "requested_format": "MJPG",
+    "actual_size": [
+      1280,
+      720
+    ],
+    "actual_format": "MJPG",
+    "reported_fps": 30.00003000003,
+    "camera_index": 0,
+    "device_name": "Streaming Webcam",
+    "attempts": [
+      {
+        "backend": "DSHOW",
+        "requested_format": "MJPG",
+        "actual_size": [
+          1280,
+          720
+        ],
+        "actual_format": "MJPG",
+        "reported_fps": 30.00003000003
+      }
+    ]
+  },
+  "last_marker_detection": {
+    "method": "contour",
+    "corner_refinement": "contour",
+    "ids": [],
+    "min_edge_px_by_id": {},
+    "detect_ms": 14.999999955762178
+  },
+  "error": "User stopped camera window",
+  "camera_worker_stopped": true,
+  "summary": {
+    "frames": 8,
+    "eligible_frames": 0,
+    "eligible_percent": 0.0,
+    "longest_valid_streak": 0,
+    "reason_counts": {
+      "no_pose": 8
+    },
+    "by_cube_ids": {
+      "none": {
+        "frames": 8,
+        "eligible": 0,
+        "median_reprojection_px": null,
+        "max_reprojection_px": null
+      }
+    }
+  },
+  "sweep_windows": [
+    {
+      "start_s": 0,
+      "end_s": 2,
+      "frames": 2,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 2,
+      "end_s": 4,
+      "frames": 2,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 4,
+      "end_s": 6,
+      "frames": 2,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 6,
+      "end_s": 8,
+      "frames": 2,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 8,
+      "end_s": 10,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 10,
+      "end_s": 12,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 12,
+      "end_s": 14,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 14,
+      "end_s": 16,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 16,
+      "end_s": 18,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 18,
+      "end_s": 20,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 20,
+      "end_s": 22,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 22,
+      "end_s": 24,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 24,
+      "end_s": 26,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 26,
+      "end_s": 28,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 28,
+      "end_s": 30,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 30,
+      "end_s": 32,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 32,
+      "end_s": 34,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 34,
+      "end_s": 36,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 36,
+      "end_s": 38,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 38,
+      "end_s": 40,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 40,
+      "end_s": 42,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 42,
+      "end_s": 44,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 44,
+      "end_s": 46,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 46,
+      "end_s": 48,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 48,
+      "end_s": 50,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 50,
+      "end_s": 52,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 52,
+      "end_s": 54,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 54,
+      "end_s": 56,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 56,
+      "end_s": 58,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 58,
+      "end_s": 60,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 60,
+      "end_s": 62,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 62,
+      "end_s": 64,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 64,
+      "end_s": 66,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 66,
+      "end_s": 68,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 68,
+      "end_s": 70,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 70,
+      "end_s": 72,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 72,
+      "end_s": 74,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 74,
+      "end_s": 76,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 76,
+      "end_s": 78,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 78,
+      "end_s": 80,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 80,
+      "end_s": 82,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 82,
+      "end_s": 84,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 84,
+      "end_s": 86,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 86,
+      "end_s": 88,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    },
+    {
+      "start_s": 88,
+      "end_s": 90,
+      "frames": 0,
+      "eligible": 0,
+      "hand_visible": 0,
+      "two_cube_markers": 0
+    }
+  ],
+  "saved_images": [
+    "C:\\Users\\\uae40\uc900\uc11c\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\vision_sweep_20261006_010804_522334\\no_pose.png",
+    "C:\\Users\\\uae40\uc900\uc11c\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\vision_sweep_20261006_010804_522334\\00-10s_not_ready.png"
+  ],
+  "evidence_folder": "C:\\Users\\\uae40\uc900\uc11c\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\vision_sweep_20261006_010804_522334"
+}

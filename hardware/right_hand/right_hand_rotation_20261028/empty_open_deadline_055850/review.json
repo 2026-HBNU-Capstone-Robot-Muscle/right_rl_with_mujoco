@@ -1,0 +1,102 @@
+{
+  "status": "empty_open_stopped_before_placement_after_recovered_read",
+  "source_run": "calibrated_quarter_trial_20261028_055850_634642",
+  "source_result_sha256": "ac43839f36dd75faca7023fdef8cd2eedec98b54d6cb82c5602c2838c4a0a094",
+  "cube_placement_reached": false,
+  "new_cube_rotation_observed": false,
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "read_failure": {
+    "kind": "sync_read",
+    "address": 64,
+    "length": 83,
+    "completed_ids": [],
+    "first_incomplete_id": 1,
+    "receive_window_ms": 40.0,
+    "requested_ids": [
+      1
+    ],
+    "health_reply_group_size": 1,
+    "attempt": 1,
+    "comm": -3002,
+    "device_error": 0,
+    "elapsed_ms": 45.999999972991645,
+    "retry_requested": true,
+    "recovered": true,
+    "recovery_policy": "full_snapshot_quiet_resync_v2_shared_deadline_20261028",
+    "quiet_resynchronization": {
+      "discarded_bytes": 0,
+      "elapsed_ms": 16.00000000325963
+    },
+    "total_elapsed_ms": 140.00000001396984
+  },
+  "confirmation": {
+    "version": "horizontal_bounded_recovery_episode_v1_20261028",
+    "policy": {
+      "version": "horizontal_bounded_recovery_episode_v1_20261028",
+      "sample_budget_s": 0.2,
+      "required_consecutive_clean_reads": 2,
+      "maximum_confirmation_reads": 5,
+      "new_recovered_failure_resets_clean_count": true,
+      "recovered_packet_counts_as_clean": false,
+      "existing_transport_retry_rate_limit_preserved": true,
+      "goal_or_setting_writes": 0
+    },
+    "phase": "stage_3_empty_open",
+    "status": "stopped",
+    "command": [
+      2192,
+      2887,
+      2787,
+      2057,
+      2005,
+      2037,
+      1819,
+      2052,
+      2936,
+      2196,
+      2153,
+      2173,
+      2119,
+      2554,
+      2157,
+      2053
+    ],
+    "goals_advanced": 0,
+    "goal_writes": 0,
+    "clean_reads": 1,
+    "required_clean_reads": 2,
+    "sample_budget_ms": 200,
+    "sample_indices": [
+      709
+    ],
+    "consecutive_clean_sample_indices": [
+      709
+    ],
+    "confirmation_reads": 1,
+    "clean_count_resets": 0,
+    "elapsed_ms": 202.9999999795109,
+    "error": "Health sample deadline exhausted before READ; no target advance"
+  },
+  "clock_info": {
+    "monotonic": {
+      "implementation": "GetTickCount64()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 0.015625
+    },
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    }
+  },
+  "prior_near90_held_observations_preserved": 2,
+  "controller_change": "QPC host timing and two complete healthy snapshots after the last bad read; fresh recovered full snapshot may count as first",
+  "partial_snapshot_never_accepted": true,
+  "health_budget_ms": 200,
+  "voltage_current_temperature_tracking_goal_checks_unchanged": true,
+  "new_variant_not_yet_physically_run": true,
+  "assistant_motor_writes": 0
+}

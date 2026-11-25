@@ -1,0 +1,921 @@
+{
+  "source": "middle_clearance_probe_20261106_230902_998326\\result.json",
+  "sha256": "06e6083e5a37159c1b4990e13128ed46df3245f6b499edbb0a76a4e67ec70b9d",
+  "status": "middle_clearance_probe_observation_complete",
+  "root_structure": {
+    "joint_mapping": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "sim_joint_names",
+        "motor_ids_in_sim_order",
+        "middle_tip_to_root_ids",
+        "tip_to_root_ids",
+        "middle_order_basis",
+        "other_fingers_basis",
+        "geometric_calibration_verified",
+        "trajectory_validation_complete"
+      ]
+    },
+    "camera_startup": {
+      "type": "dict",
+      "keys": [
+        "expected_device",
+        "backend",
+        "timeout_seconds",
+        "motors_accessed",
+        "devices",
+        "camera_index",
+        "device_name"
+      ]
+    },
+    "camera_image_signal": {
+      "type": "dict",
+      "keys": [
+        "usable",
+        "reason",
+        "minimum",
+        "maximum",
+        "std"
+      ]
+    },
+    "empty_start_marker_screen": {
+      "type": "dict",
+      "keys": [
+        "camera_read_monotonic",
+        "decoded_cube_ids",
+        "confirmed_cube_ids",
+        "candidates",
+        "consecutive_frames_without_decoded_cube",
+        "confirmation_frames",
+        "confirmation_seconds",
+        "minimum_marker_edge_px",
+        "absence_proves_empty_hand",
+        "required_frames"
+      ]
+    },
+    "write_events": {
+      "type": "list",
+      "length": 2545,
+      "first_keys": [
+        "address",
+        "size",
+        "requested",
+        "comm",
+        "readback"
+      ]
+    },
+    "serial_link_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "port",
+        "baud",
+        "expected_baud_register",
+        "config_sha256",
+        "motor_ids",
+        "evidence",
+        "evidence_sha256",
+        "readonly_check",
+        "readonly_check_sha256",
+        "full_health_reply_group_size",
+        "link_stability_proven_permanent",
+        "motor_baud_writes_by_motion_program",
+        "automatic_baud_probe_or_change",
+        "all_existing_motor_health_limits_preserved",
+        "health_read_instruction"
+      ]
+    },
+    "precise_transport_clock_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "budget_clock",
+        "driver_timeout_clock",
+        "legacy_log_clock_unchanged",
+        "sample_budget_ms",
+        "wall_clock_or_GetTickCount_not_used_for_health_budget"
+      ]
+    },
+    "fast_read_live_firmware": {
+      "type": "list",
+      "length": 16,
+      "first_keys": [
+        "id",
+        "firmware"
+      ]
+    },
+    "ping_events": {
+      "type": "list",
+      "length": 48,
+      "first_keys": [
+        "motor_id",
+        "model_number",
+        "communication",
+        "device_error"
+      ]
+    },
+    "read_resynchronization_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "budget_clock",
+        "maximum_requests",
+        "total_read_budget_s",
+        "quiet_s",
+        "quiet_uses_remaining_shared_sample_budget",
+        "independent_drain_deadline_s",
+        "predicted_retry_reservation_s",
+        "maximum_retries_per10s",
+        "scope_address",
+        "scope_length",
+        "consecutive_healthy_snapshots_after_recovery",
+        "goal_or_setting_write_retries",
+        "missing_or_partial_snapshot_accepted",
+        "shared_sample_deadline_respected",
+        "resynchronization_trace_recorded"
+      ]
+    },
+    "active_health_read_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "instruction",
+        "address",
+        "length",
+        "group_size",
+        "snapshot_ids",
+        "packet_window_ms",
+        "overall_health_sample_budget_ms",
+        "required_x330_firmware",
+        "maximum_reply_bytes",
+        "sdk_reply_limit_unchanged",
+        "no_byte_stuffing_on_fast_status",
+        "all_status_errors_checked",
+        "exact_unique_ordered_ids",
+        "final_crc_checked",
+        "all16_fresh_before_return",
+        "partial_snapshot_reused",
+        "ordinary_OFF_readback_unchanged",
+        "motor_register_writes"
+      ]
+    },
+    "fast_health_read_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "instruction",
+        "address",
+        "length",
+        "group_size",
+        "snapshot_ids",
+        "packet_window_ms",
+        "overall_health_sample_budget_ms",
+        "required_x330_firmware",
+        "maximum_reply_bytes",
+        "sdk_reply_limit_unchanged",
+        "no_byte_stuffing_on_fast_status",
+        "all_status_errors_checked",
+        "exact_unique_ordered_ids",
+        "final_crc_checked",
+        "all16_fresh_before_return",
+        "partial_snapshot_reused",
+        "ordinary_OFF_readback_unchanged",
+        "motor_register_writes"
+      ]
+    },
+    "fast_health_complete_reads": {
+      "type": "list",
+      "length": 2917,
+      "first_keys": [
+        "elapsed_ms",
+        "groups",
+        "complete_ids"
+      ]
+    },
+    "sync_receive_window_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "budget_clock",
+        "packet_window_ms",
+        "torque_off_packet_window_ms",
+        "scopes",
+        "overall_health_sample_budget_ms",
+        "two_fresh_healthy_snapshots_after_recovery",
+        "goal_or_setting_write_retries",
+        "missing_or_corrupt_data_accepted",
+        "hardware_health_limits_unchanged",
+        "per_packet_window_capped_by_sample_deadline",
+        "full_health_group_size",
+        "health_read_instruction",
+        "torque_off_readback_group_size",
+        "all16_fresh_before_return",
+        "reused_half_snapshots_after_failure"
+      ]
+    },
+    "preflight_state": {
+      "type": "dict",
+      "keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "off_start_observations": {
+      "type": "list",
+      "length": 3,
+      "first_keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "initial": {
+      "type": "dict",
+      "keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "start_difference_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "fast_OFF_setting_readbacks": {
+      "type": "list",
+      "length": 12,
+      "first_keys": [
+        "address",
+        "length",
+        "comm",
+        "error"
+      ]
+    },
+    "off_preload_confirmation": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "budget_seconds",
+        "fresh_reads_required",
+        "position_span_ticks",
+        "goal_span_ticks",
+        "original_position_window_ticks",
+        "original_goal_window_ticks",
+        "maximum_reads",
+        "extra_goal_writes",
+        "extra_setting_writes",
+        "torque_enable_checks_unchanged",
+        "reads",
+        "accepted",
+        "elapsed_seconds",
+        "observed_position_span_ticks",
+        "observed_goal_span_ticks"
+      ]
+    },
+    "off_preload_snapshots": {
+      "type": "list",
+      "length": 3,
+      "first_keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "enable_snapshots": {
+      "type": "list",
+      "length": 2,
+      "first_keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "last_issued_command": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "goal_readback_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "confirm_seconds",
+        "max_fresh_reads",
+        "exact_reads_required",
+        "maximum_previous_step_ticks",
+        "goal_write_retries"
+      ]
+    },
+    "accepted_enable_goal": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "enable_goal_shift_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "planned_final_command": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "final_command": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "thumb_travel_ticks": {
+      "type": "list",
+      "length": 4,
+      "first_keys": null
+    },
+    "progress_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "window_seconds",
+        "minimum_samples",
+        "minimum_seconds",
+        "minimum_target_advance_ticks",
+        "maximum_unresponsive_progress_ticks",
+        "minimum_directed_error_ticks",
+        "tracking_current_voltage_temperature_and_held_joint_checks_unchanged"
+      ]
+    },
+    "samples": {
+      "type": "list",
+      "length": 2891,
+      "first_keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ]
+    },
+    "read_failures": {
+      "type": "list",
+      "length": 3,
+      "first_keys": [
+        "kind",
+        "address",
+        "length",
+        "completed_ids",
+        "first_incomplete_id",
+        "requested_ids",
+        "receive_window_ms",
+        "health_reply_group_size",
+        "fast_sync_read",
+        "received_packet_bytes",
+        "expected_packet_bytes",
+        "attempt",
+        "comm",
+        "device_error",
+        "elapsed_ms",
+        "retry_requested",
+        "recovered",
+        "recovery_policy",
+        "quiet_resynchronization",
+        "remaining_budget_after_quiet_ms",
+        "total_elapsed_ms"
+      ]
+    },
+    "read_recovery_confirmation_events": {
+      "type": "list",
+      "length": 2,
+      "first_keys": [
+        "version",
+        "policy",
+        "phase",
+        "status",
+        "command",
+        "goals_advanced",
+        "goal_writes",
+        "clean_reads",
+        "required_clean_reads",
+        "sample_budget_ms",
+        "sample_indices",
+        "consecutive_clean_sample_indices",
+        "confirmation_reads",
+        "clean_count_resets",
+        "elapsed_ms"
+      ]
+    },
+    "placement_settle_confirmation": {
+      "type": "dict",
+      "keys": [
+        "policy",
+        "status",
+        "position_span_ticks",
+        "maximum_error_ticks_by_motor",
+        "sample_indices"
+      ]
+    },
+    "passive_observation_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "period_s",
+        "scope",
+        "processing_included",
+        "catch_up_bursts",
+        "cancel_before_and_after_pacing",
+        "health_checker_unchanged",
+        "recovery_budget_ms",
+        "health_thresholds_unchanged"
+      ]
+    },
+    "open_before_cube_photo": {
+      "type": "dict",
+      "keys": [
+        "image",
+        "camera_read_monotonic",
+        "registration_verified"
+      ]
+    },
+    "open_before_cube_state": {
+      "type": "dict",
+      "keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "placement_photo": {
+      "type": "dict",
+      "keys": [
+        "image",
+        "camera_read_monotonic",
+        "registration_verified"
+      ]
+    },
+    "placement_position_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "placement_goal_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "grasp_position_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "grasp_goal_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "grasp_observation_photo": {
+      "type": "dict",
+      "keys": [
+        "image",
+        "camera_read_monotonic",
+        "registration_verified"
+      ]
+    },
+    "middle_probe_goal_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "middle_probe_photo": {
+      "type": "dict",
+      "keys": [
+        "image",
+        "camera_read_monotonic",
+        "registration_verified"
+      ]
+    },
+    "middle_probe_position_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "middle_probe_snapshot": {
+      "type": "dict",
+      "keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "final_on_state": {
+      "type": "dict",
+      "keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "opened_before_remove_photo": {
+      "type": "dict",
+      "keys": [
+        "image",
+        "camera_read_monotonic",
+        "registration_verified"
+      ]
+    },
+    "post_off_restore_policy": {
+      "type": "dict",
+      "keys": [
+        "version",
+        "torque_OFF_must_already_be_verified",
+        "addresses",
+        "targets_must_equal_pre_run_settings",
+        "camera_cancel_unchanged_while_ON",
+        "terminal_cancel_preserved",
+        "position_torque_mode_EEPROM_writes_outside_scope",
+        "health_and_communication_bounds_unchanged"
+      ]
+    },
+    "final_off_endpoint_drift_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "on_to_off_position_change_ticks": {
+      "type": "list",
+      "length": 16,
+      "first_keys": null
+    },
+    "final_off_snapshots": {
+      "type": "list",
+      "length": 2,
+      "first_keys": [
+        "torque",
+        "error",
+        "d_gain",
+        "i_gain",
+        "p_gain",
+        "watchdog",
+        "current_cap",
+        "acceleration",
+        "velocity",
+        "goal",
+        "current",
+        "position",
+        "voltage",
+        "temperature"
+      ]
+    },
+    "camera_recording": {
+      "type": "dict",
+      "keys": [
+        "folder",
+        "status",
+        "frame_count",
+        "error",
+        "image_signal_usable_frames",
+        "image_signal_blank_frames",
+        "last_image_signal_usable",
+        "exposure_settings_modified",
+        "exposure_restoration_required",
+        "exposure_restoration_verified"
+      ]
+    }
+  },
+  "actual16_records": 2891,
+  "sample_record_schema": [
+    {
+      "source": "result/samples/0",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "stage_0_cmc_return",
+      "has_goal16": true,
+      "timestamp": 0.1720000000204891
+    },
+    {
+      "source": "result/samples/1",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "stage_0_cmc_return",
+      "has_goal16": true,
+      "timestamp": 0.23499999986961484
+    },
+    {
+      "source": "result/samples/2",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "stage_0_cmc_return",
+      "has_goal16": true,
+      "timestamp": 0.31299999984912574
+    },
+    {
+      "source": "result/samples/3",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "stage_0_cmc_return",
+      "has_goal16": true,
+      "timestamp": 0.40699999989010394
+    },
+    {
+      "source": "result/samples/4",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "stage_0_cmc_return",
+      "has_goal16": true,
+      "timestamp": 0.46899999980814755
+    },
+    {
+      "source": "result/samples/2886",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "remove_cube",
+      "has_goal16": true,
+      "timestamp": 219.10999999986961
+    },
+    {
+      "source": "result/samples/2887",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "remove_cube",
+      "has_goal16": true,
+      "timestamp": 219.1720000000205
+    },
+    {
+      "source": "result/samples/2888",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "remove_cube",
+      "has_goal16": true,
+      "timestamp": 219.25
+    },
+    {
+      "source": "result/samples/2889",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "remove_cube",
+      "has_goal16": true,
+      "timestamp": 219.3289999999106
+    },
+    {
+      "source": "result/samples/2890",
+      "keys": [
+        "phase",
+        "t",
+        "goal",
+        "goal_readback",
+        "actual",
+        "current_ma",
+        "voltage_v",
+        "temperature_c",
+        "tracking_rad",
+        "watchdog",
+        "torque",
+        "error",
+        "read_ms"
+      ],
+      "phase": "remove_cube",
+      "has_goal16": true,
+      "timestamp": 219.4069999998901
+    }
+  ],
+  "recorded_geometric_calibration_verified": false,
+  "no_current_to_torque_conversion_assumed": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "phase_counts": {
+    "stage_0_cmc_return": 34,
+    "stage_0_ring_pip_margin": 1,
+    "stage_1_roots_clear": 177,
+    "stage_3_empty_open": 304,
+    "stage_4_place_hold": 20,
+    "placement_checkpoint": 10,
+    "open_before_cube": 4,
+    "place_cube": 228,
+    "loaded_countdown": 41,
+    "stage_5_loaded_grasp": 862,
+    "stage_6_grasp_hold": 67,
+    "stage_7_middle_fold": 48,
+    "stage_8_middle_hold": 67,
+    "stage_8b_middle_return": 48,
+    "stage_8c_restored_hold": 20,
+    "stage_9_loaded_open": 861,
+    "stage_10_remove_hold": 20,
+    "stage_2_fixed_hold": 20,
+    "opened_before_remove": 4,
+    "remove_cube": 55
+  }
+}

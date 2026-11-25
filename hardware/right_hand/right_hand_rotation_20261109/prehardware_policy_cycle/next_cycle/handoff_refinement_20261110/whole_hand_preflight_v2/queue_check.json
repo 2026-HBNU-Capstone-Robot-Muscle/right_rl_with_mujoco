@@ -1,0 +1,68 @@
+{
+  "status": "offline_inputs_checked",
+  "native_dynamics_executed_by_this_check": false,
+  "analytical_tests": 14,
+  "tasks": [
+    {
+      "name": "exact_recorded_ring_geometry",
+      "script": "audit_recorded_ring_pose.py",
+      "args": [],
+      "output": "next_cycle/handoff_refinement_20261110/recorded_ring_reassessment/geometry_audit.json",
+      "snapshot": "source_audit_recorded_ring_pose.py",
+      "script_sha256": "e4c031ff7e99376e300d479b0a04894756096526a87a29fbd900622c14c2f797",
+      "result_exists": true
+    },
+    {
+      "name": "saved_state_whole_hand_contacts",
+      "script": "audit_whole_hand_saved_states.py",
+      "args": [],
+      "output": "next_cycle/handoff_refinement_20261110/whole_hand_saved_state_audit/review.json",
+      "snapshot": "source_audit_whole_hand_saved_states.py",
+      "script_sha256": "a0206768743a51f159bef31b9aac49d86534a659445d791e9f41175e5b28088d",
+      "result_exists": true
+    },
+    {
+      "name": "fresh_first_rotation_whole_hand_support",
+      "script": "evaluate_staged_shadow_model.py",
+      "args": [
+        "--model-kind",
+        "active_ccd50",
+        "--case",
+        "nominal",
+        "--integer-encoders",
+        "--admissible-correction",
+        "--hold-extra-steps",
+        "400",
+        "--support-mode",
+        "whole_hand_v1"
+      ],
+      "output": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_whole_hand_v1_active_ccd50/review.json",
+      "snapshot": "source_evaluate_staged_shadow_model.py",
+      "script_sha256": "9a38d5df266fc1558065d915471ef66ccd945916682ba43fbc01bb2bd261e6c6",
+      "result_exists": true,
+      "historical_result_current_evaluator_revalidation": {
+        "historical_source_sha256": "2d799f281d802601ed048b26afe63adf9e2bed726d53f9cdd2a4e86bcb650698",
+        "current_source_sha256": "9a38d5df266fc1558065d915471ef66ccd945916682ba43fbc01bb2bd261e6c6",
+        "revalidation_path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_gain010_projection_whole_hand_v1_active_ccd50/review.json",
+        "revalidation_sha256": "c383824098fcadc4270512e6e8dcc3cb1fcc7563a7100592b0f0db7162a2b08f",
+        "identical_goals_and_bound_state": true,
+        "scope": "The existing4118-goal parent rollout through its recorded stop; not whole-cycle certification"
+      }
+    }
+  ],
+  "source_revision_evidence": {
+    "evaluate_staged_shadow_model.py": {
+      "historical_source_sha256": "2d799f281d802601ed048b26afe63adf9e2bed726d53f9cdd2a4e86bcb650698",
+      "current_source_sha256": "9a38d5df266fc1558065d915471ef66ccd945916682ba43fbc01bb2bd261e6c6",
+      "revalidation_path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_gain010_projection_whole_hand_v1_active_ccd50/review.json",
+      "revalidation_sha256": "c383824098fcadc4270512e6e8dcc3cb1fcc7563a7100592b0f0db7162a2b08f",
+      "identical_goals_and_bound_state": true,
+      "scope": "The existing4118-goal parent rollout through its recorded stop; not whole-cycle certification"
+    }
+  },
+  "exact_recorded_ring_source_sha256": "01a2145d4c602f1eecf7b7dcf88cb072e4a2c1f616f35941bc6e40c816d240ab",
+  "no_WSL_launch_or_environment_selection": true,
+  "devices_opened": 0,
+  "whole_cycle_ready_for_hardware": false,
+  "hardware_execution_allowed": false
+}

@@ -1,0 +1,65 @@
+{
+  "status": "stopped_during_regrasp_before_yaw",
+  "run": "pitch_slow_yaw_20261029_004532_520638",
+  "result_sha256": "613b7d61714d3b9e3b60c54ee0e945cfa53fb8c76aa9fe1e079da6a7a117b2a7",
+  "physical_pitch_qualitatively_observed": true,
+  "physical_transfer_retention_observed": true,
+  "physical_yaw_executed": false,
+  "exact_robot_frame90_verified": false,
+  "visual_scope": "Green-up to red-up visible in saved images; no metric robot-frame registration claimed",
+  "photographs": [
+    "cube_before_pitch.jpg",
+    "cube_pitch_hold.jpg",
+    "cube_transfer_hold.jpg",
+    "camera/frame_02216.jpg",
+    "camera/frame_02356.jpg",
+    "camera/frame_02361.jpg"
+  ],
+  "stop_phase": "stage_5_loaded_grasp",
+  "error": "Sync read at 64 failed: comm=-3002, error=0; no target advance",
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "first_incomplete_id": 12,
+      "receive_window_ms": 40.0,
+      "requested_ids": [
+        12
+      ],
+      "health_reply_group_size": 1,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 80.6942000053823,
+      "retry_requested": false,
+      "recovered": false,
+      "recovery_policy": "full_snapshot_quiet_resync_QPC_v1_20261028"
+    }
+  ],
+  "unnecessary_retry_rejection": {
+    "error_elapsed_ms": 80.6942000053823,
+    "remaining_of200ms": 119.3057999946177,
+    "old_upfront_reserve_ms": 120,
+    "correction": "bounded actual quiet/drain, then unchanged100ms reserve;200ms total and two full healthy reads preserved"
+  },
+  "next_action": "Offline regression checks and a scoped slower-yaw-only experiment; wait for cube removal before fresh empty-hand readings",
+  "cube_removed_confirmed_by_user": true,
+  "subsequent_readonly_result": "prefix638_off_readonly_20261029_005950_947910/result.json",
+  "next_ready_command": "leap_retained_slow_yaw.cmd"
+}

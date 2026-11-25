@@ -1,0 +1,96 @@
+{
+  "status": "quasistatic_force_allocation_to_bounded_position_goals",
+  "task": "hold",
+  "hypothetical_model_torque_cap_Nm": 0.15,
+  "source_state": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/end_state.npz",
+  "source_state_sha256": "bda9e2d8c1f6c840dc03482b68141dba1fc606a43c327c8d136ce79b31244a4f",
+  "source_model_sha256": "c16efc2d36f0e411fe21a38414aaa6bfa005997a1cd276bac5ac75403a67e0bc",
+  "samples": 44,
+  "final_phase": "regulate",
+  "fixed_hold_samples": 0,
+  "guard_stop": null,
+  "search_stop": "too_few_actual_contact_points",
+  "allocation_at_exit": {
+    "reason": "too_few_actual_contact_points",
+    "contacts": 2
+  },
+  "final_yaw_deg": 62.874762055779215,
+  "final_center_shift_mm": 0.38128561641600733,
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.014881964703620906,
+    "tracking_rad": 0.041278973709587,
+    "range_rad": 0.0
+  },
+  "trace": [
+    {
+      "sample": 20,
+      "phase": "regulate",
+      "yaw_deg": 62.870273089367934,
+      "tilt_deg": 4.134097962670768,
+      "lift_mm": -0.035368852398116435,
+      "position_error_mm": 0.29632080367539165,
+      "rotation_error_deg": 0.6416314496660068,
+      "allocation": {
+        "contact_points": 5,
+        "native_friction_rays": true,
+        "normal_N": {
+          "if_bs_collision_1": 1.1574982125165096,
+          "mf_tip": 1.5280553419513114,
+          "th_tip": 1.5618340647936588
+        },
+        "desired_wrench_tracking_residual": [
+          5.620608521383907e-07,
+          -7.403352060139298e-07,
+          -8.98836764906541e-07,
+          -1.8619590456725498e-10,
+          3.766937247936045e-08,
+          1.5169793203022243e-08
+        ],
+        "wrench_tracking_is_objective_not_certificate": true
+      }
+    },
+    {
+      "sample": 40,
+      "phase": "regulate",
+      "yaw_deg": 62.89795621218633,
+      "tilt_deg": 4.224810543933146,
+      "lift_mm": -0.0353566157179369,
+      "position_error_mm": 0.3690060155621975,
+      "rotation_error_deg": 0.7472132900164159,
+      "allocation": {
+        "contact_points": 6,
+        "native_friction_rays": true,
+        "normal_N": {
+          "if_bs_collision_1": 1.0511813341420686,
+          "mf_tip": 1.5442270025473852,
+          "th_tip": 1.5566735733243746
+        },
+        "desired_wrench_tracking_residual": [
+          1.1020573886799667e-07,
+          2.1067773116033046e-06,
+          -2.810660386654007e-07,
+          -2.8629846494660554e-08,
+          2.1037171632747736e-08,
+          -1.2289657013001042e-08
+        ],
+        "wrench_tracking_is_objective_not_certificate": true
+      }
+    }
+  ],
+  "recorded_goal_replay_verification": null,
+  "perfect_simulated_contact_and_pose_feedback": true,
+  "force_allocation_is_quasistatic_hypothesis": true,
+  "no_external_cube_force_or_pose_written": true,
+  "ring_targets_held_fixed": true,
+  "current_PID_and_original_dynamic_bounds_not_changed": true,
+  "full_initial_placement_not_replayed_for_this_feedback_path": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false,
+  "elapsed_seconds": 22.233144337,
+  "revision": "native_cone",
+  "last134_goals_proved_constant": false,
+  "legacy_adaptive_hold_does_not_prove_fixed_hold": false,
+  "native_dynamic_guards_not_relaxed": true
+}

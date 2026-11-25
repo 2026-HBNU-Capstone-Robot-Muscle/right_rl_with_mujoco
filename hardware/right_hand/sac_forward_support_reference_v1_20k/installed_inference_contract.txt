@@ -1,0 +1,449 @@
+# Copyright 2026 The Brax Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Checkpointing for SAC."""
+
+from typing import Any, Union
+
+from brax.training import checkpoint
+from brax.training import types
+from brax.training.agents.sac import networks as sac_networks
+from etils import epath
+from ml_collections import config_dict
+
+_CONFIG_FNAME = 'sac_network_config.json'
+
+
+def save(
+    path: Union[str, epath.Path],
+    step: int,
+    params: Any,
+    config: config_dict.ConfigDict,
+):
+  """Saves a checkpoint."""
+  return checkpoint.save(path, step, params, config, _CONFIG_FNAME)
+
+
+def load(
+    path: Union[str, epath.Path],
+):
+  """Loads SAC checkpoint."""
+  return checkpoint.load(path)
+
+
+def network_config(
+    observation_size: types.ObservationSize,
+    action_size: int,
+    normalize_observations: bool,
+    network_factory: types.NetworkFactory[sac_networks.SACNetworks],
+) -> config_dict.ConfigDict:
+  """Returns a config dict for re-creating a network from a checkpoint."""
+  return checkpoint.network_config(
+      observation_size, action_size, normalize_observations, network_factory
+  )
+
+
+def _get_network(
+    config: config_dict.ConfigDict,
+    network_factory: types.NetworkFactory[sac_networks.SACNetworks],
+) -> sac_networks.SACNetworks:
+  """Generates a SAC network given config."""
+  return checkpoint.get_network(config, network_factory)  # pytype: disable=bad-return-type
+
+
+def load_config(
+    path: Union[str, epath.Path],
+) -> config_dict.ConfigDict:
+  """Loads SAC config from checkpoint."""
+  path = epath.Path(path)
+  config_path = path / _CONFIG_FNAME
+  return checkpoint.load_config(config_path)
+
+
+def load_policy(
+    path: Union[str, epath.Path],
+    network_factory: types.NetworkFactory[
+        sac_networks.SACNetworks
+    ] = sac_networks.make_sac_networks,
+    deterministic: bool = True,
+):
+  """Loads policy inference function from SAC checkpoint."""
+  path = epath.Path(path)
+  config = load_config(path)
+  params = load(path)
+  sac_network = _get_network(config, network_factory)
+  make_inference_fn = sac_networks.make_inference_fn(sac_network)
+
+  return make_inference_fn(params, deterministic=deterministic)
+
+
+def make_inference_fn(sac_networks: SACNetworks):
+  """Creates params and inference function for the SAC agent."""
+
+  def make_policy(
+      params: types.PolicyParams, deterministic: bool = False
+  ) -> types.Policy:
+
+    def policy(
+        observations: types.Observation, key_sample: PRNGKey
+    ) -> Tuple[types.Action, types.Extra]:
+      logits = sac_networks.policy_network.apply(*params, observations)
+      if deterministic:
+        return sac_networks.parametric_action_distribution.mode(logits), {}
+      return (
+          sac_networks.parametric_action_distribution.sample(
+              logits, key_sample
+          ),
+          {},
+      )
+
+    return policy
+
+  return make_policy
+
+
+def normalize(batch: types.NestedArray,
+              mean_std: NestedMeanStd,
+              max_abs_value: Optional[float] = None) -> types.NestedArray:
+  """Normalizes data using running statistics."""
+
+  def normalize_leaf(data: jnp.ndarray, mean: jnp.ndarray,
+                     std: jnp.ndarray) -> jnp.ndarray:
+    # Only normalize inexact
+    if not jnp.issubdtype(data.dtype, jnp.inexact):
+      return data
+    data = (data - mean) / std
+    if max_abs_value is not None:
+      # TODO(b/124318564): remove pylint directive
+      data = jnp.clip(data, -max_abs_value, +max_abs_value)
+    return data
+
+  return jax.tree_util.tree_map(normalize_leaf, batch, mean_std.mean, mean_std.std)
+
+
+  def _get_obs(self, data: mjx.Data, info: dict[str, Any]) -> mjx_env.Observation:
+    obs = super()._get_obs(data, info)
+    if not self._config.face_onehot_obs:
+      return obs
+    onehot = jax.nn.one_hot(self._face_index(data), _FACE_GOAL_QUATS.shape[0])
+    if isinstance(obs, dict):
+      return {k: jp.concatenate([v, onehot]) for k, v in obs.items()}
+    return jp.concatenate([obs, onehot])
+
+
+  def _get_obs(
+      self, data: mjx.Data, info: dict[str, Any]
+  ) -> mjx_env.Observation:
+    # Hand joint angles.
+    joint_angles = data.qpos[self._hand_qids]
+    info["rng"], noise_rng = jax.random.split(info["rng"])
+    noisy_joint_angles = (
+        joint_angles
+        + (2 * jax.random.uniform(noise_rng, shape=joint_angles.shape) - 1)
+        * self._config.obs_noise.level
+        * self._config.obs_noise.scales.joint_pos
+    )
+
+    # Joint position error history.
+    qpos_error_history = (
+        jp.roll(info["qpos_error_history"], 16)
+        .at[:16]
+        .set(noisy_joint_angles - info["motor_targets"])
+    )
+    info["qpos_error_history"] = qpos_error_history
+
+    def _get_cube_pose(data: mjx.Data) -> jax.Array:
+      """Returns (potentially) noisy cube pose (xyz,wxyz)."""
+      cube_pos = self.get_cube_position(data)
+      cube_quat = self.get_cube_orientation(data)
+      info["rng"], pos_rng, ori_rng = jax.random.split(info["rng"], 3)
+      noisy_cube_quat = mjx._src.math.normalize(
+          cube_quat
+          + jax.random.normal(ori_rng, shape=(4,))
+          * self._config.obs_noise.level
+          * self._config.obs_noise.scales.cube_ori
+      )
+      noisy_cube_pos = (
+          cube_pos
+          + (2 * jax.random.uniform(pos_rng, shape=cube_pos.shape) - 1)
+          * self._config.obs_noise.level
+          * self._config.obs_noise.scales.cube_pos
+      )
+      return jp.concatenate([noisy_cube_pos, noisy_cube_quat])
+
+    # Noisy cube pose.
+    noisy_pose = _get_cube_pose(data)
+    info["rng"], key1, key2, key3 = jax.random.split(info["rng"], 4)
+    rand_quat = leap_hand_base.uniform_quat(key1)
+    rand_pos = jax.random.uniform(key2, (3,), minval=-0.5, maxval=0.5)
+    rand_pose = jp.concatenate([rand_pos, rand_quat])
+    m = self._config.obs_noise.level * jax.random.bernoulli(
+        key3, self._config.obs_noise.random_ori_injection_prob
+    )
+    noisy_pose = noisy_pose * (1 - m) + rand_pose * m
+
+    # Cube position error history.
+    palm_pos = self.get_palm_position(data)
+    cube_pos_error = palm_pos - noisy_pose[:3]
+    cube_pos_error_history = (
+        jp.roll(info["cube_pos_error_history"], 3).at[:3].set(cube_pos_error)
+    )
+    info["cube_pos_error_history"] = cube_pos_error_history
+
+    # Cube orientation error history.
+    goal_quat = self._goal_quat(data)  # 센서 아님 (D2)
+    quat_diff = mjx._src.math.quat_mul(
+        noisy_pose[3:], mjx._src.math.quat_inv(goal_quat)
+    )
+    xmat_diff = mjx._src.math.quat_to_mat(quat_diff).ravel()[3:]
+    cube_ori_error_history = (
+        jp.roll(info["cube_ori_error_history"], 6).at[:6].set(xmat_diff)
+    )
+    info["cube_ori_error_history"] = cube_ori_error_history
+
+    # Uncorrupted cube pose for critic.
+    cube_pos_error_uncorrupted = palm_pos - self.get_cube_position(data)
+    cube_quat_uncorrupted = self.get_cube_orientation(data)
+    quat_diff_uncorrupted = math.quat_mul(
+        cube_quat_uncorrupted, math.quat_inv(goal_quat)
+    )
+    xmat_diff_uncorrupted = math.quat_to_mat(quat_diff_uncorrupted).ravel()[3:]
+
+    # scalar orientation error: policy가 현재 오차를 직접 인식하도록
+    noisy_quat_diff = mjx._src.math.quat_mul(
+        noisy_pose[3:], mjx._src.math.quat_inv(goal_quat)
+    )
+    noisy_quat_diff = mjx._src.math.normalize(noisy_quat_diff)
+    noisy_ori_error = 2.0 * jp.asin(
+        jp.clip(jp.linalg.norm(noisy_quat_diff[1:]), max=1.0)
+    ).reshape(1)
+
+    state = jp.concatenate([
+        noisy_joint_angles,  # 16
+        qpos_error_history,  # 16 * history_len
+        cube_pos_error_history,  # 3 * history_len
+        cube_ori_error_history,  # 6 * history_len
+        info["last_act"],  # 16
+        noisy_ori_error,  # 1
+    ])
+
+    privileged_state = jp.concatenate([
+        state,
+        data.qpos[self._hand_qids],
+        data.qvel[self._hand_dqids],
+        self.get_fingertip_positions(data),
+        cube_pos_error_uncorrupted,
+        xmat_diff_uncorrupted,
+        self.get_cube_linvel(data),
+        self.get_cube_angvel(data),
+        info["pert_dir"],
+        data.xfrc_applied[self._cube_body_id],
+    ])
+
+    return {
+        "state": state,
+        "privileged_state": privileged_state,
+    }
+
+
+  def step(self, state: mjx_env.State, action: jax.Array) -> mjx_env.State:
+    state = super().step(state, action)
+    # 두 조건 중 어느 쪽이 병목인지 보려면 결합 전 값을 따로 봐야 한다.
+    face = self._face_error(state.data)
+    center = self._center_error(state.data, state.info)
+    state.metrics["face_error"] = face
+    state.metrics["center_error"] = center
+    state.metrics["face_ok"] = (
+        face < self._config.success_threshold
+    ).astype(float)
+    state.metrics["center_ok"] = (
+        center < self._config.position_threshold
+    ).astype(float)
+    return state
+
+
+  def step(self, state: mjx_env.State, action: jax.Array) -> mjx_env.State:
+    if self._config.pert_config.enable:
+      state = self._maybe_apply_perturbation(state, state.info["rng"])
+
+    # 작동 지연. 버퍼 0번이 최신이고, 에피소드마다 고정된 d 를 꺼내 쓴다.
+    # action(정책 출력)은 그대로 두고 exec_action 만 물리에 넘긴다.
+    exec_action = action
+    if self._config.action_delay_steps > 0:
+      hist = jp.roll(state.info["act_hist"], 1, axis=0).at[0].set(action)
+      state.info["act_hist"] = hist
+      exec_action = hist[state.info["action_delay"]]
+
+    # Apply control and step the physics.
+    delta = exec_action * self._config.action_scale
+    motor_targets = state.data.ctrl + delta
+    motor_targets = jp.clip(motor_targets, self._safe_lowers, self._safe_uppers)
+    motor_targets = (
+        self._config.ema_alpha * motor_targets
+        + (1 - self._config.ema_alpha) * state.info["motor_targets"]
+    )
+
+    data = mjx_env.step(
+        self.mjx_model, state.data, motor_targets, self.n_substeps
+    )
+    state.info["motor_targets"] = motor_targets
+
+    ori_error = self._cube_orientation_error(data, state.info)
+    success = ori_error < self._config.success_threshold
+    state.info["steps_since_last_success"] = jp.where(
+        success, 0, state.info["steps_since_last_success"] + 1
+    )
+    state.info["success_hold_steps"] = jp.where(
+        success, state.info["success_hold_steps"] + 1, 0
+    )
+    # BraxAutoResetWrapper 는 done 시 data/obs 만 되돌리고 info 는 그대로 넘긴다
+    # (그 클래스 docstring 에 명시돼 있다). 따라서 에피소드 누적값은 환경이
+    # 직접 지워야 한다. 지우지 않으면 env 당 첫 에피소드에서만 계단이 지급되고
+    # 이후엔 best 가 이미 최댓값이라 영원히 0원이 된다(실측: 512env x 4계단
+    # = 2,048건만 지급, 기대치의 1/4).
+    # 새 에피소드의 첫 스텝은 info["steps"]==0 으로 식별한다. AutoReset 이 done
+    # 에서 steps 를 0 으로 만든 뒤 EpisodeWrapper 가 내부 env.step 을 먼저 부르고
+    # 그 다음에 증가시키므로, 여기서 보는 값이 0 이면 에피소드 첫 스텝이다.
+    # 조기 종료와 800스텝 절단을 모두 덮는다.
+    if "steps" in state.info:
+      new_episode = state.info["steps"] == 0
+      prev_best = jp.where(new_episode, 0, state.info["best_hold_steps"])
+      # D3: BraxAutoResetWrapper 는 full_reset=False 에서 data/obs 만 되돌리고
+      # info 는 그대로 넘긴다(wrapper.py 문서화된 동작). 연쇄 카운터를 여기서
+      # 되돌리지 않으면 이월된다. steps_since_goal 은 목표 달성 시에만 0 이 되므로
+      # 첫 에피소드가 목표를 못 채우고 절단되면 다음 에피소드가 이미 timeout 을
+      # 넘긴 상태로 시작해 **첫 스텝에 종료**하고, 그 뒤로 회복되지 않는다.
+      # 실측(episode_length=200, timeout=600): 32환경 중 18.8%가 매 스텝 종료,
+      # 평균 에피소드 길이 10.1스텝. goal_count 도 에피소드를 넘어 누적돼
+      # "연속 달성 횟수" 지표가 무의미해진다.
+      # best_ori_error 에서 같은 사고가 있었고(394배 감소) 그 대응이
+      # reset_best_on_episode 다. 여기는 조건 없이 항상 되돌린다 - 연쇄 카운터는
+      # 정의상 에피소드 지역 값이다.
+      state.info["steps_since_goal"] = jp.where(
+          new_episode, 0, state.info["steps_since_goal"]
+      )
+      state.info["goal_count"] = jp.where(
+          new_episode, 0, state.info["goal_count"]
+      )
+      if self._config.reset_best_on_episode:
+        # 새 에피소드면 기록을 현재 오차로 되돌린다. reset() 이 넣는 초기값과
+        # 같은 의미다(그 시점의 오차).
+        state.info["best_ori_error"] = jp.where(
+            new_episode, ori_error, state.info["best_ori_error"]
+        )
+    else:
+      prev_best = state.info["best_hold_steps"]
+    state.info["best_hold_steps"] = jp.maximum(
+        prev_best, state.info["success_hold_steps"]
+    )
+    state.info["success_count"] = jp.where(
+        success, state.info["success_count"] + 1, state.info["success_count"]
+    )
+    state.metrics["steps_since_last_success"] = state.info[
+        "steps_since_last_success"
+    ]
+    state.metrics["success_hold_steps"] = state.info["success_hold_steps"]
+    state.metrics["success_count"] = state.info["success_count"]
+    state.metrics["orientation_error"] = ori_error
+    state.metrics["best_orientation_error"] = jp.minimum(
+        state.info["best_ori_error"], ori_error
+    )
+    state.metrics["orientation_error_lt_0_60"] = (ori_error < 0.60).astype(float)
+    state.metrics["orientation_error_lt_0_40"] = (ori_error < 0.40).astype(float)
+    state.metrics["orientation_error_lt_0_25"] = (ori_error < 0.25).astype(float)
+    state.metrics["orientation_error_lt_0_20"] = (ori_error < 0.20).astype(float)
+    state.metrics["orientation_error_lt_0_15"] = (ori_error < 0.15).astype(float)
+    state.metrics["orientation_error_lt_0_12"] = (ori_error < 0.12).astype(float)
+    state.metrics["orientation_error_lt_0_10"] = (ori_error < 0.10).astype(float)
+
+    done = self._get_termination(data, state.info)
+
+    # obs 는 목표 교체 **뒤에** 만든다. 순서가 반대면 관측이 옛 목표 기준으로
+    # 계산되고, _get_obs 가 갱신하는 cube_ori_error_history(3프레임)에 옛 목표
+    # 값이 남아 새 목표를 3스텝 동안 잘못 본다.
+    rewards = self._get_reward(data, action, state.info, state.metrics, done)
+    rewards = {
+        k: v * self._config.reward_config.scales[k] for k, v in rewards.items()
+    }
+    reward = sum(rewards.values()) * self.dt  # pylint: disable=redefined-outer-name
+
+    # 목표 고정: 에피소드 동안 목표를 갱신하지 않고 유지한다.
+    # (연쇄 모드면 아래에서 조건부로 교체한다.)
+    data = data.replace(mocap_quat=state.data.mocap_quat)
+    state.metrics["reward/success"] = success.astype(float)
+    # 스텝당 성공 보상은 착취 가능하다: 성공 유지 10스텝을 채우면 에피소드가
+    # 종료돼 이후 보상이 끊기므로, 임계값 근처를 오가며 성공 스텝만 쌓고
+    # 절대 유지하지 않는 것이 보상 최대화 전략이 된다. PPO 300M(v28)이 실제로
+    # 이 행동을 학습했다(성공 스텝 359개, 최대 연속 유지 7 -> 성공 종료 0~4%).
+    # hold_gated_success=True 면 "유지 조건 달성" 시점에만 일시금을 준다.
+    achieved_hold = (
+        state.info["success_hold_steps"] >= self._config.success_hold_steps
+    )
+    if self._config.hold_gated_success:
+      n_stairs = int(self._config.hold_stairs)
+      if n_stairs > 1:
+        # 에피소드 최고 기록이 새로 넘긴 계단 수만큼 지급한다. 최고 기록 기준이라
+        # 계단당 최대 한 번만 나가고(반복 수령 불가), 총액은 게이트와 같다.
+        step_size = max(self._config.success_hold_steps // n_stairs, 1)
+        cleared = lambda b: jp.minimum(b // step_size, n_stairs)
+        new_stairs = cleared(state.info["best_hold_steps"]) - cleared(prev_best)
+        reward += (
+            new_stairs * self._config.reward_config.success_reward / n_stairs
+        )
+      else:
+        reward += achieved_hold * self._config.reward_config.success_reward
+      state.metrics["reward/success"] = achieved_hold.astype(float)
+    else:
+      reward += success * self._config.reward_config.success_reward
+      # hold_bonus > 0 이면 스텝당 성공 보상(조밀 신호)은 그대로 두고 유지 달성에
+      # 일시금을 얹는다. 게이트 방식(hold_gated_success)은 착취는 막지만 조밀
+      # 신호까지 없애서 SAC 에는 해로웠다(v31: 36.8% -> 27.8%). PPO 처럼 착취가
+      # 가능한 정책에는 게이트가, SAC 처럼 신호가 필요한 정책에는 이 방식이 맞다.
+      reward += achieved_hold * self._config.reward_config.hold_bonus
+
+    # Update info and metrics.
+    state.info["step"] += 1
+    state.info["last_last_act"] = state.info["last_act"]
+    state.info["last_act"] = action
+    state.info["prev_ori_error"] = ori_error
+    state.info["best_ori_error"] = jp.minimum(
+        state.info["best_ori_error"], ori_error
+    )
+
+    # 보상은 여기까지 **옛 목표 기준**으로 계산됐다. 이제 목표를 바꾼다.
+    if self._config.chain_goals:
+      data = self._chain_next_goal(data, state.info, achieved_hold)
+
+    obs = self._get_obs(data, state.info)
+    # D7: 종료 사유. stuck 을 steps_since_goal 로 다시 판정하면 _chain_next_goal 의
+    # 증가 때문에 done 계산 시점과 1스텝 어긋난다. done 에서 낙하를 빼는 방식이
+    # 정의상 정확하다(done = 낙하 | 정체 | nan, nan 은 사실상 없음).
+    dropped = self._cube_dropped(data)
+    state.metrics["term_dropped"] = (done & dropped).astype(float)
+    state.metrics["term_stuck"] = (done & ~dropped).astype(float)
+    state.metrics["goal_count"] = state.info["goal_count"].astype(float)
+    state.metrics["steps_since_goal"] = state.info["steps_since_goal"].astype(
+        float
+    )
+    for k, v in rewards.items():
+      state.metrics[f"reward/{k}"] = v
+
+    done = done.astype(reward.dtype)
+    state = state.replace(data=data, obs=obs, reward=reward, done=done)
+    return state
+
+
+  @abc.abstractmethod
+  def step(self, state: State, action: jax.Array) -> State:
+    """Run one timestep of the environment's dynamics."""

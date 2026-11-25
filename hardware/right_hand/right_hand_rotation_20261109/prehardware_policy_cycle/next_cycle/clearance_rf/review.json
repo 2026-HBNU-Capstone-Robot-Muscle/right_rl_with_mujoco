@@ -1,0 +1,2916 @@
+{
+  "status": "cooperative_clearance_and_staged_free_support_trials",
+  "finger": "rf",
+  "source_sha256": "62ec99dd86b24ab9148b0d1d4ef5d838d9195135531b55b7ff5f157d433908f5",
+  "workspace_report_sha256": "9cdb2a9dc5404ce7ad9038b4d08c14ee5155fff2d3cbde81bb653c1b1211345d",
+  "model_provenance": {
+    "model_kind": "active",
+    "model_path": "right_hand_rotation_20261106/middle_clearance_probe/evidence/model.mjb",
+    "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "other_fingers_optimized_to_clear_new_support": true,
+  "native_limits_and_model_unchanged": true,
+  "static_proposals": [
+    {
+      "seed": 0,
+      "static_geometry_passed": true,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "cube_penetration_mm": 0.020000109452010414,
+      "contacts": [
+        "if_bs_collision_1",
+        "rf_tip",
+        "th_tip"
+      ],
+      "squared_joint_change_rad2": 8.846937028832645,
+      "nfev": 23772
+    },
+    {
+      "seed": 1,
+      "static_geometry_passed": true,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "cube_penetration_mm": 0.020000030406484924,
+      "contacts": [
+        "if_bs_collision_1",
+        "rf_tip",
+        "th_tip"
+      ],
+      "squared_joint_change_rad2": 9.492758758313656,
+      "nfev": 23772
+    },
+    {
+      "seed": 2,
+      "static_geometry_passed": true,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "cube_penetration_mm": 0.020000020189655483,
+      "contacts": [
+        "if_bs_collision_1",
+        "rf_tip",
+        "th_tip"
+      ],
+      "squared_joint_change_rad2": 7.848681666138835,
+      "nfev": 23772
+    },
+    {
+      "seed": 3,
+      "static_geometry_passed": true,
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "cube_penetration_mm": 0.01990507838203377,
+      "contacts": [
+        "if_bs_collision_1",
+        "rf_tip",
+        "th_tip"
+      ],
+      "squared_joint_change_rad2": 7.140867165039298,
+      "nfev": 23772
+    }
+  ],
+  "dynamic_trials": [
+    {
+      "path": "next_cycle/clearance_rf/seed0_preload0_other_then_new_then_index",
+      "seed": 0,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_then_index",
+      "goals_completed": 159,
+      "planned_goals": 1158,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.000697562349499456,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.63635290283433,
+        "target90_error_deg": 1.4171392932352167,
+        "up_tilt_deg": 1.385132739115023,
+        "center": [
+          0.16255190169565067,
+          -0.0533936748752947,
+          -0.014261287655271952
+        ],
+        "upper_sweep_gap_mm": 1.9329932371385468,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.9329932371385468
+          ],
+          [
+            "th_ds_collision_1",
+            2.3868769083892554
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.496122388123232
+          ],
+          [
+            "rf_tip",
+            4.958409649064005
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.958409649064005
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854367245798634,
+            "position_world": [
+              0.14688427534034648,
+              -0.05579998471401512,
+              -0.03792354271960338
+            ],
+            "height_above_cube_center_mm": -27.49936609719863
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.15016226172625652,
+            "position_world": [
+              0.16892894823446447,
+              -0.053640734686522584,
+              -0.04578623618290492
+            ],
+            "height_above_cube_center_mm": -27.499909369550938
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04025554495670507,
+            "position_world": [
+              0.17489784288167648,
+              -0.023803248068108962,
+              -0.0167278958777654
+            ],
+            "height_above_cube_center_mm": 1.1376092294125322
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781685617767574,
+              -0.055988750352849254,
+              -0.016675686373313632
+            ],
+            "height_above_cube_center_mm": -13.946617536514914
+          }
+        ],
+        "guard": {
+          "self_mm": 0.000697562349499456,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012678056027265092,
+          "tracking_rad": 0.030555852965709743,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.000697562349499456
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8267466972535541,
+      "center_error_mm": 0.24564386428549229,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed0_preload0_other_then_new_and_index",
+      "seed": 0,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_and_index",
+      "goals_completed": 159,
+      "planned_goals": 1081,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.000697562349499456,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.63635290283433,
+        "target90_error_deg": 1.4171392932352167,
+        "up_tilt_deg": 1.385132739115023,
+        "center": [
+          0.16255190169565067,
+          -0.0533936748752947,
+          -0.014261287655271952
+        ],
+        "upper_sweep_gap_mm": 1.9329932371385468,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.9329932371385468
+          ],
+          [
+            "th_ds_collision_1",
+            2.3868769083892554
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.496122388123232
+          ],
+          [
+            "rf_tip",
+            4.958409649064005
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.958409649064005
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854367245798634,
+            "position_world": [
+              0.14688427534034648,
+              -0.05579998471401512,
+              -0.03792354271960338
+            ],
+            "height_above_cube_center_mm": -27.49936609719863
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.15016226172625652,
+            "position_world": [
+              0.16892894823446447,
+              -0.053640734686522584,
+              -0.04578623618290492
+            ],
+            "height_above_cube_center_mm": -27.499909369550938
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04025554495670507,
+            "position_world": [
+              0.17489784288167648,
+              -0.023803248068108962,
+              -0.0167278958777654
+            ],
+            "height_above_cube_center_mm": 1.1376092294125322
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781685617767574,
+              -0.055988750352849254,
+              -0.016675686373313632
+            ],
+            "height_above_cube_center_mm": -13.946617536514914
+          }
+        ],
+        "guard": {
+          "self_mm": 0.000697562349499456,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012678056027265092,
+          "tracking_rad": 0.030555852965709743,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.000697562349499456
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8267466972535541,
+      "center_error_mm": 0.24564386428549229,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed0_preload0.3_other_then_new_then_index",
+      "seed": 0,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_then_index",
+      "goals_completed": 159,
+      "planned_goals": 1160,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.000697562349499456,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.63635290283433,
+        "target90_error_deg": 1.4171392932352167,
+        "up_tilt_deg": 1.385132739115023,
+        "center": [
+          0.16255190169565067,
+          -0.0533936748752947,
+          -0.014261287655271952
+        ],
+        "upper_sweep_gap_mm": 1.9329932371385468,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.9329932371385468
+          ],
+          [
+            "th_ds_collision_1",
+            2.3868769083892554
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.496122388123232
+          ],
+          [
+            "rf_tip",
+            4.958409649064005
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.958409649064005
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854367245798634,
+            "position_world": [
+              0.14688427534034648,
+              -0.05579998471401512,
+              -0.03792354271960338
+            ],
+            "height_above_cube_center_mm": -27.49936609719863
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.15016226172625652,
+            "position_world": [
+              0.16892894823446447,
+              -0.053640734686522584,
+              -0.04578623618290492
+            ],
+            "height_above_cube_center_mm": -27.499909369550938
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04025554495670507,
+            "position_world": [
+              0.17489784288167648,
+              -0.023803248068108962,
+              -0.0167278958777654
+            ],
+            "height_above_cube_center_mm": 1.1376092294125322
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781685617767574,
+              -0.055988750352849254,
+              -0.016675686373313632
+            ],
+            "height_above_cube_center_mm": -13.946617536514914
+          }
+        ],
+        "guard": {
+          "self_mm": 0.000697562349499456,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012678056027265092,
+          "tracking_rad": 0.030555852965709743,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.000697562349499456
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8267466972535541,
+      "center_error_mm": 0.24564386428549229,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed0_preload0.3_other_then_new_and_index",
+      "seed": 0,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_and_index",
+      "goals_completed": 159,
+      "planned_goals": 1083,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.000697562349499456,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.63635290283433,
+        "target90_error_deg": 1.4171392932352167,
+        "up_tilt_deg": 1.385132739115023,
+        "center": [
+          0.16255190169565067,
+          -0.0533936748752947,
+          -0.014261287655271952
+        ],
+        "upper_sweep_gap_mm": 1.9329932371385468,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.9329932371385468
+          ],
+          [
+            "th_ds_collision_1",
+            2.3868769083892554
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.496122388123232
+          ],
+          [
+            "rf_tip",
+            4.958409649064005
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.958409649064005
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854367245798634,
+            "position_world": [
+              0.14688427534034648,
+              -0.05579998471401512,
+              -0.03792354271960338
+            ],
+            "height_above_cube_center_mm": -27.49936609719863
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.15016226172625652,
+            "position_world": [
+              0.16892894823446447,
+              -0.053640734686522584,
+              -0.04578623618290492
+            ],
+            "height_above_cube_center_mm": -27.499909369550938
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04025554495670507,
+            "position_world": [
+              0.17489784288167648,
+              -0.023803248068108962,
+              -0.0167278958777654
+            ],
+            "height_above_cube_center_mm": 1.1376092294125322
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781685617767574,
+              -0.055988750352849254,
+              -0.016675686373313632
+            ],
+            "height_above_cube_center_mm": -13.946617536514914
+          }
+        ],
+        "guard": {
+          "self_mm": 0.000697562349499456,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012678056027265092,
+          "tracking_rad": 0.030555852965709743,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.000697562349499456
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8267466972535541,
+      "center_error_mm": 0.24564386428549229,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed0_preload0.7_other_then_new_then_index",
+      "seed": 0,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_then_index",
+      "goals_completed": 159,
+      "planned_goals": 1163,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.000697562349499456,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.63635290283433,
+        "target90_error_deg": 1.4171392932352167,
+        "up_tilt_deg": 1.385132739115023,
+        "center": [
+          0.16255190169565067,
+          -0.0533936748752947,
+          -0.014261287655271952
+        ],
+        "upper_sweep_gap_mm": 1.9329932371385468,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.9329932371385468
+          ],
+          [
+            "th_ds_collision_1",
+            2.3868769083892554
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.496122388123232
+          ],
+          [
+            "rf_tip",
+            4.958409649064005
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.958409649064005
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854367245798634,
+            "position_world": [
+              0.14688427534034648,
+              -0.05579998471401512,
+              -0.03792354271960338
+            ],
+            "height_above_cube_center_mm": -27.49936609719863
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.15016226172625652,
+            "position_world": [
+              0.16892894823446447,
+              -0.053640734686522584,
+              -0.04578623618290492
+            ],
+            "height_above_cube_center_mm": -27.499909369550938
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04025554495670507,
+            "position_world": [
+              0.17489784288167648,
+              -0.023803248068108962,
+              -0.0167278958777654
+            ],
+            "height_above_cube_center_mm": 1.1376092294125322
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781685617767574,
+              -0.055988750352849254,
+              -0.016675686373313632
+            ],
+            "height_above_cube_center_mm": -13.946617536514914
+          }
+        ],
+        "guard": {
+          "self_mm": 0.000697562349499456,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012678056027265092,
+          "tracking_rad": 0.030555852965709743,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.000697562349499456
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8267466972535541,
+      "center_error_mm": 0.24564386428549229,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed0_preload0.7_other_then_new_and_index",
+      "seed": 0,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_and_index",
+      "goals_completed": 159,
+      "planned_goals": 1086,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.000697562349499456,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.63635290283433,
+        "target90_error_deg": 1.4171392932352167,
+        "up_tilt_deg": 1.385132739115023,
+        "center": [
+          0.16255190169565067,
+          -0.0533936748752947,
+          -0.014261287655271952
+        ],
+        "upper_sweep_gap_mm": 1.9329932371385468,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.9329932371385468
+          ],
+          [
+            "th_ds_collision_1",
+            2.3868769083892554
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.496122388123232
+          ],
+          [
+            "rf_tip",
+            4.958409649064005
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.958409649064005
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854367245798634,
+            "position_world": [
+              0.14688427534034648,
+              -0.05579998471401512,
+              -0.03792354271960338
+            ],
+            "height_above_cube_center_mm": -27.49936609719863
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.15016226172625652,
+            "position_world": [
+              0.16892894823446447,
+              -0.053640734686522584,
+              -0.04578623618290492
+            ],
+            "height_above_cube_center_mm": -27.499909369550938
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04025554495670507,
+            "position_world": [
+              0.17489784288167648,
+              -0.023803248068108962,
+              -0.0167278958777654
+            ],
+            "height_above_cube_center_mm": 1.1376092294125322
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781685617767574,
+              -0.055988750352849254,
+              -0.016675686373313632
+            ],
+            "height_above_cube_center_mm": -13.946617536514914
+          }
+        ],
+        "guard": {
+          "self_mm": 0.000697562349499456,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012678056027265092,
+          "tracking_rad": 0.030555852965709743,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.000697562349499456
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8267466972535541,
+      "center_error_mm": 0.24564386428549229,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed1_preload0_other_then_new_then_index",
+      "seed": 1,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_then_index",
+      "goals_completed": 152,
+      "planned_goals": 1230,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0005808781181736861,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.64547194224035,
+        "target90_error_deg": 1.3918159411115627,
+        "up_tilt_deg": 1.3609082264403918,
+        "center": [
+          0.16254794313321816,
+          -0.053381383430407055,
+          -0.014261022676315172
+        ],
+        "upper_sweep_gap_mm": 1.8693056839712838,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.8693056839712838
+          ],
+          [
+            "th_ds_collision_1",
+            2.405961993165106
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.5123743266427487
+          ],
+          [
+            "rf_tip",
+            4.889283723548249
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.889283723548249
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7781310794743594,
+            "position_world": [
+              0.14688430636346764,
+              -0.05579998495723191,
+              -0.037923827127172446
+            ],
+            "height_above_cube_center_mm": -27.499364973476087
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.17069560646325632,
+            "position_world": [
+              0.16892877345757248,
+              -0.05364078493664695,
+              -0.04578675058986384
+            ],
+            "height_above_cube_center_mm": -27.49991031962039
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.05612878858691524,
+            "position_world": [
+              0.1748993920977519,
+              -0.023801719249618852,
+              -0.016728008862852466
+            ],
+            "height_above_cube_center_mm": 1.1516454133943486
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.010161327914569696,
+            "position_world": [
+              0.12781683393167986,
+              -0.055990759277326066,
+              -0.01667531110099036
+            ],
+            "height_above_cube_center_mm": -13.945224729940495
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0005808781181736861,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012700530479141988,
+          "tracking_rad": 0.03056340972798356,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0005808781181736861
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8012702615042251,
+      "center_error_mm": 0.2334172736611792,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed1_preload0_other_then_new_and_index",
+      "seed": 1,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_and_index",
+      "goals_completed": 152,
+      "planned_goals": 1124,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0005808781181736861,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.64547194224035,
+        "target90_error_deg": 1.3918159411115627,
+        "up_tilt_deg": 1.3609082264403918,
+        "center": [
+          0.16254794313321816,
+          -0.053381383430407055,
+          -0.014261022676315172
+        ],
+        "upper_sweep_gap_mm": 1.8693056839712838,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.8693056839712838
+          ],
+          [
+            "th_ds_collision_1",
+            2.405961993165106
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.5123743266427487
+          ],
+          [
+            "rf_tip",
+            4.889283723548249
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.889283723548249
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7781310794743594,
+            "position_world": [
+              0.14688430636346764,
+              -0.05579998495723191,
+              -0.037923827127172446
+            ],
+            "height_above_cube_center_mm": -27.499364973476087
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.17069560646325632,
+            "position_world": [
+              0.16892877345757248,
+              -0.05364078493664695,
+              -0.04578675058986384
+            ],
+            "height_above_cube_center_mm": -27.49991031962039
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.05612878858691524,
+            "position_world": [
+              0.1748993920977519,
+              -0.023801719249618852,
+              -0.016728008862852466
+            ],
+            "height_above_cube_center_mm": 1.1516454133943486
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.010161327914569696,
+            "position_world": [
+              0.12781683393167986,
+              -0.055990759277326066,
+              -0.01667531110099036
+            ],
+            "height_above_cube_center_mm": -13.945224729940495
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0005808781181736861,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012700530479141988,
+          "tracking_rad": 0.03056340972798356,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0005808781181736861
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8012702615042251,
+      "center_error_mm": 0.2334172736611792,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed1_preload0.3_other_then_new_then_index",
+      "seed": 1,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_then_index",
+      "goals_completed": 152,
+      "planned_goals": 1232,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0005808781181736861,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.64547194224035,
+        "target90_error_deg": 1.3918159411115627,
+        "up_tilt_deg": 1.3609082264403918,
+        "center": [
+          0.16254794313321816,
+          -0.053381383430407055,
+          -0.014261022676315172
+        ],
+        "upper_sweep_gap_mm": 1.8693056839712838,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.8693056839712838
+          ],
+          [
+            "th_ds_collision_1",
+            2.405961993165106
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.5123743266427487
+          ],
+          [
+            "rf_tip",
+            4.889283723548249
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.889283723548249
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7781310794743594,
+            "position_world": [
+              0.14688430636346764,
+              -0.05579998495723191,
+              -0.037923827127172446
+            ],
+            "height_above_cube_center_mm": -27.499364973476087
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.17069560646325632,
+            "position_world": [
+              0.16892877345757248,
+              -0.05364078493664695,
+              -0.04578675058986384
+            ],
+            "height_above_cube_center_mm": -27.49991031962039
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.05612878858691524,
+            "position_world": [
+              0.1748993920977519,
+              -0.023801719249618852,
+              -0.016728008862852466
+            ],
+            "height_above_cube_center_mm": 1.1516454133943486
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.010161327914569696,
+            "position_world": [
+              0.12781683393167986,
+              -0.055990759277326066,
+              -0.01667531110099036
+            ],
+            "height_above_cube_center_mm": -13.945224729940495
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0005808781181736861,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012700530479141988,
+          "tracking_rad": 0.03056340972798356,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0005808781181736861
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8012702615042251,
+      "center_error_mm": 0.2334172736611792,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed1_preload0.3_other_then_new_and_index",
+      "seed": 1,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_and_index",
+      "goals_completed": 152,
+      "planned_goals": 1126,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0005808781181736861,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.64547194224035,
+        "target90_error_deg": 1.3918159411115627,
+        "up_tilt_deg": 1.3609082264403918,
+        "center": [
+          0.16254794313321816,
+          -0.053381383430407055,
+          -0.014261022676315172
+        ],
+        "upper_sweep_gap_mm": 1.8693056839712838,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.8693056839712838
+          ],
+          [
+            "th_ds_collision_1",
+            2.405961993165106
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.5123743266427487
+          ],
+          [
+            "rf_tip",
+            4.889283723548249
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.889283723548249
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7781310794743594,
+            "position_world": [
+              0.14688430636346764,
+              -0.05579998495723191,
+              -0.037923827127172446
+            ],
+            "height_above_cube_center_mm": -27.499364973476087
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.17069560646325632,
+            "position_world": [
+              0.16892877345757248,
+              -0.05364078493664695,
+              -0.04578675058986384
+            ],
+            "height_above_cube_center_mm": -27.49991031962039
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.05612878858691524,
+            "position_world": [
+              0.1748993920977519,
+              -0.023801719249618852,
+              -0.016728008862852466
+            ],
+            "height_above_cube_center_mm": 1.1516454133943486
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.010161327914569696,
+            "position_world": [
+              0.12781683393167986,
+              -0.055990759277326066,
+              -0.01667531110099036
+            ],
+            "height_above_cube_center_mm": -13.945224729940495
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0005808781181736861,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012700530479141988,
+          "tracking_rad": 0.03056340972798356,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0005808781181736861
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8012702615042251,
+      "center_error_mm": 0.2334172736611792,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed1_preload0.7_other_then_new_then_index",
+      "seed": 1,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_then_index",
+      "goals_completed": 152,
+      "planned_goals": 1236,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0005808781181736861,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.64547194224035,
+        "target90_error_deg": 1.3918159411115627,
+        "up_tilt_deg": 1.3609082264403918,
+        "center": [
+          0.16254794313321816,
+          -0.053381383430407055,
+          -0.014261022676315172
+        ],
+        "upper_sweep_gap_mm": 1.8693056839712838,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.8693056839712838
+          ],
+          [
+            "th_ds_collision_1",
+            2.405961993165106
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.5123743266427487
+          ],
+          [
+            "rf_tip",
+            4.889283723548249
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.889283723548249
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7781310794743594,
+            "position_world": [
+              0.14688430636346764,
+              -0.05579998495723191,
+              -0.037923827127172446
+            ],
+            "height_above_cube_center_mm": -27.499364973476087
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.17069560646325632,
+            "position_world": [
+              0.16892877345757248,
+              -0.05364078493664695,
+              -0.04578675058986384
+            ],
+            "height_above_cube_center_mm": -27.49991031962039
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.05612878858691524,
+            "position_world": [
+              0.1748993920977519,
+              -0.023801719249618852,
+              -0.016728008862852466
+            ],
+            "height_above_cube_center_mm": 1.1516454133943486
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.010161327914569696,
+            "position_world": [
+              0.12781683393167986,
+              -0.055990759277326066,
+              -0.01667531110099036
+            ],
+            "height_above_cube_center_mm": -13.945224729940495
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0005808781181736861,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012700530479141988,
+          "tracking_rad": 0.03056340972798356,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0005808781181736861
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8012702615042251,
+      "center_error_mm": 0.2334172736611792,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed1_preload0.7_other_then_new_and_index",
+      "seed": 1,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_and_index",
+      "goals_completed": 152,
+      "planned_goals": 1130,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0005808781181736861,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.64547194224035,
+        "target90_error_deg": 1.3918159411115627,
+        "up_tilt_deg": 1.3609082264403918,
+        "center": [
+          0.16254794313321816,
+          -0.053381383430407055,
+          -0.014261022676315172
+        ],
+        "upper_sweep_gap_mm": 1.8693056839712838,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            1.8693056839712838
+          ],
+          [
+            "th_ds_collision_1",
+            2.405961993165106
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.5123743266427487
+          ],
+          [
+            "rf_tip",
+            4.889283723548249
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            4.889283723548249
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7781310794743594,
+            "position_world": [
+              0.14688430636346764,
+              -0.05579998495723191,
+              -0.037923827127172446
+            ],
+            "height_above_cube_center_mm": -27.499364973476087
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.17069560646325632,
+            "position_world": [
+              0.16892877345757248,
+              -0.05364078493664695,
+              -0.04578675058986384
+            ],
+            "height_above_cube_center_mm": -27.49991031962039
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.05612878858691524,
+            "position_world": [
+              0.1748993920977519,
+              -0.023801719249618852,
+              -0.016728008862852466
+            ],
+            "height_above_cube_center_mm": 1.1516454133943486
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.010161327914569696,
+            "position_world": [
+              0.12781683393167986,
+              -0.055990759277326066,
+              -0.01667531110099036
+            ],
+            "height_above_cube_center_mm": -13.945224729940495
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0005808781181736861,
+          "support_mm": 0.0,
+          "cube_mm": 0.0012700530479141988,
+          "tracking_rad": 0.03056340972798356,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0005808781181736861
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8012702615042251,
+      "center_error_mm": 0.2334172736611792,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed2_preload0_other_then_new_then_index",
+      "seed": 2,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_then_index",
+      "goals_completed": 168,
+      "planned_goals": 1172,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0014383773068119693,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.62393063992236,
+        "target90_error_deg": 1.4511916629023491,
+        "up_tilt_deg": 1.4176650445588697,
+        "center": [
+          0.1625573972702379,
+          -0.05341055075653616,
+          -0.014261730527354181
+        ],
+        "upper_sweep_gap_mm": 2.0188212166821558,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            2.0188212166821558
+          ],
+          [
+            "th_ds_collision_1",
+            2.3612646277774108
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.4743130010247745
+          ],
+          [
+            "rf_tip",
+            5.051208707854428
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.051208707854428
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854191657071179,
+            "position_world": [
+              0.14688423392141103,
+              -0.05579998438893277,
+              -0.03792316303657708
+            ],
+            "height_above_cube_center_mm": -27.499367602545476
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.14956458131951578,
+            "position_world": [
+              0.16892918215418948,
+              -0.0536406673222647,
+              -0.04578554967728557
+            ],
+            "height_above_cube_center_mm": -27.4999080888724
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.03951726163357062,
+            "position_world": [
+              0.1748957672881854,
+              -0.023805298785589478,
+              -0.016727747108769002
+            ],
+            "height_above_cube_center_mm": 1.1187621896329751
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781689174774286,
+              -0.055986061976424285,
+              -0.016676174554785067
+            ],
+            "height_above_cube_center_mm": -13.94847748878632
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0014383773068119693,
+          "support_mm": 0.0,
+          "cube_mm": 0.001264794908939406,
+          "tracking_rad": 0.030539720645164026,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0014383773068119693
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8610406967119681,
+      "center_error_mm": 0.26263819608096906,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed2_preload0_other_then_new_and_index",
+      "seed": 2,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_and_index",
+      "goals_completed": 168,
+      "planned_goals": 1087,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0014383773068119693,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.62393063992236,
+        "target90_error_deg": 1.4511916629023491,
+        "up_tilt_deg": 1.4176650445588697,
+        "center": [
+          0.1625573972702379,
+          -0.05341055075653616,
+          -0.014261730527354181
+        ],
+        "upper_sweep_gap_mm": 2.0188212166821558,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            2.0188212166821558
+          ],
+          [
+            "th_ds_collision_1",
+            2.3612646277774108
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.4743130010247745
+          ],
+          [
+            "rf_tip",
+            5.051208707854428
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.051208707854428
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854191657071179,
+            "position_world": [
+              0.14688423392141103,
+              -0.05579998438893277,
+              -0.03792316303657708
+            ],
+            "height_above_cube_center_mm": -27.499367602545476
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.14956458131951578,
+            "position_world": [
+              0.16892918215418948,
+              -0.0536406673222647,
+              -0.04578554967728557
+            ],
+            "height_above_cube_center_mm": -27.4999080888724
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.03951726163357062,
+            "position_world": [
+              0.1748957672881854,
+              -0.023805298785589478,
+              -0.016727747108769002
+            ],
+            "height_above_cube_center_mm": 1.1187621896329751
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781689174774286,
+              -0.055986061976424285,
+              -0.016676174554785067
+            ],
+            "height_above_cube_center_mm": -13.94847748878632
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0014383773068119693,
+          "support_mm": 0.0,
+          "cube_mm": 0.001264794908939406,
+          "tracking_rad": 0.030539720645164026,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0014383773068119693
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8610406967119681,
+      "center_error_mm": 0.26263819608096906,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed2_preload0.3_other_then_new_then_index",
+      "seed": 2,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_then_index",
+      "goals_completed": 168,
+      "planned_goals": 1175,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0014383773068119693,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.62393063992236,
+        "target90_error_deg": 1.4511916629023491,
+        "up_tilt_deg": 1.4176650445588697,
+        "center": [
+          0.1625573972702379,
+          -0.05341055075653616,
+          -0.014261730527354181
+        ],
+        "upper_sweep_gap_mm": 2.0188212166821558,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            2.0188212166821558
+          ],
+          [
+            "th_ds_collision_1",
+            2.3612646277774108
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.4743130010247745
+          ],
+          [
+            "rf_tip",
+            5.051208707854428
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.051208707854428
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854191657071179,
+            "position_world": [
+              0.14688423392141103,
+              -0.05579998438893277,
+              -0.03792316303657708
+            ],
+            "height_above_cube_center_mm": -27.499367602545476
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.14956458131951578,
+            "position_world": [
+              0.16892918215418948,
+              -0.0536406673222647,
+              -0.04578554967728557
+            ],
+            "height_above_cube_center_mm": -27.4999080888724
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.03951726163357062,
+            "position_world": [
+              0.1748957672881854,
+              -0.023805298785589478,
+              -0.016727747108769002
+            ],
+            "height_above_cube_center_mm": 1.1187621896329751
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781689174774286,
+              -0.055986061976424285,
+              -0.016676174554785067
+            ],
+            "height_above_cube_center_mm": -13.94847748878632
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0014383773068119693,
+          "support_mm": 0.0,
+          "cube_mm": 0.001264794908939406,
+          "tracking_rad": 0.030539720645164026,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0014383773068119693
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8610406967119681,
+      "center_error_mm": 0.26263819608096906,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed2_preload0.3_other_then_new_and_index",
+      "seed": 2,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_and_index",
+      "goals_completed": 168,
+      "planned_goals": 1090,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0014383773068119693,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.62393063992236,
+        "target90_error_deg": 1.4511916629023491,
+        "up_tilt_deg": 1.4176650445588697,
+        "center": [
+          0.1625573972702379,
+          -0.05341055075653616,
+          -0.014261730527354181
+        ],
+        "upper_sweep_gap_mm": 2.0188212166821558,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            2.0188212166821558
+          ],
+          [
+            "th_ds_collision_1",
+            2.3612646277774108
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.4743130010247745
+          ],
+          [
+            "rf_tip",
+            5.051208707854428
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.051208707854428
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854191657071179,
+            "position_world": [
+              0.14688423392141103,
+              -0.05579998438893277,
+              -0.03792316303657708
+            ],
+            "height_above_cube_center_mm": -27.499367602545476
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.14956458131951578,
+            "position_world": [
+              0.16892918215418948,
+              -0.0536406673222647,
+              -0.04578554967728557
+            ],
+            "height_above_cube_center_mm": -27.4999080888724
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.03951726163357062,
+            "position_world": [
+              0.1748957672881854,
+              -0.023805298785589478,
+              -0.016727747108769002
+            ],
+            "height_above_cube_center_mm": 1.1187621896329751
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781689174774286,
+              -0.055986061976424285,
+              -0.016676174554785067
+            ],
+            "height_above_cube_center_mm": -13.94847748878632
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0014383773068119693,
+          "support_mm": 0.0,
+          "cube_mm": 0.001264794908939406,
+          "tracking_rad": 0.030539720645164026,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0014383773068119693
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8610406967119681,
+      "center_error_mm": 0.26263819608096906,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed2_preload0.7_other_then_new_then_index",
+      "seed": 2,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_then_index",
+      "goals_completed": 168,
+      "planned_goals": 1178,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0014383773068119693,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.62393063992236,
+        "target90_error_deg": 1.4511916629023491,
+        "up_tilt_deg": 1.4176650445588697,
+        "center": [
+          0.1625573972702379,
+          -0.05341055075653616,
+          -0.014261730527354181
+        ],
+        "upper_sweep_gap_mm": 2.0188212166821558,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            2.0188212166821558
+          ],
+          [
+            "th_ds_collision_1",
+            2.3612646277774108
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.4743130010247745
+          ],
+          [
+            "rf_tip",
+            5.051208707854428
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.051208707854428
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854191657071179,
+            "position_world": [
+              0.14688423392141103,
+              -0.05579998438893277,
+              -0.03792316303657708
+            ],
+            "height_above_cube_center_mm": -27.499367602545476
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.14956458131951578,
+            "position_world": [
+              0.16892918215418948,
+              -0.0536406673222647,
+              -0.04578554967728557
+            ],
+            "height_above_cube_center_mm": -27.4999080888724
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.03951726163357062,
+            "position_world": [
+              0.1748957672881854,
+              -0.023805298785589478,
+              -0.016727747108769002
+            ],
+            "height_above_cube_center_mm": 1.1187621896329751
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781689174774286,
+              -0.055986061976424285,
+              -0.016676174554785067
+            ],
+            "height_above_cube_center_mm": -13.94847748878632
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0014383773068119693,
+          "support_mm": 0.0,
+          "cube_mm": 0.001264794908939406,
+          "tracking_rad": 0.030539720645164026,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0014383773068119693
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8610406967119681,
+      "center_error_mm": 0.26263819608096906,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed2_preload0.7_other_then_new_and_index",
+      "seed": 2,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_and_index",
+      "goals_completed": 168,
+      "planned_goals": 1093,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0014383773068119693,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.62393063992236,
+        "target90_error_deg": 1.4511916629023491,
+        "up_tilt_deg": 1.4176650445588697,
+        "center": [
+          0.1625573972702379,
+          -0.05341055075653616,
+          -0.014261730527354181
+        ],
+        "upper_sweep_gap_mm": 2.0188212166821558,
+        "closest_upper_geoms": [
+          [
+            "if_tip",
+            2.0188212166821558
+          ],
+          [
+            "th_ds_collision_1",
+            2.3612646277774108
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.4743130010247745
+          ],
+          [
+            "rf_tip",
+            5.051208707854428
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.051208707854428
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.7854191657071179,
+            "position_world": [
+              0.14688423392141103,
+              -0.05579998438893277,
+              -0.03792316303657708
+            ],
+            "height_above_cube_center_mm": -27.499367602545476
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.14956458131951578,
+            "position_world": [
+              0.16892918215418948,
+              -0.0536406673222647,
+              -0.04578554967728557
+            ],
+            "height_above_cube_center_mm": -27.4999080888724
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.03951726163357062,
+            "position_world": [
+              0.1748957672881854,
+              -0.023805298785589478,
+              -0.016727747108769002
+            ],
+            "height_above_cube_center_mm": 1.1187621896329751
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781689174774286,
+              -0.055986061976424285,
+              -0.016676174554785067
+            ],
+            "height_above_cube_center_mm": -13.94847748878632
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0014383773068119693,
+          "support_mm": 0.0,
+          "cube_mm": 0.001264794908939406,
+          "tracking_rad": 0.030539720645164026,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0014383773068119693
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.8610406967119681,
+      "center_error_mm": 0.26263819608096906,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed3_preload0_other_then_new_then_index",
+      "seed": 3,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_then_index",
+      "goals_completed": 198,
+      "planned_goals": 1209,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0011635467285688733,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.58331255120481,
+        "target90_error_deg": 1.5590339589981188,
+        "up_tilt_deg": 1.5203479246995608,
+        "center": [
+          0.16257619502180082,
+          -0.053466796651822336,
+          -0.014263836002886122
+        ],
+        "upper_sweep_gap_mm": 2.2805830738474144,
+        "closest_upper_geoms": [
+          [
+            "th_ds_collision_1",
+            2.2805830738474144
+          ],
+          [
+            "if_tip",
+            2.2920580327646363
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.405621249777603
+          ],
+          [
+            "rf_tip",
+            5.343877885306211
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.343877885306211
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.780201671898082,
+            "position_world": [
+              0.1468841052487119,
+              -0.055799983374812255,
+              -0.03792198360517096
+            ],
+            "height_above_cube_center_mm": -27.49937234526306
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.16003863700780951,
+            "position_world": [
+              0.16892991406923635,
+              -0.05364045557728557,
+              -0.04578341920258573
+            ],
+            "height_above_cube_center_mm": -27.499903995393602
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04312561144057186,
+            "position_world": [
+              0.17488925543293846,
+              -0.023811753482818165,
+              -0.016727303000018838
+            ],
+            "height_above_cube_center_mm": 1.0592923722832301
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781703251079132,
+              -0.05597764533756941,
+              -0.0166776350660078
+            ],
+            "height_above_cube_center_mm": -13.9543106725602
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0011635467285688733,
+          "support_mm": 0.0,
+          "cube_mm": 0.001255309473950346,
+          "tracking_rad": 0.030486989328605794,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0011635467285688733
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.9698854234080644,
+      "center_error_mm": 0.31990316633766164,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed3_preload0_other_then_new_and_index",
+      "seed": 3,
+      "preload_force_hypothesis_N": 0.0,
+      "order": "other_then_new_and_index",
+      "goals_completed": 198,
+      "planned_goals": 1114,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0011635467285688733,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.58331255120481,
+        "target90_error_deg": 1.5590339589981188,
+        "up_tilt_deg": 1.5203479246995608,
+        "center": [
+          0.16257619502180082,
+          -0.053466796651822336,
+          -0.014263836002886122
+        ],
+        "upper_sweep_gap_mm": 2.2805830738474144,
+        "closest_upper_geoms": [
+          [
+            "th_ds_collision_1",
+            2.2805830738474144
+          ],
+          [
+            "if_tip",
+            2.2920580327646363
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.405621249777603
+          ],
+          [
+            "rf_tip",
+            5.343877885306211
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.343877885306211
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.780201671898082,
+            "position_world": [
+              0.1468841052487119,
+              -0.055799983374812255,
+              -0.03792198360517096
+            ],
+            "height_above_cube_center_mm": -27.49937234526306
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.16003863700780951,
+            "position_world": [
+              0.16892991406923635,
+              -0.05364045557728557,
+              -0.04578341920258573
+            ],
+            "height_above_cube_center_mm": -27.499903995393602
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04312561144057186,
+            "position_world": [
+              0.17488925543293846,
+              -0.023811753482818165,
+              -0.016727303000018838
+            ],
+            "height_above_cube_center_mm": 1.0592923722832301
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781703251079132,
+              -0.05597764533756941,
+              -0.0166776350660078
+            ],
+            "height_above_cube_center_mm": -13.9543106725602
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0011635467285688733,
+          "support_mm": 0.0,
+          "cube_mm": 0.001255309473950346,
+          "tracking_rad": 0.030486989328605794,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0011635467285688733
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.9698854234080644,
+      "center_error_mm": 0.31990316633766164,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed3_preload0.3_other_then_new_then_index",
+      "seed": 3,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_then_index",
+      "goals_completed": 198,
+      "planned_goals": 1211,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0011635467285688733,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.58331255120481,
+        "target90_error_deg": 1.5590339589981188,
+        "up_tilt_deg": 1.5203479246995608,
+        "center": [
+          0.16257619502180082,
+          -0.053466796651822336,
+          -0.014263836002886122
+        ],
+        "upper_sweep_gap_mm": 2.2805830738474144,
+        "closest_upper_geoms": [
+          [
+            "th_ds_collision_1",
+            2.2805830738474144
+          ],
+          [
+            "if_tip",
+            2.2920580327646363
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.405621249777603
+          ],
+          [
+            "rf_tip",
+            5.343877885306211
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.343877885306211
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.780201671898082,
+            "position_world": [
+              0.1468841052487119,
+              -0.055799983374812255,
+              -0.03792198360517096
+            ],
+            "height_above_cube_center_mm": -27.49937234526306
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.16003863700780951,
+            "position_world": [
+              0.16892991406923635,
+              -0.05364045557728557,
+              -0.04578341920258573
+            ],
+            "height_above_cube_center_mm": -27.499903995393602
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04312561144057186,
+            "position_world": [
+              0.17488925543293846,
+              -0.023811753482818165,
+              -0.016727303000018838
+            ],
+            "height_above_cube_center_mm": 1.0592923722832301
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781703251079132,
+              -0.05597764533756941,
+              -0.0166776350660078
+            ],
+            "height_above_cube_center_mm": -13.9543106725602
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0011635467285688733,
+          "support_mm": 0.0,
+          "cube_mm": 0.001255309473950346,
+          "tracking_rad": 0.030486989328605794,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0011635467285688733
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.9698854234080644,
+      "center_error_mm": 0.31990316633766164,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed3_preload0.3_other_then_new_and_index",
+      "seed": 3,
+      "preload_force_hypothesis_N": 0.3,
+      "order": "other_then_new_and_index",
+      "goals_completed": 198,
+      "planned_goals": 1116,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0011635467285688733,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.58331255120481,
+        "target90_error_deg": 1.5590339589981188,
+        "up_tilt_deg": 1.5203479246995608,
+        "center": [
+          0.16257619502180082,
+          -0.053466796651822336,
+          -0.014263836002886122
+        ],
+        "upper_sweep_gap_mm": 2.2805830738474144,
+        "closest_upper_geoms": [
+          [
+            "th_ds_collision_1",
+            2.2805830738474144
+          ],
+          [
+            "if_tip",
+            2.2920580327646363
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.405621249777603
+          ],
+          [
+            "rf_tip",
+            5.343877885306211
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.343877885306211
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.780201671898082,
+            "position_world": [
+              0.1468841052487119,
+              -0.055799983374812255,
+              -0.03792198360517096
+            ],
+            "height_above_cube_center_mm": -27.49937234526306
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.16003863700780951,
+            "position_world": [
+              0.16892991406923635,
+              -0.05364045557728557,
+              -0.04578341920258573
+            ],
+            "height_above_cube_center_mm": -27.499903995393602
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04312561144057186,
+            "position_world": [
+              0.17488925543293846,
+              -0.023811753482818165,
+              -0.016727303000018838
+            ],
+            "height_above_cube_center_mm": 1.0592923722832301
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781703251079132,
+              -0.05597764533756941,
+              -0.0166776350660078
+            ],
+            "height_above_cube_center_mm": -13.9543106725602
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0011635467285688733,
+          "support_mm": 0.0,
+          "cube_mm": 0.001255309473950346,
+          "tracking_rad": 0.030486989328605794,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0011635467285688733
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.9698854234080644,
+      "center_error_mm": 0.31990316633766164,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed3_preload0.7_other_then_new_then_index",
+      "seed": 3,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_then_index",
+      "goals_completed": 198,
+      "planned_goals": 1214,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0011635467285688733,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.58331255120481,
+        "target90_error_deg": 1.5590339589981188,
+        "up_tilt_deg": 1.5203479246995608,
+        "center": [
+          0.16257619502180082,
+          -0.053466796651822336,
+          -0.014263836002886122
+        ],
+        "upper_sweep_gap_mm": 2.2805830738474144,
+        "closest_upper_geoms": [
+          [
+            "th_ds_collision_1",
+            2.2805830738474144
+          ],
+          [
+            "if_tip",
+            2.2920580327646363
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.405621249777603
+          ],
+          [
+            "rf_tip",
+            5.343877885306211
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.343877885306211
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.780201671898082,
+            "position_world": [
+              0.1468841052487119,
+              -0.055799983374812255,
+              -0.03792198360517096
+            ],
+            "height_above_cube_center_mm": -27.49937234526306
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.16003863700780951,
+            "position_world": [
+              0.16892991406923635,
+              -0.05364045557728557,
+              -0.04578341920258573
+            ],
+            "height_above_cube_center_mm": -27.499903995393602
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04312561144057186,
+            "position_world": [
+              0.17488925543293846,
+              -0.023811753482818165,
+              -0.016727303000018838
+            ],
+            "height_above_cube_center_mm": 1.0592923722832301
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781703251079132,
+              -0.05597764533756941,
+              -0.0166776350660078
+            ],
+            "height_above_cube_center_mm": -13.9543106725602
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0011635467285688733,
+          "support_mm": 0.0,
+          "cube_mm": 0.001255309473950346,
+          "tracking_rad": 0.030486989328605794,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0011635467285688733
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.9698854234080644,
+      "center_error_mm": 0.31990316633766164,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    },
+    {
+      "path": "next_cycle/clearance_rf/seed3_preload0.7_other_then_new_and_index",
+      "seed": 3,
+      "preload_force_hypothesis_N": 0.7,
+      "order": "other_then_new_and_index",
+      "goals_completed": 198,
+      "planned_goals": 1119,
+      "stop": [
+        "self_mm"
+      ],
+      "worst": {
+        "self_mm": 0.0011635467285688733,
+        "support_mm": 0.0,
+        "cube_mm": 0.0015574457371806305,
+        "tracking_rad": 0.032659134937985446,
+        "range_rad": 0.0
+      },
+      "endpoint": {
+        "yaw_deg": 89.58331255120481,
+        "target90_error_deg": 1.5590339589981188,
+        "up_tilt_deg": 1.5203479246995608,
+        "center": [
+          0.16257619502180082,
+          -0.053466796651822336,
+          -0.014263836002886122
+        ],
+        "upper_sweep_gap_mm": 2.2805830738474144,
+        "closest_upper_geoms": [
+          [
+            "th_ds_collision_1",
+            2.2805830738474144
+          ],
+          [
+            "if_tip",
+            2.2920580327646363
+          ],
+          [
+            "cadtip_mf_th_th_ds_0",
+            2.405621249777603
+          ],
+          [
+            "rf_tip",
+            5.343877885306211
+          ],
+          [
+            "cadtip_mf_rf_rf_ds_1",
+            5.343877885306211
+          ]
+        ],
+        "contacts": [
+          {
+            "geom": "if_bs_collision_1",
+            "normal_force_N_model_only": 0.780201671898082,
+            "position_world": [
+              0.1468841052487119,
+              -0.055799983374812255,
+              -0.03792198360517096
+            ],
+            "height_above_cube_center_mm": -27.49937234526306
+          },
+          {
+            "geom": "if_px_collision",
+            "normal_force_N_model_only": 0.16003863700780951,
+            "position_world": [
+              0.16892991406923635,
+              -0.05364045557728557,
+              -0.04578341920258573
+            ],
+            "height_above_cube_center_mm": -27.499903995393602
+          },
+          {
+            "geom": "if_tip",
+            "normal_force_N_model_only": 0.04312561144057186,
+            "position_world": [
+              0.17488925543293846,
+              -0.023811753482818165,
+              -0.016727303000018838
+            ],
+            "height_above_cube_center_mm": 1.0592923722832301
+          },
+          {
+            "geom": "th_tip",
+            "normal_force_N_model_only": 0.0,
+            "position_world": [
+              0.12781703251079132,
+              -0.05597764533756941,
+              -0.0166776350660078
+            ],
+            "height_above_cube_center_mm": -13.9543106725602
+          }
+        ],
+        "guard": {
+          "self_mm": 0.0011635467285688733,
+          "support_mm": 0.0,
+          "cube_mm": 0.001255309473950346,
+          "tracking_rad": 0.030486989328605794,
+          "range_rad": 0.0,
+          "reasons": [
+            "self_mm"
+          ],
+          "self_pairs_mm": {
+            "if_ds_collision_1|mf_px_collision": 0.0011635467285688733
+          },
+          "support_pairs_mm": {},
+          "hand_gap_s": 0.0,
+          "external_cube_support": false
+        },
+        "physical_hold_load_not_verified": true
+      },
+      "hold_samples": 0,
+      "three_support_fraction": 0.0,
+      "orientation_drift_deg": 0.9698854234080644,
+      "center_error_mm": 0.31990316633766164,
+      "hold_orientation_drift_deg": 0.0,
+      "hold_center_drift_mm": 0.0,
+      "third_support_passed": false,
+      "no_cube_or_hand_state_reset_during_suffix": true
+    }
+  ],
+  "second90_rotation_passed": false,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "elapsed_seconds": 96.617471043
+}

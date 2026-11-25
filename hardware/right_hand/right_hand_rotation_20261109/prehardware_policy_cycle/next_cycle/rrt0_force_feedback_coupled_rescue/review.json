@@ -1,0 +1,152 @@
+{
+  "status": "force_feedback_teacher_for_cooperative_contact_bridge",
+  "source_sha256": "62ec99dd86b24ab9148b0d1d4ef5d838d9195135531b55b7ff5f157d433908f5",
+  "planned_path_sha256": "d8dd81c76ebd474701dc1f11c8f1c8905a402418aa26137c565f109d4b3ee880",
+  "model_provenance": {
+    "model_kind": "active",
+    "model_path": "right_hand_rotation_20261106/middle_clearance_probe/evidence/model.mjb",
+    "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "steps": 1,
+  "stop": "no_safe_two_tick_correction_found",
+  "trace": [
+    {
+      "orientation_error_deg": 0.14459125433179637,
+      "center_error_mm": 0.24766965626437645,
+      "forces_N_model_only": {
+        "if_bs_collision_1": 0.7461138891136314,
+        "if_tip": 0.07411258468466161
+      },
+      "posture_error_max_ticks": 36.8712074169458,
+      "step": 1,
+      "progress": 18,
+      "planned_moving_goals": 913,
+      "ring_support_selected": false,
+      "prediction_qpos_error": 0.0
+    }
+  ],
+  "final": {
+    "orientation_error_deg": 0.14459125433179637,
+    "center_error_mm": 0.24766965626437645,
+    "forces_N_model_only": {
+      "if_bs_collision_1": 0.7461138891136314,
+      "if_tip": 0.07411258468466161
+    },
+    "posture_error_max_ticks": 36.8712074169458,
+    "step": 1,
+    "progress": 18,
+    "planned_moving_goals": 913,
+    "ring_support_selected": false,
+    "prediction_qpos_error": 0.0
+  },
+  "endpoint": {
+    "yaw_deg": 89.96251937434405,
+    "target90_error_deg": 0.7857072155289373,
+    "up_tilt_deg": 0.7856671095425684,
+    "center": [
+      0.1627109851485093,
+      -0.05301531267328927,
+      -0.01433361045237293
+    ],
+    "upper_sweep_gap_mm": 0.204577014786139,
+    "closest_upper_geoms": [
+      [
+        "mf_tip",
+        0.204577014786139
+      ],
+      [
+        "cadtip_mf_th_mf_ds_1",
+        0.204577014786139
+      ],
+      [
+        "cadtip_mf_rf_mf_ds_1",
+        0.204577014786139
+      ],
+      [
+        "if_tip",
+        1.0646861271810195
+      ],
+      [
+        "cadtip_mf_th_th_px_0",
+        1.7663889135249438
+      ]
+    ],
+    "contacts": [
+      {
+        "geom": "if_bs_collision_1",
+        "normal_force_N_model_only": 0.7461138891136314,
+        "position_world": [
+          0.14688381155311275,
+          -0.05579999167369045,
+          -0.03791930212053813
+        ],
+        "height_above_cube_center_mm": -27.499379248038828
+      },
+      {
+        "geom": "if_px_collision",
+        "normal_force_N_model_only": 0.22961419245531586,
+        "position_world": [
+          0.1689035089898325,
+          -0.05365273704632782,
+          -0.045768834145453886
+        ],
+        "height_above_cube_center_mm": -27.49989107711796
+      },
+      {
+        "geom": "if_tip",
+        "normal_force_N_model_only": 0.07411258468466161,
+        "position_world": [
+          0.17506482361594985,
+          -0.023551519583687737,
+          -0.016768494793223218
+        ],
+        "height_above_cube_center_mm": 1.4743629602695245
+      }
+    ],
+    "guard": {
+      "self_mm": 0.0,
+      "support_mm": 0.0,
+      "cube_mm": 0.0012415039222330945,
+      "tracking_rad": 0.02882461028882464,
+      "range_rad": 0.0,
+      "reasons": [],
+      "self_pairs_mm": {},
+      "support_pairs_mm": {},
+      "hand_gap_s": 0.0,
+      "external_cube_support": false
+    },
+    "physical_hold_load_not_verified": true
+  },
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.001396066355389687,
+    "tracking_rad": 0.02882461028882464,
+    "range_rad": 0.0
+  },
+  "prediction_rejections": {
+    "self_mm": 167
+  },
+  "final_hold_samples": 0,
+  "final_support_fraction": 0.0,
+  "hold_orientation_drift_deg": 0.0,
+  "hold_center_drift_mm": 0.0,
+  "temporary_third_support_passed": false,
+  "second90_rotation_passed": false,
+  "native_physics_limits_and_max2ticks75ms_retained": true,
+  "cube_never_reset_during_teacher": true,
+  "posture_weight": 0.1,
+  "resume_state": "next_cycle/rrt0_force_feedback/end_state.npz",
+  "resume_state_sha256": "bdaf9382fae6fa6e0ef767269e280350771e334e0d6f84caf449dda63b2474b8",
+  "is_SAC": false,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "elapsed_seconds": 1.649731996000014
+}

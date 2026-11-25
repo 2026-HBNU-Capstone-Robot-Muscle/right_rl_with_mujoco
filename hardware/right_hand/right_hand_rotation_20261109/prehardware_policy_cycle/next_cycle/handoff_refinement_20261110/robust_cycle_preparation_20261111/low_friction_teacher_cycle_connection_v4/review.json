@@ -1,0 +1,221 @@
+{
+  "status": "low_friction_teacher_clear_hold_and_next_turn_connections",
+  "source_files_sha256": {
+    "next_cycle/handoff_refinement_20261110/robust_mu025_finish_teacher_v4/review.json": "de60fd917604e547110d77704cd22b9b066da90970f23f38916f864212267ede",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_finish_teacher_v4/research_goals.npz": "eac6d7fdf5acd19d7a68879355d60ccdb317812851a3322c8888fea1f6ed896e",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_finish_teacher_v4/end_state.npz": "0ff0ecb5f29893fe10e6ba979b3d4a4b41e0331d9f53a20d9e6983536a9d3d3e",
+    "next_cycle/handoff_refinement_20261110/initial_second_turn_hold_replay/research_goals.npz": "3c2c435bedf3de20af111e61256332a3594e0f91de7102bec25960eff82fc97a",
+    "next_cycle/handoff_refinement_20261110/initial_to_reconfigured_first90/end_state.npz": "0db307bdb99a241af069d60db1376cd7ace380691d6208c5227edeb56be25a9b",
+    "next_cycle/handoff_refinement_20261110/initial_to_reached_workstation90/end_state.npz": "37f9bb098ccf2cc393624da1798b4e124bcb75d8e0a05a1073193d28cd5bad45",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_transport_teacher_v2/review.json": "9b16864a073b9d8dd9862504166a308b28fcf0d4099cdfc0b077f292e9af18db",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_transport_teacher_v2/research_goals.npz": "cad68cbbc6cc43a5d8e59f92676ec05f5f897e436cfd565e10f40ba8904c5a92",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_transport_teacher_v2/end_state.npz": "bf264d84d5a9478379e8aa216d314b41b4ab270a8f92a74fa597aafbc30a547b",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_finish_teacher_v3/review.json": "1b5293fa96c7925f735200bf895b24989bf1349eb4832b3fac695d90d7511b79",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_finish_teacher_v3/research_goals.npz": "8a55699cd7087096cf4cf28630b003aeb265acca85ff5e2c212de9a33bac1fbb",
+    "next_cycle/handoff_refinement_20261110/robust_mu025_finish_teacher_v3/end_state.npz": "f32755182c4f466b3da5b4f6029f96d3c5ff396fc3f17131eaa8ed66fcde9b1e"
+  },
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "sliding_friction_hypothesis": 0.25,
+  "rows": [
+    {
+      "path": "next_cycle/handoff_refinement_20261110/robust_cycle_preparation_20261111/low_friction_teacher_cycle_connection_v4/keep_teacher_pose",
+      "case": "keep_teacher_pose",
+      "steps": 4458,
+      "stop": [],
+      "first_hold_passed": true,
+      "second_hold_passed": false,
+      "two_turn_reached_location_holds_passed": false,
+      "seams": [
+        {
+          "stage": "low_friction_teacher",
+          "after_goal": 2424,
+          "bound_state_errors": {
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "ctrl": 0.0,
+            "act": 0.0,
+            "qacc_warmstart": 0.0
+          }
+        }
+      ],
+      "holds": [
+        {
+          "target_yaw_deg": 90.0,
+          "samples": 4050,
+          "supported_samples": 4050,
+          "upper_certified_samples": 4050,
+          "minimum_upper_lower_mm": 1.0383166169678262,
+          "shift_mm": 0.0036035694381894414,
+          "drift_deg": 0.004830035292231606,
+          "orientation_error_deg": 4.981381271514882,
+          "tilt_deg": 0.051089360140133905,
+          "passed": true
+        },
+        {
+          "target_yaw_deg": 180.0,
+          "samples": 4050,
+          "supported_samples": 4050,
+          "upper_certified_samples": 4050,
+          "minimum_upper_lower_mm": 1.3117601784549162,
+          "shift_mm": 0.13839669724317888,
+          "drift_deg": 0.10467863961106685,
+          "orientation_error_deg": 87.49581793384482,
+          "tilt_deg": 3.63555061716654,
+          "passed": false
+        }
+      ],
+      "actual_state_resets_after_initial_placement": 0,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.002007434832278196,
+        "cube_mm": 0.11735765688043241,
+        "tracking_rad": 0.10321156084385774,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.00043239807246374384,
+        "tracking_rad": 0.03261169750741577,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/robust_cycle_preparation_20261111/low_friction_teacher_cycle_connection_v4/direct_reconfigured",
+      "case": "direct_reconfigured",
+      "steps": 2774,
+      "stop": [],
+      "first_hold_passed": false,
+      "second_hold_passed": false,
+      "two_turn_reached_location_holds_passed": false,
+      "seams": [
+        {
+          "stage": "low_friction_teacher",
+          "after_goal": 2424,
+          "bound_state_errors": {
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "ctrl": 0.0,
+            "act": 0.0,
+            "qacc_warmstart": 0.0
+          }
+        }
+      ],
+      "holds": [
+        {
+          "target_yaw_deg": 90.0,
+          "samples": 4050,
+          "supported_samples": 4050,
+          "upper_certified_samples": 4050,
+          "minimum_upper_lower_mm": 0.47222869554484515,
+          "shift_mm": 0.24497009759953556,
+          "drift_deg": 0.2836074739224695,
+          "orientation_error_deg": 5.030238484069243,
+          "tilt_deg": 0.010847769205402239,
+          "passed": false
+        }
+      ],
+      "actual_state_resets_after_initial_placement": 0,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.002007434832278196,
+        "cube_mm": 0.11735765688043241,
+        "tracking_rad": 0.10321156084385774,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0007263467076208416,
+        "tracking_rad": 0.03276601800081939,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/robust_cycle_preparation_20261111/low_friction_teacher_cycle_connection_v4/open_then_reconfigured",
+      "case": "open_then_reconfigured",
+      "steps": 3227,
+      "stop": [],
+      "first_hold_passed": false,
+      "second_hold_passed": false,
+      "two_turn_reached_location_holds_passed": false,
+      "seams": [
+        {
+          "stage": "low_friction_teacher",
+          "after_goal": 2424,
+          "bound_state_errors": {
+            "qpos": 0.0,
+            "qvel": 0.0,
+            "ctrl": 0.0,
+            "act": 0.0,
+            "qacc_warmstart": 0.0
+          }
+        }
+      ],
+      "holds": [
+        {
+          "target_yaw_deg": 90.0,
+          "samples": 4050,
+          "supported_samples": 4050,
+          "upper_certified_samples": 4050,
+          "minimum_upper_lower_mm": 1.0293845045552388,
+          "shift_mm": 0.013464948149339878,
+          "drift_deg": 0.034366609156012536,
+          "orientation_error_deg": 6.672592227390369,
+          "tilt_deg": 0.004244194069944454,
+          "passed": false
+        }
+      ],
+      "actual_state_resets_after_initial_placement": 0,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.002007434832278196,
+        "cube_mm": 0.11735765688043241,
+        "tracking_rad": 0.10321156084385774,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.0007156691428445292,
+        "tracking_rad": 0.0326946003681272,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    }
+  ],
+  "old_nominal_and_failed_perturbation_results_preserved": true,
+  "source_guards_and_joint_limits_preserved": true,
+  "physical_registration_unverified": true,
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

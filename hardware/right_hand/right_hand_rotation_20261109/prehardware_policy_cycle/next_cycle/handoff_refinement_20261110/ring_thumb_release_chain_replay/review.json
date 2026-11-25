@@ -1,0 +1,111 @@
+{
+  "status": "intermediate_chain_replay_passed",
+  "steps": 426,
+  "source": "next_cycle/handoff_refinement_20261110/ring_thumb_next90/start_state.npz",
+  "source_files_sha256": {
+    "next_cycle/handoff_refinement_20261110/ring_thumb_next90/start_state.npz": "b400b482a181169c00d28e609b524d8595139877a384ce61b42b4436c500b243",
+    "next_cycle/handoff_refinement_20261110/ring_thumb_turn_checkpoint/goals.npz": "bb49a0afa6954fbc396cbc926c45c531a0d8a1d0cc2a485d2a612001d4e41a96",
+    "next_cycle/handoff_refinement_20261110/ring_thumb_turn_checkpoint/state.npz": "a30be1b558ce7af7bea64d88d93d26b2e3beff279fc3050b1ef73f3336a1b2f7",
+    "next_cycle/handoff_refinement_20261110/ring_tip_palm_clearance_waypoints/trial1/research_goals.npz": "eabe489272cd7dd7902ef1d076e42435b4687a8ddd36ada12f70623a5f951aca",
+    "next_cycle/handoff_refinement_20261110/ring_tip_palm_clearance_waypoints/trial1/end_state.npz": "60d5a61af8b55587a257cab06f6c5ace4a847e629b6598608c76500b03e1091a",
+    "next_cycle/handoff_refinement_20261110/ring_thumb_release_after_tip_clear/release1.6_retreat0/research_goals.npz": "5fb54578016c208bfb597ea4d1fc68bb2058d90604978e4ef7336d931c20ed18",
+    "next_cycle/handoff_refinement_20261110/ring_thumb_release_after_tip_clear/release1.6_retreat0/end_state.npz": "0e15db1e90f02c8d5698ee021c6574c30410efbeed708183ca740dd2d4813d99",
+    "next_cycle/handoff_refinement_20261110/ring_thumb_pair_clear_retreat_v2/trial2/research_goals.npz": "b268b2bb0d14c7470bf61b6b95f2818cd6663fc3a68c410329a95d4b31d86654",
+    "next_cycle/handoff_refinement_20261110/ring_thumb_pair_clear_retreat_v2/trial2/end_state.npz": "0603451541e7cd6e0eec933ada6751ddcfbca8e8dd95acd7967fb24d046ced8a"
+  },
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "seams": [
+    {
+      "segment": "original_turn_prefix304",
+      "steps": 304,
+      "after_goal": 304,
+      "bound_state_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "act": 0.0,
+        "qacc_warmstart": 0.0
+      },
+      "segment_center_change_mm": 14.14506589028065,
+      "segment_angle_change_deg": 16.966854843391385
+    },
+    {
+      "segment": "RF_palm_clear32",
+      "steps": 32,
+      "after_goal": 336,
+      "bound_state_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "act": 0.0,
+        "qacc_warmstart": 0.0
+      },
+      "segment_center_change_mm": 0.2388224873347257,
+      "segment_angle_change_deg": 0.44463302787598175
+    },
+    {
+      "segment": "pressure_release41",
+      "steps": 41,
+      "after_goal": 377,
+      "bound_state_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "act": 0.0,
+        "qacc_warmstart": 0.0
+      },
+      "segment_center_change_mm": 0.9240906992370559,
+      "segment_angle_change_deg": 2.0332572934994912
+    },
+    {
+      "segment": "RF_TH_palm_clear_and_RF14_retreat49",
+      "steps": 49,
+      "after_goal": 426,
+      "bound_state_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "act": 0.0,
+        "qacc_warmstart": 0.0
+      },
+      "segment_center_change_mm": 1.5559680395312003,
+      "segment_angle_change_deg": 3.3684353666588915
+    }
+  ],
+  "actual_state_resets_after_start": 0,
+  "samples": 31950,
+  "whole_hand_supported_samples": 31950,
+  "whole_hand_support_fraction": 1.0,
+  "worst": {
+    "self_mm": 0.0,
+    "support_mm": 0.0,
+    "cube_mm": 0.020035300115427614,
+    "tracking_rad": 0.10389123572830505,
+    "range_rad": 0.0
+  },
+  "final180_error_deg": 77.26208666258341,
+  "center_change_from_source_mm": 16.161145352646233,
+  "RF14_upper_room_deg": 3.7888666323887716,
+  "source_grip_was_initialized_separately": true,
+  "arrival_from_first90_not_certified": true,
+  "intermediate_motion_not_final_pose_hold": true,
+  "final4050_upper_clearance_not_certified": true,
+  "full_two_turn_cycle_passed": false,
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

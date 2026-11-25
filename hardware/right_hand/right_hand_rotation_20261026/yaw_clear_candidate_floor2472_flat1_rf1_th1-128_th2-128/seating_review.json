@@ -1,0 +1,312 @@
+{
+  "status": "same_measured_motion_yaw_seating_diagnostic",
+  "source_sha256": "1722388e82f512b9f7fa24d60a75ef8320c59435c61d5f6117c6d7fec70a794d",
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "cases": [
+    {
+      "x_mm": -40,
+      "y_mm": -15,
+      "height_mm": 77.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 13.043691581067089,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -40,
+      "y_mm": 0,
+      "height_mm": 93.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 11.25422437858715,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -40,
+      "y_mm": 15,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 60.49318848952147,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -25,
+      "y_mm": -15,
+      "height_mm": 65.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 11.196181380550442,
+      "friction": 0.3,
+      "best": {
+        "time_s": 27.6,
+        "yaw_deg": 8.840615737416023,
+        "green_up_error_deg": 11.716950496750332,
+        "score": 104.59328525608464
+      },
+      "maximum_cube_overlap_mm": 0.037456898850128824,
+      "maximum_no_hand_contact_seconds": 0.12000000000000001,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.10740455003715967,
+        -0.10099811002976679,
+        -0.032500614620584074,
+        -0.9670371074882349,
+        -0.0860105719973485,
+        -0.21223642086806285,
+        -0.11134233652385776
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": -25,
+      "y_mm": 0,
+      "height_mm": 65.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 11.198770406754479,
+      "friction": 0.3,
+      "best": {
+        "time_s": 27.6,
+        "yaw_deg": 8.751640492380378,
+        "green_up_error_deg": 11.706098308509524,
+        "score": 104.66055612463867
+      },
+      "maximum_cube_overlap_mm": 0.03708899231049358,
+      "maximum_no_hand_contact_seconds": 0.1,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.10872699476298925,
+        -0.08926847992127762,
+        -0.031663786967081026,
+        -0.9727384832095683,
+        0.09638934790043704,
+        -0.1841173478095728,
+        -0.10290645815519245
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": -25,
+      "y_mm": 15,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 20.699163449923674,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -10,
+      "y_mm": -15,
+      "height_mm": 76.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 29.369502268149343,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -10,
+      "y_mm": 0,
+      "height_mm": 76.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 29.506644754763574,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -10,
+      "y_mm": 15,
+      "height_mm": 76.0,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 14.558453430964265,
+      "friction": 0.3,
+      "best": {
+        "time_s": 26.68,
+        "yaw_deg": 10.037593157886162,
+        "green_up_error_deg": 5.615673450939366,
+        "score": 91.19375374399257
+      },
+      "maximum_cube_overlap_mm": 0.06330584201833758,
+      "maximum_no_hand_contact_seconds": 0.18,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.13268941700004064,
+        -0.11517883887153316,
+        -0.04742650237455705,
+        -0.8907748289565968,
+        0.0022380565340147903,
+        -0.45421100949135623,
+        -0.014406736519369533
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": 5,
+      "y_mm": -15,
+      "height_mm": 87.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 89.99948346366402,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 5,
+      "y_mm": 0,
+      "height_mm": 87.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 78.77858950948243,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 5,
+      "y_mm": 15,
+      "height_mm": 87.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 32.77353205840546,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 20,
+      "y_mm": -15,
+      "height_mm": 91.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 29.35892052574371,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 20,
+      "y_mm": 0,
+      "height_mm": 91.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 90.0,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 20,
+      "y_mm": 15,
+      "height_mm": 92.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 48.01815060487252,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 35,
+      "y_mm": -15,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 89.99974388763711,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 35,
+      "y_mm": 0,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 44.1637427850337,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 35,
+      "y_mm": 15,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 90.98751245581245,
+      "friction": 0.3
+    }
+  ],
+  "actual_cube_placement_not_registered": true,
+  "friction_not_measured": true,
+  "hand_response_prescribed_from_other_seating": true,
+  "source_motion_seconds": 100.5,
+  "hardware_execution_allowed": false,
+  "real_devices_opened": false,
+  "elapsed_seconds": 7.343477150999988,
+  "initial_up_error_limit_deg": 20.0,
+  "motion_source": "right_hand_rotation_20261026/yaw_original_clearance_search/raised_start/floor2472_flat1_rf1_th1-128_th2-128.npz"
+}

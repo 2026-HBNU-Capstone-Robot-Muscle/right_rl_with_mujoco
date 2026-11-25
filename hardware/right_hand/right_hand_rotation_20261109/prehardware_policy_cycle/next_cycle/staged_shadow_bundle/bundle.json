@@ -1,0 +1,74 @@
+{
+  "format": "first_turn_SAC_correction_position_hold_shadow_v1",
+  "residual_rad": 0.01,
+  "control_seconds": 0.075,
+  "maximum_goal_step_ticks": 2,
+  "sim_motor_ids": [
+    8,
+    6,
+    7,
+    5,
+    12,
+    10,
+    11,
+    9,
+    16,
+    14,
+    15,
+    13,
+    4,
+    3,
+    2,
+    1
+  ],
+  "required_frame": "leap_sim_world",
+  "required_palm_reference": "policy_palm_position",
+  "evidence": "First turn and position hold passed in3 model cases also used for teacher data; no independent generalization or second-turn claim",
+  "next_rotation_ready": false,
+  "physical_camera_registration_verified": false,
+  "hardware_execution_allowed": false,
+  "model_provenance": {
+    "model_kind": "active",
+    "model_path": "right_hand_rotation_20261106/middle_clearance_probe/evidence/model.mjb",
+    "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "files_sha256": {
+    "actor.npz": "3ebcc0f4111a963be307e3c0d586241efd62e20af282fb99fad9a84d176cecc8",
+    "reference.npz": "c56ceff470710f8e30665f9f72ff79089265e1db48a374799af06a908b88d344",
+    "shadow_runtime.py": "fdcf9d77045a35a2b9facba19afbaefba755ebcc9d670cd192ad9866da5582a2",
+    "staged_shadow_runtime.py": "fda5227701802704b15481304cb9bf23b11eaf57b71ba95f6de7c309af274a5a",
+    "correction_actor.npz": "21c2f4308c956737de187abd1cccf353bf795dff5d743e66a4d48d75520abf14",
+    "staging.npz": "78806832fc298343ddd4385c4961c3af856c31ebdb88d5d76f5a2860b6f46607"
+  },
+  "connected_model_cases": {
+    "nominal": {
+      "review": "connected_sac_student_hold_nominal\\review.json",
+      "sha256": "508b153a62c0d1fecdcc4a3116f2d8753208f11aad2675612fd65e4de98a8e89"
+    },
+    "x_plus05": {
+      "review": "connected_sac_student_hold_x_plus05\\review.json",
+      "sha256": "546ed64c132d10b457e69a010e25a426328ebfef0b802305a72ab5ccc6a995c9"
+    },
+    "friction025": {
+      "review": "connected_sac_student_hold_friction025\\review.json",
+      "sha256": "c6735e72dea3a2da5fc63ef905434ed0a9c94a7fcf6b315aad07ca0be64fc544"
+    }
+  },
+  "prefix_steps": 6300,
+  "acquire_samples": 8,
+  "correction_is_SAC": false,
+  "correction_is_model_teacher_behavior_clone": true,
+  "holding_mode": "Fixed position command with native position servo; no object-feedback reentry",
+  "correction_history_reset": "Repeat current sample into3 history slots and zero previous action at mode switch",
+  "first_turn_connected_review_sha256": "508b153a62c0d1fecdcc4a3116f2d8753208f11aad2675612fd65e4de98a8e89",
+  "first_turn_model_nominal_validated": true,
+  "complete_two_turn_cycle_validated": false,
+  "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4"
+}

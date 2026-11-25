@@ -1,0 +1,24 @@
+{
+  "source_sha256": "23d3669136ab007ca0d3a2be3484be52a4c9d1bad068ac66a17b98c46c420f79",
+  "new_sha256": "4dcdc69ab441f839b1f77c4c8b155b691237604e9b4af127ad46e495afc74cdd",
+  "changes": [
+    [
+      "target=upright_yaw_target(start_rotation,initial['up'],args.increment)",
+      "target=upright_yaw_target(restore(model,dict(np.load(ROOT/'right_hand_rotation_20261112/stage3_preparation/relative_turn_contact_v1_resume/start_state.npz',allow_pickle=False))).geom_xmat[cube].reshape(3,3),initial['up'],90.)"
+    ],
+    [
+      "mujoco.mj_step(model,branch);stop=check.check(branch)",
+      "mujoco.mj_step(model,branch);stop=check.check(branch) if (_+1)%5==0 else []"
+    ],
+    [
+      "status='stage3_relative_turn_model_teacher'",
+      "status='stage3_relative_turn_teacher_fast_planning_actual1ms'"
+    ]
+  ],
+  "continued_after_goals": 104,
+  "remaining_error_deg": 73.68648436999155,
+  "only_hypothetical_prediction_guard_stride_ms": 5,
+  "actual_execution_guard_stride_ms": 1,
+  "native_thresholds_unchanged": true,
+  "hardware_allowed": false
+}

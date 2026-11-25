@@ -1,0 +1,544 @@
+{
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "cases": [
+    {
+      "book_frame_position_mm": [
+        42,
+        12,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.381170996476141,
+      "settle_shift_mm": 9.179423208823664,
+      "settled_cube_qpos": [
+        0.1883273308021391,
+        -0.022559441955018248,
+        -0.02873425863231622,
+        -0.7054134734341749,
+        0.6731323222804126,
+        -0.15970726181015477,
+        -0.15420213592559112
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 13.572210790650518,
+      "hold_error_deg": 13.645126660292682,
+      "red_up_error_deg": 6.392423894821231,
+      "green_wrist_error_deg": 8.442499058280472,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.002,
+      "max_cube_overlap_mm": 0.6425431993460983,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "if_px_collision",
+        "mf_bs_collision_1",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12155506798893279,
+        -0.03167515007675481,
+        0.010118479234836253,
+        -0.5280437401305805,
+        0.5809979395823386,
+        0.4158448581524142,
+        0.45900354754422423
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        42,
+        15,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.485595472209005,
+      "settle_shift_mm": 8.432258026608526,
+      "settled_cube_qpos": [
+        0.18793234881480528,
+        -0.01886545068829018,
+        -0.02842481887563457,
+        -0.7068785435491901,
+        0.6715930568207361,
+        -0.1596812069971438,
+        -0.15423165314516596
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 9.627216929904124,
+      "hold_error_deg": 9.627216929904124,
+      "red_up_error_deg": 2.1416178952168403,
+      "green_wrist_error_deg": 5.1203746148569635,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.6513564349490344,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.1232439356919232,
+        -0.02060707527839695,
+        0.011496106183871172,
+        -0.5476368917736707,
+        0.5934741816578489,
+        0.3993891851631398,
+        0.4340167154024618
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        42,
+        18,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.589377382943629,
+      "settle_shift_mm": 7.5670859501314,
+      "settled_cube_qpos": [
+        0.18734778915228426,
+        -0.015329694801830012,
+        -0.02801110738315143,
+        -0.7079146363333996,
+        0.6705009757606637,
+        -0.16227688299646234,
+        -0.15149759870671542
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 8.763387167796516,
+      "hold_error_deg": 8.772370361445322,
+      "red_up_error_deg": 1.9070739934502388,
+      "green_wrist_error_deg": 3.775444931576483,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.4566262707368922,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12402026053056797,
+        -0.01834897795420102,
+        0.011351310876863993,
+        -0.5556541752220524,
+        0.5876371747053502,
+        0.40347530881195953,
+        0.4279470336872413
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        44,
+        12,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.467405722896362,
+      "settle_shift_mm": 4.250440972541788,
+      "settled_cube_qpos": [
+        0.1855830538019509,
+        -0.020698882131339757,
+        -0.027352469629625488,
+        -0.7071579997112005,
+        0.6712595176860716,
+        -0.155355111211567,
+        -0.15875456774769864
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 10.321584215748388,
+      "hold_error_deg": 10.321584215748388,
+      "red_up_error_deg": 2.3556657745558334,
+      "green_wrist_error_deg": 5.484359621520659,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.6532911164778773,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12297988709623126,
+        -0.02177451766560243,
+        0.011483611209588558,
+        -0.5453206270283507,
+        0.5941056154629413,
+        0.3992686838557512,
+        0.43617479237675294
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        44,
+        15,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.5541372015336785,
+      "settle_shift_mm": 4.043783448650182,
+      "settled_cube_qpos": [
+        0.18549869248150777,
+        -0.017580935356284317,
+        -0.027204513666374695,
+        -0.7081166077387399,
+        0.6702660146466695,
+        -0.15695393216106832,
+        -0.1570980669309162
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 9.575806761198066,
+      "hold_error_deg": 9.575806761198066,
+      "red_up_error_deg": 2.0315252894672424,
+      "green_wrist_error_deg": 4.614502111962266,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.4332317642283661,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12353625625313876,
+        -0.019843372278234482,
+        0.011451757298719917,
+        -0.5506526421247993,
+        0.59145188381851,
+        0.4007732793742235,
+        0.43167941274532046
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        44,
+        18,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 4.4894448547485135,
+      "settle_shift_mm": 3.0702959868873316,
+      "settled_cube_qpos": [
+        0.18469917108240771,
+        -0.013765705704671172,
+        -0.026809983578738483,
+        -0.7027516425918326,
+        0.6803854421929421,
+        -0.14484084919128737,
+        -0.14912044558659399
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 7.070857879362695,
+      "hold_error_deg": 7.109361293013462,
+      "red_up_error_deg": 1.894540291117374,
+      "green_wrist_error_deg": 3.2677582480129512,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.006,
+      "max_cube_overlap_mm": 0.6788011042328036,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12431155170649982,
+        -0.01745279665910197,
+        0.011263293767321842,
+        -0.5587548466201435,
+        0.5847794612608505,
+        0.40562030261172,
+        0.42579123191435714
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        46,
+        12,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.471824246212711,
+      "settle_shift_mm": 4.71176663461827,
+      "settled_cube_qpos": [
+        0.1876749566479701,
+        -0.020940892039168286,
+        -0.028364492334702084,
+        -0.7073789805131955,
+        0.6709999728954872,
+        -0.15393259783009117,
+        -0.1602459660261257
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 10.771135797772118,
+      "hold_error_deg": 10.771135797772118,
+      "red_up_error_deg": 2.731817773463914,
+      "green_wrist_error_deg": 5.684221108669461,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.7295515037914958,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12273969413025744,
+        -0.023390876870897925,
+        0.011389350290340574,
+        -0.5438331894965694,
+        0.5928289522121707,
+        0.40093484334725266,
+        0.43823572060150523
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        46,
+        15,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.553967258913826,
+      "settle_shift_mm": 4.513416789682032,
+      "settled_cube_qpos": [
+        0.18758496101987612,
+        -0.01784439695285637,
+        -0.028215904687218536,
+        -0.708243670619099,
+        0.6701165442673002,
+        -0.15584985942479168,
+        -0.1582578321743072
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 10.210796368581612,
+      "hold_error_deg": 10.210796368581612,
+      "red_up_error_deg": 2.2090989884193752,
+      "green_wrist_error_deg": 5.386627943269954,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.4297090814524116,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.12308890278685052,
+        -0.02098525236738113,
+        0.011515177919607333,
+        -0.5460417949443481,
+        0.5944699933818282,
+        0.39872050931799363,
+        0.43527662536801
+      ],
+      "candidate_accepted": true
+    },
+    {
+      "book_frame_position_mm": [
+        46,
+        18,
+        54.5
+      ],
+      "initial_supports": [
+        "if_px_collision",
+        "mf_px_collision"
+      ],
+      "settled_green_up_error_deg": 6.663943640136427,
+      "settle_shift_mm": 4.0772556141943035,
+      "settled_cube_qpos": [
+        0.18734595864191442,
+        -0.014543069139111815,
+        -0.027969653168177247,
+        -0.7093583057537883,
+        0.6689598551265878,
+        -0.15807864148338657,
+        -0.15593155355442956
+      ],
+      "valid_two_link_upright_start": true,
+      "final_target_error_deg": 9.109986659265127,
+      "hold_error_deg": 9.122203310734518,
+      "red_up_error_deg": 1.911649295238965,
+      "green_wrist_error_deg": 3.811324009962407,
+      "external_cube_contact": false,
+      "max_no_hand_contact_s": 0.003,
+      "max_cube_overlap_mm": 0.4215868489546674,
+      "final_cube_supports": [
+        "if_bs_collision_1",
+        "mf_bs_collision_1",
+        "mf_px_collision",
+        "th_ds_collision_1"
+      ],
+      "orientation_retention_pass": true,
+      "final_cube_qpos": [
+        0.1239988997103242,
+        -0.0184331312654116,
+        0.011356161151982836,
+        -0.5554381006868864,
+        0.5878090249391209,
+        0.40335333103156534,
+        0.42810647840368604
+      ],
+      "candidate_accepted": true
+    }
+  ],
+  "source": "quarter_finish_empty_20261025_234555_682505/result.json",
+  "source_sha256": "7a5cbeead95766bd396ee1d5112b7eae48bf7bd344df355bbe0e8a81b46a51e4",
+  "book_frame_level_is_a_setup_hypothesis": true,
+  "original_gravity_world": [
+    -3.9700269217252693,
+    -0.2684224280438546,
+    -8.967607592080386
+  ],
+  "diagnostic_gravity_world": [
+    -3.3317341134034493,
+    -0.0,
+    -9.227713589087054
+  ],
+  "measured_loaded_joint_path_prescribed": true,
+  "infinite_effective_hand_inertia_assumption": true,
+  "physical_friction_identified": false,
+  "hypothetical_contact_time": 0.004,
+  "contact_parameters_identified": false,
+  "finish_extra_root_ticks": 0,
+  "cube_friction": 0.3,
+  "timestep": 0.001,
+  "actual_cube_position_in_hand_not_registered": true,
+  "hardware_execution_allowed": false,
+  "hardware_commands_sent": 0
+}

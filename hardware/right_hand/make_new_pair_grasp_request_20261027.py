@@ -1,0 +1,5 @@
+"""Construct offline nominal request from repeated PING/READ-only evidence."""
+import json
+from new_pair_grasp_plan_20261027 import ROOT,OUT,REQUEST,NewPairGraspPlan
+from hand_motor_mapping import SIM_TO_MOTOR_IDS
+latest=json.loads((ROOT/'right_hand_rotation_20261027/grasp_off_latest.json').read_bytes());record=json.loads((ROOT/latest['result']).read_bytes());assert record['maximum_drift_ticks']<=4 and record['motor_writes']==0;motors=record['snapshots'][-1]['motors'];state={key:[m[field] for m in motors] for key,field in [('position','position_ticks_signed'),('voltage','voltage_raw'),('temperature','temperature_c'),('torque','torque_enabled'),('error','hardware_error'),('watchdog','bus_watchdog_raw')]};OUT.mkdir(exist_ok=True);r=dict(plan_version=NewPairGraspPlan.PLAN_VERSION,motor_ids_in_sim_order=list(SIM_TO_MOTOR_IDS),off_state=state,readonly_evidence=latest);REQUEST.write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8');p=NewPairGraspPlan(REQUEST);rows=p.plan(p.source_position());print('Prepared',REQUEST,'goals',len(rows),'motion seconds',len(rows)*.075,'No devices opened.')

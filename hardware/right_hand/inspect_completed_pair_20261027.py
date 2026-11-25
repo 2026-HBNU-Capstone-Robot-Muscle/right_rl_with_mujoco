@@ -1,0 +1,4 @@
+import json,collections
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent
+folder=ROOT/'new_pair_grasp_20261027_050946_894527';r=json.loads((folder/'result.json').read_bytes());print('SCALARS',json.dumps({k:v for k,v in r.items() if not isinstance(v,(list,dict))},ensure_ascii=False));print('SAMPLE',json.dumps(r['samples'][0],ensure_ascii=False));print('LAST',json.dumps(r['samples'][-1],ensure_ascii=False));f=json.loads((folder/'camera/frames.json').read_bytes());print('FRAME_TYPE',type(f).__name__);print('FRAME_EXAMPLE',str(f[:2] if isinstance(f,list) else {k:(v[:2] if isinstance(v,list) else v) for k,v in f.items()})[:5000]);print('PHOTO_REPORT',json.dumps({k:v for k,v in r.items() if ('photo' in k or 'camera_recording'==k or 'voltage' in k) and k!='samples'},ensure_ascii=False)[:6000])

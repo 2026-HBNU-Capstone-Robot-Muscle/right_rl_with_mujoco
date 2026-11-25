@@ -1,0 +1,99 @@
+{
+  "algorithm": "Brax SAC",
+  "steps": 10000,
+  "residual_rad": 0.01,
+  "observation_size": 110,
+  "action_size": 16,
+  "current_model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+  "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+  "numerical_CCD_iterations": 50,
+  "control_seconds": 0.075,
+  "max_goal_ticks": 2,
+  "integer_encoder_observations": true,
+  "restored_actor": "right_hand_rotation_20261109/prehardware_policy_cycle/sac_ccd50_repair_10k/checkpoints/000000010000",
+  "restore_scope": "actor and normalization; new critics/optimizers",
+  "reset_source": "actual CCD50 parent rollout",
+  "reset_indices": [
+    3000,
+    3400,
+    3600
+  ],
+  "horizon": 1200,
+  "all_training_windows_cross_parent_failure4118": true,
+  "valid_step_reward_lower_bound": 0.08,
+  "fault_reward": -20.0,
+  "tests": [
+    {
+      "first": 3600,
+      "end": 4800,
+      "one_step_reward": 0.7538284659385681
+    },
+    {
+      "first": 3600,
+      "end": 4800,
+      "one_step_reward": 0.7538284659385681
+    },
+    {
+      "first": 3400,
+      "end": 4600,
+      "one_step_reward": 0.6019026041030884
+    },
+    {
+      "first": 3400,
+      "end": 4600,
+      "one_step_reward": 0.6019026041030884
+    },
+    {
+      "first": 3000,
+      "end": 4200,
+      "one_step_reward": 0.5069233775138855
+    },
+    {
+      "first": 3600,
+      "end": 4800,
+      "one_step_reward": 0.7538284659385681
+    },
+    {
+      "first": 3600,
+      "end": 4800,
+      "one_step_reward": 0.7538284659385681
+    },
+    {
+      "first": 3000,
+      "end": 4200,
+      "one_step_reward": 0.5069233775138855
+    },
+    {
+      "first": 3000,
+      "end": 4200,
+      "one_step_reward": 0.5069233775138855
+    },
+    {
+      "first": 3600,
+      "end": 4800,
+      "one_step_reward": 0.7538284659385681
+    },
+    {
+      "first": 3600,
+      "end": 4800,
+      "one_step_reward": 0.7538284659385681
+    },
+    {
+      "first": 3400,
+      "end": 4600,
+      "one_step_reward": 0.6019026041030884
+    }
+  ],
+  "learning_windows_not_continuous_cycle_success": true,
+  "planned_deployment_gate": [
+    3000,
+    4800
+  ],
+  "native_geometry_limits_force_caps_and_guards_preserved": true,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false,
+  "status": "offline_CCD50_long_recovery_SAC_complete",
+  "trainer_reported_environment_steps": 10000,
+  "elapsed_seconds": 639.3160144230001,
+  "task_success_certified": false
+}

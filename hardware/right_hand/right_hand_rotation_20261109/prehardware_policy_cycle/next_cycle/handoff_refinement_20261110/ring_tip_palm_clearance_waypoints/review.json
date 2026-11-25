@@ -1,0 +1,168 @@
+{
+  "status": "RF_tip_palm_clearance_before_pressure_release",
+  "source": "next_cycle/handoff_refinement_20261110/ring_thumb_turn_checkpoint/state.npz",
+  "source_sha256": "a30be1b558ce7af7bea64d88d93d26b2e3beff279fc3050b1ef73f3336a1b2f7",
+  "model_provenance": {
+    "model_kind": "active_ccd50",
+    "model_path": "right_hand_rotation_20261109/prehardware_policy_cycle/next_cycle/handoff_refinement_20261110/collision_convergence/model_ccd50.mjb",
+    "model_sha256": "2608fe8475883c8250d8974956cc9209b50a0ca49c8bec6047970eec20b20b30",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": false,
+    "original_source_model_file_preserved": true,
+    "native_geometry_limits_and_guard_thresholds_preserved": true,
+    "numerical_CCD_iterations": 50
+  },
+  "static_proposals": [
+    {
+      "margin_mm": 0.2,
+      "separation_lower_bounds_mm": [
+        0.201902570176285,
+        0.20190257017628846
+      ],
+      "tip_cube_gap_screen_mm": -0.024999941022663813,
+      "static_valid": true,
+      "nfev": 4170
+    },
+    {
+      "margin_mm": 0.5,
+      "separation_lower_bounds_mm": [
+        0.500071225221159,
+        0.5000712252211624
+      ],
+      "tip_cube_gap_screen_mm": -0.024999786684605854,
+      "static_valid": true,
+      "nfev": 4355
+    },
+    {
+      "margin_mm": 1.0,
+      "separation_lower_bounds_mm": [
+        1.0003568045245799,
+        1.00035680452459
+      ],
+      "tip_cube_gap_screen_mm": -0.024995508036770517,
+      "static_valid": true,
+      "nfev": 4290
+    }
+  ],
+  "trials": [
+    {
+      "path": "next_cycle/handoff_refinement_20261110/ring_tip_palm_clearance_waypoints/trial0",
+      "margin_objective_mm": 0.2,
+      "steps": 31,
+      "stop": [],
+      "RF_palm_gap_lower_bounds_mm": [
+        0.21106497129993324,
+        0.2110649712999471
+      ],
+      "whole_hand_support_fraction": 1.0,
+      "samples": 2250,
+      "cube_shift_mm": 0.10939629791460027,
+      "orientation_change_deg": 0.1465690627390214,
+      "RF_clear_supported_waypoint_passed": true,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.006956059140744897,
+        "tracking_rad": 0.06815958764825691,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.006845090682824453,
+        "tracking_rad": 0.06809860622459601,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/ring_tip_palm_clearance_waypoints/trial1",
+      "margin_objective_mm": 0.5,
+      "steps": 32,
+      "stop": [],
+      "RF_palm_gap_lower_bounds_mm": [
+        0.43268056208499095,
+        0.43268056208499095
+      ],
+      "whole_hand_support_fraction": 1.0,
+      "samples": 2250,
+      "cube_shift_mm": 0.2388256648745655,
+      "orientation_change_deg": 0.4446856983942627,
+      "RF_clear_supported_waypoint_passed": true,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.006850484045106793,
+        "tracking_rad": 0.06818027122911935,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.00672648267825129,
+        "tracking_rad": 0.06809067658926943,
+        "range_rad": 0.0,
+        "reasons": [],
+        "self_pairs_mm": {},
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/ring_tip_palm_clearance_waypoints/trial2",
+      "margin_objective_mm": 1.0,
+      "steps": 18,
+      "stop": [
+        "self_mm"
+      ],
+      "RF_palm_gap_lower_bounds_mm": [
+        0.7881343605963508,
+        0.7881343605963577
+      ],
+      "whole_hand_support_fraction": 1.0,
+      "samples": 973,
+      "cube_shift_mm": 0.45178506233754734,
+      "orientation_change_deg": 0.9299942567095753,
+      "RF_clear_supported_waypoint_passed": false,
+      "worst": {
+        "self_mm": 2.9136076629986323e-05,
+        "support_mm": 0.0,
+        "cube_mm": 0.006956059140744897,
+        "tracking_rad": 0.06836994463862206,
+        "range_rad": 0.0
+      },
+      "terminal_guard": {
+        "self_mm": 2.9136076629986323e-05,
+        "support_mm": 0.0,
+        "cube_mm": 0.006493819418408828,
+        "tracking_rad": 0.06829279066711169,
+        "range_rad": 0.0,
+        "reasons": [
+          "self_mm"
+        ],
+        "self_pairs_mm": {
+          "palm_collision_2|th_tip": 2.9136076629986323e-05
+        },
+        "support_pairs_mm": {},
+        "hand_gap_s": 0.0,
+        "external_cube_support": false
+      }
+    }
+  ],
+  "other_finger_commands_unchanged": true,
+  "original_guards_and_bounds_preserved": true,
+  "intermediate_clearance_not_full_turn": true,
+  "new_SAC_training_steps": 0,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

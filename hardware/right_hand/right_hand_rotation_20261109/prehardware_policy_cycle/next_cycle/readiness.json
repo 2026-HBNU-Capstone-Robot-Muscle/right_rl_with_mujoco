@@ -1,0 +1,728 @@
+{
+  "date": "2026-11-10",
+  "connected_first_stage_model_cases": [
+    {
+      "case": "nominal",
+      "path": "connected_sac_student_hold_nominal/review.json",
+      "sha256": "508b153a62c0d1fecdcc4a3116f2d8753208f11aad2675612fd65e4de98a8e89",
+      "yaw_deg": 89.12130516798229,
+      "orientation_error_deg": 1.1207676616344175,
+      "station_error_mm": 1.0037028498721936,
+      "gap_mm": 0.4311895937735031,
+      "lower_samples": 4050,
+      "samples": 4050,
+      "goals": 6556,
+      "passed": true
+    },
+    {
+      "case": "x_plus05",
+      "path": "connected_sac_student_hold_x_plus05/review.json",
+      "sha256": "546ed64c132d10b457e69a010e25a426328ebfef0b802305a72ab5ccc6a995c9",
+      "yaw_deg": 89.35344599815406,
+      "orientation_error_deg": 0.7886953082120057,
+      "station_error_mm": 0.5775975418588885,
+      "gap_mm": 0.31315742950344827,
+      "lower_samples": 4050,
+      "samples": 4050,
+      "goals": 6556,
+      "passed": true
+    },
+    {
+      "case": "friction025",
+      "path": "connected_sac_student_hold_friction025/review.json",
+      "sha256": "c6735e72dea3a2da5fc63ef905434ed0a9c94a7fcf6b315aad07ca0be64fc544",
+      "yaw_deg": 89.04945577971084,
+      "orientation_error_deg": 0.9988752557958657,
+      "station_error_mm": 0.7607950937872129,
+      "gap_mm": 0.3725120840415599,
+      "lower_samples": 4050,
+      "samples": 4050,
+      "goals": 6556,
+      "passed": true
+    }
+  ],
+  "connected_cases_also_used_for_teacher_data": true,
+  "packaged_controller_model_trials": [
+    {
+      "path": "next_cycle/staged_model_friction035_fractional_encoders/review.json",
+      "sha256": "72cfa93dbe65b356ee2fe1b6d9fd9af8214517ed6433a401251e527b0da1e27c",
+      "case": "friction035",
+      "integer_encoders": false,
+      "model_kind": "active",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": false,
+      "admissible_selection_events": 0,
+      "steps": 3978,
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 82.32378142127779,
+        "tilt_deg": 78.43555784037875,
+        "center_error_mm": 62.01957259822147,
+        "upper_gap_mm": 12.761075351557466
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_fractional_encoders_recovery_bc_v3_long_encoder_aug/review.json",
+      "sha256": "0688ff2cd61f5e5677fbd518f37c6a38fb98caf72c7863c901bea14404a31e1d",
+      "case": "nominal",
+      "integer_encoders": false,
+      "model_kind": "active",
+      "actor_override": "recovery_bc_v3_long_encoder_aug",
+      "passed": false,
+      "admissible_action_selection": false,
+      "admissible_selection_events": 0,
+      "steps": 6329,
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 3.08455106273117,
+        "tilt_deg": 0.38610574283733545,
+        "center_error_mm": 0.23003793420528496,
+        "upper_gap_mm": 0.8639639734913178
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400/review.json",
+      "sha256": "254be230aae132cae4294b62303a87e5d8e2198a0145a3d807908e893fa21582",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active",
+      "actor_override": null,
+      "passed": true,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 18,
+      "steps": 6956,
+      "stop": [],
+      "reasons": [],
+      "final": {
+        "error_deg": 1.3686670273551078,
+        "tilt_deg": 0.8597304326619364,
+        "center_error_mm": 1.4980159892468812,
+        "upper_gap_mm": 0.8289166882434085
+      },
+      "final_hold": {
+        "samples": 4050,
+        "lower": 4050,
+        "bad": 0,
+        "gap": 0.5719490431741114,
+        "orientation_drift_deg": 0.12469626920907344,
+        "center_drift_mm": 0.04746956597064636
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_active_ccd50/review.json",
+      "sha256": "34555ba4d0324dc89e0aa75472810360e095df4064143f4436c9c80d4bfc719c",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active_ccd50",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 0,
+      "steps": 4118,
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 133.92191515574726,
+        "tilt_deg": 78.60490685591377,
+        "center_error_mm": 60.326809806448566,
+        "upper_gap_mm": 4.7975047360610255
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair10000_active_ccd50/review.json",
+      "sha256": "9bc2497bd014cd472fcbec273d3456d588d23b7d3009820f0bb26827880e544e",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active_ccd50",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 0,
+      "steps": 4243,
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 135.44416640167054,
+        "tilt_deg": 79.88016299194551,
+        "center_error_mm": 59.99631039877419,
+        "upper_gap_mm": 6.70553862377629
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair5256_active_ccd50/review.json",
+      "sha256": "22f4b6c5868f9bb061a21097e7b751b0e197de57835a1e1399afc5e15b701e05",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active_ccd50",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 0,
+      "steps": 4267,
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 135.28076129727552,
+        "tilt_deg": 78.82820321857014,
+        "center_error_mm": 60.1740552441034,
+        "upper_gap_mm": 4.833505938699989
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair_early10000_active_ccd50/review.json",
+      "sha256": "180ffdc584e0b9b3a0d43408983195cbf84410185900f62d7b5ff2c3d59aa54d",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active_ccd50",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 0,
+      "steps": 4233,
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 134.6858332333056,
+        "tilt_deg": 80.76098691803595,
+        "center_error_mm": 60.34467745982794,
+        "upper_gap_mm": 6.965049614369187
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair_long10000_active_ccd50/review.json",
+      "sha256": "5bc4b24f5c0c018607c2c347e533f508cd2d23a59ee123bff2640c2f3de221a3",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active_ccd50",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 0,
+      "steps": 4313,
+      "stop": [
+        "cube_translation_over80mm"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "quarter_orientation",
+        "up_tilt",
+        "common_station",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 136.3206011258075,
+        "tilt_deg": 79.736092329602,
+        "center_error_mm": 60.20654238511062,
+        "upper_gap_mm": 4.7312280825242015
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_schema_v2_confirmation/review.json",
+      "sha256": "6c3579745e2dfd4fe1a6cfc951bb78224317d46eaaffa0199665c198ccaea7c0",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active",
+      "actor_override": null,
+      "passed": true,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 18,
+      "steps": 6956,
+      "stop": [],
+      "reasons": [],
+      "final": {
+        "error_deg": 1.3686670273551078,
+        "tilt_deg": 0.8597304326619364,
+        "center_error_mm": 1.4980159892468812,
+        "upper_gap_mm": 0.8289166882434085
+      },
+      "final_hold": {
+        "samples": 4050,
+        "lower": 4050,
+        "bad": 0,
+        "gap": 0.5719490431741114,
+        "orientation_drift_deg": 0.12469626920907344,
+        "center_drift_mm": 0.04746956597064636
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_extra_hold400/review.json",
+      "sha256": "6ade434bcda01d45841289f930361f503d8f26c108255a8eef02918c23a89a00",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": false,
+      "admissible_selection_events": 0,
+      "steps": 6307,
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 4.284527728355703,
+        "tilt_deg": 0.6278852869287781,
+        "center_error_mm": 1.2503369152704171,
+        "upper_gap_mm": 0.2986971826421012
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_recovery_bc_v3_long_encoder_aug_admissible_correction_extra_hold400/review.json",
+      "sha256": "f807b04022fc97a16ef3e0070affa15a5c3184299d7f4fa35814044cb660ccae",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active",
+      "actor_override": "recovery_bc_v3_long_encoder_aug",
+      "passed": true,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 6,
+      "steps": 6956,
+      "stop": [],
+      "reasons": [],
+      "final": {
+        "error_deg": 1.860867679843222,
+        "tilt_deg": 0.8028739726990632,
+        "center_error_mm": 0.7492573240045279,
+        "upper_gap_mm": 0.5921431106582808
+      },
+      "final_hold": {
+        "samples": 4050,
+        "lower": 4050,
+        "bad": 0,
+        "gap": 0.5538473237933417,
+        "orientation_drift_deg": 0.06516103678577932,
+        "center_drift_mm": 0.040141035683272326
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_nominal_integer_encoders_recovery_bc_v3_long_encoder_aug_extra_hold400/review.json",
+      "sha256": "a875282b83cef9ab602f747832a47a3c1e657d11dd7a41d1987182def8c68a24",
+      "case": "nominal",
+      "integer_encoders": true,
+      "model_kind": "active",
+      "actor_override": "recovery_bc_v3_long_encoder_aug",
+      "passed": false,
+      "admissible_action_selection": false,
+      "admissible_selection_events": 0,
+      "steps": 6315,
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 3.9985844967534607,
+        "tilt_deg": 0.6923906736146005,
+        "center_error_mm": 1.1269863836075171,
+        "upper_gap_mm": 0.6493411588511648
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_y_plus05_fractional_encoders/review.json",
+      "sha256": "6ff894a32d1c96655acc8beacf54fcc40e0b05cea9e0cbe1b4b1afab77940229",
+      "case": "y_plus05",
+      "integer_encoders": false,
+      "model_kind": "active",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": false,
+      "admissible_selection_events": 0,
+      "steps": 6353,
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 1.0879131595275182,
+        "tilt_deg": 0.5263032870006296,
+        "center_error_mm": 0.5489139570455578,
+        "upper_gap_mm": 0.7446451073171048
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_y_plus05_fractional_encoders_admissible_correction/review.json",
+      "sha256": "59c3ce7f76e3f30e78d91e277a06a4968f02e2d241c98008cf4161b80988304c",
+      "case": "y_plus05",
+      "integer_encoders": false,
+      "model_kind": "active",
+      "actor_override": null,
+      "passed": false,
+      "admissible_action_selection": true,
+      "admissible_selection_events": 6,
+      "steps": 6556,
+      "stop": [],
+      "reasons": [
+        "upper_space_certificate"
+      ],
+      "final": {
+        "error_deg": 1.013273622767742,
+        "tilt_deg": 0.6764205971455695,
+        "center_error_mm": 1.0187821261252155,
+        "upper_gap_mm": 0.40146547885702333
+      },
+      "final_hold": {
+        "samples": 4050,
+        "lower": 4050,
+        "bad": 4050,
+        "gap": 0.09564272228419668,
+        "orientation_drift_deg": 0.003305236446303658,
+        "center_drift_mm": 0.004379093320260549
+      }
+    },
+    {
+      "path": "next_cycle/staged_model_y_plus05_fractional_encoders_recovery_bc_v3_long_encoder_aug/review.json",
+      "sha256": "64ff5dd83e3b6d190a5ccf9635640c0b238e46d07c2dd68ec86cb424adc4665f",
+      "case": "y_plus05",
+      "integer_encoders": false,
+      "model_kind": "active",
+      "actor_override": "recovery_bc_v3_long_encoder_aug",
+      "passed": false,
+      "admissible_action_selection": false,
+      "admissible_selection_events": 0,
+      "steps": 6305,
+      "stop": [
+        "shadow_contract_rejection",
+        "Correction proposed an out-of-range goal"
+      ],
+      "reasons": [
+        "native_or_shadow_guard",
+        "incomplete_run",
+        "fine_acquisition_not_reached",
+        "hold_incomplete",
+        "lower_contacts"
+      ],
+      "final": {
+        "error_deg": 4.322605415691196,
+        "tilt_deg": 0.5559468457819892,
+        "center_error_mm": 0.9659711874084472,
+        "upper_gap_mm": 0.024066131538775792
+      },
+      "final_hold": {
+        "samples": 0,
+        "lower": 0,
+        "bad": 0,
+        "gap": null,
+        "orientation_drift_deg": 0.0,
+        "center_drift_mm": 0.0
+      }
+    }
+  ],
+  "behavior_cloning_runs": [
+    {
+      "path": "next_cycle/recovery_bc_v1/training.json",
+      "sha256": "2c5bc89a2afbfdcc5b106d48012c9a5b331dcda8649e3c2b8bc03e6146c051e1",
+      "updates": 5000,
+      "data_examples": 303,
+      "new_SAC_steps": 0,
+      "encoder_augmentation": false
+    },
+    {
+      "path": "next_cycle/recovery_bc_v2_all_examples/training.json",
+      "sha256": "a3853e6607074ddbdd9440996c39608b598e424501f4daedce4e7443677cc073",
+      "updates": 5000,
+      "data_examples": 303,
+      "new_SAC_steps": 0,
+      "encoder_augmentation": false
+    },
+    {
+      "path": "next_cycle/recovery_bc_v3_long_encoder_aug/training.json",
+      "sha256": "91643d5fbe41b9259b1b4128c773e2417b19ef33128264f48a1d1fce083b0b59",
+      "updates": 5000,
+      "data_examples": 768,
+      "new_SAC_steps": 0,
+      "encoder_augmentation": true
+    }
+  ],
+  "new_SAC_environment_steps": 90000,
+  "SAC_step_count_is_completed_requested_budget_not_exact_trainer_counter": true,
+  "historical_first_stage_success_model_CCD_iterations": 10,
+  "old_CCD10_successes_not_transferred_to_CCD50": true,
+  "current_converged_model": {
+    "kind": "active_ccd50",
+    "CCD_iterations": 50,
+    "first_rotation_and_hold_passed": false,
+    "trial_paths": [
+      "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_active_ccd50/review.json",
+      "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair10000_active_ccd50/review.json",
+      "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair5256_active_ccd50/review.json",
+      "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair_early10000_active_ccd50/review.json",
+      "next_cycle/staged_model_nominal_integer_encoders_admissible_correction_extra_hold400_ccd50repair_long10000_active_ccd50/review.json"
+    ],
+    "whole_cycle_passed": false,
+    "physical_validation_completed": false
+  },
+  "shadow_fixture_goal_comparisons": 19668,
+  "shadow_verification_sha256": "18e550b842fee898e38cdad46efb3e86688d0124b1fb51ef15d777cc9538efa6",
+  "first_stage_controller": "reference + SAC residual; separate behavior-cloned final correction; native fixed-position servo hold",
+  "next_turn": {
+    "path": "next_model_feedback_90_from_student_hold/review.json",
+    "sha256": "603a947932fd95e9c05da5a221ac29779eea16bce4e289b4cd39f8fa64a2151a",
+    "steps": 144,
+    "passed": false,
+    "final": {
+      "error_deg": 86.26289029007471,
+      "shift_mm": 9.440776754193019,
+      "upper_gap_mm": 3.0690019465100686,
+      "lower_forces": {
+        "if_tip": 0.9999043546739765,
+        "th_tip": 1.2913230098408088
+      },
+      "finger_contact_forces": {
+        "if_": 2.1032800969148777,
+        "th_": 1.2913230098408088
+      },
+      "transition_phase": true,
+      "hold_target_error_mm": 10.328894822279093,
+      "common_station_error_mm": 10.328894822279093,
+      "step": 144,
+      "prediction_qpos_error": 0.0
+    }
+  },
+  "blockers": [
+    "CCD50 first rotation and hold must be revalidated; retain the failed4118-goal parent trial",
+    "No validated load transfer to the ring finger and no second90-degree completion",
+    "Packaged controller sensor and unseen-condition validation is incomplete; retain all negative trials",
+    "Physical camera-to-policy registration and mounted geometry uncertainty are not validated",
+    "Model force/torque limits have no validated450mA conversion"
+  ],
+  "no_state_reset_in_connected_trials": true,
+  "physical_successes_this_work": 0,
+  "repeated_confirmation_trials_are_not_independent_conditions": true,
+  "whole_cycle_distillation_completed": false,
+  "second_rotation_passed": false,
+  "hardware_execution_allowed": false,
+  "devices_opened": 0,
+  "remote_repositories_changed": false,
+  "monitoring_ui_changed": false,
+  "whole_hand_support_preparation": {
+    "path": "next_cycle/handoff_refinement_20261110/whole_hand_preflight_v2/review.json",
+    "sha256": "3c1337f444a8c701bbdd1afe145d0822766ad0dd2acc8b1a624bc614cc7b4e53",
+    "analytical_tests": 14,
+    "cached_force_states": 4,
+    "native_evaluation_pending": false,
+    "exact_recorded_ring_comparison_pending": false,
+    "whole_cycle_ready_for_hardware": false,
+    "hardware_execution_allowed": false
+  },
+  "whole_hand_native_results": {
+    "path": "next_cycle/handoff_refinement_20261110/whole_hand_preflight_v2/native_summary.json",
+    "sha256": "686f3139c8724e2e17eb47d3c42c36a3638002184dae4b2d4b80924f6212bc18",
+    "native_tasks_completed": 3,
+    "first_rotation_and_hold_passed": false,
+    "whole_cycle_ready_for_hardware": false,
+    "hardware_execution_allowed": false
+  },
+  "clear_work_grip_bridge_progress": {
+    "path": "next_cycle/handoff_refinement_20261110/bridge_progress_20261110/review.json",
+    "sha256": "c0695ee674b96bd8a616150090c149e02bf49ed3b34353169be442cb96d6eccd",
+    "conditional_next5_canonical_chain": true,
+    "whole_cycle_ready_for_hardware": false,
+    "hardware_execution_allowed": false,
+    "first_rotation_at_explicit_reached_station_passed": true
+  },
+  "ring_front_thumb_progress": {
+    "path": "next_cycle/handoff_refinement_20261110/ring_front_thumb_progress_20261111/review.json",
+    "sha256": "ad0f990769b85ae9ed2128a19693edd7a762623ecc685ea9fcfaea6137c47644",
+    "thumb_only_model_passed": true,
+    "full_cycle_passed": false,
+    "hardware_execution_allowed": false
+  },
+  "whole_hand_first_to_next_progress": {
+    "path": "next_cycle/handoff_refinement_20261110/first_to_next_contact_bridge_20261111/review.json",
+    "sha256": "e5f6c96de2a0fa6b913f3ddb2703dd7b6bbb9d55f66cb5c9bb5b871617d9e41b",
+    "finger_contact_identity_is_not_required": true,
+    "first3405_replay_passed": true,
+    "initial_through_partial_next_replay_steps": 4673,
+    "full_two_turn_cycle_passed": false,
+    "hardware_execution_allowed": false,
+    "nominal_two_rotations_at_reached_locations_passed": true,
+    "nominal_two_turn_replay_steps": 5089,
+    "same_first_station_cycle_passed": false,
+    "finite_perturbation_conditions": 3,
+    "finite_perturbation_passes": 1
+  },
+  "robust_cycle_preparation": {
+    "path": "next_cycle/handoff_refinement_20261110/robust_cycle_preparation_20261111/review.json",
+    "sha256": "4585c0f4f7d261f42cdbaecb73cf5ace1ab8aa4196c703ebefcd7f578a9e50b4",
+    "user_deferred_position_shift": true,
+    "software_fixture_verified": true,
+    "slip_and_placement_robustness_passed": false,
+    "camera_registration_verified": false,
+    "hardware_execution_allowed": false
+  },
+  "rotation_entry_reposition": {
+    "path": "next_cycle/handoff_refinement_20261110/reposition_then_second_rotation_20261111/review.json",
+    "sha256": "50b36254bda4ca89ef70098e770c53efd55b75d03d5474b59b30d2c7c5cdce63",
+    "hardware_execution_allowed": false
+  }
+}

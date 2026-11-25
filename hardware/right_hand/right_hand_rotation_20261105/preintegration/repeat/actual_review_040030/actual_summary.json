@@ -1,0 +1,172 @@
+{
+  "status": "second_actual_forward_quarter_turn_and10s_hold_observed_with_prior_PID_cleanup_pending",
+  "source": "forward_hold_observe_20261105_040030_646453",
+  "source_sha256": "ebcd56c4011bdf5dc10501f480529b21ee1ffed72f5a404a255ba2273c98b526",
+  "physical_observed_forward_turn_and_static_hold_runs": [
+    "forward_hold_observe_20261105_030930_516359",
+    "forward_hold_observe_20261105_040030_646453"
+  ],
+  "physical_observation_count": 2,
+  "consecutive_uninterrupted_trial_successes": false,
+  "physical_angle_tolerance_certified": false,
+  "repeatability_under_all_conditions_verified": false,
+  "observed_start": "GREEN up; ORANGE toward wrist",
+  "observed_finish": "GREEN up; WHITE toward wrist",
+  "approximately_quarter_turn_observed": true,
+  "static_retention_over10s_observed": true,
+  "actual_queue_matches_reviewed_path": true,
+  "queue_goals": 1953,
+  "matching_write_offsets": [
+    2
+  ],
+  "hold_seconds": 10.077999999979511,
+  "hold_goals_identical": true,
+  "min_voltage_v": 4.7,
+  "peak_absolute_current_ma": 97,
+  "max_tracking_rad": 0.0782330201821677,
+  "camera_frames": 1914,
+  "blank_frames": 0,
+  "read_failure_events": 1,
+  "recovery_confirmed_ms": 89.18500004801899,
+  "goal_advance_during_read_recovery": 0,
+  "all_torque_off_verified": true,
+  "settings_restored_to_THIS_run_entry": true,
+  "restored_to_original_pre_camera_failure_settings": false,
+  "original_settings_differences": {
+    "d_gain": {
+      "expected": [
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900,
+        1900
+      ],
+      "actual": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        150,
+        200,
+        200,
+        200,
+        150,
+        200,
+        200,
+        200,
+        150
+      ]
+    },
+    "p_gain": {
+      "expected": [
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100,
+        2100
+      ],
+      "actual": [
+        600,
+        600,
+        600,
+        600,
+        600,
+        600,
+        600,
+        450,
+        600,
+        600,
+        600,
+        450,
+        600,
+        600,
+        600,
+        450
+      ]
+    }
+  },
+  "pending_user_command": "& \"C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\leap_restore_off_settings.cmd\"",
+  "command_scope": "Original RAM settings only, torque remains OFF; no goal/mode/baud/EEPROM/torque-enable writes.",
+  "cleanup_fix": {
+    "status": "post_OFF_cleanup_patch_validated",
+    "software": {
+      "passed": true,
+      "tests": 20,
+      "errors": [],
+      "failures": [],
+      "devices_opened": false
+    },
+    "source_archive": "right_hand_rotation_20261105/preintegration/post_off_cleanup_fix/source_before",
+    "changed_sources": [
+      "forward_hold_gate_20261104.py",
+      "forward_hold_plan_20261104.py",
+      "leap_forward_hold_observe_20261104.py"
+    ],
+    "added_source": "verified_off_restore_context_20261105.py",
+    "joint_path_and_all_ON_bounds_unchanged": true,
+    "loaded_model_cases": 27,
+    "hand_model_cases": 9,
+    "empty_static_cases": 201,
+    "empty_dynamic_cases": 9,
+    "proof_sha256": "4d65aada75eb70f63e67dbc4837bf21e74ce73e9b26b7d38b2705da215dbd387",
+    "no_motor_execution": true,
+    "physical_camera_failure_cleanup_test_not_yet_performed": true
+  },
+  "cause_of_prior_incomplete_settings_restore": "Fatal camera callback was still active in OFF settings readback; next run captured the leftover PID as its entry state.",
+  "physical_postoff_camera_failure_cleanup_fix_verified": false,
+  "underlying_camera_or_USB_fault_fixed": false,
+  "physical_body_hold_under_layer_turn_verified": false,
+  "all_directions_verified": false,
+  "cube_removal_after_exit_confirmed": false,
+  "original_logs_and_frames_unchanged": true,
+  "assistant_motor_writes": 0,
+  "videos": [
+    {
+      "path": "right_hand_rotation_20261105/preintegration/repeat/actual_review_040030/full_run.mp4",
+      "frames": 1970,
+      "fps": 8.0,
+      "seconds": 246.25,
+      "wall_clock_start": 994325.5,
+      "wall_clock_end": 994571.718,
+      "selection": "nearest saved frame at8fps on original camera-read times, no speedup, no motion edits",
+      "max_selection_offset_seconds": 0.07900000002700835,
+      "sha256": "456b3713a6eeab1b4f872755f7c72a91af07951e675c72336ddf3969df4f85b0"
+    },
+    {
+      "path": "right_hand_rotation_20261105/preintegration/repeat/actual_review_040030/turn_and_hold.mp4",
+      "frames": 508,
+      "fps": 8.0,
+      "seconds": 63.5,
+      "wall_clock_start": 994503.937,
+      "wall_clock_end": 994567.421,
+      "selection": "nearest saved frame at8fps on original camera-read times, no speedup, no motion edits",
+      "max_selection_offset_seconds": 0.0779999999795109,
+      "sha256": "c804abc50e784e3c9968bae1c6ff3d2d72740a51912090f76bd9fa675b5cb9c2"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "status": "thumb_relocation_before_middle_unload_static",
+  "source_sha256": "7c3a1deeacea42251917dda02902ebb9c0954ad8eb345eb1742176af58bfa2c8",
+  "model_sha256": "c16efc2d36f0e411fe21a38414aaa6bfa005997a1cd276bac5ac75403a67e0bc",
+  "cases": [
+    {
+      "thumb_target_x_mm": 9.0,
+      "point_error_mm": 0.29354791778555306,
+      "geometry_passed": true,
+      "upper_gap_mm": 0.8197201789712878,
+      "self_mm": 0.0,
+      "support_mm": 0.0,
+      "cube_mm": 0.20000267967812435,
+      "middle_unload_feasible": false,
+      "force": {
+        "reason": "exact_native_wrench_infeasible",
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      }
+    },
+    {
+      "thumb_target_x_mm": 3.0,
+      "point_error_mm": 1.0810906094391615,
+      "geometry_passed": true,
+      "upper_gap_mm": 0.8197201789712878,
+      "self_mm": 0.0,
+      "support_mm": 0.0,
+      "cube_mm": 0.20000965583857913,
+      "middle_unload_feasible": false,
+      "force": {
+        "reason": "exact_native_wrench_infeasible",
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      }
+    },
+    {
+      "thumb_target_x_mm": -5.0,
+      "point_error_mm": 2.1938452992174846,
+      "geometry_passed": true,
+      "upper_gap_mm": 0.8197201789712878,
+      "self_mm": 0.0,
+      "support_mm": 0.0,
+      "cube_mm": 0.20001900603935438,
+      "middle_unload_feasible": true,
+      "force": {
+        "contact_points": 5,
+        "exact_wrench_residual": [
+          5.551115123125783e-17,
+          2.0816681711721685e-17,
+          0.0,
+          1.6263032587282567e-18,
+          8.673617379884035e-19,
+          -3.2526065174565133e-19
+        ],
+        "constraint_violation": 0.0,
+        "normal_N": {
+          "palm_collision_1": 0.8844343300520778,
+          "if_tip": 0.6,
+          "mf_bs_collision_1": 0.045360091932793896,
+          "mf_tip": 0.06501209494784091,
+          "th_tip": 0.6
+        },
+        "underside_normal_N": 0.9297944219848717,
+        "tip_minimum_N": 0.6,
+        "native_contact_model_unchanged": true,
+        "normal_only_force_solution": false,
+        "explicit_normal_bounds": {
+          "mf_tip": [
+            0.0,
+            0.1
+          ]
+        }
+      }
+    }
+  ],
+  "static_planning_only": true,
+  "devices_opened": false,
+  "hardware_execution_allowed": false,
+  "elapsed_seconds": 21.460408549999997
+}

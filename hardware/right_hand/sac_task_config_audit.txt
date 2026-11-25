@@ -1,0 +1,129 @@
+CONFIG
+action_delay_steps: 0
+action_repeat: 1
+action_scale: 0.2
+actuator_force_limit: 0.0
+chain_goals: false
+ctrl_dt: 0.05
+ema_alpha: 1.0
+episode_length: 1000
+face_onehot_obs: false
+face_weights:
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+goal_angle_beta_a: 1.0
+goal_angle_beta_b: 1.0
+goal_angle_bias: 0.0
+goal_angle_scale: 1.0
+goal_angle_scale_min: 0.0
+goal_axis_index: -1
+goal_timeout_steps: 600
+history_len: 3
+hold_gated_success: false
+hold_stairs: 1
+hyperext_floor: -9.0
+impl: jax
+include_start_face: false
+joint_limit_margin: 0.0
+joint_limit_soft_factor: 0.75
+naconmax: 245760
+njmax: 160
+obs_noise:
+  level: 1.0
+  random_ori_injection_prob: 0.0
+  scales:
+    cube_ori: 0.1
+    cube_pos: 0.02
+    joint_pos: 0.05
+pert_config:
+  angular_velocity_pert:
+  - 0.0
+  - 0.5
+  enable: false
+  linear_velocity_pert:
+  - 0.0
+  - 3.0
+  pert_duration_steps:
+  - 1
+  - 100
+  pert_wait_steps:
+  - 60
+  - 150
+position_reference: palm
+position_threshold: 0.015
+reset_best_on_episode: false
+reward_config:
+  hold_bonus: 0.0
+  scales:
+    action_rate: -0.005
+    best_progress: 50.0
+    direct_penalty: 2.0
+    energy: -0.0002
+    fine_020: 0.0
+    fine_025: 0.0
+    hand_pose: -0.001
+    joint_limit: 0.0
+    joint_vel: -0.001
+    orientation: 20.0
+    position: 4.0
+    precision: 0.0
+    progress: 10.0
+    termination: -20.0
+  success_reward: 600.0
+settle_steps: 0
+sim_dt: 0.01
+success_hold_steps: 20
+success_threshold: 0.15
+target_face: -1
+
+
+_get_obs
+  def _get_obs(self, data: mjx.Data, info: dict[str, Any]) -> mjx_env.Observation:
+    obs = super()._get_obs(data, info)
+    if not self._config.face_onehot_obs:
+      return obs
+    onehot = jax.nn.one_hot(self._face_index(data), _FACE_GOAL_QUATS.shape[0])
+    if isinstance(obs, dict):
+      return {k: jp.concatenate([v, onehot]) for k, v in obs.items()}
+    return jp.concatenate([obs, onehot])
+
+reset
+  def reset(self, rng: jax.Array) -> mjx_env.State:
+    rng, face_rng = jax.random.split(rng)
+    state = super().reset(rng)
+
+    # 과제 1 이 뽑은 목표 자세를 "면이 위를 보는" 자세로 교체한다.
+    goal_quat = self._sample_face_goal(face_rng)
+    data = state.data.replace(
+        mocap_quat=jp.broadcast_to(goal_quat, state.data.mocap_quat.shape)
+    )
+
+    # 목표가 바뀌었으므로 오차 기준값과 관측을 다시 계산한다.
+    info = dict(state.info)
+    err = self._cube_orientation_error(data, info)
+    info["prev_ori_error"] = err
+    info["best_ori_error"] = err
+    obs = self._get_obs(data, info)
+
+    metrics = dict(state.metrics)
+    metrics["face_error"] = jp.zeros(())
+    metrics["center_error"] = jp.zeros(())
+    metrics["face_ok"] = jp.zeros(())
+    metrics["center_ok"] = jp.zeros(())
+    return state.replace(data=data, obs=obs, info=info, metrics=metrics)
+
+_cube_orientation_error
+  def _cube_orientation_error(self, data: mjx.Data, info=None) -> jax.Array:
+    """면 오차와 위치 오차를 하나의 스칼라로 결합한다 (상세는 모듈 docstring).
+
+    max 이므로 둘 중 하나라도 임계를 넘으면 즉시 실패로 떨어진다. 즉
+    "면을 맞춘 뒤 옮긴다"는 순차 달성이 아니라 **동시 만족**을 요구한다.
+    """
+    thr = self._config.success_threshold
+    pos_thr = self._config.position_threshold
+    scaled_center = self._center_error(data, info) * (thr / pos_thr)
+    return jp.maximum(self._face_error(data), scaled_center)

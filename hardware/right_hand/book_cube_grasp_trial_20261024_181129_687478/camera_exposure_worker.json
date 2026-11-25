@@ -1,0 +1,57 @@
+{
+  "status": "stopped",
+  "requested_exposure": -5.0,
+  "auto_mode_meaning_verified": false,
+  "motors_accessed": false,
+  "frames_sent": 2162,
+  "original_settings": {
+    "auto": -1.0,
+    "exposure": -5.0
+  },
+  "applied": {
+    "requested_exposure": -5.0,
+    "set_auto_returned": true,
+    "set_exposure_returned": true,
+    "readback": {
+      "auto": -1.0,
+      "exposure": -5.0
+    },
+    "supported": true
+  },
+  "preview_marker_decoding": false,
+  "last_stream_exposure_readback": -5.0,
+  "property_read_confirmations": [
+    {
+      "property": "exposure",
+      "expected": -5.0,
+      "readbacks": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "recovered": false,
+      "maximum_extra_reads": 3,
+      "required_consecutive_matches": 2,
+      "deadline_ms": 100,
+      "settings_writes": 0,
+      "elapsed_ms": 0.0
+    }
+  ],
+  "error": "Camera exposure not confirmed: expected -5, reads=[-1.0, -1.0, -1.0, -1.0]",
+  "restoration": {
+    "changes_attempted": true,
+    "set_returns": {
+      "exposure": false,
+      "auto": false
+    },
+    "readback": {
+      "auto": -1.0,
+      "exposure": -1.0
+    },
+    "restored_original_readbacks": false,
+    "errors": [],
+    "note": "Camera auto mode can change its exposure readback again. Readbacks are recorded; restoration is not claimed when they do not match."
+  },
+  "finished_monotonic": 8681.046
+}

@@ -1,0 +1,223 @@
+{
+  "status": "placement_sensitivity_and_rotate_then_body_hold_research",
+  "actual_run_review": "right_hand_rotation_20261030/four_forward_review/motion_comparison.json",
+  "model_only": true,
+  "task_sequence": [
+    "right_hand_reorient",
+    "regrasp_lower_cube_body",
+    "retain_body_hold_during_upper_layer_work",
+    "next_reorient_and_hold"
+  ],
+  "nominal_placement_cases": {
+    "sources": [
+      {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/full_front_-15/review.json",
+        "sha256": "d4acf4cb9909eec10621155ce3e0bf44c4585304ea86ef3fb79bc98abe2df730"
+      },
+      {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/full_front_-10/review.json",
+        "sha256": "59cf6f32b1aca9a77ff797e9e6ad06541cdce59a1bb423835cd09af266e8572b"
+      },
+      {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/full_front_-5/review.json",
+        "sha256": "6eee9e829535052e0b2972123758510fbc556b7bd9cef04d790881e23d6f63c2"
+      }
+    ],
+    "safety_passed": 27,
+    "body_hold_passed": 27,
+    "max_8second_hold_drift_deg": 1.0573505981140736,
+    "max_8second_hold_shift_mm": 2.048721949216923,
+    "forward_range_deg": [
+      60.53510604681101,
+      63.743663764085184
+    ],
+    "these_27_cases_do_not_cover_placement_error": true
+  },
+  "placement_offset_cases": [
+    {
+      "offset_mm": [
+        5,
+        0,
+        0
+      ],
+      "source": {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/offset_5_0_0/review.json",
+        "sha256": "272c7ca1c36ed27c92c5e74f31b2fccaf2a106dc405ed1fd1480fb2be163a88d"
+      },
+      "safety_passed": true,
+      "forward_deg": 9.692250900439578,
+      "body_hold_passed": false,
+      "body_hold": {
+        "max_yaw_drift_deg": 0.23700243792970924,
+        "max_center_shift_mm": 0.31522731153422334,
+        "samples": 8025,
+        "opposing_contact_fraction": {
+          "mf_tip": 0.0,
+          "th_tip": 0.0
+        },
+        "tip_height_range_mm": {
+          "mf_tip": null,
+          "th_tip": null
+        },
+        "hold_task_passed": false
+      }
+    },
+    {
+      "offset_mm": [
+        -5,
+        0,
+        0
+      ],
+      "source": {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/offset_-5_0_0/review.json",
+        "sha256": "7af721c2fb6fb03bafa0ecdfd2b3e7160cd21a22c6628147f8cf4b58a562293c"
+      },
+      "safety_passed": true,
+      "forward_deg": 61.46286804586116,
+      "body_hold_passed": true,
+      "body_hold": {
+        "max_yaw_drift_deg": 0.47925841368695493,
+        "max_center_shift_mm": 0.3192005930015577,
+        "samples": 8025,
+        "opposing_contact_fraction": {
+          "mf_tip": 1.0,
+          "th_tip": 1.0
+        },
+        "tip_height_range_mm": {
+          "mf_tip": [
+            0.5519934133058235,
+            0.608443148767493
+          ],
+          "th_tip": [
+            -1.750009086401332,
+            4.870793519591932
+          ]
+        },
+        "hold_task_passed": true
+      }
+    },
+    {
+      "offset_mm": [
+        0,
+        5,
+        0
+      ],
+      "source": {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/offset_0_5_0/review.json",
+        "sha256": "61be194a9db4095159adaa0a96c3251a6ce8101f3ebb30004ed37360b862b12b"
+      },
+      "safety_passed": true,
+      "forward_deg": 62.10511286031001,
+      "body_hold_passed": true,
+      "body_hold": {
+        "max_yaw_drift_deg": 0.47442644799002337,
+        "max_center_shift_mm": 0.3173394807334256,
+        "samples": 8025,
+        "opposing_contact_fraction": {
+          "mf_tip": 1.0,
+          "th_tip": 1.0
+        },
+        "tip_height_range_mm": {
+          "mf_tip": [
+            0.5516993926194105,
+            0.6083770236733809
+          ],
+          "th_tip": [
+            -1.7495889764495254,
+            4.871663691213612
+          ]
+        },
+        "hold_task_passed": true
+      }
+    },
+    {
+      "offset_mm": [
+        0,
+        -5,
+        0
+      ],
+      "source": {
+        "path": "right_hand_rotation_20261030/lower_body_regrasp/offset_0_-5_0/review.json",
+        "sha256": "eb1f0c0d9f64a07081ae498d855cfaf2c1eafa01e4a4f53be89ba009dae4b506"
+      },
+      "safety_passed": true,
+      "forward_deg": 61.30764357655443,
+      "body_hold_passed": true,
+      "body_hold": {
+        "max_yaw_drift_deg": 0.4640570410632674,
+        "max_center_shift_mm": 0.3128469458208413,
+        "samples": 8025,
+        "opposing_contact_fraction": {
+          "mf_tip": 1.0,
+          "th_tip": 1.0
+        },
+        "tip_height_range_mm": {
+          "mf_tip": [
+            0.5515776788138075,
+            0.6082527451497719
+          ],
+          "th_tip": [
+            -1.748597796648774,
+            4.8744582127421525
+          ]
+        },
+        "hold_task_passed": true
+      }
+    }
+  ],
+  "placement_robustness_failed": true,
+  "nominal_model_design_torque_probes": {
+    "source": {
+      "path": "right_hand_rotation_20261030/lower_body_regrasp/free_continuation_review.json",
+      "sha256": "0c96c4da7c278e68a5f541cc0b2efb1f5f970dcc56dc3e695e2c513da3b0390a"
+    },
+    "range_Nm": [
+      -0.01,
+      0.01
+    ],
+    "all_passed": true,
+    "max_drift_deg": 0.31107536989595946,
+    "not_measured_upper_layer_torque": true
+  },
+  "release_research": {
+    "source": {
+      "path": "right_hand_rotation_20261030/lower_body_gap_release/free_continuation_review.json",
+      "sha256": "af97f1fb0fcb52a7daa790f41b64550a6d5401eb01d4fca3de6972ff5501e398"
+    },
+    "prefix_identical_through_held_sample": 1597,
+    "ordinary_full_OPEN_peak_drift_from_forward_deg": 13.167476481725883,
+    "controlled_release_delta_from_held_deg": -1.6660617987073407,
+    "controlled_release_tips_unclamped_in_nominal_model": false,
+    "release_task_passed": false,
+    "residual_contact_requires_further_release_design": true,
+    "final_tip_normals_N": {
+      "mf_tip": 0.5084605880797723,
+      "th_tip": 0.5861515523237031
+    },
+    "controlled_release_hand_cases": 9,
+    "full_loaded27_not_repeated_for_this_release_variant": true
+  },
+  "protected_files_unchanged": {
+    "sequence_flip_poses.json": true,
+    "right_hand_rotation_20261023/native_motor_limits.json": true,
+    "exhibition_20261023/\uc871\uc790_\ubd99\uc5ec\ub123\uae30.txt": true,
+    "camera_gap_motion_runner_20261026.py": true,
+    "horizontal_quarter_motion_runner_20261027.py": true,
+    "screen_material_checked_reverse_cube_20261029.py": true
+  },
+  "latest_read_attempt": "fast_off_readonly_20261030_062953_077410/result.json",
+  "latest_read_error": "ID1 PING failed; zero motor writes",
+  "next_work": [
+    "read_current_pose_after_user_confirms_motor_power",
+    "guide_placement_relative_to_the_successful_physical_reference",
+    "verify_fingertip_contact_before_turning",
+    "prepare_supervised_rotate_then_lower_body_hold_trial_with_explicit_release"
+  ],
+  "user_command": null,
+  "ready_for_new_loaded_trial": false,
+  "hardware_execution_allowed": false,
+  "physical90_repeatability_verified": false,
+  "physical_body_hold_verified": false,
+  "upper_layer_tool_handoff_verified": false,
+  "assistant_motor_writes": 0
+}

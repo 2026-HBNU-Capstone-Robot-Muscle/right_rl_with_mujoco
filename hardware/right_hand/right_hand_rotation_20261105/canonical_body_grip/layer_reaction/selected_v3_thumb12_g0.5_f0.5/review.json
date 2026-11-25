@@ -1,0 +1,602 @@
+{
+  "status": "hypothetical_reaction_on_source_bound_rigid_cube",
+  "candidate": "right_hand_rotation_20261105/canonical_body_grip/tip_squeeze/id1/plus12/candidate.npz",
+  "candidate_sha256": "b723d2f5698a440888f548fbcaa6fbb161f3d9ddf8d1fe6c8a3ee6199e5905be",
+  "source": "right_hand_rotation_20261105/canonical_body_grip/full_placement_v3_thumb12/front-10/g0.5_f0.5/end_state.npz",
+  "source_sha256": "91aaea6c344b1f34169798e3ae245a686cf70bdd8175374195859dbf405e8d06",
+  "model": "right_hand_rotation_20261105/canonical_body_grip/full_placement_v3_thumb12/front-10/g1_f0.3/model.mjb",
+  "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+  "material_reconstructed_from_same_full_replay_policy": {
+    "requested_effective_sliding_coefficient": 0.5,
+    "measured_physical_material": false,
+    "policy": "both surfaces; explicit cube/hand pairs also use the same sliding coefficient",
+    "original_tip_sliding_coefficients": {
+      "if_tip": 0.3,
+      "mf_tip": 0.3,
+      "rf_tip": 0.3,
+      "th_tip": 0.3
+    },
+    "original_cube_sliding_coefficient": 0.3,
+    "affected_geom_count": 78,
+    "affected_explicit_pair_count": 0,
+    "torsional_rolling_and_other_contact_parameters_preserved": true
+  },
+  "source_matrix_sha256": "f4154d4ce6f6ac93da79c8c3dd1ee4f823112fb22e047b14506ffe968905d285",
+  "friction": 0.5,
+  "gain_scale": 0.5,
+  "book_front_mm": -10.0,
+  "cases": [
+    {
+      "hypothetical_reaction_torque_nm": 0.0,
+      "axis_world": [
+        0.3342173234974869,
+        -0.08109613681202216,
+        0.9390006375228624
+      ],
+      "safety_passed": true,
+      "stop": null,
+      "steps": 10050,
+      "max_yaw_change_deg": 0.5796504458572983,
+      "max_center_shift_mm": 2.0001799186494176,
+      "max_tilt_change_deg": 4.134759094711449,
+      "minimum_separating_gap_1ms_mm": 2.1523035854921844,
+      "certificate_bad_steps": 0,
+      "certificate_unqueried_steps": 0,
+      "certificate": {
+        "geoms": 56,
+        "minimum_required_gap_mm": 0.3,
+        "queries": 10050,
+        "plane_repairs": 56,
+        "polygon_searches": 0,
+        "exact_cylinder_support_rechecked": true,
+        "model_changes": 0,
+        "certificate_scope": "Queried simulated poses only; continuous physical motion and geometry calibration are not certified"
+      },
+      "opposed_lower_body_contact_fraction": 0.9613930348258707,
+      "constant_targets": true,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.007907504211102178,
+        "tracking_rad": 0.06046728872347025,
+        "range_rad": 0.0
+      },
+      "load_filter_passed": false,
+      "reasons": [
+        "translation",
+        "tilt_change"
+      ],
+      "trace": [
+        {
+          "time_s": 0.075,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 0.00030960680267443015,
+          "shift_mm": 0.0034680075707446546,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0188656147948385,
+            "mf_tip": 0.6244729396450877,
+            "th_tip": 0.7025724823630923
+          },
+          "certified_gap_mm": 3.922563917995191
+        },
+        {
+          "time_s": 1.05,
+          "load_fraction": 0.04899999999999993,
+          "yaw_change_deg": 0.034812148809209846,
+          "shift_mm": 0.07040057198292712,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0180555182073232,
+            "mf_tip": 0.6380787270213546,
+            "th_tip": 0.7109044096207602
+          },
+          "certified_gap_mm": 3.8202684615974505
+        },
+        {
+          "time_s": 2.025,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.07183285123903227,
+          "shift_mm": 0.1657067328166076,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0376918296933022,
+            "mf_tip": 0.9004358745563327,
+            "th_tip": 0.9284754325040239
+          },
+          "certified_gap_mm": 3.6947821916992254
+        },
+        {
+          "time_s": 3.0,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.118914780081015,
+          "shift_mm": 0.2795600105976542,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0248064141088589,
+            "mf_tip": 0.6627707829786181,
+            "th_tip": 0.7252673205775036
+          },
+          "certified_gap_mm": 3.559019737618712
+        },
+        {
+          "time_s": 3.975,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.1653399095863843,
+          "shift_mm": 0.41819979279958347,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.033065946771219,
+            "mf_tip": 0.7143163966490935,
+            "th_tip": 0.7544274516743688
+          },
+          "certified_gap_mm": 3.4081001779219733
+        },
+        {
+          "time_s": 4.95,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.2231145997722023,
+          "shift_mm": 0.5798436389774078,
+          "lower_contact_N": {
+            "if_bs_collision_1": 0.991684218088969,
+            "th_tip": 0.28524971916248537
+          },
+          "certified_gap_mm": 3.2501807936242315
+        },
+        {
+          "time_s": 5.925,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.2806911987748442,
+          "shift_mm": 0.7675968227199426,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0426039895692023,
+            "mf_tip": 0.6989779623601539,
+            "th_tip": 0.750484205409919
+          },
+          "certified_gap_mm": 3.0765185353517737
+        },
+        {
+          "time_s": 6.9,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.3391316004818077,
+          "shift_mm": 0.989826261047344,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0566783653087204,
+            "mf_tip": 0.7771539251017769,
+            "th_tip": 0.795084108622961
+          },
+          "certified_gap_mm": 2.8859755717840017
+        },
+        {
+          "time_s": 7.875,
+          "load_fraction": 0.12599999999999945,
+          "yaw_change_deg": 0.40757429372602144,
+          "shift_mm": 1.2479405837629445,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0647793737991997,
+            "mf_tip": 0.77015020700183,
+            "th_tip": 0.7875311123667992
+          },
+          "certified_gap_mm": 2.6827543073793194
+        },
+        {
+          "time_s": 8.85,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 0.4812761224674629,
+          "shift_mm": 1.5511519847820856,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0759739843085239,
+            "mf_tip": 0.7825775669777592,
+            "th_tip": 0.7952356686980888
+          },
+          "certified_gap_mm": 2.460308580553061
+        },
+        {
+          "time_s": 9.825000000000001,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 0.5557675696779087,
+          "shift_mm": 1.908843593494867,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.097781138998421,
+            "mf_tip": 0.8925053961668341,
+            "th_tip": 0.8748942958509442
+          },
+          "certified_gap_mm": 2.213061687732406
+        },
+        {
+          "time_s": 10.05,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 0.5741653968982275,
+          "shift_mm": 2.0001799186494176,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.1085976569035068,
+            "mf_tip": 0.9773300453578235,
+            "th_tip": 0.9503059080807618
+          },
+          "certified_gap_mm": 2.1523035854921844
+        }
+      ],
+      "elapsed_seconds": 4.19259429400006
+    },
+    {
+      "hypothetical_reaction_torque_nm": -0.01,
+      "axis_world": [
+        0.3342173234974869,
+        -0.08109613681202216,
+        0.9390006375228624
+      ],
+      "safety_passed": true,
+      "stop": null,
+      "steps": 10050,
+      "max_yaw_change_deg": 1.7559088750066891,
+      "max_center_shift_mm": 0.8944587573015805,
+      "max_tilt_change_deg": 1.4613125991418703,
+      "minimum_separating_gap_1ms_mm": 3.817047976175097,
+      "certificate_bad_steps": 0,
+      "certificate_unqueried_steps": 0,
+      "certificate": {
+        "geoms": 56,
+        "minimum_required_gap_mm": 0.3,
+        "queries": 10050,
+        "plane_repairs": 56,
+        "polygon_searches": 0,
+        "exact_cylinder_support_rechecked": true,
+        "model_changes": 0,
+        "certificate_scope": "Queried simulated poses only; continuous physical motion and geometry calibration are not certified"
+      },
+      "opposed_lower_body_contact_fraction": 0.9971144278606965,
+      "constant_targets": true,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.005304325812576584,
+        "tracking_rad": 0.06000502394016359,
+        "range_rad": 0.0
+      },
+      "load_filter_passed": true,
+      "reasons": [],
+      "trace": [
+        {
+          "time_s": 0.075,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 0.00030960680267443015,
+          "shift_mm": 0.0034680075707446546,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0188656147948385,
+            "mf_tip": 0.6244729396450877,
+            "th_tip": 0.7025724823630923
+          },
+          "certified_gap_mm": 3.922563917995191
+        },
+        {
+          "time_s": 1.05,
+          "load_fraction": 0.04899999999999993,
+          "yaw_change_deg": 0.033322515660793056,
+          "shift_mm": 0.06962204894289734,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0145001338057278,
+            "mf_tip": 0.6405657855263188,
+            "th_tip": 0.7093038279039292
+          },
+          "certified_gap_mm": 3.820441835922338
+        },
+        {
+          "time_s": 2.025,
+          "load_fraction": 1.0,
+          "yaw_change_deg": -0.10656853150869874,
+          "shift_mm": 0.06462056474771402,
+          "lower_contact_N": {
+            "palm_collision_1": 0.048718575918645785,
+            "if_bs_collision_1": 0.9494520502481586,
+            "mf_tip": 0.6401451156069243,
+            "th_tip": 0.6878035895155203
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 3.0,
+          "load_fraction": 1.0,
+          "yaw_change_deg": -0.5447072066065636,
+          "shift_mm": 0.3424561768498512,
+          "lower_contact_N": {
+            "palm_collision_1": 0.0153152721111773,
+            "if_bs_collision_1": 0.9711691520595546,
+            "mf_tip": 0.6805135491549921,
+            "th_tip": 0.7223092585430623
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 3.975,
+          "load_fraction": 1.0,
+          "yaw_change_deg": -0.8526736550511046,
+          "shift_mm": 0.4806679829295732,
+          "lower_contact_N": {
+            "palm_collision_1": 0.01075915573632306,
+            "if_bs_collision_1": 0.9746362581380795,
+            "mf_tip": 0.6722985960460757,
+            "th_tip": 0.7057720902413728
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 4.95,
+          "load_fraction": 1.0,
+          "yaw_change_deg": -1.1405276955481594,
+          "shift_mm": 0.6109406447813166,
+          "lower_contact_N": {
+            "palm_collision_1": 0.008930411220942099,
+            "if_bs_collision_1": 0.9757673644190532,
+            "mf_tip": 0.6713483430071757,
+            "th_tip": 0.7047309520588644
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 5.925,
+          "load_fraction": 1.0,
+          "yaw_change_deg": -1.4154147793755318,
+          "shift_mm": 0.7359749904153219,
+          "lower_contact_N": {
+            "palm_collision_1": 0.009061375715391963,
+            "if_bs_collision_1": 0.9766720595575076,
+            "mf_tip": 0.676272808960436,
+            "th_tip": 0.7120257709624735
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 6.9,
+          "load_fraction": 1.0,
+          "yaw_change_deg": -1.6865518924970138,
+          "shift_mm": 0.862981704328171,
+          "lower_contact_N": {
+            "palm_collision_1": 0.008845320518482235,
+            "if_bs_collision_1": 0.9775152698314278,
+            "mf_tip": 0.6818096246642045,
+            "th_tip": 0.7198439312122342
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 7.875,
+          "load_fraction": 0.12599999999999945,
+          "yaw_change_deg": -1.6166761131101979,
+          "shift_mm": 0.8381798568334615,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0189185175059425,
+            "mf_tip": 0.5529953188334785,
+            "th_tip": 0.7169539476137301
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 8.85,
+          "load_fraction": 0.0,
+          "yaw_change_deg": -0.9396956811606687,
+          "shift_mm": 0.5887395118990564,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0473978652634672,
+            "mf_tip": 0.5405474713372449,
+            "th_tip": 0.712061828333714
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 9.825000000000001,
+          "load_fraction": 0.0,
+          "yaw_change_deg": -0.2464557404636881,
+          "shift_mm": 0.6018645847431141,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0611989289413981,
+            "mf_tip": 0.5546022516067934,
+            "th_tip": 0.7082799969226965
+          },
+          "certified_gap_mm": 3.817047976175097
+        },
+        {
+          "time_s": 10.05,
+          "load_fraction": 0.0,
+          "yaw_change_deg": -0.12166925937487882,
+          "shift_mm": 0.6278006493214923,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0638728687555998,
+            "mf_tip": 0.5544863008586702,
+            "th_tip": 0.7062479044393728
+          },
+          "certified_gap_mm": 3.817047976175097
+        }
+      ],
+      "elapsed_seconds": 4.269359984000062
+    },
+    {
+      "hypothetical_reaction_torque_nm": 0.01,
+      "axis_world": [
+        0.3342173234974869,
+        -0.08109613681202216,
+        0.9390006375228624
+      ],
+      "safety_passed": true,
+      "stop": null,
+      "steps": 10050,
+      "max_yaw_change_deg": 3.5226313726946583,
+      "max_center_shift_mm": 2.7648856357913063,
+      "max_tilt_change_deg": 5.945379542981286,
+      "minimum_separating_gap_1ms_mm": 0.3002051949849971,
+      "certificate_bad_steps": 0,
+      "certificate_unqueried_steps": 0,
+      "certificate": {
+        "geoms": 56,
+        "minimum_required_gap_mm": 0.3,
+        "queries": 10050,
+        "plane_repairs": 58,
+        "polygon_searches": 0,
+        "exact_cylinder_support_rechecked": true,
+        "model_changes": 0,
+        "certificate_scope": "Queried simulated poses only; continuous physical motion and geometry calibration are not certified"
+      },
+      "opposed_lower_body_contact_fraction": 0.7241791044776119,
+      "constant_targets": true,
+      "worst": {
+        "self_mm": 0.0,
+        "support_mm": 0.0,
+        "cube_mm": 0.06581240094691226,
+        "tracking_rad": 0.06056788149198271,
+        "range_rad": 0.0
+      },
+      "load_filter_passed": false,
+      "reasons": [
+        "yaw_change",
+        "translation",
+        "tilt_change",
+        "opposed_lower_body_contacts"
+      ],
+      "trace": [
+        {
+          "time_s": 0.075,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 0.00030960680267443015,
+          "shift_mm": 0.0034680075707446546,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0188656147948385,
+            "mf_tip": 0.6244729396450877,
+            "th_tip": 0.7025724823630923
+          },
+          "certified_gap_mm": 3.922563917995191
+        },
+        {
+          "time_s": 1.05,
+          "load_fraction": 0.04899999999999993,
+          "yaw_change_deg": 0.03629739760517174,
+          "shift_mm": 0.07118236680596227,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0216095724310643,
+            "mf_tip": 0.6355869282207611,
+            "th_tip": 0.712498527202841
+          },
+          "certified_gap_mm": 3.820092107656059
+        },
+        {
+          "time_s": 2.025,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 0.7146943274548491,
+          "shift_mm": 0.5328160050982861,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.1057918746811024,
+            "mf_tip": 0.6071638961524612,
+            "th_tip": 0.7656256149572038
+          },
+          "certified_gap_mm": 3.366479935568208
+        },
+        {
+          "time_s": 3.0,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 2.012256944607495,
+          "shift_mm": 1.3172828261898373,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.1296152004470073,
+            "mf_tip": 0.6531619832525457,
+            "th_tip": 0.7930210202134831
+          },
+          "certified_gap_mm": 2.8671495134527447
+        },
+        {
+          "time_s": 3.975,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 3.4905870093646065,
+          "shift_mm": 2.341576799642147,
+          "lower_contact_N": {
+            "palm_collision_1": 0.45179942266440987,
+            "if_bs_collision_1": 0.6360761147798573,
+            "th_tip": 0.4567589046254982
+          },
+          "certified_gap_mm": 0.4650766602279006
+        },
+        {
+          "time_s": 4.95,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 3.46340506535139,
+          "shift_mm": 2.4907451483832355,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0078271786256443,
+            "th_tip": 0.43143232301699247
+          },
+          "certified_gap_mm": 0.3002051949849971
+        },
+        {
+          "time_s": 5.925,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 3.4702993111598586,
+          "shift_mm": 2.4884249109950294,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.10994482762244,
+            "mf_tip": 1.791646843691021,
+            "th_tip": 1.3858868771646702
+          },
+          "certified_gap_mm": 0.3002051949849971
+        },
+        {
+          "time_s": 6.9,
+          "load_fraction": 1.0,
+          "yaw_change_deg": 3.48850815104161,
+          "shift_mm": 2.5018872018813822,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.1214808645579872,
+            "mf_tip": 1.724498612671543,
+            "th_tip": 1.3649175584280004
+          },
+          "certified_gap_mm": 0.3002051949849971
+        },
+        {
+          "time_s": 7.875,
+          "load_fraction": 0.12599999999999945,
+          "yaw_change_deg": 3.0913333932379157,
+          "shift_mm": 2.4813574602257575,
+          "lower_contact_N": {
+            "if_bs_collision_1": 0.969015783974182,
+            "th_tip": 0.2902326334230877
+          },
+          "certified_gap_mm": 0.3002051949849971
+        },
+        {
+          "time_s": 8.85,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 2.1627715982907647,
+          "shift_mm": 2.51323414942043,
+          "lower_contact_N": {
+            "if_bs_collision_1": 1.0721074611781911,
+            "mf_tip": 1.1370502811027927,
+            "th_tip": 1.085311483189417
+          },
+          "certified_gap_mm": 0.3002051949849971
+        },
+        {
+          "time_s": 9.825000000000001,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 1.8642716813009717,
+          "shift_mm": 2.7575399521187767,
+          "lower_contact_N": {
+            "if_bs_collision_1": 0.9667798044705156,
+            "mf_tip": 0.8453098610354102,
+            "th_tip": 0.8078492521986966
+          },
+          "certified_gap_mm": 0.3002051949849971
+        },
+        {
+          "time_s": 10.05,
+          "load_fraction": 0.0,
+          "yaw_change_deg": 1.8285558101058672,
+          "shift_mm": 2.7648856357913063,
+          "lower_contact_N": {
+            "if_bs_collision_1": 0.9558411558259824,
+            "mf_tip": 0.8569154601401056,
+            "th_tip": 0.8130156682226237
+          },
+          "certified_gap_mm": 0.3002051949849971
+        }
+      ],
+      "elapsed_seconds": 4.570782312999995
+    }
+  ],
+  "load_profile": "baseline0-1s, ramp1-2s, full2-7s, rampoff7-8s, settle8-10.05s",
+  "actual_left_hand_load_measured": false,
+  "articulated_layer_not_simulated": true,
+  "physics_and_current_and_PID_and_native_guards_unchanged": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false
+}

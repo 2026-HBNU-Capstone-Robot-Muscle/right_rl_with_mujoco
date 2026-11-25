@@ -1,0 +1,125 @@
+{
+  "material_policy": "both_contacting_surfaces_v1_not_physical_identification",
+  "parent_model_sha256": "28241b29264f5ae644b22588cb5afd276cea0a0104b3df15153e8adf85b8e5f2",
+  "simulation_timestep_s": 0.001,
+  "settling_seconds": 2.0,
+  "initial_placement_also_checked": true,
+  "physics_acceptance_bounds_unchanged": true,
+  "cube_initial_local_green_axis_turn_deg": null,
+  "cube_seed_json": "right_hand_rotation_20261029/gapped_inverse_cube/cube_seed.json",
+  "cube_seed_sha256": "c4a3103b7e1ebea6bf27de64244861fb136021f20af8ddc203fbe16c77fc0bc8",
+  "loaded_route": "phase-labelled_joint_cycle",
+  "status": "full_loaded_yaw_release_model_diagnostic",
+  "candidate": "right_hand_rotation_20261029/inverse_wide_ring/ring256/candidate.npz",
+  "candidate_sha256": "45ed7b366a1ac5443f4454060d2d904150376c4b3e19251f656f9f241ac88d39",
+  "loaded_path_sha256": "4f4dfab0c20b95f34ef4820e0c68fc2317187f181955192a227fd42543c347b8",
+  "goals": 1224,
+  "nominal_loaded_seconds": 91.8,
+  "cases": [
+    {
+      "material_audit": {
+        "requested_effective_sliding_coefficient": 0.3,
+        "measured_physical_material": false,
+        "policy": "both surfaces; explicit cube/hand pairs also use the same sliding coefficient",
+        "original_tip_sliding_coefficients": {
+          "if_tip": 0.7,
+          "mf_tip": 0.7,
+          "rf_tip": 0.7,
+          "th_tip": 0.7
+        },
+        "original_cube_sliding_coefficient": 0.3,
+        "affected_geom_count": 78,
+        "affected_explicit_pair_count": 0,
+        "torsional_rolling_and_other_contact_parameters_preserved": true,
+        "effective_contacts_after_settle": [
+          {
+            "hand_geom": "palm_collision_1",
+            "sliding": [
+              0.3,
+              0.3
+            ],
+            "hand_priority": 0,
+            "cube_priority": 0
+          },
+          {
+            "hand_geom": "palm_collision_1",
+            "sliding": [
+              0.3,
+              0.3
+            ],
+            "hand_priority": 0,
+            "cube_priority": 0
+          },
+          {
+            "hand_geom": "if_bs_collision_1",
+            "sliding": [
+              0.3,
+              0.3
+            ],
+            "hand_priority": 0,
+            "cube_priority": 0
+          },
+          {
+            "hand_geom": "if_bs_collision_1",
+            "sliding": [
+              0.3,
+              0.3
+            ],
+            "hand_priority": 0,
+            "cube_priority": 0
+          }
+        ]
+      },
+      "seating_height_shift_mm": 0.0,
+      "initial_placement_probe": {
+        "max_self_mm": 0.0,
+        "max_support_mm": 0.0,
+        "max_cube_mm": 0.09466799798597657,
+        "max_tracking_rad": 0.028430762286766987,
+        "external_cube_contact": false
+      },
+      "initial_placement_passed": true,
+      "cube_seed_json": "right_hand_rotation_20261029/gapped_inverse_cube/cube_seed.json",
+      "initial_cube_after_settle": [
+        0.1461015801895441,
+        -0.041013151104995475,
+        -0.009185465079388904
+      ],
+      "seed_offset_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "simulation_timestep_s": 0.001,
+      "book_front_mm": -10.0,
+      "gain_scale": 1.0,
+      "friction": 0.3,
+      "passed": false,
+      "stop": "contact/range/tracking/retention violation",
+      "last_phase": "yaw_hold",
+      "last_sample": 511,
+      "placed_to_turn_deg": -80.17824116607905,
+      "yaw_before_release_deg": -78.35940392509981,
+      "yaw_tilt_change_deg": 8.481564592985766,
+      "final_yaw_from_placement_deg": -80.17824116607905,
+      "max_self_mm": 1.9872039884861478e-05,
+      "worst_self_pairs_mm": {
+        "cadtip_mf_rf_mf_md_0|cadtip_mf_rf_rf_px_0": 1.9872039884861478e-05
+      },
+      "max_support_mm": 0.0,
+      "max_cube_mm": 0.35276974504071906,
+      "max_tracking_rad": 0.16434536638621688,
+      "unapproved_range_excess_rad": 0,
+      "external_cube_contact": false,
+      "final_cube_supported_by_hand": true,
+      "center_translation_mm": 22.133791297404215,
+      "longest_no_hand_contact_seconds": 0.005
+    }
+  ],
+  "all_passed": false,
+  "finite_stiffness_contact_forces_preserved": true,
+  "physical_yaw_verified": false,
+  "hardware_execution_allowed": false,
+  "devices_opened": false,
+  "elapsed_seconds": 13.817276392
+}

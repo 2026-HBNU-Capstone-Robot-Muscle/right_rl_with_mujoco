@@ -1,0 +1,54 @@
+{
+  "status": "code_checks_passed_current_start_simulation_pending",
+  "timestamp": "2026-10-28T16:52:00.979804+09:00",
+  "operator_trial_ready": false,
+  "plan_version": "physical_timing_prefix638_calibration_v3_precise_two_full_20261028",
+  "last_run": "calibrated_quarter_trial_20261028_055850_634642",
+  "last_failed_phase": "stage_3_empty_open",
+  "last_reason": "recovered complete state plus first followup consumed the200ms budget before a third complete read",
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "cube_placement_phase_not_reached": true,
+  "changes": [
+    "Use one high-resolution perf_counter clock for host timeouts, quiet wait and health budgets.",
+    "After the last RX failure validate two full healthy snapshots; the wholly new recovered snapshot may be first.",
+    "Keep all voltage/current/temperature/tracking/goal checks,200ms budget, retry limits and all motion goals."
+  ],
+  "unit_tests_passed": 172,
+  "offline_launcher_tests_passed": 3,
+  "loaded_physics_cases_reused": 27,
+  "loaded_geometry_cases_reused": 201,
+  "precise_readonly_evidence": {
+    "source": "precise_two_full_readonly_20261028_060908_257593/result.json",
+    "source_sha256": "dd9aba08b3f3bf9339185a6a59b2f10219fb145765d214058f67ff475093fc81",
+    "snapshots": 200,
+    "read_failures": 0,
+    "camera_frames": 298,
+    "maximum_sample_ms": 42.147799977101386,
+    "installed_policy": {
+      "version": "calibrated_QPC_clock_v1_20261028",
+      "budget_clock": "time.perf_counter",
+      "driver_timeout_clock": "time.perf_counter milliseconds",
+      "legacy_log_clock_unchanged": true,
+      "sample_budget_ms": 200,
+      "wall_clock_or_GetTickCount_not_used_for_health_budget": true
+    },
+    "motor_writes": 0,
+    "physical_motion_recovery_verified": false
+  },
+  "current_start_model_cases_pending": 210,
+  "current_start_model_executed": false,
+  "model_execution_blocker": {
+    "source": "automatic_approval_review",
+    "reason": "usage limit prevented approval review; requested WSL action was not executed",
+    "unsafe_action_determination": false
+  },
+  "default_motion_cli_denies_unreviewed_start": true,
+  "assistant_motor_writes": 0,
+  "user_next_action": "Run simulation-only check once; no robot power is needed.",
+  "simulation_only_command": "& \"C:\\Users\\\uae40\uc900\uc11c\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\leap_precise_simulation_check.cmd\"",
+  "no_device_access_in_simulation_launcher": true,
+  "proof": "right_hand_rotation_20261028/observed90_prefix638/operator_review_v3_precise_two_full/review.json",
+  "near90_held_observations_preserved": 2,
+  "full_project_or_other_axes_verified": false
+}

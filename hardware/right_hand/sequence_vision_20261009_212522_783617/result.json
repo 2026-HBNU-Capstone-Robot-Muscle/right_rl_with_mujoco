@@ -1,0 +1,263 @@
+{
+  "status": "complete",
+  "frames": [
+    {
+      "captured_at_unix_s": 1791548722.2291543,
+      "motor_t_s": null,
+      "phase": "preflight",
+      "reason": "cube_markers_below_2",
+      "frame_age_ms": 93.0000000007567,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [
+        40
+      ],
+      "min_edge_px_by_id": {
+        "40": 121.4
+      },
+      "pose": {
+        "n_cube_markers": 0,
+        "R_hand": [
+          [
+            0.9985907747055645,
+            0.0383636143629356,
+            0.03667012088815795
+          ],
+          [
+            0.053064575329768784,
+            -0.731999098883011,
+            -0.6792359458093566
+          ],
+          [
+            0.0007845495595887077,
+            0.6802246337258537,
+            -0.7330032961416453
+          ]
+        ],
+        "t_hand": [
+          -0.039129865557674115,
+          -0.011835196185889994,
+          0.2031055118322616
+        ]
+      },
+      "anchor_detected_ids": [
+        40,
+        41
+      ]
+    },
+    {
+      "captured_at_unix_s": 1791548722.2911544,
+      "motor_t_s": null,
+      "phase": "preflight",
+      "reason": "cube_markers_below_2",
+      "frame_age_ms": 125.0,
+      "reprojection_px": null,
+      "n_cube_markers": 0,
+      "detected_ids": [
+        40
+      ],
+      "min_edge_px_by_id": {
+        "40": 121.5
+      },
+      "pose": {
+        "n_cube_markers": 0,
+        "R_hand": [
+          [
+            0.9986589541503043,
+            0.037293564120682736,
+            0.03590937719588839
+          ],
+          [
+            0.05176419459513331,
+            -0.7309712896670674,
+            -0.6804420929369239
+          ],
+          [
+            0.0008726129366649765,
+            0.6813884088811908,
+            -0.7319214949631019
+          ]
+        ],
+        "t_hand": [
+          -0.039023868339453996,
+          -0.011790532795017789,
+          0.2024165239381013
+        ]
+      },
+      "anchor_detected_ids": [
+        40,
+        41
+      ]
+    }
+  ],
+  "camera_only_diagnostics": true,
+  "motor_port_opened_by_recorder": false,
+  "registration": {
+    "status": "unverified_visual_candidate",
+    "hardware_authorized": false,
+    "hand_to_world_candidate": [
+      [
+        0.0,
+        0.9405700424499697,
+        0.33959975742874465
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.33959975742874465,
+        0.9405700424499697
+      ]
+    ],
+    "grasp_site_in_marker_m_candidate": [
+      0.020700000000000003,
+      0.010215221346270474,
+      0.04762016373559733
+    ],
+    "motor_axis_landmarks_in_marker_m": {
+      "5": [
+        0.0742,
+        0.0471,
+        -0.013999999999999999
+      ],
+      "9": [
+        0.028800000000000003,
+        0.047,
+        -0.013999999999999999
+      ],
+      "13": [
+        -0.016599999999999997,
+        0.04701,
+        -0.013999999999999999
+      ],
+      "1": [
+        0.05,
+        -0.015199999999999998,
+        -0.011099999999999999
+      ]
+    },
+    "assumptions": [
+      "47 mm forward distance includes an approximate 7 mm user correction from joint start to motor 9 axis",
+      "50 mm thumb-axis distance is approximate and overrides the old middle-point 18 mm lateral constraint; lateral position of model motor 9 is derived, not a new user measurement",
+      "14 mm below marker plane is retained provisionally; full 3D registration remains unverified",
+      "Marker mounting plane is parallel to palm model's local XY plane",
+      "Toward fingertips corresponds to palm local +X and away from thumb to local -Y",
+      "Photo supports cardinal marker-axis correspondence, not exact yaw or mounting-plane tilt"
+    ],
+    "measurements": {
+      "toward_fingertips": 47.0,
+      "away_from_thumb": -28.800000000000004,
+      "above_marker_plane": -14.0
+    },
+    "measurement_note": "Effective registration inputs; lateral motor-9 coordinate is derived when thumb constraint is present",
+    "thumb_axis_lateral_constraint": {
+      "marker_center_to_axis_toward_thumb_mm": 50.0,
+      "source": "User approximate ruler measurement to motor 1 axis line",
+      "supersedes_middle_point_lateral_constraint": true,
+      "note": "Use this perpendicular distance to the thumb axis for common rigid translation, not a thumb-only landmark shift. Keep the old middle-point lateral value as measurement history."
+    }
+  },
+  "registration_depth_verified": false,
+  "marker_detector": "contour corners + raw dense/contrast/dense/strong-threshold fallbacks; max 5 same-frame passes; decoded board IDs only",
+  "face_rot": [
+    1,
+    3,
+    3,
+    2,
+    1,
+    3
+  ],
+  "camera_startup": {
+    "expected_device": "Streaming Webcam",
+    "backend": "DSHOW",
+    "timeout_seconds": 10.0,
+    "motors_accessed": false,
+    "devices": [
+      "Streaming Webcam",
+      "USB2.0 HD UVC WebCam",
+      "OBS Virtual Camera"
+    ],
+    "camera_index": 0,
+    "device_name": "Streaming Webcam"
+  },
+  "capture": {
+    "backend": "DSHOW",
+    "requested_format": "MJPG",
+    "actual_size": [
+      1280,
+      720
+    ],
+    "actual_format": "MJPG",
+    "reported_fps": 30.00003000003,
+    "camera_index": 0,
+    "device_name": "Streaming Webcam",
+    "attempts": [
+      {
+        "backend": "DSHOW",
+        "requested_format": "MJPG",
+        "actual_size": [
+          1280,
+          720
+        ],
+        "actual_format": "MJPG",
+        "reported_fps": 30.00003000003
+      }
+    ]
+  },
+  "last_marker_detection": {
+    "method": "contour",
+    "corner_refinement": "contour",
+    "ids": [
+      40
+    ],
+    "min_edge_px_by_id": {
+      "40": 121.5
+    },
+    "detect_ms": 78.00000000133878
+  },
+  "camera_worker_stopped": true,
+  "summary": {
+    "frames": 2,
+    "eligible_frames": 0,
+    "eligible_percent": 0.0,
+    "longest_valid_streak": 0,
+    "reason_counts": {
+      "cube_markers_below_2": 2
+    },
+    "by_cube_ids": {
+      "none": {
+        "frames": 2,
+        "eligible": 0,
+        "median_reprojection_px": null,
+        "max_reprojection_px": null
+      }
+    }
+  },
+  "by_phase": {
+    "preflight": {
+      "frames": 2,
+      "eligible_frames": 0,
+      "eligible_percent": 0.0,
+      "longest_valid_streak": 0,
+      "reason_counts": {
+        "cube_markers_below_2": 2
+      },
+      "by_cube_ids": {
+        "none": {
+          "frames": 2,
+          "eligible": 0,
+          "median_reprojection_px": null,
+          "max_reprojection_px": null
+        }
+      }
+    }
+  },
+  "saved_images": [
+    "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\sequence_vision_20261009_212522_783617\\preflight_not_ready.png",
+    "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\sequence_vision_20261009_212522_783617\\anchor_empty_preflight.png"
+  ],
+  "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\sequence_vision_20261009_212522_783617"
+}

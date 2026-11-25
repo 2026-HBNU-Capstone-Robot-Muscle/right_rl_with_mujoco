@@ -1,0 +1,188 @@
+{
+  "status": "finite_actuator_free_cube_pitch_to_yaw_transfer_diagnostic",
+  "cases": [
+    {
+      "scale": 1.0,
+      "friction": 0.3,
+      "passed": false,
+      "stop": null,
+      "last_sample": 1941,
+      "requested_samples": 1942,
+      "last_phase": "transfer_hold",
+      "acceptance_checks": {
+        "motion_health_passed": true,
+        "final_hand_contact": true,
+        "final_red_up_within15deg": true,
+        "seat_within8mm_of_existing_yaw_start": false
+      },
+      "phase_checkpoints": {
+        "initial_settle": {
+          "cube_qpos": [
+            0.10788241844048099,
+            -0.037373688271665255,
+            0.012493000096875661,
+            -0.6149198801752618,
+            0.5904114718837943,
+            0.38091582773387184,
+            0.3580376614478875
+          ],
+          "twist_about_world_up_deg": -0.2572456810273283,
+          "red_up_deg": 7.132953595688735
+        },
+        "transfer": {
+          "cube_qpos": [
+            0.11860615658428392,
+            -0.040847475418385244,
+            0.006389185650303695,
+            -0.6214305650521902,
+            0.6214219430820389,
+            0.3373860208312161,
+            0.33738626887106277
+          ],
+          "twist_about_world_up_deg": -2.9467873337176442,
+          "red_up_deg": 13.150468689746141
+        },
+        "transfer_hold": {
+          "cube_qpos": [
+            0.11885767371659582,
+            -0.04084753911267482,
+            0.006232576998148,
+            -0.6209244786953193,
+            0.6209116230706239,
+            0.3383216709712893,
+            0.33831936841384713
+          ],
+          "twist_about_world_up_deg": -2.9468930567927942,
+          "red_up_deg": 12.978098679814977
+        }
+      },
+      "initial_red_up_deg": 6.418915407680602,
+      "red_up_deg": 12.978098679814977,
+      "cube_reorientation_deg": 7.205656906825599,
+      "seat_error_to_yaw_initial_mm": 23.332384313403658,
+      "cube_translation_mm": 13.25688803130934,
+      "max_self_mm": 0.0,
+      "max_support_mm": 0.0,
+      "max_cube_mm": 0.6965861275043688,
+      "max_tracking_rad": 0.10108708738897398,
+      "native_range_excess_rad": 0.0,
+      "max_no_hand_contact_seconds": 0.002,
+      "external_cube_contact": false,
+      "worst_self_pair": null,
+      "trace": "trace_s1_mu0.3.npz",
+      "end_cube_qpos": [
+        0.11885767371659582,
+        -0.04084753911267482,
+        0.006232576998148,
+        -0.6209244786953193,
+        0.6209116230706239,
+        0.3383216709712893,
+        0.33831936841384713
+      ]
+    }
+  ],
+  "all_passed": false,
+  "route_source_sha256": "05ee0bab4bb80d88ddab19fa6eb0e4cfca7252b7dac05f19addb4ae5b7fa0b12",
+  "initial_cube_seed_sha256": "72c5ddd506ec4a97090f60a404a130b8c67b03627e7cf3dac43e28013b61d456",
+  "appended_yaw_source_sha256": null,
+  "initial_cube_seed_is_uncertified_model_hypothesis": true,
+  "finite_actuators": true,
+  "hand_qpos_prescribed_during_replay": false,
+  "cube_qpos_prescribed_during_replay": false,
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "real_devices_opened": false,
+  "hardware_execution_allowed": false,
+  "elapsed_seconds": 12.677902503999974
+}

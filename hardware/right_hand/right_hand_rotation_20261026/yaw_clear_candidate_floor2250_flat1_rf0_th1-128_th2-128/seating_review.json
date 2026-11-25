@@ -1,0 +1,468 @@
+{
+  "status": "same_measured_motion_yaw_seating_diagnostic",
+  "source_sha256": "1722388e82f512b9f7fa24d60a75ef8320c59435c61d5f6117c6d7fec70a794d",
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "cases": [
+    {
+      "x_mm": -40,
+      "y_mm": -15,
+      "height_mm": 77.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 13.043691581067089,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -40,
+      "y_mm": 0,
+      "height_mm": 93.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 10.051339083050053,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -40,
+      "y_mm": 15,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 74.57755684180962,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -25,
+      "y_mm": -15,
+      "height_mm": 62.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 9.98536500526966,
+      "friction": 0.3,
+      "best": {
+        "time_s": 27.22,
+        "yaw_deg": 3.050500653269783,
+        "green_up_error_deg": 10.207848754055512,
+        "score": 107.36519685484124
+      },
+      "maximum_cube_overlap_mm": 0.04277135064437512,
+      "maximum_no_hand_contact_seconds": 0.1,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.11054778755007921,
+        -0.09986308078216022,
+        -0.03682869483878062,
+        -0.9755570267856747,
+        -0.007555889994273419,
+        -0.2090712899734771,
+        -0.06723534579605069
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": -25,
+      "y_mm": 0,
+      "height_mm": 62.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 9.98519201832517,
+      "friction": 0.3,
+      "best": {
+        "time_s": 26.92,
+        "yaw_deg": 4.574299746767511,
+        "green_up_error_deg": 10.099098526779901,
+        "score": 105.62389730679229
+      },
+      "maximum_cube_overlap_mm": 0.03761201229640285,
+      "maximum_no_hand_contact_seconds": 0.08,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.1125890141807667,
+        -0.0894391182406647,
+        -0.0316024944155109,
+        -0.9659102464492383,
+        0.1129348468331142,
+        -0.19659598827869323,
+        -0.12495252525609558
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": -25,
+      "y_mm": 15,
+      "height_mm": 95.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 0.5355358070684245,
+      "friction": 0.3
+    },
+    {
+      "x_mm": -10,
+      "y_mm": -15,
+      "height_mm": 63.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 0.567551680702886,
+      "friction": 0.3,
+      "best": {
+        "time_s": 77.8,
+        "yaw_deg": 23.145338510831476,
+        "green_up_error_deg": 5.037061239954965,
+        "score": 76.92878396907845
+      },
+      "maximum_cube_overlap_mm": 0.234974565868332,
+      "maximum_no_hand_contact_seconds": 0.02,
+      "external_cube_contact": false,
+      "stopped": null,
+      "final_cube_qpos": [
+        0.12221875729851346,
+        0.0027296364874335698,
+        0.004463687970191229,
+        -0.6600956002690653,
+        0.698730593981417,
+        -0.2535261372859776,
+        -0.10850738800952621
+      ],
+      "final_contact_geoms": [
+        "mf_bs_collision_1",
+        "palm_collision_2",
+        "palm_collision_6",
+        "th_tip"
+      ]
+    },
+    {
+      "x_mm": -10,
+      "y_mm": 0,
+      "height_mm": 63.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 1.2176835614295205,
+      "friction": 0.3,
+      "best": {
+        "time_s": 35.76,
+        "yaw_deg": 28.4855011396726,
+        "green_up_error_deg": 0.7442045624371001,
+        "score": 63.0029079852016
+      },
+      "maximum_cube_overlap_mm": 0.05639563696124925,
+      "maximum_no_hand_contact_seconds": 0.1,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.12060377688720703,
+        -0.10306859885999843,
+        -0.030530127731718894,
+        -0.9964650231967505,
+        0.02062399116341638,
+        0.08135380493291786,
+        0.0036968847600070934
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": -10,
+      "y_mm": 15,
+      "height_mm": 64.0,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 1.190305847751389,
+      "friction": 0.3,
+      "best": {
+        "time_s": 36.54,
+        "yaw_deg": 31.621187642273952,
+        "green_up_error_deg": 0.6253524066307387,
+        "score": 59.629517170987526
+      },
+      "maximum_cube_overlap_mm": 0.05361936069934965,
+      "maximum_no_hand_contact_seconds": 0.1,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.11911230769895077,
+        -0.10033316836301891,
+        -0.027613909716557677,
+        -0.9909315580973022,
+        0.047290581746926644,
+        0.1256388224231034,
+        -0.005756244003387959
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": 5,
+      "y_mm": -15,
+      "height_mm": 68.0,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 12.852684654131496,
+      "friction": 0.3,
+      "best": {
+        "time_s": 70.06,
+        "yaw_deg": 5.296489128623109,
+        "green_up_error_deg": 13.511850576760297,
+        "score": 111.72721202489748
+      },
+      "maximum_cube_overlap_mm": 6.123989704897632,
+      "maximum_no_hand_contact_seconds": 0.02,
+      "external_cube_contact": false,
+      "stopped": null,
+      "final_cube_qpos": [
+        0.15161073202983824,
+        -0.038182802639373535,
+        -0.0045134190280903905,
+        -0.7113946312803656,
+        0.7012880299640096,
+        -0.004773684023133092,
+        -0.04571640357158598
+      ],
+      "final_contact_geoms": [
+        "if_bs_collision_1",
+        "if_px_collision",
+        "palm_collision_1"
+      ]
+    },
+    {
+      "x_mm": 5,
+      "y_mm": 0,
+      "height_mm": 68.0,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 12.95561488135132,
+      "friction": 0.3,
+      "best": {
+        "time_s": 17.14,
+        "yaw_deg": 1.7802608382068166,
+        "green_up_error_deg": 12.935814555759402,
+        "score": 114.09136827331199
+      },
+      "maximum_cube_overlap_mm": 0.04354744377435397,
+      "maximum_no_hand_contact_seconds": 0.14,
+      "external_cube_contact": true,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.15002478765479121,
+        -0.12121890410396585,
+        -0.06429309748254071,
+        -0.7764032721573285,
+        -0.06525995075723584,
+        -0.6191340969175622,
+        0.09804115383159867
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": 5,
+      "y_mm": 15,
+      "height_mm": 68.0,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 12.956058676671347,
+      "friction": 0.3,
+      "best": {
+        "time_s": 16.740000000000002,
+        "yaw_deg": 4.197307229855158,
+        "green_up_error_deg": 13.025012188917982,
+        "score": 111.85271714798081
+      },
+      "maximum_cube_overlap_mm": 0.05900518174061169,
+      "maximum_no_hand_contact_seconds": 0.32,
+      "external_cube_contact": false,
+      "stopped": "cube_lost_or_external_contact",
+      "final_cube_qpos": [
+        0.16249001245532665,
+        -0.1572502899332383,
+        -0.144103183629609,
+        -0.2087077774197433,
+        -0.5068960971028345,
+        -0.824236527175149,
+        0.1418857204114529
+      ],
+      "final_contact_geoms": []
+    },
+    {
+      "x_mm": 20,
+      "y_mm": -15,
+      "height_mm": 72.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 14.179111842744721,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 20,
+      "y_mm": 0,
+      "height_mm": 72.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 15.37411230629491,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 20,
+      "y_mm": 15,
+      "height_mm": 72.5,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 14.564758926757756,
+      "friction": 0.3
+    },
+    {
+      "x_mm": 35,
+      "y_mm": -15,
+      "height_mm": 73.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 16.172521299927435,
+      "friction": 0.3,
+      "best": {
+        "time_s": 41.980000000000004,
+        "yaw_deg": 0.004874897561461481,
+        "green_up_error_deg": 16.157284567840087,
+        "score": 122.30969423811871
+      },
+      "maximum_cube_overlap_mm": 0.01040302051301227,
+      "maximum_no_hand_contact_seconds": 0.0,
+      "external_cube_contact": false,
+      "stopped": null,
+      "final_cube_qpos": [
+        0.17456047820964646,
+        -0.04559883283160562,
+        -0.006374889647953783,
+        -0.7067491874324847,
+        0.706735220421455,
+        -0.0227047365812758,
+        -0.022702625754190714
+      ],
+      "final_contact_geoms": [
+        "if_bs_collision_1",
+        "if_px_collision"
+      ]
+    },
+    {
+      "x_mm": 35,
+      "y_mm": 0,
+      "height_mm": 73.5,
+      "initial_valid": true,
+      "initial_green_up_error_deg": 16.1594352788952,
+      "friction": 0.3,
+      "best": {
+        "time_s": 1.76,
+        "yaw_deg": -0.00015361453884158664,
+        "green_up_error_deg": 16.15862872828201,
+        "score": 122.31710384202518
+      },
+      "maximum_cube_overlap_mm": 0.00283366172828918,
+      "maximum_no_hand_contact_seconds": 0.0,
+      "external_cube_contact": false,
+      "stopped": null,
+      "final_cube_qpos": [
+        0.1745622521826416,
+        -0.033051402602174006,
+        -0.006336282493048341,
+        -0.7074649896723332,
+        0.7060192689133465,
+        -0.02271702812182143,
+        -0.02267194178498295
+      ],
+      "final_contact_geoms": [
+        "if_bs_collision_1",
+        "if_px_collision",
+        "mf_px_collision"
+      ]
+    },
+    {
+      "x_mm": 35,
+      "y_mm": 15,
+      "height_mm": 74.0,
+      "initial_valid": false,
+      "initial_green_up_error_deg": 15.15936597020166,
+      "friction": 0.3
+    }
+  ],
+  "actual_cube_placement_not_registered": true,
+  "friction_not_measured": true,
+  "hand_response_prescribed_from_other_seating": true,
+  "source_motion_seconds": 100.5,
+  "hardware_execution_allowed": false,
+  "real_devices_opened": false,
+  "elapsed_seconds": 51.20950512899999,
+  "initial_up_error_limit_deg": 20.0,
+  "motion_source": "right_hand_rotation_20261026/yaw_original_clearance_search/raised_start_free_ring/floor2250_flat1_rf0_th1-128_th2-128.npz"
+}

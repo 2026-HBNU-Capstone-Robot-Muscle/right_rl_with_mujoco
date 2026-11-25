@@ -1,0 +1,265 @@
+{
+  "vision_folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\vision_sweep_20261006_011011_994373",
+  "motor_report": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\leap_sequence_flip_result.json",
+  "camera_overall": {
+    "frames": 953,
+    "eligible_frames": 610,
+    "eligible_percent": 64.0083945435467,
+    "longest_valid_streak": 30,
+    "reason_counts": {
+      "cube_markers_below_2": 318,
+      "no_pose": 21,
+      "eligible": 610,
+      "hand_cube_position_missing": 2,
+      "frame_over_200ms": 1,
+      "reprojection_over_3px_or_invalid": 1
+    },
+    "by_cube_ids": {
+      "1": {
+        "frames": 98,
+        "eligible": 0,
+        "median_reprojection_px": 0.10132156684994698,
+        "max_reprojection_px": 0.24624381959438324
+      },
+      "1,5": {
+        "frames": 328,
+        "eligible": 325,
+        "median_reprojection_px": 2.087828755378723,
+        "max_reprojection_px": 3.027772903442383
+      },
+      "2": {
+        "frames": 81,
+        "eligible": 0,
+        "median_reprojection_px": 0.17428697645664215,
+        "max_reprojection_px": 0.8917824625968933
+      },
+      "2,5": {
+        "frames": 12,
+        "eligible": 11,
+        "median_reprojection_px": 2.3880480527877808,
+        "max_reprojection_px": 2.591492176055908
+      },
+      "3,5": {
+        "frames": 274,
+        "eligible": 274,
+        "median_reprojection_px": 0.9020103514194489,
+        "max_reprojection_px": 1.815447211265564
+      },
+      "5": {
+        "frames": 122,
+        "eligible": 0,
+        "median_reprojection_px": 0.2703010141849518,
+        "max_reprojection_px": 1.5791549682617188
+      },
+      "none": {
+        "frames": 38,
+        "eligible": 0,
+        "median_reprojection_px": null,
+        "max_reprojection_px": null
+      }
+    }
+  },
+  "motor_status": {
+    "status": "stopped",
+    "error": "Sync read at 64 failed: comm=-3002, error=0; first incomplete ID 11; no target advance",
+    "failed_phase": "remove_cube",
+    "all_torque_off_verified": true,
+    "settings_restored": true
+  },
+  "approx_alignment": {
+    "camera_s_at_motor_enable": 24.1,
+    "method": "camera result mtime minus 90s; motor result mtime minus last on-time sample minus 0.5s",
+    "uncertainty_s": "approximately +/- 2s; no shared capture timestamp"
+  },
+  "stage_eligibility": [
+    {
+      "phase": "stage_0",
+      "approx_camera_interval_s": [
+        24.2,
+        27.2
+      ],
+      "frames": 34,
+      "eligible": 21,
+      "eligible_percent": 61.8
+    },
+    {
+      "phase": "place_cube",
+      "approx_camera_interval_s": [
+        27.2,
+        29.9
+      ],
+      "frames": 20,
+      "eligible": 0,
+      "eligible_percent": 0.0
+    },
+    {
+      "phase": "stage_1",
+      "approx_camera_interval_s": [
+        29.9,
+        32.8
+      ],
+      "frames": 21,
+      "eligible": 0,
+      "eligible_percent": 0.0
+    },
+    {
+      "phase": "stage_2",
+      "approx_camera_interval_s": [
+        32.9,
+        35.9
+      ],
+      "frames": 22,
+      "eligible": 0,
+      "eligible_percent": 0.0
+    },
+    {
+      "phase": "stage_3",
+      "approx_camera_interval_s": [
+        35.9,
+        38.9
+      ],
+      "frames": 20,
+      "eligible": 0,
+      "eligible_percent": 0.0
+    },
+    {
+      "phase": "stage_4",
+      "approx_camera_interval_s": [
+        38.9,
+        41.9
+      ],
+      "frames": 20,
+      "eligible": 1,
+      "eligible_percent": 5.0
+    },
+    {
+      "phase": "stage_5",
+      "approx_camera_interval_s": [
+        41.9,
+        44.9
+      ],
+      "frames": 24,
+      "eligible": 5,
+      "eligible_percent": 20.8
+    },
+    {
+      "phase": "stage_6",
+      "approx_camera_interval_s": [
+        44.9,
+        47.9
+      ],
+      "frames": 23,
+      "eligible": 5,
+      "eligible_percent": 21.7
+    },
+    {
+      "phase": "remove_cube",
+      "approx_camera_interval_s": [
+        47.9,
+        49.6
+      ],
+      "frames": 15,
+      "eligible": 5,
+      "eligible_percent": 33.3
+    }
+  ],
+  "single_marker_ambiguity_examples": [
+    {
+      "image": "00-10s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 1.5,
+      "single_marker_reprojection_px": 0.26
+    },
+    {
+      "image": "00-10s_eligible.png",
+      "cube_id": 3,
+      "single_vs_two_marker_angle_deg": 131.7,
+      "single_marker_reprojection_px": 0.57
+    },
+    {
+      "image": "10-20s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 2.4,
+      "single_marker_reprojection_px": 0.24
+    },
+    {
+      "image": "10-20s_eligible.png",
+      "cube_id": 3,
+      "single_vs_two_marker_angle_deg": 2.5,
+      "single_marker_reprojection_px": 0.4
+    },
+    {
+      "image": "20-30s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 0.7,
+      "single_marker_reprojection_px": 0.32
+    },
+    {
+      "image": "20-30s_eligible.png",
+      "cube_id": 3,
+      "single_vs_two_marker_angle_deg": 2.3,
+      "single_marker_reprojection_px": 0.17
+    },
+    {
+      "image": "40-50s_eligible.png",
+      "cube_id": 2,
+      "single_vs_two_marker_angle_deg": 2.1,
+      "single_marker_reprojection_px": 0.01
+    },
+    {
+      "image": "40-50s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 112.1,
+      "single_marker_reprojection_px": 0.35
+    },
+    {
+      "image": "50-60s_eligible.png",
+      "cube_id": 1,
+      "single_vs_two_marker_angle_deg": 4.5,
+      "single_marker_reprojection_px": 0.08
+    },
+    {
+      "image": "50-60s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 4.5,
+      "single_marker_reprojection_px": 0.77
+    },
+    {
+      "image": "60-70s_eligible.png",
+      "cube_id": 1,
+      "single_vs_two_marker_angle_deg": 4.1,
+      "single_marker_reprojection_px": 0.18
+    },
+    {
+      "image": "60-70s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 3.3,
+      "single_marker_reprojection_px": 0.25
+    },
+    {
+      "image": "70-80s_eligible.png",
+      "cube_id": 1,
+      "single_vs_two_marker_angle_deg": 3.0,
+      "single_marker_reprojection_px": 0.12
+    },
+    {
+      "image": "70-80s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 2.4,
+      "single_marker_reprojection_px": 0.24
+    },
+    {
+      "image": "80-90s_eligible.png",
+      "cube_id": 1,
+      "single_vs_two_marker_angle_deg": 3.6,
+      "single_marker_reprojection_px": 0.15
+    },
+    {
+      "image": "80-90s_eligible.png",
+      "cube_id": 5,
+      "single_vs_two_marker_angle_deg": 2.5,
+      "single_marker_reprojection_px": 0.15
+    }
+  ],
+  "conclusion": "The active flip is mostly not eligible under the current two-cube-marker plus hand-ID40 gate. Do not treat the 64% whole-recording score as motion-time coverage."
+}

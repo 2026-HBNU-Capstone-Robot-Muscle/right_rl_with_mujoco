@@ -1,0 +1,111 @@
+<class 'mujoco_playground._src.manipulation.leap_hand.face_up.CubeFaceUp'>
+  def __init__(
+      self,
+      config: config_dict.ConfigDict = default_config(),
+      config_overrides: Optional[Dict[str, Union[str, int, list[Any]]]] = None,
+  ):
+    super().__init__(config=config, config_overrides=config_overrides)
+
+<class 'mujoco_playground._src.manipulation.leap_hand.reorient.CubeReorient'>
+  def __init__(
+      self,
+      config: config_dict.ConfigDict = default_config(),
+      config_overrides: Optional[Dict[str, Union[str, int, list[Any]]]] = None,
+  ):
+    super().__init__(
+        xml_path=consts.CUBE_XML.as_posix(),
+        config=config,
+        config_overrides=config_overrides,
+    )
+    self._post_init()
+
+  def _post_init(self) -> None:
+    home_key = self._mj_model.keyframe("home")
+    self._init_q = jp.array(home_key.qpos, dtype=float)
+    self._init_mpos = jp.array(home_key.mpos, dtype=float)
+    self._init_mquat = jp.array(home_key.mquat, dtype=float)
+    self._lowers = self._mj_model.actuator_ctrlrange[:, 0]
+    self._uppers = self._mj_model.actuator_ctrlrange[:, 1]
+    self._hand_qids = mjx_env.get_qpos_ids(self.mj_model, consts.JOINT_NAMES)
+    self._hand_dqids = mjx_env.get_qvel_ids(self.mj_model, consts.JOINT_NAMES)
+    self._cube_qids = mjx_env.get_qpos_ids(self.mj_model, ["cube_freejoint"])
+    self._floor_geom_id = self._mj_model.geom("floor").id
+    self._cube_geom_id = self._mj_model.geom("cube").id
+    self._cube_body_id = self._mj_model.body("cube").id
+    self._cube_mass = self._mj_model.body_subtreemass[self._cube_body_id]
+    self._default_pose = self._init_q[self._hand_qids]
+    # 구동 범위를 양 끝에서 margin/2 씩 잘라낸 '안전 범위'.
+    margin = self._config.joint_limit_margin
+    center = 0.5 * (self._lowers + self._uppers)
+    half = 0.5 * (self._uppers - self._lowers) * (1.0 - margin)
+    self._safe_lowers = center - half
+    self._safe_uppers = center + half
+    # 과신전 차단: 손가락 pip/dip 의 하한만 올린다.
+    # 관절 순서는 consts.JOINT_NAMES = if_mcp,if_rot,if_pip,if_dip, mf_..., rf_...,
+    # th_cmc,th_axl,th_mcp,th_ipl 이고 pip/dip 은 각 손가락의 3,4번째다.
+    # 엄지(th_ipl)는 사람도 IP 과신전이 10~20도 가능하므로 제외한다.
+    floor = float(self._config.hyperext_floor)
+    if floor > -8.0:
+      # _safe_lowers 는 numpy 배열이다(actuator_ctrlrange 에서 온다). jax 의
+      # .at[] 이 없으므로 numpy 로 처리한다. 모델 상수라 추적 대상이 아니다.
+      import numpy as _np
+      sl = _np.array(self._safe_lowers, dtype=float)
+      idx = [2, 3, 6, 7, 10, 11]
+      sl[idx] = _np.maximum(sl[idx], floor)
+      self._safe_lowers = sl
+    # 토크 제한은 mjx 모델에 반영돼야 하므로 mj_model 을 고친 뒤 다시 올린다.
+    force_limit = self._config.actuator_force_limit
+    if force_limit > 0.0:
+      self._mj_model.actuator_forcerange[:, 0] = -force_limit
+      self._mj_model.actuator_forcerange[:, 1] = force_limit
+      self._mj_model.actuator_forcelimited[:] = 1
+      self._mjx_model = mjx.put_model(
+          self._mj_model, impl=self._config.impl
+      )
+
+<class 'mujoco_playground._src.manipulation.leap_hand.base.LeapHandEnv'>
+  def __init__(
+      self,
+      xml_path: str,
+      config: config_dict.ConfigDict,
+      config_overrides: Optional[Dict[str, Union[str, int, list[Any]]]] = None,
+  ) -> None:
+    super().__init__(config, config_overrides)
+    self._model_assets = get_assets()
+    self._mj_model = mujoco.MjModel.from_xml_string(
+        epath.Path(xml_path).read_text(), assets=self._model_assets
+    )
+    self._mj_model.opt.timestep = self._config.sim_dt
+    self._mj_model.opt.ccd_iterations = 10
+
+    self._mj_model.vis.global_.offwidth = 3840
+    self._mj_model.vis.global_.offheight = 2160
+
+    self._mjx_model = mjx.put_model(self._mj_model, impl=self._config.impl)
+    self._xml_path = xml_path
+
+  @property
+  def xml_path(self) -> str:
+    return self._xml_path
+
+<class 'mujoco_playground._src.mjx_env.MjxEnv'>
+  def __init__(
+      self,
+      config: config_dict.ConfigDict,
+      config_overrides: Optional[Dict[str, Union[str, int, list[Any]]]] = None,
+  ):
+    self._config = config.lock()
+    if config_overrides:
+      self._config.update_from_flattened_dict(config_overrides)
+
+    self._ctrl_dt = config.ctrl_dt
+    self._sim_dt = config.sim_dt
+
+  @property
+  @abc.abstractmethod
+  def xml_path(self) -> str:
+    """Path to the xml file for the environment."""
+
+<class 'abc.ABC'>
+<class 'object'>
+dict_keys(['_config', '_ctrl_dt', '_sim_dt', '_model_assets', '_mj_model', '_mjx_model', '_xml_path', '_init_q', '_init_mpos', '_init_mquat', '_lowers', '_uppers', '_hand_qids', '_hand_dqids', '_cube_qids', '_floor_geom_id', '_cube_geom_id', '_cube_body_id', '_cube_mass', '_default_pose', '_safe_lowers', '_safe_uppers'])

@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-10-27T21:25:51.884653+09:00",
+  "status": "reported_vplus_wire_disconnected_repair_confirmation_pending",
+  "trial": "horizontal_quarter_trial_20261027_211439_985362",
+  "stopped_during": "stage_3_empty_open",
+  "motion_seconds": 43.51600000000326,
+  "cube_placement_reached": false,
+  "rotation_reached": false,
+  "initial_read_failure": {
+    "kind": "sync_read",
+    "address": 64,
+    "length": 83,
+    "completed_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "first_incomplete_id": 9,
+    "attempt": 1,
+    "comm": -3001,
+    "device_error": 0,
+    "elapsed_ms": 47.0000000204891,
+    "retry_requested": true,
+    "recovered": false
+  },
+  "last_complete_voltage_range_v": [
+    4.9,
+    5.1
+  ],
+  "last_complete_maximum_tracking_rad": 0.08743690490948154,
+  "camera_all705frames_usable": true,
+  "off_write_packets_sent": 2,
+  "torque_off_confirmed_by_program": false,
+  "user_confirmed_motor_power_cut": true,
+  "user_observation": "Black wire had come out of its V+ terminal; original terminal identity was reported by user, not inferred from wire color.",
+  "inference": "Likely supply interruption; exact interrupted branch not electrically measured.",
+  "user_repair_instruction": "Unplug PSU mains. Refasten only the wire originally in V+ to the same V+ terminal. Then switch5V back on and report; do not start a motion program.",
+  "next_step": "After user confirms repair/power, perform PING/READ-only communication and torque-OFF checks first.",
+  "no_baud_or_usb_setting_change_needed_at_this_stage": true,
+  "assistant_motor_writes": 0,
+  "next_motion_command_ready": false,
+  "physical_horizontal_90_verified": false
+}

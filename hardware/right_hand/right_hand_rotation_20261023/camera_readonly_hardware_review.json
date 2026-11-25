@@ -1,0 +1,56 @@
+{
+  "trials": [
+    {
+      "folder": "camera_readonly_check_20261023_043927_771511",
+      "result_sha256": "411ab99df83649126bf4561de89b93e55eee1bf9cfb99f20c1480bcec4a46181",
+      "status": "stopped",
+      "error": "ID1: model/PING check failed; no servo changes sent",
+      "sample_count": 0,
+      "elapsed_seconds": null,
+      "all_samples_off_and_error_free": null,
+      "min_voltage_v": null,
+      "camera_frames": 3,
+      "servo_write_commands_sent": 0,
+      "max_camera_poll_ms": null,
+      "max_read_ms": null,
+      "max_read_gap_ms": null
+    },
+    {
+      "folder": "camera_readonly_check_20261023_044004_522148",
+      "result_sha256": "268f84767488ff33b53e0cbcecca0b950d0911cae75ef4fffee9dc54f928d79d",
+      "status": "readonly_camera_timing_complete",
+      "error": null,
+      "sample_count": 238,
+      "elapsed_seconds": 12.03100000001723,
+      "all_samples_off_and_error_free": true,
+      "min_voltage_v": 4.5,
+      "camera_frames": 96,
+      "servo_write_commands_sent": 0,
+      "max_camera_poll_ms": 0.0,
+      "max_read_ms": 32.00000000651926,
+      "max_read_gap_ms": 63.000000023748726
+    },
+    {
+      "folder": "camera_readonly_check_20261023_044029_674824",
+      "result_sha256": "ab31211dd868631579ce98113d9aea797b0234101fe317eb10923668e484e226",
+      "status": "readonly_camera_timing_complete",
+      "error": null,
+      "sample_count": 237,
+      "elapsed_seconds": 12.0,
+      "all_samples_off_and_error_free": true,
+      "min_voltage_v": 4.5,
+      "camera_frames": 96,
+      "servo_write_commands_sent": 0,
+      "max_camera_poll_ms": 0.0,
+      "max_read_ms": 32.00000000651926,
+      "max_read_gap_ms": 63.000000023748726
+    }
+  ],
+  "completed_checks": 2,
+  "repeated_readonly_check_needed": false,
+  "interpretation": "The first trial failed at ID1 PING; its saved generic error does not establish why. The next two completed 12s with torque observed OFF and read gaps at most 63ms.",
+  "limits": "This checks camera and read timing with torque OFF. Window dragging was not instrumented; loaded movement and physical cube rotation are not verified by these results.",
+  "next_required_observation": "One existing grasp/contact-view run: show the index/middle fingertips against the cube after the grasp, then remove the cube and confirm OFF.",
+  "next_launcher": "leap_cube_contact_view.cmd",
+  "motor_targets_or_limits_changed": false
+}

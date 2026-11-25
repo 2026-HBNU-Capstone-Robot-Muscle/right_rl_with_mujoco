@@ -1,0 +1,267 @@
+{
+  "status": "finite_actuator_free_cube_pitch_to_yaw_transfer_diagnostic",
+  "cases": [
+    {
+      "scale": 1.0,
+      "friction": 0.3,
+      "passed": false,
+      "stop": "cube_external_contact",
+      "last_sample": 2853,
+      "requested_samples": 3982,
+      "last_phase": "yaw",
+      "acceptance_checks": {
+        "motion_health_passed": false,
+        "final_hand_contact": false,
+        "final_red_up_within15deg": false,
+        "substantial_horizontal_turn": false
+      },
+      "phase_checkpoints": {
+        "initial_settle": {
+          "cube_qpos": [
+            0.10788241844048099,
+            -0.037373688271665255,
+            0.012493000096875661,
+            -0.6149198801752618,
+            0.5904114718837943,
+            0.38091582773387184,
+            0.3580376614478875
+          ],
+          "twist_about_world_up_deg": -0.2572456810273283,
+          "red_up_deg": 7.132953595688735
+        },
+        "transfer": {
+          "cube_qpos": [
+            0.11726707486723616,
+            -0.03808025674159732,
+            0.007263710876138645,
+            -0.6297923947257449,
+            0.6180538974094274,
+            0.335807267011658,
+            0.3295518151441289
+          ],
+          "twist_about_world_up_deg": -1.8817916600740423,
+          "red_up_deg": 14.013901581081226
+        },
+        "transfer_hold": {
+          "cube_qpos": [
+            0.11764325349447428,
+            -0.03801613675072687,
+            0.007011452252449465,
+            -0.6268892570236345,
+            0.6195762489728643,
+            0.3359696192811578,
+            0.33205352890331574
+          ],
+          "twist_about_world_up_deg": -2.2824052170600337,
+          "red_up_deg": 13.770775759583774
+        },
+        "seat_grasp": {
+          "cube_qpos": [
+            0.13791233689298005,
+            -0.042690301705006546,
+            0.0008525403211767948,
+            -0.6568241501861766,
+            0.6310709241490912,
+            0.26189115664843315,
+            0.3189742097649357
+          ],
+          "twist_about_world_up_deg": -4.161625572296232,
+          "red_up_deg": 22.155702172219424
+        },
+        "seat_grasp_hold": {
+          "cube_qpos": [
+            0.1393329457593035,
+            -0.04363626539697825,
+            0.0007396962001687582,
+            -0.6624671306820501,
+            0.6379740035657181,
+            0.24729786994521308,
+            0.30491020819379455
+          ],
+          "twist_about_world_up_deg": -4.2661450902218325,
+          "red_up_deg": 24.62883453903799
+        },
+        "seat_open": {
+          "cube_qpos": [
+            0.13051158439753513,
+            -0.04211607469339755,
+            -0.00029286088711136634,
+            -0.6118738722490004,
+            0.6118708660968705,
+            0.35441653150386887,
+            0.35441970864731587
+          ],
+          "twist_about_world_up_deg": -2.9565280716951183,
+          "red_up_deg": 9.985628488487256
+        },
+        "seat_open_hold": {
+          "cube_qpos": [
+            0.13051158439751148,
+            -0.042116081871363766,
+            -0.0002928608871851991,
+            -0.6118738722513455,
+            0.6118708660944675,
+            0.3544165315019978,
+            0.35441970864928546
+          ],
+          "twist_about_world_up_deg": -2.9565280715858617,
+          "red_up_deg": 9.985628488478303
+        },
+        "grasp": {
+          "cube_qpos": [
+            0.13772441407737676,
+            -0.04359386688544435,
+            0.00039706014393626246,
+            -0.6503364833691725,
+            0.6405255255098834,
+            0.27763317954858974,
+            0.2995151535115508
+          ],
+          "twist_about_world_up_deg": -3.4001811826643427,
+          "red_up_deg": 22.04995407644051
+        },
+        "grasp_hold": {
+          "cube_qpos": [
+            0.139042871632598,
+            -0.04432515160646604,
+            0.00036212146932267276,
+            -0.6561723790960923,
+            0.6459342922851179,
+            0.26354520479077365,
+            0.28766408186161924
+          ],
+          "twist_about_world_up_deg": -3.480951935070571,
+          "red_up_deg": 24.3467480311818
+        }
+      },
+      "initial_red_up_deg": 6.418915407680602,
+      "red_up_deg": 98.00859791055069,
+      "cube_reorientation_deg": 98.9811243147825,
+      "seat_error_to_yaw_initial_mm": 61.261369062112514,
+      "cube_translation_mm": 64.42516557775966,
+      "max_self_mm": 0.0,
+      "max_support_mm": 0.0,
+      "max_cube_mm": 0.9207510141908687,
+      "max_tracking_rad": 0.03819435687866757,
+      "native_range_excess_rad": 0.0,
+      "max_no_hand_contact_seconds": 0.014,
+      "external_cube_contact": true,
+      "worst_self_pair": null,
+      "trace": "trace_s1_mu0.3.npz",
+      "end_cube_qpos": [
+        0.11721370178130813,
+        -0.08861754875741178,
+        -0.02594557162890926,
+        -0.6780556252841122,
+        0.27582038251429164,
+        -0.3628682003986691,
+        0.5766197661801691
+      ]
+    }
+  ],
+  "all_passed": false,
+  "route_source_sha256": "13fc79cedd9430672d46a5bfae4c4531571fa31b8d19b1c7d21bf1b8b0024908",
+  "initial_cube_seed_sha256": "72c5ddd506ec4a97090f60a404a130b8c67b03627e7cf3dac43e28013b61d456",
+  "appended_yaw_source_sha256": "8cf6342cc438c466e7f803f12066ebb649af892646146c33bd2f4ca76ce67dac",
+  "existing_grasp_open_seating_cycle_added": true,
+  "initial_cube_seed_is_uncertified_model_hypothesis": true,
+  "finite_actuators": true,
+  "hand_qpos_prescribed_during_replay": false,
+  "cube_qpos_prescribed_during_replay": false,
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "real_devices_opened": false,
+  "hardware_execution_allowed": false,
+  "elapsed_seconds": 20.980139110000003
+}

@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-10-29T01:21:08.811712+09:00",
+  "status": "stopped",
+  "error": "Serial input did not become quiet; no target advance",
+  "failed_phase": "stage_3_empty_open",
+  "plan_version": "supervised_red_up_yaw150ms_v1_20261029",
+  "all_torque_off_verified": true,
+  "settings_restored": true,
+  "read_failures": [
+    {
+      "kind": "sync_read",
+      "address": 64,
+      "length": 83,
+      "completed_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "first_incomplete_id": 6,
+      "receive_window_ms": 40.0,
+      "requested_ids": [
+        6
+      ],
+      "health_reply_group_size": 1,
+      "attempt": 1,
+      "comm": -3002,
+      "device_error": 0,
+      "elapsed_ms": 79.28979996358976,
+      "retry_requested": false,
+      "recovered": false,
+      "recovery_policy": "quiet_then_existing100ms_reserve_QPC_v1_20261029"
+    }
+  ],
+  "read_resynchronization_policy": {
+    "version": "quiet_then_existing100ms_reserve_QPC_v1_20261029",
+    "budget_clock": "time.perf_counter",
+    "maximum_requests": 3,
+    "total_read_budget_s": 0.2,
+    "minimum_retry_reserve_s": 0.1,
+    "quiet_s": 0.003,
+    "maximum_drain_s": 0.02,
+    "maximum_retries_per10s": 3,
+    "scope_address": 64,
+    "scope_length": 83,
+    "consecutive_healthy_snapshots_after_recovery": 2,
+    "goal_or_setting_write_retries": 0,
+    "missing_or_partial_snapshot_accepted": false,
+    "shared_sample_deadline_respected": true,
+    "actual_quiet_time_charged_before_reserve_check": true
+  },
+  "last_issued_phase": "stage_3_empty_open",
+  "camera_worker_stopped": true,
+  "camera_recording": {
+    "folder": "C:\\Users\\김준서\\Documents\\Codex\\2026-09-23\\files-mentioned-by-the-user-leap\\outputs\\retained_slow_yaw_20261029_012108_810204\\camera",
+    "status": "complete",
+    "frame_count": 270,
+    "error": null,
+    "image_signal_usable_frames": 270,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true,
+    "exposure_settings_modified": false,
+    "exposure_restoration_required": false,
+    "exposure_restoration_verified": null
+  },
+  "current_start_screen_accepted": true,
+  "phase_counts": {
+    "stage_0_cmc_return": 42,
+    "stage_1_roots_clear": 199,
+    "stage_3_empty_open": 119
+  },
+  "sample_count": 360,
+  "measured": {
+    "min_voltage_v": 4.9,
+    "peak_abs_current_ma": 97,
+    "max_tracking_rad": 0.08283496254582462
+  },
+  "last_sample": {
+    "phase": "stage_3_empty_open",
+    "t": 27.07799999997951,
+    "goal": [
+      2572,
+      2729,
+      2798,
+      1943,
+      2007,
+      2032,
+      1784,
+      2059,
+      2891,
+      2235,
+      2016,
+      2106,
+      2121,
+      2541,
+      1905,
+      2053
+    ],
+    "actual": [
+      2582,
+      2718,
+      2785,
+      1927,
+      2008,
+      2031,
+      1775,
+      2048,
+      2886,
+      2240,
+      2016,
+      2058,
+      2121,
+      2536,
+      1900,
+      2023
+    ],
+    "tracking_rad": [
+      0.015339807878856412,
+      0.01687378866674205,
+      0.019941750242513337,
+      0.02454369260617026,
+      0.0015339807878856412,
+      0.0015339807878856412,
+      0.01380582709097077,
+      0.01687378866674205,
+      0.007669903939428206,
+      0.007669903939428206,
+      0.0,
+      0.07363107781851078,
+      0.0,
+      0.007669903939428206,
+      0.007669903939428206,
+      0.04601942363656923
+    ]
+  },
+  "camera": {
+    "status": "complete",
+    "error": null,
+    "motor_commands_sent": 0,
+    "image_signal_usable_frames": 270,
+    "image_signal_blank_frames": 0,
+    "last_image_signal_usable": true
+  },
+  "camera_phase_indices": {
+    "preflight": {
+      "first": 0,
+      "middle": 2,
+      "last": 3,
+      "count": 4
+    },
+    "stable_off_readings": {
+      "first": 4,
+      "middle": 6,
+      "last": 7,
+      "count": 4
+    },
+    "screen_current_pose": {
+      "first": 8,
+      "middle": 13,
+      "last": 18,
+      "count": 11
+    },
+    "countdown": {
+      "first": 19,
+      "middle": 35,
+      "last": 50,
+      "count": 32
+    },
+    "configure_off": {
+      "first": 51,
+      "middle": 52,
+      "last": 52,
+      "count": 2
+    },
+    "enable_hold": {
+      "first": 53,
+      "middle": 53,
+      "last": 53,
+      "count": 1
+    },
+    "stage_0_cmc_return": {
+      "first": 54,
+      "middle": 66,
+      "last": 78,
+      "count": 25
+    },
+    "stage_1_roots_clear": {
+      "first": 79,
+      "middle": 137,
+      "last": 195,
+      "count": 117
+    },
+    "stage_3_empty_open": {
+      "first": 196,
+      "middle": 230,
+      "last": 264,
+      "count": 69
+    },
+    "post_off_reference": {
+      "first": 265,
+      "middle": 267,
+      "last": 269,
+      "count": 5
+    }
+  },
+  "named_images": [],
+  "result_sha256": "c6949a5fabcea888cd607f8e67a8a895cb8e7c181ee2c4552ca9ce33a1616a70"
+}

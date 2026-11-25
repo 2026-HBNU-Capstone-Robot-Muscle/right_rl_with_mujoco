@@ -1,0 +1,75 @@
+{
+  "status": "operator_trial_ready_with_post_read_recovery_confirmation",
+  "actual_latest_stop_source": "grasped_yaw_trial_20261023_222816_628099",
+  "physical_communication_root_cause_resolved": false,
+  "change": "After a recovered read, require two additional clean exact-goal healthy whole-hand snapshots before the next target.",
+  "initial_plus_confirmation_budget_ms": 200,
+  "goal_writes_during_confirmation": 0,
+  "requires_opt_in_plan": true,
+  "other_plans_sampling_changed": false,
+  "goal_mismatch_stops_unchanged": true,
+  "persistent_saved_goal_failure_still_stops": true,
+  "goals_or_joint_ranges_changed": false,
+  "drive_or_health_limits_changed": false,
+  "helper_preloaded_before_motor_enable": true,
+  "read_recovery_module_sha256": "f7d5fa3a33a3d84cbf27a6c36377b3ff3fe2f542a9e07d8a482c4052d28bbbba",
+  "regression_tests_passed": 247,
+  "native_fixtures": [
+    {
+      "fixture": "grasped_yaw_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.05465835929327556,
+      "proof_sha256": "b74e1493e5ae559b7189e387bfbf50249a133d03f2f7f8a9e9a35d7b9fd25248"
+    },
+    {
+      "fixture": "grasped_yaw_prior_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.06266947541439949,
+      "proof_sha256": "3a25ff073f2fc634a26356752f8f3c5dd24b28e3ab4ee39c86f3cee9084634fe"
+    },
+    {
+      "fixture": "grasped_yaw_open_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.06005138668116028,
+      "proof_sha256": "73b051c5c8eafb67d6f71bc315f9101df777eb573eed11e0169944cc9bd54700"
+    },
+    {
+      "fixture": "grasped_yaw_after_stop_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.05465831297902912,
+      "proof_sha256": "5566a68b320d85622c05c33dad78bab55ac8d95ffcf87b55349ca8cd15d58536"
+    },
+    {
+      "fixture": "grasped_yaw_goal_stop_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.05941905824295346,
+      "proof_sha256": "d6cd582995de3930c0b542c024f83c68a8617d66f2c2be8426e13110742e835d"
+    },
+    {
+      "fixture": "slow_grasp_demo_fixture",
+      "static_cases": 67,
+      "dynamic_cases": 3,
+      "maximum_tracking_rad": 0.06266947541439949,
+      "proof_sha256": "dd55b330e5fdf37e7f0b8b269a00309c5ab00b55c2ebcf01efa0426bbf822f01"
+    }
+  ],
+  "legacy_native_fixtures_validated": 21,
+  "legacy_native_fixtures_replayed": 0,
+  "camera_exposure": -5.0,
+  "physical_rotation_verified": false,
+  "live_sac": false,
+  "next_user_command": "leap_bus_echo_off.cmd",
+  "additional_camera_capture_required": false,
+  "off_echo_diagnostic_tests_passed": 10,
+  "off_echo_source_sha256": "5881695f0f435d361f4750f0e4e0060651aa2879ca63a77ab618bd7c78c8dde6",
+  "off_echo_scope": "Only Goal Position RAM +/-1 tick while every motor is already torque OFF; restore original goals.",
+  "off_echo_torque_or_drive_or_eeprom_writes": 0,
+  "next_motion_trial_chosen_after_OFF_packet_diagnostic": true,
+  "raw_execution_results_modified": false,
+  "assistant_opened_real_devices": false
+}

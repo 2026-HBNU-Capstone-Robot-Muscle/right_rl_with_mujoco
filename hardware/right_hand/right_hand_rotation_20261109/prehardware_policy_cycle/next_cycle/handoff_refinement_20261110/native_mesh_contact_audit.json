@@ -1,0 +1,335 @@
+{
+  "status": "compiled_mesh_and_native_contact_audit",
+  "mujoco_version": "3.9.0",
+  "model_provenance": {
+    "model_kind": "active",
+    "model_path": "right_hand_rotation_20261106/middle_clearance_probe/evidence/model.mjb",
+    "model_sha256": "de1c987afc6c2d0dc0464fec3dd744eb773a5c0675d77a7d8a1c06ef0ee4f9a4",
+    "initial_path": "right_hand_rotation_20261105/canonical_body_grip/torque_cap_sensitivity/cap0.15/initial_state.npz",
+    "initial_sha256": "db67f9d5aa3a1b6076ae29bb42e3411478b145dec4d7cfc0f1a4eae38a649ca2",
+    "reference_sha256": "3e89c032e4175d6fdf8ef197423b5110a699e3ddabb4bed2d60b917ac96cf800",
+    "source_is_archived_model_trajectory_not_physical_policy_success": true,
+    "max_goal_ticks": 2,
+    "control_seconds": 0.075,
+    "original_model_and_native_guards_preserved": true
+  },
+  "options": {
+    "ccd_tolerance": 1e-06,
+    "ccd_iterations": 10.0,
+    "disableflags": 32768.0,
+    "enableflags": 0.0
+  },
+  "geoms": [
+    {
+      "name": "cube",
+      "type": 6,
+      "body": "cube",
+      "contype": 1,
+      "conaffinity": 2,
+      "margin": 0.0,
+      "gap": 0.0,
+      "dataid": -1
+    },
+    {
+      "name": "if_tip",
+      "type": 7,
+      "body": "if_ds",
+      "contype": 1,
+      "conaffinity": 1,
+      "margin": 0.0,
+      "gap": 0.0,
+      "dataid": 6,
+      "mesh_vertices": 52,
+      "mesh_faces": 100,
+      "hull_graph_address": 13892,
+      "hull_graph_first32": [
+        52,
+        100,
+        0,
+        8,
+        15,
+        21,
+        28,
+        33,
+        39,
+        45,
+        53,
+        59,
+        64,
+        73,
+        80,
+        86,
+        93,
+        99,
+        104,
+        110,
+        120,
+        126,
+        135,
+        141,
+        147,
+        154,
+        162,
+        167,
+        173,
+        180,
+        187,
+        194
+      ]
+    },
+    {
+      "name": "th_tip",
+      "type": 7,
+      "body": "th_ds",
+      "contype": 1,
+      "conaffinity": 1,
+      "margin": 0.0,
+      "gap": 0.0,
+      "dataid": 10,
+      "mesh_vertices": 52,
+      "mesh_faces": 100,
+      "hull_graph_address": 24626,
+      "hull_graph_first32": [
+        52,
+        100,
+        0,
+        4,
+        12,
+        17,
+        24,
+        29,
+        35,
+        43,
+        48,
+        54,
+        60,
+        69,
+        76,
+        83,
+        90,
+        96,
+        103,
+        111,
+        118,
+        123,
+        130,
+        137,
+        143,
+        148,
+        155,
+        162,
+        171,
+        177,
+        185,
+        191
+      ]
+    },
+    {
+      "name": "rf_tip",
+      "type": 7,
+      "body": "rf_ds",
+      "contype": 1,
+      "conaffinity": 1,
+      "margin": 0.0,
+      "gap": 0.0,
+      "dataid": 6,
+      "mesh_vertices": 52,
+      "mesh_faces": 100,
+      "hull_graph_address": 13892,
+      "hull_graph_first32": [
+        52,
+        100,
+        0,
+        8,
+        15,
+        21,
+        28,
+        33,
+        39,
+        45,
+        53,
+        59,
+        64,
+        73,
+        80,
+        86,
+        93,
+        99,
+        104,
+        110,
+        120,
+        126,
+        135,
+        141,
+        147,
+        154,
+        162,
+        167,
+        173,
+        180,
+        187,
+        194
+      ]
+    },
+    {
+      "name": "if_bs_collision_1",
+      "type": 6,
+      "body": "if_bs",
+      "contype": 1,
+      "conaffinity": 1,
+      "margin": 0.0,
+      "gap": 0.0,
+      "dataid": -1
+    }
+  ],
+  "explicit_cube_contact_pairs": [],
+  "exclude_signatures": [
+    65539,
+    65540,
+    65541,
+    65543,
+    65544,
+    65545,
+    65547,
+    65548,
+    65549,
+    65551,
+    65552,
+    65553,
+    131075,
+    131076,
+    131077,
+    131079,
+    131080,
+    131081,
+    131083,
+    131084,
+    131085,
+    131087,
+    131088,
+    131089,
+    196615,
+    196619,
+    196623,
+    458763,
+    458767,
+    720911
+  ],
+  "model_header_mesh_fields": [
+    "int*      mesh_vertadr;         // first vertex address                     (nmesh x 1)",
+    "int*      mesh_vertnum;         // number of vertices                       (nmesh x 1)",
+    "int*      mesh_graphadr;        // graph data address; -1: no graph         (nmesh x 1)",
+    "float*    mesh_vert;            // vertex positions for all meshes          (nmeshvert x 3)",
+    "int*      mesh_graph;           // convex graph data                        (nmeshgraph x 1)"
+  ],
+  "cases": [
+    {
+      "path": "next_cycle/handoff_refinement_20261110/fixed_grip_search0/proposal.npz",
+      "sha256": "563916c558ddf95e620c6777686b2b94ce085bdcdbc4e18215e000df0f93683b",
+      "distances": [
+        {
+          "geom": "rf_tip",
+          "full_vertex_SAT_gap_mm": -0.019999999993469686,
+          "native_distance_mm": -0.019999999988059125,
+          "native_witness_separation_mm": 0.019999999988057397,
+          "contacts": []
+        },
+        {
+          "geom": "th_tip",
+          "full_vertex_SAT_gap_mm": 0.007307789707946405,
+          "native_distance_mm": 0.0073077897079448706,
+          "native_witness_separation_mm": 0.0073077897079457214,
+          "contacts": []
+        },
+        {
+          "geom": "if_tip",
+          "full_vertex_SAT_gap_mm": -0.019782801231625624,
+          "native_distance_mm": -0.019782801231612947,
+          "native_witness_separation_mm": 0.0197828012316146,
+          "contacts": []
+        }
+      ]
+    },
+    {
+      "path": "next_cycle/handoff_refinement_20261110/fixed_grip_search1/proposal.npz",
+      "sha256": "3396d6f047aaaef5b516494bbe4dfe9a87d361ccb9ae82c5e5b5ebd8f5cb8021",
+      "distances": [
+        {
+          "geom": "rf_tip",
+          "full_vertex_SAT_gap_mm": -0.020000000485666247,
+          "native_distance_mm": -0.02000000043609977,
+          "native_witness_separation_mm": 0.02000000043610096,
+          "contacts": [
+            {
+              "distance_mm": -0.02000000043609977,
+              "exclude": 0,
+              "efc_address": 24
+            }
+          ]
+        },
+        {
+          "geom": "th_tip",
+          "full_vertex_SAT_gap_mm": -0.02841787335395793,
+          "native_distance_mm": -0.028417873353959813,
+          "native_witness_separation_mm": 0.02841787335396303,
+          "contacts": [
+            {
+              "distance_mm": -0.02841787335395758,
+              "exclude": 0,
+              "efc_address": 28
+            }
+          ]
+        },
+        {
+          "geom": "if_tip",
+          "full_vertex_SAT_gap_mm": -0.6557496789390203,
+          "native_distance_mm": -0.6557496789390032,
+          "native_witness_separation_mm": 0.6557496789389949,
+          "contacts": [
+            {
+              "distance_mm": -0.6557496789390064,
+              "exclude": 0,
+              "efc_address": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "next_cycle/handoff_integer_load_first_v6/end_state.npz",
+      "sha256": "2fd44874ab0b95892453b2fe25b864c02db2a45ec8925fc2c5c5798c23bff6d3",
+      "distances": [
+        {
+          "geom": "rf_tip",
+          "full_vertex_SAT_gap_mm": 0.002714757818794711,
+          "native_distance_mm": 0.0027147579789135244,
+          "native_witness_separation_mm": 0.0027147579789169917,
+          "contacts": []
+        },
+        {
+          "geom": "th_tip",
+          "full_vertex_SAT_gap_mm": -0.00010037584875430272,
+          "native_distance_mm": -0.00010037584874975894,
+          "native_witness_separation_mm": 0.0001003758487496836,
+          "contacts": [
+            {
+              "distance_mm": -0.0001003758487531191,
+              "exclude": 0,
+              "efc_address": 24
+            }
+          ]
+        },
+        {
+          "geom": "if_tip",
+          "full_vertex_SAT_gap_mm": 0.6732750787909747,
+          "native_distance_mm": 0.0,
+          "native_witness_separation_mm": 3.2684185754182,
+          "contacts": []
+        }
+      ]
+    }
+  ],
+  "model_or_collision_flags_changed": false,
+  "devices_opened": 0,
+  "hardware_execution_allowed": false
+}

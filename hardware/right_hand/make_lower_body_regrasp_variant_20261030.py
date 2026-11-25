@@ -1,0 +1,13 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent;s=(R/'propose_lower_thumb_regrasp_20261030.py').read_text(encoding='utf-8');s=s.replace('lower_thumb_regrasp','lower_body_regrasp');s=s.replace("name.startswith('th_')","name.startswith(('th_','mf_'))")
+s=s.replace("m.body(int(m.geom_bodyid[g])).name.startswith('th_')","m.body(int(m.geom_bodyid[g])).name.startswith(('th_','mf_'))")
+s=s.replace('points[0]+normals[0]*gap,points[1]+normals[1]*gap-up*drop','points[0]+normals[0]*gap-up*(drop/4),points[1]+normals[1]*gap-up*drop')
+s=s.replace('thumb_upper_layer_gap_mm','min_MF_TH_upper_layer_gap_mm');s=s.replace('both_fingers_release_then_thumb_lowers=True','both_fingers_release_then_thumb_and_middle_lower=True,middle_point_lowering_mm=4.0')
+s=s.replace("phases.extend(['stage_7_horizontal_yaw']*len(v))", "phases.extend([{'initial':'stage_11_body_release','release':'stage_11_body_release','lower_thumb':'stage_12_body_reseat','reclose':'stage_13_body_close'}[phase]]*len(v))")
+s=s.replace("['stage_8_horizontal_hold']*107", "['stage_14_body_hold']*107")
+s=s.replace("forward_end_sample=np.array(end));report.update", "forward_end_sample=np.array(end),body_hold_end_sample=np.array(end+len(post)+107));report.update")
+(R/'propose_lower_body_regrasp_20261030.py').write_text(s,encoding='utf-8')
+s=(R/'probe_lower_thumb_regrasp_20261030.py').read_text(encoding='utf-8').replace("O=R/'right_hand_rotation_20261030/lower_thumb_regrasp'","O=R/'right_hand_rotation_20261030/lower_body_regrasp'").replace('lower_thumb_regrasp_free_cube_continuation','lower_body_regrasp_free_cube_continuation')
+s=s.replace("hold_indices=np.flatnonzero(z['phases']=='stage_8_horizontal_hold');new_hold_end=int(hold_indices[-1])+1", "new_hold_end=int(z['body_hold_end_sample'])")
+(R/'probe_lower_body_regrasp_20261030.py').write_text(s,encoding='utf-8')
+print('Created lower-body regrasp variant; prior candidate and proofs preserved.')

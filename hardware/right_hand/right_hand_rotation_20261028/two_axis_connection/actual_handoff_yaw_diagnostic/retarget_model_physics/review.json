@@ -1,0 +1,205 @@
+{
+  "status": "conditional_yaw_from_saved_handoff_hypotheses",
+  "cases": [
+    {
+      "seed": "retained_model_transfer",
+      "stop": "native_range",
+      "motion_health_passed": false,
+      "last_phase": "retarget_open",
+      "samples_completed": 478,
+      "requested_samples": 4096,
+      "max_self_mm": 0.0,
+      "max_support_mm": 0.0007591775497130583,
+      "max_cube_overlap_mm": 0.0005761780535592717,
+      "max_tracking_rad": 0.052369627012812364,
+      "native_range_excess_rad": 9.968634364199147e-06,
+      "max_no_hand_contact_seconds": 0.0,
+      "external_cube_contact": false,
+      "worst_self_pair": null,
+      "phase_checkpoints": {
+        "initial_hold": {
+          "sample": 39,
+          "cube_qpos": [
+            0.11833768638533057,
+            -0.03780084521728559,
+            0.006558858687321884,
+            -0.6219904101051379,
+            0.6219871139354577,
+            0.3363472720423299,
+            0.33634873632164236
+          ],
+          "horizontal_twist_deg": -0.30226728794265173,
+          "red_up_error_deg": 13.341816110543482,
+          "green_up_error_deg": 76.65818389221374
+        },
+        "retarget_open": {
+          "sample": 477,
+          "cube_qpos": [
+            0.12068102409903007,
+            -0.03780100418277366,
+            0.0051530293687298044,
+            -0.6176931994623467,
+            0.6176846991874978,
+            0.3441819156337739,
+            0.3441795064763226
+          ],
+          "horizontal_twist_deg": -0.3026656258792842,
+          "red_up_error_deg": 11.89377822001315,
+          "green_up_error_deg": 78.10622178400646
+        }
+      },
+      "phase_cube_contacts": {
+        "initial_hold": {
+          "palm_collision_1": 1855,
+          "palm_collision_6": 3000
+        },
+        "retarget_open": {
+          "palm_collision_1": 32802,
+          "palm_collision_6": 32802
+        }
+      },
+      "held_horizontal_twist_deg": null,
+      "trace": "retained_model_transfer_trace.npz",
+      "initial_cube_qpos": [
+        0.11801987115976502,
+        -0.037847266088671186,
+        0.006764032586541959,
+        -0.6242355352820732,
+        0.6208558209134515,
+        0.33621939941034673,
+        0.3344017966296432
+      ],
+      "final_cube_qpos": [
+        0.12068102409903007,
+        -0.03780100418277366,
+        0.0051530293687298044,
+        -0.6176931994623467,
+        0.6176846991874978,
+        0.3441819156337739,
+        0.3441795064763226
+      ],
+      "legacy_baseline_warmup": null
+    }
+  ],
+  "seed_metadata": {
+    "hypothesis_delta_palm_mm": [
+      -18.914336658748734,
+      -11.439753978670106,
+      -0.10965861726149051
+    ],
+    "hypothesis_delta_world_mm": [
+      -17.75301839421034,
+      11.439753978670106,
+      6.5264457515293275
+    ],
+    "hypothesis_displacement_mm": 22.10502493428416,
+    "all_image_pose_fits_are_rejected": true,
+    "physical_metric_registration_verified": false,
+    "absolute_camera_translation_not_used": true,
+    "common_rigid_mount_translation_cancels_in_relative_delta": true,
+    "relative_rotation_rebased_on_model_yaw_seed": true,
+    "source_sha256": "0f593a79294f76964b5415670ae47fdabaaf7d09eeed7e0bb473ddd89ee0c46a"
+  },
+  "model": {
+    "projection_mm": 50.0,
+    "glass_thickness_mm": 6.0,
+    "fixed_front_palm_x_mm": 3.0,
+    "fixed_bottom_palm_z_mm": 31.3,
+    "bounds_palm_mm": {
+      "support_glass": [
+        [
+          -130.0,
+          -125.0,
+          31.3
+        ],
+        [
+          53.0,
+          65.0,
+          37.3
+        ]
+      ],
+      "support_wood": [
+        [
+          -130.0,
+          -125.0,
+          37.3
+        ],
+        [
+          53.0,
+          65.0,
+          97.3
+        ]
+      ]
+    },
+    "wood_width_depth_thickness_measured": false,
+    "external_only_housing_proxies": [
+      "if_bs_visual_support_proxy",
+      "if_px_visual_support_proxy",
+      "mf_bs_visual_support_proxy",
+      "mf_px_visual_support_proxy",
+      "rf_bs_visual_support_proxy",
+      "rf_px_visual_support_proxy"
+    ],
+    "caveat": "Width 190mm, rear reach and wood depth are conservative analysis extents. Support friction is provisional. Existing hand collision primitives may omit housing details.",
+    "fixed_body_bottom_palm_z_mm": 11.3,
+    "book_thickness_mm_user_reported": 20.0,
+    "book_bounds_palm_mm": [
+      [
+        -130.0,
+        -500.0,
+        11.3
+      ],
+      [
+        -7.0,
+        500.0,
+        31.3
+      ]
+    ],
+    "book_footprint_measured": false,
+    "additional_self_hulls": [],
+    "hardware_execution_allowed": false,
+    "geometry_calibration_verified": false,
+    "fingertip_collision_model": "CAD_tip_contact_diagnostic_v1_20261025",
+    "replaced_tip_names": [
+      "if_tip",
+      "mf_tip",
+      "rf_tip",
+      "th_tip"
+    ],
+    "CAD_collision_and_visual_compiled_transforms_equal": true,
+    "middle_thumb_proxies": [
+      "cadtip_mf_th_mf_bs_0",
+      "cadtip_mf_th_mf_px_0",
+      "cadtip_mf_th_mf_md_0",
+      "cadtip_mf_th_mf_ds_0",
+      "cadtip_mf_th_mf_ds_1",
+      "cadtip_mf_th_th_px_0",
+      "cadtip_mf_th_th_ds_0",
+      "cadtip_mf_th_th_ds_1"
+    ],
+    "middle_ring_proxies": [
+      "cadtip_mf_rf_mf_bs_0",
+      "cadtip_mf_rf_mf_px_0",
+      "cadtip_mf_rf_mf_md_0",
+      "cadtip_mf_rf_mf_ds_0",
+      "cadtip_mf_rf_mf_ds_1",
+      "cadtip_mf_rf_rf_bs_0",
+      "cadtip_mf_rf_rf_px_0",
+      "cadtip_mf_rf_rf_md_0",
+      "cadtip_mf_rf_rf_ds_0",
+      "cadtip_mf_rf_rf_ds_1"
+    ],
+    "physical_tip_geometry_calibration_verified": false,
+    "comparison_only": true,
+    "middle_ring_mesh_model_revision": "explicit_mesh_type_v1_20261025"
+  },
+  "path_source": "/mnt/c/Users/\uae40\uc900\uc11c/Documents/Codex/2026-09-23/files-mentioned-by-the-user-leap/outputs/right_hand_rotation_20261028/two_axis_connection/actual_handoff_yaw_diagnostic/retarget_model_transfer/candidate.npz",
+  "path_sha256": "2ee660144ee330c39aa780e07f54bbf7e307832080ab6dadf2147226906e050e",
+  "finite_actuators": true,
+  "hand_pose_prescribed_during_rollout": false,
+  "cube_pose_prescribed_during_rollout": false,
+  "existing_seam_policy_reused": true,
+  "hardware_execution_allowed": false,
+  "devices_opened": false,
+  "elapsed_seconds": 4.056790592999995
+}
